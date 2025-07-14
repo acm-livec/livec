@@ -110,4 +110,15 @@ router.post('/board/decision/:proposalId', async (req, res) => {
   res.json({ message: 'Board decision saved successfully' });
 });
 
+router.post('/approve-curriculum-version', async (req, res) => {
+  const { collectionId, approvedBy, notes } = req.body;
+
+  if (!collectionId || !approvedBy) {
+    return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  console.log(`Curriculum Collection ${collectionId} approved by ${approvedBy}`);
+  res.json({ message: 'Curriculum collection approved as the next official version' });
+});
+
 export default router;

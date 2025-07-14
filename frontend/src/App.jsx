@@ -19,6 +19,7 @@ import AEHistoryPage from './pages/AEHistoryPage';
 import UpdateCurriculumPage from './pages/UpdateCurriculumPage';
 import AERevisionResponsePage from './pages/AERevisionResponsePage';
 import AEDeskRejectPage from './pages/AEDeskRejectPage';
+
 import EICDecisionPage from './pages/EICDecisionPage';
 import EICDecisionDetailPage from './pages/EICDecisionDetailPage';
 import EICSingleDecisionPage from './pages/EICSingleDecisionPage';
@@ -26,6 +27,7 @@ import EICCurriculumReviewPage from './pages/EICCurriculumReviewPage';
 import EICBoardReviewPage from './pages/EICBoardReviewPage';
 import EICFinalizePage from './pages/EICFinalizePage';
 import EICHistoryPage from './pages/EICHistoryPage';
+import EICApproveVersionPage from './pages/EICApproveVersionPage.jsx';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -58,7 +60,8 @@ function App() {
         <Route path="/eic/board/review" element={<EICBoardReviewPage />} />
         <Route path="/eic/finalize" element={<EICFinalizePage />} />
         <Route path="/eic/history" element={<EICHistoryPage />} />
-        
+        <Route path="/eic/approve-version" element={<EICApproveVersionPage />} />
+
       </Routes>
     </Router>
   );
