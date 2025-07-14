@@ -28,7 +28,7 @@ const EICApproveVersionPage = () => {
       <div className="proposal-card">
 
         <div className="form-group">
-          <label><strong>Collection ID:</strong></label>
+          <label><strong>Collection ID:</strong></label><br></br>
           <input
             type="text"
             value={collectionId}
@@ -37,7 +37,7 @@ const EICApproveVersionPage = () => {
         </div>
 
         <div className="form-group">
-          <label><strong>Approved By:</strong></label>
+          <label><strong>Approved By:</strong></label><br></br>
           <input
             type="text"
             value={approvedBy}
@@ -60,7 +60,6 @@ const EICApproveVersionPage = () => {
         {message && <p style={{ marginTop: '1rem' }}>{message}</p>}
       </div>
     </div>
-
   );
 };
 
