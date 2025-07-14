@@ -3,16 +3,13 @@ import { useContext, useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styles from './SuggestionView.module.scss';
 import { Status, Roles, statusMap } from '@utils/constants';
-import { getSuggestion } from '@utils/suggestionHandler';
-
-
-
+import { getSuggestion } from '@utils/api-handlers/suggestions';
 
 
 
 import CommunityMemberView from './community-member/CommunityMemberView';
 import AssociateEditorView from './associate-editor/AssociateEditorView';
-
+import EditorInChiefView from './editor-in-chief/default-view';
 
 export default function SugestionView() {
     const { user } = useContext(UserContext);
@@ -32,11 +29,9 @@ export default function SugestionView() {
 
 
 
-
     if (loading) {
         return <p style={{ color: 'black' }}>Loading...</p>;
     }
-
 
 
 
@@ -53,27 +48,12 @@ export default function SugestionView() {
 
 
 
-
-    const variants = {
-
-        [Status.System.NEW]: 'layout--admin-new',
-        [Status.System.ACTIVE]: 'layout--admin-active',
-        [Status.System.CLOSED]: 'layout--closed'
-    }
-
-    const variant = user.role === Roles.COMMUNITY_MEMBER ? 'layout--community-member' : variants[suggestion?.system?.status]
-
-
- 
-
-
-
-
     return (
-        <section className={styles[variant]}>
+        <>
             {user.role === Roles.COMMUNITY_MEMBER && <CommunityMemberView suggestion={suggestion} user={user} />}
             {user.role === Roles.ASSOCIATE_EDITOR && <AssociateEditorView suggestion={suggestion} user={user} />}
-        </section>
+            {user.role === Roles.EDITOR_IN_CHIEF && <EditorInChiefView suggestion={suggestion} user={user} />}
+        </>
     );
 }
 

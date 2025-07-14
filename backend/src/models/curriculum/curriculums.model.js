@@ -1,6 +1,7 @@
 const db = require('@database/database');
 const Curriculum = require('./curriculum.model');
-const flattenSections = require('@utils/flatten.js')
+const flattenSections = require('@utils/flatten.js');
+const Suggestion = require('../suggestion/suggestion.model');
 class Curriculums {
     static dbRef = db.curriculums;
 

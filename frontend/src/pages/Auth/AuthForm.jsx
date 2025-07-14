@@ -13,7 +13,7 @@ const defaultData = {
 
 export default function AuthForm() {
     const { login, register, message, setMessage } = useAuth();
-    const { formData, onFormChange, resetForm } = useForm({ defaultData });
+    const { formData, onFormChange, resetForm } = useForm(defaultData);
 
     const [newUser, setNewUser] = useState(false);
     const [passwordsMatch, setPasswordsMatch] = useState(true);

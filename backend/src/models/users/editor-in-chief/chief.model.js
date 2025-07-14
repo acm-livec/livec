@@ -15,7 +15,9 @@ class EditorInChief extends User {
     }
 
     assignSuggestion(newSuggestionId) {
-        this.assignedSuggestions.push(newSuggestionId)
+        if (!this.assignedSuggestions.includes(newSuggestionId)) {
+            this.assignedSuggestions.push(newSuggestionId)
+        }
     }
 
     toPublic() {

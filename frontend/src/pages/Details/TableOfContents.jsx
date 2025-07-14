@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Accordion from '@components/Accordion';
 
 
-export default function TableOfContents({ jumpToPage, tableOfContents, setSectionId }) {
+export default function TableOfContents({ jumpToPage, tableOfContents }) {
 
 
     const annotateWithPageRanges = (items) => {
@@ -54,7 +54,6 @@ export default function TableOfContents({ jumpToPage, tableOfContents, setSectio
                 return (
                     <li
                         key={idx}
-                        // className={`${!hasChildren ? 'toc-item' : ''} indented ${bg[level] || ''}`}
                         className={`${!hasChildren ? 'toc-item' : ''} indented `}
                         style={{ '--indent-level': level}}
                     >
@@ -67,7 +66,7 @@ export default function TableOfContents({ jumpToPage, tableOfContents, setSectio
                         ) : (
                             <div
                                 className="toc-leaf"
-                                onClick={() => {console.log(item); setSectionId(item?.id ?? 'None'); jumpToPage(item?.markdown_heading + "\n" +  item?.markdown_body)}}
+                                onClick={() => {console.log(item); jumpToPage(item)}}
                             >
                                 {item.title}
                                 {item.page_number != null && (

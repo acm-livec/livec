@@ -1,28 +1,35 @@
-const { generateRandomId } = require('@utils/generate-id'); 
+const { generateRandomId } = require('@utils/generate-id');
+const { Actions } = require('@utils/constants')
+
+const defaultAction = Actions.ADDED_DOCUMENTATION
 
 class Documentation {
-    constructor(author, text, dateAdded, refId) {
-        this.refId = refId || generateRandomId()
-        this.author = author || '';
-        this.dateAdded = dateAdded || new Date().toISOString();
-        this.text = text || ''
+
+    constructor({ action = defaultAction, author = 'LiveC', text, date = new Date().toISOString(), refId = generateRandomId() }) {
+        this.action = action;
+        this.refId = refId;
+        this.author = author;
+        this.date = date;
+        this.text = text;
     }
 
-    
+
     toObject() {
         return {
+            action: this.action,
             refId: this.refId,
             author: this.author,
-            dateAdded: this.dateAdded,
+            date: this.date,
             text: this.text
         };
     }
 
     toJSON() {
         return {
+            action: this.action,
             refId: this.refId,
             author: this.author,
-            dateAdded: this.dateAdded,
+            date: this.date,
             text: this.text
         };
     }

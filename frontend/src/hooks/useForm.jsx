@@ -1,7 +1,24 @@
-import { useEffect, useState, useCallback } from "react";
+import { useState } from "react";
+
+/**
+ * @typedef {Object} FormHook
+ * @property {Object.<string, any>} formData - The current form data.
+ * @property {(field: string, value: any) => void} onFormChange - Update a specific field in the form.
+ * @property {() => void} resetForm - Reset the form to default values.
+ */
 
 
-export default function useForm({ defaultData = {} }) {
+/**
+ * Custom hook for managing form state.
+ *
+ * @param {Object.<string, any>} defaultData - Initial form data.
+ * @returns {FormHook} Form data and utility functions.
+ *
+ * @example
+ * const { formData, onFormChange, resetForm } = useForm({ name: '', email: '' });
+ */
+
+export default function useForm(defaultData = {}) {
     const [formData, setFormData] = useState(defaultData);
 
     const onFormChange = (field, value) => {
@@ -9,8 +26,9 @@ export default function useForm({ defaultData = {} }) {
     };
 
     const resetForm = () => {
-        setFormData({...defaultData});
-    }
+        setFormData({ ...defaultData });
+    };
 
     return { formData, onFormChange, resetForm };
 }
+

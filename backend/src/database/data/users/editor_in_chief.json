@@ -1,11 +1,17 @@
 [
-    {
-        "id": "EIC-0001",
-        "name": "John Pork",
-        "email": "johnpork@email.com",
-        "password": "password",
-        "role": "editor-in-chief",
-        "discipline": "computer-science",
-        "assignedAssociateEditors": ["AE-0001", "AE-0002"]
-    }
+  {
+    "id": "EIC-0001",
+    "name": "John Pork",
+    "email": "johnpork@email.com",
+    "password": "password",
+    "role": "editor-in-chief",
+    "discipline": "computer-science",
+    "assignedAssociateEditors": [
+      "AE-0001",
+      "AE-0002"
+    ],
+    "assignedSuggestions": [
+
+    ]
+  }
 ]

@@ -29,6 +29,8 @@ const getSuggestionById = async (suggestionId, role = null) => {
                 requestedSuggestion = requestedSuggestion.toCommunityMember()
             } else if (role === Roles.ASSOCIATE_EDITOR) {
                 requestedSuggestion = requestedSuggestion.toAssociateEditor()
+            } else if (role === Roles.EDITOR_IN_CHIEF) {
+                requestedSuggestion = requestedSuggestion.toEditorInCheif()
             }
         }
 

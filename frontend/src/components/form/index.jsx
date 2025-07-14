@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import FormProvider, { FormContext } from './FormContext';
-import ModalProvider from '../Overlays/ModalContext';
-import { ModalContext } from '../Overlays/ModalContext';
+import ModalProvider from '../popups/ModalContext';
+import { ModalContext } from '../popups/ModalContext';
 import styles from './Form.module.scss'
-import { Button } from '../Buttons';
+import { Button } from '../buttons';
 
 
 

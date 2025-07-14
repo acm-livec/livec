@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
 
 import * as Icons from '@components/Icons';
-import { Layout, Sidebar, MainPanel } from '@components/Layout';
+import { Layout, Sidebar, MainPanel } from '@components/containers/Layout';
 
 import { UserContext } from '@context/UserProvider';
 

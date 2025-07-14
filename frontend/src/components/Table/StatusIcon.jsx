@@ -1,5 +1,6 @@
 import styles from './StatusIcon.module.scss';
-import { Status, toTitleCase, statusMap } from '@utils/constants';
+import {statusMap } from '@utils/constants';
+import { toTitleCase } from '@utils/format';
 import { useContext } from 'react';
 import { UserContext } from '@context/UserProvider';
 

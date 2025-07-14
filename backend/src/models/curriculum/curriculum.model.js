@@ -9,6 +9,7 @@ class Curriculum {
         this.page_number = data.page_number || null;           // ADD THIS
         this.markdown_heading = data.markdown_heading || '';   // ADD THIS
         this.markdown_body = data.markdown_body || '';         // ADD THIS
+        this.html = data.html ||''
         this.meta = data.meta || {};
         this.units = data.units || [];
     }

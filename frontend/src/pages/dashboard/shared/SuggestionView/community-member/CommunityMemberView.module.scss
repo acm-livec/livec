@@ -11,7 +11,7 @@
     min-height: 3rem;
     height: fit-content;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
 
 }
 
@@ -28,7 +28,7 @@
     border: inherit;
     gap: 1rem;
 
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 2fr;
 
   
     h3 {
@@ -39,9 +39,9 @@
 
 }
 
-.content {
+.contents {
     min-height: fit-content;
-
+    transition: all 1s;
     height: 100%;
     padding: 1rem 1rem;
     background-color: $slate-200;

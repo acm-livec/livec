@@ -18,6 +18,10 @@
 }
 
 
+.download-button {
+    width: fit-content;
+}
+
 .details-page {
     color: black;
     display: flex;
@@ -107,7 +111,7 @@
     flex: 1;
     position: relative;
     overflow: auto;
-    padding: 5% 2%;
+    padding: 2%;
 }
 
 

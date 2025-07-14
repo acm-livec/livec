@@ -1,14 +1,18 @@
 import { useNavigate } from 'react-router';
+import { useContext } from 'react';
 import styles from './Buttons.module.scss'
 import * as Icons from '@components/Icons'
 import useAuth from '@hooks/useAuth'
+import { UserContext } from '@context/UserProvider';
+import ModalProvider, { ModalContext } from '@components/popups/ModalContext';
 
 
+export function BackButton() {
+    const { user } = useContext(UserContext)
 
-export function BackButton({ to }) {
     const navigate = useNavigate()
     return (
-        <button className={styles['button--back']} onClick={() => navigate(to)}>
+        <button className={styles['button--back']} onClick={() => navigate(`/dashboard/${user.id}`)}>
             <span>←</span> Back to suggestions
         </button>
     )
@@ -39,12 +43,46 @@ const variants = {
 }
 
 
-export const Button = ({ variant = 'normal', text = 'Submit', onClick, icon = <></>, isActive = false }) => {
+export const Button = ({
+    modal = null,
+    variant = 'normal',
+    text = 'Submit',
+    onClick = () => alert("Button Clicked"),
+    icon = <></>,
+    isActive = false,
+    disableOn = false,
+    hideOn = false }) => {
 
     const className = clsx(styles[variants[variant]], isActive && styles[`${variants[variant]}--active`]);
 
-    return (
-        <button className={className} type='button' onClick={onClick}>{icon && <span>{icon}</span>}{text}</button>
+
+    return modal ? (
+        <ModalProvider onSubmit={onClick}>
+           <ButtonWithModal text={text}/>
+           {modal}
+        </ModalProvider>
+
+    ) : (
+        <button
+            disabled={disableOn}
+            hidden={hideOn}
+            className={className}
+            type='button'
+            onClick={onClick}
+        >
+            {icon && <span>{icon}</span>}{text}
+        </button>
     )
 }
 
+
+function ButtonWithModal({ children = null, text }) {
+    const { open } = useContext(ModalContext);
+
+    return (
+        <>
+            <Button onClick={open} text={text} />
+            {children}
+        </>
+    );
+}

@@ -8,6 +8,8 @@
 
 .markdown {
     @include flex-container(column, $gap: 1rem);
+    	padding: 2.5%;
+    background-color: $stone-50;
     width: 100%;
 
     /*---- Heading Styles (h1, h2, h3, ...) ----------------------------*/
@@ -48,10 +50,6 @@
     ol,
     ul {
 
-        // columns: 2 200px;
-        // column-gap: 2rem;
-        // max-height: 500px;
-        // list-style-type: disc;
         gap: 0.75rem;
         padding-left: 2rem;
     }
@@ -64,7 +62,6 @@
         padding-left: 1em;
         break-inside: avoid;
         margin-bottom: 1rem;
-        /* Prevent items from splitting */
         align-items: center;
 
     }

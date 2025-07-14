@@ -1,0 +1,51 @@
+@use '@styles' as *;
+
+.grid {
+    @include container(2.5%);
+    display: grid;
+    flex: 1;
+    header {
+        @include flex-container($justify: "between", $gap: 0rem);
+        color: black;
+        background-color: inherit;
+        grid-area: H;
+
+    }
+
+
+
+
+    .main-content {
+        @include flex-container(column, $gap: 0rem, $padding: 0);
+
+        overflow-y: auto;
+        grid-area: M;
+    }
+
+
+
+    .grid-panel {
+        // @include flex-container(column, $gap: 0rem, $padding: 1rem);
+        flex: 1;
+        overflow-y: auto;
+    }
+
+
+
+    .side-content {
+        @include flex-container(column, $gap: 1rem, $padding: 0% 5%);
+        border-left: 1px solid $gray-200;
+        height: 100%;
+        margin-left: 1rem;
+        grid-area: S;
+        overflow-y: auto;
+
+    }
+
+    footer {
+       @include flex-container($align: center, $gap: 1rem, $padding: 2%);
+
+        grid-area: F;
+        width: 100%;
+    }
+}

@@ -5,5 +5,20 @@ const handleNewSuggestion = require('./handle-suggestion')
 const getSuggestionById = require('./get-one')
 const handleStartSuggestionReviewProcess = require('./handle-start')
 const assignReviewersToSuggestion = require('./assign-reviewers')
+const addNewDocumentationToSuggestion = require('./add-documentation')
+const associateEditorFinalized = require('./finalize')
+const handleEditorInChiefApproval = require('./handle-approval')
+const sendChangeRequestToAssociateEditor = require('./send-change')
 
-module.exports = {handleRejectSuggestion, handleNewSuggestion, getSuggestionById, handleStartSuggestionReviewProcess, assignReviewersToSuggestion}
+
+module.exports = {
+    handleRejectSuggestion, 
+    handleNewSuggestion, 
+    getSuggestionById, 
+    handleStartSuggestionReviewProcess, 
+    assignReviewersToSuggestion,
+    addNewDocumentationToSuggestion,
+    associateEditorFinalized,
+    handleEditorInChiefApproval,
+    sendChangeRequestToAssociateEditor
+}

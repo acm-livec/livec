@@ -1,9 +1,17 @@
-import React, {useState} from 'react'
+
 import styles from '../SuggestionView.module.scss';
 import s from './CommunityMemberView.module.scss';
-import { BackButton } from '@components/Buttons';
+import { BackButton } from '@components/buttons';
 import StatusIcon from '@components/Table/StatusIcon';
-import { toTitleCase, formatDate, Status, Roles } from '@utils/constants';
+import { Status } from '@utils/constants';
+import { toTitleCase, formatDate } from '@utils/format';
+import { Grid, Header, SideContent, MainContent } from '@components/containers/Grid';
+
+import { marked } from 'marked';
+import useToggle from '@hooks/useToggle';
+
+
+
 
 export default function CommunityMemberView({ suggestion, user }) {
 
@@ -18,22 +26,14 @@ export default function CommunityMemberView({ suggestion, user }) {
     }
 
     return (
-        <>
+        <Grid layout="'H H' 'M S'" columns='1.5fr 1fr' rows='1fr 10fr'>
 
-            <div className={styles.header}>
-                <ProgressBar progress={progress[status]} />
-            </div>
-
-
-            {/* Main panel showing the suggestino info */}
-
-            <div className={styles['main-content']}>
-
-                {/* <BackButton to={`/dashboard/${user.id}`} /> */}
+            <Header>
+                <BackButton />
+            </Header>
 
 
-                {/* Suggestion detail info (status, discipline, id...) */}
-
+            <MainContent>
                 <div className={styles['main-content__header']}>
                     <div>
                         <h1 className={styles.header__title}> {suggestion.title || "Untitled"} </h1>
@@ -51,49 +51,38 @@ export default function CommunityMemberView({ suggestion, user }) {
                 </div>
 
 
-                {/* The text content containing the suggestion */}
-
                 <div className={styles.text}>
                     <p>{suggestion.suggestion}</p>
                 </div>
-
-            </div>
-
+            </MainContent>
 
 
-            {/* Side content pane to the right */}
-
-            <div className={styles['side-content']}>
+            <SideContent>
                 <h2>Updates</h2>
                 <div className={s.messages}>
-
-                {updates.map((item, index) => (
-                    
-                    <Message key={item.refId} status={item.status} author={item.author} content={item.message} date={item.date}/>
-                    
-                ))}
-
-
-          
+                    {updates.map(item => (
+                        <Message key={item.refId} status={item.status} author={item.author} content={item.message} date={item.date} />
+                    ))}
                 </div>
-            </div>
-        </>
+            </SideContent>
+
+        </Grid>
     )
 }
 
 
-
-const Message = ({status, author, content, date}) => {
-    const [toggle, setToggle] = useState(false);
+export const Message = ({ status, author, content, date }) => {
+    const { toggle, toggleView } = useToggle();
+    const cleanHtml = marked.parse(content);
 
     const display = toggle ? 'flex' : 'none'
     return (
-        <div className={s.message} onClick={() => setToggle(!toggle)}>
+        <div className={s.message} onClick={toggleView}>
             <div className={s.header}>
-                <StatusIcon status={status}/><h3>| {formatDate(date)}</h3>
+                <StatusIcon status={status} /><h3>| {formatDate(date)}</h3>
             </div>
-            <div className={s.content} style={{display}}>
-                {author}: {content}
+            <div className={s.contents} style={{ display }}>
+                {author}:  <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />
             </div>
         </div>
     )
@@ -105,7 +94,7 @@ const Message = ({status, author, content, date}) => {
 function ProgressBar({ progress }) {
     return (
         <div className='progress-container'>
-            <div className='progress-actual' style={{  '--progress-num': `"${progress}%"`,  width: `${progress}%`}} />
+            <div className='progress-actual' style={{ '--progress-num': `"${progress}%"`, width: `${progress}%` }} />
             <div className="progress-labels">
                 <span className="progress-label">Submitted</span>
                 <span className="progress-label">Assigned</span>

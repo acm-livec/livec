@@ -6,7 +6,6 @@ import { postLogin, postRegister } from '@utils/api-handlers/auth'
 import { logger } from '@utils/logger'
 
 
-const log = logger.create('useAuth.js');
 
 
 /**
@@ -32,7 +31,6 @@ export default function useAuth() {
 
         } catch (error) {
             setMessage(error.message)
-            log.error("Error in login hook call:", error.message)
         }
     }
 

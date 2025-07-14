@@ -1,30 +1,42 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const EmptyComponent = () => <>Empty Component</>
 
-export default function useTabs(components, defaultView) {
 
-    const DefaultView = defaultView || <EmptyComponent/>
+/**
+ * 
+ * @param {*} components 
+ * @returns {Object}
+ */
+const _generateKeys = (components) => {
+    return Object.keys(components).reduce((keys, item) => {
+        keys[item] = false
+        return keys
+    }, { default: true })
+}
+
+
+
+export default function useTabs(components, DefaultView) {
+
+    if (!DefaultView) throw Error("Must pass in a default view")
 
     const [CurrentView, setCurrentView] = useState(DefaultView)
-    const [currentKey, setCurrentKey] = useState(null)
+    const [keys, setKeys] = useState(_generateKeys(components))
+
 
     const setView = (key) => {
         const view = components[key] || DefaultView
-        if (key === currentKey) {
-            setCurrentView(DefaultView)
-            setCurrentKey(null)
-        } else {
-            setCurrentView(view)
-            setCurrentKey(key in components ? key : null)
-        }
+        setCurrentView(view)
+
+        setKeys(prev => ({
+            ...Object.fromEntries(
+                Object.keys(prev).map(key => [key, false])
+            ),
+            [key]: true
+        }));
     }
 
-    const isActive = (key) => {
-        return key === currentKey
-    }
-    
 
-    return { setView, CurrentView, currentKey, isActive }
+    return { setView, CurrentView, keys }
 }
 

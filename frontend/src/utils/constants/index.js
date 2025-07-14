@@ -21,17 +21,23 @@ export const Triage = Object.freeze({
 })
 
 
+export const Actions = Object.freeze({
+    DESK_REJECT: 'desk-reject',
+    START_REVIEW: 'start-review',
+    DEFER_TO_REVIEWER: 'defer-to-reviewer',
+    ASSIGNED_ASSOCIATE_EDITOR: 'assigned-associate-editor',
+    ASSIGNED_REVIEWERS: 'assigned-reviewers',
+    ADDED_DOCUMENTATION: 'added-documentation',
+
+    SUBMITTED_BY_MEMBER: 'submitted-by-member',
+    FINALIZED_BY_ASSOCIATE_EDITOR: 'finalized-by-associate-editor',
+    APPROVED_BY_EDITOR_IN_CHIEF: 'approved-by-editor-in-chief',
+    CHANGE_REQUEST_BY_EDITOR_IN_CHIEF: 'change-request-by-editor-in-chief',
+    REJECTED_BY_EDITOR_IN_CHIEF: 'rejected-by-editor-in-chief'
+})
 
 
-// export const Status = Object.freeze({
-//     SUBMITTED: 'submitted',
-//     REJECTED: 'rejected',
-//     ASSIGNED: 'assigned',
-//     PENDING_EXTERNAL_REVIEW: 'pending-external-review',
-//     UNDER_REVIEW: 'under-review',
-//     UNDER_CONSIDERATION: 'under-consideration',
-//     ACCEPTED: 'accepted'
-// })
+
 
 
 
@@ -49,11 +55,6 @@ export const Disciplines = Object.freeze({
 })
 
 
-export const Step = Object.freeze({
-    AWAITING_INITIAL_RESPONSE: 'awaiting-initial-response',
-    REVIEWING: "reviewing",
-    AWAITING_REVIEWER: 'awaiting-reviewer'
-})
 
 
 
@@ -61,32 +62,6 @@ export const Step = Object.freeze({
 
 
 
-
-
-
-
-
-
-
-/**
- * @todo remove methods below and adjust reference
- */
-
-export const toTitleCase = (constant = '') => {
-    return constant.split('-')
-        .map(item => item.charAt(0).toUpperCase() + item.substring(1))
-        .join(' ');
-};
-
-
-export const formatDate = (date) => {
-    return new Intl.DateTimeFormat('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-    }).format(new Date(date));
-
-}
 
 
 

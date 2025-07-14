@@ -1,5 +1,15 @@
-export const toTitleCase = (constant = '') => {
-    return constant.split('-')
+
+/**
+ * Helper function to convert from `kebab-case` to `Title Case`
+ * 
+ * @example
+ * toTitleCase('hello-world'); // 'Hello World'
+ * 
+ * @param {string} string 
+ * @returns {string} The string in title case.
+ */
+export const toTitleCase = (string = '') => {
+    return string.split('-')
         .map(item => item.charAt(0).toUpperCase() + item.substring(1))
         .join(' ');
 };
@@ -20,10 +30,10 @@ export const flattenSections = (sections, parentPath = []) => {
 	for (const section of sections) {
 		const path = [...parentPath, section.title];
 
+		const {units, ...rest} = section
+
 		result.push({
-			id: section.id || "none",
-			title: section.title,
-			page: section.page,
+			...rest,
 			path: path
 		});
 
@@ -35,4 +45,3 @@ export const flattenSections = (sections, parentPath = []) => {
 
 	return result;
 }
-

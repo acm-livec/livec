@@ -1,7 +1,7 @@
 const { generateRandomId } = require('@utils/generate-id'); 
 
 class PublicMessage {
-    constructor({refId = generateRandomId(), status, date = new Date().toISOString(), message, author}) {
+    constructor({refId = generateRandomId(), status, date = new Date().toISOString(), message, author = 'LiveC'}) {
         this.refId = refId;
         this.status = status;
         this.date = date;

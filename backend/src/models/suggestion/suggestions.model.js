@@ -1,6 +1,6 @@
 const db = require('@database/database');
 const Suggestion = require('./suggestion.model');
-const { Roles } = require('@utils/constants');
+const { Roles, Status } = require('@utils/constants');
 
 class Suggestions {
     static dbRef = db.suggestions;
@@ -57,6 +57,15 @@ class Suggestions {
         const entries = this.dbRef.data.
         filter(s => s.assigned_associate_editor === id)
         .map(s => new Suggestion(s).toAssociateEditor())
+        return entries || []
+    }
+
+
+    static async getFinalized(id) {
+        await this.dbRef.read();
+        const entries = this.dbRef.data.
+        filter(s => (s.assigned_editor_in_chief === id && s.status.system === Status.System.ELEVATED || (s.status.system === Status.System.AWAITING_FINAL_DECISION)))
+        .map(s => new Suggestion(s).toEditorInCheif())
         return entries || []
     }
 
