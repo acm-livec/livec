@@ -1,0 +1,39 @@
+.notify-page {
+  padding: 2rem;
+  font-family: 'Funnel Sans', sans-serif;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.notify-page label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.notify-page input,
+.notify-page textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.notify-page button {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.notification-msg {
+  margin-top: 1rem;
+  color: green;
+}

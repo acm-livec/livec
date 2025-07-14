@@ -1,0 +1,21 @@
+.approved-curricula-page {
+  padding: 2rem;
+  font-family: 'Funnel Sans', sans-serif;
+}
+
+.curricula-list {
+  list-style: none;
+  padding: 0;
+}
+
+.curriculum-card {
+  background-color: #f7f7f7;
+  border-left: 4px solid #28a745;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.curriculum-card h2 {
+  margin-top: 0;
+}

@@ -15,6 +15,9 @@ import deskRejectRoutes from './routes/deskReject.js';
 import eicRoutes from './routes/eic.js';
 import eicCurriculumReviewRoutes from './routes/eicCurriculumReview.js';
 
+import asRoutes from './routes/as/as.js';
+import asNotificationRoutes from './routes/as/asNotification.js';
+
 const app = express();
 const PORT = 3001;
 
@@ -35,6 +38,9 @@ app.use('/api/revision-response', revisionResponseRoutes);
 app.use('/api/desk-reject', deskRejectRoutes);
 app.use('/api/eic', eicRoutes);
 app.use('/api/eic', eicCurriculumReviewRoutes);
+
+app.use('/api/as', asRoutes);
+app.use('/api/as', asNotificationRoutes);
 
 app.listen(PORT, () => {
   console.log(`Backend running at http://localhost:${PORT}`);

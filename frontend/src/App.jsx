@@ -18,7 +18,6 @@ import AEFinalRecommendationPage from './pages/AEFinalRecommendationPage';
 import AEHistoryPage from './pages/AEHistoryPage';
 import UpdateCurriculumPage from './pages/UpdateCurriculumPage';
 import AERevisionResponsePage from './pages/AERevisionResponsePage';
-import AEDeskRejectPage from './pages/AEDeskRejectPage';
 
 import EICDecisionPage from './pages/EICDecisionPage';
 import EICDecisionDetailPage from './pages/EICDecisionDetailPage';
@@ -28,6 +27,10 @@ import EICBoardReviewPage from './pages/EICBoardReviewPage';
 import EICFinalizePage from './pages/EICFinalizePage';
 import EICHistoryPage from './pages/EICHistoryPage';
 import EICApproveVersionPage from './pages/EICApproveVersionPage.jsx';
+
+import ApprovedCurriculaPage from './pages/as/ApprovedCurriculaPage';
+import AEDeskRejectPage from './pages/AEDeskRejectPage';
+import NotifyCurriculumChangePage from './pages/as/NotifyCurriculumChangePage';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -48,11 +51,15 @@ function App() {
         <Route path="/review/:proposalId/:reviewerId/submit" element={<SubmitReviewPage />} />
         <Route path="/ae/queue" element={<AEQueuePage />} />
         <Route path="/proposal/:proposalId/final-recommendation/:aeId" element={<AEFinalRecommendationPage />} />
+        
         <Route path="/ae/finalize/:proposalId" element={<AEFinalRecommendationPage />} />
         <Route path="/ae/:aeId/history" element={<AEHistoryPage aeId="ae123" />} />
+        
         <Route path="/curriculum/update/:segmentId" element={<UpdateCurriculumPage />} />
+        
         <Route path="/proposal/:proposalId/respond-revision" element={<AERevisionResponsePage />} />
         <Route path="/proposal/:proposalId/desk-reject" element={<AEDeskRejectPage aeId="ae123" />} />
+        
         <Route path="/eic/decisions" element={<EICDecisionPage />} />
         <Route path="/eic/decision/:proposalId" element={<EICDecisionDetailPage />} />
         <Route path="/eic/decision/:id" element={<EICSingleDecisionPage />} />
@@ -61,7 +68,10 @@ function App() {
         <Route path="/eic/finalize" element={<EICFinalizePage />} />
         <Route path="/eic/history" element={<EICHistoryPage />} />
         <Route path="/eic/approve-version" element={<EICApproveVersionPage />} />
-
+        
+        <Route path="/as/approved-curricula" element={<ApprovedCurriculaPage />} />
+        <Route path="/as/approved" element={<ApprovedCurriculaPage />} />
+        <Route path="/as/notify-change" element={<NotifyCurriculumChangePage />} />
       </Routes>
     </Router>
   );
