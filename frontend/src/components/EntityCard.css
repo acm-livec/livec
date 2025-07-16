@@ -1,0 +1,21 @@
+.entity-card {
+  background-color: #f7f7f7;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.entity-card h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.entity-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.entity-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}

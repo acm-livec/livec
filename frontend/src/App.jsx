@@ -1,6 +1,9 @@
 import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+
 import RecommendationPage from './pages/RecommendationPage';
 // import CurriculumDetailsPage from './pages/Details/CurriculumDetailsPage';
 // import AuthPage from './pages/AuthPage';
@@ -32,12 +35,17 @@ import ApprovedCurriculaPage from './pages/as/ApprovedCurriculaPage';
 import AEDeskRejectPage from './pages/AEDeskRejectPage';
 import NotifyCurriculumChangePage from './pages/as/NotifyCurriculumChangePage';
 
+import LogicalModelPage from './pages/data/LogicalModelPage';
+import DataDictionaryPage from './pages/data/DataDictionaryPage';
+
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
 
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<HomePage />} />
+
         <Route path="/proposal/:proposalId/recommendation" element={<RecommendationPage />} />
         <Route path="/" element={<h1>LiveC is Running</h1>} />
         {/* <Route path='/auth' element={<AuthPage />} /> */}
@@ -72,6 +80,12 @@ function App() {
         <Route path="/as/approved-curricula" element={<ApprovedCurriculaPage />} />
         <Route path="/as/approved" element={<ApprovedCurriculaPage />} />
         <Route path="/as/notify-change" element={<NotifyCurriculumChangePage />} />
+
+        
+        <Route path="/data-model" element={<LogicalModelPage />} />
+        <Route path="/data/dictionary" element={<DataDictionaryPage />} />
+        <Route path="/data-model/dictionary" element={<DataDictionaryPage />} />
+
       </Routes>
     </Router>
   );

@@ -1,0 +1,23 @@
+.entity-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  width: 250px;
+  font-family: 'Funnel Sans', sans-serif;
+}
+
+.entity-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.entity-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.entity-card li {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

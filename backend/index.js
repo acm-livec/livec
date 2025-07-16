@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 
 import recommendationRoutes from './routes/recommendation.js';
 import notifyRoutes from './routes/notify.js';
@@ -18,13 +18,17 @@ import eicCurriculumReviewRoutes from './routes/eicCurriculumReview.js';
 import asRoutes from './routes/as/as.js';
 import asNotificationRoutes from './routes/as/asNotification.js';
 
+import dataModelRoutes from './routes/dataModel/model.js';
+import dictionaryRoutes from './routes/dataModel/dictionary.js';
+
 const app = express();
+
+app.use(express.json());
+app.use(cors());
+
 const PORT = 3001;
 
-app.use(cors());
-app.use(express.json());
-
-mongoose.connect('mongodb://localhost:27017/livec');
+// mongoose.connect('mongodb://localhost:27017/livec');
 
 app.use('/api/review', reviewRoutes);
 app.use('/api/recommendation', recommendationRoutes);
@@ -42,6 +46,9 @@ app.use('/api/eic', eicCurriculumReviewRoutes);
 app.use('/api/as', asRoutes);
 app.use('/api/as', asNotificationRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Backend running at http://localhost:${PORT}`);
+app.use('/api/datamodel', dataModelRoutes);
+app.use('/api/datamodel/dictionary', dictionaryRoutes);
+
+app.listen(3001, () => {
+  console.log('Server running on http://localhost:3001');
 });

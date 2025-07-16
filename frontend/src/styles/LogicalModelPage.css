@@ -1,0 +1,31 @@
+.logical-model-page {
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navigation-buttons {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navigation-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.entity-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
