@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 // import mongoose from 'mongoose';
 
+import proposedChangeRoutes from './routes/proposedChange.js';
+
 import communityMemberRoutes from './routes/auth/communityMember.js';
 
 import recommendationRoutes from './routes/recommendation.js';
@@ -31,6 +33,8 @@ app.use(cors());
 const PORT = 3001;
 
 // mongoose.connect('mongodb://localhost:27017/livec');
+
+app.use('/api/proposed-changes', proposedChangeRoutes);
 
 app.use('/api/community-members', communityMemberRoutes);
 

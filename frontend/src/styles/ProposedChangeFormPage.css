@@ -1,0 +1,57 @@
+.proposed-change-page {
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: center; 
+}
+
+.proposed-change-page h2 {
+  margin-bottom: 1rem;
+}
+
+.navigation-buttons {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; 
+}
+
+.navigation-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.proposed-change-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left; /* <-- form fields aligned left */
+}
+
+.proposed-change-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.proposed-change-form input,
+.proposed-change-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.proposed-change-form button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

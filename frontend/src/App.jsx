@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage';
 
 import CommunityMemberRegisterPage from "./pages/cm/CommunityMemberRegisterPage";
 
+import ProposedChangeFormPage from './pages/pc/ProposedChangeFormPage.jsx';
+
 import RecommendationPage from './pages/RecommendationPage';
 // import CurriculumDetailsPage from './pages/Details/CurriculumDetailsPage';
 // import AuthPage from './pages/AuthPage';
@@ -53,6 +55,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
 
         <Route path="/cm/register" element={<CommunityMemberRegisterPage />} />
+
+        <Route path="/pc/submit" element={<ProposedChangeFormPage />} />
 
         <Route path="/proposal/:proposalId/recommendation" element={<RecommendationPage />} />
         <Route path="/" element={<h1>LiveC is Running</h1>} />
