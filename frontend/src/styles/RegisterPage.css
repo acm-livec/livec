@@ -1,0 +1,21 @@
+.register-page {
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.register-page form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.register-page button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

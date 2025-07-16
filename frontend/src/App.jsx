@@ -2,7 +2,11 @@ import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 
+import RegisterPage from './pages/Auth/RegisterPage';
+
 import HomePage from './pages/HomePage';
+
+import CommunityMemberRegisterPage from "./pages/cm/CommunityMemberRegisterPage";
 
 import RecommendationPage from './pages/RecommendationPage';
 // import CurriculumDetailsPage from './pages/Details/CurriculumDetailsPage';
@@ -44,7 +48,11 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/register" element={<RegisterPage />} />
+
         <Route path="/" element={<HomePage />} />
+
+        <Route path="/cm/register" element={<CommunityMemberRegisterPage />} />
 
         <Route path="/proposal/:proposalId/recommendation" element={<RecommendationPage />} />
         <Route path="/" element={<h1>LiveC is Running</h1>} />

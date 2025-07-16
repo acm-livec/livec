@@ -1,0 +1,53 @@
+.cm-register-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.community-register-page h2 {
+  text-align: center;
+}
+
+.cm-register-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.cm-register-form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cm-register-form button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.nav-buttons button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background-color: #e0e0e0;
+}
