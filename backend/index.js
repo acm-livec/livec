@@ -3,8 +3,9 @@ import cors from 'cors';
 // import mongoose from 'mongoose';
 
 import proposedChangeRoutes from './routes/proposedChange.js';
-
 import communityMemberRoutes from './routes/auth/communityMember.js';
+import editorRoutes from './routes/editor/editor.js';
+import curriculumRoutes from './routes/curriculum/curriculum.js';
 
 import recommendationRoutes from './routes/recommendation.js';
 import notifyRoutes from './routes/notify.js';
@@ -35,8 +36,9 @@ const PORT = 3001;
 // mongoose.connect('mongodb://localhost:27017/livec');
 
 app.use('/api/proposed-changes', proposedChangeRoutes);
-
 app.use('/api/community-members', communityMemberRoutes);
+app.use('/api/editors', editorRoutes);
+app.use('/api/curriculum', curriculumRoutes);
 
 app.use('/api/review', reviewRoutes);
 app.use('/api/recommendation', recommendationRoutes);

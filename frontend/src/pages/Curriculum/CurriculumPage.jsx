@@ -1,39 +1,69 @@
+import React, { useState, useEffect } from 'react';
+import '../../styles/CurriculumPage.css';
+import { useNavigate } from 'react-router-dom';
 
-import { CURRICULA } from '@data'
-import { useNavigate } from 'react-router-dom'
-import { IoIosArrowBack } from "react-icons/io";
-import './CurriculumPage.css'
+const CurriculumPage = () => {
+  const [curriculumList, setCurriculumList] = useState([]);
+  const [form, setForm] = useState({ title: '', description: '', year: '' });
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    fetch('http://localhost:3001/api/curriculum/all')
+      .then(res => res.json())
+      .then(data => setCurriculumList(data));
+  }, []);
 
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch('http://localhost:3001/api/curriculum/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+    const newCurriculum = await res.json();
+    setCurriculumList([...curriculumList, newCurriculum]);
+    setForm({ title: '', description: '', year: '' });
+  };
 
+  return (
+    <div className="curriculum-page">
+      <h2>Curriculum Management</h2>
 
-export default function CurriculumPage({ setSelectedCurriculum }) {
-	const navigate = useNavigate();
+      <div className="navigation-buttons">
+        <button onClick={() => navigate('/')}>Home</button>
+        <button onClick={() => navigate('/as/approved')}>Approved Curricula</button>
+      </div>
 
-	const handleClick = (curriculum, slug) => {
-		sessionStorage.setItem('curriculum', curriculum)
-		setSelectedCurriculum(curriculum)
-		navigate(`/curriculum/${slug}`)
-	}
+      <form className="curriculum-form" onSubmit={handleSubmit}>
+        <label>
+          Title:
+          <input type="text" name="title" value={form.title} onChange={handleChange} required />
+        </label>
+        <label>
+          Description:
+          <textarea name="description" value={form.description} onChange={handleChange} required />
+        </label>
+        <label>
+          Year:
+          <input type="number" name="year" value={form.year} onChange={handleChange} required />
+        </label>
+        <button type="submit">Add Curriculum</button>
+      </form>
 
-	return (
-		<div>
-			<h1 className='curricula-page__heading'>
+      <div className="curriculum-list">
+        {curriculumList.map(c => (
+          <div key={c.curriculumId} className="curriculum-card">
+            <h3>{c.title}</h3>
+            <p>{c.description}</p>
+            <p><strong>Year:</strong> {c.year}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-				<button className='back-bttn' onClick={() => window.history.back()}>
-					<IoIosArrowBack size={'auto'} color='#056da1' />
-				</button>
-
-				Choose a curriculum</h1>
-			<div className='card__grid'>
-				{CURRICULA.map((item, indx) => (
-					<div key={indx * 13} className='card' onClick={() => handleClick(item.name, item.slug)}>
-						<h2 className='card__heading'>{item.name}</h2>
-						<p className='card__desc'>{`Explore the ${item.name} curriculum`}</p>
-					</div>
-				))}
-			</div>
-		</div>
-	)
-}
+export default CurriculumPage;
