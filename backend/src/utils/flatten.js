@@ -1,3 +1,5 @@
+
+
 function flattenSections(sections, parentPath = []) {
 	let result = [];
 

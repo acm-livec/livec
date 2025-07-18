@@ -39,11 +39,14 @@ const variants = {
     blue: 'button--blue',
     round: 'button--round',
     purple: 'button--purple',
-    normal: 'button--normal'
+    normal: 'button--normal',
+    gray: 'button--gray',
+    fit: 'button--fit'
 }
 
 
 export const Button = ({
+    className = '',
     modal = null,
     variant = 'normal',
     text = 'Submit',
@@ -51,22 +54,25 @@ export const Button = ({
     icon = <></>,
     isActive = false,
     disableOn = false,
-    hideOn = false }) => {
+    hideOn = false,
+    ...props }) => {
 
-    const className = clsx(styles[variants[variant]], isActive && styles[`${variants[variant]}--active`]);
+    if (hideOn) return null
+
+    const cssClassName = clsx(styles[variants[variant]], isActive && styles[`${variants[variant]}--active`], className);
 
 
     return modal ? (
         <ModalProvider onSubmit={onClick}>
-           <ButtonWithModal text={text}/>
+           <ButtonWithModal text={text} {...props}/>
            {modal}
         </ModalProvider>
 
     ) : (
         <button
+            {...props}
             disabled={disableOn}
-            hidden={hideOn}
-            className={className}
+            className={cssClassName}
             type='button'
             onClick={onClick}
         >
@@ -76,12 +82,12 @@ export const Button = ({
 }
 
 
-function ButtonWithModal({ children = null, text }) {
+function ButtonWithModal({ children = null, text, ...props }) {
     const { open } = useContext(ModalContext);
 
     return (
         <>
-            <Button onClick={open} text={text} />
+            <Button onClick={open} text={text} {...props}/>
             {children}
         </>
     );

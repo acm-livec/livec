@@ -1,6 +1,5 @@
-@use 'styles/colors.scss';
-@use 'styles/index' as *; // or as theme;
-
+// App.scss
+@use 'styles/index' as *;
 
 *,
 *::after,

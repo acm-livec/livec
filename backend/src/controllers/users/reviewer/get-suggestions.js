@@ -1,4 +1,4 @@
-const getReviewerAssignedSuggestions = require('@service/users/reviewer/get-suggestions')
+const getReviewerAssignedSuggestions = require('@services/users/reviewer/get-suggestions')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

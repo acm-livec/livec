@@ -54,17 +54,15 @@ const Placeholder = () => {
     return (
         <div onClick={() => navigate('/auth')} className='clickable'>
             <h2>Login in or Register to leave a suggestion for this section</h2>
-
-
         </div>
     )
 }
+
 
 const Success = ({ response, onClose }) => (
     <div>
         <h2>✅ Success</h2>
         <p>{response?.message}</p>
-        {/* Will add close implementation later */}
         <button onClick={onClose}>Close</button>
     </div>
 );

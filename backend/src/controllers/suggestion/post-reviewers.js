@@ -1,4 +1,4 @@
-const { assignReviewersToSuggestion } = require('@service/suggestion')
+const { assignReviewersToSuggestion } =require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({
@@ -8,7 +8,7 @@ const logger = require('@logger').addSource({
 });
 
 
-const postReviewers = async (req, res) => {
+const postAssignReviewers = async (req, res) => {
 
     try {
         logger.start('POST Suggestion Reviewers')
@@ -17,7 +17,7 @@ const postReviewers = async (req, res) => {
         const { notes, message, reviewers } = req.body
 
         logger.info("suggestion.post.reviewers.started", { suggestionId: id, numAssigned: reviewers.length })
-         await assignReviewersToSuggestion(id, notes, message, reviewers );
+        await assignReviewersToSuggestion(id, notes, message, reviewers );
 
         logger.success("suggestion.post.reviewers.completed");
         logger.end('POST Suggestion Reviewers')
@@ -42,4 +42,4 @@ const postReviewers = async (req, res) => {
     }
 }
 
-module.exports = { postReviewers }
+module.exports = { postAssignReviewers }

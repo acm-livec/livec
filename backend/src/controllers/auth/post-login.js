@@ -1,4 +1,4 @@
-const { handleLoginUser } = require('@service/auth')
+const { handleLoginUser } = require('@services/auth')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

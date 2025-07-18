@@ -49,7 +49,6 @@
         "rehype-katex": "^7.0.1",
         "remark-gfm": "^4.0.1",
         "remark-math": "^6.0.0",
-        "sass": "^1.89.2",
         "turndown": "^7.2.0"
     },
     "devDependencies": {
@@ -61,6 +60,7 @@
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.19",
         "globals": "^16.0.0",
+        "sass": "^1.89.2",
         "vite": "^6.3.5"
     }
 }

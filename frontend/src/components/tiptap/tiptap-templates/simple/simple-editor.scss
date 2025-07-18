@@ -31,6 +31,19 @@ body {
 	overflow: hidden;
 }
 
+.editor-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: 1rem;
+}
+
+.editor {
+
+	flex: 1;
+}
+
+
 .tiptap.ProseMirror {
 	font-family: "DM Sans", sans-serif;
 }
@@ -39,7 +52,7 @@ body {
 	height: calc(100% - var(--tt-toolbar-height));
 	overflow-y: auto;
 	padding: 2.5%;
-    background-color: $stone-50;
+	background-color: $stone-50;
 
 
 
@@ -80,11 +93,6 @@ body {
 	ol,
 	ul {
 
-		// columns: 2 200px;
-		// column-gap: 2rem;
-		// max-height: 500px;
-		// list-style-type: disc;
-		columns: 2;
 		gap: 0.75rem;
 		padding-left: 2rem;
 	}
@@ -97,7 +105,6 @@ body {
 		padding-left: 1em;
 		break-inside: avoid;
 		margin-bottom: 0.5rem;
-		/* Prevent items from splitting */
 		align-items: center;
 
 	}
@@ -140,10 +147,12 @@ body {
 }
 
 .simple-editor-content {
-::selection {
-  background: #a9bdfd;  /* your custom highlight color */
-  color: #000;          /* text color inside the selection */
-}
+	::selection {
+		background: #a9bdfd;
+		/* your custom highlight color */
+		color: #000;
+		/* text color inside the selection */
+	}
 
 
 

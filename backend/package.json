@@ -35,7 +35,8 @@
 		"@database": "src/database",
 		"@logger": "logger/logger.js",
 		"@constants": "src/constants",
-		"@service": "src/service",
-		"@errors": "src/errors"
+		"@services": "src/services",
+		"@errors": "src/errors",
+		"@documentation/*": "../documentation/*"
 	}
 }

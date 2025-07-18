@@ -7,7 +7,7 @@ class Reviewers extends Users {
     static roleKey = 'reviewers';
 
     static async getByAssociateEditor(userId) {
-        const dbRef = this.getDbRef(); // ✅ clean and centralized
+        const dbRef = this.getDbRef(); 
         await dbRef.read();
 
         const matches = dbRef.data

@@ -56,7 +56,7 @@ export function Form({ className = styles.form, children, resetOn = [] }) {
 
 
 
-export const SubmitButton = ({ children, onSubmit, text }) => {
+export const SubmitButton = ({ children = null, onSubmit = () => { }, text = 'Submit' }) => {
     const { formData } = useContext(FormContext);
     const hasModal = React.Children.count(children) > 0;
 
@@ -72,11 +72,6 @@ export const SubmitButton = ({ children, onSubmit, text }) => {
         <Button onClick={() => onSubmit(formData)} text={text} />
     );
 };
-
-SubmitButton.defaultProps = {
-    onSubmit: () => {},
-    text: "Submit",
-}
 
 
 

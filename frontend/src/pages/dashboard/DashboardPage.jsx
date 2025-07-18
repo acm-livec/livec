@@ -2,11 +2,11 @@ import { useContext } from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
 
 import * as Icons from '@components/Icons';
-import { Layout, Sidebar, MainPanel } from '@components/containers/Layout';
+import { Layout, Sidebar, MainPanel } from '@components/layouts/Layout';
 
 import { UserContext } from '@context/UserProvider';
 
-import { Roles } from '@utils/constants'
+import { Roles } from '@documentation/constants/roles';
 
 
 
@@ -25,10 +25,10 @@ export default function DashboardPage() {
 		<Layout>
 			
 			<Sidebar>
-				{user.role === Roles.ASSOCIATE_EDITOR && <AssociateEditorSidebarItems />}
-				{user.role === Roles.REVIEWER && <ReviewerSidebarItems />}
-				{user.role === Roles.COMMUNITY_MEMBER && <CommunityMemberSidebarItems />}
-				{user.role === Roles.EDITOR_IN_CHIEF && <EditorInChiefSidebarItems />}
+				{user.hasRole(Roles.ASSOCIATE_EDITOR) && <AssociateEditorSidebarItems />}
+				{user.hasRole(Roles.REVIEWER) && <ReviewerSidebarItems />}
+				{user.hasRole(Roles.COMMUNITY_MEMBER) && <CommunityMemberSidebarItems />}
+				{user.hasRole(Roles.EDITOR_IN_CHIEF) && <EditorInChiefSidebarItems />}
 			</Sidebar>
 
 			<MainPanel>

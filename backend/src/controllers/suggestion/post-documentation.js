@@ -1,4 +1,4 @@
-const { addNewDocumentationToSuggestion } = require('@service/suggestion')
+const { addNewDocumentationToSuggestion } = require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

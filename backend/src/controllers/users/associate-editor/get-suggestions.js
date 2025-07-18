@@ -1,4 +1,4 @@
-const getAssociateEditorAssignedSuggestions = require('@service/users/associate-editor/get-suggestions')
+const getAssociateEditorAssignedSuggestions = require('@services/users/associate-editor/get-suggestions')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

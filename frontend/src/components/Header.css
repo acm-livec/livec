@@ -8,6 +8,12 @@ header {
     color: rgba(255, 255, 255, 0.90)
 }
 
+.identity {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 .site-name {
     letter-spacing: 0.075rem;
 }

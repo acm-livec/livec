@@ -36,7 +36,7 @@ function flattenSections(sections, parentPath = []) {
 	for (const section of sections) {
 		const path = [...parentPath, section.title];
 
-		const {units, ...rest} = section
+		const { units, ...rest } = section
 
 		result.push({
 			...rest,
@@ -59,12 +59,12 @@ const format = (str) => {
 };
 
 
-async function buildSections(sections, currentSection = {}) {
-	let result = [];
+
+async function buildSections(sections, currentSection = {}, index = 0) {
+	const result = [];
 
 	for (const section of sections) {
-
-		const cleanedTitle = format(section.title)
+		const cleanedTitle = format(section.title);
 
 		const meta = {
 			curriculum: "computer-science",
@@ -73,36 +73,41 @@ async function buildSections(sections, currentSection = {}) {
 			previous_versions: section.meta?.previous_versions || [],
 			slug: cleanedTitle,
 			created_at: new Date().toISOString(),
-			updated_at: new Date().toISOString()
-		}
-
+			updated_at: new Date().toISOString(),
+		};
 
 		currentSection = {
-			id: section.id || await generateSectionId({...meta, page_number: section.page}),
+			id: section.id || await generateSectionId({ ...meta, page_number: section.page_number }),
 			title: section.title,
-			page_number: section.page,
+			page_number: section.page_number,
 			markdown_heading: section.markdown_heading || '',
 			markdown_body: section.markdown_body || '',
+			html: section.html || '',
 			meta: meta,
-			units: section.units || []
+			units: [],
 		};
 
 		if (section.units && section.units.length > 0) {
-			const children = await buildSections(section.units);
+			const [children, updatedIndex] = await buildSections(section.units, {}, index);
 			currentSection.units = children;
+			index = updatedIndex; 
+		} else {
+			currentSection.index = index;
+			index++;
 		}
 
-		result.push(currentSection)
+		result.push(currentSection);
 	}
 
-	return result;
+	return [result, index];
 }
+
 
 
 const Build = async (params) => {
 	const rawData = fs.readFileSync('../database/data/curriculums/curriculums.json', 'utf-8');
 	const curriculums = JSON.parse(rawData);
-	const build = await buildSections(curriculums);
+	const [build] = await buildSections(curriculums);
 	fs.writeFileSync(
 		'built_sections.json',
 		JSON.stringify(build, null, 4),
@@ -115,7 +120,7 @@ const Build = async (params) => {
 const Flatten = () => {
 	const rawData = fs.readFileSync('./built_sections.json', 'utf-8');
 	const curriculums = JSON.parse(rawData);
-	const flat =  flattenSections(curriculums);
+	const flat = flattenSections(curriculums);
 	fs.writeFileSync(
 		'flattened_sections.json',
 		JSON.stringify(flat, null, 4),
@@ -125,7 +130,15 @@ const Flatten = () => {
 	return flat
 }
 
-console.log(Flatten())
+// Build().then(console.log)
+
+
+const obj = {
+	// isFirst: true
+}
+
+console.log(!!(obj?.isFirst || false))
+console.log(obj?.isLast || false)
 
 
 

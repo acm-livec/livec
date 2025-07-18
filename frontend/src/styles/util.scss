@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use 'sass:list';
-@use './colors.scss' as *;
+@use './_colors.scss' as *;
 
 @mixin flex-center($direction) {
     display: flex;

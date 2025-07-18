@@ -1,5 +1,5 @@
 const { generateSuggestionId } = require('@utils/generate-id');
-const { Status, Step, Actions } = require('@utils/constants');
+const { Status, Actions } = require('@utils/constants');
 const Documentation = require('../util/documentation.model')
 const PublicMessage = require('../util/public-message.model')
 
@@ -9,7 +9,8 @@ class Suggestion {
     constructor(data) {
         this.id = data.id || generateSuggestionId(data.discipline);
         this.title = data.title;
-        this.suggestion = data.suggestion || '';
+        this.text = data.text || '';
+        this.suggestion = data.text || '';
 
         this.submitter_id = data.submitter_id || data.submitterId;
         this.section_id = data.section_id || data.sectionId;
@@ -54,7 +55,7 @@ class Suggestion {
         return {
             id: this.id,
             title: this.title,
-            suggestion: this.suggestion,
+            text: this.text,
             sectionId: this.section_id,
             timeCreated: this.time_created,
             status: this.status.for_member,
@@ -69,7 +70,7 @@ class Suggestion {
         return {
             id: this.id,
             title: this.title,
-            suggestion: this.suggestion,
+            text: this.text,
             timeCreated: this.time_created,
             status: this.status.for_associate_editor,
             sectionId: this.section_id,
@@ -80,6 +81,7 @@ class Suggestion {
             assignedEditorInChief: this.assigned_editor_in_chief || 'none',
             assignedReviewers: this.assigned_reviewers || [],
             documentation: this.documentation,
+            history: this.history,
             system: {
                 status: this.status.system
             }
@@ -176,7 +178,7 @@ class Suggestion {
                 'for_member': Status.Public.UNDER_CONSIDERATION,
                 'for_associate_editor': Status.Private.CHANGE_REQUEST,
                 'for_editor_in_chief': Status.Private.AWAITING_CHANGE_REQUEST,
-                'system': Status.System.ACTIVE
+                'system': Status.System.PENDING
             }
         }
     }
@@ -184,6 +186,11 @@ class Suggestion {
 
 
 
+    isInDeliberation() {
+        return this.status.system === Status.System.ELEVATED || 
+        this.status.system === Status.System.PENDING ||
+        this.status.system === Status.System.AWAITING_FINAL_DECISION
+    }
 
 
 

@@ -1,8 +1,12 @@
-@forward 'colors.scss';
+// Sass modules (variables + utilities)
+@forward '_colors.scss';
 @forward 'util.scss';
+@forward './_borders.scss';
+@forward './spacing.scss';
+@forward './csdoc-styling.scss';
 
-@forward 'borders.css';
-@forward 'flex.css';
-@forward 'typography.css';
-@forward 'variants.css';
-@forward 'colors.css';
+// Plain CSS files: use @import instead
+@forward './flex.css';
+@forward './typography.css';
+// @import './variants.css';
+@forward './colors.css';

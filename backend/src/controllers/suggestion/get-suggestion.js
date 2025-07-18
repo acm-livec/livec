@@ -1,4 +1,4 @@
-const { getSuggestionById } = require('@service/suggestion/')
+const { getSuggestionById } = require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

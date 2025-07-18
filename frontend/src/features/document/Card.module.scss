@@ -1,0 +1,19 @@
+@use '@styles' as *;
+
+.card {
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: $stone-200;
+    gap: 1rem;
+    padding: 0.5rem;
+
+    &:hover {
+            background-color: $stone-300;
+
+    }
+}   
+
+
+.card + .card {
+    margin-top: 1rem;
+}

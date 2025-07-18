@@ -5,7 +5,9 @@
     "email": "johndoe@email.com",
     "password": "password",
     "role": "community-member",
-    "suggestions": []
+    "suggestions": [
+      "SCOSC-8eF4c5aN"
+    ]
   },
   {
     "id": "CM-6482",
@@ -13,8 +15,14 @@
     "email": "jramirez7254@gmail.com",
     "password": "q",
     "role": "community-member",
-    "suggestions": [
-
-    ]
+    "suggestions": []
+  },
+  {
+    "id": "CM-Vh-ul",
+    "name": "ITICSE",
+    "email": "email.com",
+    "password": "password",
+    "role": "community-member",
+    "suggestions": []
   }
 ]

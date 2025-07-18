@@ -1,4 +1,4 @@
-const { associateEditorFinalized } = require('@service/suggestion')
+const { associateEditorFinalized } = require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

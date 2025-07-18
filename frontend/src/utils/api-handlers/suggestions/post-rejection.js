@@ -1,14 +1,18 @@
 import { API } from '@api/client.js';
 import { logger } from '@utils/logger'
 
-const log = logger.create('postSuggestion.js');
 
-export const postRejection = async (suggestionId, rejectedBy, reason, message) => {
+export const postRejection = async (suggestionId, rejectedBy, reasonForRejection, messageToSubmitter) => {
+
     try {
-        log.debug({ suggestionId, rejectedBy, reason, message })
-        const response = await API.post(`/suggestion/${suggestionId}/reject`, {rejectedBy, reason, message})
-        logger.debug('response')
-        return response
+        const response = await API.post(`/suggestion/${suggestionId}/reject`, { 
+            rejectedBy, reasonForRejection, messageToSubmitter 
+        })
+
+        const { success, message } = response.data
+        logger.success(message)
+        return success
+        
     } catch (error) {
         logger.error(error)
     }

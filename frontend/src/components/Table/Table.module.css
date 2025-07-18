@@ -6,7 +6,6 @@
 
 .table th,
 .table td {
-  /* border: 1px solid #ddd; */
   padding: 8px;
   text-align: left;
   white-space: nowrap;
@@ -26,4 +25,5 @@
 
 .table-row:hover {
   background-color: #f9f9f9;
+  cursor: pointer;
 }

@@ -3,6 +3,14 @@ import { logger } from '@utils/logger'
 
 const log = logger.create('postSuggestion.js');
 
+
+
+/**
+ * 
+ * @param {string} suggestionId 
+ * @param {string} role 
+ * @returns {Promise<Object>}
+ */
 export const getSuggestion = async (suggestionId, role) => {
     try {
         const response = await API.get(`/suggestion/${suggestionId}`, {

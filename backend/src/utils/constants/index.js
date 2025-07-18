@@ -32,57 +32,7 @@ const Actions = Object.freeze({
 
 
 
-const Step = Object.freeze({
-    AWAITING_INITIAL_RESPONSE: 'awaiting-initial-response',
-    REVIEWING: "reviewing",
-    AWAITING_REVIEWER: 'awaiting-reviewer'
-})
+
+module.exports = { Roles, HTTP_STATUS, Status, Actions }
 
 
-
-module.exports = { Roles, HTTP_STATUS, Status, Step, Actions }
-
-
-// export const Status = Object.freeze({
-//     Public: {
-//         SUBMITTED: 'submitted',
-//         REJECTED: 'rejected',
-//         ASSIGNED: 'assigned',
-//         UNDER_REVIEW: 'under-review',
-//         UNDER_CONSIDERATION: 'under-consideration',
-//         ACCEPTED: 'accepted',
-//         PENDING_EXTERNAL_REVIEW: 'pending-external-review'
-//     },
-
-//     Private: {
-//         AWAITING_INITIAL_RESPONSE: 'awaiting-initial-response',
-//         REVIEWING: 'reviewing',
-//         AWAITING_REVIEWER: 'awaiting-reviewer',
-//         REVIEW_ASSIGNED: 'review-assigned',
-//         REVIEW_IN_PROGRESS: 'review-in-progress',
-//         AWAITING_FEEDBACK: 'awaiting-feedback'
-//     },
-
-//     System: {
-//         NEW: 'new',
-//         ACTIVE: 'active',
-//         UNASSIGNED: 'unassigned',
-//         PENDING: 'pending',
-//         ESCALATED: 'escalated',
-//         SUSPENDED: 'suspended',
-//         INACTIVE: 'inactive',
-//         CLOSED: 'closed',
-//         ARCHIVED: 'archived',
-//         DEFERRED: 'deferred',
-//         ON_HOLD: 'on-hold',
-//         FLAGGED: 'flagged',
-//         RESOLVED: 'resolved'
-//     },
-
-//     SUBMITTED: 'submitted',
-//     REJECTED: 'rejected',
-//     ASSIGNED: 'assigned',
-//     UNDER_REVIEW: 'under-review',
-//     UNDER_CONSIDERATION: 'under-consideration',
-//     ACCEPTED: 'accepted'
-// })

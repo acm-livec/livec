@@ -1,2 +1,2 @@
-export { postRegister }    from './postRegister'
-export { postLogin    }    from './postLogin'
+export { postRegister }    from './post-register'
+export { postLogin    }    from './post-login'

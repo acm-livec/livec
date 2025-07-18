@@ -2,23 +2,8 @@ import { Status, statusMap } from './status'
 
 export {Status, statusMap}
 
-export const Roles = Object.freeze({
-    COMMUNITY_MEMBER: 'community-member',
-    REVIEWER: 'reviewer',
-    ASSOCIATE_EDITOR: 'associate-editor',
-    EDITOR_IN_CHIEF: 'editor-in-chief',
-    ACM_ED_BOARD: 'acm-ed-board'
-});
 
 
-
-
-
-export const Triage = Object.freeze({
-    DESK_REJECT: 'desk-reject',
-    START_REVIEW: 'start-review',
-    DEFER_TO_REVIEWER: 'defer-to-reviewer'
-})
 
 
 export const Actions = Object.freeze({
@@ -41,7 +26,22 @@ export const Actions = Object.freeze({
 
 
 
+/**
+ * @typedef {Object} Disciplines
+ * @property {'computer-science'} COMPUTER_SCIENCE - Computer Science.
+ * @property {'cybersecurity'} CYBERSECURITY - Cybersecurity.
+ * @property {'information-systems'} INFORMATION_SYSTEMS - Information Systems.
+ * @property {'computer-engineering'} COMPUTER_ENGINEERING - Computer Engineering.
+ * @property {'information-technology'} INFORMATION_TECHNOLOGY - Information Technology.
+ * @property {'data-science'} DATA_SCIENCE - Data Science.
+ * @property {'computing-curricula'} COMPUTING_CURRICULA - Computing Curricula.
+ * @property {'software-engineering'} SOFTWARE_ENGINEERING - Software Engineering.
+ */
 
+
+/**
+ * @type {Disciplines}
+ */
 export const Disciplines = Object.freeze({
     COMPUTER_SCIENCE: 'computer-science',
     CYBERSECURITY: 'cybersecurity',

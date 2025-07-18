@@ -6,49 +6,28 @@ import Page from './Page.jsx';
 import Breadcrumbs from '@components/BreadCrumbs';
 import TableOfContents from './TableOfContents.jsx';
 import SuggestionBox from '@components/SuggestionBox';
-import { flattenSections } from '@utils/format';
+import useTableOfContents from '@hooks/useTableOfContents';
+import { Disciplines } from '@utils/constants';
+import { FlexRow } from '@components/layouts/flex';
+import { Button } from '@components/buttons';
 
 
-const pdfjsVersion = "3.11.174";
-
-export default function CurriculumDetailsPage({ selectedCurriculum }) {
-
-    const [tableOfContents, setTableOfContents] = useState([])
-    const [currentPage, setCurrentPage] = useState({})
-
-
-
-    useEffect(() => {
-        fetch('/cs_toc.json')
-            .then((res) => res.json())
-            .then(setTableOfContents)
-            .catch(console.error)
-    }, [])
-
-    useEffect(() => {
-        if (tableOfContents.length > 0) {
-            setCurrentPage(tableOfContents[0])
-        }
-    }, [tableOfContents])
-
-    if (tableOfContents.length === 0) return <p>Loading...</p>
+export default function CurriculumDetailsPage({ selectedCurriculum = sessionStorage.getItem('curriculum')}) {
+    const {
+        currentPage, nextPage, tableOfContents, 
+        previousPage, 
+        setCurrentPage
+    } = useTableOfContents(Disciplines.COMPUTER_SCIENCE)
 
 
-    const nextPage = () => {
-        const flat = flattenSections(tableOfContents)
-        const currIndx = flat.findIndex(page => page.id === currentPage.id)
-        setCurrentPage(flat[currIndx + 1])
-    }
-
-
-
+    if(tableOfContents.length <= 0 || !currentPage) return null
 
 
     return (
         <div className="details-page">
 
 
-            <aside className="toc-sidebar">
+            <SideBar>
                 <div className='breadcrumbs'>
                     <Breadcrumbs />
                 </div>
@@ -58,23 +37,27 @@ export default function CurriculumDetailsPage({ selectedCurriculum }) {
                     <hr />
                 </h1>
 
+                <TableOfContents jumpToPage={setCurrentPage} tableOfContents={tableOfContents} />
+            </SideBar>
 
-                <TableOfContents jumpToPage={setCurrentPage}tableOfContents={tableOfContents} />
 
-            </aside>
-
-            <div className="flex col pdf-container">
-
+            <PageContent>
+{/* 
                 <a href="/CS2023.pdf" download className="download-button">
                     Download the  {selectedCurriculum || sessionStorage.getItem('curriculum')} Curriculum
-                </a>
-                
+                </a> */}
+
                 <Page page={currentPage} >
-                    <button onClick={nextPage}>Next</button>
+                    <FlexRow justify='space-between'>
+                        <Button style={{marginRight: 'auto'}} variant='fit' disableOn={currentPage?.isFirst || false} onClick={previousPage} text='<'/>
+                        <Button style={{marginLeft: 'auto'}} variant='fit' disableOn={currentPage?.isLast || false} onClick={nextPage} text='>'/>
+                    </FlexRow>
                     <hr style={{ color: 'black', width: '100%' }} />
                     <SuggestionBox sectionId={currentPage?.id} />
                 </Page>
-            </div>
+
+            </PageContent>
+
         </div>
     );
 }
@@ -83,11 +66,26 @@ export default function CurriculumDetailsPage({ selectedCurriculum }) {
 
 const SideBar = ({ children }) => {
     return (
-        <aside>
+        <aside className="toc-sidebar">
             {children}
         </aside>
     )
 }
+
+
+const PageContent = ({ children }) => {
+    return (
+        <div className="flex col pdf-container">
+            {children}
+        </div>
+    )
+}
+
+
+
+
+
+
 
 // import '@react-pdf-viewer/core/lib/styles/index.css';
 // import '@react-pdf-viewer/page-navigation/lib/styles/index.css';

@@ -1,5 +1,5 @@
 
-const { handleEditorInChiefApproval } = require('@service/suggestion')
+const { handleEditorInChiefApproval } = require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

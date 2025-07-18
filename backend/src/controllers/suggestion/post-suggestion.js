@@ -1,4 +1,4 @@
-const  handleNewSuggestion  = require('@service/suggestion/handle-suggestion.js')
+const  handleNewSuggestion  = require('@services/suggestion/handle-suggestion.js')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

@@ -1,17 +1,20 @@
 import './CurriculumPage.scss'
 
 import { useNavigate } from 'react-router-dom'
-import { IoIosArrowBack } from "react-icons/io";
 
 import Breadcrumbs from '@components/BreadCrumbs';
-import { CURRICULA } from '@data'
 
 
-/**
- * Page that displays the eight different curriculums which
- * are retrieved from the Curricula variable from /src/data
- * 
-**/
+const curriculums = [
+    { name: 'Computer Science', slug: 'computer-science' },
+    { name: 'Information Systems', slug: 'information-systems' },
+    { name: 'Cybersecurity', slug: 'cybersecurity' },
+    { name: 'Computing Curricula', slug: 'computing-curricula' },
+    { name: 'Information Technology', slug: 'information-technology' },
+    { name: 'Computer Engineering', slug: 'computer-engineering' },
+    { name: 'Data Science', slug: 'data-science' },
+    { name: 'Software Engineering', slug: 'software-engineering' },
+]
 
 export default function CurriculumPage() {
 	const navigate = useNavigate();
@@ -28,7 +31,7 @@ export default function CurriculumPage() {
 			<Breadcrumbs/>
 			<h1 className='curricula-page__heading'>Choose a curriculum</h1>
 			<div className='card__grid'>
-				{CURRICULA.map((item, indx) => (
+				{curriculums.map((item, indx) => (
 					<div key={indx * 13} className='card' onClick={() => handleClick(item.name, item.slug)}>
 						<h2 className='card__heading'>{item.name}</h2>
 						<p className='card__desc'>{`Explore the ${item.name} curriculum`}</p>

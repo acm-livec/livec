@@ -1,4 +1,4 @@
-const  getAssignedReviewers  = require('@service/users/associate-editor/get-reviewers')
+const  getAssignedReviewers  = require('@services/users/associate-editor/get-reviewers')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

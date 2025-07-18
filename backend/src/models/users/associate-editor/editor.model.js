@@ -1,5 +1,6 @@
-// models/CommunityMember.js
+
 const User = require('../user.model');
+
 
 class AssociateEditor extends User {
     static roleKey = 'associateEditors';

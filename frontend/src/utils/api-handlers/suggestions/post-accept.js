@@ -1,15 +1,15 @@
 import { API } from '@api/client.js';
 import { logger } from '@utils/logger'
 
-const log = logger.create('postSuggestion.js');
 
 
-export const postStartReview = async (suggestionId, startedBy, notes, message) => {
+export const postStartReview = async (suggestionId, startedBy, notes, messageToSubmitter) => {
     try {
-        log.debug({ startedBy, notes, message })
-        const response = await API.post(`/suggestion/${suggestionId}/start-review`, { startedBy, notes, message })
-        console.log(response)
+        const response = await API.post(`/suggestion/${suggestionId}/start-review`, { startedBy, notes, messageToSubmitter })
+        const { success, message } = response.data
+        logger.success(message)
+        return success
     } catch (error) {
-
+        logger.error(error)
     }
 }

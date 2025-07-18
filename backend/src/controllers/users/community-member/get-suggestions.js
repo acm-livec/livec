@@ -1,4 +1,4 @@
-const getAllCommunityMemberSuggestions = require('@service/users/community-member/get-suggestions')
+const getAllCommunityMemberSuggestions = require('@services/users/community-member/get-suggestions')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

@@ -10,16 +10,19 @@
 		"@routes/*": ["src/routes/*"],
 		"@database/*": ["src/database/*"],
 		"@constants/*": ["src/constants/*"],
-		"@service/*": ["src/service/*"],
+		"@services/*": ["src/services/*"],
 		"@errors": ["src/errors/index.js"],
-		"@logger": ["logger/logger.js"]
+		"@logger": ["logger/logger.js"],
+		"@documentation/*": ["../documentation/*"]
 	},
 	"module": "CommonJS",
 	"moduleResolution": "Node",
 	"target": "ES2020",
 	"allowJs": true,
-	"checkJs": true
+	"checkJs": true,
+	    "esModuleInterop": true
+
 	},
-	"include": ["src", "logger"],
+  "include": ["src", "logger", "types", "documentation"],
 	"exclude": ["node_modules", "dist"]
 }

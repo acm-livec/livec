@@ -1,4 +1,4 @@
-const { handleStartSuggestionReviewProcess } = require('@service/suggestion')
+const { handleStartSuggestionReviewProcess } = require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({
@@ -14,10 +14,10 @@ const postStartReview = async (req, res) => {
         logger.start('POST Suggestion Start Review')
 
         const { id } = req.params
-        const { startedBy, notes, message } = req.body
+        const { startedBy, notes, messageToSubmitter } = req.body
 
         logger.info("suggestion.start_review.started", { suggestionId: id, startedBy: startedBy })
-        const startId = await handleStartSuggestionReviewProcess(id, startedBy, notes, message);
+        const startId = await handleStartSuggestionReviewProcess(id, startedBy, notes, messageToSubmitter);
 
         logger.success("suggestion.start_review.success", { startId });
         logger.end('POST Suggestion Start Review')

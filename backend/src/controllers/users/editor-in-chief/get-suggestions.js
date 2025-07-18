@@ -1,4 +1,4 @@
-const getFinalizedSuggestions = require('@service/users/editor-in-chief/get-finalized')
+const getFinalizedSuggestions = require('@services/users/editor-in-chief/get-finalized')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

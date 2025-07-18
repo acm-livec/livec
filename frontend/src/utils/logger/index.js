@@ -92,8 +92,8 @@ const methods = {
 	groupEnd: () => { if (!isDev) return; console.groupEnd(); },
 
 
-	startProcess: (id) => {if (!isDev) return; setCorrelationId(id); methods.info(`START ${correlationId}`); methods.group('begin')},
-	endProcess: () => {if (!isDev) return;    methods.groupEnd(); methods.info(`END ${correlationId}`); clearCorrelationId();}
+	startProcess: (id) => {if (!isDev) return; setCorrelationId(id); methods.group(`START ${correlationId}`)},
+	endProcess: () => {if (!isDev) return;    methods.groupEnd(); clearCorrelationId();}
 };
 
 // Namespace support

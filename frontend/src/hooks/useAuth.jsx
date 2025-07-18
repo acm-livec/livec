@@ -46,7 +46,6 @@ export default function useAuth() {
 
         } catch (error) {
             setMessage(error.message)
-            log.error("Error in register hook call:", error.message)
         }
     }
 

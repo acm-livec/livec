@@ -1,15 +1,11 @@
 import styles from './StatusIcon.module.scss';
 import {statusMap } from '@utils/constants';
 import { toTitleCase } from '@utils/format';
-import { useContext } from 'react';
-import { UserContext } from '@context/UserProvider';
 
 
 
-export default function StatusIcon({ status }) {
-    const { user, loading } = useContext(UserContext);
 
-    if (loading) return <p>loading...</p>
+export default function StatusIcon({ status, ...props }) {
 
     const statusStyle = statusMap[status]
 
@@ -18,7 +14,7 @@ export default function StatusIcon({ status }) {
     }
 
     return (
-        <div className={`${styles['status-badge']} ${styles[statusStyle]}`}>
+        <div {...props} className={`${styles['status-badge']} ${styles[statusStyle]}`} >
             {toTitleCase(status)}
         </div>
     );

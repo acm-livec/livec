@@ -1,11 +1,12 @@
 import AuthForm from './AuthForm'
 import styles from './AuthPage.module.scss'
+import { FlexColumn } from '@components/layouts/flex'
 
 /**
  * Page containing the form where users can either
  * login or register. 
+ *  @returns {React.ReactElement}
 */
-import { FlexColumn } from '@components/containers/Flex'
 export default function AuthPage() {
     return (
         <section className={styles.container}>
@@ -27,13 +28,13 @@ export default function AuthPage() {
                 </ul>
                 <p>Editor In Chief</p>
                 <ul>
-                    <li>Email: jonhpork@email.com</li>
+                    <li>Email: bobross@email.com</li>
                     <li>Password: password</li>
                 </ul>
 
             </FlexColumn>
             <div className={styles['form-area']}>
-                <AuthForm/>
+                <AuthForm />
             </div>
         </section>
     )

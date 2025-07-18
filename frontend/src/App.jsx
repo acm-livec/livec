@@ -1,5 +1,5 @@
 import './App.scss'
-import '@styles/index.scss'
+// import '@styles/index.scss'
 
 import UserProvider from '@context/UserProvider';
 import AppRoutes from './routes/AppRoutes';
@@ -18,4 +18,5 @@ export default function App() {
 		</>
 	)
 }
+
 

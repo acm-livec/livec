@@ -1,4 +1,4 @@
-const { handleRejectSuggestion } = require('@service/suggestion')
+const { handleRejectSuggestion } = require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({
@@ -10,36 +10,31 @@ const logger = require('@logger').addSource({
 
 const postRejection = async (req, res) => {
 
-    try {
-        logger.start('POST Suggestion Rejected')
-
+    try {  logger.start('POST Suggestion Rejected')
+        
         const { id } = req.params
-        const { rejectedBy, reason, message } = req.body
+        const { rejectedBy, reasonForRejection, messageToSubmitter } = req.body
 
-        logger.info("suggestion.reject.started", { suggestionId: id, rejectedBy: rejectedBy })
-        const rejectId = await handleRejectSuggestion(id, rejectedBy, reason, message);
+        logger.info("suggestion.reject.process.started", { suggestionId: id, rejectedBy: rejectedBy })
+        await handleRejectSuggestion(id, rejectedBy, reasonForRejection, messageToSubmitter);
 
-        logger.success("suggestion.reject.success", { rejectId });
-        logger.end('POST Suggestion Rejected')
-
-        return res.status(200).json({ success: true, rejectId, message: `Suggestion succesfully rejected with ID: ${rejectId}` })
+        logger.success("suggestion.reject.process.completed");
+        return res.status(200).json({ success: true, message: `Suggestion succesfully rejected` })
 
     } catch (error) {
 
         if (!(error instanceof AppError)) {
-            logger.error(`suggestion.reject.failed`, { err: error.message })
+            logger.error(`suggestion.reject.process.failed`, { err: error.message })
         } else {
-            logger.info(`suggestion.reject.failed`, { err: error.errorCode })
+            logger.info(`suggestion.reject.process.failed`, { err: error.errorCode })
         }
-
-        logger.end('POST Suggestion Rejected')
 
         return res.status(error.statusCode || 500).json({
             success: false,
             message: error.publicMessage || 'Internal Server Error'
         });
 
-    }
+    } finally { logger.end('POST Suggestion Rejected') }
 }
 
 module.exports = { postRejection }

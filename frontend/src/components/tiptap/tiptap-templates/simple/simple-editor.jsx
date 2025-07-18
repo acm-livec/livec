@@ -160,7 +160,7 @@ const MobileToolbarContent = ({
 import { Button as Bttn } from "@components/buttons"
 import useSuggestion from "@hooks/useSuggestion"
 
-export function SimpleEditor({onSubmit = null, text, refId }) {
+export function SimpleEditor({ onSubmit = null, text, refId, buttonText = '' }) {
 	const isMobile = useMobile()
 	const windowSize = useWindowSize()
 	const [mobileView, setMobileView] = React.useState("main")
@@ -220,7 +220,7 @@ export function SimpleEditor({onSubmit = null, text, refId }) {
 		// Load saved content on mount
 
 		editor.commands.setContent(text);
-		
+
 
 		// Listen for changes and save to localStorage
 		editor.on('update', () => {
@@ -234,38 +234,39 @@ export function SimpleEditor({onSubmit = null, text, refId }) {
 		};
 	}, [editor]);
 
-	const {addDocumentation} = useSuggestion()
+	const { addDocumentation } = useSuggestion()
 
 
 	return (
 		<EditorContext.Provider value={{ editor }}>
-			<Toolbar
-				ref={toolbarRef}
-				style={
-					isMobile
-						? {
-							bottom: `calc(100% - ${windowSize.height - bodyRect.y}px)`,
-						}
-						: {}
-				}>
-				{mobileView === "main" ? (
-					<MainToolbarContent
-						onHighlighterClick={() => setMobileView("highlighter")}
-						onLinkClick={() => setMobileView("link")}
-						isMobile={isMobile} />
-				) : (
-					<MobileToolbarContent
-						type={mobileView === "highlighter" ? "highlighter" : "link"}
-						onBack={() => setMobileView("main")} />
-				)}
-			</Toolbar>
-			<div className="content-wrapper">
-				<EditorContent editor={editor} role="presentation" className="simple-editor-content" />
+			<div className="editor-container">
+				<div className="editor">
+					<Toolbar
+						ref={toolbarRef}
+						style={
+							isMobile
+								? {
+									bottom: `calc(100% - ${windowSize.height - bodyRect.y}px)`,
+								}
+								: {}
+						}>
+						{mobileView === "main" ? (
+							<MainToolbarContent
+								onHighlighterClick={() => setMobileView("highlighter")}
+								onLinkClick={() => setMobileView("link")}
+								isMobile={isMobile} />
+						) : (
+							<MobileToolbarContent
+								type={mobileView === "highlighter" ? "highlighter" : "link"}
+								onBack={() => setMobileView("main")} />
+						)}
+					</Toolbar>
+					<div className="content-wrapper">
+						<EditorContent editor={editor} role="presentation" className="simple-editor-content" />
+					</div>
+				</div>
+				{onSubmit && <Bttn onClick={onSubmit} text={buttonText}></Bttn>}
 			</div>
-			{onSubmit && 
-			<Bttn onClick={onSubmit} text="Submit"></Bttn>
-
-			}
 		</EditorContext.Provider>
 	);
 }

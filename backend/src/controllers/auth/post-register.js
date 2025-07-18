@@ -1,4 +1,4 @@
-const { handleRegisterUser } = require('@service/auth')
+const { handleRegisterUser } = require('@services/auth')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

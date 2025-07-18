@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <header>
-            <div className='flex center gap-1r' onClick={() => navigate('/')}>
+            <div className='identity' onClick={() => navigate('/')}>
                 <div className='logo'>
                     <img className='logo__img ' src={acmLogo}></img>
                 </div>

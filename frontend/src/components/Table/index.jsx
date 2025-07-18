@@ -1,4 +1,5 @@
 import styles from './Table.module.css';
+import { useNavigate } from 'react-router';
 
 export const Table = ({ children }) => {
 	return (
@@ -12,7 +13,7 @@ export const Table = ({ children }) => {
 export const TableHeader = ({ headers = [] }) => {
 	return (
 		<thead>
-			<tr className={styles['table-row']}>
+			<tr >
 				{headers.map((heading, index) => (
 					<th
 						key={heading.text + index}
@@ -38,9 +39,16 @@ export const TableBody = ({ data = [], headers = [] }) => {
 };
 
 
+import { UserContext } from '@context/UserProvider';
+import { useContext } from 'react';
+
+
 export const TableRow = ({ row, headers }) => {
+	const {user} = useContext(UserContext)
+	const navigate = useNavigate();
+	
 	return (
-		<tr className={styles['table-row']}>
+		<tr className={styles['table-row']} onClick={() =>  navigate(`/dashboard/${user.id}/suggestion/${row.id}`)}>
 			{headers.map((header, index) => (
 				<td key={index}>{row[header.key]}</td>
 			))}

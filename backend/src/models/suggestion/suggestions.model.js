@@ -64,7 +64,7 @@ class Suggestions {
     static async getFinalized(id) {
         await this.dbRef.read();
         const entries = this.dbRef.data.
-        filter(s => (s.assigned_editor_in_chief === id && s.status.system === Status.System.ELEVATED || (s.status.system === Status.System.AWAITING_FINAL_DECISION)))
+        filter(s => (s.assigned_editor_in_chief === id && new Suggestion(s).isInDeliberation()))
         .map(s => new Suggestion(s).toEditorInCheif())
         return entries || []
     }

@@ -1,5 +1,5 @@
 
-const { sendChangeRequestToAssociateEditor } = require('@service/suggestion')
+const { sendChangeRequestToAssociateEditor } = require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({

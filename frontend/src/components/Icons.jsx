@@ -78,3 +78,4 @@ export { MdFormatAlignJustify as Justify} from "react-icons/md";
 export { MdFormatAlignRight as Right} from "react-icons/md";
 export { MdFormatAlignCenter as Center} from "react-icons/md";
 export { TbMath as Equations} from "react-icons/tb";
+
