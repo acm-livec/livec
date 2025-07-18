@@ -78,3 +78,4 @@ const CurriculumChapterPage = () => {
 };
 
 export default CurriculumChapterPage;
+
