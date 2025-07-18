@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "livec",
   "private": true,
   "version": "0.0.0",
@@ -20,8 +19,6 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.1"
   },
-=======
->>>>>>> d9e87d89328cfce6dc78c60f4a89365fb677ca03
   "devDependencies": {
     "jsdoc": "^4.0.4"
   },

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
@@ -9,6 +8,10 @@ import CommunityMemberRegisterPage from "./pages/cm/CommunityMemberRegisterPage"
 import EditorRegisterPage from './pages/editor/EditorRegisterPage';
 import CurriculumPage from './pages/curriculum/CurriculumPage.jsx';
 
+import ReviewerInvitationPage from './pages/reviewer/ReviewerInvitationPage';
+import ReviewerQueuePage from './pages/reviewer/ReviewerQueuePage.jsx';
+import ReviewerRecommendationPage from './pages/reviewer/ReviewerRecommendationPage';
+
 import ProposedChangeFormPage from './pages/pc/ProposedChangeFormPage.jsx';
 
 import RecommendationPage from './pages/RecommendationPage';
@@ -18,7 +21,6 @@ import AERecommendationPage from './pages/AERecommendationPage';
 
 import { useState } from 'react';
 import NotifyPage from './pages/NotifyPage';
-import ReviewerQueuePage from './pages/ReviewerQueuePage';
 import ReviewerDashboard from './pages/ReviewerDashboard';
 import ProposalHistory from './pages/ProposalHistory';
 import SubmitReviewPage from './pages/SubmitReviewPage';
@@ -57,13 +59,17 @@ function App() {
         <Route path="/curriculum" element={<CurriculumPage />} />
         <Route path="/pc/submit" element={<ProposedChangeFormPage />} />
 
+        <Route path="/reviewer/invitation" element={<ReviewerInvitationPage />} />
+        <Route path="/reviewer/queue" element={<ReviewerQueuePage />} />
+        <Route path="/reviewer/recommend" element={<ReviewerRecommendationPage />} />
+        
         <Route path="/proposal/:proposalId/recommendation" element={<RecommendationPage />} />
         <Route path="/" element={<h1>LiveC is Running</h1>} />
         {/* <Route path='/auth' element={<AuthPage />} /> */}
         {/* <Route path='/curriculum/:slug' element={<CurriculumDetailsPage selectedCurriculum={selectedCurriculum} />} /> */}
         <Route path="/proposal/:proposalId/recommend" element={<AERecommendationPage />} />
         <Route path="/notify" element={<NotifyPage />} />
-        <Route path="/reviewer/queue" element={<ReviewerQueuePage />} />
+        
         <Route path="/reviewer/dashboard" element={<ReviewerDashboard />} />
         <Route path="/proposal/:proposalId/history" element={<ProposalHistory />} />
         <Route path="/review/:proposalId/:reviewerId/submit" element={<SubmitReviewPage />} />
@@ -102,27 +108,3 @@ function App() {
 }
 
 export default App;
-=======
-import './App.scss'
-// import '@styles/index.scss'
-
-import UserProvider from '@context/UserProvider';
-import AppRoutes from './routes/AppRoutes';
-
-import Header from '@components/Header';
-
-export default function App() {
-	return (
-		<>
-			<UserProvider>
-				<Header />
-				<main>
-					<AppRoutes />
-				</main>
-			</UserProvider>
-		</>
-	)
-}
-
-
->>>>>>> d9e87d89328cfce6dc78c60f4a89365fb677ca03
