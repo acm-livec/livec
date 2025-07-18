@@ -1,0 +1,34 @@
+.curriculum-ch-section-page {
+  font-family: 'Roboto', sans-serif;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.navigation-buttons button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navigation-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.section-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}

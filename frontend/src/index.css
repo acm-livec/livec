@@ -1,14 +1,33 @@
 :root {
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-	/* line-height: 1.5;
-	font-weight: 400; */
 
-	color-scheme: light dark;
-	/* color: rgba(255, 255, 255, 0.87);
-	background-color: #242424; */
+	color-scheme: light;
+	color: rgba(19, 18, 18, 0.87);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (max-width: 1440px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+
+.doc-text {
+	height: 100%;
+	background-color: white;
+	padding: 2.5%;
+	padding-bottom: 0;
+}
+
+.document-cards {
+	overflow-y: auto;
+}
+
+.doc_heading {
+	margin-bottom: 1rem;
 }

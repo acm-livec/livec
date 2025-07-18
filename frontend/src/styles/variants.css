@@ -1,0 +1,15 @@
+.disabled,
+.disabled:hover {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+.clickable {
+    cursor: pointer;
+}
+
+.warning {
+    color: var(--color-warning);
+    /* opacity: 1; */
+}

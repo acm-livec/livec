@@ -1,0 +1,67 @@
+.overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* semi-transparent backdrop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Make sure it's on top */
+}
+
+/* Modal box */
+.overlay-content {
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    gap: 1.5rem;
+    background: white;
+    padding: 2rem 2rem;
+    border-radius: 8px;
+
+    width: fit-content;
+}
+
+
+.text {
+    font-weight: 500;
+}
+
+.button-group {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+}
+
+.button--cancel {
+    background: rgba(239, 68, 68, 0.45);
+    color: #990909;
+}
+
+.button--cancel:hover {
+    background: rgba(239, 68, 68, 0.80);
+    color: #ffffff;
+}
+
+
+.button--confirm {
+    background: rgba(16, 185, 129, 0.45);
+    color: #10B981;
+}
+
+.button--confirm:hover {
+    background: rgba(16, 185, 129, 0.80);
+    color: #fff;
+}

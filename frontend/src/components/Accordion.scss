@@ -1,0 +1,51 @@
+@use '@styles' as *;
+@use 'sass:color';
+
+
+.accordion {
+	width: inherit;
+    list-style: none;
+
+}
+
+
+
+.accordion-item {
+	color: black;
+	list-style: none;
+	/* border-bottom: 1px solid #ddd; */
+}
+
+.accordion-title {
+	list-style: none;
+    padding: 1rem 0.5rem;
+
+	/* padding: 1rem; */
+	cursor: pointer;
+	/* background-color: #f8f1f1; */
+	/* font-weight: bold; */
+}
+
+
+.second {
+    background-color: $neutral-200;
+}
+
+.third {
+    background-color: $neutral-300;
+}
+
+.accordion-title:hover {
+	background-color: #e2e2e2;
+}
+
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding 0.3s ease;
+	/* padding: 0 1rem; */
+}
+
+.accordion-content.open {
+	padding: 1rem;
+}

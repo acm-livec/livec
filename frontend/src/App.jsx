@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
@@ -101,3 +102,27 @@ function App() {
 }
 
 export default App;
+=======
+import './App.scss'
+// import '@styles/index.scss'
+
+import UserProvider from '@context/UserProvider';
+import AppRoutes from './routes/AppRoutes';
+
+import Header from '@components/Header';
+
+export default function App() {
+	return (
+		<>
+			<UserProvider>
+				<Header />
+				<main>
+					<AppRoutes />
+				</main>
+			</UserProvider>
+		</>
+	)
+}
+
+
+>>>>>>> d9e87d89328cfce6dc78c60f4a89365fb677ca03

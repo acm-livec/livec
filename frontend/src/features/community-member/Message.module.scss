@@ -1,0 +1,52 @@
+@use '@styles' as *;
+
+
+.messages {
+    overflow-y: auto;
+    display: block;
+}
+
+.message {
+    cursor: pointer;
+    min-height: 3rem;
+    overflow: hidden;
+    border-bottom: 1px solid $gray-200;
+}
+
+
+.message+.message {
+    margin-top: 1rem;
+}
+
+.mssg_header {
+
+    display: grid;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr;
+
+    span {
+        font-size: 1rem;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: $gray-500;
+        border-left: 1px solid  $gray-300;
+        padding-left: 10px;
+    }
+
+    &:hover {
+        background-color: $gray-200;
+    }
+}
+
+
+
+
+
+.contents {
+    min-height: fit-content;
+    transition: all 1s;
+    padding: 1rem 1rem;
+    line-height: 1.5;
+}

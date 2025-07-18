@@ -1,0 +1,178 @@
+@use '@styles' as *;
+@use 'sass:color';
+
+:root {
+    --rpv-core__inner-page-background-color: #f7fafc;
+    --base-font: 1rem;
+    --indent-step: 0.1rem;
+}
+
+
+.second {
+    background-color: $neutral-200;
+}
+
+.indented {
+    font-size: calc(var(--base-font) - var(--indent-step) * var(--indent-level, 0));
+    padding-left: calc(var(--indent-level, 0) * 1.5rem);
+}
+
+
+
+
+.download-button {
+    width: fit-content;
+}
+
+.details-page {
+    color: black;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    // overflow: hidden;
+}
+
+.breadcrumbs {
+    margin-bottom: 1rem;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 0.25rem;
+}
+
+/* 2) Sidebar */
+.toc-sidebar {
+    width: 35%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    height: 100%;
+    border-right: 1px solid #e2e8f0;
+    background-color: $stone-100;
+}
+
+.table-of-contents {
+    display: flex;
+    flex-direction: column;
+padding-right: 1rem;    flex: 1;
+    overflow: auto;
+
+
+
+    li {
+        list-style: none;
+
+    }
+}
+
+
+
+.curricula-heading {
+    margin: 0 0 2rem;
+    font-size: 1.5rem;
+    color: #0c44a5;
+
+    hr {
+        margin: 1rem 0;
+    }
+}
+
+.toc-item {
+    list-style: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding: 1rem 0.5rem;
+    // margin-bottom: 1rem;
+    /* font-size: calc((var(--indent-size)));
+     padding-left: var(--indent-size, 0); */
+}
+
+.toc-item:hover {
+    background-color: #e2e2e2;
+}
+
+
+
+.toc-leaf {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-number {
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+/* 3) PDF container */
+.pdf-container {
+    background-color: $stone-50;
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    padding: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.download-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #056da1;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.download-button:hover {
+    background-color: #04517e;
+}
+
+/* 4) Strip out all built-in paddings/margins */
+.pdf-container .rpv-core__viewer,
+.pdf-container .rpv-core__inner-page-container,
+.pdf-container .rpv-core__outer-pages,
+.pdf-container .rpv-core__inner-page {
+    background-color: $neutral-200 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.pdf-container .rpv-core__inner-page {
+    width: 100%;
+}
+
+.rpv-core__text-layer {
+    background-color: $neutral-200;
+}
+
+/* 5) Remove shadows/borders so only the page shows */
+.pdf-container .rpv-core__page {
+    box-shadow: none !important;
+    border: none !important;
+}
