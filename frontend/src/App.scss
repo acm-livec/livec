@@ -1,0 +1,48 @@
+// App.scss
+@use 'styles/index' as *;
+
+*,
+*::after,
+*::before,
+*:hover,
+*:focus {
+	box-sizing: border-box;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+body,
+#root {
+	background-color: #e1e6e8;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+main {
+	height: 100%;
+	  overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+button {
+	cursor: pointer;
+	border-style: none;
+	transition: all 0.3s ease;
+}

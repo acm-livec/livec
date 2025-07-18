@@ -1,0 +1,84 @@
+// _borders.scss
+
+// -------------------------------------------------------------------
+// 1. Bring in the shared colors map from your colors partial/module
+// -------------------------------------------------------------------
+@use '_colors' as *;
+
+// -------------------------------------------------------------------
+// 2. Border width utilities
+// -------------------------------------------------------------------
+
+// All sides
+.border {
+	border-width: 1px;
+	border-style: solid;
+}
+
+.border-2 {
+	border-width: 2px;
+}
+
+.border-4 {
+	border-width: 4px;
+}
+
+.border-8 {
+	border-width: 8px;
+}
+
+// Individual sides (1px default)
+.border-t {
+	border-top-width: 1px;
+}
+
+.border-b {
+	border-bottom-width: 1px;
+}
+
+.border-l {
+	border-left-width: 1px;
+}
+
+.border-r {
+	border-right-width: 1px;
+}
+
+// -------------------------------------------------------------------
+// 3. Border color utilities for all sides and per-side
+// -------------------------------------------------------------------
+
+@each $name, $color in $colors {
+
+	// Full border color
+	.border-#{$name} {
+		border-color: #{$color};
+		border-width: 1px;
+		border-style: solid;
+	}
+
+	// Per-side border colors
+	.border-t-#{$name} {
+		border-top-color: #{$color};
+		border-top-width: 1px;
+		border-top-style: solid;
+	}
+
+	.border-b-#{$name} {
+		border-bottom-color: #{$color};
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+	}
+
+	.border-l-#{$name} {
+		border-left-color: #{$color};
+		border-left-width: 1px;
+		border-left-style: solid;
+	}
+
+	.border-r-#{$name} {
+		border-right-color: #{$color};
+		border-right-width: 1px;
+		border-right-style: solid;
+	}
+}

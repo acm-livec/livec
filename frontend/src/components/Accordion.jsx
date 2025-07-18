@@ -1,8 +1,9 @@
 // Accordion.js
-import React, { useState, useRef, useEffect } from 'react';
-import './Accordion.css';
+import { useState, useRef, useEffect } from 'react';
+import './Accordion.scss';
+import { FaChevronDown } from "react-icons/fa6";
 
-const AccordionItem = ({ title, content, isOpen, isRestricted, onClick }) => {
+const AccordionItem = ({ css, title, range, content, isOpen, isRestricted = false, onClick }) => {
     const contentRef = useRef(null);
     const [maxHeight, setMaxHeight] = useState('0px');
 
@@ -13,13 +14,13 @@ const AccordionItem = ({ title, content, isOpen, isRestricted, onClick }) => {
     }, [isOpen]);
 
     return (
-        <div className={`accordion-item ${isRestricted && 'disabled'}`}>
-            <div className="accordion-title" onClick={onClick}>
-                {title}
+        <div className={`accordion-item`}>
+            <div className='flex justify-between accordion-title' onClick={onClick}>
+                {title} {range.start} - {range.end} {<FaChevronDown  />}
             </div>
             <div
                 ref={contentRef}
-                className={`accordion-content ${isOpen ? 'open' : ''}`}
+                className={`accordion-content ${isOpen ? 'open' : ''} ${css}`}
                 style={{ maxHeight }}
             >
                 <div>{content}</div>
@@ -28,7 +29,9 @@ const AccordionItem = ({ title, content, isOpen, isRestricted, onClick }) => {
     );
 };
 
-const Accordion = ({ items }) => {
+
+
+const Accordion = ({ css, item, content }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const handleToggle = (index) => {
@@ -37,17 +40,18 @@ const Accordion = ({ items }) => {
 
     return (
         <div className="accordion">
-            {items.map((item, index) => (
+
                 <AccordionItem
-         
-                    key={index}
+                    css={css}
+                    key={item.title}
+                    range={item.range}
                     title={item.title}
-                    content={item.content}
-                    isOpen={openIndex === index}
-                    isRestricted={item.restricted}
-                    onClick={() => handleToggle(index)}
+                    page={item.page}
+                    content={content}
+                    isOpen={openIndex === item.title}
+                    onClick={() => handleToggle(item.title)}
                 />
-            ))}
+
         </div>
     );
 };

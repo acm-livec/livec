@@ -1,130 +1,146 @@
-import { useState, useEffect } from 'react'
-import useForm from '@hooks/useForm'
-import useAuth from '@hooks/useAuth'
+import { useState, useEffect } from 'react';
+import useForm from '@hooks/useForm';
+import useAuth from '@hooks/useAuth';
+import styles from './AuthPage.module.scss';
 
+// Default form data for Register & Login
 const defaultData = {
     name: '',
     email: '',
     password: '',
-    passwordConfirmed: ''
+    passwordConfirmed: '',
 };
 
 export default function AuthForm() {
     const { login, register, message, setMessage } = useAuth();
-    const [canSubmit, setCanSubmit] = useState(false)
-    const [passwordsMatch, setPasswordsMatch] = useState(true)
+    const { formData, onFormChange, resetForm } = useForm(defaultData);
 
+    const [newUser, setNewUser] = useState(false);
+    const [passwordsMatch, setPasswordsMatch] = useState(true);
+    const [canSubmit, setCanSubmit] = useState(false);
 
-
-    const [formData, onFormChange, resetForm] = useForm({ defaultData })
-    const [newUser, setNewUser] = useState(false)
-
+    /** 
+     * Check if passwords match (only in Register mode)
+     */
     useEffect(() => {
         if (newUser) {
-            const bothFilled = formData.password !== '' && formData.passwordConfirmed !== '';
-            if (bothFilled) {
-                setPasswordsMatch(formData.password === formData.passwordConfirmed);
-            } else {
-                setPasswordsMatch(true);
-            }
+            const { password, passwordConfirmed } = formData;
+            const bothFilled = password && passwordConfirmed;
+            setPasswordsMatch(!bothFilled || password === passwordConfirmed);
         }
     }, [formData.password, formData.passwordConfirmed, newUser]);
 
-
-    
+    /** 
+     * Check if form can be submitted 
+     */
     useEffect(() => {
-        if (!newUser) {
-            setCanSubmit(formData.email !== '' && formData.password !== '');
-        } else {
-            const allFilled = Object.values(formData).every(
-                val => val !== '' && val !== null && val !== undefined
-            );
+        if (newUser) {
+            const allFilled = Object.values(formData).every(val => val?.trim() !== '');
             setCanSubmit(allFilled && passwordsMatch);
+        } else {
+            setCanSubmit(formData.email?.trim() !== '' && formData.password?.trim() !== '');
         }
     }, [formData, newUser, passwordsMatch]);
 
-
-    const handleToggle = () => {
+    /**
+     * Toggle between Login and Register
+     */
+    const handleToggleMode = () => {
         resetForm();
-        setNewUser(!newUser)
-        setCanSubmit(false)
-        setMessage('')
-    }
+        setNewUser(prev => !prev);
+        setCanSubmit(false);
+        setPasswordsMatch(true);
+        setMessage('');
+    };
 
+    /**
+     * Handle form submit
+     */
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        newUser ? register(formData) : login(formData);
+    };
 
     return (
-        <form className='flx algn-left  clmn  auth-form' onSubmit={(e) => { e.preventDefault(); newUser? register(formData) : login(formData) }}>
-            <h1 className='auth-heading'>{newUser ? 'Get Started' : 'Welcome Back'}</h1>
+        <form className={styles['auth-form']} onSubmit={handleSubmit}>
+            <h1>{newUser ? 'Get Started' : 'Welcome Back'}</h1>
 
-            {newUser &&
-                <div className='field'>
-                    <label className='auth-label' htmlFor='name'>Full Name</label>
-                    <input
-                        value={formData.name}
-                        name='name'
-                        className='auth-input'
-                        type='text'
-                        placeholder='John Doe'
-                        onChange={e => onFormChange('name', e.target.value)}
-                    />
-                </div>
-            }
-
-
-            <div className='field'>
-                <label className='auth-label' htmlFor='email'>Email</label>
-                <input
-                    value={formData.email}
-                    name='email'
-                    className='auth-input'
-                    type='text'
-                    placeholder='name@email.com'
-                    onChange={e => onFormChange('email', e.target.value)}
+            {newUser && (
+                <FormField
+                    label="Full Name"
+                    name="name"
+                    type="text"
+                    placeholder="John Doe"
+                    value={formData.name}
+                    onChange={value => onFormChange('name', value)}
                 />
-            </div>
+            )}
 
+            <FormField
+                label="Email"
+                name="email"
+                type="text"
+                placeholder="name@email.com"
+                value={formData.email}
+                onChange={value => onFormChange('email', value)}
+            />
 
-            <div className='field'>
-                <label className='auth-label' htmlFor='password'>Password</label>
-                <input
-                    value={formData.password}
-                    name='password'
-                    className='auth-input'
-                    type='password'
-                    placeholder='••••••••'
-                    onChange={e => onFormChange('password', e.target.value)}
-                />
-            </div>
+            <FormField
+                label="Password"
+                name="password"
+                type="password"
+                placeholder="••••••••"
+                value={formData.password}
+                onChange={value => onFormChange('password', value)}
+            />
 
-
-            {newUser &&
-                <div className='field'>
-
-                    <div className='flex justify-between align-start'>
-                        <label className='auth-label' htmlFor='password-confirmed'>Confirm Password </label>
-                        {!passwordsMatch && <p className='warning'>passwords must match</p>}
+            {newUser && (
+                <div className={styles.field}>
+                    <div className="flex justify-between">
+                        <label htmlFor="password-confirmed">Confirm Password</label>
+                        {!passwordsMatch && <p className="warning">Passwords must match</p>}
                     </div>
-
                     <input
+                        name="password-confirmed"
+                        type="password"
+                        placeholder="••••••••"
                         value={formData.passwordConfirmed}
-                        name='password-confirmed'
-                        className='auth-input'
-                        type='password'
-                        placeholder='••••••••'
                         onChange={e => onFormChange('passwordConfirmed', e.target.value)}
                     />
                 </div>
-            }
-
-
-            {newUser ? (
-                <p>Already have an account? <span className='type' onClick={handleToggle}>Sign In</span></p>
-            ) : (
-                <p>Don't have an account? <span className='type' onClick={handleToggle}>Sign Up</span></p>
             )}
 
-            <button type='submit' disabled={!canSubmit} className={`monts auth-bttn ${!canSubmit ? 'disabled' : ''}`}>{newUser ? 'Sign Up' : 'Sign In'}</button>
+            <p>
+                {newUser ? (
+                    <>Already have an account? <span onClick={handleToggleMode}>Sign In</span></>
+                ) : (
+                    <>Don't have an account? <span onClick={handleToggleMode}>Sign Up</span></>
+                )}
+            </p>
+
+            <button type="submit" disabled={!canSubmit} className={`monts ${!canSubmit ? 'disabled' : ''}`}>
+                {newUser ? 'Sign Up' : 'Sign In'}
+            </button>
+
             {message && <p>{message}</p>}
         </form>
-    )
+    );
+}
+
+/**
+ * Small reusable FormField component 
+ */
+function FormField({ label, name, type, placeholder, value, onChange }) {
+    return (
+        <div className={styles.field}>
+            <label htmlFor={name}>{label}</label>
+            <input
+                name={name}
+                type={type}
+                placeholder={placeholder}
+                value={value}
+                onChange={e => onChange(e.target.value)}
+            />
+        </div>
+    );
 }

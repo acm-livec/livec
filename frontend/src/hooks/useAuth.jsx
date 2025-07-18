@@ -1,47 +1,51 @@
-import {useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { postLogin, postRegister } from '@utils/authHandler.js'
-import { UserContext } from '@context/UserProvider'
+import { useContext, useState } from "react";
 
+import { UserContext } from '@context/UserProvider'
+import { postLogin, postRegister } from '@utils/api-handlers/auth'
+import { logger } from '@utils/logger'
+
+
+
+
+/**
+ * Custom hook that deals with login and register logic with the help
+ * of util files.
+ * 
+**/
 
 export default function useAuth() {
-    const [message, setMessage] = useState('')
     const { handleUser, setUser } = useContext(UserContext)
+    const [message, setMessage] = useState('') // Message displayed in Auth form in case of error
     const navigate = useNavigate();
 
 
     const login = async ({ email, password }) => {
         try {
-
             const user = await postLogin(email, password);
 
             if (user) {
-                console.log("In hook user true:", user)
                 await handleUser(user);
-                navigate('/profile')
+                navigate(`/dashboard/${user.id}`)
             }
 
         } catch (error) {
             setMessage(error.message)
-            console.error("Error in hook call:", error.message)
         }
     }
 
-    
+
     const register = async ({ name, email, password }) => {
         try {
-            console.log(name, email, password)
             const user = await postRegister(name, email, password);
 
             if (user) {
-                console.log("In hook user true:", user)
-                handleUser(user);
-                navigate('/profile')
+                await handleUser(user);
+                navigate(`/dashboard/${user.id}`)
             }
 
         } catch (error) {
             setMessage(error.message)
-            console.error("Error in hook call:", error.message)
         }
     }
 
@@ -49,9 +53,9 @@ export default function useAuth() {
     const logout = () => {
         sessionStorage.removeItem('user')
         setUser(null)
-        navigate('/')
+        navigate('/auth')
     }
 
 
-    return { register, login, logout, message, setMessage }
+    return { register, login, logout, setMessage, message }
 }

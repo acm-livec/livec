@@ -2,19 +2,18 @@
 
 .flex-1             { flex: 1; }
 
-.flex-col           { display: flex; flex-direction: column; }
 .col                { flex-direction: column; }
 
-.center           { align-items: center; justify-content: center; }
+.center             { align-items: center; justify-content: center; }
 
 
-.justify-start      { justify-content: flex-start;  }
-.justify-center     { justify-content: center; }
-.justify-end        { justify-content: flex-end; }
-.justify-between    { justify-content: space-between;}
-.justify-around     { justify-content: space-around; }
-.justify-evenly     { justify-content: space-evenly; }
-.justify-stretch    { justify-content: stretch; }
+.just-start         { justify-content: flex-start;  }
+.just-center        { justify-content: center; }
+.just-end           { justify-content: flex-end; }
+.just-between       { justify-content: space-between;}
+.just-around        { justify-content: space-around; }
+.just-evenly        { justify-content: space-evenly; }
+.just-stretch       { justify-content: stretch; }
 
 .align-start        { align-items: flex-start; }
 .align-center       { align-items: center; }
@@ -31,83 +30,9 @@
 
 
 
-.cntr {
-    align-items: center;
-    justify-content: center;
-}
 
-.algn-strt {
-    align-items: flex-start;
-}
-
-.algn-strch {
-    align-items: stretch;
-}
-
-.just-strt {
-    justify-content: flex-start;
-}
-
-.even {
-    justify-content: space-evenly;
-}
-
-.strt {
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.btwn {
-    justify-content: space-between;
-}
-
-.flx1 {
-    flex: 1
-}
-
-.arnd {
-    justify-content: space-around;
-}
-
-.clmn {
-    flex-direction: column;
-}
-
-
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .gap-1r {
     gap: 1rem;
-}
-
-.flx {
-    display: flex;
-}
-
-.clmn {
-    flex-direction: column;
-}
-
-.just-left {
-    justify-content: flex-start;
-}
-
-.algn-left {
-    align-items: flex-start;
-}
-
-.cntr {
-    justify-content: center;
-    align-items: center;
-}
-
-.centered-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 

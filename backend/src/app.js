@@ -1,19 +1,24 @@
 const express = require('express');
-const authRoutes = require('@routes/authRoutes');
 const cors = require('cors')
+
+const authRoutes = require('@routes/auth.routes.js');
+const suggestionRoutes = require('@routes/suggestion.routes.js');
+const userRoutes = require('@routes/users');
+
+
 const app = express();
-
-
 app.use(express.json());
-app.use(cors());// Module aliases
+app.use(cors());
+
 
 app.get('/', (req, res) => {
 	res.send('✅ Server is up and running!');
 });
 
 
-
 app.use('/auth', authRoutes);
+app.use('/suggestion', suggestionRoutes);
+app.use('/user', userRoutes);
 
 
 
@@ -23,13 +28,11 @@ app.use((req, res) => {
 });
 
 
-
 // Error handling middleware
 app.use((err, req, res, next) => {
 	console.error(err.stack);
 	res.status(500).json({ message: 'Server Error' });
 });
-
 
 
 module.exports = app;

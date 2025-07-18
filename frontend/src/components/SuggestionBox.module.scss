@@ -1,0 +1,20 @@
+@use '@styles' as *;
+
+.suggestion-box {
+    @include container(2% 2.5%);
+    width: 100%;
+    background-color: $stone-100;
+    // height: fit-content;
+    gap: 1rem;
+
+
+    h2 {
+        margin-bottom: 2rem;
+        font-weight: 450;
+    }
+}
+
+.sugg-area {
+    resize: none;
+    height: 100px;
+}
