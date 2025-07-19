@@ -9,6 +9,7 @@ import EditorRegisterPage from './pages/editor/EditorRegisterPage';
 import CurriculumPage from './pages/curriculum/CurriculumPage.jsx';
 
 import ExternalInterfaceUIPage from './pages/ei/ExternalInterfaceUIPage';
+import ExternalInterfaceHardwarePage from "./pages/ei/ExternalInterfaceHardwarePage.jsx";
 
 import ReviewerInvitationPage from './pages/reviewer/ReviewerInvitationPage';
 import ReviewerQueuePage from './pages/reviewer/ReviewerQueuePage.jsx';
@@ -62,6 +63,7 @@ function App() {
         <Route path="/pc/submit" element={<ProposedChangeFormPage />} />
 
         <Route path="/ui" element={<ExternalInterfaceUIPage />} />
+        <Route path="/hardware" element={<ExternalInterfaceHardwarePage />} />
         
         <Route path="/reviewer/invitation" element={<ReviewerInvitationPage />} />
         <Route path="/reviewer/queue" element={<ReviewerQueuePage />} />
