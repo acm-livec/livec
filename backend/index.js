@@ -7,6 +7,8 @@ import communityMemberRoutes from './routes/auth/communityMember.js';
 import editorRoutes from './routes/editor/editor.js';
 import curriculumRoutes from './routes/curriculum/curriculum.js';
 
+import interfaceRoutes from './routes/interface.js';
+
 import reviewerInvitationRoutes from './routes/reviewer/reviewerInvitations.js';
 import reviewerInvitations from './routes/reviewer/reviewerInvitations.js';
 import reviewerQueueRoutes from './routes/reviewer/reviewerQueue.js';
@@ -44,6 +46,8 @@ app.use('/api/proposed-changes', proposedChangeRoutes);
 app.use('/api/community-members', communityMemberRoutes);
 app.use('/api/editors', editorRoutes);
 app.use('/api/curriculum', curriculumRoutes);
+
+app.use('/api/interface', interfaceRoutes);
 
 app.use('/api/reviewer', reviewerInvitationRoutes);
 app.use('/api/reviewer', reviewerInvitations);

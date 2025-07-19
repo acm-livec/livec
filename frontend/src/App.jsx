@@ -8,6 +8,8 @@ import CommunityMemberRegisterPage from "./pages/cm/CommunityMemberRegisterPage"
 import EditorRegisterPage from './pages/editor/EditorRegisterPage';
 import CurriculumPage from './pages/curriculum/CurriculumPage.jsx';
 
+import ExternalInterfaceUIPage from './pages/ei/ExternalInterfaceUIPage';
+
 import ReviewerInvitationPage from './pages/reviewer/ReviewerInvitationPage';
 import ReviewerQueuePage from './pages/reviewer/ReviewerQueuePage.jsx';
 import ReviewerRecommendationPage from './pages/reviewer/ReviewerRecommendationPage';
@@ -59,6 +61,8 @@ function App() {
         <Route path="/curriculum" element={<CurriculumPage />} />
         <Route path="/pc/submit" element={<ProposedChangeFormPage />} />
 
+        <Route path="/ui" element={<ExternalInterfaceUIPage />} />
+        
         <Route path="/reviewer/invitation" element={<ReviewerInvitationPage />} />
         <Route path="/reviewer/queue" element={<ReviewerQueuePage />} />
         <Route path="/reviewer/recommend" element={<ReviewerRecommendationPage />} />
