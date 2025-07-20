@@ -42,7 +42,9 @@ import EICFinalizePage from './pages/EICFinalizePage';
 import EICHistoryPage from './pages/EICHistoryPage';
 import EICApproveVersionPage from './pages/EICApproveVersionPage.jsx';
 
-import ApprovedCurriculaPage from './pages/as/ApprovedCurriculaPage';
+import ApprovedCurriculaPage from './pages/as/ApprovedCurriculaPage.jsx';
+import NotificationsPage from './pages/as/NotificationsPage.jsx';
+
 import AEDeskRejectPage from './pages/AEDeskRejectPage';
 import NotifyCurriculumChangePage from './pages/as/NotifyCurriculumChangePage';
 
@@ -102,7 +104,8 @@ function App() {
         <Route path="/as/approved-curricula" element={<ApprovedCurriculaPage />} />
         <Route path="/as/approved" element={<ApprovedCurriculaPage />} />
         <Route path="/as/notify-change" element={<NotifyCurriculumChangePage />} />
-
+        <Route path="/as/approved/curricula" element={<ApprovedCurriculaPage />} />
+        <Route path="/as/notifications" element={<NotificationsPage />} />
         
         <Route path="/data-model" element={<LogicalModelPage />} />
         <Route path="/data/dictionary" element={<DataDictionaryPage />} />

@@ -1,38 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import '../../styles/ApprovedCurriculaPage.css';
+import { useNavigate } from 'react-router-dom';
+import '../../styles/StandardPage.css';
 
 const ApprovedCurriculaPage = () => {
   const [curricula, setCurricula] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/as/approved-curricula')
-      .then(res => res.json())
-      .then(data => {
-        setCurricula(data);
-        setLoading(false);
-      })
-      .catch(() => {
-        setCurricula([]);
-        setLoading(false);
-      });
-  }, []);
+    fetch('http://localhost:3001/api/as/approved/curricula/')
+      .then((res) => res.json())
+      .then((data) => setCurricula(data))
+      .catch((err) => console.error('Error fetching approved curricula:', err));
+  },[]);
+
 
   return (
-    <div className="approved-curricula-page">
-      <h1>Approved Curriculum Versions</h1>
-      {loading ? (
-        <p>Loading</p>
-      ) : (
-        curricula.map((curriculum, index) => (
-          <div key={index} className="curriculum-card">
-            <h2>{curriculum.versionId}</h2>
-            <p><strong>Discipline:</strong> {curriculum.discipline}</p>
-            <p><strong>Approved Date:</strong> {curriculum.approvedDate}</p>
-            <p><strong>Summary:</strong> {curriculum.summary}</p>
-          </div>
-        ))
-      )}
+    <div className="page-container">
+      <div className="navigation-buttons">
+        <button onClick={() => navigate('/')}>Home</button>
+        <button onClick={() => navigate('/curricula')}>Curricula</button>
+      </div>
+      <h2>Approved Curricula Versions</h2>
+      <ul className="list">
+        {curricula.map((item, idx) => (
+          <li key={idx}><strong>{item.version}</strong> — {item.date}</li>
+        ))}
+      </ul>
     </div>
   );
 };

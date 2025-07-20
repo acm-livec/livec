@@ -29,6 +29,8 @@ import eicCurriculumReviewRoutes from './routes/eicCurriculumReview.js';
 
 import asRoutes from './routes/as/as.js';
 import asNotificationRoutes from './routes/as/asNotification.js';
+import approvedCurriculaRoutes from './routes/as/approvedCurricula.js';
+
 
 import dataModelRoutes from './routes/dataModel/model.js';
 import dictionaryRoutes from './routes/dataModel/dictionary.js';
@@ -69,6 +71,8 @@ app.use('/api/eic', eicCurriculumReviewRoutes);
 
 app.use('/api/as', asRoutes);
 app.use('/api/as', asNotificationRoutes);
+app.use('/api/as', approvedCurriculaRoutes);
+app.use('/api/as/notifications', asNotificationRoutes);
 
 app.use('/api/datamodel', dataModelRoutes);
 app.use('/api/datamodel/dictionary', dictionaryRoutes);
