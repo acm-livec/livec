@@ -2,12 +2,25 @@ import { useState, useCallback, useMemo } from 'react'
 import { createEditor } from 'slate'
 import { Slate, Editable, withReact } from 'slate-react'
 
+// Custom block types that should default to ordered lists when items are present
+const CUSTOM_ORDERED_LIST_TYPES = [
+  'cs-core',
+  'ka-core',
+  'non-core',
+  'illustrative-learning-outcomes',
+  'professional-dispositions',
+]
+
 // Convert JSON blocks to Slate node structure
 const jsonToSlateNodes = (blocks) => {
     const nodeForBlock = (block) => {
         if (block.items) {
-            // It's a list block
-            const listType = block.listType === 'ol' ? 'numbered-list' : 'bulleted-list'
+            // It's a list block; determine ordered vs. bulleted (default to custom ordered types)
+            let htmlList = block.listType
+            if (!htmlList) {
+                htmlList = CUSTOM_ORDERED_LIST_TYPES.includes(block.type.toLowerCase()) ? 'ol' : 'ul'
+            }
+            const listType = htmlList === 'ol' ? 'numbered-list' : 'bulleted-list'
             const children = block.items.map((item) => {
                 let text = ''
                 let subitems = []
