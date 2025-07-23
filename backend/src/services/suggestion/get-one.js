@@ -1,6 +1,5 @@
 const { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } = require('@errors');
 const {Roles} = require('@utils/constants')
-const AssociateEditors = require('@models/users/associate-editor/editors.model.js')
 const Suggestions = require('@models/suggestion/suggestions.model.js')
 const Curriculums = require('@models/curriculum/curriculums.model.js')
 const logger = require('@logger').addSource({
@@ -9,7 +8,9 @@ const logger = require('@logger').addSource({
     params: ['suggestion']
 });
 
-
+function kebabToCamel(str) {
+    return str.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
+}
 
 const getSuggestionById = async (suggestionId, role = null) => {
     try {
@@ -31,13 +32,20 @@ const getSuggestionById = async (suggestionId, role = null) => {
                 requestedSuggestion = requestedSuggestion.toAssociateEditor()
             } else if (role === Roles.EDITOR_IN_CHIEF) {
                 requestedSuggestion = requestedSuggestion.toEditorInCheif()
+            } else if (role === Roles.REVIEWER) {
+                requestedSuggestion = requestedSuggestion.toReviewer()
             }
         }
 
 
+        const curri = kebabToCamel(requestedSuggestion.discipline)
+        const secId = requestedSuggestion.sectionId
+        const c = await Curriculums.findByCurriculum(curri)
 
-        const section = await Curriculums.findById(requestedSuggestion.sectionId)
 
+        const section = await c.getSection(secId)
+
+        logger.debug( section)
 
         logger.debug("suggestion.get.found")
 

@@ -10,6 +10,7 @@ const associateEditorFinalized = require('./finalize')
 const handleEditorInChiefApproval = require('./handle-approval')
 const sendChangeRequestToAssociateEditor = require('./send-change')
 const handleDeferSuggestionToReviewer = require('./handle-deferral')
+const addRecommendationFromReviewer = require('./handle-recommendation')
 
 
 module.exports = {
@@ -22,5 +23,6 @@ module.exports = {
     associateEditorFinalized,
     handleEditorInChiefApproval,
     sendChangeRequestToAssociateEditor,
-    handleDeferSuggestionToReviewer
+    handleDeferSuggestionToReviewer,
+    addRecommendationFromReviewer
 }

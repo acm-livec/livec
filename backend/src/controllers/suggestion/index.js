@@ -10,6 +10,7 @@ import { postAssociateEditorFinalization } from './post-finalized.js'
 import { postEditorInChiefApproval } from './post-approval.js'
 import { postChangeRequest } from './post-change.js'
 import { postDeferral } from './post-deferral.js'
+import { postRecommednation } from './post-recommendation.js'
 
 export {
     postSuggestion,
@@ -21,5 +22,6 @@ export {
     postAssociateEditorFinalization,
     postEditorInChiefApproval,
     postChangeRequest,
-    postDeferral
+    postDeferral,
+    postRecommednation
 };

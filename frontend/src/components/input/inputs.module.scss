@@ -8,7 +8,7 @@
     gap: 1rem;
 
     input {
-            font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 
         outline: none;
         border: none;
@@ -21,10 +21,11 @@
 
 
     textarea {
-        font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
+        font-size: 1rem;
         border: none;
         resize: none;
-        height: 100px;
+        height: 200px;
         padding: 0.5rem;
 
     }
@@ -32,11 +33,14 @@
     .select {
         position: relative;
         display: inline-block;
-
+        color: black;
         select {
+                    font-size: 1rem;
+            
             width: 100%;
             padding: 0.5rem 2rem 0.5rem 1rem;
             appearance: none;
+
 
         }
 
@@ -47,14 +51,13 @@
             right: 1rem;
             width: 0.5rem;
             height: 0.5rem;
-            border: solid black;
-            border-width: 0 2px 2px 0;
+    
             transform: translateY(-50%) rotate(45deg);
             pointer-events: none; // click passes through
         }
     }
 
-    
+
 }
 
 .overlay-backdrop {

@@ -19,6 +19,9 @@ export default class Suggestion {
     get isClosed() {
         return isTerminalStatus(this.system?.status);
     }
+    isDeferred() {
+        return this.system?.status === Status.System.DEFERRED;
+    }
 
 
 }

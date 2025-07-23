@@ -50,7 +50,7 @@ export default function SuggestionView() {
         );
     }
 
-    if (user.isCommunityMember || suggestion.isClosed) 
+    if (user.isCommunityMember || suggestion.isClosed || (user.isAssociateEditor() && suggestion.isDeferred()) )
         return <DefaultView suggestion={suggestion} user={user}/>
 
     if (suggestion.isNew) 

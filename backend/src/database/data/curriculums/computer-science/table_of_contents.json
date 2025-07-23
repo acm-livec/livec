@@ -1,0 +1,6993 @@
+[
+  {
+    "id": "d3b1d0eaf0e4",
+    "level": 1,
+    "title": "Executive Summary",
+    "page_number": 21,
+    "meta": {
+      "index": 0,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "executive-summary"
+    },
+    "public_feedback": [
+      "SCOSC-pfks_ub2",
+      "SCOSC-qFT38twl"
+    ]
+  },
+  {
+    "id": "f95611b734d5",
+    "level": 1,
+    "title": "Overview",
+    "page_number": 23,
+    "meta": {
+      "index": 1,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "overview"
+    }
+  },
+  {
+    "id": "b47742cdb750",
+    "level": 1,
+    "title": "Introduction to CS2023",
+    "page_number": 25,
+    "meta": {
+      "index": 2,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "introduction-to-cs2023"
+    }
+  },
+  {
+    "id": "afb872230af3",
+    "level": 2,
+    "title": "History",
+    "page_number": 25,
+    "meta": {
+      "index": 3,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "history",
+      "parent_heading": "Introduction to CS2023"
+    }
+  },
+  {
+    "id": "c2824056be4f",
+    "level": 2,
+    "title": "Vision Statement",
+    "page_number": 26,
+    "meta": {
+      "index": 4,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "vision-statement",
+      "parent_heading": "Introduction to CS2023"
+    }
+  },
+  {
+    "id": "df7bdf438dcb",
+    "level": 2,
+    "title": "References",
+    "page_number": 26,
+    "meta": {
+      "index": 5,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Introduction to CS2023"
+    }
+  },
+  {
+    "id": "e27b36f9860a",
+    "level": 1,
+    "title": "Introduction to Knowledge Model",
+    "page_number": 29,
+    "meta": {
+      "index": 6,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "introduction-to-knowledge-model"
+    }
+  },
+  {
+    "id": "8238a7d96075",
+    "level": 2,
+    "title": "Definitions and Terminology",
+    "page_number": 29,
+    "meta": {
+      "index": 7,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "definitions-and-terminology",
+      "parent_heading": "Introduction to Knowledge Model"
+    }
+  },
+  {
+    "id": "7788284fbd5a",
+    "level": 2,
+    "title": "CS2023 Knowledge Model",
+    "page_number": 29,
+    "meta": {
+      "index": 8,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "cs2023-knowledge-model",
+      "parent_heading": "Introduction to Knowledge Model"
+    }
+  },
+  {
+    "id": "14f8a0bb7648",
+    "level": 2,
+    "title": "Structure of CS2023 Knowledge Area Explained",
+    "page_number": 32,
+    "meta": {
+      "index": 9,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "structure-of-cs2023-knowledge-area-explained",
+      "parent_heading": "Introduction to Knowledge Model"
+    }
+  },
+  {
+    "id": "3ba88e4990c1",
+    "level": 2,
+    "title": "Changes since CS2013",
+    "page_number": 34,
+    "meta": {
+      "index": 10,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Introduction to Knowledge Model"
+    }
+  },
+  {
+    "id": "4bc87e4ebae2",
+    "level": 2,
+    "title": "Designing/Revising a Curriculum Based on the Knowledge Model",
+    "page_number": 38,
+    "meta": {
+      "index": 11,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "designing-revising-a-curriculum-based-on-the-knowledge-model",
+      "parent_heading": "Introduction to Knowledge Model"
+    }
+  },
+  {
+    "id": "fc92b43dde06",
+    "level": 2,
+    "title": "References",
+    "page_number": 39,
+    "meta": {
+      "index": 12,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Introduction to Knowledge Model"
+    }
+  },
+  {
+    "id": "4507807c3e23",
+    "level": 1,
+    "title": "Introduction to Competency Framework",
+    "page_number": 41,
+    "meta": {
+      "index": 13,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "introduction-to-competency-framework"
+    }
+  },
+  {
+    "id": "0c451a129db6",
+    "level": 2,
+    "title": "Competence Model - Definitions and Terminology",
+    "page_number": 41,
+    "meta": {
+      "index": 14,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "competence-model-definitions-and-terminology",
+      "parent_heading": "Introduction to Competency Framework"
+    }
+  },
+  {
+    "id": "400aa08c6841",
+    "level": 2,
+    "title": "CS2023 Competency Model",
+    "page_number": 42,
+    "meta": {
+      "index": 15,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "cs2023-competency-model",
+      "parent_heading": "Introduction to Competency Framework"
+    }
+  },
+  {
+    "id": "f385297a9e2c",
+    "level": 2,
+    "title": "CS2023 Framework for Systematically Identifying Tasks",
+    "page_number": 43,
+    "meta": {
+      "index": 16,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "cs2023-framework-for-systematically-identifying-tasks",
+      "parent_heading": "Introduction to Competency Framework"
+    }
+  },
+  {
+    "id": "23827083d5b8",
+    "level": 2,
+    "title": "Designing/Revising a Curriculum Using the Competency Framework",
+    "page_number": 44,
+    "meta": {
+      "index": 17,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "designing-revising-a-curriculum-using-the-competency-framework",
+      "parent_heading": "Introduction to Competency Framework"
+    }
+  },
+  {
+    "id": "97a9c1aa6737",
+    "level": 2,
+    "title": "References",
+    "page_number": 45,
+    "meta": {
+      "index": 18,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Introduction to Competency Framework"
+    }
+  },
+  {
+    "id": "7195cc4b04f1",
+    "level": 1,
+    "title": "The Design",
+    "page_number": 47,
+    "meta": {
+      "index": 19,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-design"
+    }
+  },
+  {
+    "id": "e28660325cac",
+    "level": 1,
+    "title": "Principles and Processes",
+    "page_number": 49,
+    "meta": {
+      "index": 20,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "principles-and-processes"
+    }
+  },
+  {
+    "id": "6e6588f3cb3e",
+    "level": 2,
+    "title": "The Task Force",
+    "page_number": 49,
+    "meta": {
+      "index": 21,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-task-force",
+      "parent_heading": "Principles and Processes"
+    }
+  },
+  {
+    "id": "caa78607b229",
+    "level": 3,
+    "title": "The Steering Committee",
+    "page_number": 49,
+    "meta": {
+      "index": 22,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-steering-committee",
+      "parent_heading": "Principles and Processes"
+    }
+  },
+  {
+    "id": "38a9e5539c34",
+    "level": 3,
+    "title": "Knowledge Area Committees",
+    "page_number": 49,
+    "meta": {
+      "index": 23,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-committees",
+      "parent_heading": "Principles and Processes"
+    }
+  },
+  {
+    "id": "49a42f167df7",
+    "level": 2,
+    "title": "Guiding Principles for the Process",
+    "page_number": 49,
+    "meta": {
+      "index": 24,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "guiding-principles-for-the-process",
+      "parent_heading": "Principles and Processes"
+    }
+  },
+  {
+    "id": "19a6b2a26331",
+    "level": 2,
+    "title": "The Process",
+    "page_number": 50,
+    "meta": {
+      "index": 25,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-process",
+      "parent_heading": "Principles and Processes"
+    }
+  },
+  {
+    "id": "2fc47ca85a72",
+    "level": 2,
+    "title": "Guiding Concerns for the Curricular Recommendations",
+    "page_number": 51,
+    "meta": {
+      "index": 26,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "guiding-concerns-for-the-curricular-recommendations",
+      "parent_heading": "Principles and Processes"
+    }
+  },
+  {
+    "id": "d96daae454b6",
+    "level": 2,
+    "title": "The Knowledge Model Revision Process",
+    "page_number": 52,
+    "meta": {
+      "index": 27,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-knowledge-model-revision-process",
+      "parent_heading": "Principles and Processes"
+    }
+  },
+  {
+    "id": "84adb19a0ee6",
+    "level": 1,
+    "title": "Characteristics of Computer Science Graduates",
+    "page_number": 55,
+    "meta": {
+      "index": 28,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "characteristics-of-computer-science-graduates"
+    }
+  },
+  {
+    "id": "2d3811551a0c",
+    "level": 2,
+    "title": "Professional knowledge and skills—for a technical solution",
+    "page_number": 55,
+    "meta": {
+      "index": 29,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-knowledge-and-skillsfor-a-technical-solution",
+      "parent_heading": "Characteristics of Computer Science Graduates"
+    }
+  },
+  {
+    "id": "16623294e21d",
+    "level": 2,
+    "title": "Professional Responsibilities – for the whole solution",
+    "page_number": 55,
+    "meta": {
+      "index": 30,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-responsibilities--for-the-whole-solution",
+      "parent_heading": "Characteristics of Computer Science Graduates"
+    }
+  },
+  {
+    "id": "cb066e165d26",
+    "level": 2,
+    "title": "Professional dispositions – the whole person view",
+    "page_number": 56,
+    "meta": {
+      "index": 31,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions--the-whole-person-view",
+      "parent_heading": "Characteristics of Computer Science Graduates"
+    }
+  },
+  {
+    "id": "f1531d851d4e",
+    "level": 2,
+    "title": "References",
+    "page_number": 56,
+    "meta": {
+      "index": 32,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Characteristics of Computer Science Graduates"
+    }
+  },
+  {
+    "id": "a6103894da66",
+    "level": 1,
+    "title": "Challenges and Opportunities for Computer Science",
+    "page_number": 57,
+    "meta": {
+      "index": 33,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "challenges-and-opportunities-for-computer-science"
+    }
+  },
+  {
+    "id": "5d38d936d65d",
+    "level": 1,
+    "title": "The Details",
+    "page_number": 61,
+    "meta": {
+      "index": 34,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-details"
+    }
+  },
+  {
+    "id": "555d64c12b55",
+    "level": 1,
+    "title": "Body of Knowledge",
+    "page_number": 63,
+    "meta": {
+      "index": 35,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "body-of-knowledge"
+    }
+  },
+  {
+    "id": "ff802eb0e043",
+    "level": 1,
+    "title": "Artificial Intelligence (AI)",
+    "page_number": 65,
+    "meta": {
+      "index": 36,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "artificial-intelligence-ai"
+    }
+  },
+  {
+    "id": "ff2565fe393a",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 65,
+    "meta": {
+      "index": 37,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "28b64f2bd5ae",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 66,
+    "meta": {
+      "index": 38,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "5e4d7ec0f8b3",
+    "level": 3,
+    "title": "Consider recent AI advances when using this curriculum",
+    "page_number": 66,
+    "meta": {
+      "index": 39,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "consider-recent-ai-advances-when-using-this-curriculum",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "5796d0dc5261",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 66,
+    "meta": {
+      "index": 40,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "9b442c08d78c",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 67,
+    "meta": {
+      "index": 41,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "4fa24f853f75",
+    "level": 3,
+    "title": "AI-Introduction: Fundamental Issues",
+    "page_number": 67,
+    "meta": {
+      "index": 42,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-introduction-fundamental-issues",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "e5eb3d2a3ce9",
+    "level": 3,
+    "title": "AI-Search: Search",
+    "page_number": 68,
+    "meta": {
+      "index": 43,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-search-search",
+      "parent_heading": "Artificial Intelligence (AI)"
+    },
+    "public_feedback": [
+      "SCOSC-jCYtmeAr"
+    ]
+  },
+  {
+    "id": "5097cafb6e4b",
+    "level": 3,
+    "title": "AI-KRR: Fundamental Knowledge Representation and Reasoning",
+    "page_number": 70,
+    "meta": {
+      "index": 44,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-krr-fundamental-knowledge-representation-and-reasoning",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "39859cd6c3d7",
+    "level": 3,
+    "title": "AI-ML: Machine Learning",
+    "page_number": 71,
+    "meta": {
+      "index": 45,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-ml-machine-learning",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "dc69787d7515",
+    "level": 3,
+    "title": "AI-SEP: Applications and Societal Impact",
+    "page_number": 75,
+    "meta": {
+      "index": 46,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-sep-applications-and-societal-impact",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "f64648e53097",
+    "level": 3,
+    "title": "AI-LRR: Logical Representation and Reasoning",
+    "page_number": 76,
+    "meta": {
+      "index": 47,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-lrr-logical-representation-and-reasoning",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "68283b457e36",
+    "level": 3,
+    "title": "AI-Probability: Probabilistic Representation and Reasoning",
+    "page_number": 77,
+    "meta": {
+      "index": 48,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-probability-probabilistic-representation-and-reasoning",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "94d89b1e5996",
+    "level": 3,
+    "title": "AI-Planning: Planning",
+    "page_number": 78,
+    "meta": {
+      "index": 49,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-planning-planning",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "6a17f8b5c261",
+    "level": 3,
+    "title": "AI-Agents: Agents and Cognitive Systems",
+    "page_number": 79,
+    "meta": {
+      "index": 50,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-agents-agents-and-cognitive-systems",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "b1e2b3ddda42",
+    "level": 3,
+    "title": "AI-NLP: Natural Language Processing",
+    "page_number": 79,
+    "meta": {
+      "index": 51,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-nlp-natural-language-processing",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "b2f245f03c0d",
+    "level": 3,
+    "title": "AI-Robotics: Robotics",
+    "page_number": 80,
+    "meta": {
+      "index": 52,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-robotics-robotics",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "ea0acebec9ec",
+    "level": 3,
+    "title": "AI-Vision: Perception and Computer Vision",
+    "page_number": 82,
+    "meta": {
+      "index": 53,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-vision-perception-and-computer-vision",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "95bf2f3e53b0",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 83,
+    "meta": {
+      "index": 54,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "d992078683c1",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 83,
+    "meta": {
+      "index": 55,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "fb4a08de78fd",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 84,
+    "meta": {
+      "index": 56,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "dfecb46d146d",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 85,
+    "meta": {
+      "index": 57,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Artificial Intelligence (AI)"
+    }
+  },
+  {
+    "id": "d2941d9b678c",
+    "level": 1,
+    "title": "Algorithmic Foundations (AL)",
+    "page_number": 87,
+    "meta": {
+      "index": 58,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "algorithmic-foundations-al"
+    }
+  },
+  {
+    "id": "ef762db00c1f",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 87,
+    "meta": {
+      "index": 59,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "e30f48ce326c",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 87,
+    "meta": {
+      "index": 60,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "09ea91a1c8bc",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 88,
+    "meta": {
+      "index": 61,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "960b4d14388a",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 88,
+    "meta": {
+      "index": 62,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "6dd55ac535de",
+    "level": 3,
+    "title": "AL-Foundational: Foundational Data Structures and Algorithms",
+    "page_number": 88,
+    "meta": {
+      "index": 63,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "al-foundational-foundational-data-structures-and-algorithms",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "0542833b34b5",
+    "level": 3,
+    "title": "AL-Strategies: Algorithmic Strategies",
+    "page_number": 90,
+    "meta": {
+      "index": 64,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "al-strategies-algorithmic-strategies",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "aaa38d1ede7a",
+    "level": 3,
+    "title": "AL-Complexity: Complexity",
+    "page_number": 91,
+    "meta": {
+      "index": 65,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "al-complexity-complexity",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "6910c6ef5d36",
+    "level": 3,
+    "title": "AL-Models: Computational Models and Formal Languages",
+    "page_number": 93,
+    "meta": {
+      "index": 66,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "al-models-computational-models-and-formal-languages",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "ae23b423618f",
+    "level": 3,
+    "title": "AL-SEP: Society, Ethics, and the Profession",
+    "page_number": 95,
+    "meta": {
+      "index": 67,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "al-sep-society-ethics-and-the-profession",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "32c7fa825522",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 96,
+    "meta": {
+      "index": 68,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "93fc67694a66",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 96,
+    "meta": {
+      "index": 69,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "90c90221f0dc",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 96,
+    "meta": {
+      "index": 70,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "dadaaebeb55d",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 99,
+    "meta": {
+      "index": 71,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Algorithmic Foundations (AL)"
+    }
+  },
+  {
+    "id": "1afd09b9f3f8",
+    "level": 1,
+    "title": "Architecture and Organization (AR)",
+    "page_number": 101,
+    "meta": {
+      "index": 72,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "architecture-and-organization-ar"
+    }
+  },
+  {
+    "id": "cceb23501289",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 101,
+    "meta": {
+      "index": 73,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "52c8170ac340",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 101,
+    "meta": {
+      "index": 74,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "c1feb7c1a8f4",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 101,
+    "meta": {
+      "index": 75,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "dbfd4061f49f",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 102,
+    "meta": {
+      "index": 76,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "74793c5e4fdc",
+    "level": 3,
+    "title": "AR-Logic: Digital Logic and Digital Systems",
+    "page_number": 102,
+    "meta": {
+      "index": 77,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-logic-digital-logic-and-digital-systems",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "11e42cd017de",
+    "level": 3,
+    "title": "AR-Representation: Machine-Level Data Representation",
+    "page_number": 103,
+    "meta": {
+      "index": 78,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-representation-machine-level-data-representation",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "9ad44001d454",
+    "level": 3,
+    "title": "AR-Assembly: Assembly Level Machine Organization",
+    "page_number": 103,
+    "meta": {
+      "index": 79,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-assembly-assembly-level-machine-organization",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "89a9f2c441dd",
+    "level": 3,
+    "title": "AR-Memory: Memory Hierarchy",
+    "page_number": 104,
+    "meta": {
+      "index": 80,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-memory-memory-hierarchy",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "c0e80b76edab",
+    "level": 3,
+    "title": "AR-IO: Interfacing and Communication",
+    "page_number": 105,
+    "meta": {
+      "index": 81,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-io-interfacing-and-communication",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "180a376d5ac4",
+    "level": 3,
+    "title": "AR-Organization: Functional Organization",
+    "page_number": 106,
+    "meta": {
+      "index": 82,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-organization-functional-organization",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "dc0c11323603",
+    "level": 3,
+    "title": "AR-Performance-Energy: Performance and Energy Efficiency",
+    "page_number": 106,
+    "meta": {
+      "index": 83,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-performance-energy-performance-and-energy-efficiency",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "12f6afd24cdf",
+    "level": 3,
+    "title": "AR-Heterogeneity: Heterogeneous Architectures",
+    "page_number": 107,
+    "meta": {
+      "index": 84,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-heterogeneity-heterogeneous-architectures",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "10da3a81a796",
+    "level": 3,
+    "title": "AR-Security: Secure Processor Architectures",
+    "page_number": 107,
+    "meta": {
+      "index": 85,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-security-secure-processor-architectures",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "c5e58e63eacc",
+    "level": 3,
+    "title": "AR-Quantum: Quantum Architectures",
+    "page_number": 108,
+    "meta": {
+      "index": 86,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-quantum-quantum-architectures",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "e207163071ad",
+    "level": 3,
+    "title": "AR-SEP: Sustainability Issues",
+    "page_number": 109,
+    "meta": {
+      "index": 87,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-sep-sustainability-issues",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "a0c0bef89342",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 109,
+    "meta": {
+      "index": 88,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "0050bb0ec397",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 110,
+    "meta": {
+      "index": 89,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "145e63ff27d5",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 110,
+    "meta": {
+      "index": 90,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "0360bc358ad6",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 111,
+    "meta": {
+      "index": 91,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Architecture and Organization (AR)"
+    }
+  },
+  {
+    "id": "3ee42bea45f2",
+    "level": 1,
+    "title": "Data Management (DM)",
+    "page_number": 113,
+    "meta": {
+      "index": 92,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "data-management-dm"
+    }
+  },
+  {
+    "id": "f79888c4d664",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 113,
+    "meta": {
+      "index": 93,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "189884f9a661",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 114,
+    "meta": {
+      "index": 94,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "63c0af099527",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 114,
+    "meta": {
+      "index": 95,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "c3f790ca40aa",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 115,
+    "meta": {
+      "index": 96,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "0e3a5200bf23",
+    "level": 3,
+    "title": "DM-Data: The Role of Data and the Data Life Cycle",
+    "page_number": 115,
+    "meta": {
+      "index": 97,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-data-the-role-of-data-and-the-data-life-cycle",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "6cc041c1b285",
+    "level": 3,
+    "title": "DM-Core: Core Database System Concepts",
+    "page_number": 115,
+    "meta": {
+      "index": 98,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-core-core-database-system-concepts",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "2122af018d2a",
+    "level": 3,
+    "title": "DM-Modeling: Data Modeling",
+    "page_number": 116,
+    "meta": {
+      "index": 99,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-modeling-data-modeling",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "a654704e7ad9",
+    "level": 3,
+    "title": "DM-Relational: Relational Databases",
+    "page_number": 117,
+    "meta": {
+      "index": 100,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-relational-relational-databases",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "15fc2e8cd48c",
+    "level": 3,
+    "title": "DM-Querying: Query Construction",
+    "page_number": 118,
+    "meta": {
+      "index": 101,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-querying-query-construction",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "c0f6de755faf",
+    "level": 3,
+    "title": "DM-Processing: Query Processing",
+    "page_number": 118,
+    "meta": {
+      "index": 102,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-processing-query-processing",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "885dd265a27a",
+    "level": 3,
+    "title": "DM-Internals: DBMS Internals",
+    "page_number": 119,
+    "meta": {
+      "index": 103,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-internals-dbms-internals",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "8e1f0b740015",
+    "level": 3,
+    "title": "DM-NoSQL: NoSQL Systems",
+    "page_number": 120,
+    "meta": {
+      "index": 104,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-nosql-nosql-systems",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "64b9119b3e3e",
+    "level": 3,
+    "title": "DM-Security: Data Security and Privacy",
+    "page_number": 121,
+    "meta": {
+      "index": 105,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-security-data-security-and-privacy",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "5dc62391e9d0",
+    "level": 3,
+    "title": "DM-Analytics: Data Analytics",
+    "page_number": 121,
+    "meta": {
+      "index": 106,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-analytics-data-analytics",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "d72006bd90b0",
+    "level": 3,
+    "title": "DM-Distributed: Distributed Databases/Cloud Computing",
+    "page_number": 122,
+    "meta": {
+      "index": 107,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-distributed-distributed-databases-cloud-computing",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "09a5a4f8defe",
+    "level": 3,
+    "title": "DM-Unstructured: Semi-structured and Unstructured Databases",
+    "page_number": 122,
+    "meta": {
+      "index": 108,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-unstructured-semi-structured-and-unstructured-databases",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "d60b152b71b8",
+    "level": 3,
+    "title": "DM-SEP: Society, Ethics, and the Profession",
+    "page_number": 123,
+    "meta": {
+      "index": 109,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-sep-society-ethics-and-the-profession",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "fd1959e13e5e",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 123,
+    "meta": {
+      "index": 110,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "2ce8d82cbca0",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 124,
+    "meta": {
+      "index": 111,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "ed8a8ceb4e9c",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 124,
+    "meta": {
+      "index": 112,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "330030cf5130",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 125,
+    "meta": {
+      "index": 113,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "77b7f822d2f6",
+    "level": 2,
+    "title": "References",
+    "page_number": 125,
+    "meta": {
+      "index": 114,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Data Management (DM)"
+    }
+  },
+  {
+    "id": "eadf5bf5f476",
+    "level": 1,
+    "title": "Foundations of Programming Languages (FPL)",
+    "page_number": 127,
+    "meta": {
+      "index": 115,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "foundations-of-programming-languages-fpl"
+    }
+  },
+  {
+    "id": "e734eb9bc391",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 127,
+    "meta": {
+      "index": 116,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "379c882f04ff",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 127,
+    "meta": {
+      "index": 117,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "4e785b7027cc",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 129,
+    "meta": {
+      "index": 118,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "dd6a8ea08d05",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 130,
+    "meta": {
+      "index": 119,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "1eca45a17a0d",
+    "level": 3,
+    "title": "FPL-OOP: Object-Oriented Programming",
+    "page_number": 130,
+    "meta": {
+      "index": 120,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-oop-object-oriented-programming",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "2935848a04f2",
+    "level": 3,
+    "title": "FPL-Functional: Functional Programming",
+    "page_number": 131,
+    "meta": {
+      "index": 121,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-functional-functional-programming",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "268d030fa9c5",
+    "level": 3,
+    "title": "FPL-Logic: Logic Programming",
+    "page_number": 133,
+    "meta": {
+      "index": 122,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-logic-logic-programming",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "36fa453a0a80",
+    "level": 3,
+    "title": "FPL-Scripting: Shell Scripting",
+    "page_number": 133,
+    "meta": {
+      "index": 123,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-scripting-shell-scripting",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "2af7aa8a0db9",
+    "level": 3,
+    "title": "FPL-Event-Driven: Event-Driven and Reactive Programming",
+    "page_number": 134,
+    "meta": {
+      "index": 124,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-event-driven-event-driven-and-reactive-programming",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "187c73ec38fe",
+    "level": 3,
+    "title": "FPL-Parallel: Parallel and Distributed Computing",
+    "page_number": 135,
+    "meta": {
+      "index": 125,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-parallel-parallel-and-distributed-computing",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "f6c28c57d89d",
+    "level": 3,
+    "title": "FPL-Aspect: Aspect-Oriented Programming",
+    "page_number": 136,
+    "meta": {
+      "index": 126,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-aspect-aspect-oriented-programming",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "bb9834083dd4",
+    "level": 3,
+    "title": "FPL-Types: Type Systems",
+    "page_number": 136,
+    "meta": {
+      "index": 127,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-types-type-systems",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "e358f090b99f",
+    "level": 3,
+    "title": "FPL-Systems: Systems Execution and Memory Model",
+    "page_number": 138,
+    "meta": {
+      "index": 128,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-systems-systems-execution-and-memory-model",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "5cd1ba753036",
+    "level": 3,
+    "title": "FPL-Translation: Language Translation and Execution",
+    "page_number": 139,
+    "meta": {
+      "index": 129,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-translation-language-translation-and-execution",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "f9ee4f642912",
+    "level": 3,
+    "title": "FPL-Abstraction: Program Abstraction and Representation",
+    "page_number": 140,
+    "meta": {
+      "index": 130,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-abstraction-program-abstraction-and-representation",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "997c29e50a54",
+    "level": 3,
+    "title": "FPL-Syntax: Syntax Analysis",
+    "page_number": 141,
+    "meta": {
+      "index": 131,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-syntax-syntax-analysis",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "97054f24f71b",
+    "level": 3,
+    "title": "FPL-Semantics: Compiler Semantic Analysis",
+    "page_number": 141,
+    "meta": {
+      "index": 132,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-semantics-compiler-semantic-analysis",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "60226480573e",
+    "level": 3,
+    "title": "FPL-Analysis: Program Analysis and Analyzers",
+    "page_number": 142,
+    "meta": {
+      "index": 133,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-analysis-program-analysis-and-analyzers",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "9ece030f7095",
+    "level": 3,
+    "title": "FPL-Code: Code Generation",
+    "page_number": 142,
+    "meta": {
+      "index": 134,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-code-code-generation",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "110084615f7d",
+    "level": 3,
+    "title": "FPL-Run-Time: Run-time Behavior and Systems",
+    "page_number": 143,
+    "meta": {
+      "index": 135,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-run-time-run-time-behavior-and-systems",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "a1d51567c0a3",
+    "level": 3,
+    "title": "FPL-Constructs: Advanced Programming Constructs",
+    "page_number": 144,
+    "meta": {
+      "index": 136,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-constructs-advanced-programming-constructs",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "426bd6d81fd9",
+    "level": 3,
+    "title": "FPL-Pragmatics: Language Pragmatics",
+    "page_number": 144,
+    "meta": {
+      "index": 137,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-pragmatics-language-pragmatics",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "281ecf49da73",
+    "level": 3,
+    "title": "FPL-Formalism: Formal Semantics",
+    "page_number": 145,
+    "meta": {
+      "index": 138,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-formalism-formal-semantics",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "5fe101a01c04",
+    "level": 3,
+    "title": "FPL-Methodologies: Formal Development Methodologies",
+    "page_number": 146,
+    "meta": {
+      "index": 139,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-methodologies-formal-development-methodologies",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "989a8a1b0aac",
+    "level": 3,
+    "title": "FPL-Design: Design Principles of Programming Languages",
+    "page_number": 146,
+    "meta": {
+      "index": 140,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-design-design-principles-of-programming-languages",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "f96dac7726ae",
+    "level": 3,
+    "title": "FPL-SEP: Society, Ethics, and the Profession",
+    "page_number": 147,
+    "meta": {
+      "index": 141,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-sep-society-ethics-and-the-profession",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "4026c79e6a7d",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 147,
+    "meta": {
+      "index": 142,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "deb9bfefaf0e",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 147,
+    "meta": {
+      "index": 143,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "ce880c8a4fb8",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 148,
+    "meta": {
+      "index": 144,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "eb70205d3418",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 149,
+    "meta": {
+      "index": 145,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Foundations of Programming Languages (FPL)"
+    }
+  },
+  {
+    "id": "a0d7b9876fb9",
+    "level": 1,
+    "title": "Graphics and Interactive Techniques (GIT)",
+    "page_number": 151,
+    "meta": {
+      "index": 146,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "graphics-and-interactive-techniques-git"
+    }
+  },
+  {
+    "id": "b048e94d7c68",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 151,
+    "meta": {
+      "index": 147,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "90d8864fb066",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 154,
+    "meta": {
+      "index": 148,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "51b6e24c8734",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 154,
+    "meta": {
+      "index": 149,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "0acf7ebee193",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 155,
+    "meta": {
+      "index": 150,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "24201030b4a1",
+    "level": 3,
+    "title": "GIT-Fundamentals: Fundamental Concepts",
+    "page_number": 155,
+    "meta": {
+      "index": 151,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-fundamentals-fundamental-concepts",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "b37adac66330",
+    "level": 3,
+    "title": "GIT-Visualization: Visualization",
+    "page_number": 156,
+    "meta": {
+      "index": 152,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-visualization-visualization",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "300e000be115",
+    "level": 3,
+    "title": "GIT-Rendering: Applied Rendering and Techniques",
+    "page_number": 157,
+    "meta": {
+      "index": 153,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-rendering-applied-rendering-and-techniques",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "28b63907faac",
+    "level": 3,
+    "title": "GIT-Modeling: Geometric Modeling",
+    "page_number": 158,
+    "meta": {
+      "index": 154,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-modeling-geometric-modeling",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "60da755a530c",
+    "level": 3,
+    "title": "GIT-Shading: Shading and Advanced Rendering",
+    "page_number": 159,
+    "meta": {
+      "index": 155,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-shading-shading-and-advanced-rendering",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "37bda42287fc",
+    "level": 3,
+    "title": "GIT-Animation: Computer Animation",
+    "page_number": 160,
+    "meta": {
+      "index": 156,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-animation-computer-animation",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "9f7fb39b44bd",
+    "level": 3,
+    "title": "GIT-Simulation: Simulation",
+    "page_number": 161,
+    "meta": {
+      "index": 157,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-simulation-simulation",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "466fa1ef0ea3",
+    "level": 3,
+    "title": "GIT-Immersion: Immersion",
+    "page_number": 161,
+    "meta": {
+      "index": 158,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-immersion-immersion",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "7ab36c624a9d",
+    "level": 3,
+    "title": "GIT-Interaction: Interaction",
+    "page_number": 162,
+    "meta": {
+      "index": 159,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-interaction-interaction",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "3d315aed516b",
+    "level": 3,
+    "title": "GIT-Image: Image Processing",
+    "page_number": 163,
+    "meta": {
+      "index": 160,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-image-image-processing",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "cd40291cbca5",
+    "level": 3,
+    "title": "GIT-Physical: Tangible/Physical Computing",
+    "page_number": 164,
+    "meta": {
+      "index": 161,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-physical-tangible-physical-computing",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "ae03b34b631f",
+    "level": 3,
+    "title": "GIT-SEP: Society, Ethics, and the Profession",
+    "page_number": 165,
+    "meta": {
+      "index": 162,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-sep-society-ethics-and-the-profession",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "adb2c1e29cb6",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 166,
+    "meta": {
+      "index": 163,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "019dc965760f",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 166,
+    "meta": {
+      "index": 164,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "9a58ddd7259b",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 167,
+    "meta": {
+      "index": 165,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "f154e60d3b6b",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 170,
+    "meta": {
+      "index": 166,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "4231901e7622",
+    "level": 2,
+    "title": "References",
+    "page_number": 171,
+    "meta": {
+      "index": 167,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Graphics and Interactive Techniques (GIT)"
+    }
+  },
+  {
+    "id": "ddc0bb5b5edd",
+    "level": 1,
+    "title": "Human-Computer Interaction (HCI)",
+    "page_number": 173,
+    "meta": {
+      "index": 168,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "human-computer-interaction-hci"
+    }
+  },
+  {
+    "id": "33df825cc5cd",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 173,
+    "meta": {
+      "index": 169,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "f859a34abf05",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 173,
+    "meta": {
+      "index": 170,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "2ff09cbc667f",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 174,
+    "meta": {
+      "index": 171,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "e2bbc8c6e0c5",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 174,
+    "meta": {
+      "index": 172,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "424262f95a41",
+    "level": 3,
+    "title": "HCI-User: Understanding",
+    "page_number": 10,
+    "meta": {
+      "index": 173,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "hci-user-understanding",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "5836991e037f",
+    "level": 3,
+    "title": "the User: Individual goals and interactions with others",
+    "page_number": 174,
+    "meta": {
+      "index": 174,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-user-individual-goals-and-interactions-with-others",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "54f5f4e2409a",
+    "level": 3,
+    "title": "HCI-Accountability: Accountability and Responsibility in Design",
+    "page_number": 176,
+    "meta": {
+      "index": 175,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "hci-accountability-accountability-and-responsibility-in-design",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "edb95a6f5679",
+    "level": 3,
+    "title": "HCI-Accessibility: Accessibility and Inclusive Design",
+    "page_number": 177,
+    "meta": {
+      "index": 176,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "hci-accessibility-accessibility-and-inclusive-design",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "385f5aab054a",
+    "level": 3,
+    "title": "HCI-Evaluation: Evaluating the Design",
+    "page_number": 178,
+    "meta": {
+      "index": 177,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "hci-evaluation-evaluating-the-design",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "6a6a798ce991",
+    "level": 3,
+    "title": "HCI-Design: System Design",
+    "page_number": 179,
+    "meta": {
+      "index": 178,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "hci-design-system-design",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "64ec4d98f15a",
+    "level": 3,
+    "title": "HCI-SEP: Society, Ethics, and the Profession",
+    "page_number": 181,
+    "meta": {
+      "index": 179,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "hci-sep-society-ethics-and-the-profession",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "dc856be178f7",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 182,
+    "meta": {
+      "index": 180,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "f1376c5b6ff5",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 182,
+    "meta": {
+      "index": 181,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "b4d4a57474f6",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 182,
+    "meta": {
+      "index": 182,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "247347dc4cd9",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 183,
+    "meta": {
+      "index": 183,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Human-Computer Interaction (HCI)"
+    }
+  },
+  {
+    "id": "6c0638331e03",
+    "level": 1,
+    "title": "Mathematical and Statistical Foundations (MSF)",
+    "page_number": 185,
+    "meta": {
+      "index": 184,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematical-and-statistical-foundations-msf"
+    }
+  },
+  {
+    "id": "dbbce97a68ba",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 185,
+    "meta": {
+      "index": 185,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "7b926e0def9b",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 185,
+    "meta": {
+      "index": 186,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "640a130a958c",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 185,
+    "meta": {
+      "index": 187,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "11defdaef488",
+    "level": 3,
+    "title": "Acknowledging some tensions",
+    "page_number": 185,
+    "meta": {
+      "index": 188,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "acknowledging-some-tensions",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "e874b40432b3",
+    "level": 3,
+    "title": "Rationale for recommended hours",
+    "page_number": 186,
+    "meta": {
+      "index": 189,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "rationale-for-recommended-hours",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "2ca688d7064c",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 187,
+    "meta": {
+      "index": 190,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "5ca84c7caff5",
+    "level": 3,
+    "title": "MSF-Discrete: Discrete Mathematics",
+    "page_number": 187,
+    "meta": {
+      "index": 191,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "msf-discrete-discrete-mathematics",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "5b24b56d0a6e",
+    "level": 3,
+    "title": "MSF-Probability: Probability",
+    "page_number": 188,
+    "meta": {
+      "index": 192,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "msf-probability-probability",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "f51a73441f6b",
+    "level": 3,
+    "title": "MSF-Statistics: Statistics",
+    "page_number": 190,
+    "meta": {
+      "index": 193,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "msf-statistics-statistics",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "448ea0ecbdc7",
+    "level": 3,
+    "title": "MSF-Linear: Linear Algebra",
+    "page_number": 191,
+    "meta": {
+      "index": 194,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "msf-linear-linear-algebra",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "c05d475bfc3c",
+    "level": 3,
+    "title": "MSF-Calculus",
+    "page_number": 192,
+    "meta": {
+      "index": 195,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "msf-calculus",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "ddc4d26bb443",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 194,
+    "meta": {
+      "index": 196,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "d14167d04646",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 194,
+    "meta": {
+      "index": 197,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "71b0599a6183",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 195,
+    "meta": {
+      "index": 198,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "9d236296819b",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 195,
+    "meta": {
+      "index": 199,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "22a50a5d8bf5",
+    "level": 2,
+    "title": "References",
+    "page_number": 196,
+    "meta": {
+      "index": 200,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Mathematical and Statistical Foundations (MSF)"
+    }
+  },
+  {
+    "id": "0bc086bd58b8",
+    "level": 1,
+    "title": "Networking and Communication (NC)",
+    "page_number": 197,
+    "meta": {
+      "index": 201,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "networking-and-communication-nc"
+    }
+  },
+  {
+    "id": "252745168ca7",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 197,
+    "meta": {
+      "index": 202,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "f75371fe13dc",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 197,
+    "meta": {
+      "index": 203,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "c787a3709294",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 198,
+    "meta": {
+      "index": 204,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "8a5049393da7",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 198,
+    "meta": {
+      "index": 205,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "9859b6c1cf1f",
+    "level": 3,
+    "title": "NC-Fundamentals: Fundamentals",
+    "page_number": 198,
+    "meta": {
+      "index": 206,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-fundamentals-fundamentals",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "0168a05ecede",
+    "level": 3,
+    "title": "NC-Applications: Networked Applications",
+    "page_number": 199,
+    "meta": {
+      "index": 207,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-applications-networked-applications",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "09b3362e3a26",
+    "level": 3,
+    "title": "NC-Reliability: Reliability Support",
+    "page_number": 199,
+    "meta": {
+      "index": 208,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-reliability-reliability-support",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "fc083291f6f8",
+    "level": 3,
+    "title": "NC-Routing: Routing and Forwarding",
+    "page_number": 199,
+    "meta": {
+      "index": 209,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-routing-routing-and-forwarding",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "25b1a0d9cd78",
+    "level": 3,
+    "title": "NC-SingleHop: Single Hop Communication",
+    "page_number": 200,
+    "meta": {
+      "index": 210,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-singlehop-single-hop-communication",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "ff10d221f9e4",
+    "level": 3,
+    "title": "NC-Security: Network Security",
+    "page_number": 200,
+    "meta": {
+      "index": 211,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-security-network-security",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "946f0019b2a7",
+    "level": 3,
+    "title": "NC-Mobility: Mobility",
+    "page_number": 201,
+    "meta": {
+      "index": 212,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-mobility-mobility",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "024b0ccae606",
+    "level": 3,
+    "title": "NC-Emerging: Emerging Topics",
+    "page_number": 201,
+    "meta": {
+      "index": 213,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-emerging-emerging-topics",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "0da809b81b45",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 201,
+    "meta": {
+      "index": 214,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "534c999242b4",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 202,
+    "meta": {
+      "index": 215,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "c2bc62a5e3c5",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 202,
+    "meta": {
+      "index": 216,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "37881dbd5820",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 203,
+    "meta": {
+      "index": 217,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Networking and Communication (NC)"
+    }
+  },
+  {
+    "id": "270924523adb",
+    "level": 1,
+    "title": "Operating Systems (OS)",
+    "page_number": 205,
+    "meta": {
+      "index": 218,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "operating-systems-os"
+    }
+  },
+  {
+    "id": "ea2b8adbb7f7",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 205,
+    "meta": {
+      "index": 219,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "7177bfa819be",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 205,
+    "meta": {
+      "index": 220,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "3d0213697ec4",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 205,
+    "meta": {
+      "index": 221,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "cde5a3704c67",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 206,
+    "meta": {
+      "index": 222,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "435f22f27b8d",
+    "level": 3,
+    "title": "OS-Purpose: Role and Purpose of Operating Systems",
+    "page_number": 206,
+    "meta": {
+      "index": 223,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-purpose-role-and-purpose-of-operating-systems",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "6ae6b518e621",
+    "level": 3,
+    "title": "OS-Principles: Principles of Operating System",
+    "page_number": 207,
+    "meta": {
+      "index": 224,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-principles-principles-of-operating-system",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "a15fe38fa218",
+    "level": 3,
+    "title": "OS-Concurrency: Concurrency",
+    "page_number": 208,
+    "meta": {
+      "index": 225,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-concurrency-concurrency",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "24f0169e59ac",
+    "level": 3,
+    "title": "OS-Protection: Protection and Safety",
+    "page_number": 209,
+    "meta": {
+      "index": 226,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-protection-protection-and-safety",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "224ba584e913",
+    "level": 3,
+    "title": "OS-Scheduling: Scheduling",
+    "page_number": 209,
+    "meta": {
+      "index": 227,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-scheduling-scheduling",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "1b36b8457c41",
+    "level": 3,
+    "title": "OS-Process: Process Model",
+    "page_number": 210,
+    "meta": {
+      "index": 228,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-process-process-model",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "dc98f998bff3",
+    "level": 3,
+    "title": "OS-Memory: Memory Management",
+    "page_number": 210,
+    "meta": {
+      "index": 229,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-memory-memory-management",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "c0cc69046bd8",
+    "level": 3,
+    "title": "OS-Devices: Device management",
+    "page_number": 211,
+    "meta": {
+      "index": 230,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-devices-device-management",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "ae2fd79dac69",
+    "level": 3,
+    "title": "OS-Files: File Systems API and Implementation",
+    "page_number": 212,
+    "meta": {
+      "index": 231,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-files-file-systems-api-and-implementation",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "934ae8e51d7b",
+    "level": 3,
+    "title": "OS-Advanced-Files: Advanced File systems",
+    "page_number": 212,
+    "meta": {
+      "index": 232,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-advanced-files-advanced-file-systems",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "42a3ea11630a",
+    "level": 3,
+    "title": "OS-Virtualization: Virtualization",
+    "page_number": 213,
+    "meta": {
+      "index": 233,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-virtualization-virtualization",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "3b9ec3aa0aa2",
+    "level": 3,
+    "title": "OS-Real-time: Real-time and Embedded Systems",
+    "page_number": 214,
+    "meta": {
+      "index": 234,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-real-time-real-time-and-embedded-systems",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "d7a9574bc9f6",
+    "level": 3,
+    "title": "OS-Faults: Fault tolerance",
+    "page_number": 214,
+    "meta": {
+      "index": 235,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-faults-fault-tolerance",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "c51c0b62c1e4",
+    "level": 3,
+    "title": "OS-SEP: Society, Ethics, and the Profession",
+    "page_number": 215,
+    "meta": {
+      "index": 236,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-sep-society-ethics-and-the-profession",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "0aa6fabd1b5c",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 215,
+    "meta": {
+      "index": 237,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "448678a16d22",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 215,
+    "meta": {
+      "index": 238,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "0b1c4dcf266d",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 215,
+    "meta": {
+      "index": 239,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "5b017d11ff66",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 216,
+    "meta": {
+      "index": 240,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Operating Systems (OS)"
+    }
+  },
+  {
+    "id": "1ea5c96342e9",
+    "level": 1,
+    "title": "Parallel and Distributed Computing (PDC)",
+    "page_number": 217,
+    "meta": {
+      "index": 241,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "parallel-and-distributed-computing-pdc"
+    }
+  },
+  {
+    "id": "64cde7c27382",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 217,
+    "meta": {
+      "index": 242,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "56abc412e5f2",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 217,
+    "meta": {
+      "index": 243,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "d47e65bd4081",
+    "level": 3,
+    "title": "Overview",
+    "page_number": 217,
+    "meta": {
+      "index": 244,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "overview",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "0d085fd391f7",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 218,
+    "meta": {
+      "index": 245,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "f03dd3d3e1c3",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 219,
+    "meta": {
+      "index": 246,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "752d1ceeb94f",
+    "level": 3,
+    "title": "PDC-Programs: Programs",
+    "page_number": 219,
+    "meta": {
+      "index": 247,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pdc-programs-programs",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "141b2e158365",
+    "level": 3,
+    "title": "PDC-Communication: Communication",
+    "page_number": 220,
+    "meta": {
+      "index": 248,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pdc-communication-communication",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "d05cb0e53308",
+    "level": 3,
+    "title": "PDC-Coordination: Coordination",
+    "page_number": 222,
+    "meta": {
+      "index": 249,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pdc-coordination-coordination",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "1d2b87c6c96c",
+    "level": 3,
+    "title": "PDC-Evaluation: Evaluation",
+    "page_number": 224,
+    "meta": {
+      "index": 250,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pdc-evaluation-evaluation",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "5457629a46e3",
+    "level": 3,
+    "title": "PDC-Algorithms: Algorithms",
+    "page_number": 225,
+    "meta": {
+      "index": 251,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pdc-algorithms-algorithms",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "e170c43ea104",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 227,
+    "meta": {
+      "index": 252,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "6cc3398a1ed0",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 227,
+    "meta": {
+      "index": 253,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "57a261441156",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 227,
+    "meta": {
+      "index": 254,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "b82a56dd50f1",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 228,
+    "meta": {
+      "index": 255,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "d3ef048ff78d",
+    "level": 2,
+    "title": "References",
+    "page_number": 228,
+    "meta": {
+      "index": 256,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Parallel and Distributed Computing (PDC)"
+    }
+  },
+  {
+    "id": "26749b9ab098",
+    "level": 1,
+    "title": "Software Development Fundamentals (SDF)",
+    "page_number": 229,
+    "meta": {
+      "index": 257,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "software-development-fundamentals-sdf"
+    }
+  },
+  {
+    "id": "0eb8654ae6d6",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 229,
+    "meta": {
+      "index": 258,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "388817c2dda3",
+    "level": 3,
+    "title": "Changes since CS 2013",
+    "page_number": 229,
+    "meta": {
+      "index": 259,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs-2013",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "96cd42521c84",
+    "level": 3,
+    "title": "Overview",
+    "page_number": 229,
+    "meta": {
+      "index": 260,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "overview",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "f38735a1b985",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 230,
+    "meta": {
+      "index": 261,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "3b4406394102",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 230,
+    "meta": {
+      "index": 262,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "b0146594c31c",
+    "level": 3,
+    "title": "SDF-Fundamentals: Fundamental Programming Concepts and Practices",
+    "page_number": 230,
+    "meta": {
+      "index": 263,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sdf-fundamentals-fundamental-programming-concepts-and-practices",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "d2a462568488",
+    "level": 3,
+    "title": "SDF-Data-Structures: Fundamental Data Structures",
+    "page_number": 231,
+    "meta": {
+      "index": 264,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sdf-data-structures-fundamental-data-structures",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "0e10fdb58bb1",
+    "level": 3,
+    "title": "SDF-Algorithms: Algorithms",
+    "page_number": 232,
+    "meta": {
+      "index": 265,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sdf-algorithms-algorithms",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "36beda7f4f55",
+    "level": 3,
+    "title": "SDF-Practices: Software Development Practices",
+    "page_number": 232,
+    "meta": {
+      "index": 266,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sdf-practices-software-development-practices",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "00fc14e187c0",
+    "level": 3,
+    "title": "SDF-SEP: Society, Ethics, and the Profession",
+    "page_number": 233,
+    "meta": {
+      "index": 267,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sdf-sep-society-ethics-and-the-profession",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "0227b4a29f00",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 233,
+    "meta": {
+      "index": 268,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "e6db83ba7e83",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 234,
+    "meta": {
+      "index": 269,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "1e4f3d248077",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 234,
+    "meta": {
+      "index": 270,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "4eba884f724c",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 235,
+    "meta": {
+      "index": 271,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Software Development Fundamentals (SDF)"
+    }
+  },
+  {
+    "id": "f38ad1839888",
+    "level": 1,
+    "title": "Software Engineering (SE)",
+    "page_number": 237,
+    "meta": {
+      "index": 272,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "software-engineering-se"
+    }
+  },
+  {
+    "id": "02fcb6ad8c19",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 237,
+    "meta": {
+      "index": 273,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "1de1c9714b96",
+    "level": 3,
+    "title": "Changes since CS 2013",
+    "page_number": 238,
+    "meta": {
+      "index": 274,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs-2013",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "4f9ea2cc43a4",
+    "level": 3,
+    "title": "Overview",
+    "page_number": 238,
+    "meta": {
+      "index": 275,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "overview",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "39c6c9122e45",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 239,
+    "meta": {
+      "index": 276,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "bd58d0653475",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 240,
+    "meta": {
+      "index": 277,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "4f13e92c13ed",
+    "level": 3,
+    "title": "SE-Teamwork: Teamwork",
+    "page_number": 240,
+    "meta": {
+      "index": 278,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-teamwork-teamwork",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "4ae12eefc13a",
+    "level": 3,
+    "title": "SE-Tools: Tools and Environments",
+    "page_number": 241,
+    "meta": {
+      "index": 279,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-tools-tools-and-environments",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "333abb3f64f3",
+    "level": 3,
+    "title": "SE-Requirements: Product Requirements",
+    "page_number": 242,
+    "meta": {
+      "index": 280,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-requirements-product-requirements",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "85faf0151a27",
+    "level": 3,
+    "title": "SE-Design: Software Design",
+    "page_number": 243,
+    "meta": {
+      "index": 281,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-design-software-design",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "af48e718d848",
+    "level": 3,
+    "title": "SE-Construction: Software Construction",
+    "page_number": 245,
+    "meta": {
+      "index": 282,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-construction-software-construction",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "81da174fb194",
+    "level": 3,
+    "title": "SE-Validation: Software Verification and Validation",
+    "page_number": 246,
+    "meta": {
+      "index": 283,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-validation-software-verification-and-validation",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "d826e1d967ca",
+    "level": 3,
+    "title": "SE-Refactoring: Refactoring and Code Evolution",
+    "page_number": 249,
+    "meta": {
+      "index": 284,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-refactoring-refactoring-and-code-evolution",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "30f4dc0e731a",
+    "level": 3,
+    "title": "SE-Reliability: Software Reliability",
+    "page_number": 250,
+    "meta": {
+      "index": 285,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-reliability-software-reliability",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "2a77b6f0d81b",
+    "level": 3,
+    "title": "SE-Formal: Formal Methods",
+    "page_number": 251,
+    "meta": {
+      "index": 286,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-formal-formal-methods",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "1d4a448d468a",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 251,
+    "meta": {
+      "index": 287,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "1a76897af361",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 252,
+    "meta": {
+      "index": 288,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "6fa7b06189d1",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 252,
+    "meta": {
+      "index": 289,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "0be911efe794",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 252,
+    "meta": {
+      "index": 290,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Software Engineering (SE)"
+    }
+  },
+  {
+    "id": "e4b2a7798516",
+    "level": 1,
+    "title": "Security (SEC)",
+    "page_number": 255,
+    "meta": {
+      "index": 291,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "security-sec"
+    }
+  },
+  {
+    "id": "e890bde114d5",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 255,
+    "meta": {
+      "index": 292,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "fd06f6c91dc3",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 255,
+    "meta": {
+      "index": 293,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "aae2907cc376",
+    "level": 3,
+    "title": "Differences between CS2023 Security knowledge area and Cybersecurity",
+    "page_number": 256,
+    "meta": {
+      "index": 294,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "differences-between-cs2023-security-knowledge-area-and-cybersecurity",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "cbfd4b49c1e6",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 257,
+    "meta": {
+      "index": 295,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "3583472b4a6f",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 257,
+    "meta": {
+      "index": 296,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "b06fe4083556",
+    "level": 3,
+    "title": "SEC-Foundations: Foundational Security",
+    "page_number": 257,
+    "meta": {
+      "index": 297,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sec-foundations-foundational-security",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "df9167293792",
+    "level": 3,
+    "title": "SEC-SEP: Society, Ethics, and the Profession",
+    "page_number": 258,
+    "meta": {
+      "index": 298,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sec-sep-society-ethics-and-the-profession",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "10209887b50a",
+    "level": 3,
+    "title": "SEC-Coding: Secure Coding",
+    "page_number": 259,
+    "meta": {
+      "index": 299,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sec-coding-secure-coding",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "d2110e38c10b",
+    "level": 3,
+    "title": "SEC-Crypto: Cryptography",
+    "page_number": 260,
+    "meta": {
+      "index": 300,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sec-crypto-cryptography",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "d21b604a3ed3",
+    "level": 3,
+    "title": "SEC-Engineering: Security Analysis, Design, and Engineering",
+    "page_number": 261,
+    "meta": {
+      "index": 301,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sec-engineering-security-analysis-design-and-engineering",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "90e4acab9bfc",
+    "level": 3,
+    "title": "SEC-Forensics: Digital Forensics",
+    "page_number": 262,
+    "meta": {
+      "index": 302,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sec-forensics-digital-forensics",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "bd1b01b2b941",
+    "level": 3,
+    "title": "SEC-Governance: Security Governance",
+    "page_number": 263,
+    "meta": {
+      "index": 303,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sec-governance-security-governance",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "d69a107c12fb",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 263,
+    "meta": {
+      "index": 304,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "fd6f53dbe1f6",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 264,
+    "meta": {
+      "index": 305,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "c6663de3fb78",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 264,
+    "meta": {
+      "index": 306,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "6099e6f31929",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 267,
+    "meta": {
+      "index": 307,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "f41bfa45ea94",
+    "level": 2,
+    "title": "References",
+    "page_number": 267,
+    "meta": {
+      "index": 308,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Security (SEC)"
+    }
+  },
+  {
+    "id": "796d53a0c6a0",
+    "level": 1,
+    "title": "Society, Ethics, and the Profession (SEP)",
+    "page_number": 269,
+    "meta": {
+      "index": 309,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "society-ethics-and-the-profession-sep"
+    }
+  },
+  {
+    "id": "cebc4afd2dea",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 269,
+    "meta": {
+      "index": 310,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "ab46050f0992",
+    "level": 3,
+    "title": "Changes Since CS2013",
+    "page_number": 272,
+    "meta": {
+      "index": 311,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "bb529108bd6c",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 272,
+    "meta": {
+      "index": 312,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "ff4f5d24cd56",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 273,
+    "meta": {
+      "index": 313,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "c54f1799ceda",
+    "level": 3,
+    "title": "SEP-Context: Social Context",
+    "page_number": 273,
+    "meta": {
+      "index": 314,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-context-social-context",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "bdc7e0fb9a05",
+    "level": 3,
+    "title": "SEP-Ethical-Analysis: Methods for Ethical Analysis",
+    "page_number": 274,
+    "meta": {
+      "index": 315,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-ethical-analysis-methods-for-ethical-analysis",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "270569eae7ca",
+    "level": 3,
+    "title": "SEP-Professional-Ethics: Professional Ethics",
+    "page_number": 276,
+    "meta": {
+      "index": 316,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-professional-ethics-professional-ethics",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "0f1ad21242ea",
+    "level": 3,
+    "title": "SEP-IP: Intellectual Property",
+    "page_number": 277,
+    "meta": {
+      "index": 317,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-ip-intellectual-property",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "c3e3b2dfaa2e",
+    "level": 3,
+    "title": "SEP-Privacy: Privacy and Civil Liberties",
+    "page_number": 278,
+    "meta": {
+      "index": 318,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-privacy-privacy-and-civil-liberties",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "44596c7338c8",
+    "level": 3,
+    "title": "SEP-Communication: Communication",
+    "page_number": 279,
+    "meta": {
+      "index": 319,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-communication-communication",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "48fd4201c66a",
+    "level": 3,
+    "title": "SEP-Sustainability: Sustainability",
+    "page_number": 281,
+    "meta": {
+      "index": 320,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-sustainability-sustainability",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "a851d9e60b44",
+    "level": 3,
+    "title": "SEP-History: Computing History",
+    "page_number": 282,
+    "meta": {
+      "index": 321,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-history-computing-history",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "46f69bf14eb2",
+    "level": 3,
+    "title": "SEP-Economies: Economies of Computing",
+    "page_number": 283,
+    "meta": {
+      "index": 322,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-economies-economies-of-computing",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "328ecd770916",
+    "level": 3,
+    "title": "SEP-Security: Security Policies, Laws and Computer Crimes",
+    "page_number": 284,
+    "meta": {
+      "index": 323,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-security-security-policies-laws-and-computer-crimes",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "dd3e17ef9d3b",
+    "level": 3,
+    "title": "SEP-DEIA: Diversity, Equity, Inclusion, and Accessibility",
+    "page_number": 285,
+    "meta": {
+      "index": 324,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-deia-diversity-equity-inclusion-and-accessibility",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "1b8c3148df6c",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 286,
+    "meta": {
+      "index": 325,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "faa246ed9cb2",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 287,
+    "meta": {
+      "index": 326,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "4c50ede6d16f",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 289,
+    "meta": {
+      "index": 327,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "4df20826f4ec",
+    "level": 2,
+    "title": "References",
+    "page_number": 290,
+    "meta": {
+      "index": 328,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references",
+      "parent_heading": "Society, Ethics, and the Profession (SEP)"
+    }
+  },
+  {
+    "id": "d9c38fef29c1",
+    "level": 1,
+    "title": "Systems Fundamentals (SF)",
+    "page_number": 291,
+    "meta": {
+      "index": 329,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "systems-fundamentals-sf"
+    }
+  },
+  {
+    "id": "ab3eabf9fbcd",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 291,
+    "meta": {
+      "index": 330,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "3718c3d72eba",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 291,
+    "meta": {
+      "index": 331,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "33f67d21dcdd",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 292,
+    "meta": {
+      "index": 332,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "2ce6e09b3b68",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 292,
+    "meta": {
+      "index": 333,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "57ed247f0cab",
+    "level": 3,
+    "title": "SF-Overview: Overview of Computer Systems",
+    "page_number": 292,
+    "meta": {
+      "index": 334,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-overview-overview-of-computer-systems",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "963225a8ff87",
+    "level": 3,
+    "title": "SF-Foundations: Basic Concepts",
+    "page_number": 293,
+    "meta": {
+      "index": 335,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-foundations-basic-concepts",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "1bc87eba29bc",
+    "level": 3,
+    "title": "SF-Resource: Resource Management",
+    "page_number": 294,
+    "meta": {
+      "index": 336,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-resource-resource-management",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "283a5c9b84b6",
+    "level": 3,
+    "title": "SF-Performance: System Performance",
+    "page_number": 294,
+    "meta": {
+      "index": 337,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-performance-system-performance",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "fc55a3c78020",
+    "level": 3,
+    "title": "SF-Evaluation: Performance Evaluation",
+    "page_number": 295,
+    "meta": {
+      "index": 338,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-evaluation-performance-evaluation",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "81484efb6ca6",
+    "level": 3,
+    "title": "SF-Reliability: System Reliability",
+    "page_number": 296,
+    "meta": {
+      "index": 339,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-reliability-system-reliability",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "c1bedd0db11c",
+    "level": 3,
+    "title": "SF-Security: System Security",
+    "page_number": 297,
+    "meta": {
+      "index": 340,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-security-system-security",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "8ef7f156e258",
+    "level": 3,
+    "title": "SF-Design: System Design",
+    "page_number": 297,
+    "meta": {
+      "index": 341,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-design-system-design",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "c1f3c45449f0",
+    "level": 3,
+    "title": "SF-SEP: Society, Ethics, and the Profession",
+    "page_number": 297,
+    "meta": {
+      "index": 342,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-sep-society-ethics-and-the-profession",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "d7b6d9ed0b91",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 298,
+    "meta": {
+      "index": 343,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "447d45db090e",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 298,
+    "meta": {
+      "index": 344,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "9167d36b4e97",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 298,
+    "meta": {
+      "index": 345,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "f87ef12ec9ef",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 299,
+    "meta": {
+      "index": 346,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Systems Fundamentals (SF)"
+    }
+  },
+  {
+    "id": "937a86aa7e1e",
+    "level": 1,
+    "title": "Specialized Platform Development (SPD)",
+    "page_number": 301,
+    "meta": {
+      "index": 347,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "specialized-platform-development-spd"
+    }
+  },
+  {
+    "id": "ac500f871560",
+    "level": 2,
+    "title": "Preamble",
+    "page_number": 301,
+    "meta": {
+      "index": 348,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "preamble",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "1e5d8d7f8558",
+    "level": 3,
+    "title": "Changes since CS2013",
+    "page_number": 301,
+    "meta": {
+      "index": 349,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "changes-since-cs2013",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "e06a4958a921",
+    "level": 2,
+    "title": "Core Hours",
+    "page_number": 301,
+    "meta": {
+      "index": 350,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-hours",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "652288e122c9",
+    "level": 2,
+    "title": "Knowledge Units",
+    "page_number": 302,
+    "meta": {
+      "index": 351,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "9f8b4cc31983",
+    "level": 3,
+    "title": "SPD-Common: Common Aspects/Shared Concerns",
+    "page_number": 302,
+    "meta": {
+      "index": 352,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-common-common-aspects-shared-concerns",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "fb946155d218",
+    "level": 3,
+    "title": "SPD-Web: Web Platforms",
+    "page_number": 303,
+    "meta": {
+      "index": 353,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-web-web-platforms",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "f7c29825dbb1",
+    "level": 3,
+    "title": "SPD-Mobile: Mobile Platforms",
+    "page_number": 303,
+    "meta": {
+      "index": 354,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-mobile-mobile-platforms",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "b1279c38762e",
+    "level": 3,
+    "title": "SPD-Robot: Robot Platforms",
+    "page_number": 304,
+    "meta": {
+      "index": 355,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-robot-robot-platforms",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "4fbf32ba9a55",
+    "level": 3,
+    "title": "SPD-Embedded: Embedded Platforms",
+    "page_number": 305,
+    "meta": {
+      "index": 356,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-embedded-embedded-platforms",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "3ffda874b3b5",
+    "level": 3,
+    "title": "SPD-Game: Game Platforms",
+    "page_number": 306,
+    "meta": {
+      "index": 357,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-game-game-platforms",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "6e0ee39f4e0a",
+    "level": 3,
+    "title": "SPD-Interactive: Interactive Computing Platforms",
+    "page_number": 308,
+    "meta": {
+      "index": 358,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-interactive-interactive-computing-platforms",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "11cec4b9d99b",
+    "level": 3,
+    "title": "SPD-SEP/Mobile",
+    "page_number": 309,
+    "meta": {
+      "index": 359,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-sep-mobile",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "ecea09ddf0d7",
+    "level": 3,
+    "title": "SPD-SEP/Web",
+    "page_number": 310,
+    "meta": {
+      "index": 360,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-sep-web",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "c9fc9f1a6b29",
+    "level": 3,
+    "title": "SPD-SEP/Game",
+    "page_number": 310,
+    "meta": {
+      "index": 361,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-sep-game",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "7cf9c9c3f08f",
+    "level": 3,
+    "title": "SPD-SEP/Robotics",
+    "page_number": 311,
+    "meta": {
+      "index": 362,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-sep-robotics",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "ef6e71654f6a",
+    "level": 3,
+    "title": "SPD-SEP/Interactive",
+    "page_number": 312,
+    "meta": {
+      "index": 363,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-sep-interactive",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "3f18386b0c84",
+    "level": 2,
+    "title": "Professional Dispositions",
+    "page_number": 312,
+    "meta": {
+      "index": 364,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "professional-dispositions",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "16f6e43050d0",
+    "level": 2,
+    "title": "Mathematics Requirements",
+    "page_number": 312,
+    "meta": {
+      "index": 365,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematics-requirements",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "4b07da011618",
+    "level": 2,
+    "title": "Course Packaging Suggestions",
+    "page_number": 313,
+    "meta": {
+      "index": 366,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-packaging-suggestions",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "ac39f670e44e",
+    "level": 2,
+    "title": "Committee",
+    "page_number": 315,
+    "meta": {
+      "index": 367,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "committee",
+      "parent_heading": "Specialized Platform Development (SPD)"
+    }
+  },
+  {
+    "id": "96a0dcfbc8d7",
+    "level": 1,
+    "title": "Core Topics Table",
+    "page_number": 317,
+    "meta": {
+      "index": 368,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "core-topics-table"
+    }
+  },
+  {
+    "id": "737586ad8748",
+    "level": 2,
+    "title": "Software Competency Area",
+    "page_number": 317,
+    "meta": {
+      "index": 369,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "software-competency-area",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "3c4443a839dd",
+    "level": 3,
+    "title": "SDF: Software Development Fundamentals",
+    "page_number": 317,
+    "meta": {
+      "index": 370,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sdf-software-development-fundamentals",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "62adcf0b540d",
+    "level": 3,
+    "title": "FPL: Foundations of Programming Languages",
+    "page_number": 322,
+    "meta": {
+      "index": 371,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "fpl-foundations-of-programming-languages",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "9ecf901d131f",
+    "level": 3,
+    "title": "SE: Software Engineering",
+    "page_number": 328,
+    "meta": {
+      "index": 372,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "se-software-engineering",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "8a8ff76a9a5e",
+    "level": 2,
+    "title": "Systems Competency Area",
+    "page_number": 330,
+    "meta": {
+      "index": 373,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "systems-competency-area",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "2fcea8ce0493",
+    "level": 3,
+    "title": "AR: Architecture and Organization",
+    "page_number": 331,
+    "meta": {
+      "index": 374,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ar-architecture-and-organization",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "97e930d8764e",
+    "level": 3,
+    "title": "OS: Operating Systems",
+    "page_number": 335,
+    "meta": {
+      "index": 375,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "os-operating-systems",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "3e6dddba00c2",
+    "level": 3,
+    "title": "NC: Networking and Communication",
+    "page_number": 339,
+    "meta": {
+      "index": 376,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "nc-networking-and-communication",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "a890ee4d688f",
+    "level": 3,
+    "title": "PDC: Parallel and Distributed Computing",
+    "page_number": 342,
+    "meta": {
+      "index": 377,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pdc-parallel-and-distributed-computing",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "07f6d0b7ecfc",
+    "level": 3,
+    "title": "SF: Systems Fundamentals",
+    "page_number": 350,
+    "meta": {
+      "index": 378,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sf-systems-fundamentals",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "92d0218b5fae",
+    "level": 3,
+    "title": "DM: Data Management",
+    "page_number": 352,
+    "meta": {
+      "index": 379,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "dm-data-management",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "f0cbc8df731b",
+    "level": 3,
+    "title": "SEC: Security",
+    "page_number": 356,
+    "meta": {
+      "index": 380,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sec-security",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "a61b1a812c89",
+    "level": 2,
+    "title": "Applications Competency Area",
+    "page_number": 360,
+    "meta": {
+      "index": 381,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "applications-competency-area",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "64fe72cec2e7",
+    "level": 3,
+    "title": "AI: Artificial Intelligence",
+    "page_number": 361,
+    "meta": {
+      "index": 382,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ai-artificial-intelligence",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "62737810928f",
+    "level": 3,
+    "title": "GIT: Graphics and Interactive Techniques",
+    "page_number": 367,
+    "meta": {
+      "index": 383,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "git-graphics-and-interactive-techniques",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "78f5a9c9cb1a",
+    "level": 3,
+    "title": "HCI: Human-Computer Interaction",
+    "page_number": 370,
+    "meta": {
+      "index": 384,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "hci-human-computer-interaction",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "0062f359bcb1",
+    "level": 3,
+    "title": "SPD: Specialized Platform Development",
+    "page_number": 375,
+    "meta": {
+      "index": 385,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "spd-specialized-platform-development",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "25ca20a22202",
+    "level": 2,
+    "title": "Crosscutting Core Topics",
+    "page_number": 380,
+    "meta": {
+      "index": 386,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "crosscutting-core-topics",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "1b957a02b779",
+    "level": 3,
+    "title": "SEP: Society, Ethics, and the Profession",
+    "page_number": 380,
+    "meta": {
+      "index": 387,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sep-society-ethics-and-the-profession",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "4729cf5d1702",
+    "level": 3,
+    "title": "MSF: Mathematical and Statistical Foundations",
+    "page_number": 387,
+    "meta": {
+      "index": 388,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "msf-mathematical-and-statistical-foundations",
+      "parent_heading": "Core Topics Table"
+    }
+  },
+  {
+    "id": "aac0503b8e90",
+    "level": 1,
+    "title": "Curricular Packaging",
+    "page_number": 391,
+    "meta": {
+      "index": 389,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "curricular-packaging"
+    }
+  },
+  {
+    "id": "7530aafed507",
+    "level": 2,
+    "title": "8 Course Model",
+    "page_number": 391,
+    "meta": {
+      "index": 390,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "8-course-model",
+      "parent_heading": "Curricular Packaging"
+    }
+  },
+  {
+    "id": "4c4f2ff996e3",
+    "level": 2,
+    "title": "10 Course Model",
+    "page_number": 391,
+    "meta": {
+      "index": 391,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "10-course-model",
+      "parent_heading": "Curricular Packaging"
+    }
+  },
+  {
+    "id": "0fd9322e7be0",
+    "level": 2,
+    "title": "12 Course Model",
+    "page_number": 392,
+    "meta": {
+      "index": 392,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "12-course-model",
+      "parent_heading": "Curricular Packaging"
+    }
+  },
+  {
+    "id": "8309b1d929b5",
+    "level": 2,
+    "title": "16 Course Model",
+    "page_number": 392,
+    "meta": {
+      "index": 393,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "16-course-model",
+      "parent_heading": "Curricular Packaging"
+    }
+  },
+  {
+    "id": "170fbbcc566f",
+    "level": 3,
+    "title": "Model 1:",
+    "page_number": 392,
+    "meta": {
+      "index": 394,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "model-1",
+      "parent_heading": "Curricular Packaging"
+    }
+  },
+  {
+    "id": "ccad59b75b57",
+    "level": 3,
+    "title": "Model 2:",
+    "page_number": 393,
+    "meta": {
+      "index": 395,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "model-2",
+      "parent_heading": "Curricular Packaging"
+    }
+  },
+  {
+    "id": "7227c6e8a9d9",
+    "level": 3,
+    "title": "Model 3:",
+    "page_number": 394,
+    "meta": {
+      "index": 396,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "model-3",
+      "parent_heading": "Curricular Packaging"
+    }
+  },
+  {
+    "id": "538dc77f7018",
+    "level": 1,
+    "title": "Competency Framework Examples",
+    "page_number": 395,
+    "meta": {
+      "index": 397,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "competency-framework-examples"
+    }
+  },
+  {
+    "id": "cffedfaa0ea0",
+    "level": 2,
+    "title": "Sample Tasks",
+    "page_number": 395,
+    "meta": {
+      "index": 398,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sample-tasks",
+      "parent_heading": "Competency Framework Examples"
+    }
+  },
+  {
+    "id": "9ab9af430a04",
+    "level": 3,
+    "title": "Software Competency Area",
+    "page_number": 395,
+    "meta": {
+      "index": 399,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "software-competency-area",
+      "parent_heading": "Competency Framework Examples"
+    }
+  },
+  {
+    "id": "b0f77716e637",
+    "level": 3,
+    "title": "Systems Competency Area",
+    "page_number": 396,
+    "meta": {
+      "index": 400,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "systems-competency-area",
+      "parent_heading": "Competency Framework Examples"
+    }
+  },
+  {
+    "id": "4ed86ec94fe6",
+    "level": 3,
+    "title": "Applications Competency Area",
+    "page_number": 397,
+    "meta": {
+      "index": 401,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "applications-competency-area",
+      "parent_heading": "Competency Framework Examples"
+    }
+  },
+  {
+    "id": "bf50dbd64ddc",
+    "level": 2,
+    "title": "Sample Competency Specifications",
+    "page_number": 398,
+    "meta": {
+      "index": 402,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sample-competency-specifications",
+      "parent_heading": "Competency Framework Examples"
+    }
+  },
+  {
+    "id": "cfd20129f57b",
+    "level": 3,
+    "title": "Software Competency Area",
+    "page_number": 398,
+    "meta": {
+      "index": 403,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "software-competency-area",
+      "parent_heading": "Competency Framework Examples"
+    }
+  },
+  {
+    "id": "dd5e669a1156",
+    "level": 3,
+    "title": "Systems Competency Area",
+    "page_number": 400,
+    "meta": {
+      "index": 404,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "systems-competency-area",
+      "parent_heading": "Competency Framework Examples"
+    }
+  },
+  {
+    "id": "5b2b020ddd8e",
+    "level": 3,
+    "title": "Applications Competency Area",
+    "page_number": 403,
+    "meta": {
+      "index": 405,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "applications-competency-area",
+      "parent_heading": "Competency Framework Examples"
+    }
+  },
+  {
+    "id": "c364e5bd038c",
+    "level": 1,
+    "title": "Pedagogy and Practices",
+    "page_number": 407,
+    "meta": {
+      "index": 406,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pedagogy-and-practices"
+    }
+  },
+  {
+    "id": "b08757fa32e1",
+    "level": 1,
+    "title": "Pedagogical Considerations",
+    "page_number": 409,
+    "meta": {
+      "index": 407,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pedagogical-considerations"
+    }
+  },
+  {
+    "id": "ebc7befbff43",
+    "level": 2,
+    "title": "Introduction",
+    "page_number": 409,
+    "meta": {
+      "index": 408,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "introduction",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "ca3b17aeceb2",
+    "level": 2,
+    "title": "Curriculum-Wide Considerations",
+    "page_number": 409,
+    "meta": {
+      "index": 409,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "curriculum-wide-considerations",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "5655a0daf461",
+    "level": 2,
+    "title": "Considerations by Knowledge Area",
+    "page_number": 410,
+    "meta": {
+      "index": 410,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "considerations-by-knowledge-area",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "b7e762221e22",
+    "level": 3,
+    "title": "Artificial Intelligence (AI)",
+    "page_number": 410,
+    "meta": {
+      "index": 411,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "artificial-intelligence-ai",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "5c781ca56c56",
+    "level": 3,
+    "title": "Algorithmic Foundations (AL)",
+    "page_number": 410,
+    "meta": {
+      "index": 412,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "algorithmic-foundations-al",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "4808b8443042",
+    "level": 3,
+    "title": "Architecture and Organization (AR)",
+    "page_number": 410,
+    "meta": {
+      "index": 413,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "architecture-and-organization-ar",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "c778a7964dc4",
+    "level": 3,
+    "title": "Data Management (DM)",
+    "page_number": 410,
+    "meta": {
+      "index": 414,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "data-management-dm",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "b0ca95bc20d6",
+    "level": 3,
+    "title": "Foundations of Programming Languages (FPL)",
+    "page_number": 411,
+    "meta": {
+      "index": 415,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "foundations-of-programming-languages-fpl",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "e7df348e1bf9",
+    "level": 3,
+    "title": "Mathematical and Statistical Foundations (MSF)",
+    "page_number": 411,
+    "meta": {
+      "index": 416,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "mathematical-and-statistical-foundations-msf",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "00010a9f3d3c",
+    "level": 3,
+    "title": "Networking and Communication (NC)",
+    "page_number": 412,
+    "meta": {
+      "index": 417,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "networking-and-communication-nc",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "350fd8334aa3",
+    "level": 3,
+    "title": "Operating Systems (OS)",
+    "page_number": 412,
+    "meta": {
+      "index": 418,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "operating-systems-os",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "a25c94bb7333",
+    "level": 3,
+    "title": "Parallel and Distributed Computing (PDC)",
+    "page_number": 412,
+    "meta": {
+      "index": 419,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "parallel-and-distributed-computing-pdc",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "dd19d3855728",
+    "level": 3,
+    "title": "Software Development Fundamentals (SDF)",
+    "page_number": 412,
+    "meta": {
+      "index": 420,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "software-development-fundamentals-sdf",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "fe3dd316996e",
+    "level": 3,
+    "title": "Software Engineering (SE)",
+    "page_number": 413,
+    "meta": {
+      "index": 421,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "software-engineering-se",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "6cab5305a70c",
+    "level": 3,
+    "title": "Security (SEC)",
+    "page_number": 413,
+    "meta": {
+      "index": 422,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "security-sec",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "e9b4912fe0aa",
+    "level": 3,
+    "title": "Society, Ethics, and the Profession (SEP)",
+    "page_number": 413,
+    "meta": {
+      "index": 423,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "society-ethics-and-the-profession-sep",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "f4eb1735e7bc",
+    "level": 3,
+    "title": "Specialized Platform Development (SPD)",
+    "page_number": 414,
+    "meta": {
+      "index": 424,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "specialized-platform-development-spd",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "a347d72437fe",
+    "level": 3,
+    "title": "Systems Fundamentals (SF)",
+    "page_number": 414,
+    "meta": {
+      "index": 425,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "systems-fundamentals-sf",
+      "parent_heading": "Pedagogical Considerations"
+    }
+  },
+  {
+    "id": "d95240410068",
+    "level": 1,
+    "title": "Curricular Practices in Computer Science",
+    "page_number": 417,
+    "meta": {
+      "index": 426,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "curricular-practices-in-computer-science"
+    }
+  },
+  {
+    "id": "87c2267cea09",
+    "level": 3,
+    "title": "Introduction",
+    "page_number": 417,
+    "meta": {
+      "index": 427,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "introduction",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "7e416bf0b147",
+    "level": 3,
+    "title": "Social Aspects",
+    "page_number": 417,
+    "meta": {
+      "index": 428,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "social-aspects",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "e93220167b53",
+    "level": 3,
+    "title": "Pedagogical Considerations",
+    "page_number": 418,
+    "meta": {
+      "index": 429,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "pedagogical-considerations",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "ba52e1a9762e",
+    "level": 3,
+    "title": "Educational Practices",
+    "page_number": 419,
+    "meta": {
+      "index": 430,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "educational-practices",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "c1705650fb4a",
+    "level": 2,
+    "title": "Teaching about Accessibility in Computer Science Education",
+    "page_number": 420,
+    "meta": {
+      "index": 431,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "teaching-about-accessibility-in-computer-science-education",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "f3e98c071243",
+    "level": 2,
+    "title": "Computing for Social Good in Education",
+    "page_number": 422,
+    "meta": {
+      "index": 432,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "computing-for-social-good-in-education",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "759980052f76",
+    "level": 2,
+    "title": "Multiple Approaches for Teaching Responsible Computing",
+    "page_number": 424,
+    "meta": {
+      "index": 433,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "multiple-approaches-for-teaching-responsible-computing",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "101dbd9eb1a0",
+    "level": 2,
+    "title": "Making ethics at home in Global CS Education: Provoking stories from the Souths",
+    "page_number": 429,
+    "meta": {
+      "index": 434,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "making-ethics-at-home-in-global-cs-education-provoking-stories-from-the-souths",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "093889418c8c",
+    "level": 2,
+    "title": "CS + X: Approaches, Challenges, and Opportunities in Developing Interdisciplinary Computing",
+    "page_number": 18,
+    "meta": {
+      "index": 435,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "cs--x-approaches-challenges-and-opportunities-in-developing-interdisciplinary-computing",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "b4920413b7bf",
+    "level": 2,
+    "title": "Curricula",
+    "page_number": 431,
+    "meta": {
+      "index": 436,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "curricula",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "50b3fd3c5740",
+    "level": 2,
+    "title": "The Role of Formal Methods in Computer Science Education",
+    "page_number": 433,
+    "meta": {
+      "index": 437,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-role-of-formal-methods-in-computer-science-education",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "c423df60d7b2",
+    "level": 2,
+    "title": "Quantum Computing Education: A Curricular Perspective",
+    "page_number": 435,
+    "meta": {
+      "index": 438,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "quantum-computing-education-a-curricular-perspective",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "ca242e7e0c0d",
+    "level": 2,
+    "title": "Generative AI in Introductory Programming",
+    "page_number": 438,
+    "meta": {
+      "index": 439,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "generative-ai-in-introductory-programming",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "a99c1f9b38ee",
+    "level": 2,
+    "title": "The 2022 Undergraduate Database Course in Computer Science: What to Teach?",
+    "page_number": 441,
+    "meta": {
+      "index": 440,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-2022-undergraduate-database-course-in-computer-science-what-to-teach",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "6c8cfb95e1b6",
+    "level": 2,
+    "title": "Computer Science Curriculum Guidelines: A New Liberal Arts Perspective",
+    "page_number": 443,
+    "meta": {
+      "index": 441,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "computer-science-curriculum-guidelines-a-new-liberal-arts-perspective",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "cc66769458b9",
+    "level": 2,
+    "title": "Computer Science Education in Community Colleges",
+    "page_number": 446,
+    "meta": {
+      "index": 442,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "computer-science-education-in-community-colleges",
+      "parent_heading": "Curricular Practices in Computer Science"
+    }
+  },
+  {
+    "id": "43c3b650b612",
+    "level": 1,
+    "title": "Generative AI and the Curriculum",
+    "page_number": 449,
+    "meta": {
+      "index": 443,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "generative-ai-and-the-curriculum"
+    }
+  },
+  {
+    "id": "4fade58598b1",
+    "level": 2,
+    "title": "Introduction",
+    "page_number": 449,
+    "meta": {
+      "index": 444,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "introduction",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "87e2e264dffe",
+    "level": 2,
+    "title": "Implications by Competency Area - Software",
+    "page_number": 449,
+    "meta": {
+      "index": 445,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "implications-by-competency-area-software",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "0d3ae2d8578b",
+    "level": 3,
+    "title": "Algorithmic Foundations (AL)",
+    "page_number": 449,
+    "meta": {
+      "index": 446,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "algorithmic-foundations-al",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "ec3bd47a971f",
+    "level": 3,
+    "title": "Foundations of Programming Languages (FPL)",
+    "page_number": 449,
+    "meta": {
+      "index": 447,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "foundations-of-programming-languages-fpl",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "72a2708c4f78",
+    "level": 3,
+    "title": "Software Engineering (SE)",
+    "page_number": 450,
+    "meta": {
+      "index": 448,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "software-engineering-se",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "64a246d5254d",
+    "level": 2,
+    "title": "Implications by Competency Area - Systems",
+    "page_number": 450,
+    "meta": {
+      "index": 449,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "implications-by-competency-area-systems",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "d59cb225193e",
+    "level": 3,
+    "title": "Architecture and Organization (AR)",
+    "page_number": 450,
+    "meta": {
+      "index": 450,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "architecture-and-organization-ar",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "aec580b9a8c3",
+    "level": 3,
+    "title": "Data Management (DM)",
+    "page_number": 450,
+    "meta": {
+      "index": 451,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "data-management-dm",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "4dbc9a06c521",
+    "level": 3,
+    "title": "Networking and Communication (NC)",
+    "page_number": 450,
+    "meta": {
+      "index": 452,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "networking-and-communication-nc",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "886254a86cd5",
+    "level": 3,
+    "title": "Operating Systems (OS)",
+    "page_number": 451,
+    "meta": {
+      "index": 453,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "operating-systems-os",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "01bb88066c41",
+    "level": 3,
+    "title": "Systems Fundamentals (SF)",
+    "page_number": 451,
+    "meta": {
+      "index": 454,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "systems-fundamentals-sf",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "e59d0928d113",
+    "level": 3,
+    "title": "Security (SEC)",
+    "page_number": 451,
+    "meta": {
+      "index": 455,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "security-sec",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "fd8cab2a33c8",
+    "level": 2,
+    "title": "Implications by Competency Area - Applications",
+    "page_number": 451,
+    "meta": {
+      "index": 456,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "implications-by-competency-area-applications",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "29b53997530c",
+    "level": 3,
+    "title": "Artificial Intelligence (AI)",
+    "page_number": 451,
+    "meta": {
+      "index": 457,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "artificial-intelligence-ai",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "195d282c3f24",
+    "level": 3,
+    "title": "Graphics and Interactive Techniques (GIT)",
+    "page_number": 451,
+    "meta": {
+      "index": 458,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "graphics-and-interactive-techniques-git",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "4076cd792851",
+    "level": 3,
+    "title": "Human-Computer Interaction (HCI)",
+    "page_number": 452,
+    "meta": {
+      "index": 459,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "human-computer-interaction-hci",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "61740e5ba77d",
+    "level": 3,
+    "title": "Specialized Platform Development (SPD)",
+    "page_number": 452,
+    "meta": {
+      "index": 460,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "specialized-platform-development-spd",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "e28902ae3674",
+    "level": 2,
+    "title": "Implications for Crosscutting Areas",
+    "page_number": 452,
+    "meta": {
+      "index": 461,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "implications-for-crosscutting-areas",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "34d2b352c73c",
+    "level": 3,
+    "title": "Society, Ethics, and the Profession (SEP)",
+    "page_number": 453,
+    "meta": {
+      "index": 462,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "society-ethics-and-the-profession-sep",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "66f29e4730a2",
+    "level": 2,
+    "title": "Implications for the Curriculum",
+    "page_number": 453,
+    "meta": {
+      "index": 463,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "implications-for-the-curriculum",
+      "parent_heading": "Generative AI and the Curriculum"
+    }
+  },
+  {
+    "id": "fa6651cf699d",
+    "level": 1,
+    "title": "Acknowledgments",
+    "page_number": 455,
+    "meta": {
+      "index": 464,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "acknowledgments"
+    }
+  },
+  {
+    "id": "341cc4bd1e95",
+    "level": 2,
+    "title": "Organization",
+    "page_number": 455,
+    "meta": {
+      "index": 465,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "organization",
+      "parent_heading": "Acknowledgments"
+    }
+  },
+  {
+    "id": "2673aa6142c8",
+    "level": 2,
+    "title": "Reviewers",
+    "page_number": 455,
+    "meta": {
+      "index": 466,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "reviewers",
+      "parent_heading": "Acknowledgments"
+    }
+  },
+  {
+    "id": "4379a6e091b4",
+    "level": 2,
+    "title": "Contributors",
+    "page_number": 457,
+    "meta": {
+      "index": 467,
+      "curriculum": "computer-science",
+      "year_version": "2023",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "contributors",
+      "parent_heading": "Acknowledgments"
+    }
+  }
+]

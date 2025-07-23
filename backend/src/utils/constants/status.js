@@ -74,6 +74,7 @@ const Status = Object.freeze({
         UNDER_REVIEW: 'under-review',
         FINALIZED: 'finalized',
         APPROVED: 'approved',
+        RECOMMENDATION_SUBMITTED: 'recommendation-submitted',
         REVIEW_ASSIGNED: 'review-assigned',
         REVIEW_IN_PROGRESS: 'review-in-progress',
         AWAITING_FEEDBACK: 'awaiting-feedback',

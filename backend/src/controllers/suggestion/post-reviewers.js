@@ -14,10 +14,10 @@ const postAssignReviewers = async (req, res) => {
         logger.start('POST Suggestion Reviewers')
 
         const { id } = req.params
-        const { notes, message, reviewers } = req.body
+        const {  reviewers } = req.body
 
         logger.info("suggestion.post.reviewers.started", { suggestionId: id, numAssigned: reviewers.length })
-        await assignReviewersToSuggestion(id, notes, message, reviewers );
+        await assignReviewersToSuggestion(id,  reviewers );
 
         logger.success("suggestion.post.reviewers.completed");
         logger.end('POST Suggestion Reviewers')

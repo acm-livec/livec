@@ -1,0 +1,16 @@
+[
+  {
+    "id": "EIC-0001",
+    "name": "Bob Ross",
+    "email": "bobross@email.com",
+    "password": "password",
+    "role": "editor-in-chief",
+    "discipline": "computer-science",
+    "assignedAssociateEditors": [
+      "AE-0001",
+      "AE-0002"
+    ],
+    "assignedSuggestions": [
+    ]
+  }
+]

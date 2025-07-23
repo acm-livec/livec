@@ -1,9 +1,23 @@
 import { API } from '@api/client.js';
 import { logger } from '@utils/logger'
 
-const log = logger.create('postSuggestion.js');
+	const log = logger.create('postSuggestion.js');
 
-export const postSuggestion = async (userId, title, suggestion, discipline, sectionId) => {
+	/**
+	 * Creates a new suggestion.
+	 *
+	 * @async
+	 * @function postSuggestion
+	 * @param {string} userId - The ID of the user submitting the suggestion.
+	 * @param {string} title - The title of the suggestion.
+	 * @param {string} suggestion - The content of the suggestion.
+	 * @param {string} discipline - The discipline/category of the suggestion.
+	 * @param {string} sectionId - The ID of the section to which the suggestion belongs.
+	 * @returns {Promise<Object>} A promise that resolves to the created suggestion data.
+	 * @route POST: /suggestion
+	 * @file backend/src/routes/suggestion.routes.js
+	 */
+	export const postSuggestion = async (userId, title, suggestion, discipline, sectionId) => {
     try {
 
         console.log({

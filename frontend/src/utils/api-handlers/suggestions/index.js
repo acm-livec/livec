@@ -8,4 +8,5 @@ export * from './post-rejection'
 export * from './post-suggestion'
 export * from './post-reviewers'
 export * from './post-deferral'
+export * from './post-recommendation'
 

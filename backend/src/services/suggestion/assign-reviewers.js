@@ -9,7 +9,7 @@ const logger = require('@logger').addSource({
 });
 
 
-const assignReviewersToSuggestion = async (suggestionId, notes, message, reviewers) => {
+const assignReviewersToSuggestion = async (suggestionId, reviewers) => {
 
     try {
 
@@ -26,7 +26,7 @@ const assignReviewersToSuggestion = async (suggestionId, notes, message, reviewe
 
         logger.debug("suggestion.assign_reviewers.db.inserting")
 
-        suggestionToAddReviewers.assignReviewers(notes, message, reviewers)
+        suggestionToAddReviewers.assignReviewers( reviewers)
         await Suggestions.update(suggestionToAddReviewers)
 
         logger.debug("suggestion.assign_reviewers.db.inserted")

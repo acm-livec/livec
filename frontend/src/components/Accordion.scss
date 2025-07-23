@@ -19,7 +19,8 @@
 .accordion-title {
 	list-style: none;
     padding: 1rem 0.5rem;
-
+	display: flex;
+	justify-content: space-between;
 	/* padding: 1rem; */
 	cursor: pointer;
 	/* background-color: #f8f1f1; */

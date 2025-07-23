@@ -77,8 +77,8 @@ export const Status = Object.freeze({
         AWAITING_FEEDBACK: 'awaiting-feedback',
         READY_FOR_DISCUSSION: 'ready-for-discussion',
         CHANGE_REQUEST: 'change-request',
-
         AWAITING_CHANGE_REQUEST: 'awaiting-change-request',
+    RECOMMENDATION_SUBMITTED: 'recommendation-submitted'
     },
 
     System: {
@@ -116,11 +116,14 @@ export const statusMap = {
     // === Private ===
     [Status.Private.AWAITING_INITIAL_RESPONSE]: 'status--info',
     [Status.Private.AWAITING_RESPONSE]: 'status--info',
+    [Status.Private.AWAITING_REVIEWER]: 'status--info',
+    [Status.Private.AWAITING_FEEDBACK]: 'status--info',
     [Status.Private.REVIEWING]: 'status--active',
     [Status.Private.FINALIZED]: 'status--external',
     [Status.Private.APPROVED]: 'status--success',
       [Status.Private.CHANGE_REQUEST]: 'status--info',
       [Status.Private.READY_FOR_DISCUSSION]: 'status--success',
+      [Status.Private.RECOMMENDATION_SUBMITTED]: 'status--success',
       [Status.Private.AWAITING_CHANGE_REQUEST]: 'status--active',
     //   [Status.Private.AWAITING_FEEDBACK]: 'status--info',
 

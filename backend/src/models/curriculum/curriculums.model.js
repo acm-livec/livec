@@ -1,7 +1,9 @@
 const db = require('@database/database');
-const Curriculum = require('./curriculum.model');
 const flattenSections = require('@utils/flatten.js');
-const Suggestion = require('../suggestion/suggestion.model');
+const Curriculum = require('./curriculum.model');
+
+
+
 class Curriculums {
     static dbRef = db.curriculums;
 
@@ -28,6 +30,15 @@ class Curriculums {
 
         const entry = flattenSections(this.dbRef.data).find(s => s.id === id);
         return entry ? new Curriculum(entry) : null;
+    }
+    /**
+     * Finds a curriculum by its unique ID.
+     *
+     * @param {string} c - The unique identifier of the curriculum.
+     * @returns {Promise<Curriculum|null>} The Curriculum instance if found, otherwise null.
+     */
+    static async findByCurriculum(c) {
+        return new Curriculum(c)
     }
 
 

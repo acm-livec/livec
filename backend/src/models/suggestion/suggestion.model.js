@@ -47,6 +47,13 @@ class Suggestion {
         }]
     }
 
+    toPublic() {
+        return {
+            title: this.title,
+            text: this.text,
+            timeCreated: this.time_created,
+        }
+    }
 
 
 
@@ -80,6 +87,26 @@ class Suggestion {
             assignedAssociateEditor: this.assigned_associate_editor,
             assignedEditorInChief: this.assigned_editor_in_chief || 'none',
             assignedReviewers: this.assigned_reviewers || [],
+            documentation: this.documentation,
+            history: this.history,
+            system: {
+                status: this.status.system
+            }
+        }
+    }
+    toReviewer() {
+        return {
+            id: this.id,
+            title: this.title,
+            text: this.text,
+            timeCreated: this.time_created,
+            status: this.status.for_reviewer,
+            sectionId: this.section_id,
+            discipline: this.discipline,
+            submitterId: this.submitter_id,
+            meta: this.meta,
+            assignedAssociateEditor: this.assigned_associate_editor,
+            assignedEditorInChief: this.assigned_editor_in_chief || 'none',
             documentation: this.documentation,
             history: this.history,
             system: {
@@ -180,6 +207,29 @@ class Suggestion {
                 'for_editor_in_chief': Status.Private.AWAITING_CHANGE_REQUEST,
                 'system': Status.System.PENDING
             }
+                break
+            case Actions.DEFERED_TO_REVIEWER: this.status = {
+                'for_member': Status.Public.UNDER_REVIEW,
+                'for_associate_editor': Status.Private.AWAITING_REVIEWER,
+                'for_reviewer': Status.Private.AWAITING_RESPONSE,
+                'system': Status.System.DEFERRED
+            }
+                break
+
+            case Actions.ASSIGNED_REVIEWERS: this.status = {
+                'for_member': Status.Public.UNDER_REVIEW,
+                'for_associate_editor': Status.Private.AWAITING_REVIEWER,
+                'for_reviewer': Status.Private.AWAITING_RESPONSE,
+                'system': Status.System.ON_HOLD
+            }
+                break
+
+            case Actions.RECOMMENDATION_BY_REVIEWER: this.status = {
+                'for_member': Status.Public.UNDER_REVIEW,
+                'for_associate_editor': Status.Private.AWAITING_FEEDBACK,
+                'for_reviewer': Status.Private.RECOMMENDATION_SUBMITTED,
+                'system': Status.System.ACTIVE
+            }
         }
     }
 
@@ -187,9 +237,9 @@ class Suggestion {
 
 
     isInDeliberation() {
-        return this.status.system === Status.System.ELEVATED || 
-        this.status.system === Status.System.PENDING ||
-        this.status.system === Status.System.AWAITING_FINAL_DECISION
+        return this.status.system === Status.System.ELEVATED ||
+            this.status.system === Status.System.PENDING ||
+            this.status.system === Status.System.AWAITING_FINAL_DECISION
     }
 
 
@@ -202,11 +252,12 @@ class Suggestion {
 
 
 
-    insertHistory(action, performedBy = 'LiveC') {
+    insertHistory(action, performedBy = 'LiveC', meta = {}) {
         this.history.push({
             action: action,
             performed_by: performedBy,
-            date: new Date().toISOString()
+            date: new Date().toISOString(),
+            meta
         })
     }
 
@@ -275,8 +326,27 @@ class Suggestion {
         return "###-####";
     }
 
+    defer(notes, message, reviewerId) {
+        this.assigned_reviewers.push({id: reviewerId, recommendation: 'pending'})
+        this._updateStatus(Actions.DEFERED_TO_REVIEWER)
+
+        this.insertHistory(Actions.DEFERED_TO_REVIEWER, this.assigned_associate_editor)
+        this.insertDocumentation(Actions.DEFERED_TO_REVIEWER, this.assigned_associate_editor, notes)
+        this.insertPublicMessage(message, this.assigned_associate_editor)
+    }
 
 
+    updateReviewer(id, decision) {
+        const r = this.assigned_reviewers.find(rev => rev.id === id)
+        r.recommendation = decision
+    }
+
+
+    addRecommendation(reviewerId, decision) {
+        this._updateStatus(Actions.RECOMMENDATION_BY_REVIEWER)
+        this.insertHistory(Actions.RECOMMENDATION_BY_REVIEWER, reviewerId, {decision})
+        this.updateReviewer(reviewerId, decision)
+    }
 
     assignAssociateEditor(associateEditor) {
         this.assigned_associate_editor = associateEditor.id;
@@ -310,16 +380,13 @@ class Suggestion {
 
 
 
-    assignReviewers(notes, message, newReviewers) {
+    assignReviewers(newReviewers) {
         newReviewers.map(id => (
-            !this.assigned_reviewers.includes(id) && this.assigned_reviewers.push(id)
+            !this.assigned_reviewers.includes(id) && this.assigned_reviewers.push({id, recommendation: 'pending'})
         ));
 
-        this.addMeta({
-            initial_notes: notes,
-            public_message: message,
-            time_started: new Date().toISOString(),
-        });
+        this.insertHistory(Actions.ASSIGNED_REVIEWERS, this.assigned_associate_editor, {numAssigned: newReviewers.length})
+
 
         this._updateStatus(Actions.ASSIGNED_REVIEWERS);
     }

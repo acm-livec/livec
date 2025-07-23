@@ -1,0 +1,20 @@
+[
+  {
+    "id": "CM-0001",
+    "name": "John Doe",
+    "email": "johndoe@email.com",
+    "password": "password",
+    "role": "community-member",
+    "suggestions": [
+     
+    ]
+  },
+  {
+    "id": "CM-6482",
+    "name": "Jesus Ramirez",
+    "email": "jramirez7254@gmail.com",
+    "password": "q",
+    "role": "community-member",
+    "suggestions": []
+  }
+]

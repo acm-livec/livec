@@ -1,4 +1,4 @@
-const { assignReviewersToSuggestion } = require('@services/suggestion')
+const { handleDeferSuggestionToReviewer } = require('@services/suggestion')
 const { AppError } = require('@errors');
 
 const logger = require('@logger').addSource({
@@ -12,8 +12,16 @@ const postDeferral = async (req, res) => {
 
     try {
 
-        
+        const { id } = req.params
+        const {notes, message, reviewerId } = req.body
 
+        logger.info("suggestion.defer.started", { suggestionId: id, reviewerId: reviewerId })
+        await handleDeferSuggestionToReviewer(id, notes, message, reviewerId);
+
+        logger.success("suggestion.defer.success");
+        logger.end('POST Defer Finalized')
+
+        return res.status(200).json({ success: true, message: `Suggestion succesfully defered` })
 
 
 

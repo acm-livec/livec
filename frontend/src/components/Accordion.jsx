@@ -1,9 +1,9 @@
 // Accordion.js
 import { useState, useRef, useEffect } from 'react';
 import './Accordion.scss';
-import { FaChevronDown } from "react-icons/fa6";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
-const AccordionItem = ({ css, title, range, content, isOpen, isRestricted = false, onClick }) => {
+const AccordionItem = ({ css, title, content, isOpen,  onClick }) => {
     const contentRef = useRef(null);
     const [maxHeight, setMaxHeight] = useState('0px');
 
@@ -16,11 +16,12 @@ const AccordionItem = ({ css, title, range, content, isOpen, isRestricted = fals
     return (
         <div className={`accordion-item`}>
             <div className='flex justify-between accordion-title' onClick={onClick}>
-                {title} {range.start} - {range.end} {<FaChevronDown  />}
+                {/* {title} {range?.start || -99} - {range?.end || -99} {<FaChevronDown  />} */}
+                {title}  {isOpen ? <FaChevronUp/> : <FaChevronDown  />}
             </div>
             <div
                 ref={contentRef}
-                className={`accordion-content ${isOpen ? 'open' : ''} ${css}`}
+                className={`accordion-content ${isOpen ? 'open' : ''} `}
                 style={{ maxHeight }}
             >
                 <div>{content}</div>
@@ -44,9 +45,7 @@ const Accordion = ({ css, item, content }) => {
                 <AccordionItem
                     css={css}
                     key={item.title}
-                    range={item.range}
                     title={item.title}
-                    page={item.page}
                     content={content}
                     isOpen={openIndex === item.title}
                     onClick={() => handleToggle(item.title)}

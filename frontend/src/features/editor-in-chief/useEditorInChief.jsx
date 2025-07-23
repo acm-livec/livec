@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { postEditorInChiefApproval, postChangeRequest, postRejection } from '@utils/api-handlers/suggestions'
 import { UserContext } from '@context/UserProvider'
 import { logger } from '@utils/logger'
+const log = logger.create('useEditorInChief.js');
 import { EditorInChiefActions } from '@documentation/constants/actions'
 
 
@@ -12,49 +13,78 @@ export default function useEditorInChief() {
     const editorInChiefId = user.id
 
 
+    /**
+     * Approves a suggestion as editor-in-chief with private and public messages.
+     *
+     * @async
+     * @function approveSuggestion
+     * @param {string} suggestionId - The ID of the suggestion to approve.
+     * @param {{forPrivate: string, forPublic: string}} formData - Approval details.
+     * @param {string} formData.forPrivate - Private notes regarding approval.
+     * @param {string} formData.forPublic - Public message to the submitter.
+     * @returns {Promise<void>} A promise resolving when the approval is submitted.
+     */
     const approveSuggestion = async (suggestionId, formData) => {
-
         try {
+            log.startProcess('Approve Suggestion')
             const { forPrivate, forPublic } = formData
-            logger.debug("approve:", editorInChiefId, forPrivate, forPublic)
+            log.debug({ suggestionId, editorInChiefId, forPrivate, forPublic })
             await postEditorInChiefApproval(suggestionId, editorInChiefId, forPrivate, forPublic)
+            log.success('Suggestion approved:', { suggestionId })
         } catch (error) {
-            logger.error(error)
-        }
-    }
-
-    const sendChangeRequest = async (suggestionId, formData) => {
-
-        const { forPrivate } = formData
-
-        try {
-            await postChangeRequest(suggestionId, editorInChiefId, forPrivate)
-        } catch (error) {
-            console.error(error)
+            log.error(error)
+        } finally {
+            log.endProcess()
         }
     }
 
     /**
-     * Rejects the suggestion.
+     * Sends a change request for a suggestion as editor-in-chief.
      *
+     * @async
+     * @function sendChangeRequest
+     * @param {string} suggestionId - The ID of the suggestion for change request.
+     * @param {{forPrivate: string}} formData - Change request details.
+     * @param {string} formData.forPrivate - Description of requested changes.
+     * @returns {Promise<void>} A promise resolving when the change request is submitted.
+     */
+    const sendChangeRequest = async (suggestionId, formData) => {
+        try {
+            log.startProcess('Send Change Request')
+            const { forPrivate } = formData
+            log.debug({ suggestionId, editorInChiefId, forPrivate })
+            await postChangeRequest(suggestionId, editorInChiefId, forPrivate)
+            log.success('Change request sent for suggestion:', { suggestionId })
+        } catch (error) {
+            log.error(error)
+        } finally {
+            log.endProcess()
+        }
+    }
+
+    /**
+     * Rejects a suggestion with private and public messages as editor-in-chief.
+     *
+     * @async
+     * @function reject
      * @param {string} suggestionId - The ID of the suggestion to reject.
-     * @param {Object} params - Data from the reject form.
-     * @param {string} params.forPrivate - Reason for rejection.
-     * @param {string} params.forPublic - Message to the submitter.
-     * @returns {Promise<Object>}
+     * @param {{forPrivate: string, forPublic: string}} params - Rejection details.
+     * @param {string} params.forPrivate - Private reason for rejection.
+     * @param {string} params.forPublic - Public message to the submitter.
+     * @returns {Promise<boolean>} A promise resolving to a boolean indicating success.
      */
     const reject = async (suggestionId, { forPrivate, forPublic }) => {
         try {
-            logger.startProcess("Reject Suggestion")
-
-            logger.debug(suggestionId, forPrivate, forPublic)
+            log.startProcess('Reject Suggestion')
+            log.debug({ suggestionId, editorInChiefId, forPrivate, forPublic })
             const success = await postRejection(suggestionId, editorInChiefId, forPrivate, forPublic)
+            log.success('Suggestion rejected:', { suggestionId, success })
             return success
         } catch (error) {
-            logger.error(error)
+            log.error(error)
             return false
         } finally {
-            logger.endProcess()
+            log.endProcess()
         }
     }
 

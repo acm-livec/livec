@@ -1,31 +1,47 @@
+import { useNavigate } from "react-router";
 import { useContext, useState, useEffect } from "react"
+
 import { logger } from '@utils/logger'
 import { UserContext } from '@context/UserProvider';
-import { postRejection, postStartReview, postDocumentation, postAssociateEditorFinalization, postAssignReviewers, postDeferral } from "@utils/api-handlers/suggestions";
 import { getReviewers } from "@utils/api-handlers/users/get-reviewers";
-import { useNavigate } from "react-router";
 import { AssociateEditorActions } from "@documentation/constants/actions";
+import { 
+    postRejection, 
+    postStartReview, 
+    postDocumentation, 
+    postAssociateEditorFinalization, 
+    postAssignReviewers, 
+    postDeferral 
+} from "@utils/api-handlers/suggestions";
+
+
 
 
 export const AssociateEditor = AssociateEditorActions
+
+
 
 /**
  * @typedef {Object} AssociateEditorHook
  * @property {Array} reviewers
  * @property {(suggestionId: string, {forPrivate, forPublic}) => Promise<Object>} reject
  * @property {(suggestionId: string, {forPrivate, forPublic}) => Promise<void>} accept
+ * @property {(suggestionId: string, formData: any) => Promise<void>} defer
  * @property {(suggestionId: string, formData: any) => Promise<void>} document
  * @property {(suggestionId: string, formData: any) => Promise<void>} finalize
- * @property {(suggestionId: string, formData: any) => Promise<void>} defer
  * @property {(suggestionId: string, formData: any) => Promise<void>} assign
  */
 
 
 /**
- * Custom hook that models all the functionalities of an associate editor
+ * Custom hook that models all the functionalities of an Associate Editor.
  * 
- * - reject
- * - accept
+ * - reject - Desk rejects a suggestion.
+ * - accept - Accepts a suggestion to start reviewing.
+ * - defer - Defers a suggestion to a selected reviewer.
+ * - assign - Assigns selected reviewer/s to review a suggestion.
+ * - document - Assigns selected reviewer/s to review a suggestion.
+ * 
  * @returns {AssociateEditorHook} Functionalities
  * 
  */
@@ -41,27 +57,28 @@ export default function useAssociateEditor() {
         if (!associateEditorId) return;
         getReviewers(associateEditorId)
             .then(res => setReviewers(res))
-            .catch(err => console.error(err))
+            .catch(err => logger.error(err))
     }, [associateEditorId]);
 
 
 
 
     /**
-     * Rejects the suggestion.
+     * Rejects a suggestion with provided private and public messages.
      *
      * @param {string} suggestionId - The ID of the suggestion to reject.
-     * @param {Object} params - Data from the reject form.
-     * @param {string} params.forPrivate - Reason for rejection.
+     * @param {Object} params - Data from the rejection form.
+     * @param {string} params.forPrivate - Private notes for rejection.
      * @param {string} params.forPublic - Message to the submitter.
-     * @returns {Promise<Object>}
+     * 
+     * @returns {Promise<boolean>} A promise resolving to a boolean indicating success.
      */
     const reject = async (suggestionId, { forPrivate, forPublic }) => {
         try {
-            logger.startProcess("Reject Suggestion")
-
-            logger.debug(suggestionId, forPrivate, forPublic)
+            logger.startProcess('Reject Suggestion')
+            logger.debug({ suggestionId, forPrivate, forPublic })
             const success = await postRejection(suggestionId, associateEditorId, forPrivate, forPublic)
+            logger.success('Suggestion rejected:', { suggestionId, success })
             return success
         } catch (error) {
             logger.error(error)
@@ -79,20 +96,22 @@ export default function useAssociateEditor() {
 
 
     /**
-     * Accepts the suggestion.
+     * Starts the review process for a suggestion.
      *
-     * @param {string} suggestionId - The ID of the suggestion to start reviewing.
-     * @param {Object} params - Data from the start review form.
-     * @param {string} params.forPrivate - Initial notes.
-     * @param {string} params.forPublic - Message to the submitter.
-     * @returns {Promise<Object>}
+     * @async
+     * @function accept
+     * @param {string} suggestionId - The ID of the suggestion to accept for review.
+     * @param {Object} params - Data from the review form.
+     * @param {string} params.forPrivate - Private notes for the reviewer.
+     * @param {string} params.forPublic - Public message to the submitter.
+     * @returns {Promise<Object>} A promise resolving to a boolean indicating success.
      */
     const accept = async (suggestionId, { forPrivate, forPublic }) => {
-
         try {
-            logger.startProcess("Accept Suggestion")
-            logger.debug(suggestionId, forPrivate, forPublic)
+            logger.startProcess('Accept Suggestion')
+            logger.debug({ suggestionId, forPrivate, forPublic })
             const success = await postStartReview(suggestionId, associateEditorId, forPrivate, forPublic)
+            logger.success('Review started for suggestion:', { suggestionId, success })
             return success
         } catch (error) {
             logger.error(error)
@@ -105,22 +124,28 @@ export default function useAssociateEditor() {
 
 
     /**
-     * Adds documentation to the suggestion in HTML format
-     * @param {string} suggestionId 
-     * @param {string} documentationId 
+     * Adds documentation to a suggestion.
+     *
+     * @async
+     * @function document
+     * @param {string} suggestionId - The ID of the suggestion to document.
+     * @param {string} documentationId - The localStorage key for documentation.
+     * @returns {Promise<void>} A promise resolving when documentation is added.
      */
     const document = async (suggestionId, documentationId) => {
         try {
-             const html = localStorage.getItem(documentationId);
-
-             if(!html) throw Error("No docs to add")
-
+            logger.startProcess('Add Documentation')
+            const html = localStorage.getItem(documentationId)
+            if (!html) throw new Error('No documentation available')
+            logger.debug({ suggestionId, documentationId, htmlLength: html.length })
             await postDocumentation(suggestionId, associateEditorId, html)
+            logger.success('Documentation added for suggestion:', { suggestionId })
             localStorage.removeItem(documentationId)
-
             navigate(0)
         } catch (error) {
-            console.error(error)
+            logger.error(error)
+        } finally {
+            logger.endProcess()
         }
     }
 
@@ -128,19 +153,25 @@ export default function useAssociateEditor() {
 
 
     /**
-     * Finalizes the suggestion
-     * @param {string} suggestionId 
+     * Finalizes a suggestion review by the associate editor.
+     *
+     * @async
+
+     * @param {string} suggestionId - The ID of the suggestion to finalize.
+     * @returns {Promise<void>} A promise resolving when the suggestion is finalized.
      */
     const finalize = async (suggestionId) => {
-        const updatedSection = localStorage.getItem(suggestionId);
-
-        if (!updatedSection) throw Error("No updated section")
-
+        const updatedSection = localStorage.getItem(suggestionId)
+        if (!updatedSection) throw new Error('No updated section available')
         try {
+            logger.startProcess('Finalize Suggestion')
+            logger.debug({ suggestionId, updatedSection })
             await postAssociateEditorFinalization(associateEditorId, suggestionId, updatedSection)
+            logger.success('Suggestion finalized:', { suggestionId })
         } catch (error) {
-            console.error(error)
-
+            logger.error(error)
+        } finally {
+            logger.endProcess()
         }
     }
 
@@ -149,23 +180,25 @@ export default function useAssociateEditor() {
 
 
     /**
-     * Defers the suggestion to a selected reviewer.
-     * 
-     * 
+     * Defers a suggestion to a reviewer for further review.
+     *
      * @param {string} suggestionId - The ID of the suggestion to defer.
-     * @param {Object} params - Data from the defer to reviewer form.
-     * @param {string} params.forPrivate - Notes for the reviewer.
-     * @param {string} params.forPublic - Message to the submitter.
-     * @param {string} params.reviewer - ID of the selected reviewer.
-     * @returns {Promise<void>}
+     * @param {Object} params - Data from the defer form.
+     * @param {string} params.forPrivate - Private notes for the reviewer.
+     * @param {string} params.forPublic - Public message to the submitter.
+     * @param {string} params.reviewer - The ID of the reviewer.
+     * @returns {Promise<void>} A promise resolving when the suggestion is deferred.
      */
     const defer = async (suggestionId, { forPrivate, forPublic, reviewer }) => {
         try {
-
-            //await postDeferral(suggestionId, forPrivate, forPublic, reviewer)
+            logger.startProcess('Defer Suggestion')
+            logger.debug({ suggestionId, forPrivate, forPublic, reviewer })
+            await postDeferral(suggestionId, forPrivate, forPublic, reviewer)
+            logger.success('Suggestion deferred to reviewer:', { suggestionId, reviewer })
         } catch (error) {
-            console.error(error)
-
+            logger.error(error)
+        } finally {
+            logger.endProcess()
         }
     }
 
@@ -173,25 +206,25 @@ export default function useAssociateEditor() {
     
 
     /**
-     * Defers the suggestion to a selected reviewer.
-     * 
-     * @todo Implement logic in postAssignReviewers
-     * 
+     * Assigns one or more reviewers to a suggestion.
      *
-     * @param {string} suggestionId - The ID of the suggestion to defer.
-     * @param {Object} params - Data from the defer to reviewer form.
-     * @param {string} params.forPrivate - Notes for the reviewer.
-     * @param {string} params.forPublic - Message to the submitter.
-     * @param {Array<string>} params.reviewers - Array list containing ID's of the selected reviewer/s.
-     * @returns {Promise<void>}
+     * @param {string} suggestionId - The ID of the suggestion to assign reviewers to.
+     * @param {Object} params - Data from the assignment form.
+     * @param {string} params.forPrivate - Private notes for reviewers.
+     * @param {string} params.forPublic - Public message to the submitter.
+     * @param {Array<string>} params.reviewers - Array of reviewer IDs.
+     * @returns {Promise<void>} A promise resolving when reviewers are assigned.
      */
-    const assign = async (suggestionId, { forPrivate, forPublic, reviewers }) => {
+    const assign = async (suggestionId, { reviewers }) => {
         try {
-
-            //await postAssignReviewers(suggestionId, notes, message, reviewers)
+            logger.startProcess('Assign Reviewers')
+            logger.debug({ suggestionId, reviewers })
+            await postAssignReviewers(suggestionId, reviewers)
+            logger.success('Reviewers assigned:', { suggestionId, reviewers })
         } catch (error) {
-            console.error(error)
-
+            logger.error(error)
+        } finally {
+            logger.endProcess()
         }
     }
 

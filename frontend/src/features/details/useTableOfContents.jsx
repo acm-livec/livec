@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Disciplines } from '@utils/constants'
-import { flattenSections } from '@utils/format';
-
+import { getCurriculum } from '@utils/api-handlers/curriculums/get-curriculum';
 
 /**
  * 
@@ -11,35 +10,33 @@ import { flattenSections } from '@utils/format';
 
 export default function useTableOfContents(curriculum) {
     const [tableOfContents, setTableOfContents] = useState([])
-    const [flatTableOfContents, setFlatTableOfContents] = useState([])
 
     /** @type {[Section, Function]} */
     const [currentPage, setCurrentPage] = useState()
 
 
+  
+
     useEffect(() => {
-        fetch('/cs_toc.json')
-            .then((res) => res.json())
+        getCurriculum(Disciplines.COMPUTER_SCIENCE)
             .then((res) => {
-                setTableOfContents(res);
-
-                const flat = flattenSections(res);
-
-                if (flat.length > 0) {
+                
+                if (res.length > 0) {
                     // Modify the first item
-                    flat[0] = {
-                        ...flat[0],
+                    res[0] = {
+                        ...res[0],
                         isFirst: true, // or title/icon/style overrides
                     };
 
                     // Modify the last item
-                    flat[flat.length - 1] = {
-                        ...flat[flat.length - 1],
+                    res[res.length - 1] = {
+                        ...res[res.length - 1],
                         isLast: true,
                     };
                 }
 
-                setFlatTableOfContents(flat);
+                setTableOfContents(res);
+
             })
             .catch(console.error);
     }, [curriculum]);
@@ -48,29 +45,34 @@ export default function useTableOfContents(curriculum) {
 
     useEffect(() => {
         if (tableOfContents.length > 0) {
-            const { index } = flatTableOfContents[0]
+            const { index } = tableOfContents[0]
             console.log(index)
-            setCurrentPage(flatTableOfContents[0])
+            setCurrentPage(tableOfContents[0])
         }
     }, [tableOfContents])
+
+
+    useEffect(() => {
+        console.log(currentPage)
+    }, [currentPage])
 
 
 
     const nextPage = () => {
         if (!(currentPage?.isLast || false)) {
-            const currIndx = currentPage.index
-            setCurrentPage(flatTableOfContents[currIndx + 1])
+            const currIndx = currentPage.meta.index
+            setCurrentPage(tableOfContents[currIndx + 1])
         }
     }
 
     const previousPage = () => {
         if (!(currentPage?.isFirst || false)) {
-            const currIndx = currentPage.index
-            setCurrentPage(flatTableOfContents[currIndx - 1])
+            const currIndx = currentPage.meta.index
+            setCurrentPage(tableOfContents[currIndx - 1])
         }
     }
 
 
-    return { tableOfContents, nextPage, previousPage, currentPage, setCurrentPage }
+    return { tableOfContents, nextPage, previousPage, currentPage, setCurrentPage}
 
 }

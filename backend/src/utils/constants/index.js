@@ -15,10 +15,12 @@ const Roles = Object.freeze({
 const Actions = Object.freeze({
     DESK_REJECT: 'desk-reject',
     START_REVIEW: 'start-review',
-    DEFER_TO_REVIEWER: 'defer-to-reviewer',
+    DEFERED_TO_REVIEWER: 'defered-to-reviewer',
     ASSIGNED_ASSOCIATE_EDITOR: 'assigned-associate-editor',
     ASSIGNED_REVIEWERS: 'assigned-reviewers',
     ADDED_DOCUMENTATION: 'added-documentation',
+
+    RECOMMENDATION_BY_REVIEWER: 'recommendation-by-reviewer',
 
     SUBMITTED_BY_MEMBER: 'submitted-by-member',
     FINALIZED_BY_ASSOCIATE_EDITOR: 'finalized-by-associate-editor',

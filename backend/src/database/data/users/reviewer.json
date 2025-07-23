@@ -1,46 +1,45 @@
 [
-    {
-        "id": "R-0001",
-        "name": "Jane Doe",
-        "email": "janedoe@email.com",
-        "password": "password",
-        "role": "reviewer",
-        "discipline": "computer-science",
-        "assignedAssociateEditor": "AE-0001",
-        "assignedSuggestions": [
-        ]
-    },
-    {
-        "id": "R-7562",
-        "name": "Emma Collins",
-        "email": "emmacollins@email.com",
-        "password": "password",
-        "role": "reviewer",
-        "discipline": "computer-science",
-        "assignedAssociateEditor": "AE-0001",
-        "assignedSuggestions": [
-        ]
-    },
-    {
-        "id": "R-F35G",
-        "name": "Ava Kim",
-        "email": "avakim@email.com",
-        "password": "password",
-        "role": "reviewer",
-        "discipline": "computer-science",
-        "assignedAssociateEditor": "AE-0001",
-        "assignedSuggestions": []
-    },
-    {
-        "id": "R-453F",
-        "name": "Zoe Ramirez",
-        "email": "janedoe@email.com",
-        "password": "password",
-        "role": "reviewer",
-        "discipline": "computer-science",
-        "assignedAssociateEditor": "AE-0002",
-        "assignedSuggestions": [
-            
-        ]
-    }
+  {
+    "id": "R-0001",
+    "name": "Jane Doe",
+    "email": "janedoe@email.com",
+    "password": "password",
+    "role": "reviewer",
+    "discipline": "computer-science",
+    "assignedEditorInChief": "none",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedSuggestions": []
+  },
+  {
+    "id": "R-7562",
+    "name": "Emma Collins",
+    "email": "emmacollins@email.com",
+    "password": "password",
+    "role": "reviewer",
+    "discipline": "computer-science",
+    "assignedEditorInChief": "none",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedSuggestions": []
+  },
+  {
+    "id": "R-F35G",
+    "name": "Ava Kim",
+    "email": "avakim@email.com",
+    "password": "password",
+    "role": "reviewer",
+    "discipline": "computer-science",
+    "assignedEditorInChief": "none",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedSuggestions": []
+  },
+  {
+    "id": "R-453F",
+    "name": "Zoe Ramirez",
+    "email": "janedoe@email.com",
+    "password": "password",
+    "role": "reviewer",
+    "discipline": "computer-science",
+    "assignedAssociateEditor": "AE-0002",
+    "assignedSuggestions": []
+  }
 ]

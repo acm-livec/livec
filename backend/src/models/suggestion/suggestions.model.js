@@ -26,7 +26,7 @@ class Suggestions {
     static async findById(id) {
         await this.dbRef.read();
         const entry = this.dbRef.data.find(s => s.id === id);
-        return  entry ? new Suggestion(entry) : null;
+        return entry ? new Suggestion(entry) : null;
     }
 
 
@@ -39,8 +39,22 @@ class Suggestions {
     static async getByCommunityMemberId(id) {
         await this.dbRef.read();
         const entries = this.dbRef.data.
-        filter(s => s.submitter_id === id)
-        .map(s => new Suggestion(s).toCommunityMember())
+            filter(s => s.submitter_id === id)
+            .map(s => new Suggestion(s).toCommunityMember())
+        return entries || []
+    }
+    /**
+     * Retrieves all suggestions submitted by a specific community member.
+     *
+     * @param {string} id - The community member's unique ID.
+     * @returns {Promise<any[]>} An array of mapped suggestion data for the community member.
+     */
+    static async getBySectionId(id) {
+        await this.dbRef.read();
+        const entries = this.dbRef.data.
+            filter(s => s.section_id === id)
+            .map(s => new Suggestion(s).toPublic())
+        console.log(entries)
         return entries || []
     }
 
@@ -55,8 +69,8 @@ class Suggestions {
     static async getByAssociateEditor(id) {
         await this.dbRef.read();
         const entries = this.dbRef.data.
-        filter(s => s.assigned_associate_editor === id)
-        .map(s => new Suggestion(s).toAssociateEditor())
+            filter(s => s.assigned_associate_editor === id)
+            .map(s => new Suggestion(s).toAssociateEditor())
         return entries || []
     }
 
@@ -64,8 +78,8 @@ class Suggestions {
     static async getFinalized(id) {
         await this.dbRef.read();
         const entries = this.dbRef.data.
-        filter(s => (s.assigned_editor_in_chief === id && new Suggestion(s).isInDeliberation()))
-        .map(s => new Suggestion(s).toEditorInCheif())
+            filter(s => (s.assigned_editor_in_chief === id && new Suggestion(s).isInDeliberation()))
+            .map(s => new Suggestion(s).toEditorInCheif())
         return entries || []
     }
 
@@ -79,12 +93,16 @@ class Suggestions {
      */
     static async getByReviewer(id) {
         await this.dbRef.read();
-        const entries = this.dbRef.data.
-        filter(s => s.assigned_reviewers.includes(id))
-        .map(s => new Suggestion(s).toAssociateEditor())
-        return entries || []
-    }
 
+        const entries = this.dbRef.data
+            .filter(s =>
+                Array.isArray(s.assigned_reviewers) &&
+                s.assigned_reviewers.some(r => r.id === id)
+            )
+            .map(s => new Suggestion(s).toReviewer());
+
+        return entries || [];
+    }
 
 
     /**

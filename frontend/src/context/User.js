@@ -16,6 +16,10 @@ export default class User {
 		return this.role === Roles.COMMUNITY_MEMBER
 	}
 
+	isAssociateEditor() {
+		return this.role === Roles.ASSOCIATE_EDITOR
+	}
+
 	/** Check if user has a given role */
 	hasRole(role) {
 		return this.role === role;

@@ -26,5 +26,5 @@
 		"forceConsistentCasingInFileNames": true
 	},
 	"exclude": ["node_modules", "dist"],
-	"include": ["src/**/*", "../archived/data", "../documentation"]
+	"include": ["src/**/*", "../archived/data", "../documentation", "../archived/TableOfContents.jsx"]
 }

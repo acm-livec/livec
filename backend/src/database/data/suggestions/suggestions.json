@@ -1,12 +1,62 @@
 [
   {
-    "id": "SCOSC-8eF4c5aN",
-    "title": "Brief Suggestion Title",
-    "text": "Enter suggestion here...",
-    "suggestion": "Enter suggestion here...",
+    "id": "SCOSC-pfks_ub2",
+    "title": "Anyone else find Codex CLI dissapointing?",
+    "text": "I've tried Codex CLI for a few hours now (using gpt 4.1 and o4-mini), and it just seems, way worse. With claude I could vibe-code entire apps within a prompt, obviously they wouldn't be perfect, but it could at least get it done. Codex CLI can barely do anything, It doesn't install the right packages, it needs way more hand-holding, and the final product is just worse.",
+    "suggestion": "I've tried Codex CLI for a few hours now (using gpt 4.1 and o4-mini), and it just seems, way worse. With claude I could vibe-code entire apps within a prompt, obviously they wouldn't be perfect, but it could at least get it done. Codex CLI can barely do anything, It doesn't install the right packages, it needs way more hand-holding, and the final product is just worse.",
     "submitter_id": "CM-0001",
-    "section_id": "8238a7d96075",
-    "time_created": "2025-07-17T18:41:08.711Z",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-23T06:50:46.801Z",
+    "status": {
+      "for_member": "assigned",
+      "for_associate_editor": "awaiting-initial-response",
+      "system": "new"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "revised_section": "",
+    "public_updates": [
+      {
+        "refId": "DOC-RH49h305",
+        "status": "submitted",
+        "date": "2025-07-23T06:50:46.801Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-XYggZ3Uo",
+        "status": "assigned",
+        "author": "LiveC",
+        "date": "2025-07-23T06:50:46.831Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      }
+    ],
+    "documentation": [],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-07-23T06:50:46.801Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-23T06:50:46.831Z",
+        "meta": {}
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-qFT38twl",
+    "title": "This sucks",
+    "text": "The curricular guidelines build towards the Characteristics of Graduates enumerated in the report and take into consideration the Challenges and Opportunities for Computer Science Education identified in the report. The guidelines have been supplemented with articles on Pedagogical Considerations and Curricular Practices .\n\nThe process used by the CS2023 task force has been collaborative (over ninety task force members), international (six continents), data-driven (five large- and over seventy small-scale surveys) and transparent ( csed.acm.org ). Community engagement included numerous conference panels and presentations along with regular postings to over a dozen ACM Special Interest Group (SIG) mailing lists and the full membership of AAAI. The iterative process has included at least two review and revision cycles for most of the knowledge areas. The resulting curricular guidelines are the culmination of three years of effort using the outlined Principles and Processes .",
+    "suggestion": "The curricular guidelines build towards the Characteristics of Graduates enumerated in the report and take into consideration the Challenges and Opportunities for Computer Science Education identified in the report. The guidelines have been supplemented with articles on Pedagogical Considerations and Curricular Practices .\n\nThe process used by the CS2023 task force has been collaborative (over ninety task force members), international (six continents), data-driven (five large- and over seventy small-scale surveys) and transparent ( csed.acm.org ). Community engagement included numerous conference panels and presentations along with regular postings to over a dozen ACM Special Interest Group (SIG) mailing lists and the full membership of AAAI. The iterative process has included at least two review and revision cycles for most of the knowledge areas. The resulting curricular guidelines are the culmination of three years of effort using the outlined Principles and Processes .",
+    "submitter_id": "CM-0001",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-23T07:40:51.082Z",
     "status": {
       "for_member": "under-review",
       "for_associate_editor": "reviewing",
@@ -20,51 +70,124 @@
     "revised_section": "",
     "public_updates": [
       {
-        "refId": "DOC-5pCV-5_w",
+        "refId": "DOC-fTbzehQt",
         "status": "submitted",
-        "date": "2025-07-17T18:41:08.711Z",
+        "date": "2025-07-23T07:40:51.082Z",
         "message": "Your suggestion has been submitted and we are finding an associate editor to review",
         "author": "LiveC"
       },
       {
-        "refId": "DOC-BSNwlzD9",
+        "refId": "DOC-GlYUGZLp",
         "status": "assigned",
         "author": "LiveC",
-        "date": "2025-07-17T18:41:08.724Z",
+        "date": "2025-07-23T07:40:51.114Z",
         "message": "Your suggestion has been assigned to an associate editor for preliminary review."
       },
       {
-        "refId": "DOC-KVyTQydK",
+        "refId": "DOC-KalNwWYb",
         "status": "under-review",
         "author": "AE-0001",
-        "date": "2025-07-17T18:47:28.562Z",
-        "message": "message"
+        "date": "2025-07-23T08:10:16.769Z",
+        "message": "asdasd"
       }
     ],
     "documentation": [
       {
         "action": "start-review",
-        "refId": "DOC-jCUl5iGX",
+        "refId": "DOC-RKNxkPka",
         "author": "AE-0001",
-        "date": "2025-07-17T18:47:28.561Z",
-        "text": "note here"
+        "date": "2025-07-23T08:10:16.769Z",
+        "text": "asd"
       }
     ],
     "history": [
       {
         "action": "submitted-by-member",
         "performed_by": "CM-0001",
-        "date": "2025-07-17T18:41:08.711Z"
+        "date": "2025-07-23T07:40:51.082Z"
       },
       {
         "action": "assigned-associate-editor",
         "performed_by": "LiveC",
-        "date": "2025-07-17T18:41:08.724Z"
+        "date": "2025-07-23T07:40:51.114Z",
+        "meta": {}
       },
       {
         "action": "start-review",
         "performed_by": "AE-0001",
-        "date": "2025-07-17T18:47:28.561Z"
+        "date": "2025-07-23T08:10:16.769Z",
+        "meta": {}
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-jCYtmeAr",
+    "title": "What font does the Grammarly website use?",
+    "text": "The Grammarly website primarily uses the font Inter for its text. Inter is a modern sans-serif typeface designed for readability on screens. If you're looking for specific details about font sizes or styles used in different sections, those can vary, but Inter is the main typeface you'll see throughout the site.",
+    "suggestion": "The Grammarly website primarily uses the font Inter for its text. Inter is a modern sans-serif typeface designed for readability on screens. If you're looking for specific details about font sizes or styles used in different sections, those can vary, but Inter is the main typeface you'll see throughout the site.",
+    "submitter_id": "CM-0001",
+    "section_id": "e5eb3d2a3ce9",
+    "time_created": "2025-07-23T08:12:34.755Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "reviewing",
+      "system": "active"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "revised_section": "",
+    "public_updates": [
+      {
+        "refId": "DOC-9V90Dmie",
+        "status": "submitted",
+        "date": "2025-07-23T08:12:34.755Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-rGf1EOci",
+        "status": "assigned",
+        "author": "LiveC",
+        "date": "2025-07-23T08:12:34.785Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-NGZ6ade3",
+        "status": "under-review",
+        "author": "AE-0001",
+        "date": "2025-07-23T08:14:04.149Z",
+        "message": "c"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "start-review",
+        "refId": "DOC-un8asmIg",
+        "author": "AE-0001",
+        "date": "2025-07-23T08:14:04.149Z",
+        "text": "c"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-07-23T08:12:34.755Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-23T08:12:34.785Z",
+        "meta": {}
+      },
+      {
+        "action": "start-review",
+        "performed_by": "AE-0001",
+        "date": "2025-07-23T08:14:04.149Z",
+        "meta": {}
       }
     ]
   }

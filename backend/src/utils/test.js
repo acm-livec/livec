@@ -62,54 +62,102 @@ const format = (str) => {
 
 async function buildSections(sections, currentSection = {}, index = 0) {
 	const result = [];
+	let parentHeading = ''
+
 
 	for (const section of sections) {
 		const cleanedTitle = format(section.title);
 
+		if (section.level === 1) {
+			parentHeading = section.title;
+		}
+
 		const meta = {
+			index,
 			curriculum: "computer-science",
 			year_version: "2023",
 			section_version: "v1",
 			previous_versions: section.meta?.previous_versions || [],
 			slug: cleanedTitle,
-			created_at: new Date().toISOString(),
-			updated_at: new Date().toISOString(),
 		};
+
+		index++
 
 		currentSection = {
-			id: section.id || await generateSectionId({ ...meta, page_number: section.page_number }),
+			id: section.id || await generateSectionId({ ...meta, page_number: section.page }),
+			level: section.level,
 			title: section.title,
-			page_number: section.page_number,
-			markdown_heading: section.markdown_heading || '',
-			markdown_body: section.markdown_body || '',
-			html: section.html || '',
+			page_number: section.page,
+			// html: section.html || '',
 			meta: meta,
-			units: [],
+			// units: [],
 		};
 
-		if (section.units && section.units.length > 0) {
-			const [children, updatedIndex] = await buildSections(section.units, {}, index);
-			currentSection.units = children;
-			index = updatedIndex; 
-		} else {
-			currentSection.index = index;
-			index++;
+		
+		if (section.level !== 1) {
+			currentSection.meta.parent_heading = parentHeading
 		}
+
+		// if (section.units && section.units.length > 0) {
+		// 	const [children, updatedIndex] = await buildSections(section.units, {}, index);
+		// 	currentSection.units = children;
+		// 	index = updatedIndex; 
+		// } else {
+		// 	currentSection.index = index;
+		// 	index++;
+		// }
 
 		result.push(currentSection);
 	}
 
-	return [result, index];
+	return result
+}
+
+function buildSections2(sections, currentSection = {}, index = 0) {
+	const result = [];
+
+	for (const section of sections) {
+		const cleanedTitle = format(section.title);
+
+		const meta = {
+			index,
+			curriculum: "computer-science",
+			year_version: "2023",
+			section_version: "v1",
+			previous_versions: section.meta?.previous_versions || [],
+			slug: cleanedTitle,
+		};
+
+		index++
+
+		currentSection = {
+			id: section.id,
+			html: section.html || '',
+		};
+
+		// if (section.units && section.units.length > 0) {
+		// 	const [children, updatedIndex] = await buildSections(section.units, {}, index);
+		// 	currentSection.units = children;
+		// 	index = updatedIndex; 
+		// } else {
+		// 	currentSection.index = index;
+		// 	index++;
+		// }
+
+		result.push(currentSection);
+	}
+
+	return result
 }
 
 
 
 const Build = async (params) => {
-	const rawData = fs.readFileSync('../database/data/curriculums/curriculums.json', 'utf-8');
+	const rawData = fs.readFileSync('./ind.json', 'utf-8');
 	const curriculums = JSON.parse(rawData);
-	const [build] = await buildSections(curriculums);
+	const build = await buildSections(curriculums);
 	fs.writeFileSync(
-		'built_sections.json',
+		'built_sections2.json',
 		JSON.stringify(build, null, 4),
 		'utf-8'
 	);
@@ -130,12 +178,27 @@ const Flatten = () => {
 	return flat
 }
 
-// Build().then(console.log)
+Build().then(console.log)
 
 
 const obj = {
 	// isFirst: true
 }
+
+const Build2 = () => {
+	const rawData = fs.readFileSync('./built_sections2.json', 'utf-8');
+	const curriculums = JSON.parse(rawData);
+	const build = buildSections2(curriculums);
+	fs.writeFileSync(
+		'cs_sec.json',
+		JSON.stringify(build, null, 4),
+		'utf-8'
+	);
+
+	return build
+}
+
+// Build2()
 
 console.log(!!(obj?.isFirst || false))
 console.log(obj?.isLast || false)

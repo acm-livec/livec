@@ -49,9 +49,11 @@ export const Button = ({
     className = '',
     modal = null,
     variant = 'normal',
+    size = '100%',
     text = 'Submit',
     onClick = () => alert("Button Clicked"),
     icon = <></>,
+    style = {},
     isActive = false,
     disableOn = false,
     hideOn = false,
@@ -59,7 +61,11 @@ export const Button = ({
 
     if (hideOn) return null
 
-    const cssClassName = clsx(styles[variants[variant]], isActive && styles[`${variants[variant]}--active`], className);
+    const cssClassName = clsx(
+        styles[variants[variant]], 
+        isActive && styles[`${variants[variant]}--active`],
+        disableOn && styles['button--disabled'], 
+        className);
 
 
     return modal ? (
@@ -71,6 +77,10 @@ export const Button = ({
     ) : (
         <button
             {...props}
+            style={{
+                width: size,
+                ...style
+            }}
             disabled={disableOn}
             className={cssClassName}
             type='button'

@@ -4,7 +4,7 @@ import { BackButton, Button } from '@components/buttons';
 import styles from './SuggestionView.module.scss';
 import useVariant from '@hooks/useVariant';
 import useTabs from '@hooks/useTabs';
-import Page from '@pages/details/Page';
+import Page from '@features/details/Page';
 import { TriageOptionView } from '@features/associate-editor/triage-view';
 import Suggestion from '@features/suggestion/Suggestion';
 import ActionButtons from '@features/associate-editor/ActionButtons';

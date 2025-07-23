@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router';
 import useSuggestion from '@hooks/useSuggestion';
 import { UserContext } from '@context/UserProvider';
 import { useContext, useState } from 'react';
-import { Form, SubmitButton } from '@components/form';
-import { TextArea, TextField } from '@components/form/input';
+// import { Form, SubmitButton } from '@components/form';
+// import { TextArea, TextField } from '@components/form/input';
+import { Form, TextField, Dropdown, TextArea } from './input';
 
 export default function SuggestionBox({ sectionId }) {
     const { user } = useContext(UserContext)
@@ -33,13 +34,33 @@ export default function SuggestionBox({ sectionId }) {
 
 const Default = ({ sectionId, submit }) => {
     const discipline = sessionStorage.getItem('curriculumSlug') || 'none'
+const options = [
+    {
+        label: 'New Knowledge Area',
+        value: 'new-knowledge-area'
+    },
+    {
+        label: 'New Knowledge Unit',
+        value: 'new-knowledge-unit'
+    },
+    {
+        label: 'Update Existing Knowledge Unit',
+        value: 'update-existing-knowledge-unit'
+    },
+    {
+        label: 'Update Existing Knowledge Area',
+        value: 'update-existing-knowledge-area'
+    },
+]
+
+
     return (
         <>
             <h2>Have a thought or suggestion for this section? Fill out the form below.</h2>
-            <Form resetOn={[sectionId]}>
-                <TextField field={{ title: '' }} label='Enter a brief title explaining your suggestions' />
-                <TextArea field={{ text: '' }} label='Enter your suggestion down below' />
-                <SubmitButton onSubmit={(formData) => submit({ sectionId, discipline, ...formData })} />
+            <Form resetOn={[sectionId]} onSubmit={(formData) => submit({ sectionId, discipline, ...formData })}>
+                <Dropdown keyName='type' values={options} label='Type of suggestion'/>
+                <TextField keyName='title' label='Enter a brief title explaining your suggestions' />
+                <TextArea keyName='text' label='Enter your suggestion down below' />
             </Form>
         </>
     )

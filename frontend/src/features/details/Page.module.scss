@@ -1,0 +1,28 @@
+@use '@styles' as *;
+@use 'sass:color';
+
+
+.page {
+    @include flex-container(column, start, center, 5rem);
+
+
+}
+
+
+.public-forum {
+
+}
+
+.forum-item {
+    background-color: $gray-200;
+    padding: 2.5%;
+    border-radius: 8px;
+    max-height: 25vh;
+}
+
+.forum-item p.body-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // number of lines to show
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,7 +1,6 @@
 @use '@styles' as *;
 @use 'sass:color';
 
-
 .button {
     display: flex;
     align-items: center;
@@ -9,40 +8,101 @@
     padding: 0.5rem 0.75rem;
     font-family: "Montserrat", sans-serif;
     color: #fff;
-
     border-radius: 5px;
     font-weight: 500;
     font-size: 1rem;
-
     border: none;
     outline: none;
-
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-
-    // border: 1px solid rgba(24, 20, 20, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
 }
 
+// Base mixin for colored buttons
+@mixin button-variant($color, $hover: null, $active-lightness: -15%, $hover-lightness: -25%) {
+    background-color: $color;
+    color: #fff;
+
+    &:hover {
+        background-color: if($hover !=null, $hover, color.adjust($color, $lightness: -5%));
+    }
+
+    &--active {
+        background-color: color.adjust($color, $lightness: $active-lightness);
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+        transform: scale(0.98);
+
+        &:hover {
+            background-color: color.adjust($color, $lightness: $hover-lightness);
+        }
+    }
+}
+
+// Color variants using the mixin
+.button--normal {
+    @extend .button;
+    @include button-variant($acm-blue, #006fa8);
+}
+
+.button--danger {
+    @extend .button;
+    @include button-variant($red-500, $red-600);
+}
+
+.button--confirm {
+    @extend .button;
+    @include button-variant($lime-500, $lime-600);
+}
+
+.button--gray {
+    @extend .button;
+    @include button-variant($stone-300, $stone-400);
+}
+
+.button--info {
+    @extend .button;
+    @include button-variant($cyan-500, $cyan-600);
+}
+
+.button--blue {
+    @extend .button;
+    @include button-variant($sky-400, $blue-700);
+}
+
+.button--purple {
+    @extend .button;
+    @include button-variant(oklch(0.8 0.15 220), $purple-700);
+}
+
+.button--fit {
+    @extend .button--purple;
+    width: fit-content;
+}
+
+.button--disabled {
 
 
+    cursor: not-allowed;
+    background-color: $gray-200;
 
+}
+
+// Round button variant
 .button--round {
     font-size: 0.85rem;
     font-family: "Montserrat", sans-serif;
-    background-color: none;
-    $bg-color: $stone-400;
     padding: 0.35rem;
     flex: 1;
     text-align: center;
     height: fit-content;
     box-shadow: none;
+    background: none;
 
     &:hover {
         color: white;
-     background: oklch(76.075% 0.09198 247.246);
+        background: oklch(76.075% 0.09198 247.246);
     }
-
 
     &--active {
         background: oklch(76.075% 0.09198 247.246);
@@ -50,12 +110,12 @@
         transform: scale(0.98);
 
         &:hover {
-            background: color.adjust($bg-color, $lightness: -1%);
+            background: color.adjust($stone-400, $lightness: -1%);
         }
     }
 }
 
-
+// Back button style
 .button--back {
     align-items: flex-start;
     font-size: 1rem;
@@ -67,146 +127,4 @@
     background-color: inherit;
     border: none;
     box-shadow: none;
-}
-
-.button--normal {
-    @extend .button;
-
-    background-color: var(--color-accent);
-    color: white;
-    &:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        background-color: #006fa8;
-    }
-
-}
-
-
-.button--danger {
-    @extend .button;
-    $bg-color: $red-500;
-    background-color: $red-500;
-
-    &:hover {
-        background: $red-600;
-    }
-
-    &--active {
-        background-color: color.adjust($bg-color, $lightness: -15%);
-        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
-
-        transform: scale(0.98);
-
-        &:hover {
-            background: color.adjust($bg-color, $lightness: -25%);
-        }
-    }
-}
-
-
-.button--confirm {
-    @extend .button;
-    $bg-color: $lime-500;
-    background-color: $lime-500;
-    color: #fff;
-
-    &:hover {
-        background: $lime-600;
-    }
-
-    &--active {
-        background-color: color.adjust($bg-color, $lightness: -15%);
-        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
-
-        transform: scale(0.98);
-
-        &:hover {
-            background: color.adjust($bg-color, $lightness: -25%);
-        }
-    }
-}
-
-
-.button--gray {
-        @extend .button;
-    $bg-color: $stone-300;
-    background: $bg-color;
-
-    color: #fff;
-
-    &:hover {
-        background: $stone-400;
-    }
-
-    &--active {
-        background-color: color.adjust($bg-color, $lightness: -15%);
-        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
-
-        transform: scale(0.98);
-
-        &:hover {
-            background: color.adjust($bg-color, $lightness: -25%);
-        }
-    }
-}
-
-
-.button--info {
-    @extend .button;
-    $bg-color: $cyan-500;
-    background: $cyan-500;
-
-    color: #fff;
-
-    &:hover {
-        background: $cyan-600;
-    }
-
-    &--active {
-        background-color: color.adjust($bg-color, $lightness: -15%);
-        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
-
-        transform: scale(0.98);
-
-        &:hover {
-            background: color.adjust($bg-color, $lightness: -25%);
-        }
-    }
-
-}
-
-
-
-.button--blue {
-    @extend .button;
-    background: $sky-400;
-
-    color: #fff;
-
-    &:hover {
-        background: $blue-700;
-    }
-}
-
-
-.button--purple {
-    @extend .button;
-    background: $purple-500;
-    background-color: oklch(0.8 0.15 220);
-    color: #fff;
-
-    &:hover {
-        background: $purple-700;
-    }
-}
-.button--fit {
-    @extend .button;
-    background: $purple-500;
-    width: fit-content;
-    background-color: oklch(0.8 0.15 220);
-    color: #fff;
-
-    &:hover {
-        background: $purple-700;
-    }
 }
