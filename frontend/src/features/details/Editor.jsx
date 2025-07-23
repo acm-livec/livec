@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo } from 'react'
-import { createEditor } from 'slate'
-import { Slate, Editable, withReact } from 'slate-react'
+import { createEditor, Transforms, Editor as SlateEditor, Element as SlateElement } from 'slate'
+import { Slate, Editable, withReact, useSlate } from 'slate-react'
 
 // Custom block types that should default to ordered lists when items are present
 const CUSTOM_ORDERED_LIST_TYPES = [
@@ -10,6 +10,9 @@ const CUSTOM_ORDERED_LIST_TYPES = [
   'illustrative-learning-outcomes',
   'professional-dispositions',
 ]
+
+// List types for toggling and indent/outdent
+const LIST_TYPES = ['numbered-list', 'bulleted-list']
 
 // Styled list renderer (copied from Page.jsx)
 const renderList = (children, type = 'ul', depth = 0) => {
@@ -23,7 +26,66 @@ const renderList = (children, type = 'ul', depth = 0) => {
   )
 }
 
-// Convert JSON blocks to Slate node structure
+// Toggle block formats (headings, lists)
+const isBlockActive = (editor, format) => {
+  const [match] = SlateEditor.nodes(editor, {
+    match: (n) => !SlateEditor.isEditor(n) && SlateElement.isElement(n) && n.type === format,
+  })
+  return !!match
+}
+
+const toggleBlock = (editor, format) => {
+  const isActive = isBlockActive(editor, format)
+  const isList = LIST_TYPES.includes(format)
+
+  Transforms.unwrapNodes(editor, {
+    match: (n) => LIST_TYPES.includes(!SlateEditor.isEditor(n) && SlateElement.isElement(n) && n.type),
+    split: true,
+  })
+
+  Transforms.setNodes(editor, { type: isActive ? 'paragraph' : isList ? 'list-item' : format })
+
+  if (!isActive && isList) {
+    Transforms.wrapNodes(editor, { type: format, children: [] }, { match: (n) => n.type === 'list-item' })
+  }
+}
+
+// Indent/outdent behavior for list items via Tab/Shift+Tab or toolbar
+const indentList = (editor) => {
+  const [match] = SlateEditor.nodes(editor, { match: (n) => n.type === 'list-item' })
+  if (match) {
+    const [, path] = match
+    const [parentNode] = SlateEditor.parent(editor, path)
+    if (LIST_TYPES.includes(parentNode.type)) {
+      Transforms.wrapNodes(editor, { type: parentNode.type, children: [] }, { at: path })
+    }
+  }
+}
+
+const outdentList = (editor) => {
+  const [match] = SlateEditor.nodes(editor, { match: (n) => LIST_TYPES.includes(n.type) })
+  if (match) {
+    const [, path] = match
+    Transforms.unwrapNodes(editor, { at: path })
+  }
+}
+
+// Simple toolbar button wrapper
+const BlockButton = ({ format, icon, action }) => {
+  const editor = useSlate()
+  return (
+    <button
+      onMouseDown={(e) => {
+        e.preventDefault()
+        if (action) action(editor)
+        else toggleBlock(editor, format)
+      }}
+      style={{ padding: '0.25rem 0.5rem', marginRight: '0.25rem', cursor: 'pointer' }}
+    >
+      {icon}
+    </button>
+  )
+}
 const jsonToSlateNodes = (blocks) => {
   const nodeForBlock = (block) => {
     if (block.items) {
@@ -103,7 +165,26 @@ export const PageEditor = ({ content = [] }) => {
 
   return (
     <Slate editor={editor} value={value} onChange={(newValue) => setValue(newValue)}>
-      <Editable renderElement={renderElement} placeholder="Enter content..." />
+      {/* Toolbar (non-editable) */}
+      <div contentEditable={false} style={{ marginBottom: '0.5rem' }}>
+        <BlockButton format="heading" icon="H1" />
+        <BlockButton action={(ed) => toggleBlock(ed, 'heading')} icon="H2" />
+        <BlockButton format="bulleted-list" icon="•" />
+        <BlockButton format="numbered-list" icon="1." />
+        <BlockButton action={indentList} icon="Tab→" />
+        <BlockButton action={outdentList} icon="←Tab" />
+      </div>
+      <Editable
+        renderElement={renderElement}
+        placeholder="Enter content..."
+        onKeyDown={(e) => {
+          if (e.key === 'Tab') {
+            e.preventDefault()
+            if (e.shiftKey) outdentList(editor)
+            else indentList(editor)
+          }
+        }}
+      />
     </Slate>
   )
 }
