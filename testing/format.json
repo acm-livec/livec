@@ -1,0 +1,126 @@
+[
+  {
+    "type": "h1",
+    "children": [{ "text": "All PlateJS Node Types & List Styles" }]
+  },
+  {
+    "type": "h2",
+    "children": [{ "text": "Headings" }]
+  },
+  {
+    "type": "h3",
+    "children": [{ "text": "This is an H3" }]
+  },
+  {
+    "type": "blockquote",
+    "children": [{ "text": "This is a blockquote node." }]
+  },
+  {
+    "type": "code_block",
+    "children": [
+      {
+        "type": "code_line",
+        "children": [{ "text": "console.log('Hello, PlateJS!');" }]
+      }
+    ]
+  },
+  {
+    "type": "hr",
+    "children": [{ "text": "" }]
+  },
+  {
+    "type": "p",
+    "children": [
+      { "text": "This is a " },
+      { "text": "bold", "bold": true },
+      { "text": ", " },
+      { "text": "italic", "italic": true },
+      { "text": ", " },
+      { "text": "underlined", "underline": true },
+      { "text": ", and " },
+      { "text": "strikethrough", "strikethrough": true },
+      { "text": " text." }
+    ]
+  },
+  {
+    "type": "p",
+    "children": [
+      { "text": "This is a " },
+      {
+        "type": "a",
+        "url": "https://platejs.org",
+        "children": [{ "text": "link" }]
+      },
+      { "text": "." }
+    ]
+  },
+
+  {
+    "type": "h2",
+    "children": [{ "text": "List Styles" }]
+  },
+
+  {
+    "type": "p",
+    "listStyleType": "disc",
+    "indent": 0,
+    "children": [{ "text": "Bullet (disc)" }]
+  },
+  {
+    "type": "p",
+    "listStyleType": "circle",
+    "indent": 0,
+    "children": [{ "text": "Bullet (circle)" }]
+  },
+  {
+    "type": "p",
+    "listStyleType": "square",
+    "indent": 0,
+    "children": [{ "text": "Bullet (square)" }]
+  },
+
+  {
+    "type": "p",
+    "listStyleType": "decimal",
+    "indent": 0,
+    "children": [{ "text": "Numbered (decimal)" }]
+  },
+  {
+    "type": "p",
+    "listStyleType": "lower-alpha",
+    "indent": 0,
+    "children": [{ "text": "Numbered (lower-alpha)" }]
+  },
+  {
+    "type": "p",
+    "listStyleType": "upper-alpha",
+    "indent": 0,
+    "children": [{ "text": "Numbered (upper-alpha)" }]
+  },
+  {
+    "type": "p",
+    "listStyleType": "lower-roman",
+    "indent": 0,
+    "children": [{ "text": "Numbered (lower-roman)" }]
+  },
+  {
+    "type": "p",
+    "listStyleType": "upper-roman",
+    "indent": 0,
+    "children": [{ "text": "Numbered (upper-roman)" }]
+  },
+
+  {
+    "type": "p",
+    "listStyleType": "none",
+    "indent": 0,
+    "children": [{ "text": "No list marker (none)" }]
+  },
+
+
+  {
+    "type": "media",
+    "url": "https://example.com/image.jpg",
+    "children": [{ "text": "" }]
+  }
+]

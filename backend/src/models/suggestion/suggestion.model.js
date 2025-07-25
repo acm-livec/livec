@@ -245,8 +245,8 @@ class Suggestion {
 
 
 
-    insertDocumentation(action, author, text) {
-        this.documentation.push(new Documentation({ action, author, text }).toObject())
+    insertDocumentation(action, author, content) {
+        this.documentation.push(new Documentation({ action, author, content }).toObject())
     }
 
 

@@ -8,11 +8,11 @@ import { FlexColumn, FlexRow, Container } from '@components/layouts/flex';
 // ─── UI Components ───────────────────────────────────────────────────────
 import { BackButton, Button } from '@components/buttons';
 import Modal, { DefaultView, ConfirmationView } from '@components/popups/Modal';
-import { SectionEditor, DocumentationEditor } from '@components/tiptap/editor';
+// import { SectionEditor, DocumentationEditor } from '@components/tiptap/editor';
 import Card from '@features/document/Card';
 import Documentation from '@features/document/Documentation';
 import Page from '@features/details/Page';
-import { Form, CheckboxGroup, RadioGroup } from '@components/input';
+import { Form, CheckboxGroup, RadioGroup, RadioAsCheckbox } from '@components/input';
 // ─── Feature Components ──────────────────────────────────────────────────
 import Suggestion from '@features/suggestion/Suggestion';
 import ActionButtons from '@features/editor-in-chief/ActionButtons';
@@ -71,18 +71,18 @@ export default function FullView({ suggestion, user }) {
 
 
             <SubGrid columns={'1fr 3fr'} rows={1} rowSpan={1} colSpan={5}>
-                <DocumentationPanel suggestion={suggestion} documentation={suggestion.documentation} />
+                <DocumentationPanel suggestion={suggestion} documentation={suggestion.documentation} user={user}/>
             </SubGrid>
 
         </Grid>
     )
 }
 
-import PageEditor from '@features/details/Editor';
 
-const DocumentationPanel = ({ suggestion, documentation }) => {
-    const [docText, setDocText] = useState("")
+const DocumentationPanel = ({ suggestion, documentation, user }) => {
+    const [docText, setDocText] = useState()
     const { toggle, toggleView } = useToggle()
+    const {document} = useAssociateEditor()
     return (
         <>
             <FlexColumn className='border-r-gray-300' align='stretch' style={{ paddingRight: '2rem', paddingBottom: '0' }}>
@@ -102,7 +102,8 @@ const DocumentationPanel = ({ suggestion, documentation }) => {
 
 
             <GridPanel style={{ padding: '2.5%', paddingBottom: '0' }}>
-                {!toggle ? <div className='doc-text'><Documentation html={docText} /></div> : <DocumentationEditor refId={suggestion.id} />}
+                {!toggle ? <div className='doc-text'><Documentation html={docText} /></div> : 
+                <PlateEditor content={[]} LOCAL_STORAGE_KEY={suggestion.id+user.id} action={() => document(suggestion.id, suggestion.id+user.id)}/>}
             </GridPanel>
         </>
     )
@@ -133,7 +134,7 @@ const SuggestionContent = ({ suggestion, role }) => {
                 {role === Roles.EDITOR_IN_CHIEF && <ActionButtons setView={setVariant} isActive={isActive} />}
                 {(role === Roles.REVIEWER && suggestion.system.status === "deferred") &&
                     <Form showConfirmation={{ defaultInfo: <RecModal />, successInfo: <></> }} onSubmit={(formData) => recommend(suggestion.id, formData)}>
-                        <RadioGroup keyName='decision' options={options} />
+                        <RadioAsCheckbox keyName='decision' options={options} />
                     </Form>}
             </GridPanel>
 
@@ -168,7 +169,7 @@ const Revs = ({suggestion }) => {
     )
 }
 
-
+import PlateEditor from '@features/details/PlateEditor';
 
 
 const SectionView = ({suggestion, text, id, role, rev }) => {
@@ -182,9 +183,9 @@ const SectionView = ({suggestion, text, id, role, rev }) => {
             </FlexRow>
 
             <Container colSpan={2} rowSpan={9}>
-                {currentView === 'current' && <Page page={text} />}
-                {role === Roles.ASSOCIATE_EDITOR && currentView === 'editor' && <PageEditor content={suggestion.section.content}/>}
-                {(role === Roles.EDITOR_IN_CHIEF || role === Roles.REVIEWER) && currentView === 'editor' && <Page page={rev} />}
+                {currentView === 'current' && <Page page={suggestion.section} />}
+                {role === Roles.ASSOCIATE_EDITOR && currentView === 'editor' && <PlateEditor content={suggestion.section.content} LOCAL_STORAGE_KEY={suggestion.id}/>}
+                {(role === Roles.EDITOR_IN_CHIEF || role === Roles.REVIEWER) && currentView === 'editor' && <Page page={suggestion.revisedSection} />}
             </Container>
 
             <Container colSpan={1} rowSpan={9}>

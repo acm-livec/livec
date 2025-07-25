@@ -2,8 +2,8 @@
 @use './_colors' as *;
 
 .document--computer-science {
-    @include flex-container(column, $gap: 1rem);
     // padding: 2.5%;
+    margin: 0;
     background-color: $stone-50;
     width: 100%;
 
@@ -35,36 +35,22 @@
     }
 
 
-    // ol,
-    // ul {
+    ol,
+    ul {
 
-    //     gap: 0.75rem;
-    //     padding-left: 2rem;
-    // }
-
-
-    // li {
-    //     display: list-item;
-    //     list-style-position: outside;
-    //     padding-left: 1em;
-    //     break-inside: avoid;
-    //     margin-bottom: 1rem;
-    //     align-items: center;
-
-    // }
-
-    // li::marker {
-    //     content: '• ';
-    //     font-size: 1.5em;
-    //     color: black;
-    // }
-    .custom-list.depth-1 {
-        list-style-type: circle;
+        list-style-position: outside;
+         padding-left: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
     }
 
-    .custom-list.depth-2 {
-        list-style-type: square;
+
+    li {
+        display: list-item;
+
+
+
     }
+
+  
 
     code {
         font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;

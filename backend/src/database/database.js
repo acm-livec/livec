@@ -5,7 +5,6 @@ const { JSONFile } = require('lowdb/node');
 
 const resolve = (...segments) => path.resolve(__dirname, ...segments);
 
-let hasReset = false;
 
 
 function createDB(targetPath, defaultJsonPath, { forceReset = false } = {}) {
@@ -17,7 +16,7 @@ function createDB(targetPath, defaultJsonPath, { forceReset = false } = {}) {
     (async () => {
         try {
             await db.read();
-            if (forceReset && !hasReset) {
+            if (forceReset || !db.data) {
                 db.data = defaultData;
                 await db.write();
             }
@@ -27,16 +26,7 @@ function createDB(targetPath, defaultJsonPath, { forceReset = false } = {}) {
             await db.write();
         }
 
-        // fs.watchFile(filePath, { interval: 1000 }, async (curr, prev) => {
-        //     if (curr.mtimeMs > prev.mtimeMs) {
-        //         try {
-        //             await db.read();
-        //         } catch (err) {
-        //             console.warn(`⚠️ Failed to hot-reload ${filePath}:`, err.message);
-        //         }
-        //     }
-        // });
-        hasReset = true;
+
 
     })();
 
@@ -44,45 +34,8 @@ function createDB(targetPath, defaultJsonPath, { forceReset = false } = {}) {
 }
 
 
-// function createDB(filename, defaultJsonPath) {
-//     const filePath = path.join(__dirname, filename);
-//     const defaultData = require(resolve(defaultJsonPath));
 
-//     const adapter = new JSONFile(filePath);
-//     const db = new Low(adapter, defaultData);
-
-//     (async () => {
-//         const existed = fs.existsSync(filePath);
-
-//         try {
-//             await db.read();
-//             if (db.data === null || db.data === undefined) {
-//                 db.data = defaultData;
-//                 if (!existed) await db.write();
-//             }
-//         } catch (err) {
-//             console.warn(`⚠️ Failed to read ${filename}, reinitializing with defaults.`);
-//             db.data = defaultData;
-//             await db.write();
-//         }
-
-//         // Watch the file for external changes, safely re-read
-//         fs.watchFile(filePath, { interval: 1000 }, async (curr, prev) => {
-//             if (curr.mtimeMs > prev.mtimeMs) {
-//                 try {
-//                     await db.read();
-//                 } catch (err) {
-//                     console.warn(`⚠️ Failed to hot-reload ${filename}:`, err.message);
-//                 }
-//             }
-//         });
-//     })();
-
-//     return db;
-// }
-
-// Initialize your DB structure
-const reset = !(process.env.RESET_DB === 'true');
+const reset = false
 
 const db = {
     users: {
@@ -121,8 +74,20 @@ const db = {
                 { forceReset: reset }
             ),
             pageContent: createDB(
-                'data/curriculums/computer-science/codex.json',
-                'data/curriculums/computer-science/default/codex.json',
+                'data/curriculums/computer-science/page_content.json',
+                'data/curriculums/computer-science/default/page_content.json',
+                { forceReset: reset }
+            )
+        },
+        cybersecurity: {
+            tableOfContents: createDB(
+                'data/curriculums/cybersecurity/table_of_contents.json',
+                'data/curriculums/cybersecurity/default/table_of_contents.json',
+                { forceReset: reset }
+            ),
+            pageContent: createDB(
+                'data/curriculums/cybersecurity/page_content.json',
+                'data/curriculums/cybersecurity/default/page_content.json',
                 { forceReset: reset }
             )
         }

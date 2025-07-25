@@ -2,15 +2,17 @@ import styles from './SuggestionBox.module.scss';
 import { useNavigate } from 'react-router';
 import useSuggestion from '@hooks/useSuggestion';
 import { UserContext } from '@context/UserProvider';
-import { useContext, useState } from 'react';
-// import { Form, SubmitButton } from '@components/form';
-// import { TextArea, TextField } from '@components/form/input';
+import { useContext, useEffect } from 'react';
+
 import { Form, TextField, Dropdown, TextArea } from './input';
 
 export default function SuggestionBox({ sectionId }) {
     const { user } = useContext(UserContext)
-    const { submit, response, setResponse } = useSuggestion(null);
+    const { submit, response, setResponse } = useSuggestion();
 
+    useEffect(() => {
+        setResponse(null)
+    }, [sectionId])
 
     const close = () => {
         setResponse(null)

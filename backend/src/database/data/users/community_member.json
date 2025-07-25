@@ -5,11 +5,7 @@
     "email": "johndoe@email.com",
     "password": "password",
     "role": "community-member",
-    "suggestions": [
-      "SCOSC-pfks_ub2",
-      "SCOSC-qFT38twl",
-      "SCOSC-jCYtmeAr"
-    ]
+    "suggestions": []
   },
   {
     "id": "CM-6482",

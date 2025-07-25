@@ -85,9 +85,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding: 1rem 0.5rem;
-    // margin-bottom: 1rem;
-    /* font-size: calc((var(--indent-size)));
-     padding-left: var(--indent-size, 0); */
+
 }
 
 .toc-item:hover {
@@ -114,7 +112,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 2.5%;
     padding-bottom: 50vh;
     position: relative;
     overflow-y: auto;

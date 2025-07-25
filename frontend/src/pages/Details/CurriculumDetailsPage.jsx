@@ -7,21 +7,24 @@ import Breadcrumbs from '@components/BreadCrumbs';
 import SuggestionBox from '@components/SuggestionBox';
 import useTableOfContents from '@features/details/useTableOfContents';
 import { Disciplines } from '@utils/constants';
-import { FlexRow } from '@components/layouts/flex';
+import { FlexColumn, FlexRow } from '@components/layouts/flex';
 import { Button } from '@components/buttons';
 import TableOfContents from '@features/details/TableOfContents';
 import { PublicForum } from '@features/details/Forum';
+import { toTitleCase } from '@utils/format';
+
+
 export default function CurriculumDetailsPage({ selectedCurriculum = sessionStorage.getItem('curriculum') }) {
     const {
         currentPage, nextPage, tableOfContents,
         previousPage,
         setCurrentPage,
-    } = useTableOfContents(Disciplines.COMPUTER_SCIENCE)
+    } = useTableOfContents(selectedCurriculum)
 
     const [showPdf, setShowPdf] = useState(false);
 
 
-    if (tableOfContents.length <= 0 || !currentPage) return null
+    if (tableOfContents.length <= 0 || !currentPage) return <h1>We working on it</h1>
 
 
     return (
@@ -34,7 +37,7 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                 </div>
 
                 <h1 className="curricula-heading">
-                    {selectedCurriculum || sessionStorage.getItem('curriculum')}
+                    {toTitleCase(selectedCurriculum) || "None"}
                     <hr />
                 </h1>
 
@@ -60,33 +63,40 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                     <PdfView />
                 ) : (
                     <>
-                        <Page page={currentPage} />
-                        <FlexRow justify='space-between' style={{ width: '100%' }}>
-                            <Button
-                                style={{ marginRight: 'auto' }}
-                                size='fit-content'
-                                disableOn={currentPage?.isFirst || false}
-                                onClick={previousPage}
-                                text='<' />
-                            <Button
-                                style={{ marginLeft: 'auto' }}
-                                size='fit-content'
-                                disableOn={currentPage?.isLast || false}
-                                onClick={nextPage}
-                                text='>' />
-                        </FlexRow>
-                        <hr style={{ color: 'black', width: '100%' }} />
-                        <SuggestionBox sectionId={currentPage?.id} />
-                        <hr />
+                        <div className='flex flex-col gap-3.5 px-[2.5%] pt-20 pb-0 sticky top-0 bg-inherit z-10'>
+                            <h1 className='text-sky-600'>| {currentPage?.meta.parent_heading || currentPage?.title}</h1>
+                             <hr style={{ color: 'black', width: '100%' }} />
+                        </div>
+                        <FlexColumn padding={'2.5%'} gap='1.5rem'>
 
-                        {currentPage?.public_feedback &&
-                            <>
-                                <h1>
-                                    See what other have commented
-                                </h1>
-                                <PublicForum fb={currentPage?.public_feedback} />
-                            </>
-                        }
+                            <Page page={currentPage} />
+                            <FlexRow justify='space-between' style={{ width: '100%' }}>
+                                <Button
+                                    style={{ marginRight: 'auto' }}
+                                    size='fit-content'
+                                    disableOn={currentPage?.isFirst || false}
+                                    onClick={previousPage}
+                                    text='<' />
+                                <Button
+                                    style={{ marginLeft: 'auto' }}
+                                    size='fit-content'
+                                    disableOn={currentPage?.isLast || false}
+                                    onClick={nextPage}
+                                    text='>' />
+                            </FlexRow>
+                            <hr style={{ color: 'black', width: '100%' }} />
+                            <SuggestionBox sectionId={currentPage?.id} />
+                            <hr />
+
+                            {currentPage?.public_feedback &&
+                                <>
+                                    <h2>
+                                        See what others have commented on this section
+                                    </h2>
+                                    <PublicForum fb={currentPage?.public_feedback} />
+                                </>
+                            }
+                        </FlexColumn>
                     </>
                 )}
             </PageContent>
@@ -108,9 +118,9 @@ const SideBar = ({ children }) => {
 
 const PageContent = ({ children }) => {
     return (
-        <div className="flex col pdf-container">
+        <FlexColumn gap="1rem" className="pdf-container gap-1">
             {children}
-        </div>
+        </FlexColumn>
     )
 }
 

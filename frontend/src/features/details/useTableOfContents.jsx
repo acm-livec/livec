@@ -18,7 +18,7 @@ export default function useTableOfContents(curriculum) {
   
 
     useEffect(() => {
-        getCurriculum(Disciplines.COMPUTER_SCIENCE)
+        getCurriculum(curriculum)
             .then((res) => {
                 
                 if (res.length > 0) {

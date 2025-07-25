@@ -18,7 +18,7 @@ export default function Header() {
                 <div className='logo'>
                     <img className='logo__img ' src={acmLogo}></img>
                 </div>
-                <h1 className='site-name monts'>LiveC</h1>
+                <h1 className='site-name  text-2xl font-medium font-monts'>LiveC</h1>
             </div>
 
             <nav className='navigation'>

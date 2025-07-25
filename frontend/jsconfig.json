@@ -1,30 +1,31 @@
 {
-	"compilerOptions": {
-		"target": "ESNext",
-		"module": "ESNext",
-		"moduleResolution": "Node",
-		"baseUrl": ".",
-		"paths": {
-		"@*": ["src/*"],
-		"@root": ["."],
-		"@utils/*": ["src/utils/*"],
-		"@models/*": ["src/models/*"],
-		"@controllers/*": ["src/controllers/*"],
-		"@routes/*": ["src/routes/*"],
-		"@database/*": ["src/database/*"],
-		"@constants/*": ["src/constants/*"],
-		"@services/*": ["src/services/*"],
-		"@errors": ["src/errors/index.js"],
-		"@logger": ["logger/logger.js"],
-		"@documentation/*": ["../documentation/*"]
-		},
-		"jsx": "react-jsx",
-		"checkJs": true,
-		"allowJs": true,
-		"resolveJsonModule": true,
-		"experimentalDecorators": true,
-		"forceConsistentCasingInFileNames": true
-	},
-	"exclude": ["node_modules", "dist"],
-	"include": ["src/**/*", "../archived/data", "../documentation", "../archived/TableOfContents.jsx"]
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@api/*": ["src/api/*"],
+      "@data/*": ["src/data/*"],
+      "@pages/*": ["src/pages/*"],
+      "@features/*": ["src/features/*"],
+      "@styles/*": ["src/styles/*"],
+      "@context/*": ["src/context/*"],
+      "@assets/*": ["src/assets/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@sections/*": ["src/pages/Home/sections/*"],
+      "@lib/*": ["src/lib/*"],
+      "@documentation/*": ["../documentation/*"]
+    },
+    "jsx": "react-jsx",
+    "checkJs": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src", "../documentation"]
 }

@@ -1,0 +1,24 @@
+Prompt to extract main Knowledge Areas and Knowledge Units from csec2017.pdf for each section in built_sections_cyber.json:
+
+- Use built_sections_cyber.json as the table of contents. Each entry includes:
+  - "id": unique section identifier
+  - "title": section title
+  - "page_number": page in csec2017.pdf where the section starts
+
+- For each section in order:
+  - Open csec2017.pdf at the specified page_number.
+  - Identify all Knowledge Area headings (strings starting with "Knowledge Area").
+  - For each Knowledge Area, output a PlateJS-compatible h2 node:
+      { "type": "h2", "children": [ { "text": "<Knowledge Area Heading>" } ] }
+  - Under each Knowledge Area, identify all Knowledge Unit subheadings (strings starting with "Knowledge Unit") and output each as an h3 node:
+      { "type": "h3", "children": [ { "text": "<Knowledge Unit Heading>" } ] }
+  - Do not extract any other text blocks at this stage.
+  - After extracting Knowledge Areas and Units for the current section, ask:
+      "Would you like to extract the remaining content (paragraphs, lists, examples, etc.) from this section? (yes/no)"
+    - If the user responds "yes", then extract all remaining text blocks in PlateJS node format (type "p" for paragraphs, list nodes for lists, etc.) and append them to the content array.
+    - If the user responds "no", proceed to the next section.
+
+- Continue until all sections in built_sections_cyber.json have been processed.
+- Output the final JSON array to cyber_content.json, preserving the "id" field for each section. The structure and formatting must match the example in output.json for CS2023.pdf.
+
+Refer to output.json and table_of_contents.json for CS2023.pdf in this directory for exact formatting conventions.

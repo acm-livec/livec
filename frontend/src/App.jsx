@@ -11,7 +11,8 @@ export default function App() {
 		<>
 			<UserProvider>
 				<Header />
-				<main>
+				<main className="prose prose-base w-full max-w-full">
+				{/* <main > */}
 					<AppRoutes />
 				</main>
 			</UserProvider>

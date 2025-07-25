@@ -5,13 +5,13 @@ import { logger } from '@utils/logger'
 import { UserContext } from '@context/UserProvider';
 import { getReviewers } from "@utils/api-handlers/users/get-reviewers";
 import { AssociateEditorActions } from "@documentation/constants/actions";
-import { 
-    postRejection, 
-    postStartReview, 
-    postDocumentation, 
-    postAssociateEditorFinalization, 
-    postAssignReviewers, 
-    postDeferral 
+import {
+    postRejection,
+    postStartReview,
+    postDocumentation,
+    postAssociateEditorFinalization,
+    postAssignReviewers,
+    postDeferral
 } from "@utils/api-handlers/suggestions";
 
 
@@ -77,7 +77,16 @@ export default function useAssociateEditor() {
         try {
             logger.startProcess('Reject Suggestion')
             logger.debug({ suggestionId, forPrivate, forPublic })
-            const success = await postRejection(suggestionId, associateEditorId, forPrivate, forPublic)
+            const strucPriv = [{
+                type: 'p',
+                children: [{ text: forPrivate }]
+            }]
+            logger.debug({ suggestionId, forPrivate, forPublic })
+            const strucPub = [{
+                type: 'p',
+                children: [{ text: forPublic }]
+            }]
+            const success = await postRejection(suggestionId, associateEditorId, strucPriv, strucPub)
             logger.success('Suggestion rejected:', { suggestionId, success })
             return success
         } catch (error) {
@@ -110,7 +119,16 @@ export default function useAssociateEditor() {
         try {
             logger.startProcess('Accept Suggestion')
             logger.debug({ suggestionId, forPrivate, forPublic })
-            const success = await postStartReview(suggestionId, associateEditorId, forPrivate, forPublic)
+             const strucPriv = [{
+                type: 'p',
+                children: [{ text: forPrivate }]
+            }]
+            logger.debug({ suggestionId, forPrivate, forPublic })
+            const strucPub = [{
+                type: 'p',
+                children: [{ text: forPublic }]
+            }]
+            const success = await postStartReview(suggestionId, associateEditorId, strucPriv, strucPub)
             logger.success('Review started for suggestion:', { suggestionId, success })
             return success
         } catch (error) {
@@ -135,10 +153,10 @@ export default function useAssociateEditor() {
     const document = async (suggestionId, documentationId) => {
         try {
             logger.startProcess('Add Documentation')
-            const html = localStorage.getItem(documentationId)
-            if (!html) throw new Error('No documentation available')
-            logger.debug({ suggestionId, documentationId, htmlLength: html.length })
-            await postDocumentation(suggestionId, associateEditorId, html)
+            const docs = JSON.parse(localStorage.getItem(documentationId))
+            if (!docs) throw new Error('No documentation available')
+            logger.debug({ suggestionId, documentationId, htmlLength: docs.length })
+            await postDocumentation(suggestionId, associateEditorId, docs)
             logger.success('Documentation added for suggestion:', { suggestionId })
             localStorage.removeItem(documentationId)
             navigate(0)
@@ -161,7 +179,7 @@ export default function useAssociateEditor() {
      * @returns {Promise<void>} A promise resolving when the suggestion is finalized.
      */
     const finalize = async (suggestionId) => {
-        const updatedSection = localStorage.getItem(suggestionId)
+        const updatedSection = JSON.parse(localStorage.getItem(suggestionId))
         if (!updatedSection) throw new Error('No updated section available')
         try {
             logger.startProcess('Finalize Suggestion')
@@ -193,7 +211,16 @@ export default function useAssociateEditor() {
         try {
             logger.startProcess('Defer Suggestion')
             logger.debug({ suggestionId, forPrivate, forPublic, reviewer })
-            await postDeferral(suggestionId, forPrivate, forPublic, reviewer)
+            const strucPriv = [{
+                type: 'p',
+                children: [{ text: forPrivate }]
+            }]
+            logger.debug({ suggestionId, forPrivate, forPublic })
+            const strucPub = [{
+                type: 'p',
+                children: [{ text: forPublic }]
+            }]
+            await postDeferral(suggestionId, strucPriv, strucPub, reviewer)
             logger.success('Suggestion deferred to reviewer:', { suggestionId, reviewer })
         } catch (error) {
             logger.error(error)
@@ -203,7 +230,7 @@ export default function useAssociateEditor() {
     }
 
 
-    
+
 
     /**
      * Assigns one or more reviewers to a suggestion.

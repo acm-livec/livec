@@ -1,8 +1,7 @@
 // Sass modules (variables + utilities)
 @forward '_colors.scss';
 @forward 'util.scss';
-@forward './_borders.scss';
-@forward './spacing.scss';
+
 @forward './csdoc-styling.scss';
 
 // Plain CSS files: use @import instead

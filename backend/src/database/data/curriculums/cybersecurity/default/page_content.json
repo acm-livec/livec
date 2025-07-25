@@ -1,0 +1,3122 @@
+[
+    {
+        "id": "76390c450524",
+        "content": []
+    },
+    {
+        "id": "0dc45648bc8a",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The Joint Task Force"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 Joint Task Force on Cybersecurity Education (JTF) was officially\nlaunched in September 2015 as a collaboration between major international computing\nsocieties: Association for Computing Machinery (ACM), IEEE Computer Society\n(IEEE CS)\u00b0, Association for Information Systems Special Interest Group on Information"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1 See, for example, CSO Online: http://www.csoonline.com/article/2953258/it-careers/cybersecurity-job-\nmarket-figures-2015-to-2019-indicate-severe-workforce-shortage.html"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "(ISC)2 Report available here:\nhttps://www.boozallen.com/content/dam/boozallen/documents/Viewpoints/2015/04/frostsulliva\nn-ISC2-global-information-security-workforce-2015.pdf"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "3 ACM Curriculum Committee on Computer Science. 1968. Curriculum 68: Recommendations for\nAcademic Programs in Computer Science. Comm. ACM 11, 3 (Mar. 1968), 151-197."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "4 acM Computing Disciplines Overview: http://acm.org/education/curricula-recommendations"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "5 IEEE CS website: https://www.computer.org/"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Security and Privacy (AIS SIGSEC)\u00b0, and International Federation for Information\nProcessing Technical Committee on Information Security Education (IFIP WG 11.8)\u2019."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The ACM Education Board appointed the CSEC2017 JTF co-chairs. In addition to the\nco-chairs, the CSEC2017 JTF includes nine leading cybersecurity professionals selected\nby the participating professional societies to represent their constituencies and to provide\na diverse set of perspectives. The JTF members are listed along with their affiliations at\nthe beginning of this document."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF is an outcome of the Cyber Education Project (CEP)*. The CEP\ninitiative was organized in July 2014 by a group of computing professionals who\nrepresented a diverse cross-section of academic institutions and professional societies.\nThe CEP mission was two-fold: to initiate the processes for (1) developing undergraduate\ncurricular guidance; and (2) establishing a case for the accreditation of educational\nprograms in the cyber sciences."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF is advancing the first mission of the CEP:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "To develop comprehensive curricular guidance in cybersecurity education that\nwill support future program development and associated educational efforts at the\npost-secondary level."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "While the CSEC2017 JTF has chosen to use the more generally accepted term\ncybersecurity instead of the term cyber sciences advanced by the CEP\u00ae, conceptually the\nterms are consistent."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "51f8aba60dd4",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The Vision"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF has worked actively since its inception in September of 2015 to\ndefine project parameters and establish a foundational vision, mission and goals. The\nproject vision is:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 curricular volume will be the leading resource of comprehensive\ncybersecurity curricular content for global academic institutions seeking to\ndevelop a broad range of cybersecurity offerings at the post-secondary level."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "e2990264a208",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The Mission\nThe CSEC2017 mission is twofold:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To develop comprehensive and flexible curricular guidance in cybersecurity\neducation that will support future program development and associated\neducational efforts at the post-secondary level, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To produce a curricular volume that structures the cybersecurity discipline and\nprovides guidance to institutions seeking to develop or modify a broad range of\nprograms, concentrations and/or courses rather than a prescriptive document to\nsupport a single program type."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "6 AIS SIGSEC website: http://aisnet.org/group/SIGSEC\n7 IFIP WG 11.8 website: https://www.ifiptc11.org/wg118\n8 Cyber Education Project website: http://cybereducationproject.org/about/"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "10"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "5c5b9b37f502",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The Goals"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Based on this mission, the CSEC2017 JTF established the following goals for the\ncurricular volume:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To describe a vision of proficiency in cybersecurity,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To define a structure for the cybersecurity discipline by developing a thought\nmodel that defines the boundaries of the discipline and outlines key dimensions of\nthe curricular structure,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To support the alignment of academic programs with industry needs in\ncybersecurity,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To involve broad global audience of stakeholders through continuous community\nengagement during the development process,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To develop curricular guidance that is comprehensive enough to support a wide\nrange of program types, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To develop curricular guidance that is grounded in fundamental principles that\nprovide stability, yet is structured to provide flexibility to support evolving\nprogram needs."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "46ce929b99cd",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Security and Privacy (AIS SIGSEC)\u00b0, and International Federation for Information\nProcessing Technical Committee on Information Security Education (IFIP WG 11.8)\u2019."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The ACM Education Board appointed the CSEC2017 JTF co-chairs. In addition to the\nco-chairs, the CSEC2017 JTF includes nine leading cybersecurity professionals selected\nby the participating professional societies to represent their constituencies and to provide\na diverse set of perspectives. The JTF members are listed along with their affiliations at\nthe beginning of this document."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF is an outcome of the Cyber Education Project (CEP)*. The CEP\ninitiative was organized in July 2014 by a group of computing professionals who\nrepresented a diverse cross-section of academic institutions and professional societies.\nThe CEP mission was two-fold: to initiate the processes for (1) developing undergraduate\ncurricular guidance; and (2) establishing a case for the accreditation of educational\nprograms in the cyber sciences."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF is advancing the first mission of the CEP:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "To develop comprehensive curricular guidance in cybersecurity education that\nwill support future program development and associated educational efforts at the\npost-secondary level."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "While the CSEC2017 JTF has chosen to use the more generally accepted term\ncybersecurity instead of the term cyber sciences advanced by the CEP\u00ae, conceptually the\nterms are consistent."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.1.1 The Vision"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF has worked actively since its inception in September of 2015 to\ndefine project parameters and establish a foundational vision, mission and goals. The\nproject vision is:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 curricular volume will be the leading resource of comprehensive\ncybersecurity curricular content for global academic institutions seeking to\ndevelop a broad range of cybersecurity offerings at the post-secondary level."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.1.2 The Mission\nThe CSEC2017 mission is twofold:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To develop comprehensive and flexible curricular guidance in cybersecurity\neducation that will support future program development and associated\neducational efforts at the post-secondary level, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To produce a curricular volume that structures the cybersecurity discipline and\nprovides guidance to institutions seeking to develop or modify a broad range of\nprograms, concentrations and/or courses rather than a prescriptive document to\nsupport a single program type."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "6 AIS SIGSEC website: http://aisnet.org/group/SIGSEC\n7 IFIP WG 11.8 website: https://www.ifiptc11.org/wg118\n8 Cyber Education Project website: http://cybereducationproject.org/about/"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "10"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017\n1.1.3 The Goals"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Based on this mission, the CSEC2017 JTF established the following goals for the\ncurricular volume:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To describe a vision of proficiency in cybersecurity,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To define a structure for the cybersecurity discipline by developing a thought\nmodel that defines the boundaries of the discipline and outlines key dimensions of\nthe curricular structure,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To support the alignment of academic programs with industry needs in\ncybersecurity,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To involve broad global audience of stakeholders through continuous community\nengagement during the development process,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To develop curricular guidance that is comprehensive enough to support a wide\nrange of program types, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To develop curricular guidance that is grounded in fundamental principles that\nprovide stability, yet is structured to provide flexibility to support evolving\nprogram needs."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.2 The Audience"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF defines the primary and secondary audiences for this cybersecurity\nguidance below."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Primary audience:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Faculty members in computing-based disciplines at academic institutions around\nthe world who are interested in developing cybersecurity programs, defining new\ncybersecurity concentrations within existing programs, or augmenting existing\nprograms (including existing concentrations and courses) to incorporate\ncybersecurity content."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Secondary audience:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Industry members who will assist with cybersecurity program development within\nacademic institutions, develop industry-based programs, and be consumers of the\nstudent outcomes of these programs,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Training and professional development providers,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Faculty members in non-computing based disciplines who are developing or\nintend to develop allied programs that teach cybersecurity concepts and skills,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Academic administrators with oversight for program and course development and\nrevision,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Workforce framework developers (government and non-government),\ne Policymakers,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e@ Members of the K-12 educational community who are preparing students to enter\npost-secondary education in cybersecurity, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "11"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "b74fc615a579",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017\n1.1.3 The Goals"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Based on this mission, the CSEC2017 JTF established the following goals for the\ncurricular volume:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To describe a vision of proficiency in cybersecurity,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To define a structure for the cybersecurity discipline by developing a thought\nmodel that defines the boundaries of the discipline and outlines key dimensions of\nthe curricular structure,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To support the alignment of academic programs with industry needs in\ncybersecurity,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To involve broad global audience of stakeholders through continuous community\nengagement during the development process,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To develop curricular guidance that is comprehensive enough to support a wide\nrange of program types, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e To develop curricular guidance that is grounded in fundamental principles that\nprovide stability, yet is structured to provide flexibility to support evolving\nprogram needs."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.2 The Audience"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF defines the primary and secondary audiences for this cybersecurity\nguidance below."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Primary audience:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Faculty members in computing-based disciplines at academic institutions around\nthe world who are interested in developing cybersecurity programs, defining new\ncybersecurity concentrations within existing programs, or augmenting existing\nprograms (including existing concentrations and courses) to incorporate\ncybersecurity content."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Secondary audience:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Industry members who will assist with cybersecurity program development within\nacademic institutions, develop industry-based programs, and be consumers of the\nstudent outcomes of these programs,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Training and professional development providers,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Faculty members in non-computing based disciplines who are developing or\nintend to develop allied programs that teach cybersecurity concepts and skills,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Academic administrators with oversight for program and course development and\nrevision,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Workforce framework developers (government and non-government),\ne Policymakers,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e@ Members of the K-12 educational community who are preparing students to enter\npost-secondary education in cybersecurity, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "11"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Other stakeholders involved with cybersecurity workforce development\ninitiatives.\n1.3 Sources\nThe curricular guidelines developed in this document build upon prior work in computer\nsecurity, information assurance and cyber security education, training, and workforce"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "development. In addition to the sources listed later in this document under References.\nmajor sources used in the development of this document include:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Computer Science Curricula 2013: Curriculum Guidelines for Undergraduate\nDegree Programs in Computer Science,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Global IT Skills Framework for the Information Age (SFIA),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Requirements of the U.S. National Security Agency and U.S. Department of\nHomeland Security National Centers of Academic Excellence in Cyber Defense\nand Cyber Operations,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Information Technology Curricula 2017: Curriculum Guidelines for\nBaccalaureate Degree Programs in Information Technology,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Guide to the Systems Engineering Body of Knowledge, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e USS. National Initiative for Cybersecurity Education (NICE) Cybersecurity\nWorkforce Framework."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4 Global Community Engagement"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "has."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 1. Global engagement activities."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF continuously engaged the broad stakeholder community throughout\nthe development process. Community members provided input to shape the approach,\ncontent and organizational structure of the CSEC report. Community engagement\nactivities have included: special sessions, panels and workshops at conferences affiliated"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "12"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "0da9aaa75cd9",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Other stakeholders involved with cybersecurity workforce development\ninitiatives.\n1.3 Sources\nThe curricular guidelines developed in this document build upon prior work in computer\nsecurity, information assurance and cyber security education, training, and workforce"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "development. In addition to the sources listed later in this document under References.\nmajor sources used in the development of this document include:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Computer Science Curricula 2013: Curriculum Guidelines for Undergraduate\nDegree Programs in Computer Science,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Global IT Skills Framework for the Information Age (SFIA),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Requirements of the U.S. National Security Agency and U.S. Department of\nHomeland Security National Centers of Academic Excellence in Cyber Defense\nand Cyber Operations,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Information Technology Curricula 2017: Curriculum Guidelines for\nBaccalaureate Degree Programs in Information Technology,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Guide to the Systems Engineering Body of Knowledge, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e USS. National Initiative for Cybersecurity Education (NICE) Cybersecurity\nWorkforce Framework."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4 Global Community Engagement"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "has."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 1. Global engagement activities."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF continuously engaged the broad stakeholder community throughout\nthe development process. Community members provided input to shape the approach,\ncontent and organizational structure of the CSEC report. Community engagement\nactivities have included: special sessions, panels and workshops at conferences affiliated"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "12"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "60160d71e82e",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Other stakeholders involved with cybersecurity workforce development\ninitiatives.\n1.3 Sources\nThe curricular guidelines developed in this document build upon prior work in computer\nsecurity, information assurance and cyber security education, training, and workforce"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "development. In addition to the sources listed later in this document under References.\nmajor sources used in the development of this document include:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Computer Science Curricula 2013: Curriculum Guidelines for Undergraduate\nDegree Programs in Computer Science,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Global IT Skills Framework for the Information Age (SFIA),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Requirements of the U.S. National Security Agency and U.S. Department of\nHomeland Security National Centers of Academic Excellence in Cyber Defense\nand Cyber Operations,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Information Technology Curricula 2017: Curriculum Guidelines for\nBaccalaureate Degree Programs in Information Technology,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Guide to the Systems Engineering Body of Knowledge, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e USS. National Initiative for Cybersecurity Education (NICE) Cybersecurity\nWorkforce Framework."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4 Global Community Engagement"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "has."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 1. Global engagement activities."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF continuously engaged the broad stakeholder community throughout\nthe development process. Community members provided input to shape the approach,\ncontent and organizational structure of the CSEC report. Community engagement\nactivities have included: special sessions, panels and workshops at conferences affiliated"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "12"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "with participating professional societies, international conferences, keynote addresses,\nwebinars, working group meetings, government briefings, and advisory board briefings."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "As shown in Figure 1, community engagement activities were held in a variety of\nlocations around the world. These activities were positioned as regional convening\nopportunities to gather insights from a cross-section of subject matter experts. Among\nthese activities, key milestones in the development process included international\nworkshops and a global stakeholder survey."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4.1 International Workshops"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In 2016, with the support of the Intel Corporation and the U.S. National Science\nFoundation, the JTF organized and hosted the International Security Education Workshop\n(ISEW), which was held June 13-15, 2016, in Philadelphia, PA\u00ae. The workshop was\nstructured to advance the CSEC2017 development process. Through panel discussions\nand working group sessions, approximately 75 stakeholders from the global cybersecurity\neducation community provided input on the curricular content and structure by debating\ntwo key questions:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e@ What should be included in a cybersecurity degree program?"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e How should the volume of curricular recommendations be organized and\ndisseminated?"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The full meeting report is available on the CSEC2017 website. The input gathered from\nparticipants of the ISEW informed the first version of the CSEC2017 thought model and\nserved as the basis of the global stakeholder survey."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In August 2016, government representatives from 10 of the Association of South East\nAsian Nations (ASEAN), along with leaders from Japan and Australia, participated in a\n2016 project briefing in Singapore. ASEAN representatives included: Brunei, Malaysia,\nLaos, Thailand, Singapore, Cambodia, Myanmar, Vietnam, Indonesia, and Philippines."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Approximately one year following the ISEW, on May 29-31, 2017, the JTF organized a\ncommunity engagement session at the 10th World Information Security Education\nConference (WISE 10) in Rome, Italy. Participants from countries such as Germany,\nNorway, Russia Sweden, South Africa, and the United States gathered to discuss the\nCSEC2017 v. 0.05 draft document and to advance the development process. A report on\nthe workshop structure and purpose was published in the WISE 10 proceedings."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4.2 Global Stakeholder Survey"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In September 2016, after a year of community engagement and developmental work, the\nJTF launched a global stakeholder survey to solicit feedback on the proposed curricular\nthought model. Stakeholders were invited to participate in the survey through direct\ninvitations, announcements in public educational and scientific forums, social media\noutreach via the JTF website and LinkedIn, and invitations sent through the distribution\nlists of participating professional associations. The survey yielded 231 responses from"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "\u00b0 The ISEW was co-located with the Colloquium for Information Systems Security Education (CISSE), and\nsponsored by the Intel Corporation, the National Science Foundation (NSF), and the Institute for\nInformation and Infrastructure Protection (I3P) at the George Washington University (GW)."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "13"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "01361563e9ee",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "with participating professional societies, international conferences, keynote addresses,\nwebinars, working group meetings, government briefings, and advisory board briefings."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "As shown in Figure 1, community engagement activities were held in a variety of\nlocations around the world. These activities were positioned as regional convening\nopportunities to gather insights from a cross-section of subject matter experts. Among\nthese activities, key milestones in the development process included international\nworkshops and a global stakeholder survey."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4.1 International Workshops"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In 2016, with the support of the Intel Corporation and the U.S. National Science\nFoundation, the JTF organized and hosted the International Security Education Workshop\n(ISEW), which was held June 13-15, 2016, in Philadelphia, PA\u00ae. The workshop was\nstructured to advance the CSEC2017 development process. Through panel discussions\nand working group sessions, approximately 75 stakeholders from the global cybersecurity\neducation community provided input on the curricular content and structure by debating\ntwo key questions:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e@ What should be included in a cybersecurity degree program?"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e How should the volume of curricular recommendations be organized and\ndisseminated?"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The full meeting report is available on the CSEC2017 website. The input gathered from\nparticipants of the ISEW informed the first version of the CSEC2017 thought model and\nserved as the basis of the global stakeholder survey."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In August 2016, government representatives from 10 of the Association of South East\nAsian Nations (ASEAN), along with leaders from Japan and Australia, participated in a\n2016 project briefing in Singapore. ASEAN representatives included: Brunei, Malaysia,\nLaos, Thailand, Singapore, Cambodia, Myanmar, Vietnam, Indonesia, and Philippines."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Approximately one year following the ISEW, on May 29-31, 2017, the JTF organized a\ncommunity engagement session at the 10th World Information Security Education\nConference (WISE 10) in Rome, Italy. Participants from countries such as Germany,\nNorway, Russia Sweden, South Africa, and the United States gathered to discuss the\nCSEC2017 v. 0.05 draft document and to advance the development process. A report on\nthe workshop structure and purpose was published in the WISE 10 proceedings."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4.2 Global Stakeholder Survey"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In September 2016, after a year of community engagement and developmental work, the\nJTF launched a global stakeholder survey to solicit feedback on the proposed curricular\nthought model. Stakeholders were invited to participate in the survey through direct\ninvitations, announcements in public educational and scientific forums, social media\noutreach via the JTF website and LinkedIn, and invitations sent through the distribution\nlists of participating professional associations. The survey yielded 231 responses from"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "\u00b0 The ISEW was co-located with the Colloquium for Information Systems Security Education (CISSE), and\nsponsored by the Intel Corporation, the National Science Foundation (NSF), and the Institute for\nInformation and Infrastructure Protection (I3P) at the George Washington University (GW)."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "13"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "37c23ef515c3",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "with participating professional societies, international conferences, keynote addresses,\nwebinars, working group meetings, government briefings, and advisory board briefings."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "As shown in Figure 1, community engagement activities were held in a variety of\nlocations around the world. These activities were positioned as regional convening\nopportunities to gather insights from a cross-section of subject matter experts. Among\nthese activities, key milestones in the development process included international\nworkshops and a global stakeholder survey."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4.1 International Workshops"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In 2016, with the support of the Intel Corporation and the U.S. National Science\nFoundation, the JTF organized and hosted the International Security Education Workshop\n(ISEW), which was held June 13-15, 2016, in Philadelphia, PA\u00ae. The workshop was\nstructured to advance the CSEC2017 development process. Through panel discussions\nand working group sessions, approximately 75 stakeholders from the global cybersecurity\neducation community provided input on the curricular content and structure by debating\ntwo key questions:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e@ What should be included in a cybersecurity degree program?"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e How should the volume of curricular recommendations be organized and\ndisseminated?"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The full meeting report is available on the CSEC2017 website. The input gathered from\nparticipants of the ISEW informed the first version of the CSEC2017 thought model and\nserved as the basis of the global stakeholder survey."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In August 2016, government representatives from 10 of the Association of South East\nAsian Nations (ASEAN), along with leaders from Japan and Australia, participated in a\n2016 project briefing in Singapore. ASEAN representatives included: Brunei, Malaysia,\nLaos, Thailand, Singapore, Cambodia, Myanmar, Vietnam, Indonesia, and Philippines."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Approximately one year following the ISEW, on May 29-31, 2017, the JTF organized a\ncommunity engagement session at the 10th World Information Security Education\nConference (WISE 10) in Rome, Italy. Participants from countries such as Germany,\nNorway, Russia Sweden, South Africa, and the United States gathered to discuss the\nCSEC2017 v. 0.05 draft document and to advance the development process. A report on\nthe workshop structure and purpose was published in the WISE 10 proceedings."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4.2 Global Stakeholder Survey"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In September 2016, after a year of community engagement and developmental work, the\nJTF launched a global stakeholder survey to solicit feedback on the proposed curricular\nthought model. Stakeholders were invited to participate in the survey through direct\ninvitations, announcements in public educational and scientific forums, social media\noutreach via the JTF website and LinkedIn, and invitations sent through the distribution\nlists of participating professional associations. The survey yielded 231 responses from"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "\u00b0 The ISEW was co-located with the Colloquium for Information Systems Security Education (CISSE), and\nsponsored by the Intel Corporation, the National Science Foundation (NSF), and the Institute for\nInformation and Infrastructure Protection (I3P) at the George Washington University (GW)."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "13"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "stakeholders located in 20 countries; working across academia, industry and government;\nand representing all five computing disciplines."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In summary, survey respondents suggested that the JTF clarify the intended audience of\nthe curricular volume; refine the definitions and distinguish between the curricular\nelements of the thought model; provide additional information on the content of each of\nthe knowledge categories; simplify the thought model; and adapt the structure to allow\nfor placement of emerging topics. The JTF used these comments to revise the thought\nmodel. The full survey report is available on the CSEC2017 website."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4.3 Contributor Acknowledgement"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The JTF gratefully acknowledges the valuable contributions of all participants in our\ncommunity engagement efforts. We specifically recognize the global subject matter\nexperts who provide advice as members of our advisory boards and working groups.\nThroughout the development process, members of the Global Advisory Board and\nIndustry Advisory Board provided advice on the development process, global community\nengagement strategies and specific curricular content. Members of our Knowledge Area\nWorking Groups assisted task force members with the development of knowledge area\ncurricular content."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "We carefully considered all comments and critiques from community members, and we\nare particularly appreciative of the many comments provided as feedback. A\ncomprehensive list of contributors (including participants in the global workshops), along\nwith a graphical depiction of the breadth of global participation, appears in Appendix A\nat the end of this document.\u2019\u201d"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.5 Cybersecurity as a Discipline"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In the CC2005 Overview Report, the ACM identifies five primary computing disciplines,\nand recognizes a category of computing disciplines that highlights the increasing number\nof hybrid or interdisciplinary courses of study."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Computer Engineering,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Computer Science,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Information Systems,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Information Technology,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Software Engineering,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Mixed Disciplinary Majors (xx Informatics or Computational xx)."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF advances cybersecurity as a new computing discipline and positions\nthe cybersecurity curricular guidance within the context of the current set of defined\ncomputing disciplines. These five disciplines (listed above) often serve as the foundation\nof new cybersecurity programs (or courses of study). As a result, the disciplinary lens\nshapes the depth of coverage and the desired student learning outcomes. The manner in"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "10 . . . . . .\nWhile we tried to accurately capture all contributors, if we missed or misrepresented your\nparticipation, please contact us for corrections."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "14"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "849173abdbdd",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "stakeholders located in 20 countries; working across academia, industry and government;\nand representing all five computing disciplines."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In summary, survey respondents suggested that the JTF clarify the intended audience of\nthe curricular volume; refine the definitions and distinguish between the curricular\nelements of the thought model; provide additional information on the content of each of\nthe knowledge categories; simplify the thought model; and adapt the structure to allow\nfor placement of emerging topics. The JTF used these comments to revise the thought\nmodel. The full survey report is available on the CSEC2017 website."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.4.3 Contributor Acknowledgement"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The JTF gratefully acknowledges the valuable contributions of all participants in our\ncommunity engagement efforts. We specifically recognize the global subject matter\nexperts who provide advice as members of our advisory boards and working groups.\nThroughout the development process, members of the Global Advisory Board and\nIndustry Advisory Board provided advice on the development process, global community\nengagement strategies and specific curricular content. Members of our Knowledge Area\nWorking Groups assisted task force members with the development of knowledge area\ncurricular content."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "We carefully considered all comments and critiques from community members, and we\nare particularly appreciative of the many comments provided as feedback. A\ncomprehensive list of contributors (including participants in the global workshops), along\nwith a graphical depiction of the breadth of global participation, appears in Appendix A\nat the end of this document.\u2019\u201d"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.5 Cybersecurity as a Discipline"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In the CC2005 Overview Report, the ACM identifies five primary computing disciplines,\nand recognizes a category of computing disciplines that highlights the increasing number\nof hybrid or interdisciplinary courses of study."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Computer Engineering,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Computer Science,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Information Systems,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Information Technology,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Software Engineering,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Mixed Disciplinary Majors (xx Informatics or Computational xx)."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The CSEC2017 JTF advances cybersecurity as a new computing discipline and positions\nthe cybersecurity curricular guidance within the context of the current set of defined\ncomputing disciplines. These five disciplines (listed above) often serve as the foundation\nof new cybersecurity programs (or courses of study). As a result, the disciplinary lens\nshapes the depth of coverage and the desired student learning outcomes. The manner in"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "10 . . . . . .\nWhile we tried to accurately capture all contributors, if we missed or misrepresented your\nparticipation, please contact us for corrections."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "14"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "which the disciplinary lenses shape the curricular content will be fully described in\nchapter 3 of this document."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.6 Report Structure"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "This report, CSEC2017 v.1.0, presents the work of the JTF. The CSEC2017 report\nprovides an overview of the cybersecurity discipline to frame the curricular model. The\ndocument then presents the curricular framework and outlines the recommended\ncurricular content. Next, and in order to place the content within the larger context, the\nreport highlights industry perspectives on cybersecurity. Finally, to aid with\nimplementation, the report discusses issues related to the educational practice, suggests a\nprocess for developing roadmaps that link the curricular model to workforce frameworks,\nand references course, curricular and workforce exemplars that highlight how global\ninstitutions could implement the curricular guidelines."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The roadmaps and exemplars will be continuously received through the community\nengagement website: http://cybered.acm.org (coming soon)."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "15"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "691679af7bd6",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "which the disciplinary lenses shape the curricular content will be fully described in\nchapter 3 of this document."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.6 Report Structure"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "This report, CSEC2017 v.1.0, presents the work of the JTF. The CSEC2017 report\nprovides an overview of the cybersecurity discipline to frame the curricular model. The\ndocument then presents the curricular framework and outlines the recommended\ncurricular content. Next, and in order to place the content within the larger context, the\nreport highlights industry perspectives on cybersecurity. Finally, to aid with\nimplementation, the report discusses issues related to the educational practice, suggests a\nprocess for developing roadmaps that link the curricular model to workforce frameworks,\nand references course, curricular and workforce exemplars that highlight how global\ninstitutions could implement the curricular guidelines."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The roadmaps and exemplars will be continuously received through the community\nengagement website: http://cybered.acm.org (coming soon)."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "15"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "68b94bbae135",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "which the disciplinary lenses shape the curricular content will be fully described in\nchapter 3 of this document."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "1.6 Report Structure"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "This report, CSEC2017 v.1.0, presents the work of the JTF. The CSEC2017 report\nprovides an overview of the cybersecurity discipline to frame the curricular model. The\ndocument then presents the curricular framework and outlines the recommended\ncurricular content. Next, and in order to place the content within the larger context, the\nreport highlights industry perspectives on cybersecurity. Finally, to aid with\nimplementation, the report discusses issues related to the educational practice, suggests a\nprocess for developing roadmaps that link the curricular model to workforce frameworks,\nand references course, curricular and workforce exemplars that highlight how global\ninstitutions could implement the curricular guidelines."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The roadmaps and exemplars will be continuously received through the community\nengagement website: http://cybered.acm.org (coming soon)."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "15"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Chapter 2: The Cybersecurity Discipline\nThe CSEC2017 JTF defines cybersecurity as:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A computing-based discipline involving technology, people, information, and\nprocesses to enable assured operations in the context of adversaries. It involves\nthe creation, operation, analysis, and testing of secure computer systems. It is an\ninterdisciplinary course of study, including aspects of law, policy, human factors,\nethics, and risk management."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity is a computing-based discipline involving technology, people, information,\nand processes to enable assured operations in the context of adversaries. It draws from\nthe foundational fields of information security and information assurance; and began with\nmore narrowly focused field of computer security."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The need for cybersecurity arose when the first mainframe computers were developed.\nMultiple levels of security were implemented to protect these devices and the missions\nthey served. The growing need to maintain national security eventually led to more\ncomplex and technologically sophisticated security safeguards. During the early years,\ncybersecurity as practiced, even if not specifically identified as such, was a\nstraightforward process composed predominantly of physical security and document\nclassification. The primary threats to security were physical theft of equipment,\nespionage against products of the systems, and sabotage. As society\u2019s reliance on broad\ncyber infrastructure has expanded, so too has the threat environment."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "2.1 The Rise of Cyberthreats"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "An agency of the U.S. Department of Defense, the Advanced Research Projects Agency\n(ARPA) was created in 1958 and began examining the feasibility of a redundant,\nnetworked communications system to support the exchange of computer data. The\nresulting network, called ARPANET, was created in the late 1960s and saw wide use,\nincreasing the potential for its misuse."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Security that went beyond protecting the physical location of computing devices\neffectively began with a single paper published by the RAND Corporation in February\n1970 for the Department of Defense. That report, RAND Report R-609, attempted to\ndefine the multiple controls and mechanisms necessary for the protection of a\ncomputerized data-processing system."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In the 1970s, the development of TCP (the Transmission Control Protocol) and IP (the\nInternet Protocol) led to the emergence of the Internet. The development of the World\nWide Web in the 1980s brought the Internet to wide use, which significantly increased\nthe importance of cybersecurity. The U.S. Government passed several key pieces of\nlegislation that formalized the recognition of computer security as a critical issue for\nfederal information systems including the Computer Fraud and Abuse Act of 1986 and\nthe Computer Security Act of 1987. The Internet eventually brought ubiquitous\nconnectivity to virtually all computers, where integrity and confidentiality were a lower\npriority than the drive for availability. Many problems that plague the Internet today\nresult from this early lack of focus on security awareness."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "16"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "59f84c5b5db9",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Chapter 2: The Cybersecurity Discipline\nThe CSEC2017 JTF defines cybersecurity as:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A computing-based discipline involving technology, people, information, and\nprocesses to enable assured operations in the context of adversaries. It involves\nthe creation, operation, analysis, and testing of secure computer systems. It is an\ninterdisciplinary course of study, including aspects of law, policy, human factors,\nethics, and risk management."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity is a computing-based discipline involving technology, people, information,\nand processes to enable assured operations in the context of adversaries. It draws from\nthe foundational fields of information security and information assurance; and began with\nmore narrowly focused field of computer security."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The need for cybersecurity arose when the first mainframe computers were developed.\nMultiple levels of security were implemented to protect these devices and the missions\nthey served. The growing need to maintain national security eventually led to more\ncomplex and technologically sophisticated security safeguards. During the early years,\ncybersecurity as practiced, even if not specifically identified as such, was a\nstraightforward process composed predominantly of physical security and document\nclassification. The primary threats to security were physical theft of equipment,\nespionage against products of the systems, and sabotage. As society\u2019s reliance on broad\ncyber infrastructure has expanded, so too has the threat environment."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "2.1 The Rise of Cyberthreats"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "An agency of the U.S. Department of Defense, the Advanced Research Projects Agency\n(ARPA) was created in 1958 and began examining the feasibility of a redundant,\nnetworked communications system to support the exchange of computer data. The\nresulting network, called ARPANET, was created in the late 1960s and saw wide use,\nincreasing the potential for its misuse."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Security that went beyond protecting the physical location of computing devices\neffectively began with a single paper published by the RAND Corporation in February\n1970 for the Department of Defense. That report, RAND Report R-609, attempted to\ndefine the multiple controls and mechanisms necessary for the protection of a\ncomputerized data-processing system."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In the 1970s, the development of TCP (the Transmission Control Protocol) and IP (the\nInternet Protocol) led to the emergence of the Internet. The development of the World\nWide Web in the 1980s brought the Internet to wide use, which significantly increased\nthe importance of cybersecurity. The U.S. Government passed several key pieces of\nlegislation that formalized the recognition of computer security as a critical issue for\nfederal information systems including the Computer Fraud and Abuse Act of 1986 and\nthe Computer Security Act of 1987. The Internet eventually brought ubiquitous\nconnectivity to virtually all computers, where integrity and confidentiality were a lower\npriority than the drive for availability. Many problems that plague the Internet today\nresult from this early lack of focus on security awareness."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "16"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Early computing approaches relied on security that was built into the physical\nenvironment of the data center that housed the computers. As networked computers\nbecame the dominant style of computing, the ability to physically secure a networked\ncomputer was lost, and the stored information became more exposed to security threats.\nLarger organizations began integrating security into their computing strategies. Anti-virus\nproducts became extremely popular, and cybersecurity began to emerge as an\nindependent discipline."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The Internet brings unsecured computer networks and billions of connected devices into\ncontinuous communication with each other. The security of each computer\u2019s stored\ninformation is contingent upon awareness, learning, and applying cybersecurity\nprinciples. Securing a computer\u2019s stored information can be accomplished by first\ndetermining a value for the information. Choosing security controls to apply and protect\nthe information as it is transmitted, processed and stored should be commensurate with\nthat value and its threat environment."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Recent years have seen a growing awareness of the need to improve cybersecurity, as\nwell as a realization that cybersecurity is important to the national defense of every\ncountry. The growing threat of cyberattacks has made governments and companies more\naware of the need to defend the computerized control systems of utilities and other\ncritical infrastructure. Another growing concern is the threat of nation-states engaging in\ncyberwarfare, and the possibility that business and personal information systems could\nbecome casualties if they are undefended."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "2.2 The Emergence of Cybersecurity as a Discipline"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Given society\u2019s increasing dependence on the global cyber infrastructure, it is no surprise\nthat cybersecurity is emerging as an identifiable discipline with a breadth and depth of\ncontent that encompasses many of the subfields (e.g., software development, networking,\ndatabase management) that form the modern computing ecosystem. Underlying this\nemergence is the need to prepare specialists across a range of work roles for the\ncomplexities associated with assuring the security of system operations from a holistic\nview. Assuring secure operations involves the creation, operation, defense, analysis, and\ntesting of secure computer systems."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "While cybersecurity is an interdisciplinary course of study including aspects of law,\npolicy, human factors, ethics, and risk management, it is fundamentally a computing-\nbased discipline. As such, and as depicted in Figure 2, academic programs in\ncybersecurity are both informed by the interdisciplinary content, and driven by the needs\nand perspectives of the computing discipline that forms the programmatic foundation."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "17"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "06e6b77e3799",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Early computing approaches relied on security that was built into the physical\nenvironment of the data center that housed the computers. As networked computers\nbecame the dominant style of computing, the ability to physically secure a networked\ncomputer was lost, and the stored information became more exposed to security threats.\nLarger organizations began integrating security into their computing strategies. Anti-virus\nproducts became extremely popular, and cybersecurity began to emerge as an\nindependent discipline."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The Internet brings unsecured computer networks and billions of connected devices into\ncontinuous communication with each other. The security of each computer\u2019s stored\ninformation is contingent upon awareness, learning, and applying cybersecurity\nprinciples. Securing a computer\u2019s stored information can be accomplished by first\ndetermining a value for the information. Choosing security controls to apply and protect\nthe information as it is transmitted, processed and stored should be commensurate with\nthat value and its threat environment."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Recent years have seen a growing awareness of the need to improve cybersecurity, as\nwell as a realization that cybersecurity is important to the national defense of every\ncountry. The growing threat of cyberattacks has made governments and companies more\naware of the need to defend the computerized control systems of utilities and other\ncritical infrastructure. Another growing concern is the threat of nation-states engaging in\ncyberwarfare, and the possibility that business and personal information systems could\nbecome casualties if they are undefended."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "2.2 The Emergence of Cybersecurity as a Discipline"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Given society\u2019s increasing dependence on the global cyber infrastructure, it is no surprise\nthat cybersecurity is emerging as an identifiable discipline with a breadth and depth of\ncontent that encompasses many of the subfields (e.g., software development, networking,\ndatabase management) that form the modern computing ecosystem. Underlying this\nemergence is the need to prepare specialists across a range of work roles for the\ncomplexities associated with assuring the security of system operations from a holistic\nview. Assuring secure operations involves the creation, operation, defense, analysis, and\ntesting of secure computer systems."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "While cybersecurity is an interdisciplinary course of study including aspects of law,\npolicy, human factors, ethics, and risk management, it is fundamentally a computing-\nbased discipline. As such, and as depicted in Figure 2, academic programs in\ncybersecurity are both informed by the interdisciplinary content, and driven by the needs\nand perspectives of the computing discipline that forms the programmatic foundation."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "17"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Interdisciplinary\nContent"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity\n(A computing-based, inter-disciplinary course of study)"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "tT t tt tt tt"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Computer Computer Information Information Software Computing\nScience Engineering Technology Systems Engineering Disciplines"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 2. Structure of the cybersecurity discipline."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity as an identifiable degree field is still in its infancy. Driven by significant\nworkforce needs, global academic institutions are developing a range of educational\nprograms in the field while others are adjusting existing programs to incorporate\ncybersecurity content. The curricular recommendations provided in this volume are\nframed by the computing disciplines: computer science, computer engineering,\ninformation technology, information systems, and software engineering."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "2.3 Characteristics of a Cybersecurity Program"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Each graduate of a cybersecurity program of study should have a cybersecurity\ncurriculum that includes:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A computing-based foundation (e.g., computer science, information technology),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Crosscutting concepts that are broadly applicable across the range of\ncybersecurity specializations (e.g., cybersecurity\u2019s inherent adversarial mindset),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A body of knowledge containing essential cybersecurity knowledge and skills,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A direct relationship to the range of specializations meeting the in-demand\nworkforce domains, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A strong emphasis on the ethical conduct and professional responsibilities\nassociated with the field."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The curricular framework advanced in this volume will help academic institutions\ndevelop cybersecurity programs that meet each of these criteria."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "18"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "9811c356f664",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Interdisciplinary\nContent"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity\n(A computing-based, inter-disciplinary course of study)"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "tT t tt tt tt"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Computer Computer Information Information Software Computing\nScience Engineering Technology Systems Engineering Disciplines"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 2. Structure of the cybersecurity discipline."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity as an identifiable degree field is still in its infancy. Driven by significant\nworkforce needs, global academic institutions are developing a range of educational\nprograms in the field while others are adjusting existing programs to incorporate\ncybersecurity content. The curricular recommendations provided in this volume are\nframed by the computing disciplines: computer science, computer engineering,\ninformation technology, information systems, and software engineering."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "2.3 Characteristics of a Cybersecurity Program"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Each graduate of a cybersecurity program of study should have a cybersecurity\ncurriculum that includes:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A computing-based foundation (e.g., computer science, information technology),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Crosscutting concepts that are broadly applicable across the range of\ncybersecurity specializations (e.g., cybersecurity\u2019s inherent adversarial mindset),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A body of knowledge containing essential cybersecurity knowledge and skills,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A direct relationship to the range of specializations meeting the in-demand\nworkforce domains, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A strong emphasis on the ethical conduct and professional responsibilities\nassociated with the field."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The curricular framework advanced in this volume will help academic institutions\ndevelop cybersecurity programs that meet each of these criteria."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "18"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "0c46d99e9e86",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Interdisciplinary\nContent"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity\n(A computing-based, inter-disciplinary course of study)"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "tT t tt tt tt"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Computer Computer Information Information Software Computing\nScience Engineering Technology Systems Engineering Disciplines"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 2. Structure of the cybersecurity discipline."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity as an identifiable degree field is still in its infancy. Driven by significant\nworkforce needs, global academic institutions are developing a range of educational\nprograms in the field while others are adjusting existing programs to incorporate\ncybersecurity content. The curricular recommendations provided in this volume are\nframed by the computing disciplines: computer science, computer engineering,\ninformation technology, information systems, and software engineering."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "2.3 Characteristics of a Cybersecurity Program"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Each graduate of a cybersecurity program of study should have a cybersecurity\ncurriculum that includes:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A computing-based foundation (e.g., computer science, information technology),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Crosscutting concepts that are broadly applicable across the range of\ncybersecurity specializations (e.g., cybersecurity\u2019s inherent adversarial mindset),"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A body of knowledge containing essential cybersecurity knowledge and skills,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A direct relationship to the range of specializations meeting the in-demand\nworkforce domains, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "A strong emphasis on the ethical conduct and professional responsibilities\nassociated with the field."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The curricular framework advanced in this volume will help academic institutions\ndevelop cybersecurity programs that meet each of these criteria."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "18"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "c2b0e1907e72",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "CSEC2017 31 December 2017\nComputer\nScience\ns BODY OF KNOWLEDGE \\ \u00a9 \u00a9\nFS % %\ns $ SS\n$s 8 Knowledge Areas: \u201cas\naes 7 o%\nso Data, Software, eh\nComponent, Connection, System, %"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Disciplinary\nLenses"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Human, Organization, Societal"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cross-cutting Concepts:\nConfidentiality, Integrity,\nAvailability, Risk,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "% % Adversarial Thinking, 2 Pd\n% % Systems Thinking oe F\n%\n%\nOther\nDisciplines"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 3. CSEC thought model."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "3.2.1 Knowledge Areas"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Knowledge areas (KAs) serve as the basic organizing structure for cybersecurity content.\nEach knowledge area is made up of critical knowledge with broad importance within and\nacross multiple computing-based disciplines. The knowledge areas are structured as\nflexible buckets in the thought model to allow for the expansion and contraction of\ncontent as needed. Collectively, knowledge areas represent the full body of knowledge\nwithin the field of cybersecurity."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The essentials of cybersecurity. The essential concepts of each knowledge area capture\nthe cybersecurity proficiency that every student needs to achieve regardless of program\nfocus. Essentials should be introduced early and reinforced throughout every\ncybersecurity program."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The knowledge units (KUs) are thematic groupings that encompass multiple, related\ntopics; the topics cover the required curricular content for each KU. The learning\noutcomes are a description of what students should know or be able to do. As shown in\nFigure 4, The KAs may contain multiple knowledge units, topics and learning outcomes.\nSpecific learning outcomes for topics contained in each KA are provided in the\nexemplars."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The essential concepts are explicitly identified in each knowledge area. These concepts\nmay also appear as specific knowledge units, as topics within knowledge units, or as\naggregates of topics across knowledge units. Taken together, the essential concepts in all\nof the knowledge areas should be covered in every cybersecurity program. Specific\nlearning outcomes for the essential concepts are included in the curricular framework\ndescribed in Chapter 4."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "20"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "(= one\nUnit(s)...\nContent influenced\nby disciplinary lens\nTopic \u2018and institution type\n\\{ | Learning | Leaming\nOutcomes Outcomes Outcomes"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 4. Knowledge area structure."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In the thought model, each knowledge unit meets the following criteria:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Has broad (though variable, based on the disciplinary lens) importance across\nmultiple computing-based disciplines,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Provides a key tool for understanding or investigating complex cybersecurity\nideas, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Is both teachable and learnable over time and at increasing levels of depth and\nsophistication."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "While the primary emphasis of each knowledge area is on development, protection and\nmaintenance of security properties, some programs may choose to include the study of\ntools and techniques for circumventing protection mechanisms, such as a course on\npenetration testing. Due to the adversarial nature of cybersecurity, the study of offensive\nor hacking techniques is often a good way to develop stronger defensive cyber skills. All\nthe knowledge areas include knowledge units that can be taught from both cyber-defense\nand cyber-offense perspectives."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Knowledge areas are not structured to be mutually exclusive. Accordingly, some\nknowledge units will have relevance to, and could be logically placed in, multiple\nknowledge areas. While the associated curricular guidance will differ, knowledge units\nare intentionally repeated in multiple knowledge areas (with cross-references). Since\nknowledge units do not necessarily correspond to courses or course units, cybersecurity\ncourses will typically contain topics from multiple knowledge units. Therefore,\nplacement of a knowledge unit under one knowledge area should not preclude its\ncoverage in other knowledge areas."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "3.2.2 Crosscutting Concepts"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Crosscutting concepts help students explore connections among the knowledge areas, and\nare fundamental to an individual\u2019s ability to understand the knowledge area regardless of\nthe disciplinary lens. These concepts \u201cprovide an organizational schema for interrelating"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "21"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "91b5f92c7bc1",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "(= one\nUnit(s)...\nContent influenced\nby disciplinary lens\nTopic \u2018and institution type\n\\{ | Learning | Leaming\nOutcomes Outcomes Outcomes"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Figure 4. Knowledge area structure."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "In the thought model, each knowledge unit meets the following criteria:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Has broad (though variable, based on the disciplinary lens) importance across\nmultiple computing-based disciplines,"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Provides a key tool for understanding or investigating complex cybersecurity\nideas, and"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Is both teachable and learnable over time and at increasing levels of depth and\nsophistication."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "While the primary emphasis of each knowledge area is on development, protection and\nmaintenance of security properties, some programs may choose to include the study of\ntools and techniques for circumventing protection mechanisms, such as a course on\npenetration testing. Due to the adversarial nature of cybersecurity, the study of offensive\nor hacking techniques is often a good way to develop stronger defensive cyber skills. All\nthe knowledge areas include knowledge units that can be taught from both cyber-defense\nand cyber-offense perspectives."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Knowledge areas are not structured to be mutually exclusive. Accordingly, some\nknowledge units will have relevance to, and could be logically placed in, multiple\nknowledge areas. While the associated curricular guidance will differ, knowledge units\nare intentionally repeated in multiple knowledge areas (with cross-references). Since\nknowledge units do not necessarily correspond to courses or course units, cybersecurity\ncourses will typically contain topics from multiple knowledge units. Therefore,\nplacement of a knowledge unit under one knowledge area should not preclude its\ncoverage in other knowledge areas."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "3.2.2 Crosscutting Concepts"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Crosscutting concepts help students explore connections among the knowledge areas, and\nare fundamental to an individual\u2019s ability to understand the knowledge area regardless of\nthe disciplinary lens. These concepts \u201cprovide an organizational schema for interrelating"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "21"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "knowledge \u00bb12 into a coherent view of cybersecurity. The crosscutting concepts also"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "reinforce the security mindset conveyed through each of the knowledge areas.\nThe thought model includes the following six crosscutting concepts:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Confidentiality. Rules that limit access to system data and information to\nauthorized persons."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Integrity. Assurance that the data and information are accurate and trustworthy.\ne Availability. The data, information, and system are accessible.\ne Risk. Potential for gain or loss."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Adversarial Thinking. A thinking process that considers the potential actions of\nthe opposing force working against the desired result."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Systems Thinking. A thinking process that considers the interplay between\nsocial and technical constraints to enable assured operations."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "3.2.3 Disciplinary Lens"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The disciplinary lens is the third dimension of the thought model. It represents the\nunderlying computing discipline from which the cybersecurity program can be\ndeveloped. The disciplinary lens drives the approach, depth of content, and learning\noutcomes resulting from the interplay among the topics, essential and crosscutting\nconcepts. The thought model encompasses the current computing disciplines identified\nby the ACM: computer science, computer engineering, information systems, information\ntechnology, and software engineering."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The application of the crosscutting concept and/or the level of depth taught within each\nknowledge unit may differ depending upon the disciplinary lens. For instance, coverage\nof Risk in the context of Data Security may differ for students in a computer science\ncybersecurity program and those in an information systems cybersecurity program. The\nexemplars illustrate this interplay."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "12 Us. National Research Council. 2013. Next Generation Science Standards: For States, By States.\nWashington, DC: The National Academies Press."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "22"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "78bad7cf280a",
+        "content": [
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "knowledge \u00bb12 into a coherent view of cybersecurity. The crosscutting concepts also"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "reinforce the security mindset conveyed through each of the knowledge areas.\nThe thought model includes the following six crosscutting concepts:"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Confidentiality. Rules that limit access to system data and information to\nauthorized persons."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Integrity. Assurance that the data and information are accurate and trustworthy.\ne Availability. The data, information, and system are accessible.\ne Risk. Potential for gain or loss."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Adversarial Thinking. A thinking process that considers the potential actions of\nthe opposing force working against the desired result."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "e Systems Thinking. A thinking process that considers the interplay between\nsocial and technical constraints to enable assured operations."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "3.2.3 Disciplinary Lens"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The disciplinary lens is the third dimension of the thought model. It represents the\nunderlying computing discipline from which the cybersecurity program can be\ndeveloped. The disciplinary lens drives the approach, depth of content, and learning\noutcomes resulting from the interplay among the topics, essential and crosscutting\nconcepts. The thought model encompasses the current computing disciplines identified\nby the ACM: computer science, computer engineering, information systems, information\ntechnology, and software engineering."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The application of the crosscutting concept and/or the level of depth taught within each\nknowledge unit may differ depending upon the disciplinary lens. For instance, coverage\nof Risk in the context of Data Security may differ for students in a computer science\ncybersecurity program and those in an information systems cybersecurity program. The\nexemplars illustrate this interplay."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "12 Us. National Research Council. 2013. Next Generation Science Standards: For States, By States.\nWashington, DC: The National Academies Press."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "22"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Cybersecurity 2017 Version 1.0 Report\nCSEC2017 31 December 2017"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Chapter 4: Content of the Cybersecurity Curricular\nFramework"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The curricular content was gathered and synthesized from a variety of sources including\n(in no particular order): ACM/IEEE CS2013; ACM/IEEE IT2017; U.S. National Security\nAgency and Department of Homeland Security Centers of Academic Excellence (CAE);\n(ISC)\u2019; workforce frameworks such as the U.S. National Initiative for Cybersecurity\nEducation Cybersecurity Workforce Framework (NCWF); Global IT Skills Framework\nfor the Information Age (SFIA); course exemplars sponsored by the Intel University\nPrograms Office; the U.S. National Science Foundation; U.K. Government\nCommunications Headquarters (GCHQ); industry sector working groups; and other\nsources provided by the stakeholder community."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The sections in this chapter provide an overview of the curricular content for each\nknowledge area. The table for each knowledge area lists the essentials, knowledge units\nand the topics within each knowledge unit. In many cases, specific curricular guidance on\ntopic coverage has been included. To refine the knowledge units and topics, the JTF\nconvened subject matter experts in Knowledge Area Working Groups (KAWGs). KAWG\nmembers are listed by knowledge area in Appendix A."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "As described above, the essentials across the knowledge areas capture the cybersecurity\nproficiency that every student needs to achieve regardless of program focus. The\nessentials are listed within each KA section and are presented as a collective in\nAppendix B."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Note: Several of the knowledge units and topics in the knowledge areas are seemingly\nredundant. This is purposeful redundancy that serves both to permit specificity in the\ncoverage in each specific knowledge area, and also to emphasize the importance of these\nessentials knowledge units and topics in the totality of the cybersecurity discipline\nknowledge domain."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "Within the knowledge area tables are cross references to other knowledge area tables that\ncontain important related information. Theses cross references are in the leftmost column\nunder \u201cKnowledge Units,\u201d and they are in italics within brackets [ ]."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "See Appendix C for an overview of the exemplars that map knowledge areas and\nknowledge units to different types of curricula. The curricular exemplars demonstrate\nhow the curricula from specific institutions cover the knowledge area essentials and some\nsubset of knowledge units. The exemplars are provided on the community engagement\nwebsite (http://cybered.acm.org/) to show how the cybersecurity content can be organized\nin a variety of ways."
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "The information in the tables provides guidance for developers of an entire curriculum or\na course syllabus. Those developers must instantiate the topics with specific material that\ntheir course is to cover. For example, the description/curricular guidance for the \u201cLogical\ndata access controls\u201d topic in the \u201cAccess Control\u201d knowledge unit of the \u201cData\nSecurity\u201d knowledge area lists several types of controls, including access control lists,\nmandatory access controls, and so forth. A class on the security of mobile devices will\nhave access controls for Android in its syllabus, even though that is not listed in the\nDescription/Curricular Guidance column. The Android system does not provide attribute-"
+                    }
+                ]
+            },
+            {
+                "type": "p",
+                "children": [
+                    {
+                        "text": "23"
+                    }
+                ]
+            }
+        ]
+    }
+]

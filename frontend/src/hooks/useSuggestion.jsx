@@ -52,5 +52,5 @@ export default function useSuggestion() {
 
 
 
-    return {submit, suggestions}
+    return {submit, suggestions, response, setResponse}
 }

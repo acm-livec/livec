@@ -8,8 +8,8 @@
     gap: 1rem;
 
     input {
-  font-family: "Inter", sans-serif;
-
+        font-family: "Inter", sans-serif;
+        background-color: white;
         outline: none;
         border: none;
     }
@@ -21,7 +21,9 @@
 
 
     textarea {
-    font-family: "Inter", sans-serif;
+                background-color: white;
+
+        font-family: "Inter", sans-serif;
         font-size: 1rem;
         border: none;
         resize: none;
@@ -34,9 +36,11 @@
         position: relative;
         display: inline-block;
         color: black;
+
         select {
-                    font-size: 1rem;
-            
+            font-size: 1rem;
+        background-color: white;
+
             width: 100%;
             padding: 0.5rem 2rem 0.5rem 1rem;
             appearance: none;
@@ -51,11 +55,59 @@
             right: 1rem;
             width: 0.5rem;
             height: 0.5rem;
-    
+
             transform: translateY(-50%) rotate(45deg);
             pointer-events: none; // click passes through
         }
     }
+
+    .radioGroup {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .groupLabel {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+
+    .customRadio {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        font-size: 1rem;
+        position: relative;
+    }
+
+    .customRadio input[type="radio"] {
+        display: none;
+    }
+
+    .customRadio .checkmark {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #555;
+        background-color: #fff;
+        border-radius: 2px;
+        margin-right: 10px;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .customRadio input[type="radio"]:checked+.checkmark::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid #000;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
 
 
 }

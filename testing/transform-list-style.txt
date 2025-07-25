@@ -1,0 +1,15 @@
+4fa24f853f75
+
+Transform the content array of PlateJS paragraph nodes in codex.json file:
+
+- Start from object with id: 4fa24f853f75 and Find every node where `listStyleType` is `"disc"`
+- Replace `"disc"` with an ordered style based on `indent`:
+  - indent 0 → `"decimal"`
+  - indent 1 → `"lower-alpha"`
+  - indent 2 → `"lower-roman"`
+  - indent 3 → `"upper-alpha"`
+  - indent 4 → `"upper-roman"`
+  - for indent > 4 → fallback to `"decimal"`
+
+Keep all other node properties intact.
+tree -L 6

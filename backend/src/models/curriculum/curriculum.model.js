@@ -6,31 +6,39 @@ class Curriculum {
         this.currRef = ref
 
     }
+async returnAll() {
+    await this.dbRef[this.currRef]?.tableOfContents.read();
+    const toc = this.dbRef[this.currRef]?.tableOfContents.data;
 
-    async returnAll() {
-        await this.dbRef[this.currRef]?.tableOfContents.read();
-        const toc = this.dbRef[this.currRef]?.tableOfContents.data;
+    await this.dbRef[this.currRef]?.pageContent.read();
+    const cont = this.dbRef[this.currRef]?.pageContent.data;
 
-        await this.dbRef[this.currRef]?.pageContent.read();
-        const cont = this.dbRef[this.currRef]?.pageContent.data;
+    const contentMap = new Map(cont.map(entry => [entry.id, {
+        content: entry.content,
+        html: entry.html
+    }]));
 
-        // Store both html and content in the Map
-        const contentMap = new Map(cont.map(entry => [entry.id, {
-            html: entry.html,
-            content: entry.content
-        }]));
+    const merged = toc.map(section => {
+        const contentEntry = contentMap.get(section.id) || {};
+        let content = contentEntry.content || [];
 
-        const merged = toc.map(section => {
-            const contentEntry = contentMap.get(section.id) || {};
-            return {
-                ...section,
-                html: contentEntry.html || "",
-                content: contentEntry.content || ""
+        // ✅ Prepend new node if section.level !== 1
+        if (section.level !== 1 && Array.isArray(content)) {
+            const insert = {
+                type: 'h2',
+                children: [{ text: section.title}]
             };
-        });
+            content = [insert, ...content];
+        }
 
-        return merged;
-    }
+        return {
+            ...section,
+            content
+        };
+    });
+
+    return merged;
+}
 
 
     async getSection(id) {
@@ -46,6 +54,22 @@ class Curriculum {
             return null; // or handle not found scenario as needed
         }
 
+        if (section.level !== 1) {
+            console.log(section)
+            const originalContent = contentMap.get(id) || [];
+
+            const introObject = {
+                type: 'h2',
+                text: section.title,
+                // ...any other props you want
+            };
+
+            return {
+                ...section,
+                content: [introObject, ...originalContent]
+            };
+        }
+
         return {
             ...section,
             content: contentMap.get(id) || ""
@@ -56,7 +80,7 @@ class Curriculum {
     async getSectionToc(id) {
         await this.dbRef[this.currRef]?.tableOfContents.read();
         const toc = this.dbRef[this.currRef]?.tableOfContents.data;
-        
+
 
         const section = toc.find(section => section.id === id);
 
@@ -68,14 +92,14 @@ class Curriculum {
     }
 
 
-    
+
 
     /**
      * Updates an existing suggestion in the database.
      *
      * @throws {Error} If the suggestion with the specified ID does not exist.
      */
-     async update(sectionInstance) {
+    async update(sectionInstance) {
         await this.dbRef[this.currRef]?.tableOfContents.read();
 
         const index = this.dbRef[this.currRef]?.tableOfContents.data.findIndex(s => s.id === sectionInstance.id);

@@ -5,12 +5,12 @@ const defaultAction = Actions.ADDED_DOCUMENTATION
 
 class Documentation {
 
-    constructor({ action = defaultAction, author = 'LiveC', text, date = new Date().toISOString(), refId = generateRandomId() }) {
+    constructor({ action = defaultAction, author = 'LiveC', content, date = new Date().toISOString(), refId = generateRandomId() }) {
         this.action = action;
         this.refId = refId;
         this.author = author;
         this.date = date;
-        this.text = text;
+        this.content = content;
     }
 
 
@@ -20,7 +20,7 @@ class Documentation {
             refId: this.refId,
             author: this.author,
             date: this.date,
-            text: this.text
+            content: this.content
         };
     }
 
@@ -30,7 +30,7 @@ class Documentation {
             refId: this.refId,
             author: this.author,
             date: this.date,
-            text: this.text
+            text: this.content
         };
     }
 }

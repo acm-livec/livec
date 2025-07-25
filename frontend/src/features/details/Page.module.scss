@@ -3,8 +3,8 @@
 
 
 .page {
-    @include flex-container(column, start, center, 5rem);
-
+    margin: 0;
+    padding: 2%;
 
 }
 

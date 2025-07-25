@@ -1,0 +1,1257 @@
+[
+  {
+    "id": "76390c450524",
+    "level": 1,
+    "title": "Introduction to Cybersecurity Education",
+    "page_number": 9,
+    "meta": {
+      "index": 0,
+      "section": "1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "introduction-to-cybersecurity-education"
+    }
+  },
+  {
+    "id": "0dc45648bc8a",
+    "level": 2,
+    "title": "The Joint Task Force",
+    "page_number": 9,
+    "meta": {
+      "index": 1,
+      "section": "1.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-joint-task-force",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "51f8aba60dd4",
+    "level": 3,
+    "title": "The Vision",
+    "page_number": 10,
+    "meta": {
+      "index": 2,
+      "section": "1.1.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-vision",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "e2990264a208",
+    "level": 3,
+    "title": "The Mission",
+    "page_number": 10,
+    "meta": {
+      "index": 3,
+      "section": "1.1.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-mission",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "5c5b9b37f502",
+    "level": 3,
+    "title": "The Goals",
+    "page_number": 11,
+    "meta": {
+      "index": 4,
+      "section": "1.1.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-goals",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "46ce929b99cd",
+    "level": 2,
+    "title": "The Audience",
+    "page_number": 11,
+    "meta": {
+      "index": 5,
+      "section": "1.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-audience",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "b74fc615a579",
+    "level": 2,
+    "title": "Sources",
+    "page_number": 12,
+    "meta": {
+      "index": 6,
+      "section": "1.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "sources",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "e9cddd0c36ce",
+    "level": 2,
+    "title": "Global Community Engagement",
+    "page_number": 2,
+    "meta": {
+      "index": 7,
+      "section": "1.4",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "global-community-engagement",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "0da9aaa75cd9",
+    "level": 3,
+    "title": "International Workshops",
+    "page_number": 13,
+    "meta": {
+      "index": 8,
+      "section": "1.4.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "international-workshops",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "60160d71e82e",
+    "level": 3,
+    "title": "Global Stakeholder Survey",
+    "page_number": 13,
+    "meta": {
+      "index": 9,
+      "section": "1.4.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "global-stakeholder-survey",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "01361563e9ee",
+    "level": 3,
+    "title": "Contributor Acknowledgement",
+    "page_number": 14,
+    "meta": {
+      "index": 10,
+      "section": "1.4.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "contributor-acknowledgement",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "37c23ef515c3",
+    "level": 2,
+    "title": "Cybersecurity as a Discipline",
+    "page_number": 14,
+    "meta": {
+      "index": 11,
+      "section": "1.5",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "cybersecurity-as-a-discipline",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "849173abdbdd",
+    "level": 2,
+    "title": "Report Structure",
+    "page_number": 15,
+    "meta": {
+      "index": 12,
+      "section": "1.6",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "report-structure",
+      "parent_heading": "Introduction to Cybersecurity Education"
+    }
+  },
+  {
+    "id": "691679af7bd6",
+    "level": 1,
+    "title": "The Cybersecurity Discipline",
+    "page_number": 16,
+    "meta": {
+      "index": 13,
+      "section": "2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-cybersecurity-discipline"
+    }
+  },
+  {
+    "id": "68b94bbae135",
+    "level": 2,
+    "title": "The Rise of Cyberthreats",
+    "page_number": 16,
+    "meta": {
+      "index": 14,
+      "section": "2.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-rise-of-cyberthreats",
+      "parent_heading": "The Cybersecurity Discipline"
+    }
+  },
+  {
+    "id": "59f84c5b5db9",
+    "level": 2,
+    "title": "The Emergence of Cybersecurity as a Discipline",
+    "page_number": 17,
+    "meta": {
+      "index": 15,
+      "section": "2.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-emergence-of-cybersecurity-as-a-discipline",
+      "parent_heading": "The Cybersecurity Discipline"
+    }
+  },
+  {
+    "id": "06e6b77e3799",
+    "level": 2,
+    "title": "Characteristics of a Cybersecurity Program",
+    "page_number": 18,
+    "meta": {
+      "index": 16,
+      "section": "2.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "characteristics-of-a-cybersecurity-program",
+      "parent_heading": "The Cybersecurity Discipline"
+    }
+  },
+  {
+    "id": "9811c356f664",
+    "level": 1,
+    "title": "Cybersecurity Curricular Framework",
+    "page_number": 19,
+    "meta": {
+      "index": 17,
+      "section": "3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "cybersecurity-curricular-framework"
+    }
+  },
+  {
+    "id": "0c46d99e9e86",
+    "level": 2,
+    "title": "Philosophy and Approach",
+    "page_number": 19,
+    "meta": {
+      "index": 18,
+      "section": "3.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "philosophy-and-approach",
+      "parent_heading": "Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "43a8b96c6fb8",
+    "level": 2,
+    "title": "Thought Model",
+    "page_number": 19,
+    "meta": {
+      "index": 19,
+      "section": "3.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "thought-model",
+      "parent_heading": "Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "9a6456bf3bc2",
+    "level": 3,
+    "title": "Knowledge Areas",
+    "page_number": 20,
+    "meta": {
+      "index": 20,
+      "section": "3.2.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-areas",
+      "parent_heading": "Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "c2b0e1907e72",
+    "level": 3,
+    "title": "Crosscutting Concepts",
+    "page_number": 21,
+    "meta": {
+      "index": 21,
+      "section": "3.2.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "crosscutting-concepts",
+      "parent_heading": "Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "91b5f92c7bc1",
+    "level": 3,
+    "title": "Disciplinary Lens",
+    "page_number": 22,
+    "meta": {
+      "index": 22,
+      "section": "3.2.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "disciplinary-lens",
+      "parent_heading": "Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "78bad7cf280a",
+    "level": 1,
+    "title": "Content of the Cybersecurity Curricular Framework",
+    "page_number": 23,
+    "meta": {
+      "index": 23,
+      "section": "4",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "content-of-the-cybersecurity-curricular-framework"
+    }
+  },
+  {
+    "id": "d95268c4c026",
+    "level": 2,
+    "title": "Knowledge Area: Data Security",
+    "page_number": 24,
+    "meta": {
+      "index": 24,
+      "section": "4.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-data-security",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "d125f145e3da",
+    "level": 3,
+    "title": "Knowledge Units and Topics",
+    "page_number": 24,
+    "meta": {
+      "index": 25,
+      "section": "4.1.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-units-and-topics",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "68a474ebe335",
+    "level": 3,
+    "title": "Essentials and Learning Outcomes",
+    "page_number": 30,
+    "meta": {
+      "index": 26,
+      "section": "4.1.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "essentials-and-learning-outcomes",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "f8d770cbae55",
+    "level": 2,
+    "title": "Knowledge Area: Software Security",
+    "page_number": 31,
+    "meta": {
+      "index": 27,
+      "section": "4.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-software-security",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "b7ced8c70917",
+    "level": 3,
+    "title": "Knowledge Units and Topics",
+    "page_number": 31,
+    "meta": {
+      "index": 28,
+      "section": "4.2.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.2.1-knowledge-units-and-topics",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "9bd16f03c1a9",
+    "level": 3,
+    "title": "Essentials and Learning Outcomes",
+    "page_number": 36,
+    "meta": {
+      "index": 29,
+      "section": "4.2.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.2.2-essentials-and-learning-outcomes",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "987a0b84aec2",
+    "level": 3,
+    "title": "Knowledge Area: Component Security",
+    "page_number": 37,
+    "meta": {
+      "index": 30,
+      "section": "4.2.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-component-security",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "8dea10e74d04",
+    "level": 3,
+    "title": "Knowledge Units and Topics",
+    "page_number": 37,
+    "meta": {
+      "index": 31,
+      "section": "4.2.4",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.2.4-knowledge-units-and-topics",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "b7b7522f38fb",
+    "level": 3,
+    "title": "Essentials and Learning Outcomes",
+    "page_number": 39,
+    "meta": {
+      "index": 32,
+      "section": "4.2.5",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.2.5-essentials-and-learning-outcomes",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "cd8abc8e8d1a",
+    "level": 2,
+    "title": "Knowledge Area: Connection Security",
+    "page_number": 40,
+    "meta": {
+      "index": 33,
+      "section": "4.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-connection-security",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "d7b6d7cbd79a",
+    "level": 3,
+    "title": "Knowledge Units and Topics",
+    "page_number": 40,
+    "meta": {
+      "index": 34,
+      "section": "4.3.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.3.1-knowledge-units-and-topics",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "5fbf67d1bb1c",
+    "level": 3,
+    "title": "Essentials and Learning Outcomes",
+    "page_number": 46,
+    "meta": {
+      "index": 35,
+      "section": "4.3.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.3.2-essentials-and-learning-outcomes",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "85ccf1e660d6",
+    "level": 2,
+    "title": "Knowledge Area: System Security",
+    "page_number": 47,
+    "meta": {
+      "index": 36,
+      "section": "4.4",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-system-security",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "354f9355890d",
+    "level": 3,
+    "title": "Knowledge Units and Topics",
+    "page_number": 47,
+    "meta": {
+      "index": 37,
+      "section": "4.4.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.4.1-knowledge-units-and-topics",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "20d8e90c66d9",
+    "level": 3,
+    "title": "Essentials and Learning Outcomes",
+    "page_number": 51,
+    "meta": {
+      "index": 38,
+      "section": "4.4.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.4.2-essentials-and-learning-outcomes",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "82496f85e00d",
+    "level": 2,
+    "title": "Knowledge Area: Human Security",
+    "page_number": 52,
+    "meta": {
+      "index": 39,
+      "section": "4.5",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-human-security",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "cb1615dfc76d",
+    "level": 3,
+    "title": "Knowledge Units and Topics",
+    "page_number": 52,
+    "meta": {
+      "index": 40,
+      "section": "4.5.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.5.1-knowledge-units-and-topics",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "bdc4d147c25a",
+    "level": 3,
+    "title": "Essentials and Learning Outcomes",
+    "page_number": 58,
+    "meta": {
+      "index": 41,
+      "section": "4.5.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.5.2-essentials-and-learning-outcomes",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "73cd8a291cd8",
+    "level": 2,
+    "title": "Knowledge Area: Organizational Security",
+    "page_number": 59,
+    "meta": {
+      "index": 42,
+      "section": "4.6",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-organizational-security",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "5b45a34ebd18",
+    "level": 3,
+    "title": "Knowledge Units and Topics",
+    "page_number": 59,
+    "meta": {
+      "index": 43,
+      "section": "4.6.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.6.1-knowledge-units-and-topics",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "5445914e0bea",
+    "level": 3,
+    "title": "Essentials and Learning Outcomes",
+    "page_number": 69,
+    "meta": {
+      "index": 44,
+      "section": "4.6.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.6.2-essentials-and-learning-outcomes",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "8d046643e1a5",
+    "level": 2,
+    "title": "Knowledge Area: Societal Security",
+    "page_number": 70,
+    "meta": {
+      "index": 45,
+      "section": "4.7",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-societal-security",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "ead1de4fbb68",
+    "level": 3,
+    "title": "Knowledge Units and Topics",
+    "page_number": 70,
+    "meta": {
+      "index": 46,
+      "section": "4.7.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.7.1-knowledge-units-and-topics",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "8c382594ebd7",
+    "level": 3,
+    "title": "Essentials and Learning Outcomes",
+    "page_number": 76,
+    "meta": {
+      "index": 47,
+      "section": "4.7.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "4.7.2-essentials-and-learning-outcomes",
+      "parent_heading": "Content of the Cybersecurity Curricular Framework"
+    }
+  },
+  {
+    "id": "1537f48ace5a",
+    "level": 1,
+    "title": "Industry Perspectives on Cybersecurity",
+    "page_number": 78,
+    "meta": {
+      "index": 48,
+      "section": "5",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "industry-perspectives-on-cybersecurity"
+    }
+  },
+  {
+    "id": "08e5a8f23298",
+    "level": 2,
+    "title": "The Technical - Business Skills Continuum",
+    "page_number": 78,
+    "meta": {
+      "index": 49,
+      "section": "5.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-technical-business-skills-continuum",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "5ee2ff5d9e4d",
+    "level": 2,
+    "title": "Career Focus",
+    "page_number": 79,
+    "meta": {
+      "index": 50,
+      "section": "5.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "career-focus",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "9759823361f2",
+    "level": 2,
+    "title": "Linking Cybersecurity Curriculum to Professional Practice",
+    "page_number": 80,
+    "meta": {
+      "index": 51,
+      "section": "5.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "linking-cybersecurity-curriculum-to-professional-practice",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "53cdc7ac6cb0",
+    "level": 3,
+    "title": "Application Areas",
+    "page_number": 80,
+    "meta": {
+      "index": 52,
+      "section": "5.3.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "application-areas",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "b69edfecca27",
+    "level": 3,
+    "title": "Training and Certifications",
+    "page_number": 82,
+    "meta": {
+      "index": 53,
+      "section": "5.3.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "training-and-certifications",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "cf52b7983163",
+    "level": 2,
+    "title": "Workforce Frameworks",
+    "page_number": 82,
+    "meta": {
+      "index": 54,
+      "section": "5.4",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "workforce-frameworks",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "9cb21ed6b0a7",
+    "level": 3,
+    "title": "NCWF Implementation Roadmaps",
+    "page_number": 82,
+    "meta": {
+      "index": 55,
+      "section": "5.4.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ncwf-implementation-roadmaps",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "5295b09ccb07",
+    "level": 3,
+    "title": "Overview",
+    "page_number": 84,
+    "meta": {
+      "index": 56,
+      "section": "5.4.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "overview",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "7262c8b12575",
+    "level": 3,
+    "title": "Relevant Courses",
+    "page_number": 84,
+    "meta": {
+      "index": 57,
+      "section": "5.4.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "relevant-courses",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "20ab7b9608f9",
+    "level": 3,
+    "title": "KSA Acquisition Strategies",
+    "page_number": 84,
+    "meta": {
+      "index": 58,
+      "section": "5.4.4",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "ksa-acquisition-strategies",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "efe8b4c511b9",
+    "level": 3,
+    "title": "Challenges",
+    "page_number": 85,
+    "meta": {
+      "index": 59,
+      "section": "5.4.5",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "challenges",
+      "parent_heading": "Industry Perspectives on Cybersecurity"
+    }
+  },
+  {
+    "id": "e41c63824925",
+    "level": 1,
+    "title": "References",
+    "page_number": 86,
+    "meta": {
+      "index": 60,
+      "section": "6",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "references"
+    }
+  },
+  {
+    "id": "83fff477aeb6",
+    "level": 1,
+    "title": "Appendix A: Contributors",
+    "page_number": 89,
+    "meta": {
+      "index": 61,
+      "section": "7",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "appendix-a-contributors"
+    }
+  },
+  {
+    "id": "b300f9cc7fa2",
+    "level": 2,
+    "title": "The Global Advisory Board To the Joint Task Force on Cybersecurity Education",
+    "page_number": 89,
+    "meta": {
+      "index": 62,
+      "section": "7.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-global-advisory-board-to-the-joint-task-force-on-cybersecurity-education",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "dee840208ae6",
+    "level": 2,
+    "title": "The Industrial Advisory Board To the Joint Task Force on Cybersecurity Education",
+    "page_number": 91,
+    "meta": {
+      "index": 63,
+      "section": "7.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "the-industrial-advisory-board-to-the-joint-task-force-on-cybersecurity-education",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "4ad5537d8bf4",
+    "level": 2,
+    "title": "Knowledge Area Working Groups",
+    "page_number": 93,
+    "meta": {
+      "index": 64,
+      "section": "7.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "knowledge-area-working-groups",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "cde49f833a8c",
+    "level": 3,
+    "title": "Knowledge Area: Data Security",
+    "page_number": 93,
+    "meta": {
+      "index": 65,
+      "section": "7.3.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "7.3.1-knowledge-area-data-security",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "e93b90b8d027",
+    "level": 3,
+    "title": "Knowledge Area: Software Security",
+    "page_number": 94,
+    "meta": {
+      "index": 66,
+      "section": "7.3.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "7.3.2-knowledge-area-software-security",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "cf5a172329f9",
+    "level": 3,
+    "title": "Knowledge Area: Component Security",
+    "page_number": 95,
+    "meta": {
+      "index": 67,
+      "section": "7.3.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "7.3.3-knowledge-area-component-security",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "8b7e8fb23348",
+    "level": 3,
+    "title": "Knowledge Area: Connection Security",
+    "page_number": 96,
+    "meta": {
+      "index": 68,
+      "section": "7.3.4",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "7.3.4-knowledge-area-connection-security",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "cefb67ba4991",
+    "level": 3,
+    "title": "Knowledge Area: System Security",
+    "page_number": 97,
+    "meta": {
+      "index": 69,
+      "section": "7.3.5",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "7.3.5-knowledge-area-system-security",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "1f8820fea37f",
+    "level": 3,
+    "title": "Knowledge Area: Human Security",
+    "page_number": 98,
+    "meta": {
+      "index": 70,
+      "section": "7.3.6",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "7.3.6-knowledge-area-human-security",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "26726d6c7f08",
+    "level": 3,
+    "title": "Knowledge Area: Organizational Security",
+    "page_number": 99,
+    "meta": {
+      "index": 71,
+      "section": "7.3.7",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "7.3.7-knowledge-area-organizational-security",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "5fa3baf95530",
+    "level": 3,
+    "title": "Knowledge Area: Societal Security",
+    "page_number": 100,
+    "meta": {
+      "index": 72,
+      "section": "7.3.8",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "7.3.8-knowledge-area-societal-security",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "a468e76f74d6",
+    "level": 2,
+    "title": "Contributing Reviewers",
+    "page_number": 101,
+    "meta": {
+      "index": 73,
+      "section": "7.4",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "contributing-reviewers",
+      "parent_heading": "Appendix A: Contributors"
+    }
+  },
+  {
+    "id": "fd0fe98e72eb",
+    "level": 1,
+    "title": "Appendix B: Essentials Table Overview",
+    "page_number": 111,
+    "meta": {
+      "index": 74,
+      "section": "8",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "appendix-b-essentials-table-overview"
+    }
+  },
+  {
+    "id": "f6921ddb76a9",
+    "level": 1,
+    "title": "Appendix C: Exemplars",
+    "page_number": 112,
+    "meta": {
+      "index": 75,
+      "section": "9",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "appendix-c-exemplars"
+    }
+  },
+  {
+    "id": "b6be6313292a",
+    "level": 2,
+    "title": "Curricular Exemplar Template",
+    "page_number": 112,
+    "meta": {
+      "index": 76,
+      "section": "9.1",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "curricular-exemplar-template",
+      "parent_heading": "Appendix C: Exemplars"
+    }
+  },
+  {
+    "id": "efab5f11fc40",
+    "level": 2,
+    "title": "Workforce Exemplar Template",
+    "page_number": 116,
+    "meta": {
+      "index": 77,
+      "section": "9.2",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "workforce-exemplar-template",
+      "parent_heading": "Appendix C: Exemplars"
+    }
+  },
+  {
+    "id": "a6c02ee51595",
+    "level": 2,
+    "title": "Course Exemplar Template",
+    "page_number": 118,
+    "meta": {
+      "index": 78,
+      "section": "9.3",
+      "curriculum": "cybersecurity",
+      "year_version": "2017",
+      "section_version": "v1",
+      "previous_versions": [],
+      "slug": "course-exemplar-template",
+      "parent_heading": "Appendix C: Exemplars"
+    }
+  }
+]
