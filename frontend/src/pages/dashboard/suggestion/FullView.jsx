@@ -158,13 +158,19 @@ const SuggestionContent = ({ suggestion, role }) => {
 }
 
 
-const Revs = ({suggestion }) => {
+const Revs = ({ suggestion }) => {
     const { reviewers, assign } = useAssociateEditor()
 
-    const options = reviewers.map(item => ({
-        label: item.name,
-        value: item.id
-    }))
+    const assigned = Array.isArray(suggestion.assignedReviewers)
+        ? suggestion.assignedReviewers.map(r => r.id)
+        : []
+
+    const options = reviewers
+        .filter(item => !assigned.includes(item.id))
+        .map(item => ({
+            label: item.name,
+            value: item.id
+        }))
 
 
     return (
