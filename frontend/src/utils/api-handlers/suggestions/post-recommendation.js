@@ -4,10 +4,9 @@ import { logger } from '@utils/logger'
 const log = logger.create('postSuggestion.js');
 
 
-export const postRecommednation = async (suggestionId, reviewerId, decision) => {
+export const postRecommednation = async (suggestionId, reviewerId, { decision, notes }) => {
     try {
-        console.log("in han:", suggestionId, reviewerId, decision)
-        await API.post(`/suggestion/${suggestionId}/post-recommendation`, {reviewerId, decision})
+        await API.post(`/suggestion/${suggestionId}/post-recommendation`, { reviewerId, decision, notes })
     } catch (error) {
         logger.error(error)
     }

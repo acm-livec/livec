@@ -9,6 +9,7 @@ import DashboardPage from '@pages/dashboard/DashboardPage';
 import ProfileView from '../pages/dashboard/profile/ProfileView';
 import SuggestionView from '@pages/dashboard/suggestion/SuggestionView';
 import MainView from '../pages/dashboard/overview/MainView';
+import EditSectionPage from '@pages/dashboard/sections/EditSectionPage';
 
 
 export default function AppRoutes() {
@@ -21,12 +22,13 @@ export default function AppRoutes() {
 
 
 			{/* Dashboard entry */}
-			<Route path="/dashboard/:userId" element={<DashboardPage />}>
-				<Route index element={<Navigate to="overview" replace />} />
-				<Route path="overview" element={<MainView />} />
-				<Route path="profile" element={<ProfileView />} />
-				<Route path="suggestion/:suggestionId" element={<SuggestionView />} />
-			</Route>
+                        <Route path="/dashboard/:userId" element={<DashboardPage />}>
+                                <Route index element={<Navigate to="overview" replace />} />
+                                <Route path="overview" element={<MainView />} />
+                                <Route path="profile" element={<ProfileView />} />
+                                <Route path="suggestion/:suggestionId" element={<SuggestionView />} />
+                                <Route path="section/:sectionId" element={<EditSectionPage />} />
+                        </Route>
 		</Routes>
 	);
 }

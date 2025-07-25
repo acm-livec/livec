@@ -12,7 +12,7 @@ import Modal, { DefaultView, ConfirmationView } from '@components/popups/Modal';
 import Card from '@features/document/Card';
 import Documentation from '@features/document/Documentation';
 import Page from '@features/details/Page';
-import { Form, CheckboxGroup, RadioGroup, RadioAsCheckbox } from '@components/input';
+import { Form, CheckboxGroup, RadioGroup, RadioAsCheckbox, TextArea } from '@components/input';
 // ─── Feature Components ──────────────────────────────────────────────────
 import Suggestion from '@features/suggestion/Suggestion';
 import ActionButtons from '@features/editor-in-chief/ActionButtons';
@@ -24,6 +24,7 @@ import useToggle from '@hooks/useToggle';
 import useView from '@hooks/useView';
 import useAssociateEditor from '@features/associate-editor/useAssociateEditor';
 import useVariant from '@hooks/useVariant';
+import useEditorInChief from '@features/editor-in-chief/useEditorInChief';
 
 // ─── Constants / Styles / Context ────────────────────────────────────────
 import { Roles } from '@documentation/constants/roles';
@@ -117,6 +118,7 @@ const SuggestionContent = ({ suggestion, role }) => {
     const { id } = suggestion
     const { finalize } = useAssociateEditor()
     const { recommend } = useReviewer()
+    const { publishVersion } = useEditorInChief()
     const { currentVariant, setVariant, isActive } = useVariant();
 
     const options = [
@@ -131,10 +133,16 @@ const SuggestionContent = ({ suggestion, role }) => {
             <GridPanel rowSpan={1} colSpan={3}>
                 <Suggestion suggestion={suggestion} />
                 {role === Roles.ASSOCIATE_EDITOR && <Button style={{ marginTop: '1rem' }} text='Finalize' modal={<FinalizeModal />} onClick={() => finalize(id)} />}
-                {role === Roles.EDITOR_IN_CHIEF && <ActionButtons setView={setVariant} isActive={isActive} />}
+                {role === Roles.EDITOR_IN_CHIEF && (
+                    <>
+                        <ActionButtons setView={setVariant} isActive={isActive} />
+                        <Button style={{ marginTop: '1rem' }} variant='confirm' text='Publish Version' onClick={() => publishVersion([{ section_id: suggestion.section.id }])} />
+                    </>
+                )}
                 {(role === Roles.REVIEWER && suggestion.system.status === "deferred") &&
                     <Form showConfirmation={{ defaultInfo: <RecModal />, successInfo: <></> }} onSubmit={(formData) => recommend(suggestion.id, formData)}>
                         <RadioAsCheckbox keyName='decision' options={options} />
+                        <TextArea keyName='notes' label='Notes' />
                     </Form>}
             </GridPanel>
 
@@ -170,6 +178,7 @@ const Revs = ({suggestion }) => {
 }
 
 import PlateEditor from '@features/details/PlateEditor';
+import DiffViewer from '@features/reviewer/DiffViewer';
 
 
 const SectionView = ({suggestion, text, id, role, rev }) => {
@@ -184,8 +193,13 @@ const SectionView = ({suggestion, text, id, role, rev }) => {
 
             <Container colSpan={2} rowSpan={9}>
                 {currentView === 'current' && <Page page={suggestion.section} />}
-                {role === Roles.ASSOCIATE_EDITOR && currentView === 'editor' && <PlateEditor content={suggestion.section.content} LOCAL_STORAGE_KEY={suggestion.id}/>}
-                {(role === Roles.EDITOR_IN_CHIEF || role === Roles.REVIEWER) && currentView === 'editor' && <Page page={suggestion.revisedSection} />}
+                {role === Roles.ASSOCIATE_EDITOR && currentView === 'editor' && (
+                    <PlateEditor content={suggestion.section.content} LOCAL_STORAGE_KEY={suggestion.id} />
+                )}
+                {role === Roles.REVIEWER && currentView === 'editor' && (
+                    <DiffViewer original={suggestion.section.content} revised={rev?.content || []} />
+                )}
+                {role === Roles.EDITOR_IN_CHIEF && currentView === 'editor' && <Page page={suggestion.revisedSection} />}
             </Container>
 
             <Container colSpan={1} rowSpan={9}>

@@ -38,14 +38,24 @@ export const TableBody = ({ data = [], headers = [] }) => {
 	);
 };
 
+export const TableSectionBody = ({ data = [], headers = [] }) => {
+        return (
+                <tbody>
+                        {data.map((row, rowIndex) => (
+                                <SectionRow key={rowIndex} row={row} headers={headers} />
+                        ))}
+                </tbody>
+        );
+};
+
 
 import { UserContext } from '@context/UserProvider';
 import { useContext } from 'react';
 
 
 export const TableRow = ({ row, headers }) => {
-	const {user} = useContext(UserContext)
-	const navigate = useNavigate();
+        const {user} = useContext(UserContext)
+        const navigate = useNavigate();
 	
 	return (
 		<tr className={styles['table-row']} onClick={() =>  navigate(`/dashboard/${user.id}/suggestion/${row.id}`)}>
@@ -53,5 +63,18 @@ export const TableRow = ({ row, headers }) => {
 				<td key={index}>{row[header.key]}</td>
 			))}
 		</tr>
-	);
+        );
+};
+
+export const SectionRow = ({ row, headers }) => {
+        const { user } = useContext(UserContext);
+        const navigate = useNavigate();
+
+        return (
+                <tr className={styles['table-row']} onClick={() => navigate(`/dashboard/${user.id}/section/${row.id}`)}>
+                        {headers.map((header, index) => (
+                                <td key={index}>{row[header.key]}</td>
+                        ))}
+                </tr>
+        );
 };
