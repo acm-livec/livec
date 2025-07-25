@@ -25,7 +25,7 @@ export default function RadioAsCheckbox({
             onChange={handleChange}
           />
           <span className={styles.checkmark}></span>
-          {item.label}
+          <span className={styles.labelText}>{item.label}</span>
         </label>
       ))}
     </div>

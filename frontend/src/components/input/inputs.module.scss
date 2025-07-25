@@ -96,6 +96,10 @@
         box-sizing: border-box;
     }
 
+    .customRadio .labelText {
+        margin-left: 0.25rem;
+    }
+
     .customRadio input[type="radio"]:checked+.checkmark::after {
         content: '';
         position: absolute;
