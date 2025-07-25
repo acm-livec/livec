@@ -1,0 +1,783 @@
+LiveC Requirements Document
+
+Rough draft 6-4-2025
+
+[Note: Sections 5, 6, 7, and 10 include material specifically developed
+for this project; the rest are from a template that Dana provided.]
+
+    1. Project Overview
+
+         Brief description of the project/product main goals.
+
+    2. Overview
+         Provide an overview of the sections and contents of the document. Alternatively,
+         a table of contents here instead.
+
+    3. Business Requirements
+             i. Background Summarize the rationale and context for the new product or
+                  for changes to be made to an existing one.
+             ii. Business Opportunity Describe the business problem that is being
+                  solved or the process being improved. Describe the needs of typical
+                  customers or of the target market.
+             iii. Business Objectives Summarize the important business benefits the
+                  product will provide in a quantitative and measurable way. Organizations
+                  generally undertake a project to solve a problem or exploit an opportunity.
+                  Business objectives define ways to measure achievement of business
+                  goals.
+             iv. Success Metrics Indicators that stakeholders will use to define and
+                  measure success on the project. What are the factors that will have the
+                  greatest impact on achieving success (i.e., could include aspects within
+                  and external to the organization).
+             v. Product Vision Statement Write a concise vision statement that
+                  summarizes the long-term purpose and intent of the product. A simple
+                  diagram that shows the major components of the overall system,
+                  subsystem interconnections, and external interfaces can be helpful but not
+                  required.
+
+    4. Scope and Limitations
+             i. Major Features Summarize the major features the product contains or the
+                  significant functions that it performs or lets the user perform. Details will be
+                  provided in Section 5, so only a high level summary is needed here.
+
+             ii. Project Scope Provide a short description of the software being specified
+                  and its purpose, including relevant benefits, objectives, and goals. Relate
+                  the software to corporate goals or business strategies.
+
+             iii. Limitations and Exclusions List any product capabilities or
+                  characteristics that a stakeholder might expect but that are not planned for
+                  inclusion in the product or in a specific release. List items that were cut
+                  from scope, so the scope decision is not forgotten.
+
+    5. Context Description
+
+             i. User Classes and Characteristics
+
+                  Community Member: Provides feedback in the form of a Proposed
+                  Change, on an ongoing basis
+
+                  ACM Ed Board: Recruits 1 Editor-in-Chief for each discipline
+
+                  Editor-in-Chief: Recruit X Associate Editors for each discipline, forwards
+                  updated curriculum to ACM Staff for posting
+
+                  Associate Editor: Provides notification of the Proposed Change being
+                  received and that it is being reviewed, Reviews contributions and/or
+                  Recruits external reviewers, provides notification of proposed change
+                  being accepted for inclusion in the next version
+
+                  Reviewer: recruited by the Associate Editor, provides a recommendation
+                  of inclusion in the next version to the Associate Editor
+
+                  Editorial Board: Editor in Chief + all the Associate Editors, review
+                  feedback accumulated over the entire cycle
+
+                  ACM Support Staff
+
+Ii. Live Curricula Update Process
+
+                  It is expected to have an annual update cycle.
+
+                  Each cycle will be run by Editors-in-Chief, one for each discipline; by
+                  associate editors nominated by the Editors-in-Chief, with the assistance of
+    external reviewers in cases where the associate editor thinks they cannot
+    judge the contribution.
+
+    The ACM Ed Board or the ACM EAC will nominate the Editors-in-Chief.
+    They, in turn, will nominate the associate editors.
+
+    The frequency for updating once a year may not be mandatory. It is
+    possible that each discipline will select a frequency that best suits its
+    needs. This is one of the questions that needs to be discussed by the
+    entire group.
+
+    The same goes for the number of associate editors recruited.
+
+Stage Description                  Comments         Actors           Frequency1
+
+                                 1. Launch of the Cycle              Once every Y
+                                                                     years
+1a  Place updated curricula on                      ACM Support
+                                                    Staff
+    the site for each of the
+
+    disciplines
+
+1b  Dissemination - First time Post to SIG          ACM Ed Board? Once every Y
+
+    publicizing to the             listservs,       ACM EAC          years
+
+    community                      ACM MemberNet
+
+                                   and similar
+
+                                   announcements
+
+1c  Recruit 1 Editor-in-Chief for                   ACM Ed Board     Once every Y
+                                                                     years
+    each discipline
+
+1d  Recruit X Associate Editors                     Editor-in-Chief  Once every Y
+                                                                     years
+    for each discipline
+
+1e  Recruit external Reviewers                      Associate Editors As needed
+
+                              2. Community Contributions
+
+2a  Community provides                              Community        Daily/ongoing
+                                                    members
+    feedback
+
+2b  Acknowledgment                 Public notification Associate Editors Once every Z
+
+                                   of the feedback                   months
+                                   that has been
+                                   received and that
+                                   it is being
+                                   reviewed
+
+                           3. Review of Contributions
+
+3a  Review contributions                                 Associate Editors Once every Z
+                                                                                   months
+
+3b  Decision/Recommendation Public notification Associate Editors Once every Z
+
+                                of exclusion or                             months
+
+                                consideration for
+
+                                inclusion, not
+
+                                necessarily
+
+                                inclusion
+
+                           4. Inclusion of Contributions
+
+4a  Review of feedback          Cross-KA issues Editorial Board Once every Y
+
+    accumulated over the entire to be considered consisting of              years
+
+    cycle                       for inclusion of         Editor-in-Chief
+                                feedback                 and all the
+
+                                                         Associate Editors
+
+4b  Decision disseminated       Public notification      Associate Editor   Once every Y
+                                of the feedback                             years
+                                accepted for
+                                inclusion in the
+                                next version
+
+4c  Decision incorporated       Next version of          Associate Editor   Once every Y
+                                the curriculum is                           years
+                                updated as per
+                                the feedback
+
+4d  Contributors acknowledged In a Contributors Associate Editor Once every Y
+
+    in the next version of the table                                        years
+
+    curriculum
+
+4e  Updated curriculum                                   Editor-In-Chief    Once every Y
+                                                                            years
+    forwarded to ACM Staff for
+
+    posting (Step 1a)
+
+1
+
+ Each discipline will determine its own process pacing.
+             ii. Operating Environment
+                  Describe the environment in which the software will operate, including the
+                  hardware platform, operating system and versions, and any other software
+                  components or applications with which it must peacefully coexist.
+
+             iii. Design and Implementation Constraints
+                  Describe any items or issues that will limit the options available to the
+                  developers. These might include: corporate or regulatory policies;
+                  hardware limitations (timing requirements, memory requirements);
+                  interfaces to other applications; specific technologies, tools, and
+                  databases to be used; parallel operations; language requirements;
+                  communications protocols; security considerations; design conventions or
+                  programming standards (for example, if the customer's organization will
+                  be responsible for maintaining the delivered software).
+
+             iv. Assumptions and Dependencies
+                  List any assumed factors (as opposed to known facts) that could affect the
+                  requirements stated. These could include third-party or commercial
+                  components that you plan to use, issues around the development or
+                  operating environment, or constraints. The project could be affected if
+                  these assumptions are incorrect, are not shared, or change. Also identify
+                  any dependencies the project has on external factors, such as software
+                  components that you intend to reuse from another project.
+
+             v. Glossary of Terms
+                  Define all the terms, including acronyms and abbreviations.
+
+             vi. References
+
+    6. System Features
+
+A number of system features are listed below together with more detailed user stories.
+Note that User story numbers are used within the activity diagrams in Section 10.
+System Feature 1: LiveC shall allow a community member to select a specific
+discipline and provide a recommendation in the form of a proposed change to a
+curriculum.
+
+Associated user stories in Table below:
+
+User     Process    User story  Acceptance criteria /
+story #  Code                   Comments / Questions
+         (referenc
+         es the
+         process
+         model)
+
+CM                  Community Member
+CM1 2a              As a community member, I Who are eligible to register?
+CM2 2a              want to register as a user E.g., only members of the
+CM3 2a              of the system so that I can professional/academic
+                    use the full set of system societies?
+CM4 2a              services.
+                    As a community member, I
+                    want to select a specific
+                    curriculum
+                    recommendation (CS
+                    2023, IS 2020, etc.) for
+                    review so that I can
+                    propose changes.
+                    As a community member, I
+                    want to access a specific
+                    section of the curriculum
+                    using multiple
+                    mechanisms (sequential
+                    reading, text search, table
+                    of contents, index, etc.) so
+                    that I can easily access
+                    sections that I am
+                    interested in reviewing.
+                    As a community member, I The hierarchies vary
+                    want to be able to provide depending on the discipline.
+                    feedback at multiple levels Most of them are either
+         of hierarchy, including       competency (e.g., competency
+
+         proposing a) new              realm, competency area,
+
+         elements, b) changes to competency) or knowledge
+
+         the sequence of the           (e.g., knowledge area,
+
+         elements, c) removal of knowledge unit,
+
+         elements, and d) detailed topics+learning outcomes)
+
+         textual changes so that I hierarchies
+
+         can easily articulate the
+
+         type of change I am
+
+         proposing
+
+CM5 N/A  As a community member, I
+
+         want to download the
+
+         latest version of a specific
+
+         curriculum
+
+         recommendation so that I
+
+         can use it to support my
+
+         work.
+
+System Feature 2: LiveC shall process the proposed change by
+
+    a. Initiating a public notification that the community member's proposed
+         change was received and is being considered
+
+    b. Allow an Associate Editor to triage the proposed change and decide: desk
+         reject, AE review or external reviewer review.
+
+    c. Allow an Associate Editor to Invite external reviewers (if decided at b.)
+    d. Collect assessment from reviewers and make it available to the Associate
+
+         Editor
+    e. Allow the Associate Editor to submit recommendation (decision) for
+
+         inclusion/exclusion in next version of curriculum to the Editor in Chief
+    f. Send notification to the Community member who initiated the Proposed
+
+         change as well as the Community as to the decision at point e.
+
+Associated user stories in Table below:
+
+AE / R   Associate Editor and
+AE1 2b   Reviewer
+         As an AE, I want to send a
+         public notification
+AE2 3a  regarding the feedback
+        that has been provided
+        and personal
+        acknowledgement to the
+        community member
+        As an AE, I want to triage
+        the proposed changes that
+        have been submitted
+        regarding my area of
+        responsibility since the
+        previous review so that I
+        can specify the actions
+        appropriate for each
+        proposed change (such as
+        desk reject, AE review,
+        reviewer review).
+
+R1  3a  As a reviewer, I want to
+        read and respond to an
+R2  3a  AE's invitation to review a   The reviewer should be able to
+        proposed change.              move easily between all
+R3  3a  As a reviewer, I want to      proposals in the queue and the
+        evaluate the merits of        history of changes of the target
+AE3 3a  each proposed change in       segment.
+        my queue so that I can
+        provide my feedback           Essentially the same as R2
+        regarding the proposed
+        changes.
+        As a reviewer, I want to
+        enter my recommendation
+        regarding a proposed
+        change and its justification
+        and submit them to the AE
+        so that the review
+        elements are collected
+        systematically.
+        As an AE, I want to
+        evaluate the merits of
+        each proposed change in
+        my queue so that I can
+AE4 3b  document my feedback          Essentially the same as R3
+        regarding the proposed
+        changes.
+        As an AE, I want to enter
+        my recommendation
+        regarding a change
+        proposal and its
+        justification so that it is
+        available for overall review
+
+AE5 3b  As an AE, I want to review This is particularly important for
+
+        all feedback (mine and        those proposals that have
+
+        reviewers) provided
+
+        regarding proposed
+
+        changes, finalize and
+
+        submit my final
+
+        recommendation to the
+
+        EIC, and provide
+
+        appropriate public
+
+        feedback.
+
+AE6 As  As an AE, I want to review Available at all stages of the
+
+needed the entire proposal and process; not a separate
+
+        decision history regarding process step
+
+        my area of responsibility
+
+        so that I can consider prior
+
+        decisions and current
+
+        proposals at various
+
+        stages of the decision
+
+        process.
+
+AE7 4c  As an AE, I want to update
+
+        the curriculum within my
+
+        area of responsibility so
+
+        that the approved changes
+
+        can be integrated to the
+
+        curriculum
+
+        recommendation.
+
+AE8 4a  As an AE, I want to
+
+        respond to a revision
+
+        request by the EIC with
+
+        changes to the text and/or
+
+        a justification.
+AE9 3a        As an AE, I want to
+              document the justifications
+              for desk rejected proposed
+              change.
+
+EIC           Editor-in-Chief
+EIC1
+      4a      As the EIC, I want to
+EIC2
+      4a      evaluate the
+EIC3
+      4a      recommendations by the
+EIC4
+      As      AEs and make my
+      needed
+              individual decisions
+
+              regarding each proposal in
+
+              preparation for the
+
+              Editorial Board decision
+
+              process so that I am ready
+
+              to lead the discussion.
+
+              As the EIC, I want to        There can be multiple rounds
+
+              review all changes made of reviews
+
+              to a section of my
+
+              curriculum
+
+              recommendation by an AE
+
+              and either approve the full
+
+              recommendation or send
+
+              change request(s) to the
+
+              AE
+
+              As the EIC, I want to
+
+              present the reviewed
+
+              recommendations to the
+
+              Editorial Board for their
+
+              final decision and
+
+              document the Board's
+
+              decisions in the system so
+
+              that the decisions are
+
+              immediately captured.
+
+              As the EIC, I want to        Available at all stages of the
+
+              review the entire proposal process
+
+              and decision history for my
+
+              computing discipline so
+
+              that I can consider prior
+
+              decisions and current
+         proposals at various
+
+         stages of the decision
+
+         process.
+
+EIC5     As the EIC, I want to         Society approvals?
+EIC6 4b
+         approve a specific
+EIC7
+AS       collection of curriculum
+AS1 4e
+AS2 4e   elements as the next
+
+         official version.
+
+         As the EIC, I want to use
+
+         the LiveC site to notify the
+
+         public regarding the
+
+         approved changes to the
+
+         curriculum so that uses of
+
+         the curriculum
+
+         recommendation stay up-
+
+         to-date regarding the
+
+         developments
+
+         As the EIC, I want to
+
+         acknowledge received
+
+         proposed changes from an
+
+         AE
+
+         ACM Staff                     How about other
+                                       organizations?
+
+         As the relevant ACM Staff
+         member, I want to have
+         access to all approved
+         versions of the curriculum
+         recommendations.
+         As the relevant ACM Staff
+         member, I want to be
+         notified of posted changes
+         to the curriculum.
+
+7. Data Requirements
+         i. Logical data model E.g., entity-relationship diagrams and UML class
+             diagrams. You may provide a data model for the business operations or
+                  the data that the system modifies. Not the same thing as a database
+                  design data model.
+             ii. Data dictionary Composition of data strucutres, meaning, data type,
+                  length, format, and allowed values.
+
+Initial Conceptual Data Model
+
+    8. External Interface Requirements
+             i. User Interfaces
+                  Describe the logical characteristics of each interface between the software
+                  product and the users. This may include sample screen images, any GUI
+                  standards or product family style guides that are to be followed, screen
+                  layout constraints, standard buttons and functions (e.g., help) that will
+                  appear on every screen, keyboard shortcuts, error message display
+                  standards, and so on. Define the software components for which a user
+                  interface is needed.
+             ii. Hardware Interfaces
+                  Describe the logical and physical characteristics of each interface between
+                  the software product and the hardware components of the system. This
+                  may include the supported device types, the nature of the data and control
+                  interactions between the software and the hardware, and communication
+                  protocols to be used.
+             iii. Software Interfaces
+                  Describe the connections between this product and other specific software
+                  components (name and version), including databases, operating systems,
+                  tools, libraries, and integrated commercial components. Identify the data
+                  items or messages coming into the system and going out and describe the
+                  purpose of each. Describe the services needed and the nature of
+                  communications. Identify data that will be shared across software
+                  components.
+             iv. Communication Interfaces
+                  Describe the requirements associated with any communications functions
+                  required by this product, including e-mail, web browser, network server
+                  communications protocols, electronic forms, and so on.
+
+    9. Software Quality Attributes
+         Specify requirements that include performance, security, reusability,
+         maintainability, usability, availability, interoperability, etc.
+
+    10. Analysis Models
+
+Data Flow Diagrams
+                                                      Contex Diagram (DFD Level 0)
+
+Community                  -Proposed Change
+           acknowledgment of proposed change receipt
+  Member
+
+                                                                 LiveC
+
+Community                                                                             Proposed change for review
+
+      AE           decision on inclusion in next version                            recommendation on inclusion            Reviewer
+
+              notification of proposed change                                     updated curriculum for posting
+                  decision on proposed change
+                                                                                                                           ACM Staff
+           Cumulative decision on inclusion in next version
+
+Editorial
+ Board
+
+                                                                 DFD Level 1 Diagram
+
+           Community                  Proposed Change
+                      acknowledgment of proposed change receipt
+              Member
+
+                                                                  Process
+                                                                 Selection
+
+                                                                                                                           Reviewer
+
+           Community  decision on inclusion in next version        Proposed Change               Invitation to review
+                 AE                                                                   recommendation on inclusion
+                        notification of proposed change.                Process
+                        decision on proposed change
+                                                                 Proposed Change
+
+           Editorial  Cummulative decision on inclusion in next version
+            Board                                                                     Decision to include proposed change
+
+                                                                     Implement      -Updated curriculum for posting        ACM Staff
+                                                                 proposed change
+                                                                   DFD Level 2 Diagram (Process
+                                                                           Proposed Change)
+
+Community
+
+  Member
+
+                                                                   Proposed Change
+
+           decision on exclusion/consideration for inclusion
+
+Community                                                           Triage          desk reject info  Proposed
+                                                                                                      changes
+                                                                   decision                           Repository
+
+           decsion to include/exclude change                                        proposed change status (exclude/include)
+
+                                              Decision to review proposed change
+
+AE
+                           "decision to include external reviewer
+
+                                                                     Select         Reviewer(s)       Reviewer Pool
+                                                                   reviewers
+
+Editorial               decision on proposed change                Decision on                      Invitation to review      Reviewer
+                                                                                    -recommendation on inclusion/exclusion
+ Board     Cumulative decision on inclusion in next version         Proposed
+                                                                     change
+            Submission of a proposed change by (computing) community members
+
+Note: only   Commun tyMember                                 System                     AE                Community
+registered
+users may                                         V                                                                     Selection of a
+                                                Select
+propose                                      curriculum                                                                 specifc
+changes.                                                                                                                curriculum
+                                                (CM2)                                                                   document
+
+                                               Select and    Curricula                                                  Selection of a
+                                             review section                                                             specifc
+                                                                                                                        section for
+                                                  (CMB)
+                                                                                                                        review
+
+                                       [No]   Change
+                                             identified?
+
+            Submit Proposed Change v2        [Yes]
+
+                                        Articulate and       <<save>> Proposed                                          Submit a
+                                       submit proposed
+                                        change (CM4)                           Changes                                  proposed
+                                                                                                                        change
+
+                                                             Notify AE of                    Personalize
+                                                              proposed
+                                                              change(s)                 acknowedgement
+                                                                                                (AE1)
+
+                                       Receive and read               Send                                              Notification
+                                                             acknowledgement                                            shared with
+                                       acknowedgement
+                                                               to community                                             the proposer
+                                                                                                                        and the
+                                                               member (AE1)
+                                                                                                                        computing
+                                                                   Notify                                               community.
+                                                               community
+                                                                                                            Receive
+                                                                   (AE1)                                  notification
+                                Organizing Proposed Changes for Review by the A
+
+                                               AE         System   Reviewer
+
+                                Triage proposed     Update change                     This is a periodically
+                                                                                      repeated process that
+                                 changes (AE2)           statuses
+                                                                                      prepares a batch of
+
+                                                                                      proposals for review.
+
+                                Status?
+
+                                [Desk    [Needs
+                                         reviewer]
+                                reject]
+
+Organize Periodic AE Review v2    Select             Proposed
+                                reviewers            Changes
+
+                                  (AE2)             Reviewer
+                                                       pool
+                                                                      Respond to
+                                                        Invite     review invitation
+                                                    reviewers
+                                                                           (R1)
+                                                           Store
+                                                       responses
+
+                                Document desk       Store desk
+                                       reject          reject
+
+                                  justifications    Proposed
+                                       (AE9)
+                                                     Changes
+
+                                                    Status?
+                                                    Merge
+                               Reviewing of Proposed Changes by the AE and Reviewers
+
+                               -  AE                System         Reviewer          EIC
+
+                                  Review proposed  Proposed                                        This is the actual
+                                   changes (A,     Changes                                         proposed change review
+                                         AE4)                                                      process that leads to
+                                                                                                   recommendation(s) to the
+                                                                                                   EIC.
+
+                                                                  Review proposed
+                                                                  changes (R2,R3)
+
+Review Proposed Changes by AE           Evaluate   Proposed
+                                      reviews of   Changes
+
+                                      proposed     Notify EIC of
+                                  changes (AE5)     completed
+
+                                                       reviews                       Acknowedge
+                                                                                       completed
+                                                                                          reviews
+10. Appendices
+
