@@ -17,10 +17,8 @@ export default function useReviewer() {
     const reviewerId = user.id
 
 
-    const recommend = async (id, {decision}) => {
-
-        console.log(id, decision)
-        await postRecommednation(id, reviewerId, decision)
+    const recommend = async (id, { decision, notes }) => {
+        await postRecommednation(id, reviewerId, { decision, notes })
         navigate(0)
 
     }

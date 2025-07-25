@@ -81,7 +81,8 @@
         "sonner": "^2.0.6",
         "tailwind-merge": "^3.3.1",
         "tailwind-scrollbar-hide": "^4.0.0",
-        "use-file-picker": "^2.1.2"
+        "use-file-picker": "^2.1.2",
+        "diff": "^5.2.0"
     },
     "devDependencies": {
         "@eslint/js": "^9.25.0",

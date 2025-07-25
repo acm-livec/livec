@@ -91,6 +91,18 @@ const db = {
                 { forceReset: reset }
             )
         }
+    },
+    curriculumVersions: {
+        computerScience: createDB(
+            'data/curriculums/computer-science/versions.json',
+            'data/curriculums/computer-science/default/versions.json',
+            { forceReset: reset }
+        ),
+        cybersecurity: createDB(
+            'data/curriculums/cybersecurity/versions.json',
+            'data/curriculums/cybersecurity/default/versions.json',
+            { forceReset: reset }
+        )
     }
 };
 

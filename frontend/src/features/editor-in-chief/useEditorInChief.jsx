@@ -4,6 +4,7 @@ import { UserContext } from '@context/UserProvider'
 import { logger } from '@utils/logger'
 const log = logger.create('useEditorInChief.js');
 import { EditorInChiefActions } from '@documentation/constants/actions'
+import { postVersion } from '@utils/api-handlers/curriculums/post-version'
 
 
 export const EditorInChief = EditorInChiefActions
@@ -88,6 +89,17 @@ export default function useEditorInChief() {
         }
     }
 
+    const publishVersion = async (changeSets) => {
+        try {
+            log.startProcess('Publish Version')
+            await postVersion(user.discipline, changeSets)
+            log.success('Version published')
+        } catch (error) {
+            log.error(error)
+        } finally {
+            log.endProcess()
+        }
+    }
 
-    return { approveSuggestion, sendChangeRequest, reject }
+    return { approveSuggestion, sendChangeRequest, reject, publishVersion }
 }
