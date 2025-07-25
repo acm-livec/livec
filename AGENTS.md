@@ -41,7 +41,8 @@ LiveC is a web application that supports **collaborative curriculum editing** fo
 ### Project Root (`LiveC/`)
 
 ```plaintext
-* Prototype Requirements.pdf         — System Requirements Specification (SRS)
+* Prototype Requirements.pdf       — System Requirements Specification (SRS) or
+* Prototype_Requirements.txt       — System Requirements Specification (SRS)
 * frontend/                         — React application
 * backend/                          — Node.js API & business logic
 * documentation/, archived/, testing/
@@ -158,6 +159,22 @@ LiveC is a web application that supports **collaborative curriculum editing** fo
 - ⚠️ **Workflows lack sequence logic** — mostly button-driven/manual.
 - ⚠️ **Audit/versioning** is limited to suggestion history.
 - ⚠️ **Public communication & ACM integration** is unimplemented.
+
+
+---
+
+## 🧾 Status Normalization
+
+Currently, status fields across the system (e.g., `suggestion.status.for_member`, `for_editor`, `for_ae`) are handled as loosely defined strings per role. This creates the risk of inconsistent values, typos, and harder-to-maintain workflows.
+
+To address this, status values should be standardized using a shared enum or status map (e.g., `SUBMITTED`, `IN_REVIEW`, `DEFERRED`, `APPROVED`, `PUBLISHED`, etc.). These definitions should be housed in a common constants file (e.g., `common/status.js`) and validated at both the backend and frontend layers.
+
+Standardizing status values will:
+- Improve maintainability and reduce logic duplication
+- Enable consistent UI rendering and filtering
+- Support easier internationalization, analytics, and documentation
+
+This effort should include retrofitting existing models and APIs with normalized values and converting any role-specific logic into centralized, declarative status transitions.
 
 ---
 
