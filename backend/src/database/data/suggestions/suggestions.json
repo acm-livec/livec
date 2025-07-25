@@ -1,1 +1,254 @@
-[]
+[
+  {
+    "id": "SCOSC-Co9OPb90",
+    "title": "f",
+    "text": "f",
+    "suggestion": "f",
+    "submitter_id": "CM-6482",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-25T16:56:09.488Z",
+    "status": {
+      "for_member": "under-higher-review",
+      "for_associate_editor": "finalized",
+      "for_editor_in_chief": "awaiting-response",
+      "system": "elevated"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "revised_section": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "CS2023 is the latest version of computer science curricular guidelines, produced by a joint task force of the ACM, IEEE Computer Society, and AAAI. The following is a summary of significant issues of the day and how they have been addressed in CS2023 curricular guidelines:"
+          }
+        ],
+        "id": "aMgiqaaBn2"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The discipline continues to evolve. The Body of Knowledge consisting of seventeen knowledge areas has been revised and updated."
+          }
+        ],
+        "id": "dGDNn3UM9P"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The discipline continues to grow. Topics that every graduate must know have been circumscribed as CS Core and kept to a minimum. Topics recommended for in-depth study have been labeled KA Core."
+          }
+        ],
+        "listStart": 2,
+        "id": "Xl-yZ-eiOe"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "It is increasingly difficult for programs to be all things to all people. Programs can now select the knowledge areas on which to focus. The knowledge areas, when coherently chosen, define the competency area(s) of the program."
+          }
+        ],
+        "listStart": 3,
+        "id": "qjFt8-xt9J"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Societal and ethical concerns have risen sharply. The Society, Ethics, and the Profession (SEP) knowledge area is now an integral part of most knowledge areas of the curriculum."
+          }
+        ],
+        "listStart": 4,
+        "id": "cO41eNjxuv"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The role of mathematics has increased. Additional hours have been allocated to mathematics and flexibility has been provided for coverage of the requirements in the curriculum."
+          }
+        ],
+        "listStart": 5,
+        "id": "q8lD_Xl5WO"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The need for professional dispositions is increasingly being recognized. Professional dispositions appropriate for each knowledge area have been listed and justified."
+          }
+        ],
+        "listStart": 6,
+        "id": "7uTrZQsvXY"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Interest is growing among educators in a competency model of the curriculum. A Competency Framework has been provided for programs to create their own competency model of the curriculum tailored to local needs."
+          }
+        ],
+        "listStart": 7,
+        "id": "_EgSWYItsC"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Generative AI is poised to impact computer science education. A chapter has been included that addresses how Generative AI could propel further innovation in computer science education."
+          }
+        ],
+        "listStart": 8,
+        "id": "7h2QRchNCU"
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "The curricular guidelines build towards the Characteristics of Graduates enumerated in the report and take into consideration the Challenges and Opportunities for Computer Science Education identified in the report. The guidelines have been supplemented with articles on Pedagogical Considerations and Curricular Practices ."
+          }
+        ],
+        "id": "m9F5YJZS4G"
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "The process used by the CS2023 task force has been collaborative (over ninety task force members), international (six continents), data-driven (five large- and over seventy small-scale surveys) and transparent ( csed.acm.org ). Community engagement included numerous conference panels and presentations along with regular postings to over a dozen ACM Special Interest Group (SIG) mailing lists and the full membership of AAAI. The iterative process has included at least two review and revision cycles for most of the knowledge areas. The resulting curricular guidelines are the culmination of three years of effort using the outlined Principles and Processes ."
+          }
+        ],
+        "id": "gAoezIjb7F"
+      }
+    ],
+    "public_updates": [
+      {
+        "refId": "DOC-aI7TbjRN",
+        "status": "submitted",
+        "date": "2025-07-25T16:56:09.488Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-rl3nlGAz",
+        "status": "assigned",
+        "author": "LiveC",
+        "date": "2025-07-25T16:56:09.513Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-sXa5hVoJ",
+        "status": "under-review",
+        "author": "AE-0001",
+        "date": "2025-07-25T16:57:36.680Z",
+        "message": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "f"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "refId": "DOC-J_e7i4fm",
+        "status": "under-higher-review",
+        "author": "LiveC",
+        "date": "2025-07-25T16:57:50.032Z",
+        "message": "Your suggestion is now under review by the Editor In Chief"
+      },
+      {
+        "refId": "DOC-LKpTJB3m",
+        "status": "under-higher-review",
+        "author": "LiveC",
+        "date": "2025-07-25T16:59:04.227Z",
+        "message": "Your suggestion is now under review by the Editor In Chief"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "start-review",
+        "refId": "DOC-IZeCGLff",
+        "author": "AE-0001",
+        "date": "2025-07-25T16:57:36.679Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "f"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "change-request-by-editor-in-chief",
+        "refId": "DOC-MqSEBBGE",
+        "author": "EIC-0001",
+        "date": "2025-07-25T16:58:48.935Z",
+        "content": "nice"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-6482",
+        "date": "2025-07-25T16:56:09.488Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-25T16:56:09.513Z",
+        "meta": {}
+      },
+      {
+        "action": "start-review",
+        "performed_by": "AE-0001",
+        "date": "2025-07-25T16:57:36.679Z",
+        "meta": {}
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-07-25T16:57:50.032Z",
+        "meta": {}
+      },
+      {
+        "action": "change-request-by-editor-in-chief",
+        "performed_by": "EIC-0001",
+        "date": "2025-07-25T16:58:48.935Z",
+        "meta": {}
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-07-25T16:59:04.227Z",
+        "meta": {}
+      }
+    ]
+  }
+]

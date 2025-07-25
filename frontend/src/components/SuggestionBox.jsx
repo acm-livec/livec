@@ -35,7 +35,7 @@ export default function SuggestionBox({ sectionId }) {
 
 
 const Default = ({ sectionId, submit }) => {
-    const discipline = sessionStorage.getItem('curriculumSlug') || 'none'
+    const discipline = sessionStorage.getItem('curriculum') || 'none'
 const options = [
     {
         label: 'New Knowledge Area',

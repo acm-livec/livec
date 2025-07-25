@@ -16,7 +16,7 @@ const handleNewSuggestion = async (userId, title, text, discipline, sectionId) =
 
     try {
 
-        logger.debug("suggestion.post.db.inserting", {sectionId})
+        logger.debug("suggestion.post.db.inserting", {sectionId, discipline})
         const insertedSuggestion = await Suggestions.insert({
             submitterId: userId,
             title,

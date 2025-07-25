@@ -46,7 +46,7 @@ const disciplinePrefixMap = {
  * 
 **/
 
-const generateSuggestionId = (key = Status.System.CLOSED, length = 8) => {
+const generateSuggestionId = (key, length = 8) => {
     const prefix = disciplinePrefixMap[key];
 
     if (!prefix) {
