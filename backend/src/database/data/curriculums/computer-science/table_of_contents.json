@@ -11,10 +11,7 @@
       "section_version": "v1",
       "previous_versions": [],
       "slug": "executive-summary"
-    },
-    "public_feedback": [
-      "SCOSC-Co9OPb90"
-    ]
+    }
   },
   {
     "id": "f95611b734d5",
@@ -693,7 +690,10 @@
       "previous_versions": [],
       "slug": "ai-sep-applications-and-societal-impact",
       "parent_heading": "Artificial Intelligence (AI)"
-    }
+    },
+    "public_feedback": [
+      "SCOSC-LEj-BtT6"
+    ]
   },
   {
     "id": "f64648e53097",

@@ -13,7 +13,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-	res.send('✅ Server is up and running!');
+    res.send('✅ Server is up and running!');
 });
 
 
@@ -26,14 +26,14 @@ app.use('/curriculums', curriculumRoutes);
 
 // 404 handler (optional; for unmatched API routes only)
 app.use((req, res) => {
-	res.status(404).json({ message: 'Not Found' });
+    res.status(404).json({ message: 'Not Found' });
 });
 
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-	console.error(err.stack);
-	res.status(500).json({ message: 'Server Error' });
+    console.error(err.stack);
+    res.status(500).json({ message: 'Server Error' });
 });
 
 

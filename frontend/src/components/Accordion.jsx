@@ -1,9 +1,9 @@
 // Accordion.js
 import { useState, useRef, useEffect } from 'react';
 import './Accordion.scss';
-import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa6';
 
-const AccordionItem = ({ css, title, content, isOpen,  onClick }) => {
+const AccordionItem = ({ css, title, content, isOpen, onClick }) => {
     const contentRef = useRef(null);
     const [maxHeight, setMaxHeight] = useState('0px');
 
@@ -15,9 +15,12 @@ const AccordionItem = ({ css, title, content, isOpen,  onClick }) => {
 
     return (
         <div className={`accordion-item`}>
-            <div className='flex justify-between accordion-title' onClick={onClick}>
+            <div
+                className="flex justify-between accordion-title"
+                onClick={onClick}
+            >
                 {/* {title} {range?.start || -99} - {range?.end || -99} {<FaChevronDown  />} */}
-                {title}  {isOpen ? <FaChevronUp/> : <FaChevronDown  />}
+                {title} {isOpen ? <FaChevronUp /> : <FaChevronDown />}
             </div>
             <div
                 ref={contentRef}
@@ -30,8 +33,6 @@ const AccordionItem = ({ css, title, content, isOpen,  onClick }) => {
     );
 };
 
-
-
 const Accordion = ({ css, item, content }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
@@ -41,16 +42,14 @@ const Accordion = ({ css, item, content }) => {
 
     return (
         <div className="accordion">
-
-                <AccordionItem
-                    css={css}
-                    key={item.title}
-                    title={item.title}
-                    content={content}
-                    isOpen={openIndex === item.title}
-                    onClick={() => handleToggle(item.title)}
-                />
-
+            <AccordionItem
+                css={css}
+                key={item.title}
+                title={item.title}
+                content={content}
+                isOpen={openIndex === item.title}
+                onClick={() => handleToggle(item.title)}
+            />
         </div>
     );
 };

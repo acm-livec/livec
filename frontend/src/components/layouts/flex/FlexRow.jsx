@@ -1,6 +1,4 @@
-
 import { getMergedLayoutProps } from '../layouts-util';
-
 
 export const FlexRow = ({ children, className = '', ...props }) => {
     const { style, ...rest } = getMergedLayoutProps(props);
@@ -15,4 +13,3 @@ export const FlexRow = ({ children, className = '', ...props }) => {
         </div>
     );
 };
-

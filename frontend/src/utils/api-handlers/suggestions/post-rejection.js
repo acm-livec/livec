@@ -1,6 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger'
-
+import { logger } from '@utils/logger';
 
 /**
  * Rejects a suggestion, providing reasons and an optional message to the submitter.
@@ -15,18 +14,23 @@ import { logger } from '@utils/logger'
  * @route POST: /suggestion/:id/reject
  * @file backend/src/routes/suggestion.routes.js
  */
-export const postRejection = async (suggestionId, rejectedBy, reasonForRejection, messageToSubmitter) => {
-
+export const postRejection = async (
+    suggestionId,
+    rejectedBy,
+    reasonForRejection,
+    messageToSubmitter
+) => {
     try {
-        const response = await API.post(`/suggestion/${suggestionId}/reject`, { 
-            rejectedBy, reasonForRejection, messageToSubmitter 
-        })
+        const response = await API.post(`/suggestion/${suggestionId}/reject`, {
+            rejectedBy,
+            reasonForRejection,
+            messageToSubmitter,
+        });
 
-        const { success, message } = response.data
-        logger.success(message)
-        return success
-        
+        const { success, message } = response.data;
+        logger.success(message);
+        return success;
     } catch (error) {
-        logger.error(error)
+        logger.error(error);
     }
-}
+};

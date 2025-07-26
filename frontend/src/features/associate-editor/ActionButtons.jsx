@@ -1,5 +1,5 @@
-import { AssociateEditor } from "./useAssociateEditor"
-import { Button } from "@components/buttons"
+import { AssociateEditor } from './useAssociateEditor';
+import { Button } from '@components/buttons';
 
 export default function ActionButtons({ setView, isActive }) {
     return (
@@ -23,5 +23,5 @@ export default function ActionButtons({ setView, isActive }) {
                 isActive={isActive(AssociateEditor.DEFER_TO_REVIEWER)}
             />
         </>
-    )
+    );
 }

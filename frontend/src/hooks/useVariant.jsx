@@ -1,23 +1,21 @@
-import { useState } from 'react'
-
+import { useState } from 'react';
 
 export default function useVariant(defaultVariant = 'default') {
-    const [currentVariant, setCurrentVariant] = useState(defaultVariant)
+    const [currentVariant, setCurrentVariant] = useState(defaultVariant);
 
     const setVariant = (variant) => {
         if (variant === currentVariant) {
-            setCurrentVariant(defaultVariant)
+            setCurrentVariant(defaultVariant);
         } else {
-            setCurrentVariant(variant)
+            setCurrentVariant(variant);
         }
 
-        console.log(currentVariant)
-    }
+        console.log(currentVariant);
+    };
 
     const isActive = (variant) => {
-        return variant === currentVariant
-    }
+        return variant === currentVariant;
+    };
 
-    return { setVariant, currentVariant, isActive }
+    return { setVariant, currentVariant, isActive };
 }
-

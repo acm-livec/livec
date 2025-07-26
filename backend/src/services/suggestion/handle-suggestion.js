@@ -16,7 +16,7 @@ const handleNewSuggestion = async (userId, title, text, discipline, sectionId) =
 
     try {
 
-        logger.debug("suggestion.post.db.inserting", {sectionId, discipline})
+        logger.debug("suggestion.post.db.inserting", { sectionId, discipline })
         const insertedSuggestion = await Suggestions.insert({
             submitterId: userId,
             title,
@@ -50,9 +50,9 @@ function kebabToCamel(str) {
     return str.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
 }
 
-const addToCurriculum  =  async (suggestionId, sectionId, discipline) => {
+const addToCurriculum = async (suggestionId, sectionId, discipline) => {
     try {
-        
+
         const curriculum = kebabToCamel(discipline)
 
         logger.debug("curriculum.get.db.searching", { curriculum })
@@ -66,16 +66,16 @@ const addToCurriculum  =  async (suggestionId, sectionId, discipline) => {
 
         const section = await requestedCurriculum.getSectionToc(sectionId)
 
-        if(section.hasOwnProperty('public_feedback')) {
+        if (section.hasOwnProperty('public_feedback')) {
             !section.public_feedback.includes(suggestionId) && section.public_feedback.push(suggestionId)
         } else {
             section.public_feedback = [suggestionId];
 
         }
 
-        requestedCurriculum.update(section)
+        requestedCurriculum.updateToc(section)
     } catch (error) {
-        
+
     }
 }
 

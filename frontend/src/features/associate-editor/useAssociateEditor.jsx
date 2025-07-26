@@ -1,25 +1,20 @@
-import { useNavigate } from "react-router";
-import { useContext, useState, useEffect } from "react"
+import { useNavigate } from 'react-router';
+import { useContext, useState, useEffect } from 'react';
 
-import { logger } from '@utils/logger'
+import { logger } from '@utils/logger';
 import { UserContext } from '@context/UserProvider';
-import { getReviewers } from "@utils/api-handlers/users/get-reviewers";
-import { AssociateEditorActions } from "@documentation/constants/actions";
+import { getReviewers } from '@utils/api-handlers/users/get-reviewers';
+import { AssociateEditorActions } from '@documentation/constants/actions';
 import {
     postRejection,
     postStartReview,
     postDocumentation,
     postAssociateEditorFinalization,
     postAssignReviewers,
-    postDeferral
-} from "@utils/api-handlers/suggestions";
+    postDeferral,
+} from '@utils/api-handlers/suggestions';
 
-
-
-
-export const AssociateEditor = AssociateEditorActions
-
-
+export const AssociateEditor = AssociateEditorActions;
 
 /**
  * @typedef {Object} AssociateEditorHook
@@ -32,36 +27,30 @@ export const AssociateEditor = AssociateEditorActions
  * @property {(suggestionId: string, formData: any) => Promise<void>} assign
  */
 
-
 /**
  * Custom hook that models all the functionalities of an Associate Editor.
- * 
+ *
  * - reject - Desk rejects a suggestion.
  * - accept - Accepts a suggestion to start reviewing.
  * - defer - Defers a suggestion to a selected reviewer.
  * - assign - Assigns selected reviewer/s to review a suggestion.
  * - document - Assigns selected reviewer/s to review a suggestion.
- * 
+ *
  * @returns {AssociateEditorHook} Functionalities
- * 
+ *
  */
 export default function useAssociateEditor() {
-    const { user } = useContext(UserContext)
+    const { user } = useContext(UserContext);
     const [reviewers, setReviewers] = useState([]);
-    const navigate = useNavigate()
-    const associateEditorId = user.id
-
-
+    const navigate = useNavigate();
+    const associateEditorId = user.id;
 
     useEffect(() => {
         if (!associateEditorId) return;
         getReviewers(associateEditorId)
-            .then(res => setReviewers(res))
-            .catch(err => logger.error(err))
+            .then((res) => setReviewers(res))
+            .catch((err) => logger.error(err));
     }, [associateEditorId]);
-
-
-
 
     /**
      * Rejects a suggestion with provided private and public messages.
@@ -70,39 +59,41 @@ export default function useAssociateEditor() {
      * @param {Object} params - Data from the rejection form.
      * @param {string} params.forPrivate - Private notes for rejection.
      * @param {string} params.forPublic - Message to the submitter.
-     * 
+     *
      * @returns {Promise<boolean>} A promise resolving to a boolean indicating success.
      */
     const reject = async (suggestionId, { forPrivate, forPublic }) => {
         try {
-            logger.startProcess('Reject Suggestion')
-            logger.debug({ suggestionId, forPrivate, forPublic })
-            const strucPriv = [{
-                type: 'p',
-                children: [{ text: forPrivate }]
-            }]
-            logger.debug({ suggestionId, forPrivate, forPublic })
-            const strucPub = [{
-                type: 'p',
-                children: [{ text: forPublic }]
-            }]
-            const success = await postRejection(suggestionId, associateEditorId, strucPriv, strucPub)
-            logger.success('Suggestion rejected:', { suggestionId, success })
-            return success
+            logger.startProcess('Reject Suggestion');
+            logger.debug({ suggestionId, forPrivate, forPublic });
+            const strucPriv = [
+                {
+                    type: 'p',
+                    children: [{ text: forPrivate }],
+                },
+            ];
+            logger.debug({ suggestionId, forPrivate, forPublic });
+            const strucPub = [
+                {
+                    type: 'p',
+                    children: [{ text: forPublic }],
+                },
+            ];
+            const success = await postRejection(
+                suggestionId,
+                associateEditorId,
+                strucPriv,
+                strucPub
+            );
+            logger.success('Suggestion rejected:', { suggestionId, success });
+            return success;
         } catch (error) {
-            logger.error(error)
-            return false
+            logger.error(error);
+            return false;
         } finally {
-            logger.endProcess()
+            logger.endProcess();
         }
-    }
-
-
-
-
-
-
-
+    };
 
     /**
      * Starts the review process for a suggestion.
@@ -117,29 +108,39 @@ export default function useAssociateEditor() {
      */
     const accept = async (suggestionId, { forPrivate, forPublic }) => {
         try {
-            logger.startProcess('Accept Suggestion')
-            logger.debug({ suggestionId, forPrivate, forPublic })
-             const strucPriv = [{
-                type: 'p',
-                children: [{ text: forPrivate }]
-            }]
-            logger.debug({ suggestionId, forPrivate, forPublic })
-            const strucPub = [{
-                type: 'p',
-                children: [{ text: forPublic }]
-            }]
-            const success = await postStartReview(suggestionId, associateEditorId, strucPriv, strucPub)
-            logger.success('Review started for suggestion:', { suggestionId, success })
-            return success
+            logger.startProcess('Accept Suggestion');
+            logger.debug({ suggestionId, forPrivate, forPublic });
+            const strucPriv = [
+                {
+                    type: 'p',
+                    children: [{ text: forPrivate }],
+                },
+            ];
+            logger.debug({ suggestionId, forPrivate, forPublic });
+            const strucPub = [
+                {
+                    type: 'p',
+                    children: [{ text: forPublic }],
+                },
+            ];
+            const success = await postStartReview(
+                suggestionId,
+                associateEditorId,
+                strucPriv,
+                strucPub
+            );
+            logger.success('Review started for suggestion:', {
+                suggestionId,
+                success,
+            });
+            return success;
         } catch (error) {
-            logger.error(error)
-            return false
+            logger.error(error);
+            return false;
         } finally {
-            logger.endProcess()
+            logger.endProcess();
         }
-    }
-
-
+    };
 
     /**
      * Adds documentation to a suggestion.
@@ -152,23 +153,26 @@ export default function useAssociateEditor() {
      */
     const document = async (suggestionId, documentationId) => {
         try {
-            logger.startProcess('Add Documentation')
-            const docs = JSON.parse(localStorage.getItem(documentationId))
-            if (!docs) throw new Error('No documentation available')
-            logger.debug({ suggestionId, documentationId, htmlLength: docs.length })
-            await postDocumentation(suggestionId, associateEditorId, docs)
-            logger.success('Documentation added for suggestion:', { suggestionId })
-            localStorage.removeItem(documentationId)
-            navigate(0)
+            logger.startProcess('Add Documentation');
+            const docs = JSON.parse(localStorage.getItem(documentationId));
+            if (!docs) throw new Error('No documentation available');
+            logger.debug({
+                suggestionId,
+                documentationId,
+                htmlLength: docs.length,
+            });
+            await postDocumentation(suggestionId, associateEditorId, docs);
+            logger.success('Documentation added for suggestion:', {
+                suggestionId,
+            });
+            localStorage.removeItem(documentationId);
+            navigate(0);
         } catch (error) {
-            logger.error(error)
+            logger.error(error);
         } finally {
-            logger.endProcess()
+            logger.endProcess();
         }
-    }
-
-
-
+    };
 
     /**
      * Finalizes a suggestion review by the associate editor.
@@ -179,23 +183,23 @@ export default function useAssociateEditor() {
      * @returns {Promise<void>} A promise resolving when the suggestion is finalized.
      */
     const finalize = async (suggestionId) => {
-        const updatedSection = JSON.parse(localStorage.getItem(suggestionId))
-        if (!updatedSection) throw new Error('No updated section available')
+        const updatedSection = JSON.parse(localStorage.getItem(suggestionId));
+        if (!updatedSection) throw new Error('No updated section available');
         try {
-            logger.startProcess('Finalize Suggestion')
-            logger.debug({ suggestionId, updatedSection })
-            await postAssociateEditorFinalization(associateEditorId, suggestionId, updatedSection)
-            logger.success('Suggestion finalized:', { suggestionId })
+            logger.startProcess('Finalize Suggestion');
+            logger.debug({ suggestionId, updatedSection });
+            await postAssociateEditorFinalization(
+                associateEditorId,
+                suggestionId,
+                updatedSection
+            );
+            logger.success('Suggestion finalized:', { suggestionId });
         } catch (error) {
-            logger.error(error)
+            logger.error(error);
         } finally {
-            logger.endProcess()
+            logger.endProcess();
         }
-    }
-
-
-
-
+    };
 
     /**
      * Defers a suggestion to a reviewer for further review.
@@ -209,28 +213,32 @@ export default function useAssociateEditor() {
      */
     const defer = async (suggestionId, { forPrivate, forPublic, reviewer }) => {
         try {
-            logger.startProcess('Defer Suggestion')
-            logger.debug({ suggestionId, forPrivate, forPublic, reviewer })
-            const strucPriv = [{
-                type: 'p',
-                children: [{ text: forPrivate }]
-            }]
-            logger.debug({ suggestionId, forPrivate, forPublic })
-            const strucPub = [{
-                type: 'p',
-                children: [{ text: forPublic }]
-            }]
-            await postDeferral(suggestionId, strucPriv, strucPub, reviewer)
-            logger.success('Suggestion deferred to reviewer:', { suggestionId, reviewer })
+            logger.startProcess('Defer Suggestion');
+            logger.debug({ suggestionId, forPrivate, forPublic, reviewer });
+            const strucPriv = [
+                {
+                    type: 'p',
+                    children: [{ text: forPrivate }],
+                },
+            ];
+            logger.debug({ suggestionId, forPrivate, forPublic });
+            const strucPub = [
+                {
+                    type: 'p',
+                    children: [{ text: forPublic }],
+                },
+            ];
+            await postDeferral(suggestionId, strucPriv, strucPub, reviewer);
+            logger.success('Suggestion deferred to reviewer:', {
+                suggestionId,
+                reviewer,
+            });
         } catch (error) {
-            logger.error(error)
+            logger.error(error);
         } finally {
-            logger.endProcess()
+            logger.endProcess();
         }
-    }
-
-
-
+    };
 
     /**
      * Assigns one or more reviewers to a suggestion.
@@ -244,18 +252,16 @@ export default function useAssociateEditor() {
      */
     const assign = async (suggestionId, { reviewers }) => {
         try {
-            logger.startProcess('Assign Reviewers')
-            logger.debug({ suggestionId, reviewers })
-            await postAssignReviewers(suggestionId, reviewers)
-            logger.success('Reviewers assigned:', { suggestionId, reviewers })
+            logger.startProcess('Assign Reviewers');
+            logger.debug({ suggestionId, reviewers });
+            await postAssignReviewers(suggestionId, reviewers);
+            logger.success('Reviewers assigned:', { suggestionId, reviewers });
         } catch (error) {
-            logger.error(error)
+            logger.error(error);
         } finally {
-            logger.endProcess()
+            logger.endProcess();
         }
-    }
+    };
 
-    return { reject, accept, defer, document, finalize, assign, reviewers }
+    return { reject, accept, defer, document, finalize, assign, reviewers };
 }
-
-

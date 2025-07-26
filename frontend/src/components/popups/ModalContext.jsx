@@ -4,25 +4,22 @@ import { useNavigate } from 'react-router';
 export const ModalContext = createContext(undefined);
 
 export default function ModalProvider({ children, onSubmit }) {
-
     const [showing, setShowing] = useState(false);
     const [view, setView] = useState('default');
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const submit = async () => {
         await onSubmit();
-        setView('confirmation')
+        setView('confirmation');
     };
-
 
     const open = () => setShowing(true);
 
-
     const close = () => {
         if (view === 'confirmation') {
-            navigate(0)
+            navigate(0);
         }
-        setShowing(false)
+        setShowing(false);
     };
 
     const values = {
@@ -34,8 +31,6 @@ export default function ModalProvider({ children, onSubmit }) {
     };
 
     return (
-        <ModalContext.Provider value={values}>
-            {children}
-        </ModalContext.Provider>
+        <ModalContext.Provider value={values}>{children}</ModalContext.Provider>
     );
 }

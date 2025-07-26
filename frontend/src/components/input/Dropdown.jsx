@@ -6,10 +6,8 @@ export default function Dropdown({
     keyName,
     val = '',
     label,
-    values = []               
+    values = [],
 }) {
-
-
     const { key, value, handleChange } = useInputField({ keyName, val });
 
     return (

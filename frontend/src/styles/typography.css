@@ -1,6 +1,5 @@
 /* SOft */
 
-
 /* 
 Montserrat
 Rubik
@@ -10,21 +9,21 @@ Nunito
 */
 
 .monts {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
 
 .rubik {
-    font-family: "Rubik", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
 
 .fsans {
-    font-family: "Funnel Sans", sans-serif;
+    font-family: 'Funnel Sans', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
@@ -32,28 +31,25 @@ Nunito
 
 .quick {
     /* Smooth, thin, for paragprahs */
-    font-family: "Quicksand", sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
 
 .nunit {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
 
-
-
 .osans {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: 'wdth' 100;
 }
 
 .bold {
@@ -68,83 +64,70 @@ Nunito
 
 .robot {
     /* stamdard formal */
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: 'wdth' 100;
 }
-
 
 /* .maybe rspv */
 .techm {
-    font-family: "Share Tech Mono", monospace;
+    font-family: 'Share Tech Mono', monospace;
     font-weight: 400;
     font-style: normal;
 }
 
 /* Blocky/Techy */
 
-
 .tektr {
-    font-family: "Tektur", sans-serif;
+    font-family: 'Tektur', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: 'wdth' 100;
 }
-
-
 
 .aldri {
     /* not for text header*/
-    font-family: "Aldrich", sans-serif;
+    font-family: 'Aldrich', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-
 /* smooth blocky maybe rsvp*/
 .tmmrw {
-    font-family: "Tomorrow", sans-serif;
+    font-family: 'Tomorrow', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 /* smooth spaced out like courier new */
 .srcco {
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Source Code Pro', monospace;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
 
-
 /* all capr sharp */
 
 .jsans {
-    font-family: "Julius Sans One", sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 /* BOLD, IMPORTANT, HEADERS */
 .bebas {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-
-
-
-
 .space {
     letter-spacing: 0.025rem;
 }
-
 
 .spce1 {
     letter-spacing: 0.05rem;

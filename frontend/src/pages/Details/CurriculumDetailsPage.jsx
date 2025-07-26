@@ -13,37 +13,39 @@ import TableOfContents from '@features/details/TableOfContents';
 import { PublicForum } from '@features/details/Forum';
 import { toTitleCase } from '@utils/format';
 
-
-export default function CurriculumDetailsPage({ selectedCurriculum = sessionStorage.getItem('curriculum') }) {
+export default function CurriculumDetailsPage({
+    selectedCurriculum = sessionStorage.getItem('curriculum'),
+}) {
     const {
-        currentPage, nextPage, tableOfContents,
+        currentPage,
+        nextPage,
+        tableOfContents,
         previousPage,
         setCurrentPage,
-    } = useTableOfContents(selectedCurriculum)
+    } = useTableOfContents(selectedCurriculum);
 
     const [showPdf, setShowPdf] = useState(false);
 
-
-    if (tableOfContents.length <= 0 || !currentPage) return <h1>We working on it</h1>
-
+    if (tableOfContents.length <= 0 || !currentPage)
+        return <h1>We working on it</h1>;
 
     return (
         <div className="details-page">
-
-
             <SideBar>
-                <div className='breadcrumbs'>
+                <div className="breadcrumbs">
                     <Breadcrumbs />
                 </div>
 
                 <h1 className="curricula-heading">
-                    {toTitleCase(selectedCurriculum) || "None"}
+                    {toTitleCase(selectedCurriculum) || 'None'}
                     <hr />
                 </h1>
 
-                <TableOfContents jumpToPage={setCurrentPage} tableOfContents={tableOfContents} />
+                <TableOfContents
+                    jumpToPage={setCurrentPage}
+                    tableOfContents={tableOfContents}
+                />
             </SideBar>
-
 
             <PageContent>
                 {/*
@@ -63,67 +65,66 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                     <PdfView />
                 ) : (
                     <>
-                        <div className='flex flex-col gap-3.5 px-[2.5%] pt-20 pb-0 sticky top-0 bg-inherit z-10'>
-                            <h1 className='text-sky-600'>| {currentPage?.meta.parent_heading || currentPage?.title}</h1>
-                             <hr style={{ color: 'black', width: '100%' }} />
+                        <div className="flex flex-col gap-3.5 px-[2.5%] pt-20 pb-0 sticky top-0 bg-inherit z-10">
+                            <h1 className="text-sky-600">
+                                |{' '}
+                                {currentPage?.meta.parent_heading ||
+                                    currentPage?.title}
+                            </h1>
+                            <hr style={{ color: 'black', width: '100%' }} />
                         </div>
-                        <FlexColumn padding={'2.5%'} gap='1.5rem'>
-
+                        <FlexColumn padding={'2.5%'} gap="1.5rem">
                             <Page page={currentPage} />
-                            <FlexRow justify='space-between' style={{ width: '100%' }}>
+                            <FlexRow
+                                justify="space-between"
+                                style={{ width: '100%' }}
+                            >
                                 <Button
                                     style={{ marginRight: 'auto' }}
-                                    size='fit-content'
+                                    size="fit-content"
                                     disableOn={currentPage?.isFirst || false}
                                     onClick={previousPage}
-                                    text='<' />
+                                    text="<"
+                                />
                                 <Button
                                     style={{ marginLeft: 'auto' }}
-                                    size='fit-content'
+                                    size="fit-content"
                                     disableOn={currentPage?.isLast || false}
                                     onClick={nextPage}
-                                    text='>' />
+                                    text=">"
+                                />
                             </FlexRow>
                             <hr style={{ color: 'black', width: '100%' }} />
                             <SuggestionBox sectionId={currentPage?.id} />
                             <hr />
 
-                            {currentPage?.public_feedback &&
+                            {currentPage?.public_feedback && (
                                 <>
                                     <h2>
-                                        See what others have commented on this section
+                                        See what others have commented on this
+                                        section
                                     </h2>
-                                    <PublicForum fb={currentPage?.public_feedback} />
+                                    <PublicForum
+                                        fb={currentPage?.public_feedback}
+                                    />
                                 </>
-                            }
+                            )}
                         </FlexColumn>
                     </>
                 )}
             </PageContent>
-
         </div>
     );
 }
 
-
-
 const SideBar = ({ children }) => {
-    return (
-        <aside className="toc-sidebar">
-            {children}
-        </aside>
-    )
-}
-
+    return <aside className="toc-sidebar">{children}</aside>;
+};
 
 const PageContent = ({ children }) => {
     return (
         <FlexColumn gap="1rem" className="pdf-container gap-1">
             {children}
         </FlexColumn>
-    )
-}
-
-
-
-
+    );
+};

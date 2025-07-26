@@ -1,8 +1,7 @@
-import styles from './Overlays.module.css'
+import styles from './Overlays.module.css';
 import { createPortal } from 'react-dom';
 import { ModalContext } from './ModalContext';
 import React, { useContext } from 'react';
-
 
 export default function Modal({ children }) {
     const { showing, view } = useContext(ModalContext);
@@ -20,10 +19,7 @@ export default function Modal({ children }) {
     );
 }
 
-
-
-
-export const DefaultView = ({ message = "message", children }) => {
+export const DefaultView = ({ message = 'message', children }) => {
     const { close, onSubmit } = useContext(ModalContext);
 
     return (
@@ -48,8 +44,6 @@ export const DefaultView = ({ message = "message", children }) => {
     );
 };
 
-
-
 export const ConfirmationView = ({ message, children }) => {
     const { close } = useContext(ModalContext);
 
@@ -58,11 +52,13 @@ export const ConfirmationView = ({ message, children }) => {
             <p className={styles.text}>{message}</p>
             {children}
             <div className={styles['button-group']}>
-                <button className={`${styles.button} ${styles['button--cancel']}`} onClick={close}>
+                <button
+                    className={`${styles.button} ${styles['button--cancel']}`}
+                    onClick={close}
+                >
                     Close
                 </button>
             </div>
         </div>
     );
 };
-

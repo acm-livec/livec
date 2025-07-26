@@ -62,7 +62,8 @@ const Status = Object.freeze({
         UNDER_CONSIDERATION: 'under-consideration',
         ACCEPTED: 'accepted',
         IMPLEMENTED: 'implemented',
-        PENDING_EXTERNAL_REVIEW: 'pending-external-review'
+        PENDING_EXTERNAL_REVIEW: 'pending-external-review',
+        IN_DISCUSSION: 'in-discussion'
     },
 
     Private: {
@@ -80,7 +81,9 @@ const Status = Object.freeze({
         AWAITING_FEEDBACK: 'awaiting-feedback',
         AWAITING_CHANGE_REQUEST: 'awaiting-change-request',
         CHANGE_REQUEST: 'change-request',
-        READY_FOR_DISCUSSION: 'ready-for-discussion'
+        READY_FOR_DISCUSSION: 'ready-for-discussion',
+        JOIN_DISCUSSION: 'join-discussion',
+        STARTED_DISCUSSION: 'started-discussion'
     },
 
     System: {
@@ -94,6 +97,7 @@ const Status = Object.freeze({
         CLOSED: 'closed',
         ARCHIVED: 'archived',
         AWAITING_FINAL_DECISION: 'awaiting-final-decision',
+        IN_FINAL_PHASE: 'in-final-phase',
         DEFERRED: 'deferred',
         ON_HOLD: 'on-hold',
         FLAGGED: 'flagged',

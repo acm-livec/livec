@@ -20,6 +20,11 @@ class EditorInChief extends User {
         }
     }
 
+    getAllAssociateEditors() {
+        console.log("inside", this.assignedAssociateEditors)
+        return this.assignedAssociateEditors
+    }
+
     toPublic() {
         return {
             ...super.toPublic(),

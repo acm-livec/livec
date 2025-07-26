@@ -1,26 +1,22 @@
-import { useState, useEffect } from 'react'
-import { Disciplines } from '@utils/constants'
+import { useState, useEffect } from 'react';
+import { Disciplines } from '@utils/constants';
 import { getCurriculum } from '@utils/api-handlers/curriculums/get-curriculum';
 
 /**
- * 
- * @param {string} curriculum 
- * @returns 
+ *
+ * @param {string} curriculum
+ * @returns
  */
 
 export default function useTableOfContents(curriculum) {
-    const [tableOfContents, setTableOfContents] = useState([])
+    const [tableOfContents, setTableOfContents] = useState([]);
 
     /** @type {[Section, Function]} */
-    const [currentPage, setCurrentPage] = useState()
-
-
-  
+    const [currentPage, setCurrentPage] = useState();
 
     useEffect(() => {
         getCurriculum(curriculum)
             .then((res) => {
-                
                 if (res.length > 0) {
                     // Modify the first item
                     res[0] = {
@@ -36,43 +32,41 @@ export default function useTableOfContents(curriculum) {
                 }
 
                 setTableOfContents(res);
-
             })
             .catch(console.error);
     }, [curriculum]);
 
-
-
     useEffect(() => {
         if (tableOfContents.length > 0) {
-            const { index } = tableOfContents[0]
-            console.log(index)
-            setCurrentPage(tableOfContents[0])
+            const { index } = tableOfContents[0];
+            console.log(index);
+            setCurrentPage(tableOfContents[0]);
         }
-    }, [tableOfContents])
-
+    }, [tableOfContents]);
 
     useEffect(() => {
-        console.log(currentPage)
-    }, [currentPage])
-
-
+        console.log(currentPage);
+    }, [currentPage]);
 
     const nextPage = () => {
         if (!(currentPage?.isLast || false)) {
-            const currIndx = currentPage.meta.index
-            setCurrentPage(tableOfContents[currIndx + 1])
+            const currIndx = currentPage.meta.index;
+            setCurrentPage(tableOfContents[currIndx + 1]);
         }
-    }
+    };
 
     const previousPage = () => {
         if (!(currentPage?.isFirst || false)) {
-            const currIndx = currentPage.meta.index
-            setCurrentPage(tableOfContents[currIndx - 1])
+            const currIndx = currentPage.meta.index;
+            setCurrentPage(tableOfContents[currIndx - 1]);
         }
-    }
+    };
 
-
-    return { tableOfContents, nextPage, previousPage, currentPage, setCurrentPage}
-
+    return {
+        tableOfContents,
+        nextPage,
+        previousPage,
+        currentPage,
+        setCurrentPage,
+    };
 }

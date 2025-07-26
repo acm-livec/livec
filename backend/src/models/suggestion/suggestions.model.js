@@ -83,6 +83,24 @@ class Suggestions {
         return entries || []
     }
 
+    static async getByFinalAssociateEditor(id) {
+        await this.dbRef.read();
+        const entries = this.dbRef.data
+            .filter(s =>
+                Array.isArray(s.final_decisions) &&
+                s.final_decisions.some(fd => fd.board_member_id === id)
+            )
+            .map(s => {
+                const ups = new Suggestion(s)
+                const voted = ups.didVote(id);
+                const ret = ups.toAssociateEditor()
+                ret.voted = voted
+                return ret
+            })
+
+        return entries || [];
+    }
+
 
 
     /**

@@ -7,53 +7,40 @@
     background-color: $stone-50;
     width: 100%;
 
-
-
     h1 {
-
         background-color: $rose-500;
         padding: 0.5rem 1rem;
-        color: $neutral-100
+        color: $neutral-100;
     }
-
-
 
     h2 {
         padding: 0.5rem 1rem;
         background-color: $sky-400;
         background-color: oklch(66% 0.13 258);
-        color: $neutral-100
+        color: $neutral-100;
     }
 
     h3 {
         color: oklch(66% 0.13 258);
     }
 
-
     p {
         line-height: 2;
     }
 
-
     ol,
     ul {
-
         list-style-position: outside;
-         padding-left: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
+        padding-left: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
     }
-
 
     li {
         display: list-item;
-
-
-
     }
 
-  
-
     code {
-        font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
+        font-family:
+            'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -61,7 +48,6 @@
 }
 
 .content {
-    
     width: 100%;
     padding-bottom: 5rem;
     overflow-y: auto;
@@ -69,12 +55,12 @@
 }
 
 .parent-heading {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: white; /* Or match your theme */
-  z-index: 10;
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-    color: $acm-blue
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white; /* Or match your theme */
+    z-index: 10;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    color: $acm-blue;
 }

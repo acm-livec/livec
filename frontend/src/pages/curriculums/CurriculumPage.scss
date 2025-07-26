@@ -8,8 +8,6 @@
     margin-bottom: 1rem;
 }
 
-
-
 .details__grid {
     display: grid;
     grid-template-columns: 300px;
@@ -34,13 +32,10 @@
     border: 1px solid #ccc;
     transition: all 0.2s ease;
     padding: 1.5rem;
-
 }
-
 
 .card:hover {
     box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.1);
-
 }
 
 .card__heading {

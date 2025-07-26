@@ -16,12 +16,17 @@ $flex-modifiers: (
     'end': flex-end,
     'around': space-around,
     'evenly': space-evenly,
-    'between': space-between
+    'between': space-between,
 );
 
-
 /// @group this is a group
-@mixin flex-container($direction: row, $align: flex-start, $justify: flex-start, $gap: 0, $padding: 0) {
+@mixin flex-container(
+    $direction: row,
+    $align: flex-start,
+    $justify: flex-start,
+    $gap: 0,
+    $padding: 0
+) {
     display: flex;
     flex-direction: map.get($flex-modifiers, $direction);
     align-items: map.get($flex-modifiers, $align);
@@ -29,8 +34,6 @@ $flex-modifiers: (
     gap: $gap;
     padding: $padding;
 }
-
-
 
 @mixin grid-container($rows, $cols, $gap: 0, $padding: 0) {
     display: grid;
@@ -66,13 +69,17 @@ $flex-modifiers: (
 - Bebas Neue
 */
 
-
-@mixin typography($font: system-ui, $size: 1rem, $weight: normal, $color: black) {
+@mixin typography(
+    $font: system-ui,
+    $size: 1rem,
+    $weight: normal,
+    $color: black
+) {
     font-family: $font, sans-serif, Arial, Helvetica;
     font-optical-sizing: auto;
     font-size: $size;
     font-weight: $weight;
-    color: $color
+    color: $color;
 }
 
 @mixin container($padding: 0) {

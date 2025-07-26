@@ -10,25 +10,33 @@ import ProfileView from '../pages/dashboard/profile/ProfileView';
 import SuggestionView from '@pages/dashboard/suggestion/SuggestionView';
 import MainView from '../pages/dashboard/overview/MainView';
 import EditSectionPage from '@pages/dashboard/sections/EditSectionPage';
-
-
+import Board from '@pages/dashboard/board/Board';
 export default function AppRoutes() {
-	return (
-		<Routes>
-			<Route path="/" element={<HomePage />} />
-			<Route path="/auth" element={<AuthPage />} />
-			<Route path="/curriculums" element={<CurriculumPage />} />
-			<Route path="/curriculums/:slug/details" element={<CurriculumDetailsPage />} />
+    return (
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="/curriculums" element={<CurriculumPage />} />
+            <Route
+                path="/curriculums/:slug/details"
+                element={<CurriculumDetailsPage />}
+            />
 
-
-			{/* Dashboard entry */}
-                        <Route path="/dashboard/:userId" element={<DashboardPage />}>
-                                <Route index element={<Navigate to="overview" replace />} />
-                                <Route path="overview" element={<MainView />} />
-                                <Route path="profile" element={<ProfileView />} />
-                                <Route path="suggestion/:suggestionId" element={<SuggestionView />} />
-                                <Route path="section/:sectionId" element={<EditSectionPage />} />
-                        </Route>
-		</Routes>
-	);
+            {/* Dashboard entry */}
+            <Route path="/dashboard/:userId" element={<DashboardPage />}>
+                <Route index element={<Navigate to="overview" replace />} />
+                <Route path="overview" element={<MainView />} />
+                <Route path="board" element={<Board />} />
+                <Route path="profile" element={<ProfileView />} />
+                <Route
+                    path="suggestion/:suggestionId"
+                    element={<SuggestionView />}
+                />
+                <Route
+                    path="section/:sectionId"
+                    element={<EditSectionPage />}
+                />
+            </Route>
+        </Routes>
+    );
 }

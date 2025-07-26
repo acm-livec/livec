@@ -1,4 +1,3 @@
-
 import { useContext, useState, useEffect } from 'react';
 
 import '@react-pdf-viewer/core/lib/styles/index.css';
@@ -12,11 +11,9 @@ import remarkMath from 'remark-math';
 
 const pdfjsVersion = '5.3.93';
 export default function PdfView() {
-
     const pageNavigationPluginInstance = pageNavigationPlugin();
 
-    const [open, setOpen] = useState(false)
-
+    const [open, setOpen] = useState(false);
 
     const { jumpToPage } = pageNavigationPluginInstance;
 
@@ -27,18 +24,14 @@ export default function PdfView() {
     const { ZoomInButton, ZoomOutButton, ZoomPopover } = zoomPluginInstance;
     const { zoomTo } = zoomPluginInstance;
 
-
     const onDocumentLoad = () => {
-        zoomTo(0.85)
-    }
-
-
-
-
+        zoomTo(0.85);
+    };
 
     return (
-
-        <Worker workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.min.js`} >
+        <Worker
+            workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.min.js`}
+        >
             <ZoomInButton />
             <Viewer
                 fileUrl="/CS2023.pdf"
@@ -46,7 +39,6 @@ export default function PdfView() {
                 onDocumentLoad={onDocumentLoad}
             />
             <ZoomInButton />
-
         </Worker>
-    )
+    );
 }

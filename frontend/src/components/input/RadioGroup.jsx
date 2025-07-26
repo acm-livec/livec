@@ -6,7 +6,7 @@ export default function RadioGroup({
     keyName,
     val = '',
     label,
-    options = [] // Array of { label, value }
+    options = [], // Array of { label, value }
 }) {
     const { key, value, handleChange } = useInputField({ keyName, val });
 

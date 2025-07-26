@@ -11,6 +11,7 @@ import { postEditorInChiefApproval } from './post-approval.js'
 import { postChangeRequest } from './post-change.js'
 import { postDeferral } from './post-deferral.js'
 import { postRecommednation } from './post-recommendation.js'
+import { postDiscussion } from './post-discussion.js'
 
 export {
     postSuggestion,
@@ -23,5 +24,6 @@ export {
     postEditorInChiefApproval,
     postChangeRequest,
     postDeferral,
-    postRecommednation
+    postRecommednation,
+    postDiscussion
 };

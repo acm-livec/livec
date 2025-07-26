@@ -15,7 +15,7 @@
 
 /* Modal box */
 .overlay-content {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,6 @@
 
     width: fit-content;
 }
-
 
 .text {
     font-weight: 500;
@@ -51,17 +50,16 @@
 }
 
 .button--cancel:hover {
-    background: rgba(239, 68, 68, 0.80);
+    background: rgba(239, 68, 68, 0.8);
     color: #ffffff;
 }
 
-
 .button--confirm {
     background: rgba(16, 185, 129, 0.45);
-    color: #10B981;
+    color: #10b981;
 }
 
 .button--confirm:hover {
-    background: rgba(16, 185, 129, 0.80);
+    background: rgba(16, 185, 129, 0.8);
     color: #fff;
 }

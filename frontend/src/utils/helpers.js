@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 /**
  * Builds default values from children with a `keyName` and optional `val` prop.
@@ -17,4 +17,4 @@ export const buildDefaultValues = (children) => {
         }
         return acc;
     }, {});
-}
+};

@@ -136,14 +136,6 @@
     "id": "8238a7d96075",
     "content": [
       {
-        "type": "h2",
-        "children": [
-          {
-            "text": "Definitions and Terminology"
-          }
-        ]
-      },
-      {
         "type": "p",
         "children": [
           {
@@ -210,7 +202,20 @@
         "type": "p",
         "children": [
           {
-            "text": "Learning outcomes are used for assessment. Each topic in a knowledge unit is categorized as either core or elective: <code>Topic ∈ { core } ∪ { elective }</code>"
+            "text": "Learning outcomes are used for assessment. Each topic in a knowledge unit is categorized as either core or elective:"
+          }
+        ]
+      },
+        {
+        "type": "code_block",
+        "children": [
+          {
+            "type": "code_line",
+            "children": [
+              {
+                "text": "Topic ∈ { core } ∪ { elective }"
+              }
+            ]
           }
         ]
       },

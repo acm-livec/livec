@@ -73,7 +73,7 @@ class Curriculums {
      * @returns {Promise<Suggestion>} The updated Curriculum instance.
      * @throws {Error} If the suggestion with the specified ID does not exist.
      */
-    static async update(suggestionInstance) {
+    static async update(curr, sect) {
         await this.dbRef.read();
 
         const index = this.dbRef.data.findIndex(s => s.id === suggestionInstance.id);

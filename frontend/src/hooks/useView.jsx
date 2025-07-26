@@ -1,19 +1,15 @@
-import { useState } from 'react'
-
+import { useState } from 'react';
 
 export default function useView(defaultView = 'default') {
-    const [currentView, setCurrentView] = useState(defaultView)
+    const [currentView, setCurrentView] = useState(defaultView);
 
     const setView = (variant) => {
-
-            setCurrentView(variant)
-
-    }
+        setCurrentView(variant);
+    };
 
     const isActive = (variant) => {
-        return variant === currentView
-    }
+        return variant === currentView;
+    };
 
-    return { setView, currentView, isActive }
+    return { setView, currentView, isActive };
 }
-

@@ -30,6 +30,7 @@ class Suggestion {
         this.assigned_reviewers = data.assigned_reviewers || data.assignedReviewers || [];
 
         this.meta = data.meta || {};
+        this.final_decisions = data.final_decisions || []
 
         this.revised_section = data.revised_section || "";
 
@@ -88,7 +89,9 @@ class Suggestion {
             assignedEditorInChief: this.assigned_editor_in_chief || 'none',
             assignedReviewers: this.assigned_reviewers || [],
             documentation: this.documentation,
+            revisedSection: this.revised_section,
             history: this.history,
+            finalDecisions: this.final_decisions,
             system: {
                 status: this.status.system
             }
@@ -121,7 +124,7 @@ class Suggestion {
         return {
             id: this.id,
             title: this.title,
-            suggestion: this.suggestion,
+            text: this.text,
             timeCreated: this.time_created,
             status: this.status.for_editor_in_chief,
             sectionId: this.section_id,
@@ -133,6 +136,8 @@ class Suggestion {
             assignedReviewers: this.assigned_reviewers || [],
             documentation: this.documentation,
             revisedSection: this.revised_section,
+            finalDecisions: this.final_decisions,
+
             system: {
                 status: this.status.system
             }
@@ -230,6 +235,14 @@ class Suggestion {
                 'for_reviewer': Status.Private.RECOMMENDATION_SUBMITTED,
                 'system': Status.System.ACTIVE
             }
+                break
+
+            case Actions.STARTED_FINAL_DISCUSSION: this.status = {
+                'for_member': Status.Public.IN_DISCUSSION,
+                'for_associate_editor': Status.Private.JOIN_DISCUSSION,
+                'for_editor_in_chief': Status.Private.STARTED_DISCUSSION,
+                'system': Status.System.IN_FINAL_PHASE
+            }
         }
     }
 
@@ -239,7 +252,8 @@ class Suggestion {
     isInDeliberation() {
         return this.status.system === Status.System.ELEVATED ||
             this.status.system === Status.System.PENDING ||
-            this.status.system === Status.System.AWAITING_FINAL_DECISION
+            this.status.system === Status.System.AWAITING_FINAL_DECISION ||
+            this.status.system === Status.System.IN_FINAL_PHASE
     }
 
 
@@ -327,7 +341,7 @@ class Suggestion {
     }
 
     defer(notes, message, reviewerId) {
-        this.assigned_reviewers.push({id: reviewerId, recommendation: 'pending'})
+        this.assigned_reviewers.push({ id: reviewerId, recommendation: 'pending' })
         this._updateStatus(Actions.DEFERED_TO_REVIEWER)
 
         this.insertHistory(Actions.DEFERED_TO_REVIEWER, this.assigned_associate_editor)
@@ -344,7 +358,7 @@ class Suggestion {
 
     addRecommendation(reviewerId, decision) {
         this._updateStatus(Actions.RECOMMENDATION_BY_REVIEWER)
-        this.insertHistory(Actions.RECOMMENDATION_BY_REVIEWER, reviewerId, {decision})
+        this.insertHistory(Actions.RECOMMENDATION_BY_REVIEWER, reviewerId, { decision })
         this.updateReviewer(reviewerId, decision)
     }
 
@@ -382,10 +396,10 @@ class Suggestion {
 
     assignReviewers(newReviewers) {
         newReviewers.map(id => (
-            !this.assigned_reviewers.includes(id) && this.assigned_reviewers.push({id, recommendation: 'pending'})
+            !this.assigned_reviewers.includes(id) && this.assigned_reviewers.push({ id, recommendation: 'pending' })
         ));
 
-        this.insertHistory(Actions.ASSIGNED_REVIEWERS, this.assigned_associate_editor, {numAssigned: newReviewers.length})
+        this.insertHistory(Actions.ASSIGNED_REVIEWERS, this.assigned_associate_editor, { numAssigned: newReviewers.length })
 
 
         this._updateStatus(Actions.ASSIGNED_REVIEWERS);
@@ -406,6 +420,46 @@ class Suggestion {
 
         return "###-####";
 
+    }
+
+
+    startDiscussion(eic) {
+        if (this.status.system === Status.System.CLOSED) return;
+        this._updateStatus(Actions.STARTED_FINAL_DISCUSSION);
+        this.insertHistory(Actions.STARTED_FINAL_DISCUSSION, eic)
+        this.insertPublicMessage("Your suggestion is currently now under discussion by the Editorial Board for a final decision!")
+
+    }
+
+    addBoard(board) {
+        const decisions = board.map(item => ({
+            board_member_id: item,
+            final_decision: 'pending'
+        }))
+        this.final_decisions = decisions
+    }
+
+    didVote(userId) {
+        const decision = this.final_decisions.find(
+            (entry) => entry.board_member_id === userId
+        );
+
+        return decision.final_decision !== 'pending'
+    }
+
+
+    updateVote(userId, newDecision, notes) {
+        const decision = this.final_decisions.find(
+            (entry) => entry.board_member_id === userId
+        );
+
+        if (decision) {
+            decision.final_decision = newDecision;
+            this.insertDocumentation("vote-casted", userId, notes)
+            return { updated: true, message: 'Vote updated' };
+        } else {
+            return { updated: false, message: 'User not found' };
+        }
     }
 }
 

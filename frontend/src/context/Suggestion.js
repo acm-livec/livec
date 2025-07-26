@@ -1,14 +1,16 @@
 // src/models/User.js
-import { Status } from "@utils/constants";
-import { isTerminalStatus, SystemStatus } from "@documentation/constants/status";
-
+import { Status } from '@utils/constants';
+import {
+    isTerminalStatus,
+    SystemStatus,
+} from '@documentation/constants/status';
 
 /**
  * @type {Suggestion}
  */
 export default class Suggestion {
     constructor(data = {}) {
-        Object.assign(this, data)
+        Object.assign(this, data);
     }
 
     /** Check if user has a given role */
@@ -23,5 +25,8 @@ export default class Suggestion {
         return this.system?.status === Status.System.DEFERRED;
     }
 
+    inFinalPhase() {
+        return this.system?.status === SystemStatus.IN_FINAL_PHASE;
 
+    }
 }

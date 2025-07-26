@@ -1,252 +1,578 @@
 [
   {
-    "id": "SCOSC-Co9OPb90",
-    "title": "f",
-    "text": "f",
-    "suggestion": "f",
+    "id": "SCOSC-LEj-BtT6",
+    "title": "Integrating Real-World Search Problem Applications and Ethical Considerations",
+    "text": "Consider adding a subsection under \"Illustrative Learning Outcomes\" or \"Non-core\" content that addresses real-world applications and ethical dimensions of search algorithms. For example: Analyze the use of heuristic search in real-world systems such as GPS navigation, automated scheduling, or resource allocation in cloud computing. This grounds abstract concepts in tangible examples and enhances student engagement. Critically evaluate ethical implications of heuristic-based decision-making in sensitive domains (e.g., job applicant ranking, automated loan approvals), linking search strategy design with fairness, transparency, and accountability.\n",
+    "suggestion": "Consider adding a subsection under \"Illustrative Learning Outcomes\" or \"Non-core\" content that addresses real-world applications and ethical dimensions of search algorithms. For example: Analyze the use of heuristic search in real-world systems such as GPS navigation, automated scheduling, or resource allocation in cloud computing. This grounds abstract concepts in tangible examples and enhances student engagement. Critically evaluate ethical implications of heuristic-based decision-making in sensitive domains (e.g., job applicant ranking, automated loan approvals), linking search strategy design with fairness, transparency, and accountability.\n",
     "submitter_id": "CM-6482",
-    "section_id": "d3b1d0eaf0e4",
-    "time_created": "2025-07-25T16:56:09.488Z",
+    "section_id": "dc69787d7515",
+    "time_created": "2025-07-26T23:38:16.278Z",
     "status": {
-      "for_member": "under-higher-review",
-      "for_associate_editor": "finalized",
-      "for_editor_in_chief": "awaiting-response",
-      "system": "elevated"
+      "for_member": "in-discussion",
+      "for_associate_editor": "join-discussion",
+      "for_editor_in_chief": "started-discussion",
+      "system": "in-final-phase"
     },
     "discipline": "computer-science",
     "assigned_associate_editor": "AE-0001",
     "assigned_editor_in_chief": "EIC-0001",
     "assigned_reviewers": [],
     "meta": {},
+    "final_decisions": [
+      {
+        "board_member_id": "EIC-0001",
+        "final_decision": "exclude"
+      },
+      {
+        "board_member_id": "AE-0001",
+        "final_decision": "exclude"
+      },
+      {
+        "board_member_id": "AE-0002",
+        "final_decision": "exclude"
+      }
+    ],
     "revised_section": [
       {
         "type": "p",
         "children": [
           {
-            "text": "CS2023 is the latest version of computer science curricular guidelines, produced by a joint task force of the ACM, IEEE Computer Society, and AAAI. The following is a summary of significant issues of the day and how they have been addressed in CS2023 curricular guidelines:"
+            "text": "Note: There is substantial benefit to studying applications and ethics/fairness/trust/explainability in a curriculum alongside the methods and theory that they apply to, rather than covering ethics in a separate, dedicated class session. Whenever possible, study of these topics should be integrated alongside other modules, such as exploring how decision trees could be applied to a specific problem in environmental sustainability such as land use allocation, then assessing the social/environmental/ethical implications of doing so."
           }
         ],
-        "id": "aMgiqaaBn2"
+        "id": "pFPGctBHvY"
+      },
+      {
+        "type": "h3",
+        "children": [
+          {
+            "text": "CS Core"
+          }
+        ]
       },
       {
         "type": "p",
-        "listStyleType": "disc",
+        "listStyleType": "decimal",
         "indent": 0,
         "children": [
           {
-            "text": "The discipline continues to evolve. The Body of Knowledge consisting of seventeen knowledge areas has been revised and updated."
+            "text": "At least one application of AI to a specific problem and field, such as medicine, health, sustainability, social media, economics, education, robotics, etc. (choose at least one for the CS Core)."
           }
         ],
-        "id": "dGDNn3UM9P"
+        "id": "ouneuyN43m"
       },
       {
         "type": "p",
-        "listStyleType": "disc",
-        "indent": 0,
+        "listStyleType": "lower-alpha",
+        "indent": 1,
         "children": [
           {
-            "text": "The discipline continues to grow. Topics that every graduate must know have been circumscribed as CS Core and kept to a minimum. Topics recommended for in-depth study have been labeled KA Core."
+            "text": "Formulating and evaluating a specific application as an AI problem"
+          }
+        ],
+        "id": "PQgZhD8PM-"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-roman",
+        "indent": 2,
+        "children": [
+          {
+            "text": "How to deal with underspecified or ill-posed problems"
+          }
+        ],
+        "id": "7c3rut44nH"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Data availability/scarcity and cleanliness"
           }
         ],
         "listStart": 2,
-        "id": "Xl-yZ-eiOe"
+        "id": "ac_PjWBJCs"
       },
       {
         "type": "p",
-        "listStyleType": "disc",
-        "indent": 0,
+        "listStyleType": "lower-roman",
+        "indent": 2,
         "children": [
           {
-            "text": "It is increasingly difficult for programs to be all things to all people. Programs can now select the knowledge areas on which to focus. The knowledge areas, when coherently chosen, define the competency area(s) of the program."
+            "text": "Basic data cleaning and preprocessing"
+          }
+        ],
+        "id": "-FdI9AzcpG"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-roman",
+        "indent": 2,
+        "children": [
+          {
+            "text": "Data set bias"
+          }
+        ],
+        "listStart": 2,
+        "id": "wG30Pnl9dC"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Algorithmic bias"
           }
         ],
         "listStart": 3,
-        "id": "qjFt8-xt9J"
+        "id": "tk_PN93wx2"
       },
       {
         "type": "p",
-        "listStyleType": "disc",
-        "indent": 0,
+        "listStyleType": "lower-alpha",
+        "indent": 1,
         "children": [
           {
-            "text": "Societal and ethical concerns have risen sharply. The Society, Ethics, and the Profession (SEP) knowledge area is now an integral part of most knowledge areas of the curriculum."
+            "text": "Evaluation bias"
           }
         ],
         "listStart": 4,
-        "id": "cO41eNjxuv"
+        "id": "YwZcFa9z0U"
       },
       {
         "type": "p",
-        "listStyleType": "disc",
-        "indent": 0,
+        "listStyleType": "lower-alpha",
+        "indent": 1,
         "children": [
           {
-            "text": "The role of mathematics has increased. Additional hours have been allocated to mathematics and flexibility has been provided for coverage of the requirements in the curriculum."
+            "text": "Assessment of societal implications of the application"
           }
         ],
         "listStart": 5,
-        "id": "q8lD_Xl5WO"
+        "id": "En1-lyC8mL"
       },
       {
         "type": "p",
-        "listStyleType": "disc",
+        "listStyleType": "decimal",
         "indent": 0,
         "children": [
           {
-            "text": "The need for professional dispositions is increasingly being recognized. Professional dispositions appropriate for each knowledge area have been listed and justified."
+            "text": "Deployed deep generative models"
+          }
+        ],
+        "listStart": 2,
+        "id": "ICZtN48HkQ"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "High-level overview of deep image generative models (e.g., as of 2023, DALL-E, Midjourney, Stable Diffusion, etc.), their uses, and their shortcomings/pitfalls."
+          }
+        ],
+        "id": "u5mMmPVM9J"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "High-level overview of large language models (e.g., as of 2023, ChatGPT, Bard, etc.), their uses, and their shortcomings/pitfalls."
+          }
+        ],
+        "listStart": 2,
+        "id": "6W2XGq5GlY"
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Overview of societal impact of AI"
+          }
+        ],
+        "listStart": 3,
+        "id": "VN7KAactO8"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Ethics (See also: SEP-Context)"
+          }
+        ],
+        "id": "xxgCmxGJvb"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Fairness (See also: SEP-Privacy, SEP-DEIA)"
+          }
+        ],
+        "listStart": 2,
+        "id": "ZflpxUTnN6"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Trust/explainability (See also: SEP-Context)"
+          }
+        ],
+        "listStart": 3,
+        "id": "lKveurKctV"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Privacy and usage of training data (See also: SEP-Privacy)"
+          }
+        ],
+        "listStart": 4,
+        "id": "SnPwE5anpk"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Human autonomy and oversight/regulations/legal requirements (See also: SEP-Context)"
+          }
+        ],
+        "listStart": 5,
+        "id": "B9EFp1vxFm"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Sustainability (See also: SEP-Sustainability)"
           }
         ],
         "listStart": 6,
-        "id": "7uTrZQsvXY"
+        "id": "ymdBREScoq"
+      },
+      {
+        "type": "h3",
+        "children": [
+          {
+            "text": "Illustrative Learning Outcomes"
+          }
+        ],
+        "id": "ojaR3dVj31"
       },
       {
         "type": "p",
-        "listStyleType": "disc",
+        "listStyleType": "decimal",
         "indent": 0,
         "children": [
           {
-            "text": "Interest is growing among educators in a competency model of the curriculum. A Competency Framework has been provided for programs to create their own competency model of the curriculum tailored to local needs."
+            "text": "Given a real-world application domain and problem, formulate an AI solution to it, identifying proper data/input, preprocessing, representations, AI techniques, and evaluation metrics/methodology."
           }
         ],
-        "listStart": 7,
-        "id": "_EgSWYItsC"
+        "id": "RFYpcMforb"
       },
       {
         "type": "p",
-        "listStyleType": "disc",
+        "listStyleType": "decimal",
         "indent": 0,
         "children": [
           {
-            "text": "Generative AI is poised to impact computer science education. A chapter has been included that addresses how Generative AI could propel further innovation in computer science education."
+            "text": "Analyze the societal impact of one or more specific real-world AI applications, identifying issues regarding ethics, fairness, bias, trust, and explainability."
           }
         ],
-        "listStart": 8,
-        "id": "7h2QRchNCU"
+        "listStart": 2,
+        "id": "BAIT3-nVl3"
       },
       {
         "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
         "children": [
           {
-            "text": "The curricular guidelines build towards the Characteristics of Graduates enumerated in the report and take into consideration the Challenges and Opportunities for Computer Science Education identified in the report. The guidelines have been supplemented with articles on Pedagogical Considerations and Curricular Practices ."
+            "text": "Describe some of the failure modes of current deep generative models for language or images, and how this could affect their use in an application."
           }
         ],
-        "id": "m9F5YJZS4G"
-      },
-      {
-        "type": "p",
-        "children": [
-          {
-            "text": "The process used by the CS2023 task force has been collaborative (over ninety task force members), international (six continents), data-driven (five large- and over seventy small-scale surveys) and transparent ( csed.acm.org ). Community engagement included numerous conference panels and presentations along with regular postings to over a dozen ACM Special Interest Group (SIG) mailing lists and the full membership of AAAI. The iterative process has included at least two review and revision cycles for most of the knowledge areas. The resulting curricular guidelines are the culmination of three years of effort using the outlined Principles and Processes ."
-          }
-        ],
-        "id": "gAoezIjb7F"
+        "listStart": 3,
+        "id": "VQzV6esV80"
       }
     ],
     "public_updates": [
       {
-        "refId": "DOC-aI7TbjRN",
+        "refId": "DOC-38RzbwQS",
         "status": "submitted",
-        "date": "2025-07-25T16:56:09.488Z",
+        "date": "2025-07-26T23:38:16.279Z",
         "message": "Your suggestion has been submitted and we are finding an associate editor to review",
         "author": "LiveC"
       },
       {
-        "refId": "DOC-rl3nlGAz",
+        "refId": "DOC-apcqFxDx",
         "status": "assigned",
         "author": "LiveC",
-        "date": "2025-07-25T16:56:09.513Z",
+        "date": "2025-07-26T23:38:16.316Z",
         "message": "Your suggestion has been assigned to an associate editor for preliminary review."
       },
       {
-        "refId": "DOC-sXa5hVoJ",
+        "refId": "DOC-dmOCjDhp",
         "status": "under-review",
         "author": "AE-0001",
-        "date": "2025-07-25T16:57:36.680Z",
+        "date": "2025-07-26T23:38:36.671Z",
         "message": [
           {
             "type": "p",
             "children": [
               {
-                "text": "f"
+                "text": "c"
               }
             ]
           }
         ]
       },
       {
-        "refId": "DOC-J_e7i4fm",
+        "refId": "DOC-gttAg6qf",
         "status": "under-higher-review",
         "author": "LiveC",
-        "date": "2025-07-25T16:57:50.032Z",
+        "date": "2025-07-26T23:39:10.813Z",
         "message": "Your suggestion is now under review by the Editor In Chief"
       },
       {
-        "refId": "DOC-LKpTJB3m",
-        "status": "under-higher-review",
+        "refId": "DOC-xJwHL2PR",
+        "status": "under-consideration",
+        "author": "EIC-0001",
+        "date": "2025-07-26T23:39:40.919Z",
+        "message": "yes"
+      },
+      {
+        "refId": "DOC-HBuo6a18",
+        "status": "in-discussion",
         "author": "LiveC",
-        "date": "2025-07-25T16:59:04.227Z",
-        "message": "Your suggestion is now under review by the Editor In Chief"
+        "date": "2025-07-26T23:40:42.560Z",
+        "message": "Your suggestion is currently now under discussion by the Editorial Board for a final decision!"
       }
     ],
     "documentation": [
       {
         "action": "start-review",
-        "refId": "DOC-IZeCGLff",
+        "refId": "DOC-FTMScS86",
         "author": "AE-0001",
-        "date": "2025-07-25T16:57:36.679Z",
+        "date": "2025-07-26T23:38:36.671Z",
         "content": [
           {
             "type": "p",
             "children": [
               {
-                "text": "f"
+                "text": "c"
               }
             ]
           }
         ]
       },
       {
-        "action": "change-request-by-editor-in-chief",
-        "refId": "DOC-MqSEBBGE",
+        "action": "approved-by-editor-in-chief",
+        "refId": "DOC-UZj5thr9",
         "author": "EIC-0001",
-        "date": "2025-07-25T16:58:48.935Z",
-        "content": "nice"
+        "date": "2025-07-26T23:39:40.919Z",
+        "content": "yes"
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-L8sG43vU",
+        "author": "AE-0001",
+        "date": "2025-07-26T23:41:44.775Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "yes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-4W8uazyi",
+        "author": "EIC-0001",
+        "date": "2025-07-26T23:43:37.662Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-dbYRLrUA",
+        "author": "AE-0002",
+        "date": "2025-07-26T23:43:49.276Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-vm88Dcok",
+        "author": "AE-0001",
+        "date": "2025-07-26T23:44:27.284Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-O1tDOday",
+        "author": "AE-0001",
+        "date": "2025-07-26T23:44:38.821Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-nXeI1U9c",
+        "author": "AE-0002",
+        "date": "2025-07-26T23:46:59.570Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-yLBSHqTa",
+        "author": "EIC-0001",
+        "date": "2025-07-26T23:47:11.081Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-F598CXXG",
+        "author": "EIC-0001",
+        "date": "2025-07-26T23:47:13.039Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-UMQjEdoQ",
+        "author": "AE-0002",
+        "date": "2025-07-26T23:47:18.370Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
       }
     ],
     "history": [
       {
         "action": "submitted-by-member",
         "performed_by": "CM-6482",
-        "date": "2025-07-25T16:56:09.488Z"
+        "date": "2025-07-26T23:38:16.279Z"
       },
       {
         "action": "assigned-associate-editor",
         "performed_by": "LiveC",
-        "date": "2025-07-25T16:56:09.513Z",
+        "date": "2025-07-26T23:38:16.316Z",
         "meta": {}
       },
       {
         "action": "start-review",
         "performed_by": "AE-0001",
-        "date": "2025-07-25T16:57:36.679Z",
+        "date": "2025-07-26T23:38:36.671Z",
         "meta": {}
       },
       {
         "action": "finalized-by-associate-editor",
         "performed_by": "AE-0001",
-        "date": "2025-07-25T16:57:50.032Z",
+        "date": "2025-07-26T23:39:10.813Z",
         "meta": {}
       },
       {
-        "action": "change-request-by-editor-in-chief",
+        "action": "approved-by-editor-in-chief",
         "performed_by": "EIC-0001",
-        "date": "2025-07-25T16:58:48.935Z",
+        "date": "2025-07-26T23:39:40.919Z",
         "meta": {}
       },
       {
-        "action": "finalized-by-associate-editor",
-        "performed_by": "AE-0001",
-        "date": "2025-07-25T16:59:04.227Z",
+        "action": "started-final-discussion",
+        "performed_by": "EIC-0001",
+        "date": "2025-07-26T23:40:42.560Z",
         "meta": {}
       }
     ]

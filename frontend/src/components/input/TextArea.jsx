@@ -1,6 +1,6 @@
 import useInputField from './useInputField';
 
-export default function TextArea ({ className = '', keyName, val = '', label }) {
+export default function TextArea({ className = '', keyName, val = '', label }) {
     const { key, value, handleChange } = useInputField({ keyName, val });
 
     return (
@@ -15,4 +15,4 @@ export default function TextArea ({ className = '', keyName, val = '', label }) 
             />
         </>
     );
-};
+}

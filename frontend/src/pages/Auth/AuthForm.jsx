@@ -19,7 +19,7 @@ export default function AuthForm() {
     const [passwordsMatch, setPasswordsMatch] = useState(true);
     const [canSubmit, setCanSubmit] = useState(false);
 
-    /** 
+    /**
      * Check if passwords match (only in Register mode)
      */
     useEffect(() => {
@@ -30,15 +30,20 @@ export default function AuthForm() {
         }
     }, [formData.password, formData.passwordConfirmed, newUser]);
 
-    /** 
-     * Check if form can be submitted 
+    /**
+     * Check if form can be submitted
      */
     useEffect(() => {
         if (newUser) {
-            const allFilled = Object.values(formData).every(val => val?.trim() !== '');
+            const allFilled = Object.values(formData).every(
+                (val) => val?.trim() !== ''
+            );
             setCanSubmit(allFilled && passwordsMatch);
         } else {
-            setCanSubmit(formData.email?.trim() !== '' && formData.password?.trim() !== '');
+            setCanSubmit(
+                formData.email?.trim() !== '' &&
+                    formData.password?.trim() !== ''
+            );
         }
     }, [formData, newUser, passwordsMatch]);
 
@@ -47,7 +52,7 @@ export default function AuthForm() {
      */
     const handleToggleMode = () => {
         resetForm();
-        setNewUser(prev => !prev);
+        setNewUser((prev) => !prev);
         setCanSubmit(false);
         setPasswordsMatch(true);
         setMessage('');
@@ -72,7 +77,7 @@ export default function AuthForm() {
                     type="text"
                     placeholder="John Doe"
                     value={formData.name}
-                    onChange={value => onFormChange('name', value)}
+                    onChange={(value) => onFormChange('name', value)}
                 />
             )}
 
@@ -82,7 +87,7 @@ export default function AuthForm() {
                 type="text"
                 placeholder="name@email.com"
                 value={formData.email}
-                onChange={value => onFormChange('email', value)}
+                onChange={(value) => onFormChange('email', value)}
             />
 
             <FormField
@@ -91,34 +96,50 @@ export default function AuthForm() {
                 type="password"
                 placeholder="••••••••"
                 value={formData.password}
-                onChange={value => onFormChange('password', value)}
+                onChange={(value) => onFormChange('password', value)}
             />
 
             {newUser && (
                 <div className={styles.field}>
                     <div className="flex justify-between">
-                        <label htmlFor="password-confirmed">Confirm Password</label>
-                        {!passwordsMatch && <p className="warning">Passwords must match</p>}
+                        <label htmlFor="password-confirmed">
+                            Confirm Password
+                        </label>
+                        {!passwordsMatch && (
+                            <p className="warning">Passwords must match</p>
+                        )}
                     </div>
                     <input
                         name="password-confirmed"
                         type="password"
                         placeholder="••••••••"
                         value={formData.passwordConfirmed}
-                        onChange={e => onFormChange('passwordConfirmed', e.target.value)}
+                        onChange={(e) =>
+                            onFormChange('passwordConfirmed', e.target.value)
+                        }
                     />
                 </div>
             )}
 
             <p>
                 {newUser ? (
-                    <>Already have an account? <span onClick={handleToggleMode}>Sign In</span></>
+                    <>
+                        Already have an account?{' '}
+                        <span onClick={handleToggleMode}>Sign In</span>
+                    </>
                 ) : (
-                    <>Don't have an account? <span onClick={handleToggleMode}>Sign Up</span></>
+                    <>
+                        Don't have an account?{' '}
+                        <span onClick={handleToggleMode}>Sign Up</span>
+                    </>
                 )}
             </p>
 
-            <button type="submit" disabled={!canSubmit} className={`monts ${!canSubmit ? 'disabled' : ''}`}>
+            <button
+                type="submit"
+                disabled={!canSubmit}
+                className={`monts ${!canSubmit ? 'disabled' : ''}`}
+            >
                 {newUser ? 'Sign Up' : 'Sign In'}
             </button>
 
@@ -128,7 +149,7 @@ export default function AuthForm() {
 }
 
 /**
- * Small reusable FormField component 
+ * Small reusable FormField component
  */
 function FormField({ label, name, type, placeholder, value, onChange }) {
     return (
@@ -139,7 +160,7 @@ function FormField({ label, name, type, placeholder, value, onChange }) {
                 type={type}
                 placeholder={placeholder}
                 value={value}
-                onChange={e => onChange(e.target.value)}
+                onChange={(e) => onChange(e.target.value)}
             />
         </div>
     );

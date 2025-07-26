@@ -1,13 +1,5 @@
-import "./style.css"
-
+import './style.css';
 
 export default function HomePage() {
-
-	return (
-		<section className='home'>
-
-		</section>
-	);
-
+    return <section className="home"></section>;
 }
-

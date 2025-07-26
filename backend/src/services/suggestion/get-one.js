@@ -1,5 +1,5 @@
 const { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } = require('@errors');
-const {Roles} = require('@utils/constants')
+const { Roles } = require('@utils/constants')
 const Suggestions = require('@models/suggestion/suggestions.model.js')
 const Curriculums = require('@models/curriculum/curriculums.model.js')
 const logger = require('@logger').addSource({
@@ -17,8 +17,8 @@ const getSuggestionById = async (suggestionId, role = null) => {
 
         logger.debug("suggestion.get.db.searching")
 
-        let requestedSuggestion = await Suggestions.findById(suggestionId)
-
+        const requestedSuggestion = await Suggestions.findById(suggestionId)
+        let retS
         if (!requestedSuggestion) {
             throw new SuggestionNotFoundError
         }
@@ -27,29 +27,30 @@ const getSuggestionById = async (suggestionId, role = null) => {
 
         if (role) {
             if (role === Roles.COMMUNITY_MEMBER) {
-                requestedSuggestion = requestedSuggestion.toCommunityMember()
+                retS = requestedSuggestion.toCommunityMember()
             } else if (role === Roles.ASSOCIATE_EDITOR) {
-                requestedSuggestion = requestedSuggestion.toAssociateEditor()
+                retS = requestedSuggestion.toAssociateEditor()
             } else if (role === Roles.EDITOR_IN_CHIEF) {
-                requestedSuggestion = requestedSuggestion.toEditorInCheif()
+                retS = requestedSuggestion.toEditorInCheif()
             } else if (role === Roles.REVIEWER) {
-                requestedSuggestion = requestedSuggestion.toReviewer()
+                retS = requestedSuggestion.toReviewer()
             }
         }
 
 
-        const curri = kebabToCamel(requestedSuggestion.discipline)
-        const secId = requestedSuggestion.sectionId
+        const curri = kebabToCamel(retS.discipline)
+        const secId = retS.sectionId
         const c = await Curriculums.findByCurriculum(curri)
 
-
         const section = await c.getSection(secId)
+        logger.debug('suggestion.get.gett', { curri, secId })
 
-        logger.debug( section)
+        logger.debug(JSON.stringify(section))
 
         logger.debug("suggestion.get.found")
 
-        return { ...requestedSuggestion, section }
+
+        return { ...retS, section }
 
     } catch (error) {
 

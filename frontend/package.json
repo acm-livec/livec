@@ -12,7 +12,6 @@
     "dependencies": {
         "@ariakit/react": "^0.4.17",
         "@emoji-mart/data": "^1.2.1",
-       
         "@platejs/ai": "^49.1.11",
         "@platejs/basic-nodes": "^49.0.0",
         "@platejs/basic-styles": "^49.0.0",
@@ -51,15 +50,14 @@
         "@react-pdf-viewer/page-navigation": "^3.12.0",
         "@react-pdf-viewer/zoom": "^3.12.0",
         "@tailwindcss/vite": "^4.1.11",
-       
         "@udecode/cn": "^49.0.15",
         "axios": "^1.10.0",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "cmdk": "^1.1.1",
         "date-fns": "^4.1.0",
+        "diff": "^5.2.0",
         "html2canvas-pro": "^1.5.11",
-       
         "lodash": "^4.17.21",
         "lowlight": "^3.3.0",
         "lucide-react": "^0.525.0",
@@ -78,11 +76,11 @@
         "react-textarea-autosize": "^8.5.9",
         "remark-gfm": "^4.0.1",
         "remark-math": "^6.0.0",
+        "socket.io-client": "^4.8.1",
         "sonner": "^2.0.6",
         "tailwind-merge": "^3.3.1",
         "tailwind-scrollbar-hide": "^4.0.0",
-        "use-file-picker": "^2.1.2",
-        "diff": "^5.2.0"
+        "use-file-picker": "^2.1.2"
     },
     "devDependencies": {
         "@eslint/js": "^9.25.0",
@@ -94,6 +92,7 @@
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.19",
         "globals": "^16.0.0",
+        "prettier": "^3.6.2",
         "sass": "^1.89.2",
         "tailwindcss": "^4.1.11",
         "vite": "^6.3.5"

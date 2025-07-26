@@ -1,6 +1,5 @@
 import { getMergedLayoutProps } from '../layouts-util';
 
-
 export const FlexColumn = ({ children, className = '', ...props }) => {
     const { style, ...rest } = getMergedLayoutProps(props);
 
@@ -14,4 +13,3 @@ export const FlexColumn = ({ children, className = '', ...props }) => {
         </div>
     );
 };
-

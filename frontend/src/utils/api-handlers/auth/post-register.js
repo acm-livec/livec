@@ -1,5 +1,5 @@
-import { API } from '@api/client.js'
-import { logger } from '@utils/logger'
+import { API } from '@api/client.js';
+import { logger } from '@utils/logger';
 
 const log = logger.create('postRegister.js');
 
@@ -16,17 +16,22 @@ const log = logger.create('postRegister.js');
 
 export const postRegister = async (name, email, password) => {
     try {
-        log.debug("Attempting to register new user...", { formData: { name, email, password } })
-        const result = await API.post('auth/register', { name, email, password })
+        log.debug('Attempting to register new user...', {
+            formData: { name, email, password },
+        });
+        const result = await API.post('auth/register', {
+            name,
+            email,
+            password,
+        });
 
-        const insertedUser = result.data.user
-        log.success("Successfully registered new user!", insertedUser);
+        const insertedUser = result.data.user;
+        log.success('Successfully registered new user!', insertedUser);
 
-        return insertedUser
-    
+        return insertedUser;
     } catch (error) {
         const message = error.response?.data?.message;
-        log.error("Error trying to register user:", message);
+        log.error('Error trying to register user:', message);
         throw new Error(message);
     }
-}
+};

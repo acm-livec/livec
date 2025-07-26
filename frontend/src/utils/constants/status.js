@@ -2,7 +2,7 @@
  * Represents the public status for suggestions visible to submitters.
  *
  * Used to show user-facing status labels and icons.
- * 
+ *
  * @typedef {Object} Public
  * @property {'submitted'} SUBMITTED - Suggestion has been submitted.
  * @property {'rejected'} REJECTED - Suggestion has been rejected.
@@ -47,7 +47,6 @@
  * @property {System} System - System-level internal statuses.
  */
 
-
 /**
  * Frozen constant for all possible statuses.
  * @type {Status}
@@ -61,7 +60,8 @@ export const Status = Object.freeze({
         UNDER_HIGHER_REVIEW: 'under-higher-review',
         UNDER_CONSIDERATION: 'under-consideration',
         ACCEPTED: 'accepted',
-        PENDING_EXTERNAL_REVIEW: 'pending-external-review'
+        PENDING_EXTERNAL_REVIEW: 'pending-external-review',
+        IN_DISCUSSION: 'in-discussion'
     },
 
     Private: {
@@ -78,7 +78,9 @@ export const Status = Object.freeze({
         READY_FOR_DISCUSSION: 'ready-for-discussion',
         CHANGE_REQUEST: 'change-request',
         AWAITING_CHANGE_REQUEST: 'awaiting-change-request',
-    RECOMMENDATION_SUBMITTED: 'recommendation-submitted'
+        RECOMMENDATION_SUBMITTED: 'recommendation-submitted',
+        JOIN_DISCUSSION: 'join-discussion',
+        STARTED_DISCUSSION: 'started-discussion'
     },
 
     System: {
@@ -96,11 +98,9 @@ export const Status = Object.freeze({
         DEFERRED: 'deferred',
         ON_HOLD: 'on-hold',
         FLAGGED: 'flagged',
-        RESOLVED: 'resolved'
-    }
-})
-
-
+        RESOLVED: 'resolved',
+    },
+});
 
 export const statusMap = {
     // === Public ===
@@ -112,6 +112,7 @@ export const statusMap = {
     [Status.Public.ACCEPTED]: 'status--success',
     [Status.Public.PENDING_EXTERNAL_REVIEW]: 'status--external',
     [Status.Public.UNDER_HIGHER_REVIEW]: 'status--external',
+    [Status.Public.IN_DISCUSSION]: 'status--external',
 
     // === Private ===
     [Status.Private.AWAITING_INITIAL_RESPONSE]: 'status--info',
@@ -121,10 +122,12 @@ export const statusMap = {
     [Status.Private.REVIEWING]: 'status--active',
     [Status.Private.FINALIZED]: 'status--external',
     [Status.Private.APPROVED]: 'status--success',
-      [Status.Private.CHANGE_REQUEST]: 'status--info',
-      [Status.Private.READY_FOR_DISCUSSION]: 'status--success',
-      [Status.Private.RECOMMENDATION_SUBMITTED]: 'status--success',
-      [Status.Private.AWAITING_CHANGE_REQUEST]: 'status--active',
+    [Status.Private.CHANGE_REQUEST]: 'status--info',
+    [Status.Private.READY_FOR_DISCUSSION]: 'status--success',
+    [Status.Private.RECOMMENDATION_SUBMITTED]: 'status--success',
+    [Status.Private.AWAITING_CHANGE_REQUEST]: 'status--active',
+    [Status.Private.JOIN_DISCUSSION]: 'status--active',
+    [Status.Private.STARTED_DISCUSSION]: 'status--info',
     //   [Status.Private.AWAITING_FEEDBACK]: 'status--info',
 
     // === System ===
@@ -140,5 +143,5 @@ export const statusMap = {
     [Status.System.DEFERRED]: 'status--warning',
     [Status.System.ON_HOLD]: 'status--warning',
     [Status.System.FLAGGED]: 'status--error',
-    [Status.System.RESOLVED]: 'status--success'
+    [Status.System.RESOLVED]: 'status--success',
 };

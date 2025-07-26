@@ -1,6 +1,6 @@
-import React, { useContext, createContext, useEffect } from 'react'
+import React, { useContext, createContext, useEffect } from 'react';
 
-import styles from './inputs.module.scss'
+import styles from './inputs.module.scss';
 import { Button } from '../buttons';
 import useForm from '@hooks/useForm';
 import clsx from 'clsx';
@@ -8,7 +8,6 @@ import { buildDefaultValues } from '@utils/helpers';
 import useConfirmationBox from './useConfirmationBox';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
-
 
 export const FormContext = createContext({});
 
@@ -21,18 +20,25 @@ Form.propTypes = {
     }),
 };
 
-export default function Form({ children, defaultValues = {}, resetOn = [], className = '', onSubmit, showConfirmation }) {
-
+export default function Form({
+    children,
+    defaultValues = {},
+    resetOn = [],
+    className = '',
+    onSubmit,
+    showConfirmation,
+}) {
     const builtDefaults = buildDefaultValues(children);
     const mergedDefaults = { ...builtDefaults, ...defaultValues };
     const { formData, onFormChange, resetForm } = useForm(mergedDefaults);
 
-    const { showing, view, open, close, submit } = useConfirmationBox(() => onSubmit(formData))
+    const { showing, view, open, close, submit } = useConfirmationBox(() =>
+        onSubmit(formData)
+    );
 
     useEffect(() => {
         resetForm();
     }, resetOn);
-
 
     return (
         <FormContext.Provider value={{ formData, onFormChange, resetForm }}>
@@ -40,10 +46,10 @@ export default function Form({ children, defaultValues = {}, resetOn = [], class
                 {children}
 
                 {!showConfirmation ? (
-                    <Button onClick={() => onSubmit(formData)} text='Submit' />
+                    <Button onClick={() => onSubmit(formData)} text="Submit" />
                 ) : (
                     <>
-                        <Button onClick={open} text='Submit' />
+                        <Button onClick={open} text="Submit" />
                         <ConfirmationBox showing={showing} view={view}>
                             <Default close={close} submit={submit}>
                                 {showConfirmation.defaultInfo}
@@ -51,7 +57,7 @@ export default function Form({ children, defaultValues = {}, resetOn = [], class
                             <Success close={close}>
                                 {showConfirmation.successInfo}
                             </Success>
-                            <Failure close={close}/>
+                            <Failure close={close} />
                         </ConfirmationBox>
                     </>
                 )}
@@ -60,9 +66,7 @@ export default function Form({ children, defaultValues = {}, resetOn = [], class
     );
 }
 
-
 const ConfirmationBox = ({ children, showing, view }) => {
-
     if (!showing) return null;
 
     const [Default, Success, Failure] = React.Children.toArray(children);
@@ -75,8 +79,7 @@ const ConfirmationBox = ({ children, showing, view }) => {
         </div>,
         document.body
     );
-}
-
+};
 
 const Default = ({ children, close, submit }) => {
     return (
@@ -100,8 +103,6 @@ const Default = ({ children, close, submit }) => {
     );
 };
 
-
-
 const Success = ({ children, close }) => {
     return (
         <div className={styles['overlay-content']}>
@@ -118,8 +119,6 @@ const Success = ({ children, close }) => {
     );
 };
 
-
-
 const Failure = ({ close }) => {
     return (
         <div className={styles['overlay-content']}>
@@ -135,19 +134,3 @@ const Failure = ({ close }) => {
         </div>
     );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

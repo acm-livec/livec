@@ -7,18 +7,16 @@
     --indent-step: 0.1rem;
 }
 
-
 .second {
     background-color: $neutral-200;
 }
 
 .indented {
-    font-size: calc(var(--base-font) - var(--indent-step) * var(--indent-level, 0));
+    font-size: calc(
+        var(--base-font) - var(--indent-step) * var(--indent-level, 0)
+    );
     padding-left: calc(var(--indent-level, 0) * 1.5rem);
 }
-
-
-
 
 .download-button {
     width: fit-content;
@@ -60,15 +58,10 @@
     flex: 1;
     overflow: auto;
 
-
-
     li {
         list-style: none;
-
     }
 }
-
-
 
 .curricula-heading {
     margin: 0 0 2rem;
@@ -85,14 +78,11 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding: 1rem 0.5rem;
-
 }
 
 .toc-item:hover {
     background-color: #e2e2e2;
 }
-
-
 
 .toc-leaf {
     cursor: pointer;
@@ -116,29 +106,6 @@
     position: relative;
     overflow-y: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .download-button {
     display: inline-block;

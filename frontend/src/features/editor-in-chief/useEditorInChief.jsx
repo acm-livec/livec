@@ -1,18 +1,21 @@
-import { useContext } from 'react'
-import { postEditorInChiefApproval, postChangeRequest, postRejection } from '@utils/api-handlers/suggestions'
-import { UserContext } from '@context/UserProvider'
-import { logger } from '@utils/logger'
+import { useContext } from 'react';
+import {
+    postEditorInChiefApproval,
+    postChangeRequest,
+    postRejection,
+    postDiscussion,
+} from '@utils/api-handlers/suggestions';
+import { UserContext } from '@context/UserProvider';
+import { logger } from '@utils/logger';
 const log = logger.create('useEditorInChief.js');
-import { EditorInChiefActions } from '@documentation/constants/actions'
-import { postVersion } from '@utils/api-handlers/curriculums/post-version'
+import { EditorInChiefActions } from '@documentation/constants/actions';
+import { postVersion } from '@utils/api-handlers/curriculums/post-version';
 
-
-export const EditorInChief = EditorInChiefActions
+export const EditorInChief = EditorInChiefActions;
 
 export default function useEditorInChief() {
     const { user } = useContext(UserContext);
-    const editorInChiefId = user.id
-
+    const editorInChiefId = user.id;
 
     /**
      * Approves a suggestion as editor-in-chief with private and public messages.
@@ -27,17 +30,22 @@ export default function useEditorInChief() {
      */
     const approveSuggestion = async (suggestionId, formData) => {
         try {
-            log.startProcess('Approve Suggestion')
-            const { forPrivate, forPublic } = formData
-            log.debug({ suggestionId, editorInChiefId, forPrivate, forPublic })
-            await postEditorInChiefApproval(suggestionId, editorInChiefId, forPrivate, forPublic)
-            log.success('Suggestion approved:', { suggestionId })
+            log.startProcess('Approve Suggestion');
+            const { forPrivate, forPublic } = formData;
+            log.debug({ suggestionId, editorInChiefId, forPrivate, forPublic });
+            await postEditorInChiefApproval(
+                suggestionId,
+                editorInChiefId,
+                forPrivate,
+                forPublic
+            );
+            log.success('Suggestion approved:', { suggestionId });
         } catch (error) {
-            log.error(error)
+            log.error(error);
         } finally {
-            log.endProcess()
+            log.endProcess();
         }
-    }
+    };
 
     /**
      * Sends a change request for a suggestion as editor-in-chief.
@@ -51,17 +59,19 @@ export default function useEditorInChief() {
      */
     const sendChangeRequest = async (suggestionId, formData) => {
         try {
-            log.startProcess('Send Change Request')
-            const { forPrivate } = formData
-            log.debug({ suggestionId, editorInChiefId, forPrivate })
-            await postChangeRequest(suggestionId, editorInChiefId, forPrivate)
-            log.success('Change request sent for suggestion:', { suggestionId })
+            log.startProcess('Send Change Request');
+            const { forPrivate } = formData;
+            log.debug({ suggestionId, editorInChiefId, forPrivate });
+            await postChangeRequest(suggestionId, editorInChiefId, forPrivate);
+            log.success('Change request sent for suggestion:', {
+                suggestionId,
+            });
         } catch (error) {
-            log.error(error)
+            log.error(error);
         } finally {
-            log.endProcess()
+            log.endProcess();
         }
-    }
+    };
 
     /**
      * Rejects a suggestion with private and public messages as editor-in-chief.
@@ -76,30 +86,51 @@ export default function useEditorInChief() {
      */
     const reject = async (suggestionId, { forPrivate, forPublic }) => {
         try {
-            log.startProcess('Reject Suggestion')
-            log.debug({ suggestionId, editorInChiefId, forPrivate, forPublic })
-            const success = await postRejection(suggestionId, editorInChiefId, forPrivate, forPublic)
-            log.success('Suggestion rejected:', { suggestionId, success })
-            return success
+            log.startProcess('Reject Suggestion');
+            log.debug({ suggestionId, editorInChiefId, forPrivate, forPublic });
+            const success = await postRejection(
+                suggestionId,
+                editorInChiefId,
+                forPrivate,
+                forPublic
+            );
+            log.success('Suggestion rejected:', { suggestionId, success });
+            return success;
         } catch (error) {
-            log.error(error)
-            return false
+            log.error(error);
+            return false;
         } finally {
-            log.endProcess()
+            log.endProcess();
         }
-    }
+    };
+
+    const startDiscussion = async (suggestionId) => {
+        try {
+            log.startProcess('Publish Version');
+            await postDiscussion(suggestionId, editorInChiefId);
+            log.success('Version published');
+        } catch (error) {
+            log.error(error);
+        }
+    };
 
     const publishVersion = async (changeSets) => {
         try {
-            log.startProcess('Publish Version')
-            await postVersion(user.discipline, changeSets)
-            log.success('Version published')
+            log.startProcess('Publish Version');
+            await postVersion(user.discipline, changeSets);
+            log.success('Version published');
         } catch (error) {
-            log.error(error)
+            log.error(error);
         } finally {
-            log.endProcess()
+            log.endProcess();
         }
-    }
+    };
 
-    return { approveSuggestion, sendChangeRequest, reject, publishVersion }
+    return {
+        approveSuggestion,
+        sendChangeRequest,
+        reject,
+        publishVersion,
+        startDiscussion,
+    };
 }

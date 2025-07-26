@@ -1,4 +1,3 @@
-
 export function getMergedLayoutProps(props) {
     const {
         align,
@@ -18,11 +17,11 @@ export function getMergedLayoutProps(props) {
         gap,
         gridColumn: colSpan ? `span ${colSpan}` : '',
         gridRow: rowSpan ? `span ${rowSpan}` : '',
-        ...style
+        ...style,
     };
 
     return {
         style: mergedStyle,
-        ...rest
+        ...rest,
     };
 }

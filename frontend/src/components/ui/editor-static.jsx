@@ -5,50 +5,53 @@ import { createSlateEditor, PlateStatic } from 'platejs';
 
 import { cn } from '@components/lib/utils';
 
-export const editorVariants = cva(cn(
-	'group/editor',
-	'relative w-full cursor-text overflow-x-hidden break-words whitespace-pre-wrap select-text',
-	'rounded-md ring-offset-background focus-visible:outline-none',
-	'placeholder:text-muted-foreground/80 **:data-slate-placeholder:top-[auto_!important] **:data-slate-placeholder:text-muted-foreground/80 **:data-slate-placeholder:opacity-100!',
-	'[&_strong]:font-bold'
-), {
-	defaultVariants: {
-		variant: 'none',
-	},
-	variants: {
-		disabled: {
-			true: 'cursor-not-allowed opacity-50',
-		},
-		focused: {
-			true: 'ring-2 ring-ring ring-offset-2',
-		},
-		variant: {
-			ai: 'w-full px-0 text-base md:text-sm',
-			aiChat:
-				'max-h-[min(70vh,320px)] w-full max-w-[700px] overflow-y-auto px-5 py-3 text-base md:text-sm',
-			default:
-				'size-full px-16 pt-4 pb-72 text-base sm:px-[max(64px,calc(50%-350px))]',
-			demo: 'size-full px-16 pt-4 pb-72 text-base sm:px-[max(64px,calc(50%-350px))]',
-			fullWidth: 'size-full px-16 pt-4 pb-72 text-base sm:px-24',
-			none: '',
-			select: 'px-3 py-2 text-base data-readonly:w-fit',
-		},
-	},
-});
+export const editorVariants = cva(
+    cn(
+        'group/editor',
+        'relative w-full cursor-text overflow-x-hidden break-words whitespace-pre-wrap select-text',
+        'rounded-md ring-offset-background focus-visible:outline-none',
+        'placeholder:text-muted-foreground/80 **:data-slate-placeholder:top-[auto_!important] **:data-slate-placeholder:text-muted-foreground/80 **:data-slate-placeholder:opacity-100!',
+        '[&_strong]:font-bold'
+    ),
+    {
+        defaultVariants: {
+            variant: 'none',
+        },
+        variants: {
+            disabled: {
+                true: 'cursor-not-allowed opacity-50',
+            },
+            focused: {
+                true: 'ring-2 ring-ring ring-offset-2',
+            },
+            variant: {
+                ai: 'w-full px-0 text-base md:text-sm',
+                aiChat: 'max-h-[min(70vh,320px)] w-full max-w-[700px] overflow-y-auto px-5 py-3 text-base md:text-sm',
+                default:
+                    'size-full px-16 pt-4 pb-72 text-base sm:px-[max(64px,calc(50%-350px))]',
+                demo: 'size-full px-16 pt-4 pb-72 text-base sm:px-[max(64px,calc(50%-350px))]',
+                fullWidth: 'size-full px-16 pt-4 pb-72 text-base sm:px-24',
+                none: '',
+                select: 'px-3 py-2 text-base data-readonly:w-fit',
+            },
+        },
+    }
+);
 import { ListKit } from '@components/editor/plugins/list-kit';
 import { BaseEditorKit } from '@components/editor/editor-base-kit';
 import { FixedToolbarKit } from '@components/editor/plugins/fixed-toolbar-kit';
 
-export function EditorStatic({
-	className,
-	variant,
-	value,
-	...props
-}) {
-const editor = createSlateEditor({
-  plugins: BaseEditorKit,
-  value: value
-});
+export function EditorStatic({ className, variant, value, ...props }) {
+    const editor = createSlateEditor({
+        plugins: BaseEditorKit,
+        value: value,
+    });
 
-	return (<PlateStatic editor={editor} className={cn(editorVariants({ variant }), className)} {...props} />);
+    return (
+        <PlateStatic
+            editor={editor}
+            className={cn(editorVariants({ variant }), className)}
+            {...props}
+        />
+    );
 }

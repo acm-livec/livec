@@ -1,7 +1,5 @@
 import { getMergedLayoutProps } from '../layouts-util';
 
-
-
 export const Container = ({ children, className = '', ...props }) => {
     const { style, ...rest } = getMergedLayoutProps(props);
 
@@ -15,6 +13,3 @@ export const Container = ({ children, className = '', ...props }) => {
         </div>
     );
 };
-
-
-

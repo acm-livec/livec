@@ -27,8 +27,16 @@ export default function EditSectionPage() {
     return (
         <div style={{ padding: '2rem' }}>
             <h2>Edit Section: {section.title}</h2>
-            <PlateEditor content={section.content} LOCAL_STORAGE_KEY={sectionId} />
-            <Button style={{ marginTop: '1rem' }} variant='confirm' text='Save Changes' onClick={handleSave} />
+            <PlateEditor
+                content={section.content}
+                LOCAL_STORAGE_KEY={sectionId}
+            />
+            <Button
+                style={{ marginTop: '1rem' }}
+                variant="confirm"
+                text="Save Changes"
+                onClick={handleSave}
+            />
         </div>
     );
 }

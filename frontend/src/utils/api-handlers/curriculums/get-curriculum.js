@@ -1,9 +1,7 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger'
+import { logger } from '@utils/logger';
 
 const log = logger.create('postSuggestion.js');
-
-
 
 /**
  * Fetches a suggestion by its ID and role from the API.
@@ -17,14 +15,12 @@ const log = logger.create('postSuggestion.js');
  */
 export const getCurriculum = async (curriculum) => {
     try {
-        const response = await API.get(`/curriculums/${curriculum}`, {
+        const response = await API.get(`/curriculums/${curriculum}`, {});
 
-        });
-
-        const { requestedCurriculum} = response.data
-        log.table(requestedCurriculum)
-        return requestedCurriculum
+        const { requestedCurriculum } = response.data;
+        log.table(requestedCurriculum);
+        return requestedCurriculum;
     } catch (error) {
-        log.error(error)
+        log.error(error);
     }
-}
+};

@@ -13,7 +13,13 @@
       "R-F35G"
     ],
     "assignedSuggestions": [
-      "SCOSC-Co9OPb90"
+      "SCOSC-LEj-BtT6"
+    ],
+    "report": [
+      {
+        "suggestionId": "SCOSC-LEj-BtT6",
+        "decision": "pending"
+      }
     ]
   },
   {
@@ -25,6 +31,12 @@
     "discipline": "cybersecurity",
     "assignedEditorInChief": "EIC-0001",
     "assignedReviewers": [],
-    "assignedSuggestions": []
+    "assignedSuggestions": [],
+    "report": [
+      {
+        "suggestionId": "SCOSC-LEj-BtT6",
+        "decision": "pending"
+      }
+    ]
   }
 ]

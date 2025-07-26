@@ -1,25 +1,41 @@
-import { diffWords } from 'diff';
-
-const nodesToText = (nodes = []) => {
-    return nodes.map(n => {
-        if (typeof n === 'string') return n;
-        if (n.text) return n.text;
-        if (Array.isArray(n.children)) return nodesToText(n.children).join('');
-        return '';
-    }).join('');
-};
+import { diffArrays } from 'diff';
+import { EditorStatic } from '@components/ui/editor-static';
 
 export default function DiffViewer({ original = [], revised = [] }) {
-    const oldText = nodesToText(original);
-    const newText = nodesToText(revised);
-    const parts = diffWords(oldText, newText);
+    const parseNodes = (data) => {
+        if (typeof data === 'string') {
+            try {
+                return JSON.parse(data);
+            } catch {
+                // eslint-disable-next-line no-console
+                console.error('DiffViewer: failed to parse JSON nodes');
+                return [];
+            }
+        }
+        return data;
+    };
+
+    const oldNodes = parseNodes(original);
+    const newNodes = parseNodes(revised);
+    const parts = diffArrays(oldNodes, newNodes, {
+        comparator: (a, b) => JSON.stringify(a) === JSON.stringify(b),
+    });
     return (
-        <p>
+        <div className="document--computer-science p-5">
             {parts.map((part, i) => (
-                <span key={i} style={{ backgroundColor: part.added ? '#d4ffd4' : part.removed ? '#ffd4d4' : 'transparent' }}>
-                    {part.value}
-                </span>
+                <div
+                    key={i}
+                    style={{
+                        backgroundColor: part.added
+                            ? '#d4ffd4'
+                            : part.removed
+                              ? '#ffd4d4'
+                              : 'transparent',
+                    }}
+                >
+                    <EditorStatic value={part.value} />
+                </div>
             ))}
-        </p>
+        </div>
     );
 }

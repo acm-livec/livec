@@ -7,19 +7,18 @@ import { useEditorPlugin } from 'platejs/react';
 
 import { ToolbarButton } from './toolbar';
 
-export function AIToolbarButton(
-  props
-) {
-  const { api } = useEditorPlugin(AIChatPlugin);
+export function AIToolbarButton(props) {
+    const { api } = useEditorPlugin(AIChatPlugin);
 
-  return (
-    <ToolbarButton
-      {...props}
-      onClick={() => {
-        api.aiChat.show();
-      }}
-      onMouseDown={(e) => {
-        e.preventDefault();
-      }} />
-  );
+    return (
+        <ToolbarButton
+            {...props}
+            onClick={() => {
+                api.aiChat.show();
+            }}
+            onMouseDown={(e) => {
+                e.preventDefault();
+            }}
+        />
+    );
 }

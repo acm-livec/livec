@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger'
-
-
+import { logger } from '@utils/logger';
 
 /**
  * Initiates the review process for a suggestion.
@@ -16,13 +14,21 @@ import { logger } from '@utils/logger'
  * @route POST: /suggestion/:id/start-review
  * @file backend/src/routes/suggestion.routes.js
  */
-export const postStartReview = async (suggestionId, startedBy, notes, messageToSubmitter) => {
+export const postStartReview = async (
+    suggestionId,
+    startedBy,
+    notes,
+    messageToSubmitter
+) => {
     try {
-        const response = await API.post(`/suggestion/${suggestionId}/start-review`, { startedBy, notes, messageToSubmitter })
-        const { success, message } = response.data
-        logger.success(message)
-        return success
+        const response = await API.post(
+            `/suggestion/${suggestionId}/start-review`,
+            { startedBy, notes, messageToSubmitter }
+        );
+        const { success, message } = response.data;
+        logger.success(message);
+        return success;
     } catch (error) {
-        logger.error(error)
+        logger.error(error);
     }
-}
+};

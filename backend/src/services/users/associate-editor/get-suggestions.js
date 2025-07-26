@@ -9,7 +9,7 @@ const logger = require('@logger').addSource({
 
 
 const getAssociateEditorAssignedSuggestions = async (userId) => {
-    
+
     try {
 
         logger.debug(`ae.suggestions.get.db.searching`)

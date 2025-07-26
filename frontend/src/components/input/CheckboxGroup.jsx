@@ -6,9 +6,13 @@ export default function CheckboxGroup({
     keyName,
     val = [], // initial selected values (array)
     label,
-    options = [] // Array of { label, value }
+    options = [], // Array of { label, value }
 }) {
-    const { key, value, handleChange: baseChange } = useInputField({ keyName, val });
+    const {
+        key,
+        value,
+        handleChange: baseChange,
+    } = useInputField({ keyName, val });
 
     const handleCheckboxChange = (e) => {
         const { value: optionValue, checked } = e.target;

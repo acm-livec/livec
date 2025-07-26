@@ -1,4 +1,4 @@
-'use client';;
+'use client';
 import * as React from 'react';
 
 import { PlateElement } from 'platejs/react';
@@ -6,9 +6,9 @@ import { PlateElement } from 'platejs/react';
 import { cn } from '@components/lib/utils';
 
 export function ParagraphElement(props) {
-  return (
-    <PlateElement {...props} className={cn('m-0 px-0 py-0')}>
-      {props.children}
-    </PlateElement>
-  );
+    return (
+        <PlateElement {...props} className={cn('m-0 px-0 py-0')}>
+            {props.children}
+        </PlateElement>
+    );
 }

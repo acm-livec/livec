@@ -8,11 +8,9 @@
     padding: 0.5rem;
 
     &:hover {
-            background-color: $stone-300;
-
+        background-color: $stone-300;
     }
-}   
-
+}
 
 .card + .card {
     margin-top: 1rem;

@@ -1,10 +1,6 @@
-import { Status, statusMap } from './status'
+import { Status, statusMap } from './status';
 
-export {Status, statusMap}
-
-
-
-
+export { Status, statusMap };
 
 export const Actions = Object.freeze({
     DESK_REJECT: 'desk-reject',
@@ -18,13 +14,8 @@ export const Actions = Object.freeze({
     FINALIZED_BY_ASSOCIATE_EDITOR: 'finalized-by-associate-editor',
     APPROVED_BY_EDITOR_IN_CHIEF: 'approved-by-editor-in-chief',
     CHANGE_REQUEST_BY_EDITOR_IN_CHIEF: 'change-request-by-editor-in-chief',
-    REJECTED_BY_EDITOR_IN_CHIEF: 'rejected-by-editor-in-chief'
-})
-
-
-
-
-
+    REJECTED_BY_EDITOR_IN_CHIEF: 'rejected-by-editor-in-chief',
+});
 
 /**
  * @typedef {Object} Disciplines
@@ -38,7 +29,6 @@ export const Actions = Object.freeze({
  * @property {'software-engineering'} SOFTWARE_ENGINEERING - Software Engineering.
  */
 
-
 /**
  * @type {Disciplines}
  */
@@ -51,17 +41,5 @@ export const Disciplines = Object.freeze({
     INFORMATION_TECHNOLOGY: 'information-technology',
     DATA_SCIENCE: 'data-science',
     COMPUTING_CURRICULA: 'computing-curricula',
-    SOFTWARE_ENGINEERING: 'software-engineering'
-})
-
-
-
-
-
-
-
-
-
-
-
-
+    SOFTWARE_ENGINEERING: 'software-engineering',
+});

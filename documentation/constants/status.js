@@ -119,6 +119,7 @@ export const SystemStatus = Object.freeze({
     ON_HOLD: 'on-hold',
     FLAGGED: 'flagged',
     RESOLVED: 'resolved',
+    IN_FINAL_PHASE: 'in-final-phase'
 });
 
 /**
@@ -137,11 +138,11 @@ export const Status = Object.freeze({
  * @enum {string}
  */
 export const AllStatuses = {
-  ...PublicStatus,
-  ...PrivateStatusAssociateEditor,
-  ...PrivateStatusReviewer,
-  ...PrivateEditorInChief,
-  ...SystemStatus,
+    ...PublicStatus,
+    ...PrivateStatusAssociateEditor,
+    ...PrivateStatusReviewer,
+    ...PrivateEditorInChief,
+    ...SystemStatus,
 };
 
 /**

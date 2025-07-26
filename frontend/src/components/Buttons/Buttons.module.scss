@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem 0.75rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
     border-radius: 5px;
     font-weight: 500;
@@ -16,16 +16,24 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-
 }
 
 // Base mixin for colored buttons
-@mixin button-variant($color, $hover: null, $active-lightness: -15%, $hover-lightness: -25%) {
+@mixin button-variant(
+    $color,
+    $hover: null,
+    $active-lightness: -15%,
+    $hover-lightness: -25%
+) {
     background-color: $color;
     color: #fff;
 
     &:hover {
-        background-color: if($hover !=null, $hover, color.adjust($color, $lightness: -5%));
+        background-color: if(
+            $hover !=null,
+            $hover,
+            color.adjust($color, $lightness: -5%)
+        );
     }
 
     &--active {
@@ -34,7 +42,10 @@
         transform: scale(0.98);
 
         &:hover {
-            background-color: color.adjust($color, $lightness: $hover-lightness);
+            background-color: color.adjust(
+                $color,
+                $lightness: $hover-lightness
+            );
         }
     }
 }
@@ -81,17 +92,18 @@
 }
 
 .button--disabled {
-
-
     cursor: not-allowed;
     background-color: $gray-200;
 
+    &:hover {
+        background-color: $gray-200;
+    }
 }
 
 // Round button variant
 .button--round {
     font-size: 0.85rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 0.35rem;
     flex: 1;
     text-align: center;

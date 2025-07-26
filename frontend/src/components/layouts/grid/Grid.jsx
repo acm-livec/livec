@@ -1,21 +1,15 @@
-import React from 'react'
-import styles from './Grid.module.scss'
-
-
+import React from 'react';
+import styles from './Grid.module.scss';
 
 const _convertGrid = (item) => {
-
     if (typeof item === 'number') {
         return `repeat(${item}, 1fr)`;
     } else if (typeof item === 'string') {
-        return item
+        return item;
     } else {
         return 0;
     }
-}
-
-
-
+};
 
 export const Grid = ({
     children,
@@ -40,7 +34,7 @@ export const Grid = ({
                 gridRow: rowSpan ? `span ${rowSpan}` : '',
                 height: full ? 'fit-content' : '',
                 gap,
-                ...style
+                ...style,
             }}
             className={`${styles.grid} ${className}`}
             {...rest}
@@ -65,7 +59,7 @@ export const Header = ({
                 gridArea,
                 gridColumn: colSpan ? `span ${colSpan}` : '',
                 gridRow: rowSpan ? `span ${rowSpan}` : '',
-                ...style
+                ...style,
             }}
             className={className}
             {...rest}
@@ -74,8 +68,6 @@ export const Header = ({
         </header>
     );
 };
-
-
 
 export const MainContent = ({
     children,
@@ -92,7 +84,7 @@ export const MainContent = ({
                 gridArea,
                 gridColumn: colSpan ? `span ${colSpan}` : '',
                 gridRow: rowSpan ? `span ${rowSpan}` : '',
-                ...style
+                ...style,
             }}
             className={`${styles['main-content']} ${className}`}
             {...rest}
@@ -117,7 +109,7 @@ export const SideContent = ({
                 gridArea,
                 gridColumn: colSpan ? `span ${colSpan}` : '',
                 gridRow: rowSpan ? `span ${rowSpan}` : '',
-                ...style
+                ...style,
             }}
             className={`${styles['side-content']} ${className}`}
             {...rest}
@@ -144,7 +136,7 @@ export const GridPanel = ({
                 gridArea,
                 gridColumn: colSpan ? `span ${colSpan}` : '',
                 gridRow: rowSpan ? `span ${rowSpan}` : '',
-                ...style
+                ...style,
             }}
             className={`${styles['grid-panel']} ${className}`}
             {...rest}
@@ -175,7 +167,7 @@ export const SubGrid = ({
                 gridColumn: colSpan ? `span ${colSpan}` : '',
                 gridRow: rowSpan ? `span ${rowSpan}` : '',
                 height: full ? 'fit-content' : '',
-                ...style
+                ...style,
             }}
             className={`${styles.subgrid} ${className}`}
             {...rest}
@@ -200,7 +192,7 @@ export const Footer = ({
                 gridArea,
                 gridColumn: colSpan ? `span ${colSpan}` : '',
                 gridRow: rowSpan ? `span ${rowSpan}` : '',
-                ...style
+                ...style,
             }}
             className={className}
             {...rest}

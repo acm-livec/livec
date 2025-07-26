@@ -6,39 +6,39 @@ class Curriculum {
         this.currRef = ref
 
     }
-async returnAll() {
-    await this.dbRef[this.currRef]?.tableOfContents.read();
-    const toc = this.dbRef[this.currRef]?.tableOfContents.data;
+    async returnAll() {
+        await this.dbRef[this.currRef]?.tableOfContents.read();
+        const toc = this.dbRef[this.currRef]?.tableOfContents.data;
 
-    await this.dbRef[this.currRef]?.pageContent.read();
-    const cont = this.dbRef[this.currRef]?.pageContent.data;
+        await this.dbRef[this.currRef]?.pageContent.read();
+        const cont = this.dbRef[this.currRef]?.pageContent.data;
 
-    const contentMap = new Map(cont.map(entry => [entry.id, {
-        content: entry.content,
-        html: entry.html
-    }]));
+        const contentMap = new Map(cont.map(entry => [entry.id, {
+            content: entry.content,
+            html: entry.html
+        }]));
 
-    const merged = toc.map(section => {
-        const contentEntry = contentMap.get(section.id) || {};
-        let content = contentEntry.content || [];
+        const merged = toc.map(section => {
+            const contentEntry = contentMap.get(section.id) || {};
+            let content = contentEntry.content || [];
 
-        // ✅ Prepend new node if section.level !== 1
-        if (section.level !== 1 && Array.isArray(content)) {
-            const insert = {
-                type: 'h2',
-                children: [{ text: section.title}]
+            // ✅ Prepend new node if section.level !== 1
+            if (section.level !== 1 && Array.isArray(content)) {
+                const insert = {
+                    type: 'h2',
+                    children: [{ text: section.title }]
+                };
+                content = [insert, ...content];
+            }
+
+            return {
+                ...section,
+                content
             };
-            content = [insert, ...content];
-        }
+        });
 
-        return {
-            ...section,
-            content
-        };
-    });
-
-    return merged;
-}
+        return merged;
+    }
 
 
     async getSection(id) {
@@ -90,6 +90,17 @@ async returnAll() {
 
         return section
     }
+    async updateToc(sectionInstance) {
+        await this.dbRef[this.currRef]?.tableOfContents.read();
+
+        const index = this.dbRef[this.currRef]?.tableOfContents.data.findIndex(s => s.id === sectionInstance.id);
+        if (index === -1) throw new Error(`Suggestion with id ${sectionInstance.id} not found`);
+
+        this.dbRef[this.currRef].tableOfContents.data[index] = sectionInstance;
+        await this.dbRef[this.currRef]?.tableOfContents.write();
+
+        return sectionInstance;
+    }
 
 
 
@@ -100,13 +111,13 @@ async returnAll() {
      * @throws {Error} If the suggestion with the specified ID does not exist.
      */
     async update(sectionInstance) {
-        await this.dbRef[this.currRef]?.tableOfContents.read();
+        await this.dbRef[this.currRef]?.pageContent.read();
 
-        const index = this.dbRef[this.currRef]?.tableOfContents.data.findIndex(s => s.id === sectionInstance.id);
+        const index = this.dbRef[this.currRef]?.pageContent.data.findIndex(s => s.id === sectionInstance.id);
         if (index === -1) throw new Error(`Suggestion with id ${sectionInstance.id} not found`);
 
-        this.dbRef[this.currRef].tableOfContents.data[index] = sectionInstance;
-        await this.dbRef[this.currRef]?.tableOfContents.write();
+        this.dbRef[this.currRef].pageContent.data[index] = sectionInstance;
+        await this.dbRef[this.currRef]?.pageContent.write();
 
         return sectionInstance;
     }

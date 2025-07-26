@@ -1,7 +1,7 @@
 @use '@styles' as *;
 
 .container {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: white;
     height: 100%;
     display: flex;
@@ -17,10 +17,8 @@
 .form-area {
     @include flex-center('row');
     flex: 1;
-    padding:  10% 15%
+    padding: 10% 15%;
 }
-
-
 
 .auth-form {
     display: flex;
@@ -35,14 +33,12 @@
         color: #000;
     }
 
-
     label {
         display: block;
         margin-bottom: 0.5rem;
         color: #666;
     }
 
-    
     input {
         background-color: #f9f9f9;
         border: 1px solid #ccc;
@@ -55,7 +51,6 @@
         }
     }
 
-
     button {
         background-color: var(--color-accent);
         border: 1px solid #ccc;
@@ -65,7 +60,6 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             background-color: #006fa8;
         }
-
     }
 
     span {
@@ -73,15 +67,12 @@
         color: var(--color-acm-blue);
         cursor: pointer;
     }
-
 }
 
-input, button {
+input,
+button {
     width: 100%;
     border-radius: 8px;
     height: 40px;
     font-size: 1.15rem;
 }
-
-
-

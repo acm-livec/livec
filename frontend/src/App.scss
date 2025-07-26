@@ -6,43 +6,40 @@
 *::before,
 *:hover,
 *:focus {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-
 * {
-	margin: 0;
-	// padding: 0;
+    margin: 0;
+    // padding: 0;
 }
 
 html,
 body,
 #root {
-	height: 100%;
-	width: 100%;
-	box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 body,
 #root {
-	background-color: #e1e6e8;
-	display: flex;
-	flex-direction: column;
+    background-color: #e1e6e8;
+    display: flex;
+    flex-direction: column;
 }
 
-
-
 main {
-	height: 100%;
-	  overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex: 1;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 button {
-	cursor: pointer;
-	border-style: none;
-	transition: all 0.3s ease;
+    cursor: pointer;
+    border-style: none;
+    transition: all 0.3s ease;
 }

@@ -1,5 +1,5 @@
-import { API } from '@api/client.js'
-import { logger } from '@utils/logger'
+import { API } from '@api/client.js';
+import { logger } from '@utils/logger';
 
 const log = logger.create('postLogin.js');
 
@@ -15,16 +15,18 @@ const log = logger.create('postLogin.js');
 
 export const postLogin = async (email, password) => {
     try {
-        log.debug("Attempting to login user...", { formData: { email, password } });
+        log.debug('Attempting to login user...', {
+            formData: { email, password },
+        });
         const result = await API.post('auth/login', { email, password });
 
-        const returnedUser = result.data.user
-        log.success("Succesfully logged in user!", {returnedUser})
+        const returnedUser = result.data.user;
+        log.success('Succesfully logged in user!', { returnedUser });
 
-        return returnedUser
+        return returnedUser;
     } catch (error) {
         const message = error.response?.data?.message;
-        log.error("Error trying to login user:", message);
+        log.error('Error trying to login user:', message);
         throw new Error(message);
     }
 };

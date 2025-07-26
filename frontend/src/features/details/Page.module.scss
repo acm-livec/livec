@@ -1,16 +1,12 @@
 @use '@styles' as *;
 @use 'sass:color';
 
-
 .page {
     margin: 0;
     padding: 2%;
-
 }
 
-
 .public-forum {
-
 }
 
 .forum-item {
@@ -21,8 +17,8 @@
 }
 
 .forum-item p.body-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 3; // number of lines to show
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; // number of lines to show
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

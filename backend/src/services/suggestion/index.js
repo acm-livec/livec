@@ -11,18 +11,22 @@ const handleEditorInChiefApproval = require('./handle-approval')
 const sendChangeRequestToAssociateEditor = require('./send-change')
 const handleDeferSuggestionToReviewer = require('./handle-deferral')
 const addRecommendationFromReviewer = require('./handle-recommendation')
+const handleFinalDiscussion = require('./handle-discussion')
+const updateVote = require('./update-vote')
 
 
 module.exports = {
-    handleRejectSuggestion, 
-    handleNewSuggestion, 
-    getSuggestionById, 
-    handleStartSuggestionReviewProcess, 
+    handleRejectSuggestion,
+    handleNewSuggestion,
+    getSuggestionById,
+    handleStartSuggestionReviewProcess,
     assignReviewersToSuggestion,
     addNewDocumentationToSuggestion,
     associateEditorFinalized,
     handleEditorInChiefApproval,
     sendChangeRequestToAssociateEditor,
     handleDeferSuggestionToReviewer,
-    addRecommendationFromReviewer
+    addRecommendationFromReviewer,
+    handleFinalDiscussion,
+    updateVote
 }
