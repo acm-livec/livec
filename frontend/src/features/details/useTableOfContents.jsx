@@ -13,11 +13,13 @@ export default function useTableOfContents(curriculum) {
 
     /** @type {[Section, Function]} */
     const [currentPage, setCurrentPage] = useState();
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true);
         getCurriculum(curriculum)
             .then((res) => {
-                if (res.length > 0) {
+                if (Array.isArray(res) && res.length > 0) {
                     // Modify the first item
                     res[0] = {
                         ...res[0],
@@ -29,11 +31,14 @@ export default function useTableOfContents(curriculum) {
                         ...res[res.length - 1],
                         isLast: true,
                     };
-                }
 
-                setTableOfContents(res);
+                    setTableOfContents(res);
+                } else {
+                    setTableOfContents([]);
+                }
             })
-            .catch(console.error);
+            .catch(() => setTableOfContents([]))
+            .finally(() => setLoading(false));
     }, [curriculum]);
 
     useEffect(() => {
@@ -68,5 +73,6 @@ export default function useTableOfContents(curriculum) {
         previousPage,
         currentPage,
         setCurrentPage,
+        loading,
     };
 }

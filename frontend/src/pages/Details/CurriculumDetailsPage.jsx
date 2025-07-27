@@ -6,12 +6,12 @@ import PdfView from '@features/details/PdfView.jsx';
 import Breadcrumbs from '@components/BreadCrumbs';
 import SuggestionBox from '@components/SuggestionBox';
 import useTableOfContents from '@features/details/useTableOfContents';
-import { Disciplines } from '@utils/constants';
 import { FlexColumn, FlexRow } from '@components/layouts/flex';
 import { Button } from '@components/buttons';
 import TableOfContents from '@features/details/TableOfContents';
 import { PublicForum } from '@features/details/Forum';
 import { toTitleCase } from '@utils/format';
+import CurriculumDetailsSkeleton from './CurriculumDetailsSkeleton.jsx';
 
 export default function CurriculumDetailsPage({
     selectedCurriculum = sessionStorage.getItem('curriculum'),
@@ -22,12 +22,17 @@ export default function CurriculumDetailsPage({
         tableOfContents,
         previousPage,
         setCurrentPage,
+        loading,
     } = useTableOfContents(selectedCurriculum);
 
     const [showPdf, setShowPdf] = useState(false);
 
+    if (loading) return <CurriculumDetailsSkeleton />;
+
     if (tableOfContents.length <= 0 || !currentPage)
-        return <h1>We working on it</h1>;
+        return (
+            <CurriculumDetailsSkeleton message="This curriculum is currently not implemented..." />
+        );
 
     return (
         <div className="details-page">
