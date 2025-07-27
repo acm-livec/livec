@@ -1,6 +1,6 @@
 import './CurriculumDetailsPage.scss';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Page from '@features/details/Page.jsx';
 import PdfView from '@features/details/PdfView.jsx';
 import Breadcrumbs from '@components/BreadCrumbs';
@@ -12,6 +12,7 @@ import TableOfContents from '@features/details/TableOfContents';
 import { PublicForum } from '@features/details/Forum';
 import { toTitleCase } from '@utils/format';
 import CurriculumDetailsSkeleton from './CurriculumDetailsSkeleton.jsx';
+import VersionHistory from '@features/details/VersionHistory.jsx';
 
 export default function CurriculumDetailsPage({
     selectedCurriculum = sessionStorage.getItem('curriculum'),
@@ -26,6 +27,11 @@ export default function CurriculumDetailsPage({
     } = useTableOfContents(selectedCurriculum);
 
     const [showPdf, setShowPdf] = useState(false);
+    const [tab, setTab] = useState('content');
+
+    useEffect(() => {
+        setTab('content');
+    }, [currentPage]);
 
     if (loading) return <CurriculumDetailsSkeleton />;
 
@@ -76,10 +82,28 @@ export default function CurriculumDetailsPage({
                                 {currentPage?.meta.parent_heading ||
                                     currentPage?.title}
                             </h1>
+                            <FlexRow gap="0.5rem" className="tab-buttons">
+                                <Button
+                                    variant="round"
+                                    isActive={tab === 'content'}
+                                    onClick={() => setTab('content')}
+                                    text="Section"
+                                />
+                                <Button
+                                    variant="round"
+                                    isActive={tab === 'history'}
+                                    onClick={() => setTab('history')}
+                                    text="Versions"
+                                />
+                            </FlexRow>
                             <hr style={{ color: 'black', width: '100%' }} />
                         </div>
                         <FlexColumn padding={'2.5%'} gap="1.5rem">
-                            <Page page={currentPage} />
+                            {tab === 'content' ? (
+                                <Page page={currentPage} />
+                            ) : (
+                                <VersionHistory meta={currentPage?.meta} />
+                            )}
                             <FlexRow
                                 justify="space-between"
                                 style={{ width: '100%' }}
