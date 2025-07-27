@@ -48,6 +48,9 @@ export const PrivateStatusAssociateEditor = Object.freeze({
     /** Suggestion is in the Associate Editor's new queue. */
     NEW: 'new',
 
+    /** Associate Editor desk rejected the suggestion. */
+    DESK_REJECTED: 'desk-rejected',
+
     /** Associate Editor is actively reviewing the suggestion. */
     REVIEWING: 'reviewing',
 
@@ -59,6 +62,9 @@ export const PrivateStatusAssociateEditor = Object.freeze({
 
     /** Associate Editor is awaiting reviewer assignments (non-deferred). */
     AWAITING_REVIEWERS: 'awaiting-reviewers',
+
+    /** All assigned reviewers have submitted their recommendations. */
+    ALL_REVIEWS_COMPLETE: 'all-reviews-complete',
 
     /** Suggestion has been finalized by the Associate Editor and sent to EIC. */
     FINALIZED: 'finalized',
@@ -74,6 +80,9 @@ export const PrivateStatusAssociateEditor = Object.freeze({
 
     /** EIC has requested revisions on the suggestion. */
     REVISIONS_REQUESTED: 'revisions-requested',
+
+    /** Editorial board decision complete — final outcome recorded */
+    COMPLETED: 'completed',
 });
 
 
@@ -110,11 +119,17 @@ export const PrivateEditorInChief = Object.freeze({
     /** Finalized suggestion received from Associate Editor. */
     NEW_CHANGE: 'new-change',
 
+    /** Finalized changes rejected by the Editor in Chief */
+    REJECTED_FINALIZATION: 'rejected-finalization',
+
     /** Suggestion approved and ready to enter board discussion. */
     READY_FOR_DISCUSSION: 'ready-for-discussion',
 
     /** EIC is awaiting revisions or follow-up from the Associate Editor. */
     AWAITING_REVISIONS: 'awaiting-revisions',
+
+    /** Revisions received from Associate Editor — pending EIC review */
+    REVISIONS_RECEIVED: 'revisions-received',
 
     /** EIC has initiated discussion among editorial board members. */
     STARTED_DISCUSSION: 'started-discussion',
@@ -168,11 +183,11 @@ export const SystemStatus = Object.freeze({
     /** Awaiting editorial input or wording changes from EIC */
     AWAITING_EIC_INPUT: 'awaiting-eic-input',
 
-    /** Finalized recommendation submitted by Associate Editor */
-    FINAL_EDITOR_DECISION: 'final-editor-decision',
+    /** Accepted by EIC — awaiting editorial board discussion */
+    AWAITING_BOARD_DISCUSSION: 'awaiting-board-discussion',
 
     /** Being discussed/voted on by the editorial board */
-    BOARD_DISCUSSION: 'board-discussion',
+    IN_BOARD_DISCUSSION: 'in-board-discussion',
 
     /** Accepted and awaiting implementation */
     READY_FOR_IMPLEMENTATION: 'ready-for-implementation',
@@ -181,7 +196,7 @@ export const SystemStatus = Object.freeze({
     TEMPORARILY_PAUSED: 'temporarily-paused',
 
     /** Fully closed (declined, rejected, or implemented) */
-    COMPLETED: 'completed',
+    CLOSED: 'closed',
 
     /** Archived for record-keeping after completion */
     ARCHIVED: 'archived',
