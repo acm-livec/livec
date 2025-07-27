@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
-
-const log = logger.create('postSuggestion.js');
+import { apiLog as log } from '../apiLogger';
 
 /**
  * Fetches a suggestion by its ID and role from the API.

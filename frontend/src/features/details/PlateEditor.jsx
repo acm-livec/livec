@@ -25,7 +25,6 @@ export default function PlateEditor({
 
     const handlePrint = () => {
         if (editor) {
-            console.log('Current Editor Content:', editor.children);
             alert('Content logged to console as JSON');
         }
     };

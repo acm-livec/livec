@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
-
-const log = logger.create('postSuggestion.js');
+import { apiLog as log } from '../apiLogger';
 
 /**
  * Finalizes a suggestion review by the associate editor.
@@ -21,7 +19,6 @@ export const postAssociateEditorFinalization = async (
     updatedSection
 ) => {
     try {
-        // console.log(associateEditor, suggestionId, updatedSection)
         await API.post(`/suggestion/${suggestionId}/finalize`, {
             associateEditor,
             updatedSection,

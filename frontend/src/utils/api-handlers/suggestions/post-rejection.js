@@ -1,5 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
+import { apiLog as log } from '../apiLogger';
 
 /**
  * Rejects a suggestion, providing reasons and an optional message to the submitter.
@@ -28,9 +28,9 @@ export const postRejection = async (
         });
 
         const { success, message } = response.data;
-        logger.success(message);
+        log.success(message);
         return success;
     } catch (error) {
-        logger.error(error);
+        log.error(error);
     }
 };
