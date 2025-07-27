@@ -229,16 +229,22 @@ class Suggestion {
 
 
     associateEditorFinalized(ae, updatedSection) {
-        if (this.status.system === Status.System.CLOSED) return
+        if (this.status.system === Status.System.CLOSED) return;
 
-        this._updateStatus(Actions.FINALIZED_BY_ASSOCIATE_EDITOR)
+        const event =
+            this.status.system === Status.System.REFINEMENT_CYCLE
+                ? 'ASSOCIATE_EDITOR_REPEATS_FINALIZE_SUGGESTION'
+                : Actions.FINALIZED_BY_ASSOCIATE_EDITOR;
 
-        this.insertHistory(Actions.FINALIZED_BY_ASSOCIATE_EDITOR, ae)
+        this._updateStatus(event);
+
+        this.insertHistory(Actions.FINALIZED_BY_ASSOCIATE_EDITOR, ae);
 
         this.revised_section = updatedSection;
 
-        this.insertPublicMessage("Your suggestion is now under review by the Editor In Chief")
-
+        this.insertPublicMessage(
+            "Your suggestion is now under review by the Editor In Chief"
+        );
     }
 
 
