@@ -1,5 +1,5 @@
 
-export { Status, statusMap } from '@docs/shared/constants/status.js';
+export { Status, statusMap } from '@docs/constants/status.js';
 
 export const Actions = Object.freeze({
     DESK_REJECT: 'desk-reject',

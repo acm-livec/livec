@@ -1,6 +1,7 @@
 const { generateSuggestionId } = require('@utils/generate-id');
 const { Actions } = require('@utils/constants');
 const { Status } = require('@docs/constants/status.js');
+const Events = require('@docs/events.js').default || require('@docs/events.js');
 const Documentation = require('../util/documentation.model')
 const PublicMessage = require('../util/public-message.model')
 
@@ -21,7 +22,7 @@ class Suggestion {
             for_member: Status.Public.SUBMITTED,
             for_associate_editor: '',
             for_editor_in_chief: '',
-            system: Status.System.UNASSIGNED
+            system: Status.System.INITIAL_SUBMISSION,
         };
 
         this.discipline = data.discipline;
@@ -159,119 +160,41 @@ class Suggestion {
 
 
 
-    _updateStatus(event) {
+    _updateStatus(action) {
+        const ActionEvents = {
+            [Actions.ASSIGNED_ASSOCIATE_EDITOR]: 'ASSOCIATE_EDITOR_ASSIGNED_TO_SUGGESTION',
+            [Actions.DESK_REJECT]: 'ASSOCIATE_EDITOR_DESK_REJECTED_SUGGESTION',
+            [Actions.REJECTED_BY_EDITOR_IN_CHIEF]: 'EDITOR_IN_CHIEF_REJECTS_CHANGE',
+            [Actions.START_REVIEW]: 'ASSOCIATE_EDITOR_STARTED_REVIEW_ON_SUGGESTION',
+            [Actions.FINALIZED_BY_ASSOCIATE_EDITOR]: 'ASSOCIATE_EDITOR_FIRST_FINALIZES_SUGGESTION',
+            [Actions.APPROVED_BY_EDITOR_IN_CHIEF]: 'EDITOR_IN_CHIEF_ACCEPTS_CHANGES',
+            [Actions.CHANGE_REQUEST_BY_EDITOR_IN_CHIEF]: 'EDITOR_IN_CHIEF_REQUESTS_REVISIONS_FROM_ASSOCIATE_EDITOR',
+            [Actions.DEFERED_TO_REVIEWER]: 'ASSOCIATE_EDITOR_DEFERRED_SUGGESTION_TO_REVIEWER',
+            [Actions.ASSIGNED_REVIEWERS]: 'ASSOCIATE_EDITOR_ASSIGNED_REVIEWERS_FOR_FEEDBACK',
+            [Actions.RECOMMENDATION_BY_REVIEWER]: 'REVIEWER_SUBMITS_RECOMMENDATION',
+            [Actions.STARTED_FINAL_DISCUSSION]: 'EDITOR_IN_CHIEF_BEGINS_BOARD_DISCUSSION',
+            [Actions.ACCEPTED_BY_BOARD]: 'BOARD_ACCEPTS_SUGGESTION_CHANGE',
+            [Actions.DECLINED_BY_BOARD]: 'BOARD_REJECTS_SUGGESTION_CHANGE',
+        };
 
-        switch (event) {
-
-            case (Actions.ASSIGNED_ASSOCIATE_EDITOR): this.status = {
-                'for_member': Status.Public.ASSIGNED,
-                'for_associate_editor': Status.Private.AWAITING_INITIAL_RESPONSE,
-                'system': Status.System.NEW
-            };
-                break;
-
-            case (Actions.DESK_REJECT): this.status = {
-                'for_member': Status.Public.REJECTED,
-                'for_associate_editor': Status.Private.REJECTED,
-                'system': Status.System.CLOSED
-            };
-                break;
-            case (Actions.REJECTED_BY_EDITOR_IN_CHIEF): this.status = {
-                'for_member': Status.Public.REJECTED,
-                'for_associate_editor': Status.Private.REJECTED,
-                'system': Status.System.CLOSED
-            };
-                break;
-
-            case Actions.START_REVIEW: this.status = {
-                'for_member': Status.Public.UNDER_REVIEW,
-                'for_associate_editor': Status.Private.REVIEWING,
-                'system': Status.System.ACTIVE
-            };
-                break;
-
-            case Actions.FINALIZED_BY_ASSOCIATE_EDITOR: this.status = {
-                'for_member': Status.Public.UNDER_HIGHER_REVIEW,
-                'for_associate_editor': Status.Private.FINALIZED,
-                'for_editor_in_chief': Status.Private.AWAITING_RESPONSE,
-                'system': Status.System.ELEVATED
-            }
-
-                break;
-
-            case Actions.APPROVED_BY_EDITOR_IN_CHIEF: this.status = {
-                'for_member': Status.Public.UNDER_CONSIDERATION,
-                'for_associate_editor': Status.Private.APPROVED,
-                'for_editor_in_chief': Status.Private.READY_FOR_DISCUSSION,
-                'system': Status.System.AWAITING_FINAL_DECISION
-            }
-
-                break
-
-            case Actions.CHANGE_REQUEST_BY_EDITOR_IN_CHIEF: this.status = {
-                'for_member': Status.Public.UNDER_CONSIDERATION,
-                'for_associate_editor': Status.Private.CHANGE_REQUEST,
-                'for_editor_in_chief': Status.Private.AWAITING_CHANGE_REQUEST,
-                'system': Status.System.PENDING
-            }
-                break
-            case Actions.DEFERED_TO_REVIEWER: this.status = {
-                'for_member': Status.Public.UNDER_REVIEW,
-                'for_associate_editor': Status.Private.AWAITING_REVIEWER,
-                'for_reviewer': Status.Private.AWAITING_RESPONSE,
-                'system': Status.System.DEFERRED
-            }
-                break
-
-            case Actions.ASSIGNED_REVIEWERS: this.status = {
-                'for_member': Status.Public.UNDER_REVIEW,
-                'for_associate_editor': Status.Private.AWAITING_REVIEWER,
-                'for_reviewer': Status.Private.AWAITING_RESPONSE,
-                'system': Status.System.ON_HOLD
-            }
-                break
-
-            case Actions.RECOMMENDATION_BY_REVIEWER: this.status = {
-                'for_member': Status.Public.UNDER_REVIEW,
-                'for_associate_editor': Status.Private.AWAITING_FEEDBACK,
-                'for_reviewer': Status.Private.RECOMMENDATION_SUBMITTED,
-                'system': Status.System.ACTIVE
-            }
-                break
-
-            case Actions.STARTED_FINAL_DISCUSSION: this.status = {
-                'for_member': Status.Public.IN_DISCUSSION,
-                'for_associate_editor': Status.Private.JOIN_DISCUSSION,
-                'for_editor_in_chief': Status.Private.STARTED_DISCUSSION,
-                'system': Status.System.IN_FINAL_PHASE
-            }
-                break;
-
-            case Actions.ACCEPTED_BY_BOARD: this.status = {
-                'for_member': Status.Public.ACCEPTED,
-                'for_associate_editor': Status.Private.APPROVED,
-                'for_editor_in_chief': Status.Private.APPROVED,
-                'system': Status.System.CLOSED
-            }
-                break;
-
-            case Actions.DECLINED_BY_BOARD: this.status = {
-                'for_member': Status.Public.REJECTED,
-                'for_associate_editor': Status.Private.REJECTED,
-                'system': Status.System.CLOSED
-            }
-                break;
-        }
+        const eventKey = ActionEvents[action] || action;
+        const mapping = Events[eventKey];
+        if (!mapping) return;
+        if (mapping.System) this.status.system = mapping.System;
+        if (mapping.CommunityMember) this.status.for_member = mapping.CommunityMember;
+        if (mapping.AssociateEditor) this.status.for_associate_editor = mapping.AssociateEditor;
+        if (mapping.EditorInChief) this.status.for_editor_in_chief = mapping.EditorInChief;
+        if (mapping.Reviewer) this.status.for_reviewer = mapping.Reviewer;
     }
 
 
 
 
     isInDeliberation() {
-        return this.status.system === Status.System.ELEVATED ||
-            this.status.system === Status.System.PENDING ||
-            this.status.system === Status.System.AWAITING_FINAL_DECISION ||
-            this.status.system === Status.System.IN_FINAL_PHASE ||
+        return this.status.system === Status.System.REFINEMENT_CYCLE ||
+            this.status.system === Status.System.AWAITING_BOARD_DISCUSSION ||
+            this.status.system === Status.System.IN_BOARD_DISCUSSION ||
+            this.status.system === Status.System.READY_FOR_IMPLEMENTATION ||
             this.status.system === Status.System.CLOSED
     }
 

@@ -68,14 +68,14 @@ const ConfirmBoxInfo = ({ action }) => {
             message:
                 'Are you sure you want to begin reviewing this suggestion?',
             status: {
-                from: Status.Public.ASSIGNED,
+                from: Status.Public.QUEUED,
                 to: Status.Public.UNDER_REVIEW,
             },
         },
         [Actions.DESK_REJECT]: {
             message: 'Are you sure you want to reject this suggestion?',
             status: {
-                from: Status.Public.ASSIGNED,
+                from: Status.Public.QUEUED,
                 to: Status.Public.REJECTED,
             },
         },
@@ -83,8 +83,8 @@ const ConfirmBoxInfo = ({ action }) => {
             message:
                 'Are you sure you want to begin reviewing this suggestion?',
             status: {
-                from: Status.Public.ASSIGNED,
-                to: Status.Public.PENDING_EXTERNAL_REVIEW,
+                from: Status.Public.QUEUED,
+                to: Status.Public.UNDER_REVIEW,
             },
         },
     };
