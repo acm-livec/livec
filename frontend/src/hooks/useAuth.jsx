@@ -3,7 +3,6 @@ import { useContext, useState } from 'react';
 
 import { UserContext } from '@context/UserProvider';
 import { postLogin, postRegister } from '@utils/api-handlers/auth';
-import { logger } from '@utils/logger';
 
 /**
  * Custom hook that deals with login and register logic with the help

@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
-
-const log = logger.create('postSuggestion.js');
+import { apiLog as log } from '../apiLogger';
 
 /**
  * Adds documentation to a suggestion.
@@ -22,6 +20,6 @@ export const postDocumentation = async (suggestionId, author, markdownText) => {
             markdownText,
         });
     } catch (error) {
-        logger.error(error);
+        log.error(error);
     }
 };

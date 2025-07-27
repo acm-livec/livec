@@ -3,7 +3,6 @@ import { isArray } from 'lodash';
 import { EditorStatic } from '@components/ui/editor-static';
 
 export default function Page({ children = null, page }) {
-    console.log(page);
     return (
         <div className="document--computer-science p-5">
             {page?.content?.length > 1 || isArray(page) ? (

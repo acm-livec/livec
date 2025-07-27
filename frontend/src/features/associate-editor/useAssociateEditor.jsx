@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router';
 import { useContext, useState, useEffect } from 'react';
 
-import { logger } from '@utils/logger';
 import { UserContext } from '@context/UserProvider';
 import { getReviewers } from '@utils/api-handlers/users/get-reviewers';
 import { AssociateEditorActions } from '@docs/constants/actions';
@@ -49,7 +48,7 @@ export default function useAssociateEditor() {
         if (!associateEditorId) return;
         getReviewers(associateEditorId)
             .then((res) => setReviewers(res))
-            .catch((err) => logger.error(err));
+            .catch(() => {});
     }, [associateEditorId]);
 
     /**
@@ -64,15 +63,12 @@ export default function useAssociateEditor() {
      */
     const reject = async (suggestionId, { forPrivate, forPublic }) => {
         try {
-            logger.startProcess('Reject Suggestion');
-            logger.debug({ suggestionId, forPrivate, forPublic });
             const strucPriv = [
                 {
                     type: 'p',
                     children: [{ text: forPrivate }],
                 },
             ];
-            logger.debug({ suggestionId, forPrivate, forPublic });
             const strucPub = [
                 {
                     type: 'p',
@@ -85,13 +81,9 @@ export default function useAssociateEditor() {
                 strucPriv,
                 strucPub
             );
-            logger.success('Suggestion rejected:', { suggestionId, success });
             return success;
         } catch (error) {
-            logger.error(error);
             return false;
-        } finally {
-            logger.endProcess();
         }
     };
 
@@ -108,15 +100,12 @@ export default function useAssociateEditor() {
      */
     const accept = async (suggestionId, { forPrivate, forPublic }) => {
         try {
-            logger.startProcess('Accept Suggestion');
-            logger.debug({ suggestionId, forPrivate, forPublic });
             const strucPriv = [
                 {
                     type: 'p',
                     children: [{ text: forPrivate }],
                 },
             ];
-            logger.debug({ suggestionId, forPrivate, forPublic });
             const strucPub = [
                 {
                     type: 'p',
@@ -129,16 +118,10 @@ export default function useAssociateEditor() {
                 strucPriv,
                 strucPub
             );
-            logger.success('Review started for suggestion:', {
-                suggestionId,
-                success,
-            });
+            
             return success;
         } catch (error) {
-            logger.error(error);
             return false;
-        } finally {
-            logger.endProcess();
         }
     };
 
@@ -153,24 +136,13 @@ export default function useAssociateEditor() {
      */
     const document = async (suggestionId, documentationId) => {
         try {
-            logger.startProcess('Add Documentation');
             const docs = JSON.parse(localStorage.getItem(documentationId));
             if (!docs) throw new Error('No documentation available');
-            logger.debug({
-                suggestionId,
-                documentationId,
-                htmlLength: docs.length,
-            });
             await postDocumentation(suggestionId, associateEditorId, docs);
-            logger.success('Documentation added for suggestion:', {
-                suggestionId,
-            });
             localStorage.removeItem(documentationId);
             navigate(0);
         } catch (error) {
-            logger.error(error);
-        } finally {
-            logger.endProcess();
+            // ignore
         }
     };
 
@@ -186,18 +158,13 @@ export default function useAssociateEditor() {
         const updatedSection = JSON.parse(localStorage.getItem(suggestionId));
         if (!updatedSection) throw new Error('No updated section available');
         try {
-            logger.startProcess('Finalize Suggestion');
-            logger.debug({ suggestionId, updatedSection });
             await postAssociateEditorFinalization(
                 associateEditorId,
                 suggestionId,
                 updatedSection
             );
-            logger.success('Suggestion finalized:', { suggestionId });
         } catch (error) {
-            logger.error(error);
-        } finally {
-            logger.endProcess();
+            // ignore
         }
     };
 
@@ -213,15 +180,12 @@ export default function useAssociateEditor() {
      */
     const defer = async (suggestionId, { forPrivate, forPublic, reviewer }) => {
         try {
-            logger.startProcess('Defer Suggestion');
-            logger.debug({ suggestionId, forPrivate, forPublic, reviewer });
             const strucPriv = [
                 {
                     type: 'p',
                     children: [{ text: forPrivate }],
                 },
             ];
-            logger.debug({ suggestionId, forPrivate, forPublic });
             const strucPub = [
                 {
                     type: 'p',
@@ -229,14 +193,8 @@ export default function useAssociateEditor() {
                 },
             ];
             await postDeferral(suggestionId, strucPriv, strucPub, reviewer);
-            logger.success('Suggestion deferred to reviewer:', {
-                suggestionId,
-                reviewer,
-            });
         } catch (error) {
-            logger.error(error);
-        } finally {
-            logger.endProcess();
+            // ignore
         }
     };
 
@@ -252,14 +210,9 @@ export default function useAssociateEditor() {
      */
     const assign = async (suggestionId, { reviewers }) => {
         try {
-            logger.startProcess('Assign Reviewers');
-            logger.debug({ suggestionId, reviewers });
             await postAssignReviewers(suggestionId, reviewers);
-            logger.success('Reviewers assigned:', { suggestionId, reviewers });
         } catch (error) {
-            logger.error(error);
-        } finally {
-            logger.endProcess();
+            // ignore
         }
     };
 

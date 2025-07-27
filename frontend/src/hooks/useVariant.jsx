@@ -10,7 +10,6 @@ export default function useVariant(defaultVariant = 'default') {
             setCurrentVariant(variant);
         }
 
-        console.log(currentVariant);
     };
 
     const isActive = (variant) => {

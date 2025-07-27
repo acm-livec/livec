@@ -16,7 +16,6 @@ import { useState, useEffect, useContext } from 'react';
 import io from 'socket.io-client';
 
 export default function FinalView({ suggestion, user }) {
-    console.log('su', suggestion);
 
     const { setView, CurrentView, keys } = useTabs(
         {
@@ -104,7 +103,6 @@ const DocumentationPanel = ({ suggestion, documentation, user }) => {
 
 const SuggestionContent = ({ suggestion, user }) => {
     const handleVotes = (votes) => {
-        console.log(votes);
         const counts = votes.reduce(
             (acc, vote) => {
                 const key = vote.final_decision;

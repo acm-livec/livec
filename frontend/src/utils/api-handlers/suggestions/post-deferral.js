@@ -1,5 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
+import { apiLog as log } from '../apiLogger';
 
 /**
  * Defers a suggestion to a reviewer, pausing associate editor decision until the reviewer completes.
@@ -20,6 +20,6 @@ export const postDeferral = async (suggestionId, notes, mesage, reviewerId) => {
             reviewerId,
         });
     } catch (error) {
-        logger.error(error);
+        log.error(error);
     }
 };

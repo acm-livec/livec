@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
-
-const log = logger.create('postRegister.js');
+import { apiLog as log } from '../apiLogger';
 
 /**
  * Registers a new user via the API.

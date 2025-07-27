@@ -2,9 +2,6 @@ import { useState, useEffect, useContext } from 'react';
 import { UserContext } from '@context/UserProvider';
 import { postSuggestion } from '@utils/api-handlers/suggestions';
 import { API } from '@api/client.js';
-import { logger, setCorrelationId } from '@utils/logger';
-
-const log = logger.create('useSuggestion.js');
 
 export default function useSuggestion() {
     const { user } = useContext(UserContext);
@@ -21,8 +18,8 @@ export default function useSuggestion() {
                 );
                 const { data } = await response;
                 setSuggestions(data.suggestions);
-            } catch (error) {
-                console.error('Error fetching data:', error);
+            } catch {
+                // Failed to fetch suggestions
             }
         })();
     }, [user]);
@@ -36,16 +33,14 @@ export default function useSuggestion() {
                 );
                 const { data } = await response;
                 setFinalSuggestions(data.suggestions);
-            } catch (error) {
-                console.error('Error fetching data:', error);
+            } catch {
+                // Failed to fetch suggestions
             }
         })();
     }, [user]);
 
     const submit = async ({ title, text, discipline, sectionId }) => {
         try {
-            setCorrelationId('submit-suggestion');
-            logger.groupCollapsed('Submit Suggestion Flow');
             const res = await postSuggestion(
                 user.id,
                 title,
@@ -54,8 +49,7 @@ export default function useSuggestion() {
                 sectionId
             );
             setResponse(res);
-        } catch (error) {
-            log.error(error);
+        } catch {
             setResponse({ success: false });
         }
     };

@@ -5,7 +5,6 @@ import {
     postRecommednation,
     postDecision,
 } from '@utils/api-handlers/suggestions';
-import { logger } from '@utils/logger';
 import { UserContext } from '@context/UserProvider';
 /**
  * Implement reviewer functionalities here
@@ -25,7 +24,6 @@ export default function useReviewer() {
     };
 
     const decide = async (id, { decision, notes }) => {
-        console.log(id, decision, notes);
         // await postDecision(id, reviewerId, { decision, notes });
         // navigate(0);
     };

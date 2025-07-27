@@ -1,5 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
+import { apiLog as log } from '../apiLogger';
 
 /**
  * Initiates the review process for a suggestion.
@@ -26,9 +26,9 @@ export const postStartReview = async (
             { startedBy, notes, messageToSubmitter }
         );
         const { success, message } = response.data;
-        logger.success(message);
+        log.success(message);
         return success;
     } catch (error) {
-        logger.error(error);
+        log.error(error);
     }
 };

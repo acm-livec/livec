@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
-
-const log = logger.create('postAssignReviewers.js');
+import { apiLog as log } from '../apiLogger';
 
 /**
  * Assigns one or more reviewers to a suggestion.
@@ -21,6 +19,6 @@ export const postAssignReviewers = async (suggestionId, reviewers) => {
             reviewers,
         });
     } catch (error) {
-        logger.error(error);
+        log.error(error);
     }
 };

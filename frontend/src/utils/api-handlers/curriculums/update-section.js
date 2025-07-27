@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
-
-const log = logger.create('updateSection.js');
+import { apiLog as log } from '../apiLogger';
 
 export const updateSection = async (curriculum, sectionId, data) => {
     try {
