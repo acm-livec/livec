@@ -213,45 +213,7 @@ export const Status = Object.freeze({
     System: SystemStatus,
 });
 
-export const statusMap = {
-    [Status.Public.SUBMITTED]: 'status--neutral',
-    [Status.Public.REJECTED]: 'status--error',
-    [Status.Public.ASSIGNED]: 'status--info',
-    [Status.Public.UNDER_REVIEW]: 'status--active',
-    [Status.Public.UNDER_CONSIDERATION]: 'status--active',
-    [Status.Public.ACCEPTED]: 'status--success',
-    [Status.Public.PENDING_EXTERNAL_REVIEW]: 'status--external',
-    [Status.Public.UNDER_HIGHER_REVIEW]: 'status--external',
-    [Status.Public.IN_DISCUSSION]: 'status--external',
-
-    [Status.Private.AWAITING_INITIAL_RESPONSE]: 'status--info',
-    [Status.Private.AWAITING_RESPONSE]: 'status--info',
-    [Status.Private.AWAITING_REVIEWER]: 'status--info',
-    [Status.Private.AWAITING_FEEDBACK]: 'status--info',
-    [Status.Private.REVIEWING]: 'status--active',
-    [Status.Private.FINALIZED]: 'status--external',
-    [Status.Private.APPROVED]: 'status--success',
-    [Status.Private.CHANGE_REQUEST]: 'status--info',
-    [Status.Private.READY_FOR_DISCUSSION]: 'status--success',
-    [Status.Private.RECOMMENDATION_SUBMITTED]: 'status--success',
-    [Status.Private.AWAITING_CHANGE_REQUEST]: 'status--active',
-    [Status.Private.JOIN_DISCUSSION]: 'status--active',
-    [Status.Private.STARTED_DISCUSSION]: 'status--info',
-
-    [Status.System.NEW]: 'status--neutral',
-    [Status.System.ACTIVE]: 'status--info',
-    [Status.System.UNASSIGNED]: 'status--neutral',
-    [Status.System.PENDING]: 'status--info',
-    [Status.System.ELEVATED]: 'status--external',
-    [Status.System.SUSPENDED]: 'status--warning',
-    [Status.System.INACTIVE]: 'status--warning',
-    [Status.System.CLOSED]: 'status--success',
-    [Status.System.ARCHIVED]: 'status--neutral',
-    [Status.System.DEFERRED]: 'status--warning',
-    [Status.System.ON_HOLD]: 'status--warning',
-    [Status.System.FLAGGED]: 'status--error',
-    [Status.System.RESOLVED]: 'status--success'
-};
+// StatusMap moved to frontend utilities. See `frontend/src/utils/statusMap.js`.
 
 
 /**
