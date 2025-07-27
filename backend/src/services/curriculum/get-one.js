@@ -3,6 +3,7 @@ const { Roles } = require('@utils/constants')
 const AssociateEditors = require('@models/users/associate-editor/editors.model.js')
 const Suggestions = require('@models/suggestion/suggestions.model.js')
 const Curriculums = require('@models/curriculum/curriculums.model.js')
+const kebabToCamel = require('@utils/kebabToCamel')
 
 
 const logger = require('@logger').addSource({
@@ -11,9 +12,6 @@ const logger = require('@logger').addSource({
     params: ['suggestion']
 });
 
-function kebabToCamel(str) {
-    return str.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
-}
 
 
 const getFullCurriculum = async (curriculum) => {
