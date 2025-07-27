@@ -1,5 +1,5 @@
 // src/models/User.js
-import { Roles } from '@documentation/constants/roles';
+import { Roles } from '@docs/constants/roles';
 
 export default class User {
     constructor(data = {}) {

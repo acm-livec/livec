@@ -1,3 +1,5 @@
+import { flattenSections } from '../../../docs/shared/utils/flatten.js';
+
 /**
  * Helper function to convert from `kebab-case` to `Title Case`
  *
@@ -50,26 +52,4 @@ export const formatDate = (date) => {
     }).format(new Date(date));
 };
 
-export function flattenSections(sections, parentPath = []) {
-    let result = [];
-
-    for (const section of sections) {
-        const path = [...parentPath, section.title];
-
-        const { units, ...rest } = section;
-
-        if (section.units.length === 0) {
-            result.push({
-                ...rest,
-                path: path,
-            });
-        }
-
-        if (section.units && section.units.length > 0) {
-            const children = flattenSections(section.units, path);
-            result = result.concat(children);
-        }
-    }
-
-    return result;
-}
+export { flattenSections };

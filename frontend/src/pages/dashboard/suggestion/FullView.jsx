@@ -40,7 +40,7 @@ import useVariant from '@hooks/useVariant';
 import useEditorInChief from '@features/editor-in-chief/useEditorInChief';
 
 // ─── Constants / Styles / Context ────────────────────────────────────────
-import { Roles } from '@documentation/constants/roles';
+import { Roles } from '@docs/constants/roles';
 import styles from './SuggestionView.module.scss';
 
 /**
@@ -267,7 +267,7 @@ const Revs = ({ suggestion }) => {
 
 import PlateEditor from '@features/details/PlateEditor';
 import DiffViewer from '@features/reviewer/DiffViewer';
-import { Status } from '@documentation/constants/status';
+import { Status } from '@docs/constants/status';
 
 const SectionView = ({ suggestion, text, id, role, rev }) => {
     const { currentView, setView } = useView('current');

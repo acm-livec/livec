@@ -1,4 +1,5 @@
-import { Status, statusMap } from './status';
+import statusModule from '../../../../docs/shared/constants/status.js';
+const { Status, statusMap } = statusModule;
 
 export { Status, statusMap };
 

@@ -4,7 +4,7 @@ import { useContext, useState, useEffect } from 'react';
 import { logger } from '@utils/logger';
 import { UserContext } from '@context/UserProvider';
 import { getReviewers } from '@utils/api-handlers/users/get-reviewers';
-import { AssociateEditorActions } from '@documentation/constants/actions';
+import { AssociateEditorActions } from '@docs/constants/actions';
 import {
     postRejection,
     postStartReview,

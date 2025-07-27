@@ -175,7 +175,7 @@ const SuggestionContent = ({ suggestion, user }) => {
 };
 
 import DiffViewer from '@features/reviewer/DiffViewer';
-import { Status } from '@documentation/constants/status';
+import { Status } from '@docs/constants/status';
 import useView from '@hooks/useView';
 import { Form, RadioAsCheckbox, TextArea } from '@components/input';
 import useReviewer from '@features/reviewer/useReviewer';

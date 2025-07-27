@@ -13,7 +13,7 @@
 		"@services/*": ["src/services/*"],
 		"@errors": ["src/errors/index.js"],
 		"@logger": ["logger/logger.js"],
-		"@documentation/*": ["../documentation/*"]
+                "@docs/*": ["../docs/*"]
 	},
 	"module": "CommonJS",
 	"moduleResolution": "Node",
@@ -23,6 +23,6 @@
 	    "esModuleInterop": true
 
 	},
-  "include": ["src", "logger", "types", "documentation"],
+  "include": ["src", "logger", "types", "docs"],
 	"exclude": ["node_modules", "dist"]
 }
