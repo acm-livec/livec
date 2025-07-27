@@ -1,1 +1,119 @@
-[]
+[
+  {
+    "id": "b3b1r0elf0e9",
+    "section_version": "alpha",
+    "contributing_member": "CM-0001",
+    "meta": {
+      "curriculum": "computer-science",
+      "year_version": "2022",
+      "section_version": "alpha",
+      "page_number": 21
+    },
+    "content": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "CS2023 introduces updated computer science curricular guidelines developed by major computing organizations. Below is a draft summary of key focus areas and proposed updates:"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Knowledge areas have been reviewed and reorganized to reflect modern topics in computing."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Core content has been minimized to allow flexibility, with a new KA Core designation for deeper study areas."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Programs are encouraged to select focus areas, enabling clearer definition of graduate competencies."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Ethics and societal impacts are emphasized throughout the curriculum via the SEP knowledge area."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Mathematics requirements have been adjusted to offer more flexibility while retaining rigor."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Professional dispositions are included and linked to specific knowledge areas."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "A new Competency Framework supports institutions in defining local learning goals and outcomes."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Emerging topics like Generative AI are addressed to encourage innovation in teaching."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "These revisions support the evolving expectations for computer science graduates and align with global educational trends."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "The guidelines were developed collaboratively over several years by a diverse task force, incorporating community feedback, global representation, and multiple rounds of revision."
+          }
+        ]
+      }
+    ]
+  }
+]

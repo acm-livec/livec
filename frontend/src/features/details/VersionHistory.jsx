@@ -3,7 +3,6 @@ import { FlexColumn } from '@components/layouts/flex';
 import { getVersion } from '@utils/api-handlers/curriculums/get-version';
 
 export default function VersionHistory({ meta }) {
-    if (!meta) return null;
     const { year_version, section_version, previous_versions = [], curriculum } = meta;
     const [versions, setVersions] = useState([]);
 
@@ -16,28 +15,21 @@ export default function VersionHistory({ meta }) {
     }, [previous_versions, curriculum]);
 
     const renderContent = (content = []) =>
-        content
-            .map((block) =>
-                Array.isArray(block.children)
-                    ? block.children.map((ch) => ch.text || '').join('')
-                    : ''
-            )
-            .join(' ');
+        content.map((block) => (Array.isArray(block.children) ? block.children.map((ch) => ch.text || '').join('') : '')).join(' ');
+    if (!meta) return null;
 
     return (
         <FlexColumn gap="0.5rem">
             <h2>Version History</h2>
             <p>
-                <strong>Current Version:</strong>{' '}
-                {section_version || 'N/A'} {year_version ? `(${year_version})` : ''}
+                <strong>Current Version:</strong> {section_version || 'N/A'} {year_version ? `(${year_version})` : ''}
             </p>
             {versions.length > 0 ? (
                 <ul>
                     {versions.map((ver) => (
                         <li key={ver.id}>
                             <p>
-                                <strong>{ver.section_version}</strong>{' '}
-                                {ver.meta.year_version ? `(${ver.meta.year_version})` : ''}
+                                <strong>{ver.section_version}</strong> {ver.meta.year_version ? `(${ver.meta.year_version})` : ''}
                             </p>
                             <p>{renderContent(ver.content)}</p>
                         </li>
