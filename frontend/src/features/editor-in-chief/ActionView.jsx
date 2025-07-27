@@ -53,14 +53,14 @@ const ConfirmBoxInfo = ({ action }) => {
         [EditorInChief.APPROVED_BY_EDITOR_IN_CHIEF]: {
             message: 'Are you sure you want to approve this change?',
             status: {
-                from: Status.Public.UNDER_HIGHER_REVIEW,
+                from: Status.Public.UNDER_REVIEW,
                 to: Status.Public.UNDER_CONSIDERATION,
             },
         },
         [EditorInChief.REJECTED_BY_EDITOR_IN_CHIEF]: {
             message: 'Are you sure you want to reject this change?',
             status: {
-                from: Status.Public.UNDER_HIGHER_REVIEW,
+                from: Status.Public.UNDER_REVIEW,
                 to: Status.Public.REJECTED,
             },
         },
@@ -68,8 +68,8 @@ const ConfirmBoxInfo = ({ action }) => {
             message:
                 'Are you sure you want to begin reviewing this suggestion?',
             status: {
-                from: Status.Public.ASSIGNED,
-                to: Status.Public.PENDING_EXTERNAL_REVIEW,
+                from: Status.Public.QUEUED,
+                to: Status.Public.UNDER_REVIEW,
             },
         },
     };

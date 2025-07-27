@@ -15,18 +15,18 @@ export default class Suggestion {
 
     /** Check if user has a given role */
     get isNew() {
-        return this.system?.status === Status.System.NEW;
+        return this.system?.status === Status.System.PENDING_ASSIGNMENT;
     }
 
     get isClosed() {
         return isTerminalStatus(this.system?.status);
     }
     isDeferred() {
-        return this.system?.status === Status.System.DEFERRED;
+        return this.system?.status === Status.System.EXTERNAL_REVIEW;
     }
 
     inFinalPhase() {
-        return this.system?.status === SystemStatus.IN_FINAL_PHASE;
+        return this.system?.status === SystemStatus.IN_BOARD_DISCUSSION;
 
     }
 }

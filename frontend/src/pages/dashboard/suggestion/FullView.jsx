@@ -108,11 +108,11 @@ const DocumentationPanel = ({ suggestion, documentation, user }) => {
     const { toggle, toggleView } = useToggle();
     const { document } = useAssociateEditor();
     const hideAe =
-        suggestion.system.status === Status.System.ELEVATED &&
+        suggestion.system.status === Status.System.AWAITING_EIC_INPUT &&
         user.role === Roles.ASSOCIATE_EDITOR;
     const hideEic =
         user.role === Roles.EDITOR_IN_CHIEF &&
-        suggestion.system.status === Status.System.PENDING;
+        suggestion.system.status === Status.System.REFINEMENT_CYCLE;
 
     return (
         <>
@@ -176,10 +176,10 @@ const SuggestionContent = ({ suggestion, role }) => {
         { label: 'Exclude', value: 'exclude' },
     ];
 
-    const hideAe = suggestion.system.status === Status.System.ELEVATED;
+    const hideAe = suggestion.system.status === Status.System.AWAITING_EIC_INPUT;
     const hideEic =
-        suggestion.system.status === Status.System.PENDING ||
-        suggestion.system.status === Status.System.AWAITING_FINAL_DECISION;
+        suggestion.system.status === Status.System.REFINEMENT_CYCLE ||
+        suggestion.system.status === Status.System.AWAITING_BOARD_DISCUSSION;
     return (
         <SubGrid rows={1} columns={5} rowSpan={1} colSpan={5}>
             <GridPanel rowSpan={1} colSpan={3}>
@@ -254,7 +254,7 @@ const Revs = ({ suggestion }) => {
             value: item.id,
         }));
 
-    if (suggestion.system.status === Status.System.ELEVATED) return;
+    if (suggestion.system.status === Status.System.AWAITING_EIC_INPUT) return;
     return (
         <>
             <h2>Assign Reviewers</h2>
