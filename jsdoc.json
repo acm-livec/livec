@@ -3,7 +3,7 @@
     "allowUnknownTags": true
   },
   "source": {
-    "include": ["frontend/", "backend/", "documentation/"],
+    "include": ["frontend/", "backend/", "docs/"],
     "includePattern": ".js$",
     "excludePattern": "(node_modules|dist)"
   },

@@ -44,7 +44,7 @@ LiveC is a web application that supports **collaborative curriculum editing** fo
 * Prototype Requirements.pdf         — System Requirements Specification (SRS)
 * frontend/                         — React application
 * backend/                          — Node.js API & business logic
-* documentation/, archived/, testing/
+* docs/, archived/, testing/
 * jsdoc.json, AGENTS.md             — Docs & agent usage
 * package.json                      — Monorepo dependencies
 ```
@@ -80,7 +80,7 @@ LiveC is a web application that supports **collaborative curriculum editing** fo
 
 ```plaintext
 * archived/     — Legacy code
-* documentation/— Developer or procedural docs
+* docs/— Developer or procedural docs
 * testing/      — Manual/automated test cases
 ```
 

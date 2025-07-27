@@ -3,7 +3,7 @@ import { Status } from '@utils/constants';
 import {
     isTerminalStatus,
     SystemStatus,
-} from '@documentation/constants/status';
+} from '@docs/constants/status';
 
 /**
  * @type {Suggestion}

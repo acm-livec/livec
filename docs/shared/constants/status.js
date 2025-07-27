@@ -1,57 +1,4 @@
-/**
- * Represents the public status for suggestions visible to submitters.
- *
- * Used to show user-facing status labels and icons.
- *
- * @typedef {Object} Public
- * @property {'submitted'} SUBMITTED - Suggestion has been submitted.
- * @property {'rejected'} REJECTED - Suggestion has been rejected.
- * @property {'assigned'} ASSIGNED - Suggestion has been assigned.
- * @property {'under-review'} UNDER_REVIEW - Suggestion is under review.
- * @property {'under-higher-review'} UNDER_HIGHER_REVIEW - Suggestion is under review.
- * @property {'under-consideration'} UNDER_CONSIDERATION - Suggestion is under consideration.
- * @property {'accepted'} ACCEPTED - Suggestion has been accepted.
- * @property {'pending-external-review'} PENDING_EXTERNAL_REVIEW - Suggestion has been accepted.
- */
-
-/**
- * @typedef {Object} Private
- * @property {'awaiting-initial-response'} AWAITING_INITIAL_RESPONSE - Waiting for submitter.
- * @property {'rejected'} REJECTED - Suggestion has been rejected.
- * @property {'reviewing'} REVIEWING - Being reviewed internally.
- * @property {'finalized'} FINALIZED - Being reviewed internally.
- * @property {'awaiting-reviewer'} AWAITING_REVIEWER - Waiting for external reviewer.
- */
-
-/**
- * @typedef {Object} System
- * @property {'new'} NEW - New in system.
- * @property {'closed'} CLOSED - Closed in system.
- * @property {'active'} ACTIVE - Currently active.
- * @property {'unassigned'} UNASSIGNED - Not yet assigned.
- * @property {'pending'} PENDING - Pending action.
- * @property {'elevated'} ELEVATED - Escalated to higher priority.
- * @property {'suspended'} SUSPENDED - Suspended.
- * @property {'inactive'} INACTIVE - Not currently active.
- * @property {'archived'} ARCHIVED - Archived for records.
- * @property {'deferred'} DEFERRED - Deferred for later.
- * @property {'on-hold'} ON_HOLD - Deferred for later.
- * @property {'flagged'} FLAGGED - Deferred for later.
- * @property {'resolved'} RESOLVED - Deferred for later.
- */
-
-/**
- * @typedef {Object} Status
- * @property {Public} Public - Public-facing statuses.
- * @property {Private} Private - Private/reviewer statuses.
- * @property {System} System - System-level internal statuses.
- */
-
-/**
- * Frozen constant for all possible statuses.
- * @type {Status}
- */
-export const Status = Object.freeze({
+const Status = Object.freeze({
     Public: {
         SUBMITTED: 'submitted',
         REJECTED: 'rejected',
@@ -93,17 +40,15 @@ export const Status = Object.freeze({
         INACTIVE: 'inactive',
         CLOSED: 'closed',
         AWAITING_FINAL_DECISION: 'awaiting-final-decision',
-
         ARCHIVED: 'archived',
         DEFERRED: 'deferred',
         ON_HOLD: 'on-hold',
         FLAGGED: 'flagged',
-        RESOLVED: 'resolved',
-    },
+        RESOLVED: 'resolved'
+    }
 });
 
-export const statusMap = {
-    // === Public ===
+const statusMap = {
     [Status.Public.SUBMITTED]: 'status--neutral',
     [Status.Public.REJECTED]: 'status--error',
     [Status.Public.ASSIGNED]: 'status--info',
@@ -114,7 +59,6 @@ export const statusMap = {
     [Status.Public.UNDER_HIGHER_REVIEW]: 'status--external',
     [Status.Public.IN_DISCUSSION]: 'status--external',
 
-    // === Private ===
     [Status.Private.AWAITING_INITIAL_RESPONSE]: 'status--info',
     [Status.Private.AWAITING_RESPONSE]: 'status--info',
     [Status.Private.AWAITING_REVIEWER]: 'status--info',
@@ -128,9 +72,7 @@ export const statusMap = {
     [Status.Private.AWAITING_CHANGE_REQUEST]: 'status--active',
     [Status.Private.JOIN_DISCUSSION]: 'status--active',
     [Status.Private.STARTED_DISCUSSION]: 'status--info',
-    //   [Status.Private.AWAITING_FEEDBACK]: 'status--info',
 
-    // === System ===
     [Status.System.NEW]: 'status--neutral',
     [Status.System.ACTIVE]: 'status--info',
     [Status.System.UNASSIGNED]: 'status--neutral',
@@ -143,5 +85,7 @@ export const statusMap = {
     [Status.System.DEFERRED]: 'status--warning',
     [Status.System.ON_HOLD]: 'status--warning',
     [Status.System.FLAGGED]: 'status--error',
-    [Status.System.RESOLVED]: 'status--success',
+    [Status.System.RESOLVED]: 'status--success'
 };
+
+module.exports = { Status, statusMap };

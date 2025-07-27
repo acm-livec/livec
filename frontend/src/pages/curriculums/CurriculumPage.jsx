@@ -3,7 +3,7 @@ import './CurriculumPage.scss';
 import { useNavigate } from 'react-router-dom';
 
 import Breadcrumbs from '@components/BreadCrumbs';
-import { Disciplines } from '@documentation/constants/disciplines';
+import { Disciplines } from '@docs/constants/disciplines';
 import { toTitleCase } from '@utils/format';
 
 const curriculums = Object.values(Disciplines);

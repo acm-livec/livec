@@ -39,6 +39,6 @@
 		"@constants": "src/constants",
 		"@services": "src/services",
 		"@errors": "src/errors",
-		"@documentation/*": "../documentation/*"
+                "@docs/*": "../docs/*"
 	}
 }

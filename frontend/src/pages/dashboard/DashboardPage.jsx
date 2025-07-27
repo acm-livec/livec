@@ -6,7 +6,7 @@ import { Layout, Sidebar, MainPanel } from '@components/layouts/Layout';
 
 import { UserContext } from '@context/UserProvider';
 
-import { Roles } from '@documentation/constants/roles';
+import { Roles } from '@docs/constants/roles';
 
 export default function DashboardPage() {
     const { user, loading } = useContext(UserContext);

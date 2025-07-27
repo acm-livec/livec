@@ -1,5 +1,5 @@
 const HTTP_STATUS = require('./http-codes')
-const Status = require('./status')
+const { Status } = require('../../../../docs/shared/constants/status.js')
 
 
 const Roles = Object.freeze({
