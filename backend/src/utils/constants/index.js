@@ -1,11 +1,6 @@
-const HTTP_STATUS = require('./http-codes')
-// const { Status } = require('@docs/constants/status.js')
-// const { Roles } = require('@docs/constants/roles.js')
-
-import { Status } from '@docs/constants/status.js'
-import { Roles } from '@docs/constants/roles.js'
-
-
+const HTTP_STATUS = require('./http-codes');
+const { Roles } = require('@docs/constants/roles.js');
+const { Status } = require('@docs/constants/status.js');
 
 const Actions = Object.freeze({
     DESK_REJECT: 'desk-reject',
@@ -24,15 +19,7 @@ const Actions = Object.freeze({
     REJECTED_BY_EDITOR_IN_CHIEF: 'rejected-by-editor-in-chief',
     STARTED_FINAL_DISCUSSION: 'started-final-discussion',
     ACCEPTED_BY_BOARD: 'accepted-by-board',
-    DECLINED_BY_BOARD: 'declined-by-board'
-})
+    DECLINED_BY_BOARD: 'declined-by-board',
+});
 
-
-
-
-
-
-
-module.exports = { Roles, HTTP_STATUS, Status, Actions }
-
-
+module.exports = { Roles, HTTP_STATUS, Status, Actions };
