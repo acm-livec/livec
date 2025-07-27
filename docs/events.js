@@ -1,4 +1,4 @@
-import { Status } from './constants/status';
+import { Status } from './constants/status.js';
 
 /**
  * Maps key editorial events to their associated status values
@@ -6,7 +6,7 @@ import { Status } from './constants/status';
  *
  * This centralizes status logic to support UIs, logging, and automation.
  */
-const Events = Object.freeze({
+export const Events = Object.freeze({
     /**
      * Suggestion submitted by a community member.
      * Initializes statuses across system and public view.
@@ -179,4 +179,4 @@ const Events = Object.freeze({
     },
 });
 
-export default Events;
+

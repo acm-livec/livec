@@ -1,7 +1,7 @@
 const { generateSuggestionId } = require('@utils/generate-id');
 const { Actions } = require('@utils/constants');
 const { Status } = require('@docs/constants/status.js');
-const Events = require('@docs/events.js').default || require('@docs/events.js');
+const { Events } = require('@docs/events.js');
 const Documentation = require('../util/documentation.model')
 const PublicMessage = require('../util/public-message.model')
 
@@ -195,7 +195,7 @@ class Suggestion {
             this.status.system === Status.System.AWAITING_BOARD_DISCUSSION ||
             this.status.system === Status.System.IN_BOARD_DISCUSSION ||
             this.status.system === Status.System.READY_FOR_IMPLEMENTATION ||
-            this.status.system === Status.System.CLOSED
+            this.status.system === Status.System.AWAITING_EIC_INPUT
     }
 
 

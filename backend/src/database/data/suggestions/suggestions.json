@@ -1,1 +1,418 @@
-[]
+[
+  {
+    "id": "SCOSC-edeAditl",
+    "title": "sdf",
+    "text": "sdf",
+    "suggestion": "sdf",
+    "submitter_id": "CM-6482",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-27T20:45:27.919Z",
+    "status": {
+      "for_member": "rejected",
+      "for_associate_editor": "desk-rejected",
+      "for_editor_in_chief": "",
+      "system": "closed"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "final_decisions": [],
+    "revised_section": "",
+    "public_updates": [
+      {
+        "refId": "DOC-CWSw30ZU",
+        "status": "submitted",
+        "date": "2025-07-27T20:45:27.919Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-AJvAJQ17",
+        "status": "queued",
+        "author": "LiveC",
+        "date": "2025-07-27T20:45:27.957Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-2tQRTmWS",
+        "status": "rejected",
+        "author": "AE-0001",
+        "date": "2025-07-27T20:54:44.139Z",
+        "message": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "te"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "documentation": [
+      {
+        "action": "desk-reject",
+        "refId": "DOC-MA2jjV-p",
+        "author": "AE-0001",
+        "date": "2025-07-27T20:54:44.139Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "te"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-6482",
+        "date": "2025-07-27T20:45:27.919Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-27T20:45:27.957Z",
+        "meta": {}
+      },
+      {
+        "action": "desk-reject",
+        "performed_by": "AE-0001",
+        "date": "2025-07-27T20:54:44.139Z",
+        "meta": {}
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-AwFD4keZ",
+    "title": "f",
+    "text": "f",
+    "suggestion": "f",
+    "submitter_id": "CM-6482",
+    "section_id": "5097cafb6e4b",
+    "time_created": "2025-07-27T21:04:38.549Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "finalized",
+      "for_editor_in_chief": "new-change",
+      "system": "awaiting-eic-input"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "final_decisions": [],
+    "revised_section": [
+      {
+        "type": "h3",
+        "children": [
+          {
+            "text": "CS Core"
+          }
+        ],
+        "id": "JFkuHCpmO8"
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Types of representations"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Symbolic, logical"
+          }
+        ],
+        "id": "BO-_upzWwL"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-roman",
+        "indent": 2,
+        "children": [
+          {
+            "text": "Creating a representation from a natural language problem statement"
+          }
+        ],
+        "id": "3DA9rAspIi"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Learned subsymbolic representations"
+          }
+        ],
+        "listStart": 2,
+        "id": "W5ogt0yf2o"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Graphical models (e.g., naive Bayes, Bayesian network)"
+          }
+        ],
+        "listStart": 3,
+        "id": "SK_ru519Fh"
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Review of probabilistic reasoning, Bayes theorem (See also: MSF-Probability)"
+          }
+        ],
+        "listStart": 2,
+        "id": "gSLCcH3V4T"
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Bayesian reasoning"
+          }
+        ],
+        "listStart": 3,
+        "id": "aok-HPRWYv"
+      },
+      {
+        "type": "p",
+        "listStyleType": "lower-alpha",
+        "indent": 1,
+        "children": [
+          {
+            "text": "Bayesian inference"
+          }
+        ],
+        "id": "p1IyxzLRsy"
+      },
+      {
+        "type": "h3",
+        "children": [
+          {
+            "text": "KA Core"
+          }
+        ],
+        "id": "89WycA_xCt"
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Random variables and probability distributions"
+          }
+        ],
+        "id": "qZeFnqb_dL"
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Independence"
+          }
+        ],
+        "id": "ekrBQISUsH",
+        "listStart": 2
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Conditional Independence"
+          }
+        ],
+        "listStart": 3,
+        "id": "jWgXtv6X0H"
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Markov chains and Markov models"
+          }
+        ],
+        "listStart": 4,
+        "id": "cdvl71ztje"
+      },
+      {
+        "type": "p",
+        "listStyleType": "decimal",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Utility and decision making"
+          }
+        ],
+        "listStart": 5,
+        "id": "csCNX0Hbsr"
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": ""
+          }
+        ],
+        "id": "I43WuYIDzG"
+      }
+    ],
+    "public_updates": [
+      {
+        "refId": "DOC-_QaQxPfd",
+        "status": "submitted",
+        "date": "2025-07-27T21:04:38.549Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-tiz8XBWo",
+        "status": "queued",
+        "author": "LiveC",
+        "date": "2025-07-27T21:04:38.589Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-UKP0H5mV",
+        "status": "under-review",
+        "author": "AE-0001",
+        "date": "2025-07-27T21:04:52.689Z",
+        "message": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "yes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "refId": "DOC-VLLXIf5q",
+        "status": "under-review",
+        "author": "LiveC",
+        "date": "2025-07-27T21:09:43.233Z",
+        "message": "Your suggestion is now under review by the Editor In Chief"
+      },
+      {
+        "refId": "DOC-Xa4nVD_p",
+        "status": "under-review",
+        "author": "LiveC",
+        "date": "2025-07-27T21:11:20.244Z",
+        "message": "Your suggestion is now under review by the Editor In Chief"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "start-review",
+        "refId": "DOC-yTDJA_-4",
+        "author": "AE-0001",
+        "date": "2025-07-27T21:04:52.689Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "yesty"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": null,
+        "refId": "DOC-nzrA5ci0",
+        "author": "AE-0001",
+        "date": "2025-07-27T21:09:38.631Z",
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Removed because he is right"
+              }
+            ],
+            "type": "p",
+            "id": "CAlasTXj6e"
+          }
+        ]
+      },
+      {
+        "action": "change-request-by-editor-in-chief",
+        "refId": "DOC-9WTZOSBI",
+        "author": "EIC-0001",
+        "date": "2025-07-27T21:10:44.432Z",
+        "content": "Delete all"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-6482",
+        "date": "2025-07-27T21:04:38.549Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-27T21:04:38.589Z",
+        "meta": {}
+      },
+      {
+        "action": "start-review",
+        "performed_by": "AE-0001",
+        "date": "2025-07-27T21:04:52.689Z",
+        "meta": {}
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-07-27T21:09:43.233Z",
+        "meta": {}
+      },
+      {
+        "action": "change-request-by-editor-in-chief",
+        "performed_by": "EIC-0001",
+        "date": "2025-07-27T21:10:44.432Z",
+        "meta": {}
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-07-27T21:11:20.244Z",
+        "meta": {}
+      }
+    ]
+  }
+]

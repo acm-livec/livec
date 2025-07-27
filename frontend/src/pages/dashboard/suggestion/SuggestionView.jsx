@@ -9,10 +9,7 @@ import NewView from './NewView';
 
 import Suggestion from '@context/Suggestion';
 import FinalView from '../board/FinalView';
-import {
-    Status,
-    isTerminalStatus,
-} from '@docs/constants/status';
+import { Status, isTerminalStatus } from '@docs/constants/status';
 
 export default function SuggestionView() {
     const { user } = useContext(UserContext);
@@ -42,11 +39,7 @@ export default function SuggestionView() {
         return (
             <div style={{ color: 'black' }}>
                 <h1>No suggestion found.</h1>
-                <button
-                    onClick={() => navigate(`/dashboard/${user?.id || ''}`)}
-                >
-                    Back to Dashboard
-                </button>
+                <button onClick={() => navigate(`/dashboard/${user?.id || ''}`)}>Back to Dashboard</button>
             </div>
         );
     }
@@ -55,11 +48,12 @@ export default function SuggestionView() {
 
     const isClosed = isTerminalStatus(systemStatus);
     const isDeferred = systemStatus === Status.System.EXTERNAL_REVIEW;
-    const isNew = systemStatus === Status.System.PENDING_ASSIGNMENT;
+    const isNew = systemStatus === Status.System.PRELIMINARY_REVIEW;
     const isFinal = systemStatus === Status.System.IN_BOARD_DISCUSSION;
 
-    if (user.isCommunityMember || isClosed || (user.isAssociateEditor() && isDeferred))
-        return <DefaultView suggestion={suggestion} user={user} />;
+    console.log({ isClosed, isDeferred, isNew, isFinal });
+
+    if (user.isCommunityMember || isClosed || (user.isAssociateEditor() && isDeferred)) return <DefaultView suggestion={suggestion} user={user} />;
 
     if (isNew) return <NewView suggestion={suggestion} />;
 
