@@ -5,7 +5,7 @@ const authRoutes = require('@routes/auth.routes.js');
 const suggestionRoutes = require('@routes/suggestion.routes.js');
 const userRoutes = require('@routes/users');
 const curriculumRoutes = require('@routes/curriculum.routes.js');
-
+const adminRoutes = require('@routes/admin.routes.js');
 
 const app = express();
 app.use(express.json());
@@ -21,6 +21,7 @@ app.use('/auth', authRoutes);
 app.use('/suggestion', suggestionRoutes);
 app.use('/user', userRoutes);
 app.use('/curriculums', curriculumRoutes);
+app.use('/admin', adminRoutes);
 
 
 

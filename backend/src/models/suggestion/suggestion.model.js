@@ -137,6 +137,7 @@ class Suggestion {
             documentation: this.documentation,
             revisedSection: this.revised_section,
             finalDecisions: this.final_decisions,
+            history: this.history,
 
             system: {
                 status: this.status.system
@@ -269,7 +270,8 @@ class Suggestion {
         return this.status.system === Status.System.ELEVATED ||
             this.status.system === Status.System.PENDING ||
             this.status.system === Status.System.AWAITING_FINAL_DECISION ||
-            this.status.system === Status.System.IN_FINAL_PHASE
+            this.status.system === Status.System.IN_FINAL_PHASE ||
+            this.status.system === Status.System.CLOSED
     }
 
 

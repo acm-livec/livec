@@ -17,6 +17,9 @@ export default class User {
     isAssociateEditor() {
         return this.role === Roles.ASSOCIATE_EDITOR;
     }
+    isEditorInChief() {
+        return this.role === Roles.EDITOR_IN_CHIEF;
+    }
 
     /** Check if user has a given role */
     hasRole(role) {

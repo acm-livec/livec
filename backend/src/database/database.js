@@ -29,6 +29,10 @@ function createDB(targetPath, defaultJsonPath, { forceReset = false } = {}) {
 
 
     })();
+    db.reset = async () => {
+        db.data = defaultData;
+        await db.write();
+    };
 
     return db;
 }
@@ -105,5 +109,22 @@ const db = {
         )
     }
 };
+async function resetAll() {
+    await Promise.all([
+        db.users.communityMembers.reset(),
+        db.users.reviewers.reset(),
+        db.users.associateEditors.reset(),
+        db.users.chiefEditors.reset(),
+        db.suggestions.reset(),
+        db.curriculums.computerScience.tableOfContents.reset(),
+        db.curriculums.computerScience.pageContent.reset(),
+        db.curriculums.cybersecurity.tableOfContents.reset(),
+        db.curriculums.cybersecurity.pageContent.reset(),
+        db.curriculumVersions.computerScience.reset(),
+        db.curriculumVersions.cybersecurity.reset(),
+    ]);
+}
 
+// Attach resetAll to exported db for manual resets
+db.resetAll = resetAll;
 module.exports = db;
