@@ -9,6 +9,10 @@ import NewView from './NewView';
 
 import Suggestion from '@context/Suggestion';
 import FinalView from '../board/FinalView';
+import {
+    Status,
+    isTerminalStatus,
+} from '@docs/constants/status';
 
 export default function SuggestionView() {
     const { user } = useContext(UserContext);
@@ -47,17 +51,19 @@ export default function SuggestionView() {
         );
     }
 
-    if (
-        user.isCommunityMember ||
-        suggestion.isClosed ||
-        (user.isAssociateEditor() && suggestion.isDeferred())
-    )
+    const systemStatus = suggestion.system?.status;
+
+    const isClosed = isTerminalStatus(systemStatus);
+    const isDeferred = systemStatus === Status.System.EXTERNAL_REVIEW;
+    const isNew = systemStatus === Status.System.PENDING_ASSIGNMENT;
+    const isFinal = systemStatus === Status.System.IN_BOARD_DISCUSSION;
+
+    if (user.isCommunityMember || isClosed || (user.isAssociateEditor() && isDeferred))
         return <DefaultView suggestion={suggestion} user={user} />;
 
-    if (suggestion.isNew) return <NewView suggestion={suggestion} />;
+    if (isNew) return <NewView suggestion={suggestion} />;
 
-    if (suggestion.inFinalPhase())
-        return <FinalView suggestion={suggestion} user={user} />;
+    if (isFinal) return <FinalView suggestion={suggestion} user={user} />;
 
     return <FullView suggestion={suggestion} user={user} />;
 }
