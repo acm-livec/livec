@@ -1,7 +1,6 @@
 const { AppError, SuggestionNotFoundError, NoUserWithIdError } = require('@errors');
 const Suggestions = require('@models/suggestion/suggestions.model.js')
-// import Suggestions from '@models/suggestion/suggestions.model.js';
-const EditorsInChief = require('@models/users/editor-in-chief/chiefs.model')
+
 
 const logger = require('@logger').addSource({
     file: 'suggestion.service',
@@ -12,7 +11,7 @@ const logger = require('@logger').addSource({
 
 
 const sendChangeRequestToAssociateEditor = async (suggestionId, eic, change) => {
-try {
+    try {
 
         logger.debug("suggestion.change.db.searching", { suggestionId })
 

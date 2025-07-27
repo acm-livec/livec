@@ -1,11 +1,15 @@
 import { FlexColumn } from '@components/layouts/flex';
+import Breadcrumbs from '@components/BreadCrumbs';
 
 export default function CurriculumDetailsSkeleton({ message }) {
     const placeholderItems = Array.from({ length: 15 });
     return (
         <div className="details-page">
-            <aside className="toc-sidebar space-y-2 animate-pulse">
-                <div className="h-4 bg-gray-300 rounded w-3/4" />
+            <aside className="toc-sidebar space-y-2 ">
+                <div className="breadcrumbs">
+                    <Breadcrumbs />
+                </div>
+                <div className="h-4 bg-gray-300 rounded w-3/4 animate-pulse" />
                 <ul className="table-of-contents space-y-2 mt-4">
                     {placeholderItems.map((_, idx) => (
                         <li key={idx} className="toc-item">

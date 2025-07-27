@@ -1,5 +1,6 @@
 const { generateSuggestionId } = require('@utils/generate-id');
-const { Status, Actions } = require('@utils/constants');
+const { Actions } = require('@utils/constants');
+const { Status } = require('@docs/constants/status.js');
 const Documentation = require('../util/documentation.model')
 const PublicMessage = require('../util/public-message.model')
 

@@ -1,37 +1,36 @@
 /**
- * Public statuses shown to suggestion submitters.
+ * Public statuses visible to suggestion submitters.
+ * Represents high-level stages of the submission lifecycle.
  * @readonly
  * @enum {string}
  */
 export const PublicStatus = Object.freeze({
-
-    /** Suggestion has been submitted. */
+    /** Suggestion has been successfully submitted. */
     SUBMITTED: 'submitted',
 
-    /** Suggestion was rejected by the Associate Editor or Editor in Chief. */
-    REJECTED: 'rejected',
-
-    /** Suggestion assigned to an Associate Editor for preliminary review. */
+    /** Suggestion has been placed in the review queue. */
     QUEUED: 'queued',
 
-    /** Suggestion is under Associate Editor/Reviewer review. */
+    /** Suggestion is currently under editorial or reviewer evaluation. */
     UNDER_REVIEW: 'under-review',
 
-    /** Suggestion was accepted by Editor in Chief. */
+    /** Suggestion is under consideration by the Editor in Chief. */
     UNDER_CONSIDERATION: 'under-consideration',
 
-    /** Under Final Discussion by the Ed Board */
+    /** Suggestion is being discussed by the editorial board. */
     UNDER_DISCUSSION: 'under-discussion',
 
     /** Suggestion has been accepted for inclusion. */
     ACCEPTED: 'accepted',
 
-    /** Suggestion has been implemented or published (final stage). */
+    /** Suggestion has been implemented or published. */
     IMPLEMENTED: 'implemented',
 
-    /** Suggestion was declined after final discussion with Ed Board. */
+    /** Suggestion was declined after final board discussion. */
     DECLINED: 'declined',
 
+    /** Suggestion was rejected by the Associate Editor or Editor in Chief. */
+    REJECTED: 'rejected',
 });
 
 
@@ -40,80 +39,104 @@ export const PublicStatus = Object.freeze({
 
 
 /**
- * Private statuses used by Associate Editors.
+ * Internal statuses used by Associate Editors.
+ * Reflects detailed steps of triage, review, and handoff processes.
  * @readonly
  * @enum {string}
  */
 export const PrivateStatusAssociateEditor = Object.freeze({
-    /** Suggestion was put in Associate Editor queue */
+    /** Suggestion is in the Associate Editor's new queue. */
     NEW: 'new',
 
-    /** Associate Editor started review of suggestion during triage stage */
+    /** Associate Editor is actively reviewing the suggestion. */
     REVIEWING: 'reviewing',
 
-    /** Associate Editor deferred suggestion to a review during triage stage */
+    /** Suggestion was deferred to an external reviewer. */
     DEFERRED: 'deferred',
 
+    /** Deferred review has been completed. */
+    DEFERRED_COMPLETE: 'deferred-complete',
 
-    /** */
+    /** Associate Editor is awaiting reviewer assignments (non-deferred). */
+    AWAITING_REVIEWERS: 'awaiting-reviewers',
 
-
-    /** Associate Editor finalized suggestion for EIC to review */
+    /** Suggestion has been finalized by the Associate Editor and sent to EIC. */
     FINALIZED: 'finalized',
 
-    /** Suggestion was approved by EIC */
+    /** Suggestion was rejected by the Editor in Chief. */
+    REJECTED_BY_CHIEF: 'rejected-by-chief',
+
+    /** Suggestion was approved by the Editor in Chief. */
     APPROVED: 'approved',
 
-    /** Change request sent by EIC */
-    CHANGE_REQUEST: 'change-request',
+    /** Suggestion has entered editorial board discussion. */
+    JOIN_DISCUSSION: 'join-discussion',
+
+    /** EIC has requested revisions on the suggestion. */
+    REVISIONS_REQUESTED: 'revisions-requested',
 });
 
+
+
 /**
- * Private statuses used by Reviewers.
+ * Internal statuses used by Reviewers.
+ * Tracks progress of deferred or invited reviewer contributions.
  * @readonly
  * @enum {string}
  */
 export const PrivateStatusReviewer = Object.freeze({
-    AWAITING_REVIEWER: 'awaiting-reviewer',
-    REVIEW_IN_PROGRESS: 'review-in-progress',
-    AWAITING_FEEDBACK: 'awaiting-feedback',
-    AWAITING_CHANGE_REQUEST: 'awaiting-change-request',
+    /** Suggestion was deferred to the reviewer for evaluation. */
+    DEFERRAL: 'deferral',
+
+    /** Reviewer completed their review of the suggestion. */
+    REVIEW_COMPLETED: 'review-completed',
+
+    /** Reviewer was requested to provide feedback by the AE. */
+    FEEDBACK_REQUESTED: 'feedback-requested',
+
+    /** Reviewer submitted their recommendation. */
+    RECOMMENDATION_SUBMITTED: 'recommendation-submitted',
 });
 
 
+
 /**
- * Private statuses used by Editors in Chief.
+ * Internal statuses used by Editors in Chief.
+ * Reflects EIC-specific stages including board coordination and final decisions.
  * @readonly
  * @enum {string}
  */
 export const PrivateEditorInChief = Object.freeze({
-    /** EIC approved finalized Associate Editor suggestion*/
+    /** Finalized suggestion received from Associate Editor. */
+    NEW_CHANGE: 'new-change',
+
+    /** Suggestion approved and ready to enter board discussion. */
     READY_FOR_DISCUSSION: 'ready-for-discussion',
 
-    /** EIC waiting for change request from Associate Editor*/
-    AWAITING_CHANGE_REQUEST: 'awaiting-change-request',
+    /** EIC is awaiting revisions or follow-up from the Associate Editor. */
+    AWAITING_REVISIONS: 'awaiting-revisions',
 
-    /** EIC started final Ed Board Discussusion*/
-    STARTED_DISCUSSION: 'started-discussion'
+    /** EIC has initiated discussion among editorial board members. */
+    STARTED_DISCUSSION: 'started-discussion',
+
+    /** Suggestion was accepted unanimously by all board members. */
+    ACCEPTED_UNANIMOUSLY: 'accepted-unanimously',
+
+    /** Suggestion was published in the official curriculum. */
+    PUBLISHED: 'published',
+
+    /** One or more board members voted to reject the suggestion. */
+    REJECTED_BY_BOARD: 'rejected-by-board',
 });
 
 /**
  * Grouped Private Statuses
  */
 export const PrivateStatus = Object.freeze({
-    AssociateEditor: PrivateStatusReviewer,
+    AssociateEditor: PrivateStatusAssociateEditor,
     Reviewer: PrivateStatusReviewer,
     EditorInChief: PrivateEditorInChief
 });
-
-
-
-
-
-
-
-
-
 
 
 
@@ -124,27 +147,47 @@ export const PrivateStatus = Object.freeze({
  * @enum {string}
  */
 export const SystemStatus = Object.freeze({
-    /**Suggestion was first submitted by Community Member */
-    RECIEVED: 'new',
+    /** Initial intake: Suggestion submitted by Community Member */
+    INITIAL_SUBMISSION: 'initial-submission',
 
-    /**Suggestion was first submitted but no Associate Editors were found*/
+    /** No Associate Editor has been assigned yet */
+    PENDING_ASSIGNMENT: 'pending-assignment',
 
-    UNASSIGNED: 'unassigned',
-    PENDING: 'pending',
-    ELEVATED: 'elevated',
-    SUSPENDED: 'suspended',
-    INACTIVE: 'inactive',
-    /** Suggestion closed after being rejected, declined, or implemented */
-    CLOSED: 'closed',
-    AWAITING_FINAL_DECISION: 'awaiting-final-decision',
-    /** Suggestion closed after being rejected, declined, or implemented */
+    /** Initial review by Associate Editor (triage: reject, defer, review) */
+    PRELIMINARY_REVIEW: 'preliminary-review',
+
+    /** In-depth internal AE review or follow-up after revisions */
+    EDITORIAL_REVIEW: 'editorial-review',
+
+    /** Deferred to external reviewers */
+    EXTERNAL_REVIEW: 'external-review',
+
+    /** Iterative back-and-forth between Associate Editor and EIC */
+    REFINEMENT_CYCLE: 'refinement-cycle',
+
+    /** Awaiting editorial input or wording changes from EIC */
+    AWAITING_EIC_INPUT: 'awaiting-eic-input',
+
+    /** Finalized recommendation submitted by Associate Editor */
+    FINAL_EDITOR_DECISION: 'final-editor-decision',
+
+    /** Being discussed/voted on by the editorial board */
+    BOARD_DISCUSSION: 'board-discussion',
+
+    /** Accepted and awaiting implementation */
+    READY_FOR_IMPLEMENTATION: 'ready-for-implementation',
+
+    /** Paused due to reviewer availability, missing input, or manual hold */
+    TEMPORARILY_PAUSED: 'temporarily-paused',
+
+    /** Fully closed (declined, rejected, or implemented) */
+    COMPLETED: 'completed',
+
+    /** Archived for record-keeping after completion */
     ARCHIVED: 'archived',
-    DEFERRED: 'deferred',
-    ON_HOLD: 'on-hold',
-    FLAGGED: 'flagged',
-    RESOLVED: 'resolved',
-    IN_FINAL_PHASE: 'in-final-phase'
 });
+
+
 
 /**
  * Grouped export of all statuses.
@@ -177,7 +220,6 @@ export const TerminalStatuses = new Set([
     PublicStatus.ACCEPTED,
     SystemStatus.CLOSED,
     SystemStatus.ARCHIVED,
-    SystemStatus.RESOLVED,
 ]);
 
 /**
@@ -207,72 +249,3 @@ export function isValidStatus(status) {
     return Object.values(AllStatuses).includes(status);
 }
 
-
-
-// export const statusMap = {
-//     // === Public ===
-//     [Status.Public.SUBMITTED]: 'status--neutral',
-//     [Status.Public.REJECTED]: 'status--error',
-//     [Status.Public.ASSIGNED]: 'status--info',
-//     [Status.Public.UNDER_REVIEW]: 'status--active',
-//     [Status.Public.UNDER_CONSIDERATION]: 'status--active',
-//     [Status.Public.ACCEPTED]: 'status--success',
-//     [Status.Public.PENDING_EXTERNAL_REVIEW]: 'status--external',
-//     [Status.Public.UNDER_HIGHER_REVIEW]: 'status--external',
-
-//     // === Private ===
-//     [Status.Private.AWAITING_INITIAL_RESPONSE]: 'status--info',
-//     [Status.Private.AWAITING_RESPONSE]: 'status--info',
-//     [Status.Private.REVIEWING]: 'status--active',
-//     [Status.Private.FINALIZED]: 'status--external',
-//     [Status.Private.APPROVED]: 'status--success',
-//     [Status.Private.CHANGE_REQUEST]: 'status--info',
-//     [Status.Private.READY_FOR_DISCUSSION]: 'status--success',
-//     [Status.Private.AWAITING_CHANGE_REQUEST]: 'status--active',
-//     //   [Status.Private.AWAITING_FEEDBACK]: 'status--info',
-
-//     // === System ===
-//     [Status.System.NEW]: 'status--neutral',
-//     [Status.System.ACTIVE]: 'status--info',
-//     [Status.System.UNASSIGNED]: 'status--neutral',
-//     [Status.System.PENDING]: 'status--info',
-//     [Status.System.ELEVATED]: 'status--external',
-//     [Status.System.SUSPENDED]: 'status--warning',
-//     [Status.System.INACTIVE]: 'status--warning',
-//     [Status.System.CLOSED]: 'status--success',
-//     [Status.System.ARCHIVED]: 'status--neutral',
-//     [Status.System.DEFERRED]: 'status--warning',
-//     [Status.System.ON_HOLD]: 'status--warning',
-//     [Status.System.FLAGGED]: 'status--error',
-//     [Status.System.RESOLVED]: 'status--success'
-// };
-
-
-export const SUGGESTION_STATUSES = {
-    // Initial / Entry
-    NEW: 'new',
-    RECEIVED: 'received',
-    ACKNOWLEDGED: 'acknowledged',
-
-    // In Progress
-    ASSIGNED: 'assigned',
-    UNDER_REVIEW: 'under-review',
-    IN_DISCUSSION: 'in-discussion',
-    REVISIONS_REQUESTED: 'revisions-requested',
-    WAITING_FOR_RESPONSE: 'waiting-for-response',
-    READY_FOR_DECISION: 'ready-for-decision',
-
-    // Special / Escalated
-    UNDER_HIGHER_REVIEW: 'under-higher-review',
-    ON_HOLD: 'on-hold',
-    DEFERRED: 'deferred',
-    NEEDS_CLARIFICATION: 'needs-clarification',
-
-    // Final / Closed
-    APPROVED: 'approved',
-    REJECTED: 'rejected',
-    FINALIZED: 'finalized',
-    WITHDRAWN: 'withdrawn',
-    CLOSED: 'closed',
-    ARCHIVED: 'archived'
-};

@@ -1,5 +1,5 @@
 const { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } = require('@errors');
-const { Roles } = require('@utils/constants')
+const { Roles } = require('@docs/constants/roles.js')
 const Suggestions = require('@models/suggestion/suggestions.model.js')
 const Curriculums = require('@models/curriculum/curriculums.model.js')
 const kebabToCamel = require('@utils/kebabToCamel')

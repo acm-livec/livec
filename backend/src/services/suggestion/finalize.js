@@ -11,7 +11,7 @@ const logger = require('@logger').addSource({
 
 
 const associateEditorFinalized = async (suggestionId, associateEditor, updatedSection) => {
-try {
+    try {
 
         logger.debug("suggestion.finalize.db.searching", { suggestionId })
 
@@ -58,13 +58,7 @@ try {
 
 
 
-const notifyEditorInChief = () => {
-    try {
-        
-    } catch (error) {
-        
-    }
-}
+
 
 
 module.exports = associateEditorFinalized

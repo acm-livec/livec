@@ -24,9 +24,11 @@ export default function HomePage() {
 
     return (
         <section className="home">
-            <Button onClick={handleReset} disableOn={loading}>
-                {loading ? 'Resetting…' : 'Reset Database'}
-            </Button>
+            <Button
+                onClick={handleReset}
+                disableOn={loading}
+                text={loading ? 'Resetting…' : 'Reset Database'}
+            />
         </section>
     );
 }

@@ -1,4 +1,4 @@
-const { AppError,SuggestionNotFoundError } = require('@errors');
+const { AppError, SuggestionNotFoundError } = require('@errors');
 const Reviewers = require('@models/users/reviewer/reviewers.model.js')
 const Suggestions = require('@models/suggestion/suggestions.model.js')
 
@@ -29,7 +29,7 @@ const addRecommendationFromReviewer = async (id, reviewerId, decision) => {
 
         logger.debug("suggestion.rec.db.found")
 
-        
+
         logger.debug("suggestion.rec.updating_status.started")
 
         suggestionToAddRecommendation.addRecommendation(reviewerId, decision)

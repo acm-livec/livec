@@ -2,7 +2,6 @@
 const User = require('../user.model');
 const { Roles } = require('@utils/constants');
 
-
 class CommunityMember extends User {
     static role = Roles.COMMUNITY_MEMBER;
     static roleKey = 'communityMembers';

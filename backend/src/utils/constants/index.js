@@ -1,14 +1,9 @@
 const HTTP_STATUS = require('./http-codes')
-const { Status } = require('../../../../docs/shared/constants/status.js')
+// const { Status } = require('@docs/constants/status.js')
+// const { Roles } = require('@docs/constants/roles.js')
 
-
-const Roles = Object.freeze({
-    COMMUNITY_MEMBER: 'community-member',
-    REVIEWER: 'reviewer',
-    ASSOCIATE_EDITOR: 'associate-editor',
-    EDITOR_IN_CHIEF: 'editor-in-chief',
-    ACM_ED_BOARD: 'acm-ed-board'
-});
+import { Status } from '@docs/constants/status.js'
+import { Roles } from '@docs/constants/roles.js'
 
 
 

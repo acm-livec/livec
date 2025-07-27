@@ -1,28 +1,27 @@
 {
   "compilerOptions": {
-	"baseUrl": ".",
-	"paths": {
-		"@/*": ["src/*"],
-		"@root": ["."],
-		"@utils/*": ["src/utils/*"],
-		"@models/*": ["src/models/*"],
-		"@controllers/*": ["src/controllers/*"],
-		"@routes/*": ["src/routes/*"],
-		"@database/*": ["src/database/*"],
-		"@constants/*": ["src/constants/*"],
-		"@services/*": ["src/services/*"],
-		"@errors": ["src/errors/index.js"],
-		"@logger": ["logger/logger.js"],
-                "@docs/*": ["../docs/*"]
-	},
-	"module": "CommonJS",
-	"moduleResolution": "Node",
-	"target": "ES2020",
-	"allowJs": true,
-	"checkJs": true,
-	    "esModuleInterop": true
-
-	},
-  "include": ["src", "logger", "types", "docs"],
-	"exclude": ["node_modules", "dist"]
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@root": ["."],
+      "@utils/*": ["src/utils/*"],
+      "@models/*": ["src/models/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@routes/*": ["src/routes/*"],
+      "@database/*": ["src/database/*"],
+      "@constants/*": ["src/constants/*"],
+      "@services/*": ["src/services/*"],
+      "@errors": ["src/errors/index.js"],
+      "@logger": ["logger/logger.js"],
+      "@docs/*": ["../docs/*"]
+    },
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "ES2020",
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true
+  },
+  "include": ["src", "logger", "types", "docs", "../testing/test.js"],
+  "exclude": ["node_modules", "dist"]
 }
