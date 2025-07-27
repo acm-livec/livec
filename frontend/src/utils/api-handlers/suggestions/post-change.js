@@ -16,7 +16,7 @@ const log = logger.create('postSuggestion.js');
  */
 export const postChangeRequest = async (id, eic, change) => {
     try {
-        console.log(id, eic, change);
+        log.debug('Change request', id, eic, change);
         await API.post(`/suggestion/${id}/change-request`, { eic, change });
     } catch (error) {
         log.error(error);

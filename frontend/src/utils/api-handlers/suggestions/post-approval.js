@@ -17,7 +17,7 @@ const log = logger.create('postSuggestion.js');
  */
 export const postEditorInChiefApproval = async (id, eicId, notes, message) => {
     try {
-        console.log(id, eicId, notes, message);
+        log.debug('EIC approval', id, eicId, notes, message);
         await API.post(`/suggestion/${id}/approve`, { eicId, notes, message });
     } catch (error) {
         log.error(error);
