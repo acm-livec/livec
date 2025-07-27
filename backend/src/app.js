@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors')
 
-const authRoutes = require('@routes/auth.routes.js');
-const suggestionRoutes = require('@routes/suggestion.routes.js');
-const userRoutes = require('@routes/users');
-const curriculumRoutes = require('@routes/curriculum.routes.js');
+const authRoutes = require('@features/auth/routes.js');
+const suggestionRoutes = require('@features/suggestion/routes.js');
+const userRoutes = require('@features/users/routes.js');
+const curriculumRoutes = require('@features/curriculum/routes.js');
 const adminRoutes = require('@routes/admin.routes.js');
 
 const app = express();

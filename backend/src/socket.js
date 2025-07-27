@@ -3,7 +3,7 @@ const logger = require('@logger').addSource({
     file: 'socket.js',
     method: 'socket',
 });
-const { updateVote } = require('@services/suggestion')
+const { updateVote } = require('@features/suggestion/services')
 /**
  * Set up Socket.IO server on the existing HTTP server.
  */

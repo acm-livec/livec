@@ -4,15 +4,11 @@
     "paths": {
       "@/*": ["src/*"],
       "@root": ["."],
-      "@utils/*": ["src/utils/*"],
-      "@models/*": ["src/models/*"],
-      "@controllers/*": ["src/controllers/*"],
       "@routes/*": ["src/routes/*"],
       "@database/*": ["src/database/*"],
-      "@constants/*": ["src/constants/*"],
-      "@services/*": ["src/services/*"],
-      "@errors": ["src/errors/index.js"],
       "@logger": ["logger/logger.js"],
+      "@features/*": ["src/features/*"],
+      "@shared/*": ["src/shared/*"],
       "@docs/*": ["../docs/*"]
     },
     "module": "CommonJS",

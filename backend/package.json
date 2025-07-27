@@ -30,15 +30,11 @@
   },
   "_moduleAliases": {
     "@root": ".",
-    "@utils": "src/utils",
-    "@models": "src/models",
-    "@controllers": "src/controllers",
     "@routes": "src/routes",
     "@database": "src/database",
     "@logger": "logger/logger.js",
-    "@constants": "src/constants",
-    "@services": "src/services",
-    "@errors": "src/errors",
-    "@docs": "../docs"
+    "@features": "src/features",
+    "@shared": "src/shared",
+    "@docs/*": "../docs/*"
   }
 }
