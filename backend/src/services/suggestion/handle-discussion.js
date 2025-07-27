@@ -13,30 +13,30 @@ const logger = require('@logger').addSource({
 
 const handleFinalDiscussion = async (id, eicId) => {
     try {
-
-        logger.debug("suggestion.approve.db.searching")
+        logger.debug("suggestion.discussion.db.searching", { id, eicId })
 
         const suggestionToDiscuss = await Suggestions.findById(id)
 
         if (!suggestionToDiscuss) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("suggestion.discussion.db.found")
 
-        logger.debug("suggestion.approve.starting")
+        logger.debug("suggestion.discussion.starting")
 
         suggestionToDiscuss.startDiscussion(eicId)
-        logger.debug("suggestion.approve.getc")
 
+        logger.debug("suggestion.discussion.chief.searching", { eicId })
         const chief = await EditorsInChief.findById(eicId)
+        logger.debug("suggestion.discussion.chief.found")
         const aes = chief.getAllAssociateEditors()
-        logger.debug("suggestion.approve.finished", { aes })
+        logger.debug("suggestion.discussion.board.preparing", { aes })
 
         const board = [eicId, ...aes]
-        logger.debug("suggestion.approve.got-board")
 
         suggestionToDiscuss.addBoard(board)
         await Suggestions.update(suggestionToDiscuss)
-        logger.debug("suggestion.approve.finished", { board })
+        logger.debug("suggestion.discussion.finished", { board })
 
 
         for (const aid of chief.getAllAssociateEditors()) {

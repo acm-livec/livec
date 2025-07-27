@@ -14,13 +14,14 @@ const logger = require('@logger').addSource({
 const sendChangeRequestToAssociateEditor = async (suggestionId, eic, change) => {
 try {
 
-        logger.debug("suggestion.change.db.searching")
+        logger.debug("suggestion.change.db.searching", { suggestionId })
 
         const suggestionToSendChangeRequest = await Suggestions.findById(suggestionId)
 
         if (!suggestionToSendChangeRequest) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("suggestion.change.db.found")
 
         logger.debug("suggestion.change.starting")
 

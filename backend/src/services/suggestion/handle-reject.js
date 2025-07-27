@@ -14,9 +14,9 @@ const handleRejectSuggestion = async (suggestionId, rejectedById, reason, messag
 
     try {
 
-        logger.debug("suggestion.reject.db.searching")
+        logger.debug("suggestion.reject.db.searching", { suggestionId })
         const suggestionToReject = await Suggestions.findById(suggestionId)
-
+        
         if (!suggestionToReject) {
             throw new SuggestionNotFoundError
         }

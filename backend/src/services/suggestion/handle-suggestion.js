@@ -63,6 +63,7 @@ const addToCurriculum = async (suggestionId, sectionId, discipline) => {
         if (!requestedCurriculum) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("curriculum.get.db.found")
 
         const section = await requestedCurriculum.getSectionToc(sectionId)
 
@@ -74,6 +75,7 @@ const addToCurriculum = async (suggestionId, sectionId, discipline) => {
         }
 
         requestedCurriculum.updateToc(section)
+        logger.debug("curriculum.toc.updated", { sectionId })
     } catch (error) {
 
     }

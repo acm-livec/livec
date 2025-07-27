@@ -13,13 +13,14 @@ const logger = require('@logger').addSource({
 const associateEditorFinalized = async (suggestionId, associateEditor, updatedSection) => {
 try {
 
-        logger.debug("suggestion.finalize.db.searching")
+        logger.debug("suggestion.finalize.db.searching", { suggestionId })
 
         const suggestionToFinalize = await Suggestions.findById(suggestionId)
 
         if (!suggestionToFinalize) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("suggestion.finalize.db.found")
 
         logger.debug("suggestion.finalize.starting")
 
@@ -29,12 +30,13 @@ try {
         logger.debug("suggestion.finalize.finished")
 
         const eic = suggestionToFinalize.assigned_editor_in_chief
-
+        logger.debug("suggestion.finalize.notify.db.searching", { eic })
         const eicToNotify = await EditorsInChief.findById(eic)
 
         if (!eicToNotify) {
             throw new NoUserWithIdError
         }
+        logger.debug("suggestion.finalize.notify.db.found")
 
         eicToNotify.assignSuggestion(suggestionId)
 

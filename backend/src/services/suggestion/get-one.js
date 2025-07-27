@@ -15,13 +15,15 @@ function kebabToCamel(str) {
 const getSuggestionById = async (suggestionId, role = null) => {
     try {
 
-        logger.debug("suggestion.get.db.searching")
+        logger.debug("suggestion.get.db.searching", { suggestionId })
 
         const requestedSuggestion = await Suggestions.findById(suggestionId)
-        let retS
+
         if (!requestedSuggestion) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("suggestion.get.db.found")
+        let retS
 
 
 
@@ -40,16 +42,17 @@ const getSuggestionById = async (suggestionId, role = null) => {
 
         const curri = kebabToCamel(retS.discipline)
         const secId = retS.sectionId
+        logger.debug("suggestion.get.curriculum.searching", { curri })
         const c = await Curriculums.findByCurriculum(curri)
+        logger.debug("suggestion.get.curriculum.found")
 
+        logger.debug("suggestion.get.section.searching", { secId })
         const section = await c.getSection(secId)
-        logger.debug('suggestion.get.gett', { curri, secId })
-
-        logger.debug(JSON.stringify(section))
+        logger.debug("suggestion.get.section.found")
 
         logger.debug("suggestion.get.found")
 
-
+        logger.debug("suggestion.get.finished")
         return { ...retS, section }
 
     } catch (error) {
