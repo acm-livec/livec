@@ -151,8 +151,16 @@ baseLogger.addSeparator = function (label = '', options = {}) {
 };
 
 // Add `.addSource()` method that returns a scoped child logger
-baseLogger.addSource = function (source, ini) {
-    return this.child({ source }, ini);
+// Create a scoped child logger that automatically tags the log source
+// with file/method context. Additional metadata can be passed via the
+// optional second argument.
+baseLogger.addSource = function (opts = {}, meta = {}) {
+    if (typeof opts === 'string') {
+        return this.child({ source: opts, ...meta });
+    }
+    const { file = '', method = '', params = [] } = opts;
+    const source = { file, method, params };
+    return this.child({ source, ...meta });
 };
 
 

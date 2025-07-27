@@ -13,25 +13,23 @@ const assignReviewersToSuggestion = async (suggestionId, reviewers) => {
 
     try {
 
-        logger.debug("suggestion.assign_reviewers.db.searching")
+        logger.debug("suggestion.assign_reviewers.db.searching", { suggestionId, reviewers })
         const suggestionToAddReviewers = await Suggestions.findById(suggestionId);
-
 
         if (!suggestionToAddReviewers) {
             throw new SuggestionNotFoundError
         }
-
         logger.debug("suggestion.assign_reviewers.db.found")
 
 
         logger.debug("suggestion.assign_reviewers.db.inserting")
 
-        suggestionToAddReviewers.assignReviewers( reviewers)
+        suggestionToAddReviewers.assignReviewers(reviewers)
         await Suggestions.update(suggestionToAddReviewers)
 
         logger.debug("suggestion.assign_reviewers.db.inserted")
 
-        linkSuggestionToReviewers(suggestionId, reviewers)
+        await linkSuggestionToReviewers(suggestionId, reviewers)
 
 
     } catch (error) {

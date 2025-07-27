@@ -12,9 +12,10 @@ async function linkCommunityMemberToSuggestion(userId, suggestionId) {
 
     try {
 
-        logger.debug("suggestion.post.link_user.db.searching")
+        logger.debug("suggestion.post.link_user.db.searching", { userId, suggestionId })
         const submittedBy = await CommunityMembers.findById(userId);
         if (!submittedBy) throw NoUserWithIdError
+        logger.debug("suggestion.post.link_user.db.found")
 
         logger.debug("suggestion.post.link_user.db.linking")
         submittedBy.addSuggestion(suggestionId);

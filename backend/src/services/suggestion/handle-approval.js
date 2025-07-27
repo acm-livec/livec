@@ -11,15 +11,15 @@ const logger = require('@logger').addSource({
 
 
 const handleEditorInChiefApproval = async (id, eicId, notes, message) => {
-try {
-
-        logger.debug("suggestion.approve.db.searching")
+    try {
+        logger.debug("suggestion.approve.db.searching", { id, eicId })
 
         const suggestionToApprove = await Suggestions.findById(id)
 
         if (!suggestionToApprove) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("suggestion.approve.db.found")
 
         logger.debug("suggestion.approve.starting")
 

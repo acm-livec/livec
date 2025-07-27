@@ -10,17 +10,18 @@ const logger = require('@logger').addSource({
 const handleStartSuggestionReviewProcess = async (suggestionId, startedBy, notes, message) => {
 try {
 
-        logger.debug("suggestion.start_review.db.searching")
+        logger.debug("suggestion.start_review.db.searching", { suggestionId })
 
         const suggestionToStartReview = await Suggestions.findById(suggestionId)
 
         if (!suggestionToStartReview) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("suggestion.start_review.db.found")
 
         logger.debug("suggestion.start_review.starting")
         const startId = suggestionToStartReview.startReview(startedBy, notes, message)
-        Suggestions.update(suggestionToStartReview)
+        await Suggestions.update(suggestionToStartReview)
         logger.debug("suggestion.start_review.started")
 
         return startId

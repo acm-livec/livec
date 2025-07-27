@@ -10,15 +10,19 @@ const logger = require('@logger').addSource({
 
 const finalizeImplementation = async (id, eicId, notes, message) => {
     try {
-        logger.debug('suggestion.implement.db.searching');
+        logger.debug('suggestion.implement.db.searching', { id, eicId });
         const suggestion = await Suggestions.findById(id);
         if (!suggestion) throw new SuggestionNotFoundError();
+        logger.debug('suggestion.implement.db.found');
 
+        logger.debug('suggestion.implement.starting');
         suggestion.finalizeImplementation(eicId, notes, message);
+        logger.debug('suggestion.implement.curriculum.updating');
         await updateCurriculumSection(suggestion.discipline, {
             id: suggestion.section_id,
             content: suggestion.revised_section,
         });
+        logger.debug('suggestion.implement.curriculum.updated');
 
         await Suggestions.update(suggestion);
         logger.debug('suggestion.implement.finished');

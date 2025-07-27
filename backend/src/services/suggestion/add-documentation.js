@@ -10,19 +10,19 @@ const logger = require('@logger').addSource({
 
 
 const addNewDocumentationToSuggestion = async (suggestionId, author, markdownText) => {
-try {
-
-        logger.debug("suggestion.add_docs.db.searching")
+    try {
+        logger.debug("suggestion.add_docs.db.searching", { suggestionId, author })
 
         const suggestionToAddDocumentation = await Suggestions.findById(suggestionId)
 
         if (!suggestionToAddDocumentation) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("suggestion.add_docs.db.found")
 
         logger.debug("suggestion.add_docs.starting")
         suggestionToAddDocumentation.insertDocumentation(null, author, markdownText)
-        Suggestions.update(suggestionToAddDocumentation)
+        await Suggestions.update(suggestionToAddDocumentation)
         logger.debug("suggestion.add_docs.finished")
 
 

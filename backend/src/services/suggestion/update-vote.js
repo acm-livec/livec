@@ -13,16 +13,16 @@ const logger = require('@logger').addSource({
 const updateVote = async ({ id, userId, formData }) => {
     try {
 
-        logger.debug("suggestion.change.db.searching", { id, userId, formData })
+        logger.debug("suggestion.vote.db.searching", { id, userId })
         const { decision, notes } = formData
-        logger.debug("...", { decision, notes })
         const suggestionToVoteOn = await Suggestions.findById(id)
 
         if (!suggestionToVoteOn) {
             throw new SuggestionNotFoundError
         }
+        logger.debug("suggestion.vote.db.found")
 
-        logger.debug("suggestion.change.starting")
+        logger.debug("suggestion.vote.starting")
 
         const content = [
             {
@@ -45,7 +45,7 @@ const updateVote = async ({ id, userId, formData }) => {
         const ret = ups.toAssociateEditor()
         ret.voted = didVote
 
-        logger.debug("suggestion.change.finished")
+        logger.debug("suggestion.vote.finished")
         return ret
 
 
