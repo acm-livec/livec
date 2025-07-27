@@ -1,4 +1,4 @@
-const getFinalAssociateEditorAssignedSuggestions = require('@features/users/services/associate-editor/get-final')
+const getFinalAssociateEditorAssignedSuggestions = require('@features/users/services/users/associate-editor/get-final')
 const { AppError } = require('@shared/errors');
 
 const logger = require('@logger').addSource({

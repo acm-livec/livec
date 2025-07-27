@@ -1,4 +1,4 @@
-const getAssociateEditorAssignedSuggestions = require('@features/users/services/associate-editor/get-suggestions')
+const getAssociateEditorAssignedSuggestions = require('@features/users/services/users/associate-editor/get-suggestions')
 const { AppError } = require('@shared/errors');
 
 const logger = require('@logger').addSource({
@@ -10,7 +10,8 @@ const logger = require('@logger').addSource({
 
 const getSuggestions = async (req, res) => {
 
-    try { logger.start("GET AE Assigned Suggestions")
+    try {
+        logger.start("GET AE Assigned Suggestions")
 
         const { userId } = req.params
 

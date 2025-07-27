@@ -1,5 +1,5 @@
 const { AppError, NoAssociateEditorsFoundError } = require('@shared/errors');
-const AssociateEditors = require('@features/users/models/associate-editor/editors.model.js')
+const AssociateEditors = require('@features/users/models//users/associate-editor/editors.model.js')
 const Suggestions = require('@features/suggestion/models/suggestions.model.js')
 
 const logger = require('@logger').addSource({
@@ -11,7 +11,8 @@ const logger = require('@logger').addSource({
 
 const assignAssociateEditorToSuggestion = async (suggestion) => {
 
-    try { logger.start("Assign AE to Suggestion")
+    try {
+        logger.start("Assign AE to Suggestion")
 
         logger.info("suggestion.assign_ae.started")
 

@@ -1,4 +1,4 @@
-const  getAssignedReviewers  = require('@features/users/services/associate-editor/get-reviewers')
+const getAssignedReviewers = require('@features/users/services/users/associate-editor/get-reviewers')
 const { AppError } = require('@shared/errors');
 
 const logger = require('@logger').addSource({
@@ -10,7 +10,7 @@ const logger = require('@logger').addSource({
 
 async function getReviewers(req, res) {
 
-    try { 
+    try {
         logger.start("GET AE Assigned Reviewers")
         const { userId } = req.params;
 
@@ -20,7 +20,7 @@ async function getReviewers(req, res) {
         logger.success(`ae.reviewers.get.completed`, { numReturned: reviewers.length })
 
 
-       logger.end("GET AE Assigned Reviewers")
+        logger.end("GET AE Assigned Reviewers")
         return res.status(200).json({ success: true, reviewers });
 
     } catch (error) {
@@ -32,7 +32,7 @@ async function getReviewers(req, res) {
             logger.info(`ae.reviewers.get.failed`)
         }
 
-               logger.end("GET AE Assigned Reviewers")
+        logger.end("GET AE Assigned Reviewers")
 
         return res.status(error.statusCode || 500).json({
             success: false,

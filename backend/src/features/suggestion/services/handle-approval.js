@@ -1,6 +1,6 @@
 const { AppError, SuggestionNotFoundError, NoUserWithIdError } = require('@shared/errors');
 const Suggestions = require('@features/suggestion/models/suggestions.model.js')
-const EditorsInChief = require('@features/users/models/editor-in-chief/chiefs.model')
+const EditorsInChief = require('@features/users/models/users/editor-in-chief/chiefs.model')
 
 const logger = require('@logger').addSource({
     file: 'suggestion.service',

@@ -16,23 +16,23 @@
  * @enum {string}
  */
 export const AssociateEditorActions = Object.freeze({
-	/** Reject the submission without sending it for review. */
-	DESK_REJECT: 'desk-reject',
+    /** Reject the submission without sending it for review. */
+    DESK_REJECT: 'desk-reject',
 
-	/** Begin the editorial review process. */
-	START_REVIEW: 'start-review',
+    /** Begin the editorial review process. */
+    START_REVIEW: 'start-review',
 
-	/** Hand off to a reviewer for feedback. */
-	DEFER_TO_REVIEWER: 'defer-to-reviewer',
+    /** Hand off to a reviewer for feedback. */
+    DEFER_TO_REVIEWER: 'defer-to-reviewer',
 
-	/** Assign reviewer(s) to the submission. */
-	ASSIGN_REVIEWERS: 'assign-reviewers',
+    /** Assign reviewer(s) to the submission. */
+    ASSIGN_REVIEWERS: 'assign-reviewers',
 
-	/** Add internal documentation or notes. */
-	ADD_DOCUMENTATION: 'add-documentation',
+    /** Add internal documentation or notes. */
+    ADD_DOCUMENTATION: 'add-documentation',
 
 
-	FINALIZE: 'finalize'
+    FINALIZE: 'finalize'
 });
 
 
@@ -41,17 +41,17 @@ export const AssociateEditorActions = Object.freeze({
  * @readonly
  */
 export const EditorInChiefActions = Object.freeze({
-	/** Approve the proposed content changes. */
-	APPROVE_CHANGE: 'approve-change',
+    /** Approve the proposed content changes. */
+    APPROVE_CHANGE: 'approve-change',
 
-	/** Request changes to the proposed content. */
-	SEND_CHANGE_REQUEST: 'send-change-request',
+    /** Request changes to the proposed content. */
+    SEND_CHANGE_REQUEST: 'send-change-request',
 
 
-	/** Reject the proposed content entirely.  
-	 *  @note Reject functionality for Editor In Chief is not mentioned in (SRS).
-	 */
-	REJECT_CHANGE: 'reject-change',
+    /** Reject the proposed content entirely.  
+     *  @note Reject functionality for Editor In Chief is not mentioned in (SRS).
+     */
+    REJECT_CHANGE: 'reject-change',
 });
 
 
@@ -60,14 +60,14 @@ export const EditorInChiefActions = Object.freeze({
  * @readonly
  */
 export const ReviewerActions = Object.freeze({
-	/** Submit a completed review for the assigned content. */
-	SUBMIT_REVIEW: 'submit-review',
+    /** Submit a completed review for the assigned content. */
+    SUBMIT_REVIEW: 'submit-review',
 
-	/** Request revisions before approving the content. */
-	REQUEST_REVISION: 'request-revision',
+    /** Request revisions before approving the content. */
+    REQUEST_REVISION: 'request-revision',
 
-	/** Approve the content without further changes. */
-	APPROVE_CONTENT: 'approve-content',
+    /** Approve the content without further changes. */
+    APPROVE_CONTENT: 'approve-content',
 });
 
 
@@ -76,14 +76,14 @@ export const ReviewerActions = Object.freeze({
  * @readonly
  */
 export const MemberActions = Object.freeze({
-	/** Submit a new suggestion or content proposal. */
-	SUBMIT_SUGGESTION: 'submit-suggestion',
+    /** Submit a new suggestion or content proposal. */
+    SUBMIT_SUGGESTION: 'submit-suggestion',
 
-	/** Revise a previously submitted suggestion. */
-	REVISE_SUGGESTION: 'revise-suggestion',
+    /** Revise a previously submitted suggestion. */
+    REVISE_SUGGESTION: 'revise-suggestion',
 
-	/** Withdraw a suggestion before it is reviewed. */
-	WITHDRAW_SUGGESTION: 'withdraw-suggestion',
+    /** Withdraw a suggestion before it is reviewed. */
+    WITHDRAW_SUGGESTION: 'withdraw-suggestion',
 });
 
 
@@ -92,9 +92,9 @@ export const MemberActions = Object.freeze({
  * @readonly
  */
 export const AllActions = Object.freeze({
-	...EditorInChiefActions,
-	...ReviewerActions,
-	...MemberActions,
-	...AssociateEditorActions,
+    ...EditorInChiefActions,
+    ...ReviewerActions,
+    ...MemberActions,
+    ...AssociateEditorActions,
 });
 

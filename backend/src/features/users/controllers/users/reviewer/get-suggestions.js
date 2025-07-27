@@ -1,4 +1,4 @@
-const getReviewerAssignedSuggestions = require('@features/users/services/reviewer/get-suggestions')
+const getReviewerAssignedSuggestions = require('@features/users/services/users/reviewer/get-suggestions')
 const { AppError } = require('@shared/errors');
 
 const logger = require('@logger').addSource({
@@ -10,7 +10,8 @@ const logger = require('@logger').addSource({
 
 const getSuggestions = async (req, res) => {
 
-    try { logger.start("GET Reviewer Suggestions")
+    try {
+        logger.start("GET Reviewer Suggestions")
 
         const { userId } = req.params
 

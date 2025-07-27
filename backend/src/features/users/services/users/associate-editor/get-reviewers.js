@@ -1,5 +1,5 @@
 const { AppError } = require('@shared/errors');
-const Reviewers = require('@features/users/models/reviewer/reviewers.model.js')
+const Reviewers = require('@features/users/models/users/reviewer/reviewers.model.js')
 const logger = require('@logger').addSource({
     file: 'associate-editor.service',
     method: "getAssignedReviewers",
@@ -8,7 +8,7 @@ const logger = require('@logger').addSource({
 
 
 const getAssignedReviewers = async (userId) => {
-    
+
     try {
 
         logger.debug(`ae.reviewers.get.db.searching`)

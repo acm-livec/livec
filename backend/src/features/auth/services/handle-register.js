@@ -1,6 +1,6 @@
-const CommunityMembers = require('@features/users/models/community-member/members.model');
+const CommunityMembers = require('@features/users/models/users/community-member/members.model');
 const { UserAlreadyExistsError, AppError } = require('@shared/errors');
-const Users = require('@features/users/models/users.model')
+const Users = require('@features/users/models/users/users.model')
 
 const logger = require('@logger').addSource({
     file: 'auth.service',

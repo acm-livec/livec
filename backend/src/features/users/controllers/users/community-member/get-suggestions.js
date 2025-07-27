@@ -1,4 +1,4 @@
-const getAllCommunityMemberSuggestions = require('@features/users/services/community-member/get-suggestions')
+const getAllCommunityMemberSuggestions = require('@features/users/services/users/community-member/get-suggestions')
 const { AppError } = require('@shared/errors');
 
 const logger = require('@logger').addSource({
@@ -10,7 +10,8 @@ const logger = require('@logger').addSource({
 
 const getSuggestions = async (req, res) => {
 
-    try { logger.start("GET CM Suggestions")
+    try {
+        logger.start("GET CM Suggestions")
 
         const { userId } = req.params
 

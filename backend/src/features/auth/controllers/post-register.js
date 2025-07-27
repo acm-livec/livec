@@ -1,4 +1,4 @@
-const { handleRegisterUser } = require('@features/auth/services')
+const { handleRegisterUser } = require('../services')
 const { AppError } = require('@shared/errors');
 
 const logger = require('@logger').addSource({

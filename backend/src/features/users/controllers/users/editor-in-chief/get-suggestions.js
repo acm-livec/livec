@@ -1,4 +1,4 @@
-const getFinalizedSuggestions = require('@features/users/services/editor-in-chief/get-finalized')
+const getFinalizedSuggestions = require('@features/users/services/users/editor-in-chief/get-finalized')
 const { AppError } = require('@shared/errors');
 
 const logger = require('@logger').addSource({
@@ -10,7 +10,8 @@ const logger = require('@logger').addSource({
 
 const getSuggestions = async (req, res) => {
 
-    try { logger.start("GET EIC Suggestions")
+    try {
+        logger.start("GET EIC Suggestions")
 
         const { userId } = req.params
 

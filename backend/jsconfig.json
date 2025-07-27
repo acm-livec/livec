@@ -4,7 +4,6 @@
     "paths": {
       "@/*": ["src/*"],
       "@root": ["."],
-      "@routes/*": ["src/routes/*"],
       "@database/*": ["src/database/*"],
       "@logger": ["logger/logger.js"],
       "@features/*": ["src/features/*"],

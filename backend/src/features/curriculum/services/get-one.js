@@ -1,6 +1,6 @@
 const { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } = require('@shared/errors');
 const { Roles } = require('@docs/constants/roles.js')
-const AssociateEditors = require('@features/users/models/associate-editor/editors.model.js')
+const AssociateEditors = require('@features/users/models/users/associate-editor/editors.model.js')
 const Suggestions = require('@features/suggestion/models/suggestions.model.js')
 const Curriculums = require('@features/curriculum/models/curriculums.model.js')
 const kebabToCamel = require('@shared/utils/kebabToCamel')

@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { getSuggestions, getReviewers, getFinalSuggestions } = require('@features/users/controllers/associate-editor');
+const { getSuggestions, getReviewers, getFinalSuggestions } = require('@features/users/controllers/users/associate-editor');
 
 const router = express.Router();
 

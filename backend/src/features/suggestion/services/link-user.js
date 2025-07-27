@@ -1,5 +1,5 @@
 const { AppError, NoUserWithIdError } = require('@shared/errors');
-const CommunityMembers = require('@features/users/models/community-member/members.model');
+const CommunityMembers = require('@features/users/models/users/community-member/members.model');
 
 const logger = require('@logger').addSource({
     file: 'auth.service',

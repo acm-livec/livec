@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { postLogin, postRegister } = require('@features/auth/controllers');
+const { postLogin, postRegister } = require('./controllers');
 
 const router = express.Router();
 

@@ -2,8 +2,8 @@ const { generateSuggestionId } = require('@shared/utils/generate-id');
 const { Actions } = require('@shared/constants');
 const { Status } = require('@docs/constants/status.js');
 const { Events } = require('@docs/events.js');
-const Documentation = require('../util/documentation.model')
-const PublicMessage = require('../util/public-message.model')
+const Documentation = require('./util/documentation.model')
+const PublicMessage = require('./util/public-message.model')
 
 
 class Suggestion {

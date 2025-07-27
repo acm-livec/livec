@@ -1,5 +1,5 @@
 const { AppError, SuggestionNotFoundError } = require('@shared/errors');
-const Reviewers = require('@features/users/models/reviewer/reviewers.model.js')
+const Reviewers = require('@features/users/models/users/reviewer/reviewers.model.js')
 const Suggestions = require('@features/suggestion/models/suggestions.model.js')
 
 const logger = require('@logger').addSource({

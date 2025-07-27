@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { getSuggestions } = require('@features/users/controllers/editor-in-chief');
+const { getSuggestions } = require('@features/users/controllers/users/editor-in-chief');
 
 const router = express.Router();
 

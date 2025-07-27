@@ -1,5 +1,5 @@
 const { UserNotFoundError, PasswordMismatchError, AppError } = require('@shared/errors');
-const Users = require('@features/users/models/users.model.js')
+const Users = require('@features/users/models/users/users.model.js')
 
 const logger = require('@logger').addSource({
     file: 'auth.service',
@@ -16,13 +16,13 @@ const handleLoginUser = async (email, password) => {
         const requestedUser = await Users.findGlobalByEmail(email);
 
         if (requestedUser) {
-        logger.debug('auth.login.db.found')
+            logger.debug('auth.login.db.found')
 
             logger.debug('auth.login.password.verifying')
             if (!requestedUser.comparePasswords(password)) {
                 throw new PasswordMismatchError
             }
-            
+
             logger.debug('auth.login.password.matched')
             return requestedUser;
         }

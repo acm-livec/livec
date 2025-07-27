@@ -1,11 +1,10 @@
 const express = require('express');
 const cors = require('cors')
-
+const db = require('@database/database');
 const authRoutes = require('@features/auth/routes.js');
 const suggestionRoutes = require('@features/suggestion/routes.js');
 const userRoutes = require('@features/users/routes.js');
 const curriculumRoutes = require('@features/curriculum/routes.js');
-const adminRoutes = require('@routes/admin.routes.js');
 
 const app = express();
 app.use(express.json());
@@ -21,7 +20,6 @@ app.use('/auth', authRoutes);
 app.use('/suggestion', suggestionRoutes);
 app.use('/user', userRoutes);
 app.use('/curriculums', curriculumRoutes);
-app.use('/admin', adminRoutes);
 
 
 
@@ -36,6 +34,20 @@ app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ message: 'Server Error' });
 });
+
+/**
+ * POST /admin/reset
+ * Reset all databases to their default state.
+ */
+app.post('/reset', async (req, res, next) => {
+    try {
+        await db.resetAll();
+        res.json({ message: 'Database reset successfully' });
+    } catch (err) {
+        next(err);
+    }
+});
+
 
 
 module.exports = app;

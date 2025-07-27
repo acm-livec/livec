@@ -1,5 +1,5 @@
-const { AppError,SuggestionNotFoundError, UserNotFoundError } = require('@shared/errors');
-const Reviewers = require('@features/users/models/reviewer/reviewers.model.js')
+const { AppError, SuggestionNotFoundError, UserNotFoundError } = require('@shared/errors');
+const Reviewers = require('@features/users/models/users/reviewer/reviewers.model.js')
 const Suggestions = require('@features/suggestion/models/suggestions.model.js')
 
 const logger = require('@logger').addSource({
@@ -28,7 +28,7 @@ const handleDeferSuggestionToReviewer = async (id, notes, message, reviewerId) =
 
         logger.debug("suggestion.defer.db.found")
 
-        
+
         logger.debug("suggestion.defer.updating_status.started")
 
         suggestionToDefer.defer(notes, message, reviewerId)

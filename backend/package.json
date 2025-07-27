@@ -35,6 +35,6 @@
     "@logger": "logger/logger.js",
     "@features": "src/features",
     "@shared": "src/shared",
-    "@docs/*": "../docs/*"
+    "@docs": "../docs"
   }
 }
