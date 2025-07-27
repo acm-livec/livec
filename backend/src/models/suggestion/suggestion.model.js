@@ -243,6 +243,22 @@ class Suggestion {
                 'for_editor_in_chief': Status.Private.STARTED_DISCUSSION,
                 'system': Status.System.IN_FINAL_PHASE
             }
+                break;
+
+            case Actions.ACCEPTED_BY_BOARD: this.status = {
+                'for_member': Status.Public.ACCEPTED,
+                'for_associate_editor': Status.Private.APPROVED,
+                'for_editor_in_chief': Status.Private.APPROVED,
+                'system': Status.System.CLOSED
+            }
+                break;
+
+            case Actions.DECLINED_BY_BOARD: this.status = {
+                'for_member': Status.Public.REJECTED,
+                'for_associate_editor': Status.Private.REJECTED,
+                'system': Status.System.CLOSED
+            }
+                break;
         }
     }
 
@@ -460,6 +476,26 @@ class Suggestion {
         } else {
             return { updated: false, message: 'User not found' };
         }
+    }
+
+    finalizeIfComplete() {
+        const votes = this.final_decisions.map(d => d.final_decision);
+        if (votes.includes('pending')) return null;
+
+        if (votes.includes('exclude')) {
+            this._updateStatus(Actions.DECLINED_BY_BOARD);
+            this.insertHistory(Actions.DECLINED_BY_BOARD, 'LiveC');
+            return 'declined';
+        }
+
+        this._updateStatus(Actions.ACCEPTED_BY_BOARD);
+        this.insertHistory(Actions.ACCEPTED_BY_BOARD, 'LiveC');
+        return 'accepted';
+    }
+
+    finalizeImplementation(eic, notes = '', message = '') {
+        this.insertDocumentation(Actions.ACCEPTED_BY_BOARD, eic, notes);
+        this.insertPublicMessage(message, eic);
     }
 }
 

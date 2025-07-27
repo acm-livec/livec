@@ -12,6 +12,7 @@ import { postChangeRequest } from './post-change.js'
 import { postDeferral } from './post-deferral.js'
 import { postRecommednation } from './post-recommendation.js'
 import { postDiscussion } from './post-discussion.js'
+import { postImplementation } from './post-implementation.js'
 
 export {
     postSuggestion,
@@ -25,5 +26,6 @@ export {
     postChangeRequest,
     postDeferral,
     postRecommednation,
-    postDiscussion
+    postDiscussion,
+    postImplementation
 };
