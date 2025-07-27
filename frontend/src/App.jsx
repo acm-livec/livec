@@ -1,5 +1,4 @@
 import './App.scss';
-// import '@styles/index.scss'
 
 import UserProvider from '@context/UserProvider';
 import AppRoutes from './routes/AppRoutes';
@@ -12,7 +11,6 @@ export default function App() {
             <UserProvider>
                 <Header />
                 <main className="prose prose-base w-full max-w-full">
-                    {/* <main > */}
                     <AppRoutes />
                 </main>
             </UserProvider>

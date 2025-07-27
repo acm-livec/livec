@@ -36,16 +36,8 @@ const updateVote = async ({ id, userId, formData }) => {
         } else {
             suggestionToVoteOn.updateVote(userId, decision, content)
 
-            const result = suggestionToVoteOn.finalizeIfComplete()
-            if (result === 'accepted') {
-                await updateCurriculumSection(
-                    suggestionToVoteOn.discipline,
-                    {
-                        id: suggestionToVoteOn.section_id,
-                        content: suggestionToVoteOn.revised_section,
-                    }
-                )
-            }
+            suggestionToVoteOn.finalizeIfComplete()
+
         }
 
         const ups = await Suggestions.update(suggestionToVoteOn)

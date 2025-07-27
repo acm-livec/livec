@@ -31,17 +31,17 @@ const formatSuggestions = (suggestions) => {
     }));
 };
 
-const sectionHeaders = [
-    { text: 'No.', key: 'num', width: '5%' },
-    { text: 'Title', key: 'title', width: '30%' },
-];
+// const sectionHeaders = [
+//     { text: 'No.', key: 'num', width: '5%' },
+//     { text: 'Title', key: 'title', width: '30%' },
+// ];
 
-const formatSections = (sections) =>
-    sections.map((item, index) => ({
-        id: item.id,
-        num: index + 1,
-        title: item.title,
-    }));
+// const formatSections = (sections) =>
+//     sections.map((item, index) => ({
+//         id: item.id,
+//         num: index + 1,
+//         title: item.title,
+//     }));
 
 export default function MainView() {
     const { suggestions } = useSuggestion();
@@ -76,18 +76,6 @@ export default function MainView() {
                     </Table>
                 </div>
             </div>
-
-            {/* {user.role === 'associate-editor' && (
-                <div className={styles['suggestion-table']}>
-                    <h2 className='monts'>Assigned Sections</h2>
-                    <div className={styles['table-container']}>
-                        <Table>
-                            <TableHeader headers={sectionHeaders} />
-                            <TableSectionBody headers={sectionHeaders} data={formatSections(sections)} />
-                        </Table>
-                    </div>
-                </div>
-            )} */}
         </section>
     );
 }

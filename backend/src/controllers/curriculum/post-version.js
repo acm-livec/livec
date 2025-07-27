@@ -6,8 +6,9 @@ const postVersion = async (req, res) => {
     try {
         logger.start('POST Curriculum Version');
         const { curriculum } = req.params;
-        const { changeSets } = req.body;
-        const version = await addCurriculumVersion(curriculum, changeSets || []);
+        const { section_version, contributing_member, meta, content } = req.body;
+        const versionData = { section_version, contributing_member, meta, content };
+        const version = await addCurriculumVersion(curriculum, versionData);
         logger.success('curriculum.version.created');
         return res.status(201).json({ success: true, version });
     } catch (error) {

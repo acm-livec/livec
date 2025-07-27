@@ -1,8 +1,7 @@
-import React from 'react';
 import { FlexColumn } from '@components/layouts/flex';
 
 export default function CurriculumDetailsSkeleton({ message }) {
-    const placeholderItems = Array.from({ length: 6 });
+    const placeholderItems = Array.from({ length: 15 });
     return (
         <div className="details-page">
             <aside className="toc-sidebar space-y-2 animate-pulse">
@@ -17,7 +16,7 @@ export default function CurriculumDetailsSkeleton({ message }) {
             </aside>
             <FlexColumn className="pdf-container gap-4 items-center justify-center">
                 {message && (
-                    <p className="text-center text-gray-600">{message}</p>
+                    <h2 className="text-center text-gray-600">{message}</h2>
                 )}
                 <div className="w-11/12 h-6 bg-gray-300 rounded" />
                 <div className="w-11/12 h-96 bg-gray-200 rounded" />
@@ -25,4 +24,3 @@ export default function CurriculumDetailsSkeleton({ message }) {
         </div>
     );
 }
-

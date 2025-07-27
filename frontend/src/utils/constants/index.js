@@ -1,7 +1,5 @@
-import statusModule from '../../../../docs/shared/constants/status.js';
-const { Status, statusMap } = statusModule;
 
-export { Status, statusMap };
+export { Status, statusMap } from '@docs/shared/constants/status.js';
 
 export const Actions = Object.freeze({
     DESK_REJECT: 'desk-reject',

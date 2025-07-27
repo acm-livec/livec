@@ -1,20 +1,21 @@
 const { nanoid } = require('nanoid');
-const ChangeSet = require('./change-set.model');
 
 class CurriculumVersion {
     constructor(data = {}) {
         this.id = data.id || nanoid(8);
-        this.version = data.version || 1;
-        this.date = data.date || new Date().toISOString();
-        this.changeSets = (data.changeSets || []).map(cs => new ChangeSet(cs).toObject());
+        this.section_version = data.section_version || '';
+        this.contributing_member = data.contributing_member || '';
+        this.meta = data.meta || {};
+        this.content = Array.isArray(data.content) ? data.content : [];
     }
 
     toObject() {
         return {
             id: this.id,
-            version: this.version,
-            date: this.date,
-            changeSets: this.changeSets
+            section_version: this.section_version,
+            contributing_member: this.contributing_member,
+            meta: this.meta,
+            content: this.content
         };
     }
 }

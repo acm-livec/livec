@@ -1,4 +1,4 @@
-import { flattenSections } from '../../../docs/shared/utils/flatten.js';
+// import { flattenSections } from '@docs/shared/utils/flatten.js';
 
 /**
  * Helper function to convert from `kebab-case` to `Title Case`
@@ -52,4 +52,4 @@ export const formatDate = (date) => {
     }).format(new Date(date));
 };
 
-export { flattenSections };
+// export { flattenSections };

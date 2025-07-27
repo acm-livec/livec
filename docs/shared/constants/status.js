@@ -1,4 +1,4 @@
-const Status = Object.freeze({
+export const Status = Object.freeze({
     Public: {
         SUBMITTED: 'submitted',
         REJECTED: 'rejected',
@@ -48,7 +48,7 @@ const Status = Object.freeze({
     }
 });
 
-const statusMap = {
+export const statusMap = {
     [Status.Public.SUBMITTED]: 'status--neutral',
     [Status.Public.REJECTED]: 'status--error',
     [Status.Public.ASSIGNED]: 'status--info',
@@ -88,4 +88,3 @@ const statusMap = {
     [Status.System.RESOLVED]: 'status--success'
 };
 
-module.exports = { Status, statusMap };

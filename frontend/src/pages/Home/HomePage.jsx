@@ -1,9 +1,6 @@
-import './style.css';
-
 import { useState } from 'react';
 import { API } from '@api/client';
-import './style.css';
-
+import { Button } from '@components/buttons';
 export default function HomePage() {
     const [loading, setLoading] = useState(false);
 
@@ -27,13 +24,9 @@ export default function HomePage() {
 
     return (
         <section className="home">
-            <button
-                className="reset-button"
-                onClick={handleReset}
-                disabled={loading}
-            >
+            <Button onClick={handleReset} disableOn={loading}>
                 {loading ? 'Resetting…' : 'Reset Database'}
-            </button>
+            </Button>
         </section>
     );
 }

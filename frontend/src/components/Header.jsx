@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { UserContext } from '@context/UserProvider';
 import { Link, useNavigate } from 'react-router-dom';
 
-import acmLogo from '@assets/acm.png';
+import acmLogo from '/acm.png';
 
 export default function Header() {
     const { user } = useContext(UserContext);
@@ -17,7 +17,7 @@ export default function Header() {
                     <img className="logo__img " src={acmLogo}></img>
                 </div>
                 <h1 className="site-name  text-2xl font-medium font-monts">
-                    LiveC
+                    LiveC Demo
                 </h1>
             </div>
 

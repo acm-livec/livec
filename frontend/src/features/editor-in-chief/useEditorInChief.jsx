@@ -114,10 +114,10 @@ export default function useEditorInChief() {
         }
     };
 
-    const publishVersion = async (changeSets) => {
+    const publishVersion = async (versionData) => {
         try {
             log.startProcess('Publish Version');
-            await postVersion(user.discipline, changeSets);
+            await postVersion(user.discipline, versionData);
             log.success('Version published');
         } catch (error) {
             log.error(error);

@@ -17,19 +17,19 @@ export const PublicStatus = Object.freeze({
     /** Suggestion is under Associate Editor/Reviewer review. */
     UNDER_REVIEW: 'under-review',
 
-    /** Under final consideration. */
+    /** Suggestion was accepted by Editor in Chief. */
     UNDER_CONSIDERATION: 'under-consideration',
 
-    /** Under Editor-in-Chief review. */
-    FINAL_DECISION: 'final-decision',
+    /** Under Final Discussion by the Ed Board */
+    UNDER_DISCUSSION: 'under-discussion',
 
     /** Suggestion has been accepted for inclusion. */
     ACCEPTED: 'accepted',
 
-    /** Suggestion has been implemented or published. */
+    /** Suggestion has been implemented or published (final stage). */
     IMPLEMENTED: 'implemented',
 
-    /** Suggestion was . */
+    /** Suggestion was declined after final discussion with Ed Board. */
     DECLINED: 'declined',
 
 });
@@ -45,11 +45,26 @@ export const PublicStatus = Object.freeze({
  * @enum {string}
  */
 export const PrivateStatusAssociateEditor = Object.freeze({
-    AWAITING_INITIAL_RESPONSE: 'awaiting-initial-response',
+    /** Suggestion was put in Associate Editor queue */
+    NEW: 'new',
+
+    /** Associate Editor started review of suggestion during triage stage */
     REVIEWING: 'reviewing',
-    REVIEW_ASSIGNED: 'review-assigned',
+
+    /** Associate Editor deferred suggestion to a review during triage stage */
+    DEFERRED: 'deferred',
+
+
+    /** */
+
+
+    /** Associate Editor finalized suggestion for EIC to review */
     FINALIZED: 'finalized',
+
+    /** Suggestion was approved by EIC */
     APPROVED: 'approved',
+
+    /** Change request sent by EIC */
     CHANGE_REQUEST: 'change-request',
 });
 
@@ -67,15 +82,19 @@ export const PrivateStatusReviewer = Object.freeze({
 
 
 /**
- * Private statuses used by Reviewers.
+ * Private statuses used by Editors in Chief.
  * @readonly
  * @enum {string}
  */
 export const PrivateEditorInChief = Object.freeze({
-    AWAITING_REVIEWER: 'awaiting-reviewer',
-    REVIEW_IN_PROGRESS: 'review-in-progress',
-    AWAITING_FEEDBACK: 'awaiting-feedback',
+    /** EIC approved finalized Associate Editor suggestion*/
+    READY_FOR_DISCUSSION: 'ready-for-discussion',
+
+    /** EIC waiting for change request from Associate Editor*/
     AWAITING_CHANGE_REQUEST: 'awaiting-change-request',
+
+    /** EIC started final Ed Board Discussusion*/
+    STARTED_DISCUSSION: 'started-discussion'
 });
 
 /**
@@ -105,15 +124,20 @@ export const PrivateStatus = Object.freeze({
  * @enum {string}
  */
 export const SystemStatus = Object.freeze({
-    NEW: 'new',
-    ACTIVE: 'active',
+    /**Suggestion was first submitted by Community Member */
+    RECIEVED: 'new',
+
+    /**Suggestion was first submitted but no Associate Editors were found*/
+
     UNASSIGNED: 'unassigned',
     PENDING: 'pending',
     ELEVATED: 'elevated',
     SUSPENDED: 'suspended',
     INACTIVE: 'inactive',
+    /** Suggestion closed after being rejected, declined, or implemented */
     CLOSED: 'closed',
     AWAITING_FINAL_DECISION: 'awaiting-final-decision',
+    /** Suggestion closed after being rejected, declined, or implemented */
     ARCHIVED: 'archived',
     DEFERRED: 'deferred',
     ON_HOLD: 'on-hold',
