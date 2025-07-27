@@ -271,7 +271,6 @@ import { Status } from '@docs/constants/status';
 
 const SectionView = ({ suggestion, text, id, role, rev }) => {
     const { currentView, setView } = useView('current');
-    console.log(suggestion);
     const isAe = role === Roles.ASSOCIATE_EDITOR;
     return (
         <SubGrid columns={3} rows={10} style={{ padding: 0 }}>

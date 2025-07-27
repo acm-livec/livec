@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
-
-const log = logger.create('postSuggestion.js');
+import { apiLog as log } from '../apiLogger';
 /**
  * Sends a change request for a suggestion.
  *

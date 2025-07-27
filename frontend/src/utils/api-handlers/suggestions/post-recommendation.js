@@ -1,7 +1,5 @@
 import { API } from '@api/client.js';
-import { logger } from '@utils/logger';
-
-const log = logger.create('postSuggestion.js');
+import { apiLog as log } from '../apiLogger';
 
 export const postRecommednation = async (
     suggestionId,
@@ -15,6 +13,6 @@ export const postRecommednation = async (
             notes,
         });
     } catch (error) {
-        logger.error(error);
+        log.error(error);
     }
 };

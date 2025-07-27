@@ -6,8 +6,6 @@ import {
     postDiscussion,
 } from '@utils/api-handlers/suggestions';
 import { UserContext } from '@context/UserProvider';
-import { logger } from '@utils/logger';
-const log = logger.create('useEditorInChief.js');
 import { EditorInChiefActions } from '@docs/constants/actions';
 import { postVersion } from '@utils/api-handlers/curriculums/post-version';
 
@@ -30,20 +28,15 @@ export default function useEditorInChief() {
      */
     const approveSuggestion = async (suggestionId, formData) => {
         try {
-            log.startProcess('Approve Suggestion');
             const { forPrivate, forPublic } = formData;
-            log.debug({ suggestionId, editorInChiefId, forPrivate, forPublic });
             await postEditorInChiefApproval(
                 suggestionId,
                 editorInChiefId,
                 forPrivate,
                 forPublic
             );
-            log.success('Suggestion approved:', { suggestionId });
         } catch (error) {
-            log.error(error);
-        } finally {
-            log.endProcess();
+            // ignore
         }
     };
 
@@ -59,17 +52,10 @@ export default function useEditorInChief() {
      */
     const sendChangeRequest = async (suggestionId, formData) => {
         try {
-            log.startProcess('Send Change Request');
             const { forPrivate } = formData;
-            log.debug({ suggestionId, editorInChiefId, forPrivate });
             await postChangeRequest(suggestionId, editorInChiefId, forPrivate);
-            log.success('Change request sent for suggestion:', {
-                suggestionId,
-            });
         } catch (error) {
-            log.error(error);
-        } finally {
-            log.endProcess();
+            // ignore
         }
     };
 
@@ -86,43 +72,31 @@ export default function useEditorInChief() {
      */
     const reject = async (suggestionId, { forPrivate, forPublic }) => {
         try {
-            log.startProcess('Reject Suggestion');
-            log.debug({ suggestionId, editorInChiefId, forPrivate, forPublic });
             const success = await postRejection(
                 suggestionId,
                 editorInChiefId,
                 forPrivate,
                 forPublic
             );
-            log.success('Suggestion rejected:', { suggestionId, success });
             return success;
         } catch (error) {
-            log.error(error);
             return false;
-        } finally {
-            log.endProcess();
         }
     };
 
     const startDiscussion = async (suggestionId) => {
         try {
-            log.startProcess('Publish Version');
             await postDiscussion(suggestionId, editorInChiefId);
-            log.success('Version published');
         } catch (error) {
-            log.error(error);
+            // ignore
         }
     };
 
     const publishVersion = async (versionData) => {
         try {
-            log.startProcess('Publish Version');
-            await postVersion(user.discipline, versionData);
-            log.success('Version published');
+            await postVersion(user.discipline, changeSets);
         } catch (error) {
-            log.error(error);
-        } finally {
-            log.endProcess();
+            // ignore
         }
     };
 
