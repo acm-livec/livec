@@ -14,7 +14,7 @@ const log = logger.create('postDiscussion.js');
  */
 export const postDiscussion = async (id, eicId,) => {
     try {
-        console.log(id, eicId);
+        log.debug('Start discussion', id, eicId);
         await API.post(`/suggestion/${id}/start-discussion`, { eicId });
     } catch (error) {
         log.error(error);

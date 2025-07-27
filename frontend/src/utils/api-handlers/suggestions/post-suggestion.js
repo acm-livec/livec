@@ -25,7 +25,7 @@ export const postSuggestion = async (
     sectionId
 ) => {
     try {
-        console.log({
+        log.debug('Submitting suggestion', {
             userId,
             title,
             suggestion,
