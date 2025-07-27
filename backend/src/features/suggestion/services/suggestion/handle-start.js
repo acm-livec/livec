@@ -1,0 +1,42 @@
+const { AppError } = require('@shared/errors');
+const Suggestions = require('@features/suggestion/models/suggestions.model.js')
+
+const logger = require('@logger').addSource({
+    file: 'suggestion.service',
+    method: "handleStartSuggestionReviewProcess",
+    params: ['suggestionId', 'startedBy', 'notes', 'message']
+});
+
+const handleStartSuggestionReviewProcess = async (suggestionId, startedBy, notes, message) => {
+try {
+
+        logger.debug("suggestion.start_review.db.searching", { suggestionId })
+
+        const suggestionToStartReview = await Suggestions.findById(suggestionId)
+
+        if (!suggestionToStartReview) {
+            throw new SuggestionNotFoundError
+        }
+        logger.debug("suggestion.start_review.db.found")
+
+        logger.debug("suggestion.start_review.starting")
+        const startId = suggestionToStartReview.startReview(startedBy, notes, message)
+        await Suggestions.update(suggestionToStartReview)
+        logger.debug("suggestion.start_review.started")
+
+        return startId
+
+    } catch (error) {
+
+        if (!(error instanceof AppError)) {
+            logger.error(error.stack)
+        } else {
+            logger.warn(error.message, { err: error.errorCode })
+        }
+
+        throw error
+    }
+}
+
+
+module.exports = handleStartSuggestionReviewProcess
