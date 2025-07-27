@@ -2,15 +2,13 @@ const { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } = requ
 const { Roles } = require('@utils/constants')
 const Suggestions = require('@models/suggestion/suggestions.model.js')
 const Curriculums = require('@models/curriculum/curriculums.model.js')
+const kebabToCamel = require('@utils/kebabToCamel')
 const logger = require('@logger').addSource({
     file: 'auth.service',
     method: "assignAssociateEditorToSuggestion",
     params: ['suggestion']
 });
 
-function kebabToCamel(str) {
-    return str.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
-}
 
 const getSuggestionById = async (suggestionId, role = null) => {
     try {

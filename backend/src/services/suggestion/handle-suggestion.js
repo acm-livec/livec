@@ -1,6 +1,7 @@
 const { AppError, SuggestionNotFoundError } = require('@errors');
 const Suggestions = require('@models/suggestion/suggestions.model.js')
 const Curriculums = require('@models/curriculum/curriculums.model.js')
+const kebabToCamel = require('@utils/kebabToCamel')
 
 const linkCommunityMemberToSuggestion = require('./link-user')
 const assignAssociateEditorToSuggestion = require('./assign-editor')
@@ -46,9 +47,6 @@ const handleNewSuggestion = async (userId, title, text, discipline, sectionId) =
     }
 }
 
-function kebabToCamel(str) {
-    return str.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
-}
 
 const addToCurriculum = async (suggestionId, sectionId, discipline) => {
     try {

@@ -1,8 +1,5 @@
 const Curriculums = require('@models/curriculum/curriculums.model.js');
-
-function kebabToCamel(str) {
-    return str.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
-}
+const kebabToCamel = require('@utils/kebabToCamel');
 
 const updateCurriculumSection = async (curriculum, section) => {
     const curr = await Curriculums.findByCurriculum(kebabToCamel(curriculum));
