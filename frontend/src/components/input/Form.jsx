@@ -1,5 +1,7 @@
 import React, { useContext, createContext, useEffect } from 'react';
 
+const EMPTY_ARRAY = [];
+
 import styles from './inputs.module.scss';
 import { Button } from '../buttons';
 import useForm from '@hooks/useForm';
@@ -23,7 +25,7 @@ Form.propTypes = {
 export default function Form({
     children,
     defaultValues = {},
-    resetOn = [],
+    resetOn,
     className = '',
     onSubmit,
     showConfirmation,
@@ -37,8 +39,10 @@ export default function Form({
     );
 
     useEffect(() => {
-        resetForm();
-    }, resetOn);
+        if (Array.isArray(resetOn)) {
+            resetForm();
+        }
+    }, resetOn || EMPTY_ARRAY);
 
     return (
         <FormContext.Provider value={{ formData, onFormChange, resetForm }}>
