@@ -27,7 +27,9 @@ const Actions = Object.freeze({
     APPROVED_BY_EDITOR_IN_CHIEF: 'approved-by-editor-in-chief',
     CHANGE_REQUEST_BY_EDITOR_IN_CHIEF: 'change-request-by-editor-in-chief',
     REJECTED_BY_EDITOR_IN_CHIEF: 'rejected-by-editor-in-chief',
-    STARTED_FINAL_DISCUSSION: 'started-final-discussion'
+    STARTED_FINAL_DISCUSSION: 'started-final-discussion',
+    ACCEPTED_BY_BOARD: 'accepted-by-board',
+    DECLINED_BY_BOARD: 'declined-by-board'
 })
 
 

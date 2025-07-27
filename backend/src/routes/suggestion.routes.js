@@ -4,7 +4,7 @@ const {
     postSuggestion, postRejection, getSuggestion,
     postStartReview, postAssignReviewers, postDocumentation,
     postAssociateEditorFinalization, postEditorInChiefApproval,
-    postChangeRequest, postDeferral, postRecommednation, postDiscussion
+    postChangeRequest, postDeferral, postRecommednation, postDiscussion, postImplementation
 } = require('@controllers/suggestion/');
 
 const router = express.Router();
@@ -31,6 +31,7 @@ router.post('/:id/assign-reviewers', postAssignReviewers);
 
 router.post('/:id/post-recommendation', postRecommednation);
 router.post('/:id/start-discussion', postDiscussion);
+router.post('/:id/implement', postImplementation);
 
 
 

@@ -12,7 +12,7 @@ import { BackButton, Button } from '@components/buttons';
 import styles from '../suggestion/SuggestionView.module.scss';
 import { FlexColumn, FlexRow, Container } from '@components/layouts/flex';
 import Page from '@features/details/Page';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import io from 'socket.io-client';
 
 export default function FinalView({ suggestion, user }) {
@@ -120,6 +120,7 @@ const SuggestionContent = ({ suggestion, user }) => {
         // setStatusCounts(counts);
     };
     const socket = io('http://localhost:3000');
+    const [current, setCurrent] = useState(suggestion);
     const [votes, setVotes] = useState(handleVotes(suggestion?.finalDecisions));
     const options = [
         { label: 'Include', value: 'include' },
@@ -128,6 +129,7 @@ const SuggestionContent = ({ suggestion, user }) => {
 
     useEffect(() => {
         socket.on('update', (newVotes) => {
+            setCurrent(newVotes);
             setVotes(handleVotes(newVotes?.finalDecisions));
         });
 
@@ -149,20 +151,24 @@ const SuggestionContent = ({ suggestion, user }) => {
                 <h3>Exclude: {votes.exclude}</h3>
                 <h3>Include: {votes.include}</h3>
                 <h3>Undecided: {votes.pending}</h3>
-                {!suggestion?.voted && (
+                {!current?.voted && (
                     <Form
                         //  showConfirmation={{
                         //      defaultInfo: <RecModal />,
                         //      successInfo: <></>,
                         //  }}
                         onSubmit={(formData) =>
-                            handleVote(suggestion.id, formData)
+                            handleVote(current.id, formData)
                         }
                     >
                         <RadioAsCheckbox keyName="decision" options={options} />
                         <TextArea keyName="notes" label="Notes" />
                     </Form>
                 )}
+                {current?.status?.for_member === Status.Public.ACCEPTED &&
+                    user.isEditorInChief && (
+                        <ImplementationForm suggestion={current} />
+                    )}
             </SideContent>
         </SubGrid>
     );
@@ -174,6 +180,8 @@ import useView from '@hooks/useView';
 import { Form, RadioAsCheckbox, TextArea } from '@components/input';
 import useReviewer from '@features/reviewer/useReviewer';
 import Documentation from '@features/document/Documentation';
+import { postImplementation } from '@utils/api-handlers/suggestions';
+import { UserContext } from '@context/UserProvider';
 const SectionView = ({ suggestion, rev }) => {
     const { currentView, setView } = useView('current');
     return (
@@ -201,5 +209,29 @@ const SectionView = ({ suggestion, rev }) => {
 
             <Container colSpan={1} rowSpan={9}></Container>
         </SubGrid>
+    );
+};
+
+const ImplementationForm = ({ suggestion }) => {
+    const { user } = useContext(UserContext);
+    const [done, setDone] = useState(false);
+
+    if (done) return <p>Update sent.</p>;
+
+    return (
+        <Form
+            onSubmit={async (data) => {
+                await postImplementation(
+                    suggestion.id,
+                    user.id,
+                    data.forPrivate,
+                    data.forPublic
+                );
+                setDone(true);
+            }}
+        >
+            <TextArea keyName="forPrivate" label="Message to submitter" />
+            <TextArea keyName="forPublic" label="Public update" />
+        </Form>
     );
 };

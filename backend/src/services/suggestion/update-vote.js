@@ -1,8 +1,6 @@
-const { AppError, SuggestionNotFoundError, NoUserWithIdError } = require('@errors');
+const { AppError, SuggestionNotFoundError } = require('@errors');
 const Suggestions = require('@models/suggestion/suggestions.model.js')
-// import Suggestions from '@models/suggestion/suggestions.model.js';
-const EditorsInChief = require('@models/users/editor-in-chief/chiefs.model');
-const { child } = require('winston');
+const { updateCurriculumSection } = require('@services/curriculum');
 
 const logger = require('@logger').addSource({
     file: 'suggestion.service',
@@ -33,7 +31,22 @@ const updateVote = async ({ id, userId, formData }) => {
             }
         ]
 
-        suggestionToVoteOn.updateVote(userId, decision, content)
+        if (suggestionToVoteOn.didVote(userId)) {
+            logger.debug('suggestion.already.voted')
+        } else {
+            suggestionToVoteOn.updateVote(userId, decision, content)
+
+            const result = suggestionToVoteOn.finalizeIfComplete()
+            if (result === 'accepted') {
+                await updateCurriculumSection(
+                    suggestionToVoteOn.discipline,
+                    {
+                        id: suggestionToVoteOn.section_id,
+                        content: suggestionToVoteOn.revised_section,
+                    }
+                )
+            }
+        }
 
         const ups = await Suggestions.update(suggestionToVoteOn)
         const didVote = ups.didVote(userId)
