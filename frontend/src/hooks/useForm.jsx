@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * @typedef {Object} FormHook
@@ -17,16 +17,60 @@ import { useState } from 'react';
  * const { formData, onFormChange, resetForm } = useForm({ name: '', email: '' });
  */
 
-export default function useForm(defaultData = {}) {
+export default function useForm(defaultData = {}, fields = {}) {
     const [formData, setFormData] = useState(defaultData);
+    const [errors, setErrors] = useState({});
+    const [canSubmit, setCanSubmit] = useState(false);
+
+    const validateField = (field, value) => {
+        const cfg = fields[field] || {};
+
+        if (cfg.required && value.toString().trim() === '') {
+            return 'Required';
+        }
+
+        if (
+            typeof cfg.maxLength === 'number' &&
+            value.toString().length > cfg.maxLength
+        ) {
+            return `Max ${cfg.maxLength} chars`;
+        }
+
+        if (typeof cfg.validate === 'function') {
+            return cfg.validate(value) || '';
+        }
+
+        return '';
+    };
+
+    const runValidation = (data) => {
+        const newErrors = {};
+        for (const key of Object.keys(fields)) {
+            const err = validateField(key, data[key] ?? '');
+            if (err) newErrors[key] = err;
+        }
+        setErrors(newErrors);
+        setCanSubmit(Object.keys(newErrors).length === 0);
+    };
 
     const onFormChange = (field, value) => {
-        setFormData((prev) => ({ ...prev, [field]: value }));
+        setFormData((prev) => {
+            const updated = { ...prev, [field]: value };
+            runValidation(updated);
+            return updated;
+        });
     };
 
     const resetForm = () => {
         setFormData({ ...defaultData });
+        setErrors({});
+        setCanSubmit(false);
     };
 
-    return { formData, onFormChange, resetForm };
+    useEffect(() => {
+        runValidation(formData);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    return { formData, errors, canSubmit, onFormChange, resetForm };
 }

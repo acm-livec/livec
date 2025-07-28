@@ -6,7 +6,7 @@ import styles from './inputs.module.scss';
 import { Button } from '../buttons';
 import useForm from '@hooks/useForm';
 import clsx from 'clsx';
-import { buildDefaultValues } from '@utils/helpers';
+import { buildDefaultValues, buildValidationRules } from '@utils/helpers';
 import useConfirmationBox from './useConfirmationBox';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
@@ -31,8 +31,12 @@ export default function Form({
     showConfirmation,
 }) {
     const builtDefaults = buildDefaultValues(children);
+    const rules = buildValidationRules(children);
     const mergedDefaults = { ...builtDefaults, ...defaultValues };
-    const { formData, onFormChange, resetForm } = useForm(mergedDefaults);
+    const { formData, onFormChange, resetForm, canSubmit, errors } = useForm(
+        mergedDefaults,
+        rules
+    );
 
     const { showing, view, open, close, submit } = useConfirmationBox(() =>
         onSubmit(formData)
@@ -45,15 +49,21 @@ export default function Form({
     }, resetOn || EMPTY_ARRAY);
 
     return (
-        <FormContext.Provider value={{ formData, onFormChange, resetForm }}>
+        <FormContext.Provider
+            value={{ formData, onFormChange, resetForm, canSubmit, errors }}
+        >
             <form className={clsx(styles.form, className)}>
                 {children}
 
                 {!showConfirmation ? (
-                    <Button onClick={() => onSubmit(formData)} text="Submit" />
+                    <Button
+                        disableOn={!canSubmit}
+                        onClick={() => onSubmit(formData)}
+                        text="Submit"
+                    />
                 ) : (
                     <>
-                        <Button onClick={open} text="Submit" />
+                        <Button disableOn={!canSubmit} onClick={open} text="Submit" />
                         <ConfirmationBox showing={showing} view={view}>
                             <Default close={close} submit={submit}>
                                 {showConfirmation.defaultInfo}
