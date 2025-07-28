@@ -50,5 +50,58 @@
         "meta": {}
       }
     ]
+  },
+  {
+    "id": "SCOSC-dQniBll0",
+    "title": "d",
+    "text": "d",
+    "suggestion": "d",
+    "type": "",
+    "submitter_id": "CM-6482",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-28T05:30:16.801Z",
+    "status": {
+      "for_member": "queued",
+      "for_associate_editor": "new",
+      "for_editor_in_chief": "",
+      "system": "preliminary-review"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0002",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "final_decisions": [],
+    "revised_section": "",
+    "public_updates": [
+      {
+        "refId": "DOC-FWFTd0Bh",
+        "status": "submitted",
+        "date": "2025-07-28T05:30:16.801Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-VElZ2VPA",
+        "status": "queued",
+        "author": "LiveC",
+        "date": "2025-07-28T05:30:16.811Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      }
+    ],
+    "documentation": [],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-6482",
+        "date": "2025-07-28T05:30:16.801Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-28T05:30:16.811Z",
+        "meta": {}
+      }
+    ]
   }
 ]
