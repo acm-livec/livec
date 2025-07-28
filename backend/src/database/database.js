@@ -81,6 +81,11 @@ const db = {
                 'data/curriculums/computer-science/page_content.json',
                 'data/curriculums/computer-science/default/page_content.json',
                 { forceReset: reset }
+            ),
+            curriculumVersions: createDB(
+                'data/curriculums/computer-science/versions.json',
+                'data/curriculums/computer-science/default/versions.json',
+                { forceReset: reset }
             )
         },
         cybersecurity: {
@@ -93,22 +98,16 @@ const db = {
                 'data/curriculums/cybersecurity/page_content.json',
                 'data/curriculums/cybersecurity/default/page_content.json',
                 { forceReset: reset }
+            ),
+            curriculumVersions: createDB(
+                'data/curriculums/cybersecurity/versions.json',
+                'data/curriculums/cybersecurity/default/versions.json',
+                { forceReset: reset }
             )
-        }
-    },
-    curriculumVersions: {
-        computerScience: createDB(
-            'data/curriculums/computer-science/versions.json',
-            'data/curriculums/computer-science/default/versions.json',
-            { forceReset: reset }
-        ),
-        cybersecurity: createDB(
-            'data/curriculums/cybersecurity/versions.json',
-            'data/curriculums/cybersecurity/default/versions.json',
-            { forceReset: reset }
-        )
+        },
+
     }
-};
+}
 async function resetAll() {
     await Promise.all([
         db.users.communityMembers.reset(),

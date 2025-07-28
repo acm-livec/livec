@@ -1,12 +1,11 @@
 const db = require('@database/database');
 const CurriculumVersion = require('./curriculum-version.model');
-
 class CurriculumVersions {
-    static dbRef = db.curriculumVersions;
+    static dbRef = db.curriculums;
 
     static async getAll(curriculum) {
-        await this.dbRef[curriculum].read();
-        return this.dbRef[curriculum].data.map(v => new CurriculumVersion(v));
+        await this.dbRef[curriculum].curriculumVersions.read();
+        return this.dbRef[curriculum].curriculumVersions.data.map(v => new CurriculumVersion(v));
     }
 
     /**
@@ -21,8 +20,8 @@ class CurriculumVersions {
      * @returns {Promise<CurriculumVersion|null>} the version instance if found
      */
     static async getById(curriculum, id) {
-        await this.dbRef[curriculum].read();
-        let found = this.dbRef[curriculum].data.find(v => v.id === id);
+        await this.dbRef[curriculum].curriculumVersions.read();
+        let found = this.dbRef[curriculum].curriculumVersions.data.find(v => v.id === id);
 
         if (!found) {
             const tocRef = db.curriculums?.[curriculum]?.tableOfContents;

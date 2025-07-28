@@ -1,6 +1,5 @@
-const { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } = require('@shared/errors');
-const { Roles } = require('@docs/constants/roles.js')
-const AssociateEditors = require('@features/users/models/users/associate-editor/editors.model.js')
+const { AppError, SuggestionNotFoundError } = require('@shared/errors');
+
 const Suggestions = require('@features/suggestion/models/suggestions.model.js')
 const Curriculums = require('@features/curriculum/models/curriculums.model.js')
 const kebabToCamel = require('@shared/utils/kebabToCamel')
@@ -17,11 +16,10 @@ const logger = require('@logger').addSource({
 const getFullCurriculum = async (curriculum) => {
     try {
 
-        logger.debug("curriculum.get.db.searching")
 
         curriculum = kebabToCamel(curriculum)
 
-        logger.debug("curriculum.get.db.searching", { curriculum })
+        logger.debug("curriculum.get.db.searching")
 
 
         let requestedCurriculum = await Curriculums.findByCurriculum(curriculum)
@@ -30,13 +28,19 @@ const getFullCurriculum = async (curriculum) => {
             throw new SuggestionNotFoundError
         }
 
+        logger.debug("curriculum.get.db.found")
+
+        logger.debug("curriculum.get.all-sections.started")
 
         const allSections = await requestedCurriculum.returnAll()
+
+        logger.debug("curriculum.get.all-sections.done", { numSections: allSections.length })
+
+        logger.debug("curriculum.get.build-sections.started")
 
         const builtSections = await Promise.all(
             allSections.map(async item => {
                 if (item.hasOwnProperty('public_feedback')) {
-                    console.log("yes")
                     return {
                         ...item,
                         public_feedback: await Suggestions.getBySectionId(item.id)
@@ -48,6 +52,9 @@ const getFullCurriculum = async (curriculum) => {
                 };
             })
         );
+
+        logger.debug("curriculum.get.build-sections.done")
+
 
         return builtSections
 

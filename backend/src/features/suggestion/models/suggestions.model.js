@@ -55,7 +55,6 @@ class Suggestions {
         const entries = this.dbRef.data.
             filter(s => s.section_id === id)
             .map(s => new Suggestion(s).toPublic())
-        console.log(entries)
         return entries || []
     }
 

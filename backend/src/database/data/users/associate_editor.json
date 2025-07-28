@@ -12,7 +12,15 @@
       "R-7562",
       "R-F35G"
     ],
-    "assignedSuggestions": []
+    "assignedSuggestions": [
+      "SCOSC-qoGVNSRB"
+    ],
+    "report": [
+      {
+        "suggestionId": "SCOSC-qoGVNSRB",
+        "decision": "pending"
+      }
+    ]
   },
   {
     "id": "AE-0002",
@@ -23,6 +31,12 @@
     "discipline": "cybersecurity",
     "assignedEditorInChief": "EIC-0001",
     "assignedReviewers": [],
-    "assignedSuggestions": []
+    "assignedSuggestions": [],
+    "report": [
+      {
+        "suggestionId": "SCOSC-qoGVNSRB",
+        "decision": "pending"
+      }
+    ]
   }
 ]

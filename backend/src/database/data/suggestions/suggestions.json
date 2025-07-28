@@ -1,1 +1,278 @@
-[]
+[
+  {
+    "id": "SCOSC-qoGVNSRB",
+    "title": "test",
+    "text": "test",
+    "suggestion": "test",
+    "submitter_id": "CM-6482",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-27T23:29:00.911Z",
+    "status": {
+      "for_member": "accepted",
+      "for_associate_editor": "completed",
+      "for_editor_in_chief": "accepted-unanimously",
+      "system": "ready-for-implementation"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "final_decisions": [
+      {
+        "board_member_id": "EIC-0001",
+        "final_decision": "include"
+      },
+      {
+        "board_member_id": "AE-0001",
+        "final_decision": "include"
+      },
+      {
+        "board_member_id": "AE-0002",
+        "final_decision": "include"
+      }
+    ],
+    "revised_section": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "CS2023 is the latest version of computer science curricular guidelines, produced by a joint task force of the ACM, IEEE Computer Society, and AAAI. The following is a summary of significant issues of the day and how they have been addressed in CS2023 curricular guidelines:"
+          }
+        ],
+        "id": "8i0hFPq6Hb"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The discipline continues to evolve. The Body of Knowledge consisting of seventeen knowledge areas has been revised and updated."
+          }
+        ],
+        "id": "3wBhuFEXbM"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The discipline continues to grow. Topics that every graduate must know have been circumscribed as CS Core and kept to a minimum. Topics recommended for in-depth study have been labeled KA Core."
+          }
+        ],
+        "listStart": 2,
+        "id": "VFsp6ptB8I"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "It is increasingly difficult for programs to be all things to all people. Programs can now select the knowledge areas on which to focus. The knowledge areas, when coherently chosen, define the competency area(s) of the program."
+          }
+        ],
+        "listStart": 3,
+        "id": "u2EbBjwlnK"
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": ""
+          }
+        ],
+        "id": "mpHY5Zrn1T"
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "The curricular guidelines build towards the Characteristics of Graduates enumerated in the report and take into consideration the Challenges and Opportunities for Computer Science Education identified in the report. The guidelines have been supplemented with articles on Pedagogical Considerations and Curricular Practices ."
+          }
+        ],
+        "id": "6AUBfkqz8j"
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "The process used by the CS2023 task force has been collaborative (over ninety task force members), international (six continents), data-driven (five large- and over seventy small-scale surveys) and transparent ( csed.acm.org ). Community engagement included numerous conference panels and presentations along with regular postings to over a dozen ACM Special Interest Group (SIG) mailing lists and the full membership of AAAI. The iterative process has included at least two review and revision cycles for most of the knowledge areas. The resulting curricular guidelines are the culmination of three years of effort using the outlined Principles and Processes ."
+          }
+        ],
+        "id": "6rmiZoZvvc"
+      }
+    ],
+    "public_updates": [
+      {
+        "refId": "DOC-sUdHBAhm",
+        "status": "submitted",
+        "date": "2025-07-27T23:29:00.911Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-TzGPxrXq",
+        "status": "queued",
+        "author": "LiveC",
+        "date": "2025-07-27T23:29:00.949Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-ZLyNK9NF",
+        "status": "under-review",
+        "author": "AE-0001",
+        "date": "2025-07-27T23:29:10.321Z",
+        "message": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "we"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "refId": "DOC-s79zaAyV",
+        "status": "under-review",
+        "author": "LiveC",
+        "date": "2025-07-27T23:29:25.885Z",
+        "message": "Your suggestion is now under review by the Editor In Chief"
+      },
+      {
+        "refId": "DOC-123e3Eo1",
+        "status": "under-consideration",
+        "author": "EIC-0001",
+        "date": "2025-07-27T23:29:36.057Z",
+        "message": "l"
+      },
+      {
+        "refId": "DOC-HNuTfkdO",
+        "status": "under-discussion",
+        "author": "LiveC",
+        "date": "2025-07-27T23:35:18.123Z",
+        "message": "Your suggestion is currently now under discussion by the Editorial Board for a final decision!"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "start-review",
+        "refId": "DOC-zkKGVzhn",
+        "author": "AE-0001",
+        "date": "2025-07-27T23:29:10.320Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "we"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "approved-by-editor-in-chief",
+        "refId": "DOC-TPj_LVtI",
+        "author": "EIC-0001",
+        "date": "2025-07-27T23:29:36.057Z",
+        "content": "l"
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-BkD3QU_o",
+        "author": "AE-0002",
+        "date": "2025-07-27T23:36:32.830Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-ElNy_bAA",
+        "author": "EIC-0001",
+        "date": "2025-07-27T23:36:55.081Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-Ko2mqEgA",
+        "author": "AE-0001",
+        "date": "2025-07-27T23:36:59.807Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-6482",
+        "date": "2025-07-27T23:29:00.911Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-27T23:29:00.949Z",
+        "meta": {}
+      },
+      {
+        "action": "start-review",
+        "performed_by": "AE-0001",
+        "date": "2025-07-27T23:29:10.320Z",
+        "meta": {}
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-07-27T23:29:25.885Z",
+        "meta": {}
+      },
+      {
+        "action": "approved-by-editor-in-chief",
+        "performed_by": "EIC-0001",
+        "date": "2025-07-27T23:29:36.057Z",
+        "meta": {}
+      },
+      {
+        "action": "started-final-discussion",
+        "performed_by": "EIC-0001",
+        "date": "2025-07-27T23:35:18.123Z",
+        "meta": {}
+      },
+      {
+        "action": "accepted-by-board",
+        "performed_by": "LiveC",
+        "date": "2025-07-27T23:36:59.807Z",
+        "meta": {}
+      }
+    ]
+  }
+]

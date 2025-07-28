@@ -11,7 +11,7 @@ export default function AuthPage() {
     return (
         <section className={styles.container}>
             <FlexColumn padding="5%" className={styles.sidebar}>
-                <p>Community Member</p>
+                {/* <p>Community Member</p>
                 <ul>
                     <li>Email: johndoe@email.com</li>
                     <li>Password: password</li>
@@ -30,7 +30,7 @@ export default function AuthPage() {
                 <ul>
                     <li>Email: bobross@email.com</li>
                     <li>Password: password</li>
-                </ul>
+                </ul> */}
             </FlexColumn>
             <div className={styles['form-area']}>
                 <AuthForm />

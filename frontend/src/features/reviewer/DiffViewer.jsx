@@ -26,11 +26,7 @@ export default function DiffViewer({ original = [], revised = [] }) {
                 <div
                     key={i}
                     style={{
-                        backgroundColor: part.added
-                            ? '#d4ffd4'
-                            : part.removed
-                              ? '#ffd4d4'
-                              : 'transparent',
+                        backgroundColor: part.added ? '#d4ffd4' : part.removed ? '#ffd4d4' : 'transparent',
                     }}
                 >
                     <EditorStatic value={part.value} />

@@ -15,9 +15,11 @@
 }
 
 .form-area {
-    @include flex-center('row');
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
-    padding: 10% 15%;
+    padding: 5% 15%;
 }
 
 .auth-form {
@@ -34,6 +36,7 @@
     }
 
     label {
+        font-size: 1.25rem;
         display: block;
         margin-bottom: 0.5rem;
         color: #666;
