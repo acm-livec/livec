@@ -74,8 +74,11 @@ async function hashID(input) {
 }
 
 
-const generateSectionId = async (curriculum, year, pageNumber, sectionTitle, sectionVersion) => {
-    const input = `${curriculum}:${year}:${pageNumber}:${sectionTitle.trim().toLowerCase()}:${sectionVersion}`;
+const generateSectionId = async ({ curriculum, year_version, page_number, slug, section_version }) => {
+    // Use these values here
+    console.log(curriculum, year_version, page_number, slug, section_version);
+    // Build your ID however you like:
+    const input = `${curriculum}:${year_version}:${page_number}:${slug}:${section_version}`;
     return (await hashID(input)).slice(0, 12); // Short stable ID
 }
 
