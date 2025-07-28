@@ -1,0 +1,9 @@
+[
+  {
+    "id": "AD-0001",
+    "name": "Site Admin",
+    "email": "admin@example.com",
+    "password": "admin",
+    "role": "admin"
+  }
+]

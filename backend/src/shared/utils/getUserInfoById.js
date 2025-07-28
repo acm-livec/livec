@@ -5,6 +5,7 @@ const roleMap = {
     AE: 'associateEditors',
     R: 'reviewers',
     EIC: 'chiefEditors',
+    AD: 'admins',
 };
 
 async function getUserInfoById(id) {

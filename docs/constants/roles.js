@@ -10,5 +10,6 @@ export const Roles = Object.freeze({
     REVIEWER: 'reviewer',
     ASSOCIATE_EDITOR: 'associate-editor',
     EDITOR_IN_CHIEF: 'editor-in-chief',
+    ADMIN: 'admin',
     ACM_ED_BOARD: 'acm-ed-board'
 });
