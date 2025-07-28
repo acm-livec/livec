@@ -3,8 +3,8 @@ const { Roles } = require('../../../../../docs/constants/roles.js')
 const Suggestions = require('../models/suggestions.model.js')
 const Curriculums = require('../../curriculum/models/curriculums.model.js')
 const kebabToCamel = require('../../../shared/utils/kebabToCamel')
-const getUserNameById = require('../../../shared/utils/getUserNameById')
-const getUserInfoById = require('../../../shared/utils/getUserInfoById')
+const { getUserNameById } = require('../../../shared/utils/getUserNameById')
+const { getUserInfoById } = require('../../../shared/utils/getUserInfoById')
 const logger = require('../../../../logger/logger.js').addSource({
     file: 'auth.service',
     method: "assignAssociateEditorToSuggestion",
