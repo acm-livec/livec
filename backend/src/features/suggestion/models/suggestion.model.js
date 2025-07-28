@@ -450,6 +450,8 @@ class Suggestion {
     }
 
     finalizeImplementation(eic, notes = '', message = '') {
+        this._updateStatus(Actions.PUBLISHED_BY_EIC);
+        this.insertHistory(Actions.PUBLISHED_BY_EIC, eic);
         this.insertDocumentation(Actions.PUBLISHED_BY_EIC, eic, notes);
         this.insertPublicMessage(message, eic);
     }
