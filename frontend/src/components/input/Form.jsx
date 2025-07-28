@@ -1,4 +1,5 @@
 import React, { useContext, createContext, useEffect } from 'react';
+import { XIcon } from 'lucide-react';
 
 const EMPTY_ARRAY = [];
 
@@ -22,25 +23,13 @@ Form.propTypes = {
     }),
 };
 
-export default function Form({
-    children,
-    defaultValues = {},
-    resetOn,
-    className = '',
-    onSubmit,
-    showConfirmation,
-}) {
+export default function Form({ children, defaultValues = {}, resetOn, className = '', onSubmit, showConfirmation }) {
     const builtDefaults = buildDefaultValues(children);
     const rules = buildValidationRules(children);
     const mergedDefaults = { ...builtDefaults, ...defaultValues };
-    const { formData, onFormChange, resetForm, canSubmit, errors } = useForm(
-        mergedDefaults,
-        rules
-    );
+    const { formData, onFormChange, resetForm, canSubmit, errors } = useForm(mergedDefaults, rules);
 
-    const { showing, view, open, close, submit } = useConfirmationBox(() =>
-        onSubmit(formData)
-    );
+    const { showing, view, open, close, submit } = useConfirmationBox(() => onSubmit(formData));
 
     useEffect(() => {
         if (Array.isArray(resetOn)) {
@@ -49,18 +38,12 @@ export default function Form({
     }, resetOn || EMPTY_ARRAY);
 
     return (
-        <FormContext.Provider
-            value={{ formData, onFormChange, resetForm, canSubmit, errors }}
-        >
+        <FormContext.Provider value={{ formData, onFormChange, resetForm, canSubmit, errors }}>
             <form className={clsx(styles.form, className)}>
                 {children}
 
                 {!showConfirmation ? (
-                    <Button
-                        disableOn={!canSubmit}
-                        onClick={() => onSubmit(formData)}
-                        text="Submit"
-                    />
+                    <Button disableOn={!canSubmit} onClick={() => onSubmit(formData)} text="Submit" />
                 ) : (
                     <>
                         <Button disableOn={!canSubmit} onClick={open} text="Submit" />
@@ -68,9 +51,7 @@ export default function Form({
                             <Default close={close} submit={submit}>
                                 {showConfirmation.defaultInfo}
                             </Default>
-                            <Success close={close}>
-                                {showConfirmation.successInfo}
-                            </Success>
+                            <Success close={close}>{showConfirmation.successInfo}</Success>
                             <Failure close={close} />
                         </ConfirmationBox>
                     </>
@@ -100,16 +81,10 @@ const Default = ({ children, close, submit }) => {
         <div className={styles['overlay-content']}>
             {children}
             <div className={styles['button-group']}>
-                <button
-                    className={`${styles.button} ${styles['button--cancel']}`}
-                    onClick={close}
-                >
+                <button className={`${styles.button} ${styles['button--cancel']}`} onClick={close}>
                     Cancel
                 </button>
-                <button
-                    className={`${styles.button} ${styles['button--confirm']}`}
-                    onClick={submit}
-                >
+                <button className={`${styles.button} ${styles['button--confirm']}`} onClick={submit}>
                     Confirm
                 </button>
             </div>
@@ -120,15 +95,10 @@ const Default = ({ children, close, submit }) => {
 const Success = ({ children, close }) => {
     return (
         <div className={styles['overlay-content']}>
+            <button className={styles['close-icon']} onClick={close}>
+                <XIcon size={16} />
+            </button>
             {children}
-            <div className={styles['button-group']}>
-                <button
-                    className={`${styles.button} ${styles['button--cancel']}`}
-                    onClick={close}
-                >
-                    Close
-                </button>
-            </div>
         </div>
     );
 };
@@ -138,10 +108,7 @@ const Failure = ({ close }) => {
         <div className={styles['overlay-content']}>
             Error
             <div className={styles['button-group']}>
-                <button
-                    className={`${styles.button} ${styles['button--cancel']}`}
-                    onClick={close}
-                >
+                <button className={`${styles.button} ${styles['button--cancel']}`} onClick={close}>
                     Close
                 </button>
             </div>
