@@ -3,20 +3,14 @@ import { toTitleCase, formatDate } from '@utils/format';
 import styles from './Suggestion.module.scss';
 
 export default function Suggestion({ suggestion }) {
-    const { id, title, status, timeCreated, discipline, section, text } =
-        suggestion;
+    const { id, title, status, timeCreated, discipline, section, text } = suggestion;
 
     return (
         <div className={styles.suggestion}>
             <div className={styles.suggestion__header}>
                 <div>
-                    <h1 className={styles.header__title}>
-                        {' '}
-                        {title || 'Untitled'}{' '}
-                    </h1>
-                    <p className={styles.header__date}>
-                        Submitted on {formatDate(timeCreated)}
-                    </p>
+                    <h1 className={styles.header__title}> {title || 'Untitled'} </h1>
+                    <p className={styles.header__date}>Submitted on {formatDate(timeCreated)}</p>
                     <hr className={styles.header__divider} />
                 </div>
 
@@ -34,7 +28,7 @@ export default function Suggestion({ suggestion }) {
                     </h3>
                     <h3 className={styles['meta-item']}>
                         <strong>Associated Section: </strong>
-                        {section.title}
+                        {section?.title}
                     </h3>
                 </div>
             </div>

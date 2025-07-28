@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { API } from '@api/client';
 import { Button } from '@components/buttons';
-
+import { UserContext } from '@context/UserProvider';
 export default function HomePage() {
     const [loading, setLoading] = useState(false);
-
+    const { user } = useContext(UserContext);
     const handleReset = async () => {
         if (!window.confirm('⚠️ Are you sure you want to reset the database?')) {
             return;
@@ -23,7 +23,12 @@ export default function HomePage() {
 
     return (
         <section>
-            <Button onClick={handleReset} disableOn={loading} text={loading ? 'Resetting…' : 'Reset Database'} />
+            <Button
+                hideOn={!user || user.role !== 'admin'}
+                onClick={handleReset}
+                disableOn={loading}
+                text={loading ? 'Resetting…' : 'Reset Database'}
+            />
         </section>
     );
 }

@@ -1,31 +1,38 @@
 [
   {
-    "id": "SCOSC-bcAWOROO",
-    "title": "Integrating Real-World Search Problem Applications and Ethical Considerations",
-    "text": "Consider adding a subsection under \"Illustrative Learning Outcomes\" or \"Non-core\" content that addresses real-world applications and ethical dimensions of search algorithms. For example: Analyze the use of heuristic search in real-world systems such as GPS navigation, automated scheduling, or resource allocation in cloud computing. This grounds abstract concepts in tangible examples and enhances student engagement. Critically evaluate ethical implications of heuristic-based decision-making in se",
-    "suggestion": "Consider adding a subsection under \"Illustrative Learning Outcomes\" or \"Non-core\" content that addresses real-world applications and ethical dimensions of search algorithms. For example: Analyze the use of heuristic search in real-world systems such as GPS navigation, automated scheduling, or resource allocation in cloud computing. This grounds abstract concepts in tangible examples and enhances student engagement. Critically evaluate ethical implications of heuristic-based decision-making in se",
-    "type": "update-existing-knowledge-area",
-    "submitter_id": "CM-6482",
-    "section_id": "d3b1d0eaf0e4",
-    "time_created": "2025-07-28T08:47:06.236Z",
+    "id": "SCOSC-uWuP1FL4",
+    "title": "test",
+    "text": "test",
+    "suggestion": "test",
+    "type": "include-interdisciplinary-topics",
+    "submitter_id": "CM-0001",
+    "section_id": "2c69234c779d",
+    "time_created": "2025-07-28T11:02:40.285Z",
     "status": {
-      "for_member": "under-consideration",
-      "for_associate_editor": "approved",
-      "for_editor_in_chief": "ready-for-discussion",
-      "system": "awaiting-board-discussion",
-      "for_reviewer": "recommendation-submitted"
+      "for_member": "accepted",
+      "for_associate_editor": "completed",
+      "for_editor_in_chief": "accepted-unanimously",
+      "system": "ready-for-implementation"
     },
     "discipline": "computer-science",
     "assigned_associate_editor": "AE-0001",
     "assigned_editor_in_chief": "EIC-0001",
-    "assigned_reviewers": [
+    "assigned_reviewers": [],
+    "meta": {},
+    "final_decisions": [
       {
-        "id": "R-0001",
-        "recommendation": "exclude"
+        "board_member_id": "EIC-0001",
+        "final_decision": "include"
+      },
+      {
+        "board_member_id": "AE-0001",
+        "final_decision": "include"
+      },
+      {
+        "board_member_id": "AE-0002",
+        "final_decision": "include"
       }
     ],
-    "meta": {},
-    "final_decisions": [],
     "revised_section": [
       {
         "type": "p",
@@ -34,7 +41,7 @@
             "text": "CS2023 is the latest version of computer science curricular guidelines, produced by a joint task force of the ACM, IEEE Computer Society, and AAAI. The following is a summary of significant issues of the day and how they have been addressed in CS2023 curricular guidelines:"
           }
         ],
-        "id": "Qu4LeOqtsY"
+        "id": "6jTguV99MC"
       },
       {
         "type": "p",
@@ -45,7 +52,7 @@
             "text": "The discipline continues to evolve. The Body of Knowledge consisting of seventeen knowledge areas has been revised and updated."
           }
         ],
-        "id": "QizJKvIDHk"
+        "id": "T9xwlRM0Hf"
       },
       {
         "type": "p",
@@ -57,7 +64,7 @@
           }
         ],
         "listStart": 2,
-        "id": "DlpFjdn6Yj"
+        "id": "Kk-vePA0ni"
       },
       {
         "type": "p",
@@ -69,7 +76,7 @@
           }
         ],
         "listStart": 3,
-        "id": "7TX2xn_xxn"
+        "id": "zcBhWxPoTb"
       },
       {
         "type": "p",
@@ -81,7 +88,7 @@
           }
         ],
         "listStart": 4,
-        "id": "aqlZ4XdcWf"
+        "id": "5K0pw9p5fD"
       },
       {
         "type": "p",
@@ -93,7 +100,7 @@
           }
         ],
         "listStart": 5,
-        "id": "369ueSWCss"
+        "id": "ja6fwmB_8d"
       },
       {
         "type": "p",
@@ -105,7 +112,7 @@
           }
         ],
         "listStart": 6,
-        "id": "B_vFm2GRkm"
+        "id": "_KKDmdbW5m"
       },
       {
         "type": "p",
@@ -117,7 +124,7 @@
           }
         ],
         "listStart": 7,
-        "id": "8sfGPgcb5l"
+        "id": "azyf8F9QLc"
       },
       {
         "type": "p",
@@ -129,85 +136,90 @@
           }
         ],
         "listStart": 8,
-        "id": "dh-s1R45v-"
+        "id": "ZFP7ljHqsy"
       },
       {
         "type": "p",
         "children": [
           {
-            "text": "The curricular guidelines build towards the Characteristics of Graduates enumerated in the report and take into consideration the Challenges and Opportunities for Computer Science Education identified in the report. The guidelines have been supplemented with articles on Pedagogical Considerations and Curricular Practices ."
+            "text": ""
           }
         ],
-        "id": "KYlx5-Fz8l"
-      },
-      {
-        "type": "p",
-        "children": [
-          {
-            "text": "The process used by the CS2023 task force has been collaborative (over ninety task force members), international (six continents), data-driven (five large- and over seventy small-scale surveys) and transparent ( csed.acm.org ). Community engagement included numerous conference panels and presentations along with regular postings to over a dozen ACM Special Interest Group (SIG) mailing lists and the full membership of AAAI. The iterative process has included at least two review and revision cycles for most of the knowledge areas. The resulting curricular guidelines are the culmination of three years of effort using the outlined Principles and Processes ."
-          }
-        ],
-        "id": "97f_CmRh0j"
+        "id": "pCesgckf98"
       }
     ],
     "public_updates": [
       {
-        "refId": "DOC-97H_BLIY",
+        "refId": "DOC-YupWZ_XC",
         "status": "submitted",
-        "date": "2025-07-28T08:47:06.236Z",
+        "date": "2025-07-28T11:02:40.285Z",
         "message": "Your suggestion has been submitted and we are finding an associate editor to review",
         "author": "LiveC"
       },
       {
-        "refId": "DOC-XB1F1Dqt",
+        "refId": "DOC-f-z3rhJv",
         "status": "queued",
         "author": "LiveC",
-        "date": "2025-07-28T08:47:06.246Z",
+        "date": "2025-07-28T11:02:40.292Z",
         "message": "Your suggestion has been assigned to an associate editor for preliminary review."
       },
       {
-        "refId": "DOC-ldyrlQeD",
+        "refId": "DOC-2xSf8ZV4",
         "status": "under-review",
         "author": "AE-0001",
-        "date": "2025-07-28T08:48:20.120Z",
+        "date": "2025-07-28T11:02:53.055Z",
         "message": [
           {
             "type": "p",
             "children": [
               {
-                "text": "We appreciate your effort to ground foundational AI concepts in real-world contexts while highlighting the ethical considerations of heuristic search applications. Your examples—ranging from GPS navigation to automated decision-making in high-stakes environments—provide strong avenues to enrich student understanding and engagement.\n\n"
+                "text": "yes"
               }
             ]
           }
         ]
       },
       {
-        "refId": "DOC-IptCfHC2",
+        "refId": "DOC-_XaZ7ABv",
         "status": "under-review",
         "author": "LiveC",
-        "date": "2025-07-28T09:38:37.639Z",
+        "date": "2025-07-28T11:03:11.839Z",
         "message": "Your suggestion is now under review by the Editor In Chief"
       },
       {
-        "refId": "DOC-ERh54pAA",
+        "refId": "DOC-kl1x3O0h",
         "status": "under-consideration",
         "author": "EIC-0001",
-        "date": "2025-07-28T09:39:05.481Z",
+        "date": "2025-07-28T11:03:23.052Z",
+        "message": "yes"
+      },
+      {
+        "refId": "DOC-qb5Op4Ia",
+        "status": "under-discussion",
+        "author": "LiveC",
+        "date": "2025-07-28T11:03:29.895Z",
+        "message": "Your suggestion is currently now under discussion by the Editorial Board for a final decision!"
+      },
+      {
+        "refId": "DOC-O_mkJiIS",
+        "status": "accepted",
+        "author": "EIC-0001",
+        "date": "2025-07-28T11:04:25.219Z",
         "message": "yes"
       }
     ],
     "documentation": [
       {
         "action": "start-review",
-        "refId": "DOC-yxH-A_RH",
+        "refId": "DOC-hDj-1bMB",
         "author": "AE-0001",
-        "date": "2025-07-28T08:48:20.120Z",
+        "date": "2025-07-28T11:02:53.055Z",
         "content": [
           {
             "type": "p",
             "children": [
               {
-                "text": "The submitter recommends incorporating a subsection under “Illustrative Learning Outcomes” or “Non-core” content that contextualizes heuristic search algorithms within real-world systems (e.g., GPS, scheduling, cloud resource allocation). The suggestion also calls for a critical evaluation of ethical dimensions in applications such as hiring and loan processing, where search strategies influence consequential decisions.\n"
+                "text": "yes"
               }
             ]
           }
@@ -215,63 +227,335 @@
       },
       {
         "action": "approved-by-editor-in-chief",
-        "refId": "DOC-I8EwFpkj",
+        "refId": "DOC-jnmBJdY4",
         "author": "EIC-0001",
-        "date": "2025-07-28T09:39:05.481Z",
+        "date": "2025-07-28T11:03:23.052Z",
+        "content": "yes"
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-h82OImwY",
+        "author": "EIC-0001",
+        "date": "2025-07-28T11:03:43.349Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "yes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-P8ewkPsE",
+        "author": "AE-0001",
+        "date": "2025-07-28T11:03:53.543Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "awesome"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "vote-casted",
+        "refId": "DOC-4W_QhBrP",
+        "author": "AE-0002",
+        "date": "2025-07-28T11:04:10.195Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "yes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "published-by-eic",
+        "refId": "DOC-DHOIjE8v",
+        "author": "EIC-0001",
+        "date": "2025-07-28T11:04:25.219Z",
+        "content": "nice"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-07-28T11:02:40.285Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-28T11:02:40.292Z",
+        "meta": {}
+      },
+      {
+        "action": "start-review",
+        "performed_by": "AE-0001",
+        "date": "2025-07-28T11:02:53.055Z",
+        "meta": {}
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-07-28T11:03:11.839Z",
+        "meta": {}
+      },
+      {
+        "action": "approved-by-editor-in-chief",
+        "performed_by": "EIC-0001",
+        "date": "2025-07-28T11:03:23.052Z",
+        "meta": {}
+      },
+      {
+        "action": "started-final-discussion",
+        "performed_by": "EIC-0001",
+        "date": "2025-07-28T11:03:29.895Z",
+        "meta": {}
+      },
+      {
+        "action": "accepted-by-board",
+        "performed_by": "LiveC",
+        "date": "2025-07-28T11:04:10.195Z",
+        "meta": {}
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-5GVF5JyN",
+    "title": "t",
+    "text": "t",
+    "suggestion": "t",
+    "type": "propose-teaching-methodologies",
+    "submitter_id": "CM-0001",
+    "section_id": "2c69234c779d",
+    "time_created": "2025-07-28T11:05:10.180Z",
+    "status": {
+      "for_member": "rejected",
+      "for_associate_editor": "desk-rejected",
+      "for_editor_in_chief": "",
+      "system": "closed"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0002",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "final_decisions": [],
+    "revised_section": "",
+    "public_updates": [
+      {
+        "refId": "DOC-6sjIcMP6",
+        "status": "submitted",
+        "date": "2025-07-28T11:05:10.180Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-LfvCm3Fw",
+        "status": "queued",
+        "author": "LiveC",
+        "date": "2025-07-28T11:05:10.188Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-yXhX4OZo",
+        "status": "rejected",
+        "author": "AE-0002",
+        "date": "2025-07-28T11:05:24.446Z",
+        "message": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "h"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "documentation": [
+      {
+        "action": "desk-reject",
+        "refId": "DOC-IpryscMt",
+        "author": "AE-0002",
+        "date": "2025-07-28T11:05:24.446Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "nah"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-07-28T11:05:10.180Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-07-28T11:05:10.188Z",
+        "meta": {}
+      },
+      {
+        "action": "desk-reject",
+        "performed_by": "AE-0002",
+        "date": "2025-07-28T11:05:24.446Z",
+        "meta": {}
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-7PTEVZy1",
+    "title": "dfg",
+    "text": "dfg",
+    "suggestion": "dfg",
+    "type": "add-learning-outcomes",
+    "submitter_id": "CM-0001",
+    "section_id": "2c69234c779d",
+    "time_created": "2025-07-28T11:05:49.985Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "deferred",
+      "for_editor_in_chief": "",
+      "system": "external-review",
+      "for_reviewer": "recommendation-submitted"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [
+      {
+        "id": "",
+        "recommendation": "pending"
+      },
+      {
+        "id": "R-0001",
+        "recommendation": "include"
+      }
+    ],
+    "meta": {},
+    "final_decisions": [],
+    "revised_section": "",
+    "public_updates": [
+      {
+        "refId": "DOC-BRLYxwaN",
+        "status": "submitted",
+        "date": "2025-07-28T11:05:49.985Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "LiveC"
+      },
+      {
+        "refId": "DOC-tp2YyFHY",
+        "status": "queued",
+        "author": "LiveC",
+        "date": "2025-07-28T11:05:49.993Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-7fVynCPJ",
+        "status": "under-review",
+        "author": "AE-0001",
+        "date": "2025-07-28T11:06:02.300Z"
+      },
+      {
+        "refId": "DOC-JlS9en2U",
+        "status": "under-review",
+        "author": "AE-0001",
+        "date": "2025-07-28T11:06:11.728Z"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "defered-to-reviewer",
+        "refId": "DOC-n6qv8rbR",
+        "author": "AE-0001",
+        "date": "2025-07-28T11:06:02.300Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "yes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "defered-to-reviewer",
+        "refId": "DOC-ffFaBPRS",
+        "author": "AE-0001",
+        "date": "2025-07-28T11:06:11.728Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "yes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action": "recommendation-by-reviewer",
+        "refId": "DOC-hvsT06sx",
+        "author": "R-0001",
+        "date": "2025-07-28T11:08:01.471Z",
         "content": "yes"
       }
     ],
     "history": [
       {
         "action": "submitted-by-member",
-        "performed_by": "CM-6482",
-        "date": "2025-07-28T08:47:06.236Z"
+        "performed_by": "CM-0001",
+        "date": "2025-07-28T11:05:49.985Z"
       },
       {
         "action": "assigned-associate-editor",
         "performed_by": "LiveC",
-        "date": "2025-07-28T08:47:06.246Z",
+        "date": "2025-07-28T11:05:49.993Z",
         "meta": {}
       },
       {
-        "action": "start-review",
+        "action": "defered-to-reviewer",
         "performed_by": "AE-0001",
-        "date": "2025-07-28T08:48:20.120Z",
+        "date": "2025-07-28T11:06:02.300Z",
         "meta": {}
       },
       {
-        "action": "assigned-reviewers",
+        "action": "defered-to-reviewer",
         "performed_by": "AE-0001",
-        "date": "2025-07-28T09:34:20.472Z",
-        "meta": {
-          "numAssigned": 1
-        }
+        "date": "2025-07-28T11:06:11.728Z",
+        "meta": {}
       },
       {
         "action": "recommendation-by-reviewer",
         "performed_by": "R-0001",
-        "date": "2025-07-28T09:37:27.515Z",
+        "date": "2025-07-28T11:08:01.471Z",
         "meta": {
-          "decision": "exclude"
+          "decision": "include"
         }
-      },
-      {
-        "action": "all-reviews-complete",
-        "performed_by": "LiveC",
-        "date": "2025-07-28T09:37:27.515Z",
-        "meta": {}
-      },
-      {
-        "action": "finalized-by-associate-editor",
-        "performed_by": "AE-0001",
-        "date": "2025-07-28T09:38:37.639Z",
-        "meta": {}
-      },
-      {
-        "action": "approved-by-editor-in-chief",
-        "performed_by": "EIC-0001",
-        "date": "2025-07-28T09:39:05.481Z",
-        "meta": {}
       }
     ]
   }

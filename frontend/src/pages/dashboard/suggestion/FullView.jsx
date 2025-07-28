@@ -77,7 +77,7 @@ const DocumentationPanel = ({ suggestion, documentation, user }) => {
     const { document } = useAssociateEditor();
     const hideAe = suggestion.system.status === Status.System.AWAITING_EIC_INPUT && user.role === Roles.ASSOCIATE_EDITOR;
     const hideEic = user.role === Roles.EDITOR_IN_CHIEF && suggestion.system.status === Status.System.REFINEMENT_CYCLE;
-
+    const hideRev = user.role === Roles.REVIEWER && suggestion.status === Status.Private.Reviewer.RECOMMENDATION_SUBMITTED;
     return (
         <>
             <FlexColumn className="border-r-gray-300" align="stretch" style={{ paddingRight: '2rem', paddingBottom: '0' }}>
@@ -90,7 +90,7 @@ const DocumentationPanel = ({ suggestion, documentation, user }) => {
                 </div>
 
                 <div style={{ marginTop: 'auto' }}>
-                    <Button hideOn={hideAe || hideEic} onClick={toggleView} text="Add Documentation" variant="gray" />
+                    <Button hideOn={hideAe || hideEic || hideRev} onClick={toggleView} text="Add Documentation" variant="gray" />
                 </div>
             </FlexColumn>
 
@@ -154,7 +154,7 @@ const SuggestionContent = ({ suggestion, role }) => {
                     />
                 )}
                 {role === Roles.REVIEWER &&
-                    suggestion.system.status === Status.System.TEMPORARILY_PAUSED &&
+                    (suggestion.system.status === Status.System.TEMPORARILY_PAUSED || suggestion.system.status === Status.System.EXTERNAL_REVIEW) &&
                     suggestion.status !== Status.Private.Reviewer.RECOMMENDATION_SUBMITTED && (
                         <Form
                             showConfirmation={{
@@ -177,7 +177,6 @@ const SuggestionContent = ({ suggestion, role }) => {
         </SubGrid>
     );
 };
-
 
 const Revs = ({ suggestion }) => {
     const { reviewers, assign } = useAssociateEditor();
@@ -266,9 +265,7 @@ const FinalizeModal = () => {
     );
 };
 const RecModal = () => {
-    return (
-        <>Are you sure you want to submit this recommendation?</>
-    );
+    return <>Are you sure you want to submit this recommendation?</>;
 };
 
 const StartDiscussionModal = () => (

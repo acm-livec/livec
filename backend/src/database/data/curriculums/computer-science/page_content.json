@@ -1,6 +1,6 @@
 [
   {
-    "id": "d3b1d0eaf0e4",
+    "id": "2c69234c779d",
     "content": [
       {
         "type": "p",
@@ -8,7 +8,8 @@
           {
             "text": "CS2023 is the latest version of computer science curricular guidelines, produced by a joint task force of the ACM, IEEE Computer Society, and AAAI. The following is a summary of significant issues of the day and how they have been addressed in CS2023 curricular guidelines:"
           }
-        ]
+        ],
+        "id": "6jTguV99MC"
       },
       {
         "type": "p",
@@ -18,7 +19,8 @@
           {
             "text": "The discipline continues to evolve. The Body of Knowledge consisting of seventeen knowledge areas has been revised and updated."
           }
-        ]
+        ],
+        "id": "T9xwlRM0Hf"
       },
       {
         "type": "p",
@@ -28,7 +30,9 @@
           {
             "text": "The discipline continues to grow. Topics that every graduate must know have been circumscribed as CS Core and kept to a minimum. Topics recommended for in-depth study have been labeled KA Core."
           }
-        ]
+        ],
+        "listStart": 2,
+        "id": "Kk-vePA0ni"
       },
       {
         "type": "p",
@@ -38,7 +42,9 @@
           {
             "text": "It is increasingly difficult for programs to be all things to all people. Programs can now select the knowledge areas on which to focus. The knowledge areas, when coherently chosen, define the competency area(s) of the program."
           }
-        ]
+        ],
+        "listStart": 3,
+        "id": "zcBhWxPoTb"
       },
       {
         "type": "p",
@@ -48,7 +54,9 @@
           {
             "text": "Societal and ethical concerns have risen sharply. The Society, Ethics, and the Profession (SEP) knowledge area is now an integral part of most knowledge areas of the curriculum."
           }
-        ]
+        ],
+        "listStart": 4,
+        "id": "5K0pw9p5fD"
       },
       {
         "type": "p",
@@ -58,7 +66,9 @@
           {
             "text": "The role of mathematics has increased. Additional hours have been allocated to mathematics and flexibility has been provided for coverage of the requirements in the curriculum."
           }
-        ]
+        ],
+        "listStart": 5,
+        "id": "ja6fwmB_8d"
       },
       {
         "type": "p",
@@ -68,7 +78,9 @@
           {
             "text": "The need for professional dispositions is increasingly being recognized. Professional dispositions appropriate for each knowledge area have been listed and justified."
           }
-        ]
+        ],
+        "listStart": 6,
+        "id": "_KKDmdbW5m"
       },
       {
         "type": "p",
@@ -78,7 +90,9 @@
           {
             "text": "Interest is growing among educators in a competency model of the curriculum. A Competency Framework has been provided for programs to create their own competency model of the curriculum tailored to local needs."
           }
-        ]
+        ],
+        "listStart": 7,
+        "id": "azyf8F9QLc"
       },
       {
         "type": "p",
@@ -88,23 +102,18 @@
           {
             "text": "Generative AI is poised to impact computer science education. A chapter has been included that addresses how Generative AI could propel further innovation in computer science education."
           }
-        ]
+        ],
+        "listStart": 8,
+        "id": "ZFP7ljHqsy"
       },
       {
         "type": "p",
         "children": [
           {
-            "text": "The curricular guidelines build towards the Characteristics of Graduates enumerated in the report and take into consideration the Challenges and Opportunities for Computer Science Education identified in the report. The guidelines have been supplemented with articles on Pedagogical Considerations and Curricular Practices ."
+            "text": ""
           }
-        ]
-      },
-      {
-        "type": "p",
-        "children": [
-          {
-            "text": "The process used by the CS2023 task force has been collaborative (over ninety task force members), international (six continents), data-driven (five large- and over seventy small-scale surveys) and transparent ( csed.acm.org ). Community engagement included numerous conference panels and presentations along with regular postings to over a dozen ACM Special Interest Group (SIG) mailing lists and the full membership of AAAI. The iterative process has included at least two review and revision cycles for most of the knowledge areas. The resulting curricular guidelines are the culmination of three years of effort using the outlined Principles and Processes ."
-          }
-        ]
+        ],
+        "id": "pCesgckf98"
       }
     ]
   },

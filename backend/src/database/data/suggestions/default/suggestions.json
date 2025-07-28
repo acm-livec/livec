@@ -6,13 +6,14 @@
     "suggestion": "Add a brief paragraph summarizing key aims of CS2023",
     "type": "update-existing-knowledge-area",
     "submitter_id": "CM-0001",
-    "section_id": "d3b1d0eaf0e4",
+    "section_id": "0dc45648bc8a",
     "time_created": "2025-01-01T00:00:00.000Z",
     "status": {
       "for_member": "submitted",
       "system": "initial-submission"
     },
-    "discipline": "computer-science",
+    "discipline": "cybersecurity",
+    "assigned_associate_editor": "none",
     "public_updates": [
       {
         "refId": "PU1-1",
@@ -45,7 +46,7 @@
     "text": "Refresh examples in the overview section to include recent technologies",
     "suggestion": "Refresh examples in the overview section to include recent technologies",
     "type": "update-existing-knowledge-area",
-    "submitter_id": "CM-0002",
+    "submitter_id": "CM-0001",
     "section_id": "f95611b734d5",
     "time_created": "2025-01-02T00:00:00.000Z",
     "status": {
@@ -83,7 +84,7 @@
     "history": [
       {
         "action": "submitted-by-member",
-        "performed_by": "CM-0002",
+        "performed_by": "CM-0001",
         "date": "2025-01-02T00:00:00.000Z"
       },
       {
@@ -99,7 +100,7 @@
     "text": "Include a short subsection on AI advancements in the introduction",
     "suggestion": "Include a short subsection on AI advancements in the introduction",
     "type": "update-existing-knowledge-area",
-    "submitter_id": "CM-0003",
+    "submitter_id": "CM-0001",
     "section_id": "b47742cdb750",
     "time_created": "2025-01-03T00:00:00.000Z",
     "status": {
@@ -108,7 +109,7 @@
       "system": "editorial-review"
     },
     "discipline": "computer-science",
-    "assigned_associate_editor": "AE-0002",
+    "assigned_associate_editor": "AE-0001",
     "public_updates": [
       {
         "refId": "PU3-1",
@@ -129,14 +130,14 @@
         "status": "under-review",
         "date": "2025-01-03T00:00:00.000Z",
         "message": "The associate editor is reviewing your suggestion.",
-        "author": "AE-0002"
+        "author": "AE-0001"
       }
     ],
     "documentation": [
       {
         "action": "start-review",
         "refId": "DOC3-1",
-        "author": "AE-0002",
+        "author": "AE-0001",
         "date": "2025-01-03T00:00:00.000Z",
         "content": "AE started review"
       }
@@ -144,7 +145,7 @@
     "history": [
       {
         "action": "submitted-by-member",
-        "performed_by": "CM-0003",
+        "performed_by": "CM-0001",
         "date": "2025-01-03T00:00:00.000Z"
       },
       {
@@ -154,7 +155,7 @@
       },
       {
         "action": "start-review",
-        "performed_by": "AE-0002",
+        "performed_by": "AE-0001",
         "date": "2025-01-03T00:00:00.000Z"
       }
     ]
@@ -165,7 +166,7 @@
     "text": "Provide additional detail on early computing milestones",
     "suggestion": "Provide additional detail on early computing milestones",
     "type": "update-existing-knowledge-area",
-    "submitter_id": "CM-0004",
+    "submitter_id": "CM-0001",
     "section_id": "afb872230af3",
     "time_created": "2025-01-04T00:00:00.000Z",
     "status": {
@@ -175,7 +176,7 @@
       "system": "awaiting-board-discussion"
     },
     "discipline": "computer-science",
-    "assigned_associate_editor": "AE-0003",
+    "assigned_associate_editor": "AE-0001",
     "assigned_editor_in_chief": "EIC-0001",
     "public_updates": [
       {
@@ -197,7 +198,7 @@
         "status": "under-review",
         "date": "2025-01-04T00:00:00.000Z",
         "message": "The associate editor is reviewing your suggestion.",
-        "author": "AE-0003"
+        "author": "AE-0001"
       },
       {
         "refId": "PU4-4",
@@ -219,7 +220,7 @@
     "history": [
       {
         "action": "submitted-by-member",
-        "performed_by": "CM-0004",
+        "performed_by": "CM-0001",
         "date": "2025-01-04T00:00:00.000Z"
       },
       {
@@ -229,12 +230,12 @@
       },
       {
         "action": "start-review",
-        "performed_by": "AE-0003",
+        "performed_by": "AE-0001",
         "date": "2025-01-04T00:00:00.000Z"
       },
       {
         "action": "finalized-by-associate-editor",
-        "performed_by": "AE-0003",
+        "performed_by": "AE-0001",
         "date": "2025-01-04T00:00:00.000Z"
       },
       {
@@ -250,7 +251,7 @@
     "text": "Strengthen the vision statement with an explicit focus on ethical practice",
     "suggestion": "Strengthen the vision statement with an explicit focus on ethical practice",
     "type": "update-existing-knowledge-area",
-    "submitter_id": "CM-0005",
+    "submitter_id": "CM-0001",
     "section_id": "c2824056be4f",
     "time_created": "2025-01-05T00:00:00.000Z",
     "status": {
@@ -260,8 +261,8 @@
       "system": "in-board-discussion"
     },
     "discipline": "computer-science",
-    "assigned_associate_editor": "AE-0004",
-    "assigned_editor_in_chief": "EIC-0002",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
     "public_updates": [
       {
         "refId": "PU5-1",
@@ -282,28 +283,28 @@
         "status": "under-review",
         "date": "2025-01-05T00:00:00.000Z",
         "message": "The associate editor is reviewing your suggestion.",
-        "author": "AE-0004"
+        "author": "AE-0001"
       },
       {
         "refId": "PU5-4",
         "status": "under-consideration",
         "date": "2025-01-05T00:00:00.000Z",
         "message": "The Editor in Chief is considering your suggestion.",
-        "author": "EIC-0002"
+        "author": "EIC-0001"
       },
       {
         "refId": "PU5-5",
         "status": "under-discussion",
         "date": "2025-01-05T00:00:00.000Z",
         "message": "The board is discussing your suggestion.",
-        "author": "EIC-0002"
+        "author": "EIC-0001"
       }
     ],
     "documentation": [
       {
         "action": "started-final-discussion",
         "refId": "DOC5-1",
-        "author": "EIC-0002",
+        "author": "EIC-0001",
         "date": "2025-01-05T00:00:00.000Z",
         "content": "Board discussion opened"
       }
@@ -311,7 +312,7 @@
     "history": [
       {
         "action": "submitted-by-member",
-        "performed_by": "CM-0005",
+        "performed_by": "CM-0001",
         "date": "2025-01-05T00:00:00.000Z"
       },
       {
@@ -321,17 +322,17 @@
       },
       {
         "action": "start-review",
-        "performed_by": "AE-0004",
+        "performed_by": "AE-0001",
         "date": "2025-01-05T00:00:00.000Z"
       },
       {
         "action": "finalized-by-associate-editor",
-        "performed_by": "AE-0004",
+        "performed_by": "AE-0001",
         "date": "2025-01-05T00:00:00.000Z"
       },
       {
         "action": "started-final-discussion",
-        "performed_by": "EIC-0002",
+        "performed_by": "EIC-0001",
         "date": "2025-01-05T00:00:00.000Z"
       }
     ]
@@ -342,7 +343,7 @@
     "text": "Add citations for foundational CS2023 research articles",
     "suggestion": "Add citations for foundational CS2023 research articles",
     "type": "update-existing-knowledge-area",
-    "submitter_id": "CM-0006",
+    "submitter_id": "CM-0001",
     "section_id": "df7bdf438dcb",
     "time_created": "2025-01-06T00:00:00.000Z",
     "status": {
@@ -352,8 +353,8 @@
       "system": "ready-for-implementation"
     },
     "discipline": "computer-science",
-    "assigned_associate_editor": "AE-0005",
-    "assigned_editor_in_chief": "EIC-0003",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
     "public_updates": [
       {
         "refId": "PU6-1",
@@ -374,28 +375,28 @@
         "status": "under-review",
         "date": "2025-01-06T00:00:00.000Z",
         "message": "The associate editor is reviewing your suggestion.",
-        "author": "AE-0005"
+        "author": "AE-0001"
       },
       {
         "refId": "PU6-4",
         "status": "under-consideration",
         "date": "2025-01-06T00:00:00.000Z",
         "message": "The Editor in Chief is considering your suggestion.",
-        "author": "EIC-0003"
+        "author": "EIC-0001"
       },
       {
         "refId": "PU6-5",
         "status": "accepted",
         "date": "2025-01-06T00:00:00.000Z",
         "message": "Your suggestion has been accepted and will be implemented.",
-        "author": "EIC-0003"
+        "author": "EIC-0001"
       }
     ],
     "documentation": [
       {
         "action": "approved-by-editor-in-chief",
         "refId": "DOC6-1",
-        "author": "EIC-0003",
+        "author": "EIC-0001",
         "date": "2025-01-06T00:00:00.000Z",
         "content": "Accepted for implementation"
       }
@@ -403,7 +404,7 @@
     "history": [
       {
         "action": "submitted-by-member",
-        "performed_by": "CM-0006",
+        "performed_by": "CM-0001",
         "date": "2025-01-06T00:00:00.000Z"
       },
       {
@@ -413,17 +414,17 @@
       },
       {
         "action": "start-review",
-        "performed_by": "AE-0005",
+        "performed_by": "AE-0001",
         "date": "2025-01-06T00:00:00.000Z"
       },
       {
         "action": "finalized-by-associate-editor",
-        "performed_by": "AE-0005",
+        "performed_by": "AE-0001",
         "date": "2025-01-06T00:00:00.000Z"
       },
       {
         "action": "approved-by-editor-in-chief",
-        "performed_by": "EIC-0003",
+        "performed_by": "EIC-0001",
         "date": "2025-01-06T00:00:00.000Z"
       }
     ]
@@ -434,7 +435,7 @@
     "text": "Create a glossary of important terminology",
     "suggestion": "Create a glossary of important terminology",
     "type": "update-existing-knowledge-area",
-    "submitter_id": "CM-0007",
+    "submitter_id": "CM-0001",
     "section_id": "8238a7d96075",
     "time_created": "2025-01-07T00:00:00.000Z",
     "status": {
@@ -444,8 +445,8 @@
       "system": "closed"
     },
     "discipline": "computer-science",
-    "assigned_associate_editor": "AE-0006",
-    "assigned_editor_in_chief": "EIC-0004",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
     "public_updates": [
       {
         "refId": "PU7-1",
@@ -466,35 +467,35 @@
         "status": "under-review",
         "date": "2025-01-07T00:00:00.000Z",
         "message": "The associate editor is reviewing your suggestion.",
-        "author": "AE-0006"
+        "author": "AE-0001"
       },
       {
         "refId": "PU7-4",
         "status": "under-consideration",
         "date": "2025-01-07T00:00:00.000Z",
         "message": "The Editor in Chief is considering your suggestion.",
-        "author": "EIC-0004"
+        "author": "EIC-0001"
       },
       {
         "refId": "PU7-5",
         "status": "accepted",
         "date": "2025-01-07T00:00:00.000Z",
         "message": "Your suggestion has been accepted.",
-        "author": "EIC-0004"
+        "author": "EIC-0001"
       },
       {
         "refId": "PU7-6",
         "status": "implemented",
         "date": "2025-01-07T00:00:00.000Z",
         "message": "The change has been implemented and published.",
-        "author": "EIC-0004"
+        "author": "EIC-0001"
       }
     ],
     "documentation": [
       {
         "action": "published-by-eic",
         "refId": "DOC7-1",
-        "author": "EIC-0004",
+        "author": "EIC-0001",
         "date": "2025-01-07T00:00:00.000Z",
         "content": "Published"
       }
@@ -502,7 +503,7 @@
     "history": [
       {
         "action": "submitted-by-member",
-        "performed_by": "CM-0007",
+        "performed_by": "CM-0001",
         "date": "2025-01-07T00:00:00.000Z"
       },
       {
@@ -512,22 +513,22 @@
       },
       {
         "action": "start-review",
-        "performed_by": "AE-0006",
+        "performed_by": "AE-0001",
         "date": "2025-01-07T00:00:00.000Z"
       },
       {
         "action": "finalized-by-associate-editor",
-        "performed_by": "AE-0006",
+        "performed_by": "AE-0001",
         "date": "2025-01-07T00:00:00.000Z"
       },
       {
         "action": "approved-by-editor-in-chief",
-        "performed_by": "EIC-0004",
+        "performed_by": "EIC-0001",
         "date": "2025-01-07T00:00:00.000Z"
       },
       {
         "action": "published-by-eic",
-        "performed_by": "EIC-0004",
+        "performed_by": "EIC-0001",
         "date": "2025-01-07T00:00:00.000Z"
       }
     ]
@@ -538,7 +539,7 @@
     "text": "Replace obsolete jargon with modern terminology",
     "suggestion": "Replace obsolete jargon with modern terminology",
     "type": "update-existing-knowledge-area",
-    "submitter_id": "CM-0008",
+    "submitter_id": "CM-0001",
     "section_id": "e4589cbb1122",
     "time_created": "2025-01-08T00:00:00.000Z",
     "status": {
@@ -547,7 +548,7 @@
       "system": "closed-rejected"
     },
     "discipline": "computer-science",
-    "assigned_associate_editor": "AE-0007",
+    "assigned_associate_editor": "AE-0001",
     "public_updates": [
       {
         "refId": "PU8-1",
@@ -561,14 +562,14 @@
         "status": "rejected",
         "date": "2025-01-08T00:00:00.000Z",
         "message": "Your suggestion was rejected by the associate editor.",
-        "author": "AE-0007"
+        "author": "AE-0001"
       }
     ],
     "documentation": [
       {
         "action": "desk-reject",
         "refId": "DOC8-1",
-        "author": "AE-0007",
+        "author": "AE-0001",
         "date": "2025-01-08T00:00:00.000Z",
         "content": "Not aligned with current goals"
       }
@@ -576,12 +577,12 @@
     "history": [
       {
         "action": "submitted-by-member",
-        "performed_by": "CM-0008",
+        "performed_by": "CM-0001",
         "date": "2025-01-08T00:00:00.000Z"
       },
       {
         "action": "desk-reject",
-        "performed_by": "AE-0007",
+        "performed_by": "AE-0001",
         "date": "2025-01-08T00:00:00.000Z"
       }
     ]
