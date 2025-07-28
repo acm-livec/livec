@@ -10,11 +10,11 @@ class Curriculum {
 
     }
     async returnAll() {
-        await this.dbRef[this.currRef]?.tableOfContents.read();
-        const toc = this.dbRef[this.currRef]?.tableOfContents.data;
+        await this.constructor.dbRef[this.currRef]?.tableOfContents.read();
+        const toc = this.constructor.dbRef[this.currRef]?.tableOfContents.data;
 
-        await this.dbRef[this.currRef]?.pageContent.read();
-        const cont = this.dbRef[this.currRef]?.pageContent.data;
+        await this.constructor.dbRef[this.currRef]?.pageContent.read();
+        const cont = this.constructor.dbRef[this.currRef]?.pageContent.data;
 
         const contentMap = new Map(cont.map(entry => [entry.id, {
             content: entry.content,
@@ -45,10 +45,10 @@ class Curriculum {
 
 
     async getSection(id) {
-        await this.dbRef[this.currRef]?.tableOfContents.read();
-        const toc = this.dbRef[this.currRef]?.tableOfContents.data;
-        await this.dbRef[this.currRef]?.pageContent.read();
-        const cont = this.dbRef[this.currRef]?.pageContent.data;
+        await this.constructor.dbRef[this.currRef]?.tableOfContents.read();
+        const toc = this.constructor.dbRef[this.currRef]?.tableOfContents.data;
+        await this.constructor.dbRef[this.currRef]?.pageContent.read();
+        const cont = this.constructor.dbRef[this.currRef]?.pageContent.data;
 
         const contentMap = new Map(cont.map(entry => [entry.id, entry.content]));
         const section = toc.find(section => section.id === id);
@@ -81,8 +81,8 @@ class Curriculum {
 
 
     async getSectionToc(id) {
-        await this.dbRef[this.currRef]?.tableOfContents.read();
-        const toc = this.dbRef[this.currRef]?.tableOfContents.data;
+        await this.constructor.dbRef[this.currRef]?.tableOfContents.read();
+        const toc = this.constructor.dbRef[this.currRef]?.tableOfContents.data;
 
 
         const section = toc.find(section => section.id === id);
@@ -94,13 +94,13 @@ class Curriculum {
         return section
     }
     async updateToc(sectionInstance) {
-        await this.dbRef[this.currRef]?.tableOfContents.read();
+        await this.constructor.dbRef[this.currRef]?.tableOfContents.read();
 
-        const index = this.dbRef[this.currRef]?.tableOfContents.data.findIndex(s => s.id === sectionInstance.id);
+        const index = this.constructor.dbRef[this.currRef]?.tableOfContents.data.findIndex(s => s.id === sectionInstance.id);
         if (index === -1) throw new Error(`Suggestion with id ${sectionInstance.id} not found`);
 
-        this.dbRef[this.currRef].tableOfContents.data[index] = sectionInstance;
-        await this.dbRef[this.currRef]?.tableOfContents.write();
+        this.constructor.dbRef[this.currRef].tableOfContents.data[index] = sectionInstance;
+        await this.constructor.dbRef[this.currRef]?.tableOfContents.write();
 
         return sectionInstance;
     }
@@ -114,13 +114,13 @@ class Curriculum {
      * @throws {Error} If the suggestion with the specified ID does not exist.
      */
     async update(sectionInstance) {
-        await this.dbRef[this.currRef]?.pageContent.read();
+        await this.constructor.dbRef[this.currRef]?.pageContent.read();
 
-        const index = this.dbRef[this.currRef]?.pageContent.data.findIndex(s => s.id === sectionInstance.id);
+        const index = this.constructor.dbRef[this.currRef]?.pageContent.data.findIndex(s => s.id === sectionInstance.id);
         if (index === -1) throw new Error(`Suggestion with id ${sectionInstance.id} not found`);
 
-        this.dbRef[this.currRef].pageContent.data[index] = sectionInstance;
-        await this.dbRef[this.currRef]?.pageContent.write();
+        this.constructor.dbRef[this.currRef].pageContent.data[index] = sectionInstance;
+        await this.constructor.dbRef[this.currRef]?.pageContent.write();
 
         return sectionInstance;
     }
