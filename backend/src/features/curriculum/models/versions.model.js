@@ -1,5 +1,6 @@
 const db = require('@database/database');
 const CurriculumVersion = require('./curriculum-version.model');
+const kebabToCamel = require('@shared/utils/kebabToCamel');
 class CurriculumVersions {
     static dbRef = db.curriculums;
 
@@ -50,9 +51,13 @@ class CurriculumVersions {
 
     static async insert(curriculum, data) {
         const version = new CurriculumVersion(data).toObject();
-        await this.dbRef[curriculum].read();
-        this.dbRef[curriculum].data.push(version);
-        await this.dbRef[curriculum].write();
+        const currKey = kebabToCamel(curriculum);
+        const ref = this.dbRef?.[currKey]?.curriculumVersions;
+        if (!ref) return null;
+
+        await ref.read();
+        ref.data.push(version);
+        await ref.write();
         return version;
     }
 }

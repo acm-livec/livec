@@ -1,6 +1,12 @@
 const { AppError, SuggestionNotFoundError } = require('@shared/errors');
 const Suggestions = require('@features/suggestion/models/suggestions.model.js');
-const { updateCurriculumSection } = require('@features/curriculum/services');
+const {
+    getCurriculumSection,
+} = require('@features/curriculum/services');
+const addCurriculumVersion = require('@features/curriculum/services/add-version');
+const { generateSectionId } = require('@shared/utils/generate-id');
+const kebabToCamel = require('@shared/utils/kebabToCamel');
+const db = require('@database/database');
 
 const logger = require('@logger').addSource({
     file: 'suggestion.service',
@@ -17,11 +23,60 @@ const finalizeImplementation = async (id, eicId, notes, message) => {
 
         logger.debug('suggestion.implement.starting');
         suggestion.finalizeImplementation(eicId, notes, message);
-        logger.debug('suggestion.implement.curriculum.updating');
-        await updateCurriculumSection(suggestion.discipline, {
-            id: suggestion.section_id,
-            content: suggestion.revised_section,
+
+        const curriculum = suggestion.discipline;
+        const camel = kebabToCamel(curriculum);
+
+        // grab current section before modifying
+        const currentSection = await getCurriculumSection(curriculum, suggestion.section_id);
+
+        if (currentSection) {
+            await addCurriculumVersion(curriculum, {
+                id: currentSection.id,
+                section_version: currentSection.meta?.section_version,
+                title: currentSection.title,
+                contributing_member: suggestion.submitter_id,
+                meta: currentSection.meta,
+                content: currentSection.content
+            });
+        }
+
+        const newMeta = { ...currentSection.meta, ...suggestion.meta };
+        const newSectionId = await generateSectionId({
+            curriculum: newMeta.curriculum,
+            year_version: newMeta.year_version,
+            page_number: newMeta.page_number,
+            slug: newMeta.slug,
+            section_version: newMeta.section_version,
         });
+
+        const tocRef = db.curriculums[camel].tableOfContents;
+        const contentRef = db.curriculums[camel].pageContent;
+        await tocRef.read();
+        await contentRef.read();
+
+        const tocIndex = tocRef.data.findIndex(s => s.id === suggestion.section_id);
+        if (tocIndex !== -1) {
+            tocRef.data[tocIndex] = {
+                ...currentSection,
+                id: newSectionId,
+                meta: newMeta
+            };
+        }
+
+        const contIndex = contentRef.data.findIndex(s => s.id === suggestion.section_id);
+        if (contIndex !== -1) {
+            contentRef.data[contIndex] = {
+                id: newSectionId,
+                content: suggestion.revised_section
+            };
+        }
+
+        await tocRef.write();
+        await contentRef.write();
+
+        suggestion.section_id = newSectionId;
+
         logger.debug('suggestion.implement.curriculum.updated');
 
         await Suggestions.update(suggestion);
