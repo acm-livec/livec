@@ -40,11 +40,7 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
 
     useEffect(() => {
         if (currentPage?.meta?.previous_versions?.length > 0) {
-            Promise.all(
-                currentPage.meta.previous_versions.map((id) =>
-                    getVersion(selectedCurriculum, id)
-                )
-            )
+            Promise.all(currentPage.meta.previous_versions.map((id) => getVersion(selectedCurriculum, id)))
                 .then((res) => setAvailableVersions(res.filter(Boolean)))
                 .catch(() => setAvailableVersions([]));
         } else {
@@ -92,18 +88,17 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                     <>
                         <div className="flex flex-col gap-3.5 px-[2.5%] pt-20 pb-0 sticky top-0 bg-inherit z-10">
                             <FlexRow gap="0.5rem" className="tab-buttons justify-between items-center">
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-end gap-2">
                                     <h1 className="text-sky-600">
-                                        | {currentPage?.meta.parent_heading || currentPage?.title}
-                                        {" "}
+                                        | {currentPage?.meta.parent_heading || currentPage?.title}{' '}
                                         {selectedVersion === 'current'
-                                            ? currentPage?.meta?.section_version
+                                            ? ''
                                             : versionData?.section_version ||
                                               availableVersions.find((v) => v.id === selectedVersion)?.section_version ||
                                               ''}
                                     </h1>
                                     <select
-                                        className="text-sky-600 bg-white border border-sky-600 rounded px-2 py-1"
+                                        className="text-sky-600 bg-white border border-gray-50 rounded px-2 cursor-pointer py-1"
                                         value={selectedVersion}
                                         onChange={(e) => setSelectedVersion(e.target.value)}
                                     >
@@ -115,19 +110,11 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                                         ))}
                                     </select>
                                 </div>
-                                <div className="flex">
-                                    <Button size="fit-content" isActive={tab === 'content'} onClick={() => setTab('content')} text="Section" />
-                                    <Button size="fit-content" isActive={tab === 'history'} onClick={() => setTab('history')} text="Versions" />
-                                </div>
                             </FlexRow>
                             <hr style={{ color: 'black', width: '100%' }} />
                         </div>
                         <FlexColumn padding={'2.5%'} gap="1.5rem">
-                            {tab === 'content' ? (
-                                <Page page={selectedVersion === 'current' ? currentPage : versionData} />
-                            ) : (
-                                <VersionHistory meta={currentPage?.meta} />
-                            )}
+                            <Page page={selectedVersion === 'current' ? currentPage : versionData} />
                             <FlexRow justify="space-between" style={{ width: '100%' }}>
                                 <Button
                                     style={{ marginRight: 'auto' }}

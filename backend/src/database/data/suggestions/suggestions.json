@@ -1,17 +1,18 @@
 [
   {
-    "id": "SCOSC-aiRbu75H",
+    "id": "SCOSC-bcAWOROO",
     "title": "Integrating Real-World Search Problem Applications and Ethical Considerations",
-    "text": "Consider adding a subsection under \"Illustrative Learning Outcomes\" or \"Non-core\" content that addresses real-world applications and ethical dimensions of search algorithms. For example: Analyze the use of heuristic search in real-world systems such as GPS navigation, automated scheduling, or resource allocation in cloud computing. This grounds abstract concepts in tangible examples and enhances student engagement. Critically evaluate ethical implications of heuristic-based decision-making in sensitive domains (e.g., job applicant ranking, automated loan approvals), linking search strategy design with fairness, transparency, and accountability.\n",
-    "suggestion": "Consider adding a subsection under \"Illustrative Learning Outcomes\" or \"Non-core\" content that addresses real-world applications and ethical dimensions of search algorithms. For example: Analyze the use of heuristic search in real-world systems such as GPS navigation, automated scheduling, or resource allocation in cloud computing. This grounds abstract concepts in tangible examples and enhances student engagement. Critically evaluate ethical implications of heuristic-based decision-making in sensitive domains (e.g., job applicant ranking, automated loan approvals), linking search strategy design with fairness, transparency, and accountability.\n",
+    "text": "Consider adding a subsection under \"Illustrative Learning Outcomes\" or \"Non-core\" content that addresses real-world applications and ethical dimensions of search algorithms. For example: Analyze the use of heuristic search in real-world systems such as GPS navigation, automated scheduling, or resource allocation in cloud computing. This grounds abstract concepts in tangible examples and enhances student engagement. Critically evaluate ethical implications of heuristic-based decision-making in se",
+    "suggestion": "Consider adding a subsection under \"Illustrative Learning Outcomes\" or \"Non-core\" content that addresses real-world applications and ethical dimensions of search algorithms. For example: Analyze the use of heuristic search in real-world systems such as GPS navigation, automated scheduling, or resource allocation in cloud computing. This grounds abstract concepts in tangible examples and enhances student engagement. Critically evaluate ethical implications of heuristic-based decision-making in se",
+    "type": "update-existing-knowledge-area",
     "submitter_id": "CM-6482",
-    "section_id": "4fa24f853f75",
-    "time_created": "2025-07-28T05:16:16.969Z",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-28T08:47:06.236Z",
     "status": {
-      "for_member": "queued",
-      "for_associate_editor": "new",
+      "for_member": "under-review",
+      "for_associate_editor": "reviewing",
       "for_editor_in_chief": "",
-      "system": "preliminary-review"
+      "system": "editorial-review"
     },
     "discipline": "computer-science",
     "assigned_associate_editor": "AE-0001",
@@ -22,84 +23,70 @@
     "revised_section": "",
     "public_updates": [
       {
-        "refId": "DOC-SyyNBFHH",
+        "refId": "DOC-97H_BLIY",
         "status": "submitted",
-        "date": "2025-07-28T05:16:16.969Z",
+        "date": "2025-07-28T08:47:06.236Z",
         "message": "Your suggestion has been submitted and we are finding an associate editor to review",
         "author": "LiveC"
       },
       {
-        "refId": "DOC-D_NBtngV",
+        "refId": "DOC-XB1F1Dqt",
         "status": "queued",
         "author": "LiveC",
-        "date": "2025-07-28T05:16:16.980Z",
+        "date": "2025-07-28T08:47:06.246Z",
         "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-ldyrlQeD",
+        "status": "under-review",
+        "author": "AE-0001",
+        "date": "2025-07-28T08:48:20.120Z",
+        "message": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "We appreciate your effort to ground foundational AI concepts in real-world contexts while highlighting the ethical considerations of heuristic search applications. Your examples—ranging from GPS navigation to automated decision-making in high-stakes environments—provide strong avenues to enrich student understanding and engagement.\n\n"
+              }
+            ]
+          }
+        ]
       }
     ],
-    "documentation": [],
+    "documentation": [
+      {
+        "action": "start-review",
+        "refId": "DOC-yxH-A_RH",
+        "author": "AE-0001",
+        "date": "2025-07-28T08:48:20.120Z",
+        "content": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "text": "The submitter recommends incorporating a subsection under “Illustrative Learning Outcomes” or “Non-core” content that contextualizes heuristic search algorithms within real-world systems (e.g., GPS, scheduling, cloud resource allocation). The suggestion also calls for a critical evaluation of ethical dimensions in applications such as hiring and loan processing, where search strategies influence consequential decisions.\n"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "history": [
       {
         "action": "submitted-by-member",
         "performed_by": "CM-6482",
-        "date": "2025-07-28T05:16:16.969Z"
+        "date": "2025-07-28T08:47:06.236Z"
       },
       {
         "action": "assigned-associate-editor",
         "performed_by": "LiveC",
-        "date": "2025-07-28T05:16:16.979Z",
+        "date": "2025-07-28T08:47:06.246Z",
         "meta": {}
-      }
-    ]
-  },
-  {
-    "id": "SCOSC-dQniBll0",
-    "title": "d",
-    "text": "d",
-    "suggestion": "d",
-    "type": "",
-    "submitter_id": "CM-6482",
-    "section_id": "d3b1d0eaf0e4",
-    "time_created": "2025-07-28T05:30:16.801Z",
-    "status": {
-      "for_member": "queued",
-      "for_associate_editor": "new",
-      "for_editor_in_chief": "",
-      "system": "preliminary-review"
-    },
-    "discipline": "computer-science",
-    "assigned_associate_editor": "AE-0002",
-    "assigned_editor_in_chief": "EIC-0001",
-    "assigned_reviewers": [],
-    "meta": {},
-    "final_decisions": [],
-    "revised_section": "",
-    "public_updates": [
-      {
-        "refId": "DOC-FWFTd0Bh",
-        "status": "submitted",
-        "date": "2025-07-28T05:30:16.801Z",
-        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
-        "author": "LiveC"
       },
       {
-        "refId": "DOC-VElZ2VPA",
-        "status": "queued",
-        "author": "LiveC",
-        "date": "2025-07-28T05:30:16.811Z",
-        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
-      }
-    ],
-    "documentation": [],
-    "history": [
-      {
-        "action": "submitted-by-member",
-        "performed_by": "CM-6482",
-        "date": "2025-07-28T05:30:16.801Z"
-      },
-      {
-        "action": "assigned-associate-editor",
-        "performed_by": "LiveC",
-        "date": "2025-07-28T05:30:16.811Z",
+        "action": "start-review",
+        "performed_by": "AE-0001",
+        "date": "2025-07-28T08:48:20.120Z",
         "meta": {}
       }
     ]

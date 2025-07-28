@@ -2,14 +2,7 @@
 import { useState } from 'react';
 
 // ─── Layout Components ───────────────────────────────────────────────────
-import {
-    Grid,
-    Header,
-    MainContent,
-    SubGrid,
-    SideContent,
-    GridPanel,
-} from '@components/layouts/grid/Grid';
+import { Grid, Header, MainContent, SubGrid, SideContent, GridPanel } from '@components/layouts/grid/Grid';
 import { FlexColumn, FlexRow, Container } from '@components/layouts/flex';
 
 // ─── UI Components ───────────────────────────────────────────────────────
@@ -19,13 +12,7 @@ import Modal, { DefaultView, ConfirmationView } from '@components/popups/Modal';
 import Card from '@features/document/Card';
 import Documentation from '@features/document/Documentation';
 import Page from '@features/details/Page';
-import {
-    Form,
-    CheckboxGroup,
-    RadioGroup,
-    RadioAsCheckbox,
-    TextArea,
-} from '@components/input';
+import { Form, CheckboxGroup, RadioGroup, RadioAsCheckbox, TextArea } from '@components/input';
 // ─── Feature Components ──────────────────────────────────────────────────
 import Suggestion from '@features/suggestion/Suggestion';
 import ActionButtons from '@features/editor-in-chief/ActionButtons';
@@ -55,13 +42,7 @@ export default function FullView({ suggestion, user }) {
     const { setView, CurrentView, keys } = useTabs(
         {
             sectionView: (
-                <SectionView
-                    suggestion={suggestion}
-                    text={suggestion.section}
-                    id={suggestion.id}
-                    role={user.role}
-                    rev={suggestion?.revisedSection}
-                />
+                <SectionView suggestion={suggestion} text={suggestion.section} id={suggestion.id} role={user.role} rev={suggestion?.revisedSection} />
             ),
         },
         <SuggestionContent suggestion={suggestion} role={user.role} />
@@ -72,18 +53,8 @@ export default function FullView({ suggestion, user }) {
             <Header rowSpan={1} colSpan={5}>
                 <BackButton />
                 <div className={styles.header__buttons}>
-                    <Button
-                        isActive={keys['default']}
-                        variant="round"
-                        onClick={() => setView('default')}
-                        text="Suggestion"
-                    />
-                    <Button
-                        isActive={keys['sectionView']}
-                        variant="round"
-                        onClick={() => setView('sectionView')}
-                        text="Section"
-                    />
+                    <Button isActive={keys['default']} variant="round" onClick={() => setView('default')} text="Suggestion" />
+                    <Button isActive={keys['sectionView']} variant="round" onClick={() => setView('sectionView')} text="Section" />
                 </div>
             </Header>
 
@@ -93,11 +64,7 @@ export default function FullView({ suggestion, user }) {
             </MainContent>
 
             <SubGrid columns={'1fr 3fr'} rows={1} rowSpan={1} colSpan={5}>
-                <DocumentationPanel
-                    suggestion={suggestion}
-                    documentation={suggestion.documentation}
-                    user={user}
-                />
+                <DocumentationPanel suggestion={suggestion} documentation={suggestion.documentation} user={user} />
             </SubGrid>
         </Grid>
     );
@@ -107,39 +74,22 @@ const DocumentationPanel = ({ suggestion, documentation, user }) => {
     const [docText, setDocText] = useState();
     const { toggle, toggleView } = useToggle();
     const { document } = useAssociateEditor();
-    const hideAe =
-        suggestion.system.status === Status.System.AWAITING_EIC_INPUT &&
-        user.role === Roles.ASSOCIATE_EDITOR;
-    const hideEic =
-        user.role === Roles.EDITOR_IN_CHIEF &&
-        suggestion.system.status === Status.System.REFINEMENT_CYCLE;
+    const hideAe = suggestion.system.status === Status.System.AWAITING_EIC_INPUT && user.role === Roles.ASSOCIATE_EDITOR;
+    const hideEic = user.role === Roles.EDITOR_IN_CHIEF && suggestion.system.status === Status.System.REFINEMENT_CYCLE;
 
     return (
         <>
-            <FlexColumn
-                className="border-r-gray-300"
-                align="stretch"
-                style={{ paddingRight: '2rem', paddingBottom: '0' }}
-            >
+            <FlexColumn className="border-r-gray-300" align="stretch" style={{ paddingRight: '2rem', paddingBottom: '0' }}>
                 <h2 className="doc_heading">Documentation</h2>
 
                 <div className="document-cards">
                     {documentation.map((item) => (
-                        <Card
-                            key={item.refId}
-                            doc={item}
-                            setDocText={setDocText}
-                        />
+                        <Card key={item.refId} doc={item} setDocText={setDocText} />
                     ))}
                 </div>
 
                 <div style={{ marginTop: 'auto' }}>
-                    <Button
-                        hideOn={hideAe || hideEic}
-                        onClick={toggleView}
-                        text="Add Documentation"
-                        variant="gray"
-                    />
+                    <Button hideOn={hideAe || hideEic} onClick={toggleView} text="Add Documentation" variant="gray" />
                 </div>
             </FlexColumn>
 
@@ -152,9 +102,7 @@ const DocumentationPanel = ({ suggestion, documentation, user }) => {
                     <PlateEditor
                         content={[]}
                         LOCAL_STORAGE_KEY={suggestion.id + user.id}
-                        action={() =>
-                            document(suggestion.id, suggestion.id + user.id)
-                        }
+                        action={() => document(suggestion.id, suggestion.id + user.id)}
                     />
                 )}
             </GridPanel>
@@ -178,16 +126,15 @@ const SuggestionContent = ({ suggestion, role }) => {
 
     const hideAe = suggestion.system.status === Status.System.AWAITING_EIC_INPUT;
     const hideEic =
-        suggestion.system.status === Status.System.REFINEMENT_CYCLE ||
-        suggestion.system.status === Status.System.AWAITING_BOARD_DISCUSSION;
+        suggestion.system.status === Status.System.REFINEMENT_CYCLE || suggestion.system.status === Status.System.AWAITING_BOARD_DISCUSSION;
     return (
         <SubGrid rows={1} columns={5} rowSpan={1} colSpan={5}>
-            <GridPanel rowSpan={1} colSpan={3}>
+            <FlexColumn rowSpan={1} colSpan={3} gap="1rem">
                 <Suggestion suggestion={suggestion} />
                 {role === Roles.ASSOCIATE_EDITOR && (
                     <Button
-                        disableOn={hideAe}
-                        style={{ marginTop: '1rem' }}
+                        disableOn={hideAe || suggestion.system.status === Status.System.TEMPORARILY_PAUSED}
+                        className="mt-5"
                         text={hideAe ? 'Finalized' : 'Finalize'}
                         modal={<FinalizeModal />}
                         onClick={() => finalize(id)}
@@ -197,7 +144,7 @@ const SuggestionContent = ({ suggestion, role }) => {
                     <ActionButtons setView={setVariant} isActive={isActive} />
                 ) : (
                     <Button
-                        hideOn={role === Roles.ASSOCIATE_EDITOR}
+                        hideOn={role === Roles.ASSOCIATE_EDITOR || role === Roles.REVIEWER}
                         style={{ marginTop: '1rem' }}
                         variant="confirm"
                         text="Start Discussion"
@@ -205,36 +152,25 @@ const SuggestionContent = ({ suggestion, role }) => {
                     />
                 )}
                 {role === Roles.REVIEWER &&
-                    suggestion.system.status === 'deferred' && (
+                    suggestion.system.status === Status.System.TEMPORARILY_PAUSED &&
+                    suggestion.status !== Status.Private.Reviewer.RECOMMENDATION_SUBMITTED && (
                         <Form
                             showConfirmation={{
                                 defaultInfo: <RecModal />,
                                 successInfo: <></>,
                             }}
-                            onSubmit={(formData) =>
-                                recommend(suggestion.id, formData)
-                            }
+                            onSubmit={(formData) => recommend(suggestion.id, formData)}
                         >
-                            <RadioAsCheckbox
-                                keyName="decision"
-                                options={options}
-                            />
-                            <TextArea keyName="notes" label="Notes" />
+                            <RadioAsCheckbox className="flex flex-col justify-between" keyName="decision" options={options} />
+                            <TextArea keyName="notes" label="Final Notes" />
                         </Form>
                     )}
-            </GridPanel>
+            </FlexColumn>
 
             <SideContent rowSpan={1} colSpan={2}>
                 {/* <h1>Latest Update</h1> */}
-                {role === Roles.EDITOR_IN_CHIEF && !hideEic && (
-                    <ActionView
-                        suggestion={suggestion}
-                        option={currentVariant}
-                    />
-                )}
-                {role === Roles.ASSOCIATE_EDITOR && (
-                    <Revs suggestion={suggestion} />
-                )}
+                {role === Roles.EDITOR_IN_CHIEF && !hideEic && <ActionView suggestion={suggestion} option={currentVariant} />}
+                {role === Roles.ASSOCIATE_EDITOR && <Revs suggestion={suggestion} />}
             </SideContent>
         </SubGrid>
     );
@@ -243,9 +179,7 @@ const SuggestionContent = ({ suggestion, role }) => {
 const Revs = ({ suggestion }) => {
     const { reviewers, assign } = useAssociateEditor();
 
-    const assigned = Array.isArray(suggestion.assignedReviewers)
-        ? suggestion.assignedReviewers.map((r) => r.id)
-        : [];
+    const assigned = Array.isArray(suggestion.assignedReviewers) ? suggestion.assignedReviewers.map((r) => r.id) : [];
 
     const options = reviewers
         .filter((item) => !assigned.includes(item.id))
@@ -276,32 +210,18 @@ const SectionView = ({ suggestion, text, id, role, rev }) => {
         <SubGrid columns={3} rows={10} style={{ padding: 0 }}>
             <FlexRow colSpan={2} rowSpan={1} gap="1rem">
                 <Button text="Current" onClick={() => setView('current')} />
-                <Button
-                    text={isAe ? 'Editor' : 'Revised Section'}
-                    onClick={() => setView('editor')}
-                />
+                <Button text={isAe ? 'Editor' : 'Revised Section'} onClick={() => setView('editor')} />
             </FlexRow>
 
             <Container colSpan={2} rowSpan={9}>
-                {currentView === 'current' && (
-                    <Page page={suggestion.section} />
+                {currentView === 'current' && <Page page={suggestion.section} />}
+                {role === Roles.ASSOCIATE_EDITOR && currentView === 'editor' && (
+                    <PlateEditor content={suggestion.section.content} LOCAL_STORAGE_KEY={suggestion.id} />
                 )}
-                {role === Roles.ASSOCIATE_EDITOR &&
-                    currentView === 'editor' && (
-                        <PlateEditor
-                            content={suggestion.section.content}
-                            LOCAL_STORAGE_KEY={suggestion.id}
-                        />
-                    )}
                 {role === Roles.REVIEWER && currentView === 'editor' && (
-                    <DiffViewer
-                        original={suggestion.section.content}
-                        revised={rev?.content || []}
-                    />
+                    <DiffViewer original={suggestion.section.content} revised={rev?.content || []} />
                 )}
-                {role === Roles.EDITOR_IN_CHIEF && currentView === 'editor' && (
-                    <Page page={suggestion.revisedSection} />
-                )}
+                {role === Roles.EDITOR_IN_CHIEF && currentView === 'editor' && <Page page={suggestion.revisedSection} />}
             </Container>
 
             <Container colSpan={1} rowSpan={9}></Container>
