@@ -16,12 +16,16 @@ import VersionHistory from '@features/details/VersionHistory.jsx';
 import { Switch } from '@components/ui/switch';
 import { Label } from '@components/ui/label';
 import { pageNavigationPlugin } from '@react-pdf-viewer/page-navigation';
+import { getVersion } from '@utils/api-handlers/curriculums/get-version';
 
 export default function CurriculumDetailsPage({ selectedCurriculum = sessionStorage.getItem('curriculum') }) {
     const { currentPage, nextPage, tableOfContents, previousPage, setCurrentPage, loading } = useTableOfContents(selectedCurriculum);
 
     const [showPdf, setShowPdf] = useState(false);
     const [tab, setTab] = useState('content');
+    const [selectedVersion, setSelectedVersion] = useState('current');
+    const [versionData, setVersionData] = useState(null);
+    const [availableVersions, setAvailableVersions] = useState([]);
     const pageNavigationPluginInstance = pageNavigationPlugin();
     const { jumpToPage } = pageNavigationPluginInstance;
 
@@ -33,6 +37,30 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
     useEffect(() => {
         setTab('content');
     }, [currentPage]);
+
+    useEffect(() => {
+        if (currentPage?.meta?.previous_versions?.length > 0) {
+            Promise.all(
+                currentPage.meta.previous_versions.map((id) =>
+                    getVersion(selectedCurriculum, id)
+                )
+            )
+                .then((res) => setAvailableVersions(res.filter(Boolean)))
+                .catch(() => setAvailableVersions([]));
+        } else {
+            setAvailableVersions([]);
+        }
+        setSelectedVersion('current');
+        setVersionData(null);
+    }, [currentPage, selectedCurriculum]);
+
+    useEffect(() => {
+        if (selectedVersion !== 'current') {
+            getVersion(selectedCurriculum, selectedVersion)
+                .then((ver) => setVersionData(ver))
+                .catch(() => setVersionData(null));
+        }
+    }, [selectedVersion, selectedCurriculum]);
 
     if (loading) return <CurriculumDetailsSkeleton />;
 
@@ -63,8 +91,30 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                 ) : (
                     <>
                         <div className="flex flex-col gap-3.5 px-[2.5%] pt-20 pb-0 sticky top-0 bg-inherit z-10">
-                            <FlexRow gap="0.5rem" className="tab-buttons justify-between">
-                                <h1 className="text-sky-600">| {currentPage?.meta.parent_heading || currentPage?.title}</h1>
+                            <FlexRow gap="0.5rem" className="tab-buttons justify-between items-center">
+                                <div className="flex items-center gap-2">
+                                    <h1 className="text-sky-600">
+                                        | {currentPage?.meta.parent_heading || currentPage?.title}
+                                        {" "}
+                                        {selectedVersion === 'current'
+                                            ? currentPage?.meta?.section_version
+                                            : versionData?.section_version ||
+                                              availableVersions.find((v) => v.id === selectedVersion)?.section_version ||
+                                              ''}
+                                    </h1>
+                                    <select
+                                        className="text-sky-600 bg-white border border-sky-600 rounded px-2 py-1"
+                                        value={selectedVersion}
+                                        onChange={(e) => setSelectedVersion(e.target.value)}
+                                    >
+                                        <option value="current">{currentPage?.meta?.section_version}</option>
+                                        {availableVersions.map((ver) => (
+                                            <option key={ver.id} value={ver.id}>
+                                                {ver.section_version}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
                                 <div className="flex">
                                     <Button size="fit-content" isActive={tab === 'content'} onClick={() => setTab('content')} text="Section" />
                                     <Button size="fit-content" isActive={tab === 'history'} onClick={() => setTab('history')} text="Versions" />
@@ -73,7 +123,11 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                             <hr style={{ color: 'black', width: '100%' }} />
                         </div>
                         <FlexColumn padding={'2.5%'} gap="1.5rem">
-                            {tab === 'content' ? <Page page={currentPage} /> : <VersionHistory meta={currentPage?.meta} />}
+                            {tab === 'content' ? (
+                                <Page page={selectedVersion === 'current' ? currentPage : versionData} />
+                            ) : (
+                                <VersionHistory meta={currentPage?.meta} />
+                            )}
                             <FlexRow justify="space-between" style={{ width: '100%' }}>
                                 <Button
                                     style={{ marginRight: 'auto' }}
