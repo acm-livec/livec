@@ -31,7 +31,7 @@ const getSuggestionById = async (suggestionId, role = null) => {
             } else if (role === Roles.ASSOCIATE_EDITOR) {
                 retS = requestedSuggestion.toAssociateEditor()
             } else if (role === Roles.EDITOR_IN_CHIEF) {
-                retS = requestedSuggestion.toEditorInCheif()
+                retS = requestedSuggestion.toEditorInChief()
             } else if (role === Roles.REVIEWER) {
                 retS = requestedSuggestion.toReviewer()
             }
