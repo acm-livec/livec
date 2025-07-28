@@ -1,10 +1,14 @@
 // models/Users.js
-const db = require('../../../../database/database');
 
 class Users {
+    static dbRef;
+
+    static injectDB(dbInstance) {
+        this.dbRef = dbInstance;
+    }
 
     static getDbRef() {
-        const dbRef = db.users[this.roleKey];
+        const dbRef = this.dbRef[this.roleKey];
         if (!dbRef) throw new Error(`No DB found for role: ${this.roleKey}`);
         return dbRef;
     }
@@ -31,7 +35,7 @@ class Users {
         const registry = this.getRegistry();
 
         for (const [roleKey, CollectionClass] of Object.entries(registry)) {
-            const dbRef = db.users[roleKey];
+            const dbRef = this.dbRef[roleKey];
             if (!dbRef) continue;
 
             await dbRef.read();
@@ -51,7 +55,7 @@ class Users {
         const registry = this.getRegistry();
 
         for (const roleKey of Object.keys(registry)) {
-            const dbRef = db.users[roleKey];
+            const dbRef = this.dbRef[roleKey];
             if (!dbRef) continue;
 
             await dbRef.read();
@@ -71,7 +75,7 @@ class Users {
      * Role-specific: get all users for this subclass
      */
     static async getAll() {
-        const dbRef = db.users[this.roleKey];
+        const dbRef = this.dbRef[this.roleKey];
         if (!dbRef) throw new Error(`No DB found for role: ${this.roleKey}`);
 
         await dbRef.read();
@@ -82,7 +86,7 @@ class Users {
      * Role-specific: find one user by ID
      */
     static async findById(id) {
-        const dbRef = db.users[this.roleKey];
+        const dbRef = this.dbRef[this.roleKey];
         if (!dbRef) throw new Error(`No DB found for role: ${this.roleKey}`);
 
         await dbRef.read();
@@ -94,7 +98,7 @@ class Users {
      * Role-specific: find one user by email
      */
     static async findByEmail(email) {
-        const dbRef = db.users[this.roleKey];
+        const dbRef = this.dbRef[this.roleKey];
         if (!dbRef) throw new Error(`No DB found for role: ${this.roleKey}`);
 
         await dbRef.read();
@@ -114,7 +118,7 @@ class Users {
      * Role-specific: update an existing user instance
      */
     static async update(userInstance) {
-        const dbRef = db.users[this.roleKey];
+        const dbRef = this.dbRef[this.roleKey];
         if (!dbRef) throw new Error(`No DB found for role: ${this.roleKey}`);
 
         await dbRef.read();
@@ -132,7 +136,7 @@ class Users {
      * Internal helper to insert based on roleKey
      */
     static async _insertFromRole(roleKey, userInstance) {
-        const dbRef = db.users[roleKey];
+        const dbRef = this.dbRef[roleKey];
         if (!dbRef) throw new Error(`No DB found for role: ${roleKey}`);
 
         await dbRef.read();
@@ -146,7 +150,7 @@ class Users {
      * Internal helper to get all users for a specific roleKey/Model
      */
     static async _getFromRole(roleKey, Model) {
-        const dbRef = db.users[roleKey];
+        const dbRef = this.dbRef[roleKey];
         if (!dbRef) throw new Error(`No DB found for role: ${roleKey}`);
 
         await dbRef.read();

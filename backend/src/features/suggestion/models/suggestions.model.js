@@ -1,10 +1,13 @@
-const db = require('../../../database/database');
 const Suggestion = require('./suggestion.model');
 const { Roles } = require('../../../../../docs/constants/roles.js');
 const { Status } = require('../../../../../docs/constants/status.js');
 
 class Suggestions {
-    static dbRef = db.suggestions;
+    static dbRef;
+
+    static injectDB(dbInstance) {
+        this.dbRef = dbInstance;
+    }
 
 
     /**

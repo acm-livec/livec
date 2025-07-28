@@ -6,7 +6,11 @@ const {
 const addCurriculumVersion = require('../../curriculum/services/add-version');
 const { generateSectionId } = require('../../../shared/utils/generate-id');
 const kebabToCamel = require('../../../shared/utils/kebabToCamel');
-const db = require('../../../database/database');
+let db;
+
+function injectDB(instance) {
+    db = instance;
+}
 
 const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.service',
@@ -99,4 +103,7 @@ const finalizeImplementation = async (id, eicId, notes, message) => {
     }
 };
 
-module.exports = finalizeImplementation;
+module.exports = {
+    finalizeImplementation,
+    injectDB
+};

@@ -1,8 +1,11 @@
-const db = require('../../../database/database');
 const CurriculumVersion = require('./curriculum-version.model');
 const kebabToCamel = require('../../../shared/utils/kebabToCamel');
 class CurriculumVersions {
-    static dbRef = db.curriculums;
+    static dbRef;
+
+    static injectDB(dbInstance) {
+        this.dbRef = dbInstance;
+    }
 
     static async getAll(curriculum) {
         await this.dbRef[curriculum].curriculumVersions.read();
@@ -25,7 +28,7 @@ class CurriculumVersions {
         let found = this.dbRef[curriculum].curriculumVersions.data.find(v => v.id === id);
 
         if (!found) {
-            const tocRef = db.curriculums?.[curriculum]?.tableOfContents;
+            const tocRef = this.dbRef?.[curriculum]?.tableOfContents;
             if (tocRef) {
                 await tocRef.read();
                 const exists = tocRef.data.some(section =>
