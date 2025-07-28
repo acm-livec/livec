@@ -1,4 +1,9 @@
 // models/Users.js
+import CommunityMembers from './community-member/members.model.js';
+import AssociateEditors from './associate-editor/editors.model.js';
+import Reviewers from './reviewer/reviewers.model.js';
+import ChiefEditors from './editor-in-chief/chiefs.model.js';
+import Admins from './admin/admins.model.js';
 
 class Users {
     static dbRef;
@@ -18,11 +23,11 @@ class Users {
      */
     static getRegistry() {
         return {
-            communityMembers: require('./community-member/members.model'),
-            associateEditors: require('./associate-editor/editors.model'),
-            reviewers: require('./reviewer/reviewers.model'),
-            chiefEditors: require('./editor-in-chief/chiefs.model'),
-            admins: require('./admin/admins.model')
+            communityMembers: CommunityMembers,
+            associateEditors: AssociateEditors,
+            reviewers: Reviewers,
+            chiefEditors: ChiefEditors,
+            admins: Admins
             // reviewers: ...
         };
     }

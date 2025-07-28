@@ -1,7 +1,8 @@
-const getFinalAssociateEditorAssignedSuggestions = require('../../../services/users/associate-editor/get-final')
-const { AppError } = require('../../../../../shared/errors');
+import getFinalAssociateEditorAssignedSuggestions from '../../../services/users/associate-editor/get-final';
+import { AppError } from '../../../../../shared/errors';
+import baseLogger from '../../../../../../logger/logger.js';
 
-const logger = require('../../../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'community-member.controller',
     method: "getSuggestions",
     params: ["req.params"]

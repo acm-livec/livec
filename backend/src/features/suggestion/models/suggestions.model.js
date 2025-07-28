@@ -1,6 +1,6 @@
-const Suggestion = require('./suggestion.model');
-const { Roles } = require('../../../../../docs/constants/roles.js');
-const { Status } = require('../../../../../docs/constants/status.js');
+import Suggestion from './suggestion.model';
+import {  Roles  } from '../../../../../docs/constants/roles.js';
+import {  Status  } from '../../../../../docs/constants/status.js';
 
 class Suggestions {
     static dbRef;

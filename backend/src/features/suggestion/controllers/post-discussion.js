@@ -1,7 +1,8 @@
-const { handleFinalDiscussion } = require('../services')
-const { AppError } = require('../../../shared/errors');
+import { handleFinalDiscussion } from '../services';
+import { AppError } from '../../../shared/errors';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'suggestion.controller',
     method: "postDiscussion",
     params: ['req.body']

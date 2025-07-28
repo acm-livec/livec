@@ -1,4 +1,4 @@
-const { generateUserId } = require('../../../../shared/utils/generate-id');
+import {  generateUserId  } from '../../../../shared/utils/generate-id';
 
 
 class User {

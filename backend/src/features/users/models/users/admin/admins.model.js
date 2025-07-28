@@ -1,5 +1,5 @@
-const Users = require('../users.model.js');
-const Admin = require('./admin.model.js');
+import Users from '../users.model.js';
+import Admin from './admin.model.js';
 
 class Admins extends Users {
     static Model = Admin;

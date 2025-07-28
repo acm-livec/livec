@@ -1,8 +1,8 @@
-const getFullCurriculum = require('./get-one');
-const getCurriculumSection = require('./get-section');
-const updateCurriculumSection = require('./update-section');
-const addCurriculumVersion = require('./add-version');
-const getCurriculumVersion = require('./get-version');
+import getFullCurriculum from './get-one';
+import getCurriculumSection from './get-section';
+import updateCurriculumSection from './update-section';
+import addCurriculumVersion from './add-version';
+import getCurriculumVersion from './get-version';
 
 module.exports = {
     getFullCurriculum,

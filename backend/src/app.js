@@ -1,14 +1,14 @@
-const express = require('express');
-const cors = require('cors')
+import express from 'express';
+import cors from 'cors';
 let db;
 
 function injectDB(instance) {
     db = instance;
 }
-const authRoutes = require('./features/auth/routes.js');
-const suggestionRoutes = require('./features/suggestion/routes.js');
-const userRoutes = require('./features/users/routes.js');
-const curriculumRoutes = require('./features/curriculum/routes.js');
+import authRoutes from './features/auth/routes.js';
+import suggestionRoutes from './features/suggestion/routes.js';
+import userRoutes from './features/users/routes.js';
+import curriculumRoutes from './features/curriculum/routes.js';
 
 const app = express();
 app.use(express.json());

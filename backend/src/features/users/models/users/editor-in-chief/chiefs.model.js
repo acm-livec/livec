@@ -1,5 +1,5 @@
-const Users = require('../users.model.js');
-const EditorInChief = require('./chief.model.js');
+import Users from '../users.model.js';
+import EditorInChief from './chief.model.js';
 
 
 class EditorsInChief extends Users {

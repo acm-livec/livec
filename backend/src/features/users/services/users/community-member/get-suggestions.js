@@ -1,8 +1,9 @@
-const { AppError } = require('../../../../../shared/errors');
-const Suggestions = require('../../../../suggestion/models/suggestions.model.js')
-const { getUserNameById } = require('../../../../../shared/utils/getUserNameById')
+import { AppError } from '../../../../../shared/errors';
+import Suggestions from '../../../../suggestion/models/suggestions.model.js';
+import { getUserNameById } from '../../../../../shared/utils/getUserNameById';
+import baseLogger from '../../../../../../logger/logger.js';
 
-const logger = require('../../../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'community-member.service',
     method: "getAllCommunityMemberSuggestions",
     params: ['userId']

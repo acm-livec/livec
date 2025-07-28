@@ -1,8 +1,9 @@
-const CommunityMembers = require('../../users/models/users/community-member/members.model');
-const { UserAlreadyExistsError, AppError } = require('../../../shared/errors');
-const Users = require('../../users/models/users/users.model')
+import CommunityMembers from '../../users/models/users/community-member/members.model.js';
+import { UserAlreadyExistsError, AppError } from '../../../shared/errors';
+import Users from '../../users/models/users/users.model.js';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'auth.service',
     method: "handleRegisterUser",
     params: ["name", "email", "password"]

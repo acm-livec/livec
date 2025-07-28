@@ -1,5 +1,4 @@
-const { handleLoginUser } = require('./handle-login')
-const { handleRegisterUser } = require('./handle-register')
+import { handleLoginUser } from './handle-login';
+import { handleRegisterUser } from './handle-register';
 
-
-module.exports = { handleLoginUser, handleRegisterUser }
+module.exports = { handleLoginUser, handleRegisterUser };

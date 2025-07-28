@@ -1,6 +1,6 @@
 // models/CommunityMember.js
-const User = require('../user.model');
-const { Roles } = require('../../../../../../../docs/constants/roles.js');
+import User from '../user.model';
+import {  Roles  } from '../../../../../../../docs/constants/roles.js';
 
 
 class EditorInChief extends User {

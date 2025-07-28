@@ -1,7 +1,8 @@
-const { getSuggestionById } = require('../services')
-const { AppError } = require('../../../shared/errors');
+import { getSuggestionById } from '../services';
+import { AppError } from '../../../shared/errors';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'suggestion.controller',
     method: "getSuggestion",
     params: ['req.body']

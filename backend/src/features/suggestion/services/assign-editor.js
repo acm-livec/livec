@@ -1,8 +1,9 @@
-const { AppError, NoAssociateEditorsFoundError } = require('../../../shared/errors');
-const AssociateEditors = require('../../users/models/users/associate-editor/editors.model.js')
-const Suggestions = require('../models/suggestions.model.js')
+import { AppError, NoAssociateEditorsFoundError } from '../../../shared/errors';
+import AssociateEditors from '../../users/models/users/associate-editor/editors.model.js';
+import Suggestions from '../models/suggestions.model.js';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'auth.service',
     method: "assignAssociateEditorToSuggestion",
     params: ['suggestion']

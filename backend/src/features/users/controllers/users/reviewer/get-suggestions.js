@@ -1,7 +1,8 @@
-const getReviewerAssignedSuggestions = require('../../../services/users/reviewer/get-suggestions')
-const { AppError } = require('../../../../../shared/errors');
+import getReviewerAssignedSuggestions from '../../../services/users/reviewer/get-suggestions';
+import { AppError } from '../../../../../shared/errors';
+import baseLogger from '../../../../../../logger/logger.js';
 
-const logger = require('../../../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'reviewer',
     method: "getSuggestions",
     params: ["req.params"]

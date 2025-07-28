@@ -1,5 +1,5 @@
-const { flattenSections } = require('../../../../../docs/shared/utils/flatten.js');
-const Curriculum = require('./curriculum.model');
+import {  flattenSections  } from '../../../../../docs/shared/utils/flatten.js';
+import Curriculum from './curriculum.model';
 
 
 

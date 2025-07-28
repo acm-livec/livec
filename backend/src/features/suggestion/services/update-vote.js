@@ -1,8 +1,9 @@
-const { AppError, SuggestionNotFoundError } = require('../../../shared/errors');
-const Suggestions = require('../models/suggestions.model.js')
-const { updateCurriculumSection } = require('../../curriculum/services');
+import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import Suggestions from '../models/suggestions.model.js';
+import { updateCurriculumSection } from '../../curriculum/services';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'suggestion.service',
     method: "updateVote",
     params: ['suggestionId', 'author', 'markdownText']

@@ -1,6 +1,6 @@
 // models/CommunityMembers.js
-const Users = require('../users.model');
-const AssociateEditor = require('./editor.model');
+import Users from '../users.model';
+import AssociateEditor from './editor.model';
 
 class AssociateEditors extends Users {
     static roleKey = 'associateEditors';

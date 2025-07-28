@@ -1,6 +1,7 @@
-const Suggestions = require('../../../../suggestion/models/suggestions.model.js')
+import Suggestions from '../../../../suggestion/models/suggestions.model.js';
+import baseLogger from '../../../../../../logger/logger.js';
 
-const logger = require('../../../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'reviewer.service',
     method: "getReviewerAssignedSuggestions",
     params: ['userId']

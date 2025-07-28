@@ -1,4 +1,4 @@
-const { nanoid } = require('nanoid');
+import {  nanoid  } from 'nanoid';
 
 class CurriculumVersion {
     constructor(data = {}) {

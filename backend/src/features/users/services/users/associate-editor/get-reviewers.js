@@ -1,6 +1,8 @@
-const { AppError } = require('../../../../../shared/errors');
-const Reviewers = require('../../../models/users/reviewer/reviewers.model.js')
-const logger = require('../../../../../../logger/logger.js').addSource({
+import { AppError } from '../../../../../shared/errors';
+import Reviewers from '../../../models/users/reviewer/reviewers.model.js';
+import baseLogger from '../../../../../../logger/logger.js';
+
+const logger = baseLogger.addSource({
     file: 'associate-editor.service',
     method: "getAssignedReviewers",
     params: ['userId']

@@ -1,7 +1,8 @@
-const getFinalizedSuggestions = require('../../../services/users/editor-in-chief/get-finalized')
-const { AppError } = require('../../../../../shared/errors');
+import getFinalizedSuggestions from '../../../services/users/editor-in-chief/get-finalized';
+import { AppError } from '../../../../../shared/errors';
+import baseLogger from '../../../../../../logger/logger.js';
 
-const logger = require('../../../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'reviewer',
     method: "getSuggestions",
     params: ["req.params"]

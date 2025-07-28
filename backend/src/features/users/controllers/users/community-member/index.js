@@ -1,3 +1,3 @@
-const getSuggestions = require('./get-suggestions')
+import getSuggestions from './get-suggestions';
 
-module.exports = {getSuggestions}
+module.exports = { getSuggestions };
