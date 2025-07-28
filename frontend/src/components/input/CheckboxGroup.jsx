@@ -8,11 +8,7 @@ export default function CheckboxGroup({
     label,
     options = [], // Array of { label, value }
 }) {
-    const {
-        key,
-        value,
-        handleChange: baseChange,
-    } = useInputField({ keyName, val });
+    const { key, value, handleChange: baseChange } = useInputField({ keyName, val });
 
     const handleCheckboxChange = (e) => {
         const { value: optionValue, checked } = e.target;
@@ -28,10 +24,10 @@ export default function CheckboxGroup({
     };
 
     return (
-        <fieldset className={`${styles.checkboxGroup} ${className}`}>
+        <fieldset className="flex flex-col ">
             {label && <legend>{label}</legend>}
             {options.map((option, index) => (
-                <label key={index} className={styles.checkboxLabel}>
+                <label key={index}>
                     <input
                         type="checkbox"
                         id={`${key}-${index}`}
@@ -39,7 +35,7 @@ export default function CheckboxGroup({
                         value={option.value}
                         checked={value.includes(option.value)}
                         onChange={handleCheckboxChange}
-                        className={styles.checkboxInput}
+                        className="cursor-pointer"
                     />
                     {option.label}
                 </label>

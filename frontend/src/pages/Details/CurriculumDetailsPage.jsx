@@ -13,12 +13,22 @@ import { PublicForum } from '@features/details/Forum';
 import { toTitleCase } from '@utils/format';
 import CurriculumDetailsSkeleton from './CurriculumDetailsSkeleton.jsx';
 import VersionHistory from '@features/details/VersionHistory.jsx';
+import { Switch } from '@components/ui/switch';
+import { Label } from '@components/ui/label';
+import { pageNavigationPlugin } from '@react-pdf-viewer/page-navigation';
 
 export default function CurriculumDetailsPage({ selectedCurriculum = sessionStorage.getItem('curriculum') }) {
     const { currentPage, nextPage, tableOfContents, previousPage, setCurrentPage, loading } = useTableOfContents(selectedCurriculum);
 
     const [showPdf, setShowPdf] = useState(false);
     const [tab, setTab] = useState('content');
+    const pageNavigationPluginInstance = pageNavigationPlugin();
+    const { jumpToPage } = pageNavigationPluginInstance;
+
+    const jumpToPdf = (page) => {
+        console.log('jumping to:', page);
+        jumpToPage(page);
+    };
 
     useEffect(() => {
         setTab('content');
@@ -35,35 +45,30 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                     <Breadcrumbs />
                 </div>
 
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                     <h1 className="curricula-heading">{toTitleCase(selectedCurriculum) || 'None'}</h1>
-                    <Button
-                        variant="normal"
-                        size="fit-content "
-                        onClick={() => setShowPdf((prev) => !prev)}
-                        text={showPdf ? 'Show HTML View' : 'Show PDF View'}
-                    />
+                    <div className="flex items-center gap-2.5">
+                        <Switch id="toggle-view" onCheckedChange={() => setShowPdf((prev) => !prev)} />
+                        <Label htmlFor="toggle-view">PDF View</Label>
+                    </div>
                 </div>
                 <hr />
 
-                <TableOfContents jumpToPage={setCurrentPage} tableOfContents={tableOfContents} />
+                <TableOfContents jumpToPage={setCurrentPage} tableOfContents={tableOfContents} showPdf={showPdf} jumpToPdf={jumpToPdf} />
             </SideBar>
 
             <PageContent>
-                {/*
-                    <a href="/CS2023.pdf" download className="download-button">
-                        Download the  {selectedCurriculum || sessionStorage.getItem('curriculum')} Curriculum
-                    </a> */}
-
                 {showPdf ? (
-                    <PdfView />
+                    <PdfView navPlugin={pageNavigationPluginInstance} selectedCurriculum={selectedCurriculum} />
                 ) : (
                     <>
                         <div className="flex flex-col gap-3.5 px-[2.5%] pt-20 pb-0 sticky top-0 bg-inherit z-10">
-                            <h1 className="text-sky-600">| {currentPage?.meta.parent_heading || currentPage?.title}</h1>
-                            <FlexRow gap="0.5rem" className="tab-buttons">
-                                <Button variant="round" isActive={tab === 'content'} onClick={() => setTab('content')} text="Section" />
-                                <Button variant="round" isActive={tab === 'history'} onClick={() => setTab('history')} text="Versions" />
+                            <FlexRow gap="0.5rem" className="tab-buttons justify-between">
+                                <h1 className="text-sky-600">| {currentPage?.meta.parent_heading || currentPage?.title}</h1>
+                                <div className="flex">
+                                    <Button size="fit-content" isActive={tab === 'content'} onClick={() => setTab('content')} text="Section" />
+                                    <Button size="fit-content" isActive={tab === 'history'} onClick={() => setTab('history')} text="Versions" />
+                                </div>
                             </FlexRow>
                             <hr style={{ color: 'black', width: '100%' }} />
                         </div>
@@ -90,10 +95,10 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                             <hr />
 
                             {currentPage?.public_feedback && (
-                                <>
+                                <section className="flex flex-col gap-5 pb-[50vh]">
                                     <h2>See what others have commented on this section</h2>
                                     <PublicForum fb={currentPage?.public_feedback} />
-                                </>
+                                </section>
                             )}
                         </FlexColumn>
                     </>

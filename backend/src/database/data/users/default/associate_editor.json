@@ -7,14 +7,8 @@
     "role": "associate-editor",
     "discipline": "computer-science",
     "assignedEditorInChief": "EIC-0001",
-    "assignedReviewers": [
-      "R-0001",
-      "R-7562",
-      "R-F35G"
-    ],
-    "assignedSuggestions": [
-
-    ]
+    "assignedReviewers": ["R-0001", "R-7562", "R-F35G"],
+    "assignedSuggestions": []
   },
   {
     "id": "AE-0002",
@@ -22,7 +16,7 @@
     "email": "jacobsmith@email.com",
     "password": "password",
     "role": "associate-editor",
-    "discipline": "cybersecurity",
+    "discipline": "computer-science",
     "assignedEditorInChief": "EIC-0001",
     "assignedReviewers": [],
     "assignedSuggestions": []

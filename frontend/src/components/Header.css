@@ -3,7 +3,6 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 72px;
-    background-color: var(--color-acm-blue);
     padding: 0 5% 0 2%;
     color: rgba(255, 255, 255, 0.9);
 }

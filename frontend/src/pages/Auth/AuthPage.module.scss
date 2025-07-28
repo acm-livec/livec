@@ -29,6 +29,15 @@
     height: 100%;
     gap: 15px;
 
+    input,
+    button {
+    width: 100%;
+    border-radius: 8px;
+    height: 40px;
+    font-size: 1.15rem;
+}
+
+
     h1 {
         margin-bottom: 1.5rem;
         font-weight: 500;
@@ -50,12 +59,12 @@
 
         &:focus {
             outline: none;
-            border: 2px solid var(--color-accent);
+            border: 2px solid #0085ca;
         }
     }
 
     button {
-        background-color: var(--color-accent);
+        background-color: #0085ca;
         border: 1px solid #ccc;
         color: white;
 
@@ -72,10 +81,3 @@
     }
 }
 
-input,
-button {
-    width: 100%;
-    border-radius: 8px;
-    height: 40px;
-    font-size: 1.15rem;
-}

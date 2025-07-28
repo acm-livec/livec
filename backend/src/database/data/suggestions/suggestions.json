@@ -156,6 +156,20 @@
         "author": "LiveC",
         "date": "2025-07-27T23:35:18.123Z",
         "message": "Your suggestion is currently now under discussion by the Editorial Board for a final decision!"
+      },
+      {
+        "refId": "DOC-P5j7iU9n",
+        "status": "accepted",
+        "author": "EIC-0001",
+        "date": "2025-07-28T04:09:58.159Z",
+        "message": "Hi yall we did that"
+      },
+      {
+        "refId": "DOC-xvEehWdC",
+        "status": "accepted",
+        "author": "EIC-0001",
+        "date": "2025-07-28T04:11:52.330Z",
+        "message": "d"
       }
     ],
     "documentation": [
@@ -229,6 +243,20 @@
             ]
           }
         ]
+      },
+      {
+        "action": "accepted-by-board",
+        "refId": "DOC-ZJcDNeUu",
+        "author": "EIC-0001",
+        "date": "2025-07-28T04:09:58.158Z",
+        "content": "very nice"
+      },
+      {
+        "action": "accepted-by-board",
+        "refId": "DOC-1TpLc6Pj",
+        "author": "EIC-0001",
+        "date": "2025-07-28T04:11:52.330Z",
+        "content": "d"
       }
     ],
     "history": [

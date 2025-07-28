@@ -28,6 +28,9 @@
     height: 100%;
     width: 100%;
     // overflow: hidden;
+     hr {
+        margin: 1rem 0;
+    }
 }
 
 .breadcrumbs {
@@ -64,13 +67,11 @@
 }
 
 .curricula-heading {
-    margin: 0 0 2rem;
+    // margin: 0 0 2rem;
     font-size: 1.5rem;
     color: #0c44a5;
 
-    hr {
-        margin: 1rem 0;
-    }
+   
 }
 
 .toc-item {

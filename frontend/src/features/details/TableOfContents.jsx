@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import Accordion from '@components/Accordion';
 
-export default function TableOfContents({ jumpToPage, tableOfContents }) {
+export default function TableOfContents({ jumpToPage, tableOfContents, showPdf, jumpToPdf }) {
     // Annotate nested sections with page ranges for accordion headers
     const annotateWithRanges = (items) =>
         items.map((item) => {
@@ -29,10 +29,7 @@ export default function TableOfContents({ jumpToPage, tableOfContents }) {
         const stack = [{ level: 0, children: root }];
         items.forEach((item) => {
             const node = { ...item, units: [] };
-            while (
-                stack.length &&
-                item.level <= stack[stack.length - 1].level
-            ) {
+            while (stack.length && item.level <= stack[stack.length - 1].level) {
                 stack.pop();
             }
             stack[stack.length - 1].children.push(node);
@@ -43,36 +40,25 @@ export default function TableOfContents({ jumpToPage, tableOfContents }) {
 
     const bg = { 0: 'second', 1: 'third' };
 
-    const nested = useMemo(
-        () => buildNested(tableOfContents),
-        [tableOfContents]
-    );
+    const nested = useMemo(() => buildNested(tableOfContents), [tableOfContents]);
 
     const renderItems = (items) => (
         <ul className="table-of-contents">
             {items.map((item) => {
                 const hasChildren = item.units && item.units.length > 0;
                 return (
-                    <li
-                        key={item.id}
-                        className={`indented ${!hasChildren ? 'toc-item' : ''}`}
-                        style={{ '--indent-level': item.level - 1 }}
-                    >
+                    <li key={item.id} className={`indented ${!hasChildren ? 'toc-item' : ''}`} style={{ '--indent-level': item.level - 1 }}>
                         {hasChildren ? (
-                            <Accordion
-                                css={bg[String(item.level - 1)] || ''}
-                                item={item}
-                                content={renderItems(item.units)}
-                            />
+                            <Accordion css={bg[String(item.level - 1)] || ''} item={item} content={renderItems(item.units)} />
                         ) : (
                             <div
                                 className="toc-leaf"
-                                onClick={() => jumpToPage(item)}
+                                onClick={() => {
+                                    jumpToPdf(item.page_number - 1);
+                                    jumpToPage(item);
+                                }}
                             >
                                 {item.title}
-                                {/* {item.page_number != null && (
-									<span className="page-number">Page {item.page_number}</span>
-								)} */}
                             </div>
                         )}
                     </li>

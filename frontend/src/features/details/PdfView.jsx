@@ -1,36 +1,24 @@
-import { useContext, useState, useEffect } from 'react';
-
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/page-navigation/lib/styles/index.css';
 import '@react-pdf-viewer/zoom/lib/styles/index.css';
 
 import { Viewer, Worker } from '@react-pdf-viewer/core';
-import { pageNavigationPlugin } from '@react-pdf-viewer/page-navigation';
-import { zoomPlugin } from '@react-pdf-viewer/zoom';
+import { Disciplines } from '@docs/constants/disciplines';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 
-export default function PdfView() {
-    const pageNavigationPluginInstance = pageNavigationPlugin();
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
-    const [open, setOpen] = useState(false);
+export default function PdfView({ navPlugin, selectedCurriculum }) {
+    const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
-    const { jumpToPage } = pageNavigationPluginInstance;
-
-    const zoomPluginInstance = zoomPlugin({
-        defaultScale: 0.85,
-    });
-
-    const { ZoomInButton, ZoomOutButton, ZoomPopover } = zoomPluginInstance;
-    const { zoomTo } = zoomPluginInstance;
-
-    const onDocumentLoad = () => {
-        zoomTo(0.85);
+    const pdf = {
+        [Disciplines.COMPUTER_SCIENCE]: '/CS2023.pdf',
+        [Disciplines.CYBERSECURITY]: '/csec2017.pdf',
     };
 
     return (
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-            <ZoomInButton />
-            <Viewer fileUrl="/CS2023.pdf" plugins={[pageNavigationPluginInstance, zoomPluginInstance]} onDocumentLoad={onDocumentLoad} />
-            <ZoomInButton />
+            <Viewer fileUrl={pdf[selectedCurriculum]} plugins={[defaultLayoutPluginInstance, navPlugin]} />
         </Worker>
     );
 }

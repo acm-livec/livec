@@ -1,11 +1,6 @@
 import { BackButton } from '@components/buttons';
 import { toTitleCase, formatDate } from '@utils/format';
-import {
-    Grid,
-    Header,
-    SideContent,
-    MainContent,
-} from '@components/layouts/grid/Grid';
+import { Grid, Header, SideContent, MainContent } from '@components/layouts/grid/Grid';
 import { postImplementation } from '@utils/api-handlers/suggestions';
 
 import Suggestion from '@features/suggestion/Suggestion';
@@ -33,19 +28,10 @@ export default function DefaultView({ suggestion, user }) {
 
             <MainContent>
                 <Suggestion suggestion={suggestion} />
-                {suggestion?.system?.status === 'closed' &&
-                    user.isEditorInChief() && (
-                        <ImplementationForm suggestion={suggestion} />
-                    )}
+                {user.isEditorInChief() && <ImplementationForm suggestion={suggestion} />}
             </MainContent>
 
-            <SideContent>
-                {user.isCommunityMember ? (
-                    <PublicView updates={publicUpdates} />
-                ) : (
-                    <InteralView history={history} />
-                )}
-            </SideContent>
+            <SideContent>{user.isCommunityMember ? <PublicView updates={publicUpdates} /> : <InteralView history={history} />}</SideContent>
         </Grid>
     );
 }
@@ -56,13 +42,7 @@ const PublicView = ({ updates }) => {
             <h2>Updates</h2>
             <div>
                 {updates.map((item) => (
-                    <Message
-                        key={item.refId}
-                        status={item.status}
-                        author={item.author}
-                        content={item.message}
-                        date={item.date}
-                    />
+                    <Message key={item.refId} status={item.status} author={item.author} content={item.message} date={item.date} />
                 ))}
             </div>
         </>
@@ -94,12 +74,7 @@ const ImplementationForm = ({ suggestion }) => {
     return (
         <Form
             onSubmit={async (data) => {
-                await postImplementation(
-                    suggestion.id,
-                    user.id,
-                    data.forPrivate,
-                    data.forPublic
-                );
+                await postImplementation(suggestion.id, user.id, data.forPrivate, data.forPublic);
                 setDone(true);
             }}
         >

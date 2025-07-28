@@ -21,14 +21,17 @@ export default {
                         h3: {
                             fontSize: '1.75rem',
                             fontWeight: '600',
-                            color: '#4b5563',
+                            color: '#4b5563', // gray-600
                         },
                     },
                 },
             },
-        },
-        fontFamily: {
-            monts: ['Montserrat', 'sans-serif'],
+            fontFamily: {
+                monts: ['Montserrat', 'sans-serif'],
+            },
+            colors: {
+                'acm-blue': '#0085ca',
+            },
         },
     },
     plugins: [typography],

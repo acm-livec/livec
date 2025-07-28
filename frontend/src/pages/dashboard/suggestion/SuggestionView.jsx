@@ -50,6 +50,7 @@ export default function SuggestionView() {
     const isDeferred = systemStatus === Status.System.EXTERNAL_REVIEW;
     const isNew = systemStatus === Status.System.PRELIMINARY_REVIEW;
     const isFinal = systemStatus === Status.System.IN_BOARD_DISCUSSION;
+    const ready = systemStatus === Status.System.READY_FOR_IMPLEMENTATION;
 
     console.log({ isClosed, isDeferred, isNew, isFinal });
 
@@ -58,6 +59,8 @@ export default function SuggestionView() {
     if (isNew) return <NewView suggestion={suggestion} />;
 
     if (isFinal) return <FinalView suggestion={suggestion} user={user} />;
+
+    if (ready) return <DefaultView suggestion={suggestion} user={user} />;
 
     return <FullView suggestion={suggestion} user={user} />;
 }

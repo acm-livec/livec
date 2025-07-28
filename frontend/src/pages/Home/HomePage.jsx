@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { API } from '@api/client';
 import { Button } from '@components/buttons';
+
 export default function HomePage() {
     const [loading, setLoading] = useState(false);
 
     const handleReset = async () => {
-        if (
-            !window.confirm('⚠️ Are you sure you want to reset the database?')
-        ) {
+        if (!window.confirm('⚠️ Are you sure you want to reset the database?')) {
             return;
         }
         setLoading(true);
@@ -23,12 +22,8 @@ export default function HomePage() {
     };
 
     return (
-        <section className="home">
-            <Button
-                onClick={handleReset}
-                disableOn={loading}
-                text={loading ? 'Resetting…' : 'Reset Database'}
-            />
+        <section>
+            <Button onClick={handleReset} disableOn={loading} text={loading ? 'Resetting…' : 'Reset Database'} />
         </section>
     );
 }

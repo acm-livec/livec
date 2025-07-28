@@ -11,14 +11,12 @@ export default function Header() {
     const navigate = useNavigate();
 
     return (
-        <header>
+        <header className="bg-acm-blue">
             <div className="identity" onClick={() => navigate('/')}>
                 <div className="logo">
                     <img className="logo__img " src={acmLogo}></img>
                 </div>
-                <h1 className="site-name  text-2xl font-medium font-monts">
-                    LiveC Demo
-                </h1>
+                <h1 className="site-name  text-2xl font-medium font-monts">LiveC Demo</h1>
             </div>
 
             <nav className="navigation">
@@ -29,10 +27,7 @@ export default function Header() {
                     Curriculums
                 </Link>
                 {user ? (
-                    <Link
-                        className="navigation-item"
-                        to={`/dashboard/${user.id}/overview`}
-                    >
+                    <Link className="navigation-item" to={`/dashboard/${user.id}/overview`}>
                         Profile
                     </Link>
                 ) : (

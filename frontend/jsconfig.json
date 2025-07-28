@@ -15,7 +15,6 @@
             "@context/*": ["src/context/*"],
             "@assets/*": ["src/assets/*"],
             "@hooks/*": ["src/hooks/*"],
-            "@sections/*": ["src/pages/Home/sections/*"],
             "@lib/*": ["src/lib/*"],
             "@docs/*": ["../docs/*"]
         },

@@ -4,8 +4,4 @@
 
 @forward './csdoc-styling.scss';
 
-// Plain CSS files: use @import instead
-@forward './flex.css';
 @forward './typography.css';
-// @import './variants.css';
-@forward './colors.css';
