@@ -309,9 +309,20 @@ class Suggestion {
     }
 
 
-    addRecommendation(reviewerId, decision) {
+    addRecommendation(reviewerId, decision, notes = '') {
         this._updateStatus(Actions.RECOMMENDATION_BY_REVIEWER)
-        this.insertHistory(Actions.RECOMMENDATION_BY_REVIEWER, reviewerId, { decision })
+        this.insertHistory(
+            Actions.RECOMMENDATION_BY_REVIEWER,
+            reviewerId,
+            { decision }
+        )
+        if (notes) {
+            this.insertDocumentation(
+                Actions.RECOMMENDATION_BY_REVIEWER,
+                reviewerId,
+                notes
+            )
+        }
         this.updateReviewer(reviewerId, decision)
 
         const allDone = this.assigned_reviewers.length > 0 &&

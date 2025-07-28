@@ -197,10 +197,16 @@ const Revs = ({ suggestion }) => {
                 {reviewers.map((rev) => {
                     const rec = assignedMap[rev.id];
                     let status = '';
+                    let decision = '';
                     let disabled = false;
 
                     if (rec) {
-                        status = rec === 'pending' ? 'Reviewing' : 'Reviewed';
+                        if (rec === 'pending') {
+                            status = 'Reviewing';
+                        } else {
+                            status = 'Reviewed';
+                            decision = rec;
+                        }
                         disabled = true;
                     }
 
@@ -209,6 +215,7 @@ const Revs = ({ suggestion }) => {
                             key={rev.id}
                             reviewer={rev}
                             status={status}
+                            decision={decision}
                             disabled={disabled}
                             onInvite={() => handleInvite(rev.id)}
                         />

@@ -17,7 +17,12 @@ const logger = require('@logger').addSource({
  * @param {string} reviewerId 
  * @param {string} decision 
  */
-const addRecommendationFromReviewer = async (id, reviewerId, decision) => {
+const addRecommendationFromReviewer = async (
+    id,
+    reviewerId,
+    decision,
+    notes = ''
+) => {
     try {
 
         logger.debug("suggestion.rec.db.searching")
@@ -32,7 +37,11 @@ const addRecommendationFromReviewer = async (id, reviewerId, decision) => {
 
         logger.debug("suggestion.rec.updating_status.started")
 
-        suggestionToAddRecommendation.addRecommendation(reviewerId, decision)
+        suggestionToAddRecommendation.addRecommendation(
+            reviewerId,
+            decision,
+            notes
+        )
         await Suggestions.update(suggestionToAddRecommendation)
 
         logger.debug("suggestion.rec.updating_status.completed")

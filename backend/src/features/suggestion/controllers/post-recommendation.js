@@ -14,10 +14,15 @@ const postRecommednation = async (req, res) => {
         logger.start('POST Rec')
 
         const { id } = req.params
-        const { reviewerId, decision } = req.body
+        const { reviewerId, decision, notes } = req.body
 
         logger.info("suggestion.rec.started", { suggestionId: id, reviewerId: reviewerId })
-        const startId = await addRecommendationFromReviewer(id, reviewerId, decision);
+        const startId = await addRecommendationFromReviewer(
+            id,
+            reviewerId,
+            decision,
+            notes
+        );
 
         logger.success("suggestion.rec.success", { startId });
         logger.end('POST Documentation')
