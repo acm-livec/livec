@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FlexColumn } from '@components/layouts/flex';
+import { EditorStatic } from '@components/ui/editor-static';
 import { getVersion } from '@utils/api-handlers/curriculums/get-version';
 
 export default function VersionHistory({ meta }) {
@@ -14,30 +15,30 @@ export default function VersionHistory({ meta }) {
         }
     }, [previous_versions, curriculum]);
 
-    const renderContent = (content = []) =>
-        content.map((block) => (Array.isArray(block.children) ? block.children.map((ch) => ch.text || '').join('') : '')).join(' ');
     if (!meta) return null;
 
     return (
-        <FlexColumn gap="0.5rem">
-            <h2>Version History</h2>
-            <p>
-                <strong>Current Version:</strong> {section_version || 'N/A'} {year_version ? `(${year_version})` : ''}
-            </p>
-            {versions.length > 0 ? (
-                <ul>
-                    {versions.map((ver) => (
-                        <li key={ver.id}>
-                            <p>
-                                <strong>{ver.section_version}</strong> {ver.meta.year_version ? `(${ver.meta.year_version})` : ''}
-                            </p>
-                            <p>{renderContent(ver.content)}</p>
-                        </li>
-                    ))}
-                </ul>
-            ) : (
-                <p>No previous versions available.</p>
-            )}
-        </FlexColumn>
+        <div className="document--computer-science p-5">
+            <FlexColumn gap="0.5rem">
+                <h2>Version History</h2>
+                <p>
+                    <strong>Current Version:</strong> {section_version || 'N/A'} {year_version ? `(${year_version})` : ''}
+                </p>
+                {versions.length > 0 ? (
+                    <ul>
+                        {versions.map((ver) => (
+                            <li key={ver.id}>
+                                <p>
+                                    <strong>{ver.section_version}</strong> {ver.meta.year_version ? `(${ver.meta.year_version})` : ''}
+                                </p>
+                                <EditorStatic value={ver.content} />
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>No previous versions available.</p>
+                )}
+            </FlexColumn>
+        </div>
     );
 }
