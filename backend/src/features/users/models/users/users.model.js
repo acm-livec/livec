@@ -17,7 +17,8 @@ class Users {
             communityMembers: require('./community-member/members.model'),
             associateEditors: require('./associate-editor/editors.model'),
             reviewers: require('./reviewer/reviewers.model'),
-            chiefEditors: require('./editor-in-chief/chiefs.model')
+            chiefEditors: require('./editor-in-chief/chiefs.model'),
+            admins: require('./admin/admins.model')
             // reviewers: ...
         };
     }

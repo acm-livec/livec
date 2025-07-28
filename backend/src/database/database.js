@@ -63,6 +63,11 @@ const db = {
             'data/users/default/editor_in_chief.json',
             { forceReset: reset }
         ),
+        admins: createDB(
+            'data/users/admin.json',
+            'data/users/default/admin.json',
+            { forceReset: reset }
+        ),
         // acmEdBoard: createDB(...), // Uncomment if needed
     },
     suggestions: createDB(
@@ -114,6 +119,7 @@ async function resetAll() {
         db.users.reviewers.reset(),
         db.users.associateEditors.reset(),
         db.users.chiefEditors.reset(),
+        db.users.admins.reset(),
         db.suggestions.reset(),
         db.curriculums.computerScience.tableOfContents.reset(),
         db.curriculums.computerScience.pageContent.reset(),

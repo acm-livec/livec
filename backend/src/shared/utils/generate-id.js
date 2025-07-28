@@ -9,6 +9,7 @@ const rolePrefixMap = {
     'reviewer': 'R',
     'associate-editor': 'AE',
     'editor-in-chief': 'EIC',
+    'admin': 'AD',
 };
 
 /**
