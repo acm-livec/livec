@@ -175,6 +175,7 @@ class Suggestion {
             [Actions.STARTED_FINAL_DISCUSSION]: 'EDITOR_IN_CHIEF_BEGINS_BOARD_DISCUSSION',
             [Actions.ACCEPTED_BY_BOARD]: 'BOARD_ACCEPTS_SUGGESTION_CHANGE',
             [Actions.DECLINED_BY_BOARD]: 'BOARD_REJECTS_SUGGESTION_CHANGE',
+            [Actions.PUBLISHED_BY_EIC]: 'EDITOR_IN_CHIEF_PUBLISHES_CHANGE',
         };
 
         const eventKey = ActionEvents[action] || action;
@@ -426,7 +427,7 @@ class Suggestion {
     }
 
     finalizeImplementation(eic, notes = '', message = '') {
-        this.insertDocumentation(Actions.ACCEPTED_BY_BOARD, eic, notes);
+        this.insertDocumentation(Actions.PUBLISHED_BY_EIC, eic, notes);
         this.insertPublicMessage(message, eic);
     }
 }

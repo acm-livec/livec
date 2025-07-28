@@ -117,10 +117,11 @@ async function resetAll() {
         db.suggestions.reset(),
         db.curriculums.computerScience.tableOfContents.reset(),
         db.curriculums.computerScience.pageContent.reset(),
+        db.curriculums.computerScience.curriculumVersions.reset(),
         db.curriculums.cybersecurity.tableOfContents.reset(),
         db.curriculums.cybersecurity.pageContent.reset(),
-        db.curriculumVersions.computerScience.reset(),
-        db.curriculumVersions.cybersecurity.reset(),
+        db.curriculums.cybersecurity.curriculumVersions.reset(),
+
     ]);
 }
 

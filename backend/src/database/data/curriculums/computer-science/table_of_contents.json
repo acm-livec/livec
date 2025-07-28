@@ -9,10 +9,11 @@
       "curriculum": "computer-science",
       "year_version": "2023",
       "section_version": "v1",
-      "previous_versions": ["b3b1r0elf0e9"],
+      "previous_versions": [
+        "b3b1r0elf0e9"
+      ],
       "slug": "executive-summary"
-    },
-    "public_feedback": ["SCOSC-qoGVNSRB"]
+    }
   },
   {
     "id": "f95611b734d5",
@@ -631,7 +632,10 @@
       "previous_versions": [],
       "slug": "ai-introduction-fundamental-issues",
       "parent_heading": "Artificial Intelligence (AI)"
-    }
+    },
+    "public_feedback": [
+      "SCOSC-aiRbu75H"
+    ]
   },
   {
     "id": "e5eb3d2a3ce9",

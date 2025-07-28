@@ -3,14 +3,15 @@
     "id": "b3b1r0elf0e9",
     "section_version": "alpha",
     "title": "Executive Summary",
-
     "contributing_member": "CM-0001",
     "meta": {
       "curriculum": "computer-science",
       "year_version": "2022",
       "section_version": "alpha",
       "page_number": 21,
-      "public_feedback": ["SCOSC-qoGVNSRB"]
+      "public_feedback": [
+        "SCOSC-qoGVNSRB"
+      ]
     },
     "content": [
       {

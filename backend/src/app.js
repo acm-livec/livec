@@ -11,6 +11,20 @@ app.use(express.json());
 app.use(cors());
 
 
+/**
+ * POST /admin/reset
+ * Reset all databases to their default state.
+ */
+app.post('/admin/reset', async (req, res, next) => {
+    try {
+        await db.resetAll();
+        res.json({ message: 'Database reset successfully' });
+    } catch (err) {
+        next(err);
+    }
+});
+
+
 app.get('/', (req, res) => {
     res.send('✅ Server is up and running!');
 });
@@ -33,19 +47,6 @@ app.use((req, res) => {
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ message: 'Server Error' });
-});
-
-/**
- * POST /admin/reset
- * Reset all databases to their default state.
- */
-app.post('/reset', async (req, res, next) => {
-    try {
-        await db.resetAll();
-        res.json({ message: 'Database reset successfully' });
-    } catch (err) {
-        next(err);
-    }
 });
 
 

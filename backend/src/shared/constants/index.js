@@ -20,6 +20,7 @@ const Actions = Object.freeze({
     STARTED_FINAL_DISCUSSION: 'started-final-discussion',
     ACCEPTED_BY_BOARD: 'accepted-by-board',
     DECLINED_BY_BOARD: 'declined-by-board',
+    PUBLISHED_BY_EIC: 'published-by-eic',
 });
 
 module.exports = { Roles, HTTP_STATUS, Status, Actions };

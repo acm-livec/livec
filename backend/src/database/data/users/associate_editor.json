@@ -7,13 +7,13 @@
     "role": "associate-editor",
     "discipline": "computer-science",
     "assignedEditorInChief": "EIC-0001",
-    "assignedReviewers": ["R-0001", "R-7562", "R-F35G"],
-    "assignedSuggestions": ["SCOSC-qoGVNSRB"],
-    "report": [
-      {
-        "suggestionId": "SCOSC-qoGVNSRB",
-        "decision": "pending"
-      }
+    "assignedReviewers": [
+      "R-0001",
+      "R-7562",
+      "R-F35G"
+    ],
+    "assignedSuggestions": [
+      "SCOSC-aiRbu75H"
     ]
   },
   {
@@ -25,12 +25,6 @@
     "discipline": "computer-science",
     "assignedEditorInChief": "EIC-0001",
     "assignedReviewers": [],
-    "assignedSuggestions": [],
-    "report": [
-      {
-        "suggestionId": "SCOSC-qoGVNSRB",
-        "decision": "pending"
-      }
-    ]
+    "assignedSuggestions": []
   }
 ]
