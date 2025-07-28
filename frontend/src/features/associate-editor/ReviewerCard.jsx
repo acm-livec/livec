@@ -4,7 +4,13 @@ import styles from './ReviewerCard.module.scss';
 import icon from '/profile.svg';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router';
-export default function ReviewerCard({ reviewer, status = '', disabled = false, onInvite }) {
+export default function ReviewerCard({
+    reviewer,
+    status = '',
+    decision = '',
+    disabled = false,
+    onInvite,
+}) {
     const navigate = useNavigate();
     const handleClick = () => {
         if (!disabled && onInvite) {
@@ -18,7 +24,12 @@ export default function ReviewerCard({ reviewer, status = '', disabled = false, 
             <FlexRow gap="1rem">
                 <img src={icon} width={40} height={40} />
                 <FlexColumn className={styles.info}>
-                    <p>{reviewer.name}</p>
+                    <p>
+                        {reviewer.name}
+                        {decision && (
+                            <span className={styles.decision}> — {decision}</span>
+                        )}
+                    </p>
                     {status && <span className={styles.status}>{status}</span>}
                 </FlexColumn>
             </FlexRow>
