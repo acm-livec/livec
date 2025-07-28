@@ -1,7 +1,10 @@
-const db = require('../../../database/database');
-
 class Curriculum {
-    dbRef = db.curriculums
+    static dbRef;
+
+    static injectDB(dbInstance) {
+        this.dbRef = dbInstance;
+    }
+
     constructor(ref) {
         this.currRef = ref
 

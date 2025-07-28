@@ -1,6 +1,10 @@
 const express = require('express');
 const cors = require('cors')
-const db = require('./database/database');
+let db;
+
+function injectDB(instance) {
+    db = instance;
+}
 const authRoutes = require('./features/auth/routes.js');
 const suggestionRoutes = require('./features/suggestion/routes.js');
 const userRoutes = require('./features/users/routes.js');
@@ -51,4 +55,7 @@ app.use((err, req, res, next) => {
 
 
 
-module.exports = app;
+module.exports = {
+    app,
+    injectDB
+};

@@ -1,11 +1,14 @@
-const db = require('../../../database/database');
 const { flattenSections } = require('../../../../../docs/shared/utils/flatten.js');
 const Curriculum = require('./curriculum.model');
 
 
 
 class Curriculums {
-    static dbRef = db.curriculums;
+    static dbRef;
+
+    static injectDB(dbInstance) {
+        this.dbRef = dbInstance;
+    }
 
 
     /**

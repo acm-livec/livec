@@ -1,4 +1,8 @@
-const db = require('../../database/database');
+let db;
+
+function injectDB(instance) {
+    db = instance;
+}
 
 const roleMap = {
     CM: 'communityMembers',
@@ -19,4 +23,7 @@ async function getUserNameById(id) {
     return found ? found.name : id;
 }
 
-module.exports = getUserNameById;
+module.exports = {
+    getUserNameById,
+    injectDB
+};
