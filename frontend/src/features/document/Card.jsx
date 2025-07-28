@@ -4,7 +4,8 @@ import icon from '/profile.svg';
 import { FlexRow, FlexColumn } from '@components/layouts/flex';
 
 export default function Card({ doc, setDocText }) {
-    const { author, date, content } = doc;
+    const { authorName, authorRole, date, content } = doc;
+    const displayName = authorName || doc.author;
 
     return (
         <FlexRow
@@ -14,7 +15,8 @@ export default function Card({ doc, setDocText }) {
         >
             <img src={icon} width={50} height={50} />
             <FlexColumn>
-                <p>{author}</p>
+                <p>{displayName}</p>
+                {authorRole && <p><i>{authorRole}</i></p>}
                 <p>Added on {formatDate(date)}</p>
             </FlexColumn>
         </FlexRow>
