@@ -4,7 +4,7 @@ import useSuggestion from '@hooks/useSuggestion';
 import { UserContext } from '@context/UserProvider';
 import { useContext, useEffect } from 'react';
 
-import { Form, TextField, Dropdown, TextArea } from './input';
+import { Form, TextField, TextArea, Dropdown } from './input';
 
 export default function SuggestionBox({ sectionId }) {
     const { user } = useContext(UserContext);
@@ -88,10 +88,29 @@ const Default = ({ sectionId, submit }) => {
     return (
         <>
             <h2>Have a thought or suggestion for this section? Fill out the form below.</h2>
-            <Form resetOn={[sectionId]} onSubmit={(formData) => submit({ sectionId, discipline, ...formData })}>
-                <Dropdown keyName="type" values={options} label="Type of suggestion" required />
-                <TextField keyName="title" label="Enter a brief title explaining your suggestions" required maxLength={100} />
-                <TextArea keyName="text" label="Enter your suggestion down below" required maxLength={500} />
+            <Form
+                resetOn={[sectionId]}
+                onSubmit={(data) => submit({ sectionId, discipline, ...data })}
+            >
+                <Dropdown
+                    name="type"
+                    values={options}
+                    label="Type of suggestion"
+                    required
+                />
+                <TextField
+                    name="title"
+                    label="Enter a brief title explaining your suggestions"
+                    required
+                    maxLength={100}
+                />
+                <TextArea
+                    name="text"
+                    label="Enter your suggestion down below"
+                    required
+                    maxLength={500}
+                    className={styles['sugg-area']}
+                />
             </Form>
         </>
     );

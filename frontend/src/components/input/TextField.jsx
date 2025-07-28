@@ -2,12 +2,13 @@ import useInputField from './useInputField';
 
 export default function TextField({
     className = '',
+    name,
     keyName,
     val = '',
     label,
     ...rest
 }) {
-    const { key, value, handleChange } = useInputField({ keyName, val });
+    const { key, value, handleChange, error } = useInputField({ name, keyName, val });
 
     return (
         <>
@@ -15,11 +16,12 @@ export default function TextField({
             <input
                 id={key}
                 value={value}
-                className={className}
+                className={`${className} ${error ? 'warning' : ''}`}
                 type="text"
                 onChange={handleChange}
                 {...rest}
             />
+            {error && <p className="warning">{error}</p>}
         </>
     );
 }

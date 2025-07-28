@@ -3,13 +3,14 @@ import styles from './inputs.module.scss'; // if you use CSS Modules
 
 export default function Dropdown({
     className = '',
+    name,
     keyName,
     val = '',
     label,
     values = [],
     ...rest
 }) {
-    const { key, value, handleChange } = useInputField({ keyName, val });
+    const { key, value, handleChange, error } = useInputField({ name, keyName, val });
 
     return (
         <>
@@ -18,7 +19,7 @@ export default function Dropdown({
                 <select
                     id={key}
                     value={value}
-                    className={className}
+                    className={`${className} ${error ? 'warning' : ''}`}
                     onChange={handleChange}
                     {...rest}
                 >
@@ -29,6 +30,7 @@ export default function Dropdown({
                     ))}
                 </select>
             </div>
+            {error && <p className="warning">{error}</p>}
         </>
     );
 }
