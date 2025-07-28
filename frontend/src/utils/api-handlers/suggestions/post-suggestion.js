@@ -20,7 +20,8 @@ export const postSuggestion = async (
     title,
     suggestion,
     discipline,
-    sectionId
+    sectionId,
+    type
 ) => {
     try {
         log.debug('Submitting suggestion', {
@@ -29,6 +30,7 @@ export const postSuggestion = async (
             suggestion,
             discipline,
             sectionId,
+            type,
         });
 
         const { data } = await API.post('/suggestion', {
@@ -37,6 +39,7 @@ export const postSuggestion = async (
             suggestion,
             discipline,
             sectionId,
+            type,
         });
 
         log.success('✅ Suggestion created with ID:', data.suggestionId);

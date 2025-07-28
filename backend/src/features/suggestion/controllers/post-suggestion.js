@@ -12,10 +12,17 @@ const postSuggestion = async (req, res) => {
     
     try { logger.start('POST Suggestion')
 
-        const { userId, title, suggestion, discipline, sectionId } = req.body
+        const { userId, title, suggestion, discipline, sectionId, type } = req.body
 
         logger.info("suggestion.post.started", { submitterId: userId, sectionId })
-        const suggestionId = await handleNewSuggestion(userId, title, suggestion, discipline, sectionId);
+        const suggestionId = await handleNewSuggestion(
+            userId,
+            title,
+            suggestion,
+            type,
+            discipline,
+            sectionId
+        );
 
         logger.success("suggestion.post.success", { suggestionId }); 
         logger.end('POST Suggestion')

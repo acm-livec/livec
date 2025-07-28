@@ -13,6 +13,7 @@ class Suggestion {
         this.title = data.title;
         this.text = data.text || '';
         this.suggestion = data.text || '';
+        this.type = data.type;
 
         this.submitter_id = data.submitter_id || data.submitterId;
         this.section_id = data.section_id || data.sectionId;
@@ -54,6 +55,7 @@ class Suggestion {
         return {
             title: this.title,
             text: this.text,
+            type: this.type,
             timeCreated: this.time_created,
         }
     }
@@ -71,6 +73,7 @@ class Suggestion {
             status: this.status.for_member,
             discipline: this.discipline,
             publicUpdates: this.public_updates,
+            type: this.type,
         }
     }
 
