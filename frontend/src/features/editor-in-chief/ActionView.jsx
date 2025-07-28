@@ -50,25 +50,24 @@ export const ActionView = ({ suggestion = { id: '' }, option }) => {
 
 const ConfirmBoxInfo = ({ action }) => {
     const variant = {
-        [EditorInChief.APPROVED_BY_EDITOR_IN_CHIEF]: {
+        [EditorInChief.APPROVE_CHANGE]: {
             message: 'Are you sure you want to approve this change?',
             status: {
                 from: Status.Public.UNDER_REVIEW,
                 to: Status.Public.UNDER_CONSIDERATION,
             },
         },
-        [EditorInChief.REJECTED_BY_EDITOR_IN_CHIEF]: {
+        [EditorInChief.REJECT_CHANGE]: {
             message: 'Are you sure you want to reject this change?',
             status: {
                 from: Status.Public.UNDER_REVIEW,
                 to: Status.Public.REJECTED,
             },
         },
-        [EditorInChief.CHANGE_REQUEST_BY_EDITOR_IN_CHIEF]: {
-            message:
-                'Are you sure you want to begin reviewing this suggestion?',
+        [EditorInChief.SEND_CHANGE_REQUEST]: {
+            message: 'Are you sure you want to request changes from the associate editor?',
             status: {
-                from: Status.Public.QUEUED,
+                from: Status.Public.UNDER_REVIEW,
                 to: Status.Public.UNDER_REVIEW,
             },
         },
@@ -89,11 +88,11 @@ const ConfirmBoxInfo = ({ action }) => {
 
 const SuccessBoxInfo = ({ action }) => {
     const variant = {
-        [EditorInChief.APPROVED_BY_EDITOR_IN_CHIEF]:
+        [EditorInChief.APPROVE_CHANGE]:
             'Change has been successfully approved!',
-        [EditorInChief.REJECTED_BY_EDITOR_IN_CHIEF]:
+        [EditorInChief.REJECT_CHANGE]:
             'Change has been successfully rejected!',
-        [EditorInChief.CHANGE_REQUEST_BY_EDITOR_IN_CHIEF]:
+        [EditorInChief.SEND_CHANGE_REQUEST]:
             'Change request has been successfully sent to Associate Editor!',
     };
     return (
@@ -107,72 +106,63 @@ const Info = () => {
     return (
         <div className="sidebar__content">
             <div>
-                <h2>Start Review</h2>
+                <h2>Approve Change</h2>
                 <hr />
                 <p>
-                    This option is for when the Associate Editor initially
-                    reviews the suggestion and decides it should move forward in
-                    the process. When you click “Start Review,” a form will
-                    appear with two text areas:
+                    Select <strong>Approve</strong> when you agree with the
+                    Associate Editor's recommendation and the proposed content
+                    should move forward to board discussion. The form includes:
                 </p>
                 <ul>
                     <li>
-                        <strong>Initial Notes:</strong> Document any preliminary
-                        context, concerns, or details that will help yourself
-                        and others when reviewing the suggestion.
+                        <strong>Message to Associate Editor:</strong> Private
+                        notes or context regarding the approval.
                     </li>
                     <li>
-                        <strong>Message to Submitter:</strong> Write an
-                        acknowledgment or update that will be sent to the
-                        original submitter.
+                        <strong>Message to Submitter:</strong> A public update
+                        letting the original author know the change is advancing.
                     </li>
                 </ul>
             </div>
 
             <div>
-                <h2>Desk Reject</h2>
+                <h2>Reject Change</h2>
                 <hr />
 
                 <p>
-                    Use this option if the suggestion is not suitable for
-                    further review and should be rejected without external
-                    review. A form will appear with the following fields:
+                    Use <strong>Reject</strong> if the suggested change should
+                    not be adopted. You'll be able to provide the reason for
+                    rejection and communicate it to the submitter.
                 </p>
                 <ul>
                     <li>
-                        <strong>Reason:</strong> Briefly explain why the
-                        suggestion is being rejected.
+                        <strong>Reason for Rejection:</strong> Explanation sent
+                        to the Associate Editor.
                     </li>
                     <li>
-                        <strong>Message to Submitter:</strong> Provide a clear,
-                        respectful explanation that will be sent to the
-                        submitter.
+                        <strong>Message to Submitter:</strong> Public notice of
+                        the rejection.
                     </li>
                 </ul>
             </div>
 
             <div>
-                <h2>Defer to Reviewer</h2>
+                <h2>Send Change Request</h2>
                 <hr />
 
                 <p>
-                    Choose this option to assign the suggestion to a reviewer
-                    for further evaluation. A form will appear with the
-                    following fields:
+                    Choose this when additional revisions are required from the
+                    Associate Editor before a final decision. The form allows:
                 </p>
                 <ul>
                     <li>
-                        <strong>Initial Notes to Reviewer:</strong> Add any
-                        context or instructions for the reviewer.
+                        <strong>Message to Associate Editor:</strong> Outline
+                        what needs to be addressed or clarified.
                     </li>
                     <li>
-                        <strong>Message to Submitter:</strong> Write a message
-                        that will be sent to the submitter to inform them their
-                        suggestion is under review.
-                    </li>
-                    <li>
-                        <strong>Select Reviewer:</strong> Choose a reviewer from
-                        the dropdown list.
+                        <strong>Message to Submitter:</strong> Optional note
+                        informing the submitter that their suggestion is still
+                        under review.
                     </li>
                 </ul>
             </div>
