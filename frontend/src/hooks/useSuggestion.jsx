@@ -39,14 +39,15 @@ export default function useSuggestion() {
         })();
     }, [user]);
 
-    const submit = async ({ title, text, discipline, sectionId }) => {
+    const submit = async ({ title, text, type, discipline, sectionId }) => {
         try {
             const res = await postSuggestion(
                 user.id,
                 title,
                 text,
                 discipline,
-                sectionId
+                sectionId,
+                type
             );
             setResponse(res);
         } catch {

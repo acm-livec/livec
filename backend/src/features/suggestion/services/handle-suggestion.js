@@ -13,7 +13,14 @@ const logger = require('@logger').addSource({
 });
 
 
-const handleNewSuggestion = async (userId, title, text, discipline, sectionId) => {
+const handleNewSuggestion = async (
+    userId,
+    title,
+    text,
+    type,
+    discipline,
+    sectionId
+) => {
 
     try {
 
@@ -22,6 +29,7 @@ const handleNewSuggestion = async (userId, title, text, discipline, sectionId) =
             submitterId: userId,
             title,
             text,
+            type,
             discipline,
             sectionId,
         })

@@ -5,6 +5,7 @@ export default function TextField({
     keyName,
     val = '',
     label,
+    ...rest
 }) {
     const { key, value, handleChange } = useInputField({ keyName, val });
 
@@ -17,6 +18,7 @@ export default function TextField({
                 className={className}
                 type="text"
                 onChange={handleChange}
+                {...rest}
             />
         </>
     );
