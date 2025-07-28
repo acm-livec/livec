@@ -30,18 +30,25 @@ const finalizeImplementation = async (id, eicId, notes, message) => {
         // grab current section before modifying
         const currentSection = await getCurriculumSection(curriculum, suggestion.section_id);
 
+        const newMeta = { ...currentSection.meta, ...suggestion.meta };
+
+        // maintain history of replaced section ids
+        newMeta.previous_versions = Array.isArray(newMeta.previous_versions)
+            ? [currentSection.id, ...newMeta.previous_versions]
+            : [currentSection.id];
+
+        // track the contributing member on the updated section
+        newMeta.contributing_member = suggestion.submitter_id;
+
         if (currentSection) {
             await addCurriculumVersion(curriculum, {
                 id: currentSection.id,
                 section_version: currentSection.meta?.section_version,
                 title: currentSection.title,
-                contributing_member: suggestion.submitter_id,
                 meta: currentSection.meta,
                 content: currentSection.content
             });
         }
-
-        const newMeta = { ...currentSection.meta, ...suggestion.meta };
         const newSectionId = await generateSectionId({
             curriculum: newMeta.curriculum,
             year_version: newMeta.year_version,
