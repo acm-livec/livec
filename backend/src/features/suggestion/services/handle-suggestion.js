@@ -30,8 +30,9 @@ const handleNewSuggestion = async (userId, title, text, discipline, sectionId) =
         await linkCommunityMemberToSuggestion(userId, insertedSuggestion.id)
         logger.info("suggestion.post.link_user.completed")
 
-        // Set timeout so process headers are kept seperate
-        setTimeout(() => { assignAssociateEditorToSuggestion(insertedSuggestion); addToCurriculum(insertedSuggestion.id, sectionId, discipline) }, 10);
+        // Assign an Associate Editor and update the curriculum immediately
+        await assignAssociateEditorToSuggestion(insertedSuggestion);
+        await addToCurriculum(insertedSuggestion.id, sectionId, discipline);
 
         return insertedSuggestion.id
 
@@ -75,7 +76,7 @@ const addToCurriculum = async (suggestionId, sectionId, discipline) => {
         requestedCurriculum.updateToc(section)
         logger.debug("curriculum.toc.updated", { sectionId })
     } catch (error) {
-
+        throw error
     }
 }
 
