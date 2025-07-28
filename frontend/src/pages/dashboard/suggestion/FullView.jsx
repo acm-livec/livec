@@ -12,7 +12,8 @@ import Modal, { DefaultView, ConfirmationView } from '@components/popups/Modal';
 import Card from '@features/document/Card';
 import Documentation from '@features/document/Documentation';
 import Page from '@features/details/Page';
-import { Form, CheckboxGroup, RadioGroup, RadioAsCheckbox, TextArea } from '@components/input';
+import { Form, RadioAsCheckbox, TextArea } from '@components/input';
+import ReviewerCard from '@features/associate-editor/ReviewerCard';
 // ─── Feature Components ──────────────────────────────────────────────────
 import Suggestion from '@features/suggestion/Suggestion';
 import ActionButtons from '@features/editor-in-chief/ActionButtons';
@@ -176,25 +177,44 @@ const SuggestionContent = ({ suggestion, role }) => {
     );
 };
 
+
 const Revs = ({ suggestion }) => {
     const { reviewers, assign } = useAssociateEditor();
 
-    const assigned = Array.isArray(suggestion.assignedReviewers) ? suggestion.assignedReviewers.map((r) => r.id) : [];
+    if (suggestion.system.status === Status.System.AWAITING_EIC_INPUT) return null;
 
-    const options = reviewers
-        .filter((item) => !assigned.includes(item.id))
-        .map((item) => ({
-            label: item.name,
-            value: item.id,
-        }));
+    const assignedMap = {};
+    (suggestion.assignedReviewers || []).forEach((r) => {
+        assignedMap[r.id] = r.recommendation;
+    });
 
-    if (suggestion.system.status === Status.System.AWAITING_EIC_INPUT) return;
+    const handleInvite = (id) => assign(suggestion.id, { reviewers: [id] });
+
     return (
         <>
             <h2>Assign Reviewers</h2>
-            <Form onSubmit={(formData) => assign(suggestion.id, formData)}>
-                <CheckboxGroup options={options} keyName="reviewers" />
-            </Form>
+            <div className="reviewer-cards">
+                {reviewers.map((rev) => {
+                    const rec = assignedMap[rev.id];
+                    let status = '';
+                    let disabled = false;
+
+                    if (rec) {
+                        status = rec === 'pending' ? 'Reviewing' : 'Reviewed';
+                        disabled = true;
+                    }
+
+                    return (
+                        <ReviewerCard
+                            key={rev.id}
+                            reviewer={rev}
+                            status={status}
+                            disabled={disabled}
+                            onInvite={() => handleInvite(rev.id)}
+                        />
+                    );
+                })}
+            </div>
         </>
     );
 };
