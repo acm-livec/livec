@@ -35,10 +35,16 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                     <Breadcrumbs />
                 </div>
 
-                <h1 className="curricula-heading">
-                    {toTitleCase(selectedCurriculum) || 'None'}
-                    <hr />
-                </h1>
+                <div className="flex justify-between">
+                    <h1 className="curricula-heading">{toTitleCase(selectedCurriculum) || 'None'}</h1>
+                    <Button
+                        variant="normal"
+                        size="fit-content "
+                        onClick={() => setShowPdf((prev) => !prev)}
+                        text={showPdf ? 'Show HTML View' : 'Show PDF View'}
+                    />
+                </div>
+                <hr />
 
                 <TableOfContents jumpToPage={setCurrentPage} tableOfContents={tableOfContents} />
             </SideBar>
@@ -48,14 +54,6 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                     <a href="/CS2023.pdf" download className="download-button">
                         Download the  {selectedCurriculum || sessionStorage.getItem('curriculum')} Curriculum
                     </a> */}
-
-                {/* <FlexRow justify='end'>
-                    <Button
-                        variant='normal'
-                        onClick={() => setShowPdf(prev => !prev)}
-                        text={showPdf ? 'Show HTML View' : 'Show PDF View'}
-                    />
-                </FlexRow> */}
 
                 {showPdf ? (
                     <PdfView />
