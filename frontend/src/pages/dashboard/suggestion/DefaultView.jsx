@@ -1,10 +1,9 @@
 import { BackButton } from '@components/buttons';
-import { toTitleCase, formatDate } from '@utils/format';
 import { Grid, Header, SideContent, MainContent } from '@components/layouts/grid/Grid';
 import { postImplementation } from '@utils/api-handlers/suggestions';
 
 import Suggestion from '@features/suggestion/Suggestion';
-import { Message } from '@features/community-member/Message';
+import UpdateCard from '@features/suggestion/UpdateCard';
 import { Form, TextArea } from '@components/input';
 import { useContext, useState } from 'react';
 import { UserContext } from '@context/UserProvider';
@@ -42,7 +41,7 @@ const PublicView = ({ updates }) => {
             <h2>Updates</h2>
             <div>
                 {updates.map((item) => (
-                    <Message key={item.refId} status={item.status} author={item.author} content={item.message} date={item.date} />
+                    <UpdateCard key={item.refId} update={item} />
                 ))}
             </div>
         </>
@@ -55,10 +54,7 @@ const InteralView = ({ history }) => {
             <h2>Updates</h2>
             <div>
                 {history.map((item) => (
-                    <div key={item.performed_by + item.action}>
-                        <p>{toTitleCase(item.action)}</p>
-                        <p>{formatDate(item.date)}</p>
-                    </div>
+                    <UpdateCard key={item.performed_by + item.action} update={item} />
                 ))}
             </div>
         </>

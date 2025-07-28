@@ -1,0 +1,28 @@
+@use '@styles' as *;
+
+.card {
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: $stone-200;
+    margin-top: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid $gray-200;
+
+    span {
+        font-size: 1rem;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: $gray-500;
+    }
+}
+
+.body {
+    padding: 0.75rem 1rem;
+    line-height: 1.5;
+}
