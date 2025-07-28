@@ -46,7 +46,17 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                 </div>
 
                 <div className="flex justify-between items-center">
-                    <h1 className="curricula-heading">{toTitleCase(selectedCurriculum) || 'None'}</h1>
+                    <h1 className="curricula-heading flex items-center gap-2">
+                        {toTitleCase(selectedCurriculum) || 'None'}
+                        <select
+                            className="border rounded px-1 py-0.5"
+                            value={tab}
+                            onChange={(e) => setTab(e.target.value)}
+                        >
+                            <option value="content">Section</option>
+                            <option value="history">Versions</option>
+                        </select>
+                    </h1>
                     <div className="flex items-center gap-2.5">
                         <Switch id="toggle-view" onCheckedChange={() => setShowPdf((prev) => !prev)} />
                         <Label htmlFor="toggle-view">PDF View</Label>
@@ -65,10 +75,6 @@ export default function CurriculumDetailsPage({ selectedCurriculum = sessionStor
                         <div className="flex flex-col gap-3.5 px-[2.5%] pt-20 pb-0 sticky top-0 bg-inherit z-10">
                             <FlexRow gap="0.5rem" className="tab-buttons justify-between">
                                 <h1 className="text-sky-600">| {currentPage?.meta.parent_heading || currentPage?.title}</h1>
-                                <div className="flex">
-                                    <Button size="fit-content" isActive={tab === 'content'} onClick={() => setTab('content')} text="Section" />
-                                    <Button size="fit-content" isActive={tab === 'history'} onClick={() => setTab('history')} text="Versions" />
-                                </div>
                             </FlexRow>
                             <hr style={{ color: 'black', width: '100%' }} />
                         </div>
