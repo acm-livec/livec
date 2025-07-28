@@ -1,0 +1,27 @@
+@use '@styles' as *;
+
+.card {
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: $stone-200;
+    gap: 1rem;
+    padding: 0.5rem;
+
+    &:hover {
+        background-color: $stone-300;
+    }
+}
+
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.card + .card {
+    margin-top: 1rem;
+}
+
+.status {
+    font-size: 0.85rem;
+    color: $gray-600;
+}
