@@ -9,18 +9,147 @@
     "section_id": "d3b1d0eaf0e4",
     "time_created": "2025-07-28T08:47:06.236Z",
     "status": {
-      "for_member": "under-review",
-      "for_associate_editor": "reviewing",
-      "for_editor_in_chief": "",
-      "system": "editorial-review"
+      "for_member": "under-consideration",
+      "for_associate_editor": "approved",
+      "for_editor_in_chief": "ready-for-discussion",
+      "system": "awaiting-board-discussion",
+      "for_reviewer": "recommendation-submitted"
     },
     "discipline": "computer-science",
     "assigned_associate_editor": "AE-0001",
     "assigned_editor_in_chief": "EIC-0001",
-    "assigned_reviewers": [],
+    "assigned_reviewers": [
+      {
+        "id": "R-0001",
+        "recommendation": "exclude"
+      }
+    ],
     "meta": {},
     "final_decisions": [],
-    "revised_section": "",
+    "revised_section": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "CS2023 is the latest version of computer science curricular guidelines, produced by a joint task force of the ACM, IEEE Computer Society, and AAAI. The following is a summary of significant issues of the day and how they have been addressed in CS2023 curricular guidelines:"
+          }
+        ],
+        "id": "Qu4LeOqtsY"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The discipline continues to evolve. The Body of Knowledge consisting of seventeen knowledge areas has been revised and updated."
+          }
+        ],
+        "id": "QizJKvIDHk"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The discipline continues to grow. Topics that every graduate must know have been circumscribed as CS Core and kept to a minimum. Topics recommended for in-depth study have been labeled KA Core."
+          }
+        ],
+        "listStart": 2,
+        "id": "DlpFjdn6Yj"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "It is increasingly difficult for programs to be all things to all people. Programs can now select the knowledge areas on which to focus. The knowledge areas, when coherently chosen, define the competency area(s) of the program."
+          }
+        ],
+        "listStart": 3,
+        "id": "7TX2xn_xxn"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Societal and ethical concerns have risen sharply. The Society, Ethics, and the Profession (SEP) knowledge area is now an integral part of most knowledge areas of the curriculum."
+          }
+        ],
+        "listStart": 4,
+        "id": "aqlZ4XdcWf"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The role of mathematics has increased. Additional hours have been allocated to mathematics and flexibility has been provided for coverage of the requirements in the curriculum."
+          }
+        ],
+        "listStart": 5,
+        "id": "369ueSWCss"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "The need for professional dispositions is increasingly being recognized. Professional dispositions appropriate for each knowledge area have been listed and justified."
+          }
+        ],
+        "listStart": 6,
+        "id": "B_vFm2GRkm"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Interest is growing among educators in a competency model of the curriculum. A Competency Framework has been provided for programs to create their own competency model of the curriculum tailored to local needs."
+          }
+        ],
+        "listStart": 7,
+        "id": "8sfGPgcb5l"
+      },
+      {
+        "type": "p",
+        "listStyleType": "disc",
+        "indent": 0,
+        "children": [
+          {
+            "text": "Generative AI is poised to impact computer science education. A chapter has been included that addresses how Generative AI could propel further innovation in computer science education."
+          }
+        ],
+        "listStart": 8,
+        "id": "dh-s1R45v-"
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "The curricular guidelines build towards the Characteristics of Graduates enumerated in the report and take into consideration the Challenges and Opportunities for Computer Science Education identified in the report. The guidelines have been supplemented with articles on Pedagogical Considerations and Curricular Practices ."
+          }
+        ],
+        "id": "KYlx5-Fz8l"
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "The process used by the CS2023 task force has been collaborative (over ninety task force members), international (six continents), data-driven (five large- and over seventy small-scale surveys) and transparent ( csed.acm.org ). Community engagement included numerous conference panels and presentations along with regular postings to over a dozen ACM Special Interest Group (SIG) mailing lists and the full membership of AAAI. The iterative process has included at least two review and revision cycles for most of the knowledge areas. The resulting curricular guidelines are the culmination of three years of effort using the outlined Principles and Processes ."
+          }
+        ],
+        "id": "97f_CmRh0j"
+      }
+    ],
     "public_updates": [
       {
         "refId": "DOC-97H_BLIY",
@@ -51,6 +180,20 @@
             ]
           }
         ]
+      },
+      {
+        "refId": "DOC-IptCfHC2",
+        "status": "under-review",
+        "author": "LiveC",
+        "date": "2025-07-28T09:38:37.639Z",
+        "message": "Your suggestion is now under review by the Editor In Chief"
+      },
+      {
+        "refId": "DOC-ERh54pAA",
+        "status": "under-consideration",
+        "author": "EIC-0001",
+        "date": "2025-07-28T09:39:05.481Z",
+        "message": "yes"
       }
     ],
     "documentation": [
@@ -69,6 +212,13 @@
             ]
           }
         ]
+      },
+      {
+        "action": "approved-by-editor-in-chief",
+        "refId": "DOC-I8EwFpkj",
+        "author": "EIC-0001",
+        "date": "2025-07-28T09:39:05.481Z",
+        "content": "yes"
       }
     ],
     "history": [
@@ -87,6 +237,40 @@
         "action": "start-review",
         "performed_by": "AE-0001",
         "date": "2025-07-28T08:48:20.120Z",
+        "meta": {}
+      },
+      {
+        "action": "assigned-reviewers",
+        "performed_by": "AE-0001",
+        "date": "2025-07-28T09:34:20.472Z",
+        "meta": {
+          "numAssigned": 1
+        }
+      },
+      {
+        "action": "recommendation-by-reviewer",
+        "performed_by": "R-0001",
+        "date": "2025-07-28T09:37:27.515Z",
+        "meta": {
+          "decision": "exclude"
+        }
+      },
+      {
+        "action": "all-reviews-complete",
+        "performed_by": "LiveC",
+        "date": "2025-07-28T09:37:27.515Z",
+        "meta": {}
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-07-28T09:38:37.639Z",
+        "meta": {}
+      },
+      {
+        "action": "approved-by-editor-in-chief",
+        "performed_by": "EIC-0001",
+        "date": "2025-07-28T09:39:05.481Z",
         "meta": {}
       }
     ]
