@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 
 const resolve = (...segments) => path.resolve(__dirname, ...segments);
 

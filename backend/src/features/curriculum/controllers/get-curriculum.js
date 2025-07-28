@@ -1,7 +1,8 @@
-const  getFullCurriculum  = require('../services/get-one')
-const { AppError } = require('../../../shared/errors');
+import getFullCurriculum from '../services/get-one';
+import { AppError } from '../../../shared/errors';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'curriculum.controller',
     method: "getCurriculum",
     params: ['req.body']

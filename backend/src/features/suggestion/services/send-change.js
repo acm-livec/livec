@@ -1,8 +1,8 @@
-const { AppError, SuggestionNotFoundError, NoUserWithIdError } = require('../../../shared/errors');
-const Suggestions = require('../models/suggestions.model.js')
+import { AppError, SuggestionNotFoundError, NoUserWithIdError } from '../../../shared/errors';
+import Suggestions from '../models/suggestions.model.js';
+import baseLogger from '../../../../logger/logger.js';
 
-
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'suggestion.service',
     method: "sendChangeRequestToAssociateEditor",
     params: ['suggestionId', 'author', 'markdownText']

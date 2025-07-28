@@ -1,11 +1,12 @@
-const { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } = require('../../../shared/errors');
-const { Roles } = require('../../../../../docs/constants/roles.js')
-const Suggestions = require('../models/suggestions.model.js')
-const Curriculums = require('../../curriculum/models/curriculums.model.js')
-const kebabToCamel = require('../../../shared/utils/kebabToCamel')
-const { getUserNameById } = require('../../../shared/utils/getUserNameById')
-const { getUserInfoById } = require('../../../shared/utils/getUserInfoById')
-const logger = require('../../../../logger/logger.js').addSource({
+import { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } from '../../../shared/errors';
+import { Roles } from '../../../../../docs/constants/roles.js';
+import Suggestions from '../models/suggestions.model.js';
+import Curriculums from '../../curriculum/models/curriculums.model.js';
+import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
+import { getUserNameById } from '../../../shared/utils/getUserNameById';
+import { getUserInfoById } from '../../../shared/utils/getUserInfoById';
+import baseLogger from '../../../../logger/logger.js';
+const logger = baseLogger.addSource({
     file: 'auth.service',
     method: "assignAssociateEditorToSuggestion",
     params: ['suggestion']

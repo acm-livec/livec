@@ -1,5 +1,5 @@
-const Users = require('../users.model.js');
-const CommunityMember = require('./member.model.js');
+import Users from '../users.model.js';
+import CommunityMember from './member.model.js';
 
 
 class CommunityMembers extends Users {

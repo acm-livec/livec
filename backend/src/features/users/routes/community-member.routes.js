@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 
-const { getSuggestions } = require('../controllers/users/community-member');
+import {  getSuggestions  } from '../controllers/users/community-member';
 
 const router = express.Router();
 

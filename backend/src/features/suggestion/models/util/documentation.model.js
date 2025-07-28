@@ -1,5 +1,5 @@
-const { generateRandomId } = require('../../../../shared/utils/generate-id');
-const { Actions } = require('../../../../shared/constants')
+import { generateRandomId } from '../../../../shared/utils/generate-id';
+import { Actions } from '../../../../shared/constants';
 
 const defaultAction = Actions.ADDED_DOCUMENTATION
 

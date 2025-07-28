@@ -1,6 +1,6 @@
-const HTTP_STATUS = require('./http-codes');
-const { Roles } = require('../../../../docs/constants/roles.js');
-const { Status } = require('../../../../docs/constants/status.js');
+import HTTP_STATUS from './http-codes';
+import {  Roles  } from '../../../../docs/constants/roles.js';
+import {  Status  } from '../../../../docs/constants/status.js';
 
 const Actions = Object.freeze({
     DESK_REJECT: 'desk-reject',

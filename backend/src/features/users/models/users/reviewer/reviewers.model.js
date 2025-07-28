@@ -1,5 +1,5 @@
-const Users = require('../users.model.js');
-const Reviewer = require('./reviewer.model.js');
+import Users from '../users.model.js';
+import Reviewer from './reviewer.model.js';
 
 
 class Reviewers extends Users {

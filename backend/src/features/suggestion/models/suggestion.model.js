@@ -1,9 +1,9 @@
-const { generateSuggestionId } = require('../../../shared/utils/generate-id');
-const { Actions } = require('../../../shared/constants');
-const { Status } = require('../../../../../docs/constants/status.js');
-const { Events } = require('../../../../../docs/events.js');
-const Documentation = require('./util/documentation.model')
-const PublicMessage = require('./util/public-message.model')
+import {  generateSuggestionId  } from '../../../shared/utils/generate-id';
+import {  Actions  } from '../../../shared/constants';
+import {  Status  } from '../../../../../docs/constants/status.js';
+import {  Events  } from '../../../../../docs/events.js';
+import Documentation from './util/documentation.model.js';
+import PublicMessage from './util/public-message.model.js';
 
 
 class Suggestion {

@@ -2,7 +2,7 @@
  * Reviewer self-nomination controller
  * @module controllers/users/reviewer/self-nominate
  */
-const path = require('path');
+import path from 'path';
 const Reviewer = require(path.join(__dirname, '../../../models/users/reviewer/reviewer.model.js'));
 const usersDb = require(path.join(__dirname, '../../../database/data/users/reviewer.json'));
 

@@ -1,8 +1,9 @@
 
-const { sendChangeRequestToAssociateEditor } = require('../services')
-const { AppError } = require('../../../shared/errors');
+import { sendChangeRequestToAssociateEditor } from '../services';
+import { AppError } from '../../../shared/errors';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'suggestion.controller',
     method: "postChangeRequest",
     params: ['req.body']

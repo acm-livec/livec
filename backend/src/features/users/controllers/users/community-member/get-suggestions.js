@@ -1,7 +1,8 @@
-const getAllCommunityMemberSuggestions = require('../../../services/users/community-member/get-suggestions')
-const { AppError } = require('../../../../../shared/errors');
+import getAllCommunityMemberSuggestions from '../../../services/users/community-member/get-suggestions';
+import { AppError } from '../../../../../shared/errors';
+import baseLogger from '../../../../../../logger/logger.js';
 
-const logger = require('../../../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'community-member.controller',
     method: "getSuggestions",
     params: ["req.params"]

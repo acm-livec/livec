@@ -1,11 +1,19 @@
-const express = require('express');
-
-const {
-    postSuggestion, postRejection, getSuggestion,
-    postStartReview, postAssignReviewers, postDocumentation,
-    postAssociateEditorFinalization, postEditorInChiefApproval,
-    postChangeRequest, postDeferral, postRecommednation, postDiscussion, postImplementation
-} = require('./controllers');
+import express from 'express';
+import {
+    postSuggestion,
+    postRejection,
+    getSuggestion,
+    postStartReview,
+    postAssignReviewers,
+    postDocumentation,
+    postAssociateEditorFinalization,
+    postEditorInChiefApproval,
+    postChangeRequest,
+    postDeferral,
+    postRecommednation,
+    postDiscussion,
+    postImplementation,
+} from './controllers';
 
 const router = express.Router();
 

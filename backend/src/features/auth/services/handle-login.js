@@ -1,7 +1,8 @@
-const { UserNotFoundError, PasswordMismatchError, AppError } = require('../../../shared/errors');
-const Users = require('../../users/models/users/users.model.js')
+import { UserNotFoundError, PasswordMismatchError, AppError } from '../../../shared/errors';
+import Users from '../../users/models/users/users.model.js';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'auth.service',
     method: "handleLoginUser",
     params: ["email, password"]

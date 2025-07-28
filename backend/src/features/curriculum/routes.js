@@ -1,8 +1,7 @@
-const express = require('express');
-const { getCurriculum, getSection, updateSection, postVersion, getVersion } = require('./controllers')
+import express from 'express';
+import { getCurriculum, getSection, updateSection, postVersion, getVersion } from './controllers';
 
 const router = express.Router();
-
 
 router.get('/:curriculum', getCurriculum);
 router.get('/:curriculum/sections/:sectionId', getSection);

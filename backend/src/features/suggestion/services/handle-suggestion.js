@@ -1,12 +1,12 @@
-const { AppError, SuggestionNotFoundError } = require('../../../shared/errors');
-const Suggestions = require('../models/suggestions.model.js')
-const Curriculums = require('../../curriculum/models/curriculums.model.js')
-const kebabToCamel = require('../../../shared/utils/kebabToCamel')
+import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import Suggestions from '../models/suggestions.model.js';
+import Curriculums from '../../curriculum/models/curriculums.model.js';
+import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
+import linkCommunityMemberToSuggestion from './link-user.js';
+import assignAssociateEditorToSuggestion from './assign-editor.js';
+import baseLogger from '../../../../logger/logger.js';
 
-const linkCommunityMemberToSuggestion = require('./link-user')
-const assignAssociateEditorToSuggestion = require('./assign-editor')
-
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'auth.service',
     method: "handleNewSuggestion",
     params: ['userId', 'title', 'suggestion', 'discipline']

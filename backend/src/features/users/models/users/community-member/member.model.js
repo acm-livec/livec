@@ -1,6 +1,6 @@
 // models/CommunityMember.js
-const User = require('../user.model');
-const { Roles } = require('../../../../../shared/constants');
+import User from '../user.model';
+import {  Roles  } from '../../../../../shared/constants';
 
 class CommunityMember extends User {
     static role = Roles.COMMUNITY_MEMBER;

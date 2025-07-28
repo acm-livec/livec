@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 
-const { getSuggestions, getReviewers, getFinalSuggestions } = require('../controllers/users/associate-editor');
+import {  getSuggestions, getReviewers, getFinalSuggestions  } from '../controllers/users/associate-editor';
 
 const router = express.Router();
 

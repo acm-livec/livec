@@ -1,18 +1,17 @@
-const { AppError, SuggestionNotFoundError } = require('../../../shared/errors');
-const Suggestions = require('../models/suggestions.model.js');
-const {
-    getCurriculumSection,
-} = require('../../curriculum/services');
-const addCurriculumVersion = require('../../curriculum/services/add-version');
-const { generateSectionId } = require('../../../shared/utils/generate-id');
-const kebabToCamel = require('../../../shared/utils/kebabToCamel');
+import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import Suggestions from '../models/suggestions.model.js';
+import { getCurriculumSection } from '../../curriculum/services';
+import addCurriculumVersion from '../../curriculum/services/add-version.js';
+import { generateSectionId } from '../../../shared/utils/generate-id';
+import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
+import baseLogger from '../../../../logger/logger.js';
 let db;
 
 function injectDB(instance) {
     db = instance;
 }
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'suggestion.service',
     method: 'finalizeImplementation',
     params: ['suggestionId', 'eicId', 'notes', 'message']

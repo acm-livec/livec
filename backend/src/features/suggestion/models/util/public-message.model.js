@@ -1,4 +1,4 @@
-const { generateRandomId } = require('../../../../shared/utils/generate-id'); 
+import {  generateRandomId  } from '../../../../shared/utils/generate-id'; 
 
 class PublicMessage {
     constructor({refId = generateRandomId(), status, date = new Date().toISOString(), message, author = 'LiveC'}) {

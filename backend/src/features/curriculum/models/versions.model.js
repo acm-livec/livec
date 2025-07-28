@@ -1,5 +1,5 @@
-const CurriculumVersion = require('./curriculum-version.model');
-const kebabToCamel = require('../../../shared/utils/kebabToCamel');
+import CurriculumVersion from './curriculum-version.model';
+import kebabToCamel from '../../../shared/utils/kebabToCamel';
 class CurriculumVersions {
     static dbRef;
 

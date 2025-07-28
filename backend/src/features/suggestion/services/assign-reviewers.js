@@ -1,8 +1,9 @@
-const { AppError, SuggestionNotFoundError } = require('../../../shared/errors');
-const Reviewers = require('../../users/models/users/reviewer/reviewers.model.js')
-const Suggestions = require('../models/suggestions.model.js')
+import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import Reviewers from '../../users/models/users/reviewer/reviewers.model.js';
+import Suggestions from '../models/suggestions.model.js';
+import baseLogger from '../../../../logger/logger.js';
 
-const logger = require('../../../../logger/logger.js').addSource({
+const logger = baseLogger.addSource({
     file: 'auth.service',
     method: "assignReviewersToSuggestion",
     params: ['suggestionId, notes, message, reviewers']

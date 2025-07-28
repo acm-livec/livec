@@ -1,11 +1,14 @@
-const express = require('express');
+import express from 'express';
+import communityMemberRouter from './routes/community-member.routes.js';
+import reviewerRouter from './routes/reviewer.routes.js';
+import associateEditorRouter from './routes/associate-editor.routes.js';
+import editorInChiefRouter from './routes/editor-in-chief.routes.js';
+
 const router = express.Router();
 
-
-
-router.use('/community-member', require('./routes/community-member.routes.js'));
-router.use('/reviewer', require('./routes/reviewer.routes.js'));
-router.use('/associate-editor', require('./routes/associate-editor.routes.js'));
-router.use('/editor-in-chief', require('./routes/editor-in-chief.routes.js'));
+router.use('/community-member', communityMemberRouter);
+router.use('/reviewer', reviewerRouter);
+router.use('/associate-editor', associateEditorRouter);
+router.use('/editor-in-chief', editorInChiefRouter);
 
 module.exports = router;
