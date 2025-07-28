@@ -80,7 +80,7 @@ class Suggestions {
         await this.dbRef.read();
         const entries = this.dbRef.data.
             filter(s => (s.assigned_editor_in_chief === id && new Suggestion(s).isInDeliberation()))
-            .map(s => new Suggestion(s).toEditorInCheif())
+            .map(s => new Suggestion(s).toEditorInChief())
         return entries || []
     }
 

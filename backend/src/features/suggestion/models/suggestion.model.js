@@ -122,7 +122,7 @@ class Suggestion {
 
 
 
-    toEditorInCheif() {
+    toEditorInChief() {
         return {
             id: this.id,
             title: this.title,
