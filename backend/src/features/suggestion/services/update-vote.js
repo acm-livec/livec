@@ -41,9 +41,7 @@ const updateVote = async ({ id, userId, formData }) => {
         }
 
         const ups = await Suggestions.update(suggestionToVoteOn)
-        const didVote = ups.didVote(userId)
         const ret = ups.toAssociateEditor()
-        ret.voted = didVote
 
         logger.debug("suggestion.vote.finished")
         return ret

@@ -120,6 +120,11 @@ const SuggestionContent = ({ suggestion, user }) => {
     const socket = io('http://localhost:3000');
     const [current, setCurrent] = useState(suggestion);
     const [votes, setVotes] = useState(handleVotes(suggestion?.finalDecisions));
+    const checkUserVoted = (s) =>
+        s?.finalDecisions?.some(
+            (v) => v.board_member_id === user.id && v.final_decision !== 'pending'
+        );
+    const [userVoted, setUserVoted] = useState(checkUserVoted(suggestion));
     const options = [
         { label: 'Include', value: 'include' },
         { label: 'Exclude', value: 'exclude' },
@@ -129,6 +134,10 @@ const SuggestionContent = ({ suggestion, user }) => {
         socket.on('update', (newVotes) => {
             setCurrent(newVotes);
             setVotes(handleVotes(newVotes?.finalDecisions));
+            setUserVoted(checkUserVoted(newVotes));
+            if (handleVotes(newVotes?.finalDecisions).pending === 0) {
+                window.location.reload();
+            }
         });
 
         return () => {
@@ -137,6 +146,7 @@ const SuggestionContent = ({ suggestion, user }) => {
     }, []);
 
     const handleVote = (id, formData) => {
+        setUserVoted(true);
         socket.emit('vote', { id, userId: user.id, formData });
     };
     return (
@@ -149,7 +159,7 @@ const SuggestionContent = ({ suggestion, user }) => {
                 <h3>Exclude: {votes.exclude}</h3>
                 <h3>Include: {votes.include}</h3>
                 <h3>Undecided: {votes.pending}</h3>
-                {!current?.voted && (
+                {!userVoted && (
                     <Form
                         //  showConfirmation={{
                         //      defaultInfo: <RecModal />,
