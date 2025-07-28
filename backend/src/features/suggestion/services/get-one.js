@@ -3,6 +3,7 @@ const { Roles } = require('@docs/constants/roles.js')
 const Suggestions = require('@features/suggestion/models/suggestions.model.js')
 const Curriculums = require('@features/curriculum/models/curriculums.model.js')
 const kebabToCamel = require('@shared/utils/kebabToCamel')
+const getUserNameById = require('@shared/utils/getUserNameById')
 const logger = require('@logger').addSource({
     file: 'auth.service',
     method: "assignAssociateEditorToSuggestion",
@@ -28,6 +29,13 @@ const getSuggestionById = async (suggestionId, role = null) => {
         if (role) {
             if (role === Roles.COMMUNITY_MEMBER) {
                 retS = requestedSuggestion.toCommunityMember()
+                if (Array.isArray(retS.publicUpdates)) {
+                    for (const update of retS.publicUpdates) {
+                        if (typeof update.author === 'string' && update.author !== 'LiveC') {
+                            update.author = await getUserNameById(update.author)
+                        }
+                    }
+                }
             } else if (role === Roles.ASSOCIATE_EDITOR) {
                 retS = requestedSuggestion.toAssociateEditor()
             } else if (role === Roles.EDITOR_IN_CHIEF) {
