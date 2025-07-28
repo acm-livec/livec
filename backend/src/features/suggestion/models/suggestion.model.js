@@ -175,6 +175,7 @@ class Suggestion {
             [Actions.DEFERED_TO_REVIEWER]: 'ASSOCIATE_EDITOR_DEFERRED_SUGGESTION_TO_REVIEWER',
             [Actions.ASSIGNED_REVIEWERS]: 'ASSOCIATE_EDITOR_ASSIGNED_REVIEWERS_FOR_FEEDBACK',
             [Actions.RECOMMENDATION_BY_REVIEWER]: 'REVIEWER_SUBMITS_RECOMMENDATION',
+            [Actions.ALL_REVIEWS_COMPLETE]: 'ALL_REVIEWERS_FINISH_PROVIDING_FEEDBACK',
             [Actions.STARTED_FINAL_DISCUSSION]: 'EDITOR_IN_CHIEF_BEGINS_BOARD_DISCUSSION',
             [Actions.ACCEPTED_BY_BOARD]: 'BOARD_ACCEPTS_SUGGESTION_CHANGE',
             [Actions.DECLINED_BY_BOARD]: 'BOARD_REJECTS_SUGGESTION_CHANGE',
@@ -312,6 +313,14 @@ class Suggestion {
         this._updateStatus(Actions.RECOMMENDATION_BY_REVIEWER)
         this.insertHistory(Actions.RECOMMENDATION_BY_REVIEWER, reviewerId, { decision })
         this.updateReviewer(reviewerId, decision)
+
+        const allDone = this.assigned_reviewers.length > 0 &&
+            this.assigned_reviewers.every(r => r.recommendation !== 'pending')
+
+        if (allDone) {
+            this._updateStatus(Actions.ALL_REVIEWS_COMPLETE)
+            this.insertHistory(Actions.ALL_REVIEWS_COMPLETE, 'LiveC')
+        }
     }
 
     assignAssociateEditor(associateEditor) {

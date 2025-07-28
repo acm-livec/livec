@@ -12,6 +12,8 @@ const Actions = Object.freeze({
 
     RECOMMENDATION_BY_REVIEWER: 'recommendation-by-reviewer',
 
+    ALL_REVIEWS_COMPLETE: 'all-reviews-complete',
+
     SUBMITTED_BY_MEMBER: 'submitted-by-member',
     FINALIZED_BY_ASSOCIATE_EDITOR: 'finalized-by-associate-editor',
     APPROVED_BY_EDITOR_IN_CHIEF: 'approved-by-editor-in-chief',
