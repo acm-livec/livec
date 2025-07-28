@@ -13,7 +13,7 @@
       "system": "initial-submission"
     },
     "discipline": "cybersecurity",
-    "assigned_associate_editor": "none",
+    "assigned_associate_editor": null,
     "public_updates": [
       {
         "refId": "PU1-1",
@@ -544,8 +544,8 @@
     "time_created": "2025-01-08T00:00:00.000Z",
     "status": {
       "for_member": "rejected",
-      "for_associate_editor": "declined",
-      "system": "closed-rejected"
+      "for_associate_editor": "desk-rejected",
+      "system": "closed"
     },
     "discipline": "computer-science",
     "assigned_associate_editor": "AE-0001",
@@ -584,6 +584,639 @@
         "action": "desk-reject",
         "performed_by": "AE-0001",
         "date": "2025-01-08T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO9",
+    "title": "Deferred to reviewer",
+    "text": "AE deferred this suggestion to a reviewer",
+    "suggestion": "AE deferred this suggestion to a reviewer",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "0dc45648bc8a",
+    "time_created": "2025-01-09T00:00:00.000Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "deferred",
+      "for_reviewer": "deferral",
+      "system": "external-review"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_reviewers": [
+      {
+        "id": "R-0001",
+        "recommendation": "pending"
+      }
+    ],
+    "public_updates": [
+      {
+        "refId": "PU9-1",
+        "status": "under-review",
+        "date": "2025-01-09T00:00:00.000Z",
+        "message": "Deferred to external reviewer",
+        "author": "AE-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "defered-to-reviewer",
+        "refId": "DOC9-1",
+        "author": "AE-0001",
+        "date": "2025-01-09T00:00:00.000Z",
+        "content": "Deferral"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-09T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-09T00:00:00.000Z"
+      },
+      {
+        "action": "defered-to-reviewer",
+        "performed_by": "AE-0001",
+        "date": "2025-01-09T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO10",
+    "title": "Deferred review complete",
+    "text": "Reviewer completed a deferred suggestion",
+    "suggestion": "Reviewer completed a deferred suggestion",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "0dc45648bc8a",
+    "time_created": "2025-01-10T00:00:00.000Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "deferred-complete",
+      "for_reviewer": "review-completed",
+      "system": "editorial-review"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_reviewers": [
+      {
+        "id": "R-0001",
+        "recommendation": "include"
+      }
+    ],
+    "public_updates": [
+      {
+        "refId": "PU10-1",
+        "status": "under-review",
+        "date": "2025-01-10T00:00:00.000Z",
+        "message": "Reviewer completed review",
+        "author": "R-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "recommendation-by-reviewer",
+        "refId": "DOC10-1",
+        "author": "R-0001",
+        "date": "2025-01-10T00:00:00.000Z",
+        "content": "include"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-10T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-10T00:00:00.000Z"
+      },
+      {
+        "action": "defered-to-reviewer",
+        "performed_by": "AE-0001",
+        "date": "2025-01-10T00:00:00.000Z"
+      },
+      {
+        "action": "recommendation-by-reviewer",
+        "performed_by": "R-0001",
+        "date": "2025-01-10T00:00:00.000Z",
+        "meta": {
+          "decision": "include"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO11",
+    "title": "Reviewers assigned",
+    "text": "AE assigned reviewers for feedback",
+    "suggestion": "AE assigned reviewers for feedback",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "f95611b734d5",
+    "time_created": "2025-01-11T00:00:00.000Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "awaiting-reviewers",
+      "for_reviewer": "feedback-requested",
+      "system": "temporarily-paused"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_reviewers": [
+      {
+        "id": "R-0001",
+        "recommendation": "pending"
+      },
+      {
+        "id": "R-7562",
+        "recommendation": "pending"
+      }
+    ],
+    "public_updates": [
+      {
+        "refId": "PU11-1",
+        "status": "under-review",
+        "date": "2025-01-11T00:00:00.000Z",
+        "message": "Reviewers invited",
+        "author": "AE-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "assigned-reviewers",
+        "refId": "DOC11-1",
+        "author": "AE-0001",
+        "date": "2025-01-11T00:00:00.000Z",
+        "content": "Two reviewers assigned"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-11T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-11T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-reviewers",
+        "performed_by": "AE-0001",
+        "date": "2025-01-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO12",
+    "title": "Reviewer recommendation submitted",
+    "text": "Reviewer provided their recommendation",
+    "suggestion": "Reviewer provided their recommendation",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "f95611b734d5",
+    "time_created": "2025-01-12T00:00:00.000Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "awaiting-reviewers",
+      "for_reviewer": "recommendation-submitted",
+      "system": "temporarily-paused"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_reviewers": [
+      {
+        "id": "R-0001",
+        "recommendation": "include"
+      },
+      {
+        "id": "R-7562",
+        "recommendation": "pending"
+      }
+    ],
+    "public_updates": [
+      {
+        "refId": "PU12-1",
+        "status": "under-review",
+        "date": "2025-01-12T00:00:00.000Z",
+        "message": "Reviewer R-0001 submitted recommendation",
+        "author": "R-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "recommendation-by-reviewer",
+        "refId": "DOC12-1",
+        "author": "R-0001",
+        "date": "2025-01-12T00:00:00.000Z",
+        "content": "include"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-12T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-12T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-reviewers",
+        "performed_by": "AE-0001",
+        "date": "2025-01-12T00:00:00.000Z"
+      },
+      {
+        "action": "recommendation-by-reviewer",
+        "performed_by": "R-0001",
+        "date": "2025-01-12T00:00:00.000Z",
+        "meta": {
+          "decision": "include"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO13",
+    "title": "All reviews complete",
+    "text": "All reviewers have finished providing feedback",
+    "suggestion": "All reviewers have finished providing feedback",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "f95611b734d5",
+    "time_created": "2025-01-13T00:00:00.000Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "all-reviews-complete",
+      "system": "editorial-review"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_reviewers": [
+      {
+        "id": "R-0001",
+        "recommendation": "include"
+      },
+      {
+        "id": "R-7562",
+        "recommendation": "exclude"
+      }
+    ],
+    "public_updates": [
+      {
+        "refId": "PU13-1",
+        "status": "under-review",
+        "date": "2025-01-13T00:00:00.000Z",
+        "message": "All reviews have been submitted",
+        "author": "LiveC"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "all-reviews-complete",
+        "refId": "DOC13-1",
+        "author": "LiveC",
+        "date": "2025-01-13T00:00:00.000Z",
+        "content": "Reviews complete"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-13T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-13T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-reviewers",
+        "performed_by": "AE-0001",
+        "date": "2025-01-13T00:00:00.000Z"
+      },
+      {
+        "action": "recommendation-by-reviewer",
+        "performed_by": "R-0001",
+        "date": "2025-01-13T00:00:00.000Z",
+        "meta": {
+          "decision": "include"
+        }
+      },
+      {
+        "action": "recommendation-by-reviewer",
+        "performed_by": "R-7562",
+        "date": "2025-01-13T00:00:00.000Z",
+        "meta": {
+          "decision": "exclude"
+        }
+      },
+      {
+        "action": "all-reviews-complete",
+        "performed_by": "LiveC",
+        "date": "2025-01-13T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO14",
+    "title": "AE finalized for EIC",
+    "text": "Associate Editor finalized and sent to EIC",
+    "suggestion": "Associate Editor finalized and sent to EIC",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "b47742cdb750",
+    "time_created": "2025-01-14T00:00:00.000Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "finalized",
+      "for_editor_in_chief": "new-change",
+      "system": "awaiting-eic-input"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "public_updates": [
+      {
+        "refId": "PU14-1",
+        "status": "under-review",
+        "date": "2025-01-14T00:00:00.000Z",
+        "message": "Awaiting EIC input",
+        "author": "AE-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "finalized-by-associate-editor",
+        "refId": "DOC14-1",
+        "author": "AE-0001",
+        "date": "2025-01-14T00:00:00.000Z",
+        "content": "Sent to EIC"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-14T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-14T00:00:00.000Z"
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-01-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO15",
+    "title": "EIC rejects AE change",
+    "text": "Editor in Chief rejected the AE recommendation",
+    "suggestion": "Editor in Chief rejected the AE recommendation",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "b47742cdb750",
+    "time_created": "2025-01-15T00:00:00.000Z",
+    "status": {
+      "for_member": "rejected",
+      "for_associate_editor": "rejected-by-chief",
+      "for_editor_in_chief": "rejected-finalization",
+      "system": "closed"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "public_updates": [
+      {
+        "refId": "PU15-1",
+        "status": "rejected",
+        "date": "2025-01-15T00:00:00.000Z",
+        "message": "EIC rejected the recommendation",
+        "author": "EIC-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "rejected-by-editor-in-chief",
+        "refId": "DOC15-1",
+        "author": "EIC-0001",
+        "date": "2025-01-15T00:00:00.000Z",
+        "content": "Not suitable"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-15T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-15T00:00:00.000Z"
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-01-15T00:00:00.000Z"
+      },
+      {
+        "action": "rejected-by-editor-in-chief",
+        "performed_by": "EIC-0001",
+        "date": "2025-01-15T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO16",
+    "title": "EIC requests revisions",
+    "text": "EIC requests revisions from AE",
+    "suggestion": "EIC requests revisions from AE",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "b47742cdb750",
+    "time_created": "2025-01-16T00:00:00.000Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "revisions-requested",
+      "for_editor_in_chief": "awaiting-revisions",
+      "system": "refinement-cycle"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "public_updates": [
+      {
+        "refId": "PU16-1",
+        "status": "under-review",
+        "date": "2025-01-16T00:00:00.000Z",
+        "message": "Revisions requested by EIC",
+        "author": "EIC-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "change-request-by-editor-in-chief",
+        "refId": "DOC16-1",
+        "author": "EIC-0001",
+        "date": "2025-01-16T00:00:00.000Z",
+        "content": "Needs changes"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-16T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-16T00:00:00.000Z"
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-01-16T00:00:00.000Z"
+      },
+      {
+        "action": "change-request-by-editor-in-chief",
+        "performed_by": "EIC-0001",
+        "date": "2025-01-16T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO17",
+    "title": "AE resubmits after revision",
+    "text": "Associate Editor finalized again after revisions",
+    "suggestion": "Associate Editor finalized again after revisions",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "b47742cdb750",
+    "time_created": "2025-01-17T00:00:00.000Z",
+    "status": {
+      "for_member": "under-review",
+      "for_associate_editor": "finalized",
+      "for_editor_in_chief": "revisions-received",
+      "system": "refinement-cycle"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "public_updates": [
+      {
+        "refId": "PU17-1",
+        "status": "under-review",
+        "date": "2025-01-17T00:00:00.000Z",
+        "message": "Revised version submitted",
+        "author": "AE-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "finalized-by-associate-editor",
+        "refId": "DOC17-1",
+        "author": "AE-0001",
+        "date": "2025-01-17T00:00:00.000Z",
+        "content": "Resubmission"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-17T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-17T00:00:00.000Z"
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-01-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "SCOSC-DEMO18",
+    "title": "Board rejects change",
+    "text": "The editorial board rejected the suggestion",
+    "suggestion": "The editorial board rejected the suggestion",
+    "type": "update-existing-knowledge-area",
+    "submitter_id": "CM-0001",
+    "section_id": "afb872230af3",
+    "time_created": "2025-01-18T00:00:00.000Z",
+    "status": {
+      "for_member": "declined",
+      "for_associate_editor": "completed",
+      "for_editor_in_chief": "rejected-by-board",
+      "system": "closed"
+    },
+    "discipline": "computer-science",
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "public_updates": [
+      {
+        "refId": "PU18-1",
+        "status": "declined",
+        "date": "2025-01-18T00:00:00.000Z",
+        "message": "Board rejected the suggestion",
+        "author": "EIC-0001"
+      }
+    ],
+    "documentation": [
+      {
+        "action": "declined-by-board",
+        "refId": "DOC18-1",
+        "author": "EIC-0001",
+        "date": "2025-01-18T00:00:00.000Z",
+        "content": "Board votes reject"
+      }
+    ],
+    "history": [
+      {
+        "action": "submitted-by-member",
+        "performed_by": "CM-0001",
+        "date": "2025-01-18T00:00:00.000Z"
+      },
+      {
+        "action": "assigned-associate-editor",
+        "performed_by": "LiveC",
+        "date": "2025-01-18T00:00:00.000Z"
+      },
+      {
+        "action": "finalized-by-associate-editor",
+        "performed_by": "AE-0001",
+        "date": "2025-01-18T00:00:00.000Z"
+      },
+      {
+        "action": "started-final-discussion",
+        "performed_by": "EIC-0001",
+        "date": "2025-01-18T00:00:00.000Z"
+      },
+      {
+        "action": "declined-by-board",
+        "performed_by": "LiveC",
+        "date": "2025-01-18T00:00:00.000Z"
       }
     ]
   }
