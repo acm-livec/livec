@@ -106,7 +106,8 @@ const Success = ({ children, close }) => {
 const Failure = ({ close }) => {
     return (
         <div className={styles['overlay-content']}>
-            Error
+            <p>An error occurred while processing your request.</p>
+            <p>Please try again later.</p>
             <div className={styles['button-group']}>
                 <button className={`${styles.button} ${styles['button--cancel']}`} onClick={close}>
                     Close

@@ -150,6 +150,7 @@ const SuggestionContent = ({ suggestion, role }) => {
                         variant="confirm"
                         text="Start Discussion"
                         onClick={() => startDiscussion(suggestion.id)}
+                        modal={<StartDiscussionModal />}
                     />
                 )}
                 {role === Roles.REVIEWER &&
@@ -158,7 +159,7 @@ const SuggestionContent = ({ suggestion, role }) => {
                         <Form
                             showConfirmation={{
                                 defaultInfo: <RecModal />,
-                                successInfo: <></>,
+                                successInfo: <p>Recommendation submitted!</p>,
                             }}
                             onSubmit={(formData) => recommend(suggestion.id, formData)}
                         >
@@ -260,14 +261,19 @@ const FinalizeModal = () => {
     return (
         <Modal>
             <DefaultView message="Are you sure you want to finalize this suggestion?"></DefaultView>
-            <ConfirmationView message={'Success'} />
+            <ConfirmationView message={'Suggestion was successfully finalized!'} />
         </Modal>
     );
 };
 const RecModal = () => {
     return (
-        <>
-            <p>Are you sure do that...</p>
-        </>
+        <>Are you sure you want to submit this recommendation?</>
     );
 };
+
+const StartDiscussionModal = () => (
+    <Modal>
+        <DefaultView message="Start board discussion for this suggestion?" />
+        <ConfirmationView message={'Discussion successfully started!'} />
+    </Modal>
+);

@@ -19,10 +19,13 @@ export const postAssociateEditorFinalization = async (
     updatedSection
 ) => {
     try {
-        await API.post(`/suggestion/${suggestionId}/finalize`, {
+        const response = await API.post(`/suggestion/${suggestionId}/finalize`, {
             associateEditor,
             updatedSection,
         });
+        const { success, message } = response.data;
+        log.success(message);
+        return success;
     } catch (error) {
         log.error(error);
     }

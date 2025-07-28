@@ -29,14 +29,15 @@ export default function useEditorInChief() {
     const approveSuggestion = async (suggestionId, formData) => {
         try {
             const { forPrivate, forPublic } = formData;
-            await postEditorInChiefApproval(
+            const success = await postEditorInChiefApproval(
                 suggestionId,
                 editorInChiefId,
                 forPrivate,
                 forPublic
             );
+            return success;
         } catch (error) {
-            // ignore
+            return false;
         }
     };
 
@@ -53,9 +54,14 @@ export default function useEditorInChief() {
     const sendChangeRequest = async (suggestionId, formData) => {
         try {
             const { forPrivate } = formData;
-            await postChangeRequest(suggestionId, editorInChiefId, forPrivate);
+            const success = await postChangeRequest(
+                suggestionId,
+                editorInChiefId,
+                forPrivate
+            );
+            return success;
         } catch (error) {
-            // ignore
+            return false;
         }
     };
 
@@ -86,9 +92,11 @@ export default function useEditorInChief() {
 
     const startDiscussion = async (suggestionId) => {
         try {
-            await postDiscussion(suggestionId, editorInChiefId);
+            const success = await postDiscussion(suggestionId, editorInChiefId);
+            return success;
         } catch (error) {
             // ignore
+            return false;
         }
     };
 

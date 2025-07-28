@@ -20,6 +20,7 @@ export default function ModalProvider({ children, onSubmit }) {
             navigate(0);
         }
         setShowing(false);
+        setView('default');
     };
 
     const values = {

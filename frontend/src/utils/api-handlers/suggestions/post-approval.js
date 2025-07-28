@@ -16,7 +16,14 @@ import { apiLog as log } from '../apiLogger';
 export const postEditorInChiefApproval = async (id, eicId, notes, message) => {
     try {
         log.debug('EIC approval', id, eicId, notes, message);
-        await API.post(`/suggestion/${id}/approve`, { eicId, notes, message });
+        const response = await API.post(`/suggestion/${id}/approve`, {
+            eicId,
+            notes,
+            message,
+        });
+        const { success, message: msg } = response.data;
+        log.success(msg);
+        return success;
     } catch (error) {
         log.error(error);
     }

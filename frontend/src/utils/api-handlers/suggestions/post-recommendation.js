@@ -7,11 +7,17 @@ export const postRecommednation = async (
     { decision, notes }
 ) => {
     try {
-        await API.post(`/suggestion/${suggestionId}/post-recommendation`, {
-            reviewerId,
-            decision,
-            notes,
-        });
+        const response = await API.post(
+            `/suggestion/${suggestionId}/post-recommendation`,
+            {
+                reviewerId,
+                decision,
+                notes,
+            }
+        );
+        const { success, message } = response.data;
+        log.success(message);
+        return success;
     } catch (error) {
         log.error(error);
     }

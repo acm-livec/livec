@@ -158,13 +158,15 @@ export default function useAssociateEditor() {
         const updatedSection = JSON.parse(localStorage.getItem(suggestionId));
         if (!updatedSection) throw new Error('No updated section available');
         try {
-            await postAssociateEditorFinalization(
+            const success = await postAssociateEditorFinalization(
                 associateEditorId,
                 suggestionId,
                 updatedSection
             );
+            return success;
         } catch (error) {
             // ignore
+            return false;
         }
     };
 
