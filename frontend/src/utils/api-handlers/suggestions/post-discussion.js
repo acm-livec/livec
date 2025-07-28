@@ -13,7 +13,12 @@ import { apiLog as log } from '../apiLogger';
 export const postDiscussion = async (id, eicId,) => {
     try {
         log.debug('Start discussion', id, eicId);
-        await API.post(`/suggestion/${id}/start-discussion`, { eicId });
+        const response = await API.post(`/suggestion/${id}/start-discussion`, {
+            eicId,
+        });
+        const { success, message } = response.data;
+        log.success(message);
+        return success;
     } catch (error) {
         log.error(error);
     }

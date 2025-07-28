@@ -15,7 +15,13 @@ import { apiLog as log } from '../apiLogger';
 export const postChangeRequest = async (id, eic, change) => {
     try {
         log.debug('Change request', id, eic, change);
-        await API.post(`/suggestion/${id}/change-request`, { eic, change });
+        const response = await API.post(`/suggestion/${id}/change-request`, {
+            eic,
+            change,
+        });
+        const { success, message } = response.data;
+        log.success(message);
+        return success;
     } catch (error) {
         log.error(error);
     }
