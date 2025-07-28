@@ -12,6 +12,8 @@ const Actions = Object.freeze({
 
     RECOMMENDATION_BY_REVIEWER: 'recommendation-by-reviewer',
 
+    DEFERRED_REVIEW_COMPLETE: 'deferred-review-complete',
+
     ALL_REVIEWS_COMPLETE: 'all-reviews-complete',
 
     SUBMITTED_BY_MEMBER: 'submitted-by-member',
