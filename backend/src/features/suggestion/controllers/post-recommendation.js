@@ -1,7 +1,7 @@
-const { addRecommendationFromReviewer } = require('@features/suggestion/services')
-const { AppError } = require('@shared/errors');
+const { addRecommendationFromReviewer } = require('../services')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.controller',
     method: "postRecommednation",
     params: ['req.body']

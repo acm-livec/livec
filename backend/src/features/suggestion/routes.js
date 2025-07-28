@@ -5,7 +5,7 @@ const {
     postStartReview, postAssignReviewers, postDocumentation,
     postAssociateEditorFinalization, postEditorInChiefApproval,
     postChangeRequest, postDeferral, postRecommednation, postDiscussion, postImplementation
-} = require('@features/suggestion/controllers');
+} = require('./controllers');
 
 const router = express.Router();
 

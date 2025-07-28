@@ -1,9 +1,9 @@
-const { AppError, SuggestionNotFoundError } = require('@shared/errors');
-const Suggestions = require('@features/suggestion/models/suggestions.model.js')
+const { AppError, SuggestionNotFoundError } = require('../../../shared/errors');
+const Suggestions = require('../models/suggestions.model.js')
 
 
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'auth.service',
     method: "handleRejectSuggestion",
     params: ['suggestionId', 'rejectedById']

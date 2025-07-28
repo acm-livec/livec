@@ -1,14 +1,14 @@
-const { AppError, SuggestionNotFoundError } = require('@shared/errors');
-const Suggestions = require('@features/suggestion/models/suggestions.model.js');
+const { AppError, SuggestionNotFoundError } = require('../../../shared/errors');
+const Suggestions = require('../models/suggestions.model.js');
 const {
     getCurriculumSection,
-} = require('@features/curriculum/services');
-const addCurriculumVersion = require('@features/curriculum/services/add-version');
-const { generateSectionId } = require('@shared/utils/generate-id');
-const kebabToCamel = require('@shared/utils/kebabToCamel');
-const db = require('@database/database');
+} = require('../../curriculum/services');
+const addCurriculumVersion = require('../../curriculum/services/add-version');
+const { generateSectionId } = require('../../../shared/utils/generate-id');
+const kebabToCamel = require('../../../shared/utils/kebabToCamel');
+const db = require('../../../database/database');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.service',
     method: 'finalizeImplementation',
     params: ['suggestionId', 'eicId', 'notes', 'message']

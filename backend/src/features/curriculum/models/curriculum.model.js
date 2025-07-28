@@ -1,4 +1,4 @@
-const db = require('@database/database');
+const db = require('../../../database/database');
 
 class Curriculum {
     dbRef = db.curriculums

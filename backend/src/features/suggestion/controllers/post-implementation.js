@@ -1,6 +1,6 @@
-const { finalizeImplementation } = require('@features/suggestion/services');
-const { AppError } = require('@shared/errors');
-const logger = require('@logger').addSource({ file: 'suggestion.controller', method: 'postImplementation' });
+const { finalizeImplementation } = require('../services');
+const { AppError } = require('../../../shared/errors');
+const logger = require('../../../../logger/logger.js').addSource({ file: 'suggestion.controller', method: 'postImplementation' });
 
 const postImplementation = async (req, res) => {
     try {

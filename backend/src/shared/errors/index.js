@@ -1,4 +1,4 @@
-const HTTP_STATUS = require('@shared/constants/http-codes.js');
+const HTTP_STATUS = require('../constants/http-codes.js');
 
 
 class AppError extends Error {

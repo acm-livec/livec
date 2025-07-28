@@ -1,6 +1,6 @@
-const { addCurriculumVersion } = require('@features/curriculum/services');
-const { AppError } = require('@shared/errors');
-const logger = require('@logger').addSource({ file: 'curriculum.controller', method: 'postVersion' });
+const { addCurriculumVersion } = require('../services');
+const { AppError } = require('../../../shared/errors');
+const logger = require('../../../../logger/logger.js').addSource({ file: 'curriculum.controller', method: 'postVersion' });
 
 const postVersion = async (req, res) => {
     try {

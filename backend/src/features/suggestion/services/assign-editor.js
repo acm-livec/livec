@@ -1,8 +1,8 @@
-const { AppError, NoAssociateEditorsFoundError } = require('@shared/errors');
-const AssociateEditors = require('@features/users/models//users/associate-editor/editors.model.js')
-const Suggestions = require('@features/suggestion/models/suggestions.model.js')
+const { AppError, NoAssociateEditorsFoundError } = require('../../../shared/errors');
+const AssociateEditors = require('../../users/models/users/associate-editor/editors.model.js')
+const Suggestions = require('../models/suggestions.model.js')
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'auth.service',
     method: "assignAssociateEditorToSuggestion",
     params: ['suggestion']

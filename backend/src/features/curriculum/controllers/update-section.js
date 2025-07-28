@@ -1,6 +1,6 @@
-const { updateCurriculumSection } = require('@features/curriculum/services');
-const { AppError } = require('@shared/errors');
-const logger = require('@logger').addSource({ file: 'curriculum.controller', method: 'updateSection' });
+const { updateCurriculumSection } = require('../services');
+const { AppError } = require('../../../shared/errors');
+const logger = require('../../../../logger/logger.js').addSource({ file: 'curriculum.controller', method: 'updateSection' });
 
 const updateSection = async (req, res) => {
     try {

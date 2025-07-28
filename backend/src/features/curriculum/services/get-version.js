@@ -1,9 +1,9 @@
-const CurriculumVersions = require('@features/curriculum/models/versions.model');
-const { AppError } = require('@shared/errors');
-const kebabToCamel = require('@shared/utils/kebabToCamel')
+const CurriculumVersions = require('../models/versions.model');
+const { AppError } = require('../../../shared/errors');
+const kebabToCamel = require('../../../shared/utils/kebabToCamel')
 
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'auth.service',
     method: "getCurriculumVersion",
     params: ['curriculum', 'versionId']

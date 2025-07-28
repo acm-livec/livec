@@ -1,6 +1,6 @@
-const { AppError } = require('@shared/errors');
-const Reviewers = require('@features/users/models/users/reviewer/reviewers.model.js')
-const logger = require('@logger').addSource({
+const { AppError } = require('../../../../../shared/errors');
+const Reviewers = require('../../../models/users/reviewer/reviewers.model.js')
+const logger = require('../../../../../../logger/logger.js').addSource({
     file: 'associate-editor.service',
     method: "getAssignedReviewers",
     params: ['userId']
