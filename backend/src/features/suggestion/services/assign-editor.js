@@ -58,6 +58,7 @@ const assignAssociateEditorToSuggestion = async (suggestion) => {
         }
 
         logger.info("suggestion.assign_ae.failed")
+        throw error
 
     } finally { logger.end("Assign AE to Suggestion") }
 }
