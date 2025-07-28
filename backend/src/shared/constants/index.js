@@ -1,6 +1,6 @@
 const HTTP_STATUS = require('./http-codes');
-const { Roles } = require('@docs/constants/roles.js');
-const { Status } = require('@docs/constants/status.js');
+const { Roles } = require('../../../../docs/constants/roles.js');
+const { Status } = require('../../../../docs/constants/status.js');
 
 const Actions = Object.freeze({
     DESK_REJECT: 'desk-reject',

@@ -1,5 +1,5 @@
-const Curriculums = require('@features/curriculum/models/curriculums.model.js');
-const kebabToCamel = require('@shared/utils/kebabToCamel');
+const Curriculums = require('../models/curriculums.model.js');
+const kebabToCamel = require('../../../shared/utils/kebabToCamel');
 
 const updateCurriculumSection = async (curriculum, section) => {
     const curr = await Curriculums.findByCurriculum(kebabToCamel(curriculum));

@@ -1,8 +1,8 @@
 
-const { handleEditorInChiefApproval } = require('@features/suggestion/services')
-const { AppError } = require('@shared/errors');
+const { handleEditorInChiefApproval } = require('../services')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.controller',
     method: "postEditorInChiefApproval",
     params: ['req.body']

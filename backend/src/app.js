@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors')
-const db = require('@database/database');
-const authRoutes = require('@features/auth/routes.js');
-const suggestionRoutes = require('@features/suggestion/routes.js');
-const userRoutes = require('@features/users/routes.js');
-const curriculumRoutes = require('@features/curriculum/routes.js');
+const db = require('./database/database');
+const authRoutes = require('./features/auth/routes.js');
+const suggestionRoutes = require('./features/suggestion/routes.js');
+const userRoutes = require('./features/users/routes.js');
+const curriculumRoutes = require('./features/curriculum/routes.js');
 
 const app = express();
 app.use(express.json());

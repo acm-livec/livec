@@ -1,7 +1,7 @@
-const { addNewDocumentationToSuggestion } = require('@features/suggestion/services')
-const { AppError } = require('@shared/errors');
+const { addNewDocumentationToSuggestion } = require('../services')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.controller',
     method: "postDocumentation",
     params: ['req.body']

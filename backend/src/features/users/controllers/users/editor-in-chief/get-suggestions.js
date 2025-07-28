@@ -1,7 +1,7 @@
-const getFinalizedSuggestions = require('@features/users/services/users/editor-in-chief/get-finalized')
-const { AppError } = require('@shared/errors');
+const getFinalizedSuggestions = require('../../../services/users/editor-in-chief/get-finalized')
+const { AppError } = require('../../../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../../../logger/logger.js').addSource({
     file: 'reviewer',
     method: "getSuggestions",
     params: ["req.params"]

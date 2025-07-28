@@ -1,9 +1,9 @@
 const { Server } = require('socket.io');
-const logger = require('@logger').addSource({
+const logger = require('../logger/logger.js').addSource({
     file: 'socket.js',
     method: 'socket',
 });
-const { updateVote } = require('@features/suggestion/services')
+const { updateVote } = require('./features/suggestion/services')
 /**
  * Set up Socket.IO server on the existing HTTP server.
  */

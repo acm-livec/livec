@@ -1,5 +1,5 @@
 const express = require('express');
-const { getCurriculum, getSection, updateSection, postVersion, getVersion } = require('@features/curriculum/controllers')
+const { getCurriculum, getSection, updateSection, postVersion, getVersion } = require('./controllers')
 
 const router = express.Router();
 

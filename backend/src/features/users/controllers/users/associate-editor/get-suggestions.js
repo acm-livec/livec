@@ -1,7 +1,7 @@
-const getAssociateEditorAssignedSuggestions = require('@features/users/services/users/associate-editor/get-suggestions')
-const { AppError } = require('@shared/errors');
+const getAssociateEditorAssignedSuggestions = require('../../../services/users/associate-editor/get-suggestions')
+const { AppError } = require('../../../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../../../logger/logger.js').addSource({
     file: 'community-member.controller',
     method: "getSuggestions",
     params: ["req.params"]

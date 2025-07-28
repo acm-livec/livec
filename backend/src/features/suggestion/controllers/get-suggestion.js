@@ -1,7 +1,7 @@
-const { getSuggestionById } = require('@features/suggestion/services')
-const { AppError } = require('@shared/errors');
+const { getSuggestionById } = require('../services')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.controller',
     method: "getSuggestion",
     params: ['req.body']

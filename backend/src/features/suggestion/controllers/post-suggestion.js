@@ -1,7 +1,7 @@
-const  handleNewSuggestion  = require('@features/suggestion/services/handle-suggestion.js')
-const { AppError } = require('@shared/errors');
+const  handleNewSuggestion  = require('../services/handle-suggestion.js')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.controller', 
     method: "postSuggestion", 
     params: ['req.body']

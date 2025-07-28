@@ -1,6 +1,6 @@
 // models/CommunityMember.js
 const User = require('../user.model');
-const { Roles } = require('@shared/constants');
+const { Roles } = require('../../../../../shared/constants');
 
 class CommunityMember extends User {
     static role = Roles.COMMUNITY_MEMBER;

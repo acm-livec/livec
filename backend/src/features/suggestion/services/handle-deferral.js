@@ -1,8 +1,8 @@
-const { AppError, SuggestionNotFoundError, UserNotFoundError } = require('@shared/errors');
-const Reviewers = require('@features/users/models/users/reviewer/reviewers.model.js')
-const Suggestions = require('@features/suggestion/models/suggestions.model.js')
+const { AppError, SuggestionNotFoundError, UserNotFoundError } = require('../../../shared/errors');
+const Reviewers = require('../../users/models/users/reviewer/reviewers.model.js')
+const Suggestions = require('../models/suggestions.model.js')
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.service',
     method: "handleDeferSuggestionToReviewer",
     params: ['id', 'reviewerId']

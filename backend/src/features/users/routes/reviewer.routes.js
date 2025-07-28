@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { getSuggestions } = require('@features/users/controllers/users/reviewer');
+const { getSuggestions } = require('../controllers/users/reviewer');
 
 const router = express.Router();
 

@@ -1,7 +1,7 @@
-const { handleDeferSuggestionToReviewer } = require('@features/suggestion/services')
-const { AppError } = require('@shared/errors');
+const { handleDeferSuggestionToReviewer } = require('../services')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.controller',
     method: "postDeferral",
     params: ['req.body']

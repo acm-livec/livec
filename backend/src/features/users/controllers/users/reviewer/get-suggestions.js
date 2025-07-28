@@ -1,7 +1,7 @@
-const getReviewerAssignedSuggestions = require('@features/users/services/users/reviewer/get-suggestions')
-const { AppError } = require('@shared/errors');
+const getReviewerAssignedSuggestions = require('../../../services/users/reviewer/get-suggestions')
+const { AppError } = require('../../../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../../../logger/logger.js').addSource({
     file: 'reviewer',
     method: "getSuggestions",
     params: ["req.params"]

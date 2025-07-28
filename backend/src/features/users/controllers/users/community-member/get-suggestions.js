@@ -1,7 +1,7 @@
-const getAllCommunityMemberSuggestions = require('@features/users/services/users/community-member/get-suggestions')
-const { AppError } = require('@shared/errors');
+const getAllCommunityMemberSuggestions = require('../../../services/users/community-member/get-suggestions')
+const { AppError } = require('../../../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../../../logger/logger.js').addSource({
     file: 'community-member.controller',
     method: "getSuggestions",
     params: ["req.params"]

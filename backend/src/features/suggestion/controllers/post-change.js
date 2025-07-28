@@ -1,8 +1,8 @@
 
-const { sendChangeRequestToAssociateEditor } = require('@features/suggestion/services')
-const { AppError } = require('@shared/errors');
+const { sendChangeRequestToAssociateEditor } = require('../services')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.controller',
     method: "postChangeRequest",
     params: ['req.body']

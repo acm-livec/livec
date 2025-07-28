@@ -1,8 +1,8 @@
-const { AppError } = require('@shared/errors');
-const Suggestions = require('@features/suggestion/models/suggestions.model.js')
-const getUserNameById = require('@shared/utils/getUserNameById')
+const { AppError } = require('../../../../../shared/errors');
+const Suggestions = require('../../../../suggestion/models/suggestions.model.js')
+const getUserNameById = require('../../../../../shared/utils/getUserNameById')
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../../../logger/logger.js').addSource({
     file: 'community-member.service',
     method: "getAllCommunityMemberSuggestions",
     params: ['userId']

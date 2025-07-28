@@ -1,8 +1,8 @@
-const { AppError, SuggestionNotFoundError } = require('@shared/errors');
-const Suggestions = require('@features/suggestion/models/suggestions.model.js')
-const { updateCurriculumSection } = require('@features/curriculum/services');
+const { AppError, SuggestionNotFoundError } = require('../../../shared/errors');
+const Suggestions = require('../models/suggestions.model.js')
+const { updateCurriculumSection } = require('../../curriculum/services');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.service',
     method: "updateVote",
     params: ['suggestionId', 'author', 'markdownText']

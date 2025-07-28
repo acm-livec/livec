@@ -1,7 +1,7 @@
 const { handleRegisterUser } = require('../services')
-const { AppError } = require('@shared/errors');
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'auth.controller',
     method: "postRegister",
     params: ["req.body"]

@@ -1,7 +1,7 @@
-const { associateEditorFinalized } = require('@features/suggestion/services')
-const { AppError } = require('@shared/errors');
+const { associateEditorFinalized } = require('../services')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.controller',
     method: "postSuggestion",
     params: ['req.body']

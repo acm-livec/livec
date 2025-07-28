@@ -1,11 +1,11 @@
-const { AppError, SuggestionNotFoundError } = require('@shared/errors');
+const { AppError, SuggestionNotFoundError } = require('../../../shared/errors');
 
-const Suggestions = require('@features/suggestion/models/suggestions.model.js')
-const Curriculums = require('@features/curriculum/models/curriculums.model.js')
-const kebabToCamel = require('@shared/utils/kebabToCamel')
+const Suggestions = require('../../suggestion/models/suggestions.model.js')
+const Curriculums = require('../models/curriculums.model.js')
+const kebabToCamel = require('../../../shared/utils/kebabToCamel')
 
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'auth.service',
     method: "assignAssociateEditorToSuggestion",
     params: ['suggestion']

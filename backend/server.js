@@ -3,7 +3,7 @@ const http = require('http');
 const morgan = require('morgan');
 const app = require('./src/app');
 const { setupSocketIO } = require('./src/socket');
-const logger = require('@logger').addSource({
+const logger = require('./logger/logger.js').addSource({
     file: 'server.js',
     method: 'listen',
 });

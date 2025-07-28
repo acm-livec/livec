@@ -1,7 +1,7 @@
-const getAssignedReviewers = require('@features/users/services/users/associate-editor/get-reviewers')
-const { AppError } = require('@shared/errors');
+const getAssignedReviewers = require('../../../services/users/associate-editor/get-reviewers')
+const { AppError } = require('../../../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../../../logger/logger.js').addSource({
     file: 'associate-editor.controller.js',
     method: 'getReviewers',
     params: ['userId']

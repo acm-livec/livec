@@ -1,7 +1,7 @@
-const  getFullCurriculum  = require('@features/curriculum/services/get-one')
-const { AppError } = require('@shared/errors');
+const  getFullCurriculum  = require('../services/get-one')
+const { AppError } = require('../../../shared/errors');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'curriculum.controller',
     method: "getCurriculum",
     params: ['req.body']

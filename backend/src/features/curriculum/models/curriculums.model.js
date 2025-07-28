@@ -1,5 +1,5 @@
-const db = require('@database/database');
-const { flattenSections } = require('@docs/shared/utils/flatten.js');
+const db = require('../../../database/database');
+const { flattenSections } = require('../../../../../docs/shared/utils/flatten.js');
 const Curriculum = require('./curriculum.model');
 
 

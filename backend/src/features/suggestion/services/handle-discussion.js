@@ -1,9 +1,9 @@
-const { AppError, SuggestionNotFoundError, NoUserWithIdError } = require('@shared/errors');
-const Suggestions = require('@features/suggestion/models/suggestions.model.js')
-const EditorsInChief = require('@features/users/models/users/editor-in-chief/chiefs.model')
-const AssociateEditors = require('@features/users/models/users/associate-editor/editors.model.js')
+const { AppError, SuggestionNotFoundError, NoUserWithIdError } = require('../../../shared/errors');
+const Suggestions = require('../models/suggestions.model.js')
+const EditorsInChief = require('../../users/models/users/editor-in-chief/chiefs.model')
+const AssociateEditors = require('../../users/models/users/associate-editor/editors.model.js')
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'suggestion.service',
     method: "handleFinalDiscussion",
     params: ['suggestionId', 'author', 'markdownText']

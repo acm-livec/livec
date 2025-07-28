@@ -1,6 +1,6 @@
-const db = require('@database/database');
+const db = require('../../../database/database');
 const CurriculumVersion = require('./curriculum-version.model');
-const kebabToCamel = require('@shared/utils/kebabToCamel');
+const kebabToCamel = require('../../../shared/utils/kebabToCamel');
 class CurriculumVersions {
     static dbRef = db.curriculums;
 
@@ -36,7 +36,7 @@ class CurriculumVersions {
                 if (exists) {
                     try {
                         const defaults = require(
-                            `@database/data/curriculums/${curriculum}/default/versions.json`
+                            `../../../database/data/curriculums/${curriculum}/default/versions.json`
                         );
                         found = defaults.find(v => v.id === id);
                     } catch (err) {

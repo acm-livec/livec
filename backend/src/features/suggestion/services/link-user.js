@@ -1,7 +1,7 @@
-const { AppError, NoUserWithIdError } = require('@shared/errors');
-const CommunityMembers = require('@features/users/models/users/community-member/members.model');
+const { AppError, NoUserWithIdError } = require('../../../shared/errors');
+const CommunityMembers = require('../../users/models/users/community-member/members.model');
 
-const logger = require('@logger').addSource({
+const logger = require('../../../../logger/logger.js').addSource({
     file: 'auth.service',
     method: "linkCommunityMemberToSuggestion",
     params: ['userId', 'suggestionId']
