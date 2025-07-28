@@ -69,14 +69,19 @@ const Default = ({ sectionId, submit }) => {
                     keyName="type"
                     values={options}
                     label="Type of suggestion"
+                    required
                 />
                 <TextField
                     keyName="title"
                     label="Enter a brief title explaining your suggestions"
+                    required
+                    maxLength={100}
                 />
                 <TextArea
                     keyName="text"
                     label="Enter your suggestion down below"
+                    required
+                    maxLength={500}
                 />
             </Form>
         </>

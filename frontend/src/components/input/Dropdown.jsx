@@ -7,6 +7,7 @@ export default function Dropdown({
     val = '',
     label,
     values = [],
+    ...rest
 }) {
     const { key, value, handleChange } = useInputField({ keyName, val });
 
@@ -19,6 +20,7 @@ export default function Dropdown({
                     value={value}
                     className={className}
                     onChange={handleChange}
+                    {...rest}
                 >
                     {values.map((item, index) => (
                         <option key={index} value={item.value}>
