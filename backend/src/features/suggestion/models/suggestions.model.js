@@ -1,6 +1,5 @@
 import Suggestion from "./suggestion.model.js";
-import { Roles } from '../../../../../docs/constants/roles.js';
-import { Status } from '../../../../../docs/constants/status.js';
+import { Roles, Status } from '../../../shared/constants/index.js';
 import db from '../../../database/database.js';
 
 class Suggestions {
