@@ -1,14 +1,11 @@
-import {  flattenSections  } from '../../../../../docs/shared/utils/flatten.js';
+import { flattenSections } from '../../../../../docs/shared/utils/flatten.js';
 import Curriculum from "./curriculum.model.js";
+import db from '../../../database/database.js';
 
 
 
 class Curriculums {
-    static dbRef;
-
-    static injectDB(dbInstance) {
-        this.dbRef = dbInstance;
-    }
+    static dbRef = db.curriculums;
 
 
     /**

@@ -1,8 +1,4 @@
-let db;
-
-function injectDB(instance) {
-    db = instance;
-}
+import db from '../../database/database.js';
 
 const roleMap = {
     CM: 'communityMembers',
@@ -24,6 +20,5 @@ async function getUserInfoById(id) {
 }
 
 export default {
-    getUserInfoById,
-    injectDB
+    getUserInfoById
 };

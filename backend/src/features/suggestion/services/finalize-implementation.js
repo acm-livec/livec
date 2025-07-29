@@ -5,11 +5,7 @@ import addCurriculumVersion from '../../curriculum/services/add-version.js';
 import { generateSectionId } from "../../../shared/utils/generate-id.js";
 import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
 import baseLogger from '../../../../logger/logger.js';
-let db;
-
-function injectDB(instance) {
-    db = instance;
-}
+import db from '../../../database/database.js';
 
 const logger = baseLogger.addSource({
     file: 'suggestion.service',
@@ -102,4 +98,4 @@ const finalizeImplementation = async (id, eicId, notes, message) => {
     }
 };
 
-export { finalizeImplementation, injectDB };
+export { finalizeImplementation };

@@ -4,13 +4,10 @@ import AssociateEditors from './associate-editor/editors.model.js';
 import Reviewers from './reviewer/reviewers.model.js';
 import ChiefEditors from './editor-in-chief/chiefs.model.js';
 import Admins from './admin/admins.model.js';
+import db from '../../../../database/database.js';
 
 class Users {
-    static dbRef;
-
-    static injectDB(dbInstance) {
-        this.dbRef = dbInstance;
-    }
+    static dbRef = db.users;
 
     static getDbRef() {
         const dbRef = this.dbRef[this.roleKey];

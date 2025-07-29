@@ -1,13 +1,10 @@
 import Suggestion from "./suggestion.model.js";
-import {  Roles  } from '../../../../../docs/constants/roles.js';
-import {  Status  } from '../../../../../docs/constants/status.js';
+import { Roles } from '../../../../../docs/constants/roles.js';
+import { Status } from '../../../../../docs/constants/status.js';
+import db from '../../../database/database.js';
 
 class Suggestions {
-    static dbRef;
-
-    static injectDB(dbInstance) {
-        this.dbRef = dbInstance;
-    }
+    static dbRef = db.suggestions;
 
 
     /**
