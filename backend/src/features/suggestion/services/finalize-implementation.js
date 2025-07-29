@@ -12,7 +12,6 @@ const logger = baseLogger.addSource({
     method: 'finalizeImplementation',
     params: ['suggestionId', 'eicId', 'notes', 'message']
 });
-
 const finalizeImplementation = async (id, eicId, notes, message) => {
     try {
         logger.debug('suggestion.implement.db.searching', { id, eicId });
@@ -98,4 +97,4 @@ const finalizeImplementation = async (id, eicId, notes, message) => {
     }
 };
 
-export { finalizeImplementation };
+export default { finalizeImplementation };

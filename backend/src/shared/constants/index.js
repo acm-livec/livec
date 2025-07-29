@@ -1,6 +1,6 @@
 import HTTP_STATUS from "./http-codes.js";
-import {  Roles  } from '../../../../docs/constants/roles.js';
-import {  Status  } from '../../../../docs/constants/status.js';
+import { Roles } from "../../../../docs/constants/roles.js";
+import { Status } from '../../../../docs/constants/status.js';
 
 const Actions = Object.freeze({
     DESK_REJECT: 'desk-reject',
@@ -27,4 +27,4 @@ const Actions = Object.freeze({
     PUBLISHED_BY_EIC: 'published-by-eic',
 });
 
-export default { Roles, HTTP_STATUS, Status, Actions };
+export { Roles, HTTP_STATUS, Status, Actions };

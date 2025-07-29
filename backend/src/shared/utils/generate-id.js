@@ -1,4 +1,4 @@
-import {  nanoid  } from 'nanoid';
+import { nanoid } from 'nanoid';
 // const { Status } = require('../../../../docs/constants/status.js');
 
 
@@ -85,5 +85,5 @@ const generateSectionId = async ({ curriculum, year_version, page_number, slug, 
 
 
 
-export default { generateUserId, generateSuggestionId, generateRandomId, generateSectionId };
+export { generateUserId, generateSuggestionId, generateRandomId, generateSectionId };
 

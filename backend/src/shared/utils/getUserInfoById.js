@@ -19,6 +19,6 @@ async function getUserInfoById(id) {
     return found ? { name: found.name, role: found.role } : { name: id, role: 'unknown' };
 }
 
-export default {
+export {
     getUserInfoById
 };

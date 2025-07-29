@@ -15,7 +15,7 @@ class AppError extends Error {
 class PasswordMismatchError extends AppError {
     constructor() {
         super({
-            message: "err.password.mismatch", 
+            message: "err.password.mismatch",
             statusCode: HTTP_STATUS.UNAUTHORIZED,
             publicMessage: "Incorrect username or password",
             errorCode: "PASSWORD_MISSMATCH"
@@ -26,7 +26,7 @@ class PasswordMismatchError extends AppError {
 class UserNotFoundError extends AppError {
     constructor() {
         super({
-            message: "err.user.not_found", 
+            message: "err.user.not_found",
             statusCode: HTTP_STATUS.NOT_FOUND,
             publicMessage: "Incorrect username or password",
             errorCode: "USER_NOT_FOUND"
@@ -60,7 +60,7 @@ class NoAssociateEditorsFoundError extends AppError {
 class UserAlreadyExistsError extends AppError {
     constructor() {
         super({
-            message: "err.user.already_exists", 
+            message: "err.user.already_exists",
             statusCode: HTTP_STATUS.CONFLICT,
             publicMessage: "An account with that email already exists",
             errorCode: "USER_ALREADY_EXISTS"
@@ -80,7 +80,7 @@ class SuggestionNotFoundError extends AppError {
 }
 
 // Export all at once
-export default {
+export {
     AppError,
     SuggestionNotFoundError,
     NoAssociateEditorsFoundError,

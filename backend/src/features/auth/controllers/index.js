@@ -1,4 +1,4 @@
-export * from './post-login';
-export * from './post-register';
+export * from './post-login.js';
+export * from './post-register.js';
 
 

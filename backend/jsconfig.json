@@ -11,7 +11,7 @@
       "@docs/*": ["../docs/*"]
     },
     "module": "es2022",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "target": "ES2020",
     "allowJs": true,
     "checkJs": true,

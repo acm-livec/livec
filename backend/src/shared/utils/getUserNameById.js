@@ -19,6 +19,6 @@ async function getUserNameById(id) {
     return found ? found.name : id;
 }
 
-export default {
+export {
     getUserNameById
 };

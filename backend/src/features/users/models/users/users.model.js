@@ -6,7 +6,7 @@ import ChiefEditors from './editor-in-chief/chiefs.model.js';
 import Admins from './admin/admins.model.js';
 import db from '../../../../database/database.js';
 
-class Users {
+export default class Users {
     static dbRef = db.users;
 
     static getDbRef() {
@@ -160,4 +160,3 @@ class Users {
     }
 }
 
-export default Users;
