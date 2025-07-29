@@ -7,4 +7,6 @@ class CommunityMembers extends Users {
     static roleKey = 'communityMembers';
 }
 
+Users.registerRole(CommunityMembers.roleKey, CommunityMembers);
+
 export default CommunityMembers;

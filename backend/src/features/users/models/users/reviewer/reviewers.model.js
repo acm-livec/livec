@@ -19,4 +19,6 @@ class Reviewers extends Users {
 
 }
 
+Users.registerRole(Reviewers.roleKey, Reviewers);
+
 export default Reviewers;
