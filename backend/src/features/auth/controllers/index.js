@@ -1,4 +1,4 @@
-export { postLogin } from './post-login';
-export { postRegister } from './post-register';
+export * from './post-login';
+export * from './post-register';
 
 

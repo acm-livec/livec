@@ -1,7 +1,6 @@
 import http from 'http';
 import morgan from 'morgan';
 import { app } from './src/app.js';
-import db from './src/database/database.js';
 import { setupSocketIO } from './src/socket.js';
 import baseLogger from './logger/logger.js';
 

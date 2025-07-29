@@ -31,14 +31,5 @@
     "nodemon": "^3.1.10",
     "recast": "^0.23.4",
     "@babel/parser": "^7.22.18"
-  },
-  "_moduleAliases": {
-    "@root": ".",
-    "@routes": "src/routes",
-    "@database": "src/database",
-    "@logger": "logger/logger.js",
-    "@features": "src/features",
-    "@shared": "src/shared",
-    "@docs": "../docs"
   }
 }
