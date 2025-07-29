@@ -1,7 +1,5 @@
 import {  generateSuggestionId  } from "../../../shared/utils/generate-id.js";
-import {  Actions  } from "../../../shared/constants/index.js";
-import {  Status  } from '../../../../../docs/constants/status.js';
-import {  Events  } from '../../../../../docs/events.js';
+import { Actions, Status, Events } from "../../../shared/constants/index.js";
 import Documentation from './util/documentation.model.js';
 import PublicMessage from './util/public-message.model.js';
 

@@ -1,6 +1,6 @@
 // models/CommunityMember.js
 import User from "../user.model.js";
-import {  Roles  } from '../../../../../../../docs/constants/roles.js';
+import { Roles } from '../../../../../../../shared/constants/index.js';
 
 
 class Reviewer extends User {

@@ -1,5 +1,5 @@
 import { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
-import { Roles } from '../../../../../docs/constants/roles.js';
+import { Roles } from '../../../shared/constants/index.js';
 import Suggestions from '../models/suggestions.model.js';
 import Curriculums from '../../curriculum/models/curriculums.model.js';
 import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
