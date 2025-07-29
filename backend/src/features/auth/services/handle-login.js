@@ -1,5 +1,6 @@
 import { UserNotFoundError, PasswordMismatchError, AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
+import Users from '../../users/models/users/users.model.js';
 
 const logger = baseLogger.addSource({
     file: 'auth.service',

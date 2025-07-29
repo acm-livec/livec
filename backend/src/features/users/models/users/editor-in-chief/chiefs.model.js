@@ -10,4 +10,6 @@ class EditorsInChief extends Users {
 
 }
 
+Users.registerRole(EditorsInChief.roleKey, EditorsInChief);
+
 export default EditorsInChief;

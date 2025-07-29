@@ -1,13 +1,13 @@
 // models/Users.js
-import CommunityMembers from './community-member/members.model.js';
-import AssociateEditors from './associate-editor/editors.model.js';
-import Reviewers from './reviewer/reviewers.model.js';
-import ChiefEditors from './editor-in-chief/chiefs.model.js';
-import Admins from './admin/admins.model.js';
 import db from '../../../../database/database.js';
 
 export default class Users {
     static dbRef = db.users;
+    static registry = {};
+
+    static registerRole(roleKey, CollectionClass) {
+        this.registry[roleKey] = CollectionClass;
+    }
 
     static getDbRef() {
         const dbRef = this.dbRef[this.roleKey];
@@ -19,14 +19,7 @@ export default class Users {
      * Each entry maps a role key to its plural model class
      */
     static getRegistry() {
-        return {
-            communityMembers: CommunityMembers,
-            associateEditors: AssociateEditors,
-            reviewers: Reviewers,
-            chiefEditors: ChiefEditors,
-            admins: Admins
-            // reviewers: ...
-        };
+        return this.registry;
     }
 
     /**

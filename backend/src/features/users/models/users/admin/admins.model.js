@@ -6,4 +6,6 @@ class Admins extends Users {
     static roleKey = 'admins';
 }
 
+Users.registerRole(Admins.roleKey, Admins);
+
 export default Admins;

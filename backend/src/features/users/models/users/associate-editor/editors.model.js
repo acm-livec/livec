@@ -18,4 +18,6 @@ class AssociateEditors extends Users {
     }
 }
 
+Users.registerRole(AssociateEditors.roleKey, AssociateEditors);
+
 export default AssociateEditors;
