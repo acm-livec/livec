@@ -1,10 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-let db;
-
-function injectDB(instance) {
-    db = instance;
-}
+import db from './database/database.js';
 import authRoutes from './features/auth/routes.js';
 import suggestionRoutes from './features/suggestion/routes.js';
 import userRoutes from './features/users/routes.js';
@@ -55,4 +51,4 @@ app.use((err, req, res, next) => {
 
 
 
-export { app, injectDB };
+export { app };

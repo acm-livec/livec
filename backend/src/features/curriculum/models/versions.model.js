@@ -1,11 +1,15 @@
 import CurriculumVersion from "./curriculum-version.model.js";
 import kebabToCamel from "../../../shared/utils/kebabToCamel.js";
-class CurriculumVersions {
-    static dbRef;
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
+import db from '../../../database/database.js';
 
-    static injectDB(dbInstance) {
-        this.dbRef = dbInstance;
-    }
+const require = createRequire(import.meta.url);
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const resolve = (...segments) => path.resolve(__dirname, ...segments);
+class CurriculumVersions {
+    static dbRef = db.curriculums;
 
     static async getAll(curriculum) {
         await this.dbRef[curriculum].curriculumVersions.read();
@@ -38,11 +42,9 @@ class CurriculumVersions {
 
                 if (exists) {
             try {
-                const defaultsModule = await import(
-                    `../../../database/data/curriculums/${curriculum}/default/versions.json`,
-                    { assert: { type: 'json' } }
+                const defaults = require(
+                    resolve(`../../../database/data/curriculums/${curriculum}/default/versions.json`)
                 );
-                const defaults = defaultsModule.default;
                 found = defaults.find(v => v.id === id);
             } catch (err) {
                 found = null;
