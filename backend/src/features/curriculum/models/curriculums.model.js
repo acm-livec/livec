@@ -1,4 +1,3 @@
-import { flattenSections } from '../../../../../docs/shared/utils/flatten.js';
 import Curriculum from "./curriculum.model.js";
 import db from '../../../database/database.js';
 
@@ -28,7 +27,7 @@ class Curriculums {
     static async findById(id) {
         await this.dbRef.read();
 
-        const entry = flattenSections(this.dbRef.data).find(s => s.id === id);
+        const entry = this.dbRef.data.find(s => s.id === id);
         return entry ? new Curriculum(entry) : null;
     }
     /**

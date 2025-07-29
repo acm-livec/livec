@@ -1,8 +1,11 @@
 {
+  "type": "module",
   "devDependencies": {
+    "cross-zip-cli": "^1.0.0",
     "jsdoc": "^4.0.4"
   },
   "scripts": {
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "jsdoc -c jsdoc.json",
+    "zip": "powershell -Command \"Compress-Archive -Path backend\\* -DestinationPath backend.zip -Force -CompressionLevel Optimal\""
   }
 }

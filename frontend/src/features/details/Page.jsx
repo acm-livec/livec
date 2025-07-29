@@ -5,7 +5,7 @@ import { EditorStatic } from '@components/ui/editor-static';
 export default function Page({ children = null, page }) {
     return (
         <div className="document--computer-science p-5">
-            {page?.content?.length > 1 || isArray(page) ? (
+            {page?.content?.length > 0 || isArray(page) ? (
                 <EditorStatic value={page.content || page} />
             ) : (
                 <PlaceHolderPage heading={page?.title || 'No Title'} />
@@ -25,10 +25,8 @@ const PlaceHolderPage = ({ heading }) => {
             <hr />
             <h2>Overview</h2>
             <p>
-                Content for <strong>Section Title Placeholder</strong> will be
-                added soon. This page is reserved as a placeholder for upcoming
-                curriculum material, including relevant headings, body text,
-                examples, and references.
+                Content for <strong>Section Title Placeholder</strong> will be added soon. This page is reserved as a placeholder for upcoming
+                curriculum material, including relevant headings, body text, examples, and references.
             </p>
             <hr />
             <h2>Planned Topics</h2>
@@ -39,10 +37,7 @@ const PlaceHolderPage = ({ heading }) => {
             </ul>
             <hr />
             <h2>Contributing</h2>
-            <p>
-                If you would like to contribute to this section, please submit
-                your suggestions or drafts through the appropriate channels.
-            </p>
+            <p>If you would like to contribute to this section, please submit your suggestions or drafts through the appropriate channels.</p>
             <p>
                 <em>Last updated: Insert Date</em>
             </p>

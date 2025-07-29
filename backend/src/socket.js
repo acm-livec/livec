@@ -32,4 +32,4 @@ function setupSocketIO(server) {
     });
 }
 
-export default { setupSocketIO };
+export { setupSocketIO };

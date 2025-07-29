@@ -42,13 +42,15 @@ export default function useTableOfContents(curriculum) {
     }, [curriculum]);
 
     useEffect(() => {
+        console.log(currentPage);
+    }, [currentPage]);
+    useEffect(() => {
         if (tableOfContents.length > 0) {
             setCurrentPage(tableOfContents[0]);
         }
     }, [tableOfContents]);
 
-    useEffect(() => {
-    }, [currentPage]);
+    useEffect(() => {}, [currentPage]);
 
     const nextPage = () => {
         if (!(currentPage?.isLast || false)) {
