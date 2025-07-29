@@ -1,5 +1,5 @@
 import CommunityMembers from '../../users/models/users/community-member/members.model.js';
-import { UserAlreadyExistsError, AppError } from '../../../shared/errors';
+import { UserAlreadyExistsError, AppError } from "../../../shared/errors/index.js";
 import Users from '../../users/models/users/users.model.js';
 import baseLogger from '../../../../logger/logger.js';
 
@@ -39,4 +39,4 @@ const handleRegisterUser = async (name, email, password) => {
 };
 
 
-module.exports = { handleRegisterUser }
+export { handleRegisterUser };

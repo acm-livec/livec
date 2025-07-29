@@ -1,3 +1,3 @@
-import getSuggestions from './get-suggestions';
+import getSuggestions from "./get-suggestions.js";
 
-module.exports = { getSuggestions };
+export { getSuggestions };

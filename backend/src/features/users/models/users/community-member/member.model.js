@@ -1,6 +1,6 @@
 // models/CommunityMember.js
-import User from '../user.model';
-import {  Roles  } from '../../../../../shared/constants';
+import User from "../user.model.js";
+import {  Roles  } from "../../../../../shared/constants/index.js";
 
 class CommunityMember extends User {
     static role = Roles.COMMUNITY_MEMBER;
@@ -23,4 +23,4 @@ class CommunityMember extends User {
     }
 }
 
-module.exports = CommunityMember;
+export default CommunityMember;

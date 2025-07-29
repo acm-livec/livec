@@ -1,6 +1,6 @@
 // models/CommunityMembers.js
-import Users from '../users.model';
-import AssociateEditor from './editor.model';
+import Users from "../users.model.js";
+import AssociateEditor from "./editor.model.js";
 
 class AssociateEditors extends Users {
     static roleKey = 'associateEditors';
@@ -18,4 +18,4 @@ class AssociateEditors extends Users {
     }
 }
 
-module.exports = AssociateEditors;
+export default AssociateEditors;

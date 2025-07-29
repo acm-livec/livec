@@ -1,5 +1,5 @@
-import { generateRandomId } from '../../../../shared/utils/generate-id';
-import { Actions } from '../../../../shared/constants';
+import { generateRandomId } from "../../../../shared/utils/generate-id.js";
+import { Actions } from "../../../../shared/constants/index.js";
 
 const defaultAction = Actions.ADDED_DOCUMENTATION
 
@@ -36,4 +36,4 @@ class Documentation {
 }
 
 
-module.exports = Documentation
+export default Documentation;

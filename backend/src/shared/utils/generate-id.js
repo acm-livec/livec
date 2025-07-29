@@ -85,5 +85,5 @@ const generateSectionId = async ({ curriculum, year_version, page_number, slug, 
 
 
 
-module.exports = { generateUserId, generateSuggestionId, generateRandomId, generateSectionId }
+export default { generateUserId, generateSuggestionId, generateRandomId, generateSectionId };
 

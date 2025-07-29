@@ -1,5 +1,5 @@
 
-import User from '../user.model';
+import User from "../user.model.js";
 
 
 class AssociateEditor extends User {
@@ -37,4 +37,4 @@ class AssociateEditor extends User {
     }
 }
 
-module.exports = AssociateEditor;
+export default AssociateEditor;

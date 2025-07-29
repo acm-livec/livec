@@ -1,5 +1,5 @@
 // models/CommunityMember.js
-import User from '../user.model';
+import User from "../user.model.js";
 import {  Roles  } from '../../../../../../../docs/constants/roles.js';
 
 
@@ -27,4 +27,4 @@ class Reviewer extends User {
     }
 }
 
-module.exports = Reviewer;
+export default Reviewer;

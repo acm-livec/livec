@@ -1,7 +1,7 @@
-import CurriculumVersions from '../models/versions.model';
+import CurriculumVersions from "../models/versions.model.js";
 
 const addCurriculumVersion = async (curriculum, versionData) => {
     return CurriculumVersions.insert(curriculum, versionData);
 };
 
-module.exports = addCurriculumVersion;
+export default addCurriculumVersion;

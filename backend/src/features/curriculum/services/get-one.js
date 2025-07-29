@@ -1,4 +1,4 @@
-import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
 
 import Suggestions from '../../suggestion/models/suggestions.model.js';
 import Curriculums from '../models/curriculums.model.js';
@@ -74,4 +74,4 @@ const getFullCurriculum = async (curriculum) => {
     }
 }
 
-module.exports = getFullCurriculum
+export default getFullCurriculum;

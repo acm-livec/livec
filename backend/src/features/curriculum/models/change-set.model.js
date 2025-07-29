@@ -20,4 +20,4 @@ class ChangeSet {
     }
 }
 
-module.exports = ChangeSet;
+export default ChangeSet;

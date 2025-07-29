@@ -1,5 +1,5 @@
-import { associateEditorFinalized } from '../services';
-import { AppError } from '../../../shared/errors';
+import { associateEditorFinalized } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -43,4 +43,4 @@ const postAssociateEditorFinalization = async (req, res) => {
     }
 }
 
-module.exports = { postAssociateEditorFinalization }
+export { postAssociateEditorFinalization };

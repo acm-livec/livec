@@ -10,4 +10,4 @@ class EditorsInChief extends Users {
 
 }
 
-module.exports = EditorsInChief;
+export default EditorsInChief;

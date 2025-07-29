@@ -1,5 +1,5 @@
-import {  generateSuggestionId  } from '../../../shared/utils/generate-id';
-import {  Actions  } from '../../../shared/constants';
+import {  generateSuggestionId  } from "../../../shared/utils/generate-id.js";
+import {  Actions  } from "../../../shared/constants/index.js";
 import {  Status  } from '../../../../../docs/constants/status.js';
 import {  Events  } from '../../../../../docs/events.js';
 import Documentation from './util/documentation.model.js';
@@ -466,4 +466,4 @@ class Suggestion {
 
 
 
-module.exports = Suggestion
+export default Suggestion;

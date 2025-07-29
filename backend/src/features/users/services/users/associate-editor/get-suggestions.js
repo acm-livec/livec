@@ -1,4 +1,4 @@
-import { AppError } from '../../../../../shared/errors';
+import { AppError } from "../../../../../shared/errors/index.js";
 import Suggestions from '../../../../suggestion/models/suggestions.model.js';
 import baseLogger from '../../../../../../logger/logger.js';
 
@@ -30,4 +30,4 @@ const getAssociateEditorAssignedSuggestions = async (userId) => {
     }
 }
 
-module.exports = getAssociateEditorAssignedSuggestions
+export default getAssociateEditorAssignedSuggestions;

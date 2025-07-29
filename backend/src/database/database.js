@@ -7,7 +7,11 @@ async function createDB(targetPath, defaultJsonPath, { forceReset = false } = {}
   const { JSONFile } = await import('lowdb/node');
 
   const filePath = resolve(targetPath);
-  const defaultData = require(resolve(defaultJsonPath));
+  const defaultDataModule = await import(
+    resolve(defaultJsonPath),
+    { assert: { type: 'json' } }
+  );
+  const defaultData = defaultDataModule.default;
   const adapter = new JSONFile(filePath);
   const db = new Low(adapter, defaultData);
   try {
@@ -124,4 +128,4 @@ async function createDatabases(options = {}) {
   return db;
 }
 
-module.exports = { createDB, createDatabases };
+export { createDB, createDatabases };

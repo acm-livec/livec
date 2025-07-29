@@ -1,13 +1,7 @@
-import getFullCurriculum from './get-one';
-import getCurriculumSection from './get-section';
-import updateCurriculumSection from './update-section';
-import addCurriculumVersion from './add-version';
-import getCurriculumVersion from './get-version';
+import getFullCurriculum from "./get-one.js";
+import getCurriculumSection from "./get-section.js";
+import updateCurriculumSection from "./update-section.js";
+import addCurriculumVersion from "./add-version.js";
+import getCurriculumVersion from "./get-version.js";
 
-module.exports = {
-    getFullCurriculum,
-    getCurriculumSection,
-    updateCurriculumSection,
-    addCurriculumVersion,
-    getCurriculumVersion
-};
+export { getFullCurriculum, getCurriculumSection, updateCurriculumSection, addCurriculumVersion, getCurriculumVersion };

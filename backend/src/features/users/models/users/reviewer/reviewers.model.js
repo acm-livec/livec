@@ -19,4 +19,4 @@ class Reviewers extends Users {
 
 }
 
-module.exports = Reviewers;
+export default Reviewers;

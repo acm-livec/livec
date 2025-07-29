@@ -1,4 +1,4 @@
-import { AppError, NoUserWithIdError } from '../../../shared/errors';
+import { AppError, NoUserWithIdError } from "../../../shared/errors/index.js";
 import CommunityMembers from '../../users/models/users/community-member/members.model.js';
 import baseLogger from '../../../../logger/logger.js';
 
@@ -34,4 +34,4 @@ async function linkCommunityMemberToSuggestion(userId, suggestionId) {
     }
 }
 
-module.exports = linkCommunityMemberToSuggestion;
+export default linkCommunityMemberToSuggestion;

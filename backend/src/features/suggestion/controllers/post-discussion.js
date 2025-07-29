@@ -1,5 +1,5 @@
-import { handleFinalDiscussion } from '../services';
-import { AppError } from '../../../shared/errors';
+import { handleFinalDiscussion } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -43,4 +43,4 @@ const postDiscussion = async (req, res) => {
     }
 }
 
-module.exports = { postDiscussion }
+export { postDiscussion };

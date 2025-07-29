@@ -1,5 +1,5 @@
 import express from 'express';
-import { getCurriculum, getSection, updateSection, postVersion, getVersion } from './controllers';
+import { getCurriculum, getSection, updateSection, postVersion, getVersion } from "./controllers/index.js";
 
 const router = express.Router();
 
@@ -9,4 +9,4 @@ router.put('/:curriculum/sections/:sectionId', updateSection);
 router.post('/:curriculum/versions', postVersion);
 router.get('/:curriculum/versions/:versionId', getVersion);
 
-module.exports = router;
+export default router;

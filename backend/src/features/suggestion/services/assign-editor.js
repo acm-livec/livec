@@ -1,4 +1,4 @@
-import { AppError, NoAssociateEditorsFoundError } from '../../../shared/errors';
+import { AppError, NoAssociateEditorsFoundError } from "../../../shared/errors/index.js";
 import AssociateEditors from '../../users/models/users/associate-editor/editors.model.js';
 import Suggestions from '../models/suggestions.model.js';
 import baseLogger from '../../../../logger/logger.js';
@@ -74,4 +74,4 @@ const getOneWithLeastAssignedSuggestions = (associateEditorsBySuggestionDiscipli
 }
 
 
-module.exports = assignAssociateEditorToSuggestion
+export default assignAssociateEditorToSuggestion;

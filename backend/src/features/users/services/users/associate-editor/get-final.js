@@ -1,5 +1,5 @@
 
-import { AppError } from '../../../../../shared/errors';
+import { AppError } from "../../../../../shared/errors/index.js";
 import Suggestions from '../../../../suggestion/models/suggestions.model.js';
 import baseLogger from '../../../../../../logger/logger.js';
 
@@ -31,4 +31,4 @@ const getFinalAssociateEditorAssignedSuggestions = async (userId) => {
     }
 }
 
-module.exports = getFinalAssociateEditorAssignedSuggestions
+export default getFinalAssociateEditorAssignedSuggestions;

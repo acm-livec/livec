@@ -13,7 +13,7 @@ import {
     postRecommednation,
     postDiscussion,
     postImplementation,
-} from './controllers';
+} from "./controllers/index.js";
 
 const router = express.Router();
 
@@ -51,4 +51,4 @@ router.post('/:id/implement', postImplementation);
 router.post('/:id/defer', postDeferral);
 
 
-module.exports = router;
+export default router;

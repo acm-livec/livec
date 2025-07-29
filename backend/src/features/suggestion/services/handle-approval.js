@@ -1,4 +1,4 @@
-import { AppError, SuggestionNotFoundError, NoUserWithIdError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError, NoUserWithIdError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
 import EditorsInChief from '../../users/models/users/editor-in-chief/chiefs.model.js';
 import baseLogger from '../../../../logger/logger.js';
@@ -46,4 +46,4 @@ const handleEditorInChiefApproval = async (id, eicId, notes, message) => {
 
 
 
-module.exports = handleEditorInChiefApproval
+export default handleEditorInChiefApproval;

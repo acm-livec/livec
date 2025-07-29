@@ -1,5 +1,5 @@
-import getReviewerAssignedSuggestions from '../../../services/users/reviewer/get-suggestions';
-import { AppError } from '../../../../../shared/errors';
+import getReviewerAssignedSuggestions from "../../../services/users/reviewer/get-suggestions.js";
+import { AppError } from "../../../../../shared/errors/index.js";
 import baseLogger from '../../../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -38,4 +38,4 @@ const getSuggestions = async (req, res) => {
     } finally { logger.end("GET Reviewer Suggestions") }
 }
 
-module.exports = getSuggestions
+export default getSuggestions;

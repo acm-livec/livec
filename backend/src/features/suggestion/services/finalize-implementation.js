@@ -1,8 +1,8 @@
-import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
-import { getCurriculumSection } from '../../curriculum/services';
+import { getCurriculumSection } from "../../curriculum/services/index.js";
 import addCurriculumVersion from '../../curriculum/services/add-version.js';
-import { generateSectionId } from '../../../shared/utils/generate-id';
+import { generateSectionId } from "../../../shared/utils/generate-id.js";
 import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
 import baseLogger from '../../../../logger/logger.js';
 let db;
@@ -102,7 +102,4 @@ const finalizeImplementation = async (id, eicId, notes, message) => {
     }
 };
 
-module.exports = {
-    finalizeImplementation,
-    injectDB
-};
+export { finalizeImplementation, injectDB };

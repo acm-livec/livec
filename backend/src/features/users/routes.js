@@ -11,4 +11,4 @@ router.use('/reviewer', reviewerRouter);
 router.use('/associate-editor', associateEditorRouter);
 router.use('/editor-in-chief', editorInChiefRouter);
 
-module.exports = router;
+export default router;

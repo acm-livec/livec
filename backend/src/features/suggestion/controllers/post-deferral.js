@@ -1,5 +1,5 @@
-import { handleDeferSuggestionToReviewer } from '../services';
-import { AppError } from '../../../shared/errors';
+import { handleDeferSuggestionToReviewer } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -44,4 +44,4 @@ const postDeferral = async (req, res) => {
     }
 }
 
-module.exports = { postDeferral }
+export { postDeferral };

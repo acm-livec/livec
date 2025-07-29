@@ -3,8 +3,11 @@
  * @module controllers/users/reviewer/self-nominate
  */
 import path from 'path';
-const Reviewer = require(path.join(__dirname, '../../../models/users/reviewer/reviewer.model.js'));
-const usersDb = require(path.join(__dirname, '../../../database/data/users/reviewer.json'));
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+import Reviewer from '../../../models/users/reviewer/reviewer.model.js';
+import usersDb from '../../../database/data/users/reviewer.json' assert { type: 'json' };
 
 /**
  * Mark the current reviewer as self-nominated.
@@ -26,4 +29,4 @@ async function selfNominate(req, res) {
     }
 }
 
-module.exports = { selfNominate };
+export { selfNominate };

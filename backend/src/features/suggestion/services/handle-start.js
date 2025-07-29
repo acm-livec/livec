@@ -1,4 +1,4 @@
-import { AppError } from '../../../shared/errors';
+import { AppError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
 import baseLogger from '../../../../logger/logger.js';
 
@@ -40,4 +40,4 @@ try {
 }
 
 
-module.exports = handleStartSuggestionReviewProcess
+export default handleStartSuggestionReviewProcess;

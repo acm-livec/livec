@@ -1,21 +1,19 @@
-require('module-alias/register');
-const http = require('http');
-const morgan = require('morgan');
-const { app, injectDB: injectAppDB } = require('./src/app');
-const { createDatabases } = require('./src/database/database');
-const Suggestions = require('./src/features/suggestion/models/suggestions.model.js');
-const Curriculums = require('./src/features/curriculum/models/curriculums.model.js');
-const Curriculum = require('./src/features/curriculum/models/curriculum.model.js');
-const CurriculumVersions = require('./src/features/curriculum/models/versions.model.js');
-const Users = require('./src/features/users/models/users/users.model.js');
-const finalizeImplementationService = require('./src/features/suggestion/services/finalize-implementation.js');
-const userInfoUtil = require('./src/shared/utils/getUserInfoById.js');
-const userNameUtil = require('./src/shared/utils/getUserNameById.js');
-const { setupSocketIO } = require('./src/socket');
-const logger = require('./logger/logger.js').addSource({
-    file: 'server.js',
-    method: 'listen',
-});
+import http from 'http';
+import morgan from 'morgan';
+import { app, injectDB as injectAppDB } from './src/app.js';
+import { createDatabases } from './src/database/database.js';
+import Suggestions from './src/features/suggestion/models/suggestions.model.js';
+import Curriculums from './src/features/curriculum/models/curriculums.model.js';
+import Curriculum from './src/features/curriculum/models/curriculum.model.js';
+import CurriculumVersions from './src/features/curriculum/models/versions.model.js';
+import Users from './src/features/users/models/users/users.model.js';
+import finalizeImplementationService from './src/features/suggestion/services/finalize-implementation.js';
+import userInfoUtil from './src/shared/utils/getUserInfoById.js';
+import userNameUtil from './src/shared/utils/getUserNameById.js';
+import { setupSocketIO } from './src/socket.js';
+import baseLogger from './logger/logger.js';
+
+const logger = baseLogger.addSource({ file: 'server.js', method: 'listen' });
 
 const PORT = process.env.PORT || 3000;
 

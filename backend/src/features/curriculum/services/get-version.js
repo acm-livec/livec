@@ -1,5 +1,5 @@
-import CurriculumVersions from '../models/versions.model';
-import {  AppError  } from '../../../shared/errors';
+import CurriculumVersions from "../models/versions.model.js";
+import {  AppError  } from "../../../shared/errors/index.js";
 import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
 
 
@@ -26,4 +26,4 @@ const getCurriculumVersion = async (curriculum, versionId) => {
     }
 };
 
-module.exports = getCurriculumVersion;
+export default getCurriculumVersion;

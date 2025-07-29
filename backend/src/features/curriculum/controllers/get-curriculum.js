@@ -1,5 +1,5 @@
-import getFullCurriculum from '../services/get-one';
-import { AppError } from '../../../shared/errors';
+import getFullCurriculum from "../services/get-one.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -41,4 +41,4 @@ const getCurriculum = async (req, res) => {
     }
 }
 
-module.exports = { getCurriculum }
+export { getCurriculum };

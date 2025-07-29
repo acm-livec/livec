@@ -23,7 +23,7 @@ async function getUserNameById(id) {
     return found ? found.name : id;
 }
 
-module.exports = {
+export default {
     getUserNameById,
     injectDB
 };

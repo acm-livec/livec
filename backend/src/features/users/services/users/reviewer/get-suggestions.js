@@ -29,4 +29,4 @@ const getReviewerAssignedSuggestions = async (userId) => {
     }
 }
 
-module.exports = getReviewerAssignedSuggestions
+export default getReviewerAssignedSuggestions;

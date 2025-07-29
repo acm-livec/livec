@@ -1,5 +1,5 @@
-import getFinalizedSuggestions from '../../../services/users/editor-in-chief/get-finalized';
-import { AppError } from '../../../../../shared/errors';
+import getFinalizedSuggestions from "../../../services/users/editor-in-chief/get-finalized.js";
+import { AppError } from "../../../../../shared/errors/index.js";
 import baseLogger from '../../../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -38,4 +38,4 @@ const getSuggestions = async (req, res) => {
     } finally { logger.end("GET EIC Suggestions") }
 }
 
-module.exports = getSuggestions
+export default getSuggestions;

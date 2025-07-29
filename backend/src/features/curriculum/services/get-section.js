@@ -1,5 +1,5 @@
 import Curriculums from '../models/curriculums.model.js';
-import kebabToCamel from '../../../shared/utils/kebabToCamel';
+import kebabToCamel from "../../../shared/utils/kebabToCamel.js";
 
 const getCurriculumSection = async (curriculum, id) => {
     const curr = await Curriculums.findByCurriculum(kebabToCamel(curriculum));
@@ -8,4 +8,4 @@ const getCurriculumSection = async (curriculum, id) => {
     return section;
 };
 
-module.exports = getCurriculumSection;
+export default getCurriculumSection;

@@ -1,4 +1,4 @@
-import {  generateUserId  } from '../../../../shared/utils/generate-id';
+import {  generateUserId  } from "../../../../shared/utils/generate-id.js";
 
 
 class User {
@@ -28,4 +28,4 @@ class User {
 }
 
 
-module.exports = User;
+export default User;

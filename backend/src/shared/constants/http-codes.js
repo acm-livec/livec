@@ -31,4 +31,4 @@ const HTTP_STATUS = {
     SERVICE_UNAVAILABLE: 503,
 };
 
-module.exports = HTTP_STATUS;
+export default HTTP_STATUS;

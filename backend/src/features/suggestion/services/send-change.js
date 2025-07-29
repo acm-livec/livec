@@ -1,4 +1,4 @@
-import { AppError, SuggestionNotFoundError, NoUserWithIdError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError, NoUserWithIdError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
 import baseLogger from '../../../../logger/logger.js';
 
@@ -48,4 +48,4 @@ const sendChangeRequestToAssociateEditor = async (suggestionId, eic, change) => 
 
 
 
-module.exports = sendChangeRequestToAssociateEditor
+export default sendChangeRequestToAssociateEditor;

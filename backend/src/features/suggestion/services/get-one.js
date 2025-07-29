@@ -1,10 +1,10 @@
-import { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } from '../../../shared/errors';
+import { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
 import { Roles } from '../../../../../docs/constants/roles.js';
 import Suggestions from '../models/suggestions.model.js';
 import Curriculums from '../../curriculum/models/curriculums.model.js';
 import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
-import { getUserNameById } from '../../../shared/utils/getUserNameById';
-import { getUserInfoById } from '../../../shared/utils/getUserInfoById';
+import { getUserNameById } from "../../../shared/utils/getUserNameById.js";
+import { getUserInfoById } from "../../../shared/utils/getUserInfoById.js";
 import baseLogger from '../../../../logger/logger.js';
 const logger = baseLogger.addSource({
     file: 'auth.service',
@@ -85,4 +85,4 @@ const getSuggestionById = async (suggestionId, role = null) => {
     }
 }
 
-module.exports = getSuggestionById
+export default getSuggestionById;

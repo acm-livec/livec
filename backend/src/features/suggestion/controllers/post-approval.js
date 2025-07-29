@@ -1,6 +1,6 @@
 
-import { handleEditorInChiefApproval } from '../services';
-import { AppError } from '../../../shared/errors';
+import { handleEditorInChiefApproval } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -44,4 +44,4 @@ const postEditorInChiefApproval = async (req, res) => {
     }
 }
 
-module.exports = { postEditorInChiefApproval }
+export { postEditorInChiefApproval };

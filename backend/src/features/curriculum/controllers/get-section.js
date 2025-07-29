@@ -1,5 +1,5 @@
-import { getCurriculumSection } from '../services';
-import { AppError } from '../../../shared/errors';
+import { getCurriculumSection } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 const logger = baseLogger.addSource({ file: 'curriculum.controller', method: 'getSection' });
 
@@ -20,4 +20,4 @@ const getSection = async (req, res) => {
     }
 };
 
-module.exports = { getSection };
+export { getSection };

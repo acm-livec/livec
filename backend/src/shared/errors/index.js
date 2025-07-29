@@ -80,7 +80,7 @@ class SuggestionNotFoundError extends AppError {
 }
 
 // Export all at once
-module.exports = {
+export default {
     AppError,
     SuggestionNotFoundError,
     NoAssociateEditorsFoundError,

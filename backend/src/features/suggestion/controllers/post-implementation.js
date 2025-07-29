@@ -1,5 +1,5 @@
-import { finalizeImplementation } from '../services';
-import { AppError } from '../../../shared/errors';
+import { finalizeImplementation } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 const logger = baseLogger.addSource({ file: 'suggestion.controller', method: 'postImplementation' });
 
@@ -21,4 +21,4 @@ const postImplementation = async (req, res) => {
     }
 };
 
-module.exports = { postImplementation };
+export { postImplementation };

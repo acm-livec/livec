@@ -1,5 +1,5 @@
-import getSuggestions from './get-suggestions';
-import getReviewers from './get-reviewers';
-import getFinalSuggestions from './get-final';
+import getSuggestions from "./get-suggestions.js";
+import getReviewers from "./get-reviewers.js";
+import getFinalSuggestions from "./get-final.js";
 
-module.exports = { getSuggestions, getReviewers, getFinalSuggestions }
+export { getSuggestions, getReviewers, getFinalSuggestions };

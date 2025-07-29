@@ -1,4 +1,4 @@
-import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
 import Curriculums from '../../curriculum/models/curriculums.model.js';
 import kebabToCamel from '../../../shared/utils/kebabToCamel.js';
@@ -89,4 +89,4 @@ const addToCurriculum = async (suggestionId, sectionId, discipline) => {
 }
 
 
-module.exports = handleNewSuggestion
+export default handleNewSuggestion;

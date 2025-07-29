@@ -1,5 +1,5 @@
-import { handleLoginUser } from '../services';
-import { AppError } from '../../../shared/errors';
+import { handleLoginUser } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -9,7 +9,7 @@ const logger = baseLogger.addSource({
 })
 
 
-const postLogin = async (req, res) => {
+export const postLogin = async (req, res) => {
     logger.start('Login')
 
     try {
@@ -39,4 +39,3 @@ const postLogin = async (req, res) => {
 }
 
 
-module.exports = { postLogin }

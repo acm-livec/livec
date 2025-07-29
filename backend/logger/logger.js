@@ -1,6 +1,6 @@
-const { createLogger, format, transports, addColors } = require('winston');
-const chalk = require('chalk');
-const path = require('path');
+const undefined;
+const undefined;
+const undefined;
 const RED = chalk.hex('#e06c75');
 const ORANGE = chalk.hex('#d19a66');
 const YELLOW = chalk.hex('#e5c07b');
@@ -176,8 +176,5 @@ baseLogger.end = function (processName = 'Process') {
 function colorSource({ file, method = "", params = [] } = {}) {
     params = params.map(item => RED(item)).join(', ');
     return `${YELLOW('@' + file)}:${BLUE(method)}${ORANGE('(' + RED(params) + ')')}`;
-};
-
-
-
-module.exports = baseLogger;
+}
+export default baseLogger;

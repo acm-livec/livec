@@ -1,5 +1,5 @@
-import { updateCurriculumSection } from '../services';
-import { AppError } from '../../../shared/errors';
+import { updateCurriculumSection } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 const logger = baseLogger.addSource({ file: 'curriculum.controller', method: 'updateSection' });
 
@@ -21,4 +21,4 @@ const updateSection = async (req, res) => {
     }
 };
 
-module.exports = { updateSection };
+export { updateSection };

@@ -1,4 +1,4 @@
-import {  generateRandomId  } from '../../../../shared/utils/generate-id'; 
+import {  generateRandomId  } from "../../../../shared/utils/generate-id.js";
 
 class PublicMessage {
     constructor({refId = generateRandomId(), status, date = new Date().toISOString(), message, author = 'LiveC'}) {
@@ -20,4 +20,4 @@ class PublicMessage {
     }
 }
 
-module.exports = PublicMessage
+export default PublicMessage;

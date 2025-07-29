@@ -20,4 +20,4 @@ class CurriculumVersion {
     }
 }
 
-module.exports = CurriculumVersion;
+export default CurriculumVersion;

@@ -1,5 +1,5 @@
 import handleNewSuggestion from '../services/handle-suggestion.js';
-import { AppError } from '../../../shared/errors';
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -48,4 +48,4 @@ const postSuggestion = async (req, res) => {
     } 
 }
 
-module.exports = { postSuggestion }
+export { postSuggestion };

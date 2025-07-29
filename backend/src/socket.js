@@ -1,6 +1,6 @@
 import { Server } from 'socket.io';
 import baseLogger from '../logger/logger.js';
-import { updateVote } from './features/suggestion/services';
+import { updateVote } from "./features/suggestion/services/index.js";
 
 const logger = baseLogger.addSource({
     file: 'socket.js',
@@ -32,4 +32,4 @@ function setupSocketIO(server) {
     });
 }
 
-module.exports = { setupSocketIO };
+export default { setupSocketIO };

@@ -6,4 +6,4 @@ class Admins extends Users {
     static roleKey = 'admins';
 }
 
-module.exports = Admins;
+export default Admins;

@@ -1,4 +1,4 @@
-import { AppError, SuggestionNotFoundError, NoUserWithIdError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError, NoUserWithIdError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
 import EditorsInChief from '../../users/models/users/editor-in-chief/chiefs.model.js';
 import AssociateEditors from '../../users/models/users/associate-editor/editors.model.js';
@@ -60,4 +60,4 @@ const handleFinalDiscussion = async (id, eicId) => {
 
 
 
-module.exports = handleFinalDiscussion
+export default handleFinalDiscussion;

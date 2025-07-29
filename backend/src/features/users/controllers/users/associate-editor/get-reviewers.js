@@ -1,5 +1,5 @@
-import getAssignedReviewers from '../../../services/users/associate-editor/get-reviewers';
-import { AppError } from '../../../../../shared/errors';
+import getAssignedReviewers from "../../../services/users/associate-editor/get-reviewers.js";
+import { AppError } from "../../../../../shared/errors/index.js";
 import baseLogger from '../../../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -40,6 +40,5 @@ async function getReviewers(req, res) {
             message: error.publicMessage || 'Internal Server Error'
         });
     }
-};
-
-module.exports = getReviewers
+}
+export default getReviewers;

@@ -1,5 +1,5 @@
-import { handleRejectSuggestion } from '../services';
-import { AppError } from '../../../shared/errors';
+import { handleRejectSuggestion } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -38,4 +38,4 @@ const postRejection = async (req, res) => {
     } finally { logger.end('POST Suggestion Rejected') }
 }
 
-module.exports = { postRejection }
+export { postRejection };

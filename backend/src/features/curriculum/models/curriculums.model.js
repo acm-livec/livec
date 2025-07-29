@@ -1,5 +1,5 @@
 import {  flattenSections  } from '../../../../../docs/shared/utils/flatten.js';
-import Curriculum from './curriculum.model';
+import Curriculum from "./curriculum.model.js";
 
 
 
@@ -104,4 +104,4 @@ class Curriculums {
     }
 }
 
-module.exports = Curriculums;
+export default Curriculums;

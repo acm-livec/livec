@@ -1,4 +1,4 @@
-import { handleLoginUser } from './handle-login';
-import { handleRegisterUser } from './handle-register';
+import { handleLoginUser } from "./handle-login.js";
+import { handleRegisterUser } from "./handle-register.js";
 
-module.exports = { handleLoginUser, handleRegisterUser };
+export { handleLoginUser, handleRegisterUser };

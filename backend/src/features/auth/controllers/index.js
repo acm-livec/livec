@@ -1,5 +1,4 @@
-import {  postLogin  } from './post-login';
-import {  postRegister  } from './post-register';
+export { postLogin } from './post-login';
+export { postRegister } from './post-register';
 
 
-module.exports = { postLogin, postRegister }

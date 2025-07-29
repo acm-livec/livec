@@ -1,5 +1,5 @@
-import { handleRegisterUser } from '../services';
-import { AppError } from '../../../shared/errors';
+import { handleRegisterUser } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -9,7 +9,7 @@ const logger = baseLogger.addSource({
 });
 
 
-const postRegister = async (req, res) => {
+export const postRegister = async (req, res) => {
     logger.start("Register")
     try {
 
@@ -37,5 +37,3 @@ const postRegister = async (req, res) => {
     } finally { logger.end("Register") }
 }
 
-
-module.exports = { postRegister }

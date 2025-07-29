@@ -1,5 +1,4 @@
-import { UserNotFoundError, PasswordMismatchError, AppError } from '../../../shared/errors';
-import Users from '../../users/models/users/users.model.js';
+import { UserNotFoundError, PasswordMismatchError, AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -43,4 +42,4 @@ const handleLoginUser = async (email, password) => {
 
 };
 
-module.exports = { handleLoginUser }
+export { handleLoginUser };

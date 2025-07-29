@@ -1,5 +1,5 @@
-import { addNewDocumentationToSuggestion } from '../services';
-import { AppError } from '../../../shared/errors';
+import { addNewDocumentationToSuggestion } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -43,4 +43,4 @@ const postDocumentation = async (req, res) => {
     }
 }
 
-module.exports = { postDocumentation }
+export { postDocumentation };

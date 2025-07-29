@@ -1,5 +1,5 @@
-import getFinalAssociateEditorAssignedSuggestions from '../../../services/users/associate-editor/get-final';
-import { AppError } from '../../../../../shared/errors';
+import getFinalAssociateEditorAssignedSuggestions from "../../../services/users/associate-editor/get-final.js";
+import { AppError } from "../../../../../shared/errors/index.js";
 import baseLogger from '../../../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -38,4 +38,4 @@ const getFinalSuggestions = async (req, res) => {
     } finally { logger.end("GET AE Assigned Suggestions") }
 }
 
-module.exports = getFinalSuggestions
+export default getFinalSuggestions;

@@ -1,6 +1,6 @@
-import { AppError } from '../../../../../shared/errors';
+import { AppError } from "../../../../../shared/errors/index.js";
 import Suggestions from '../../../../suggestion/models/suggestions.model.js';
-import { getUserNameById } from '../../../../../shared/utils/getUserNameById';
+import { getUserNameById } from "../../../../../shared/utils/getUserNameById.js";
 import baseLogger from '../../../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -41,4 +41,4 @@ const getAllCommunityMemberSuggestions = async (userId) => {
     }
 }
 
-module.exports = getAllCommunityMemberSuggestions
+export default getAllCommunityMemberSuggestions;

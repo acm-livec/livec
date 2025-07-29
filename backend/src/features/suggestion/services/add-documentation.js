@@ -1,4 +1,4 @@
-import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
 import baseLogger from '../../../../logger/logger.js';
 
@@ -41,4 +41,4 @@ const addNewDocumentationToSuggestion = async (suggestionId, author, markdownTex
 }
 
 
-module.exports = addNewDocumentationToSuggestion
+export default addNewDocumentationToSuggestion;

@@ -1,6 +1,6 @@
 import express from 'express';
 
-import {  getSuggestions, getReviewers, getFinalSuggestions  } from '../controllers/users/associate-editor';
+import {  getSuggestions, getReviewers, getFinalSuggestions  } from "../controllers/users/associate-editor/index.js";
 
 const router = express.Router();
 
@@ -10,4 +10,4 @@ router.get('/:userId/reviewers', getReviewers);
 
 
 
-module.exports = router;
+export default router;

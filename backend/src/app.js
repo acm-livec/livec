@@ -55,7 +55,7 @@ app.use((err, req, res, next) => {
 
 
 
-module.exports = {
+export default {
     app,
     injectDB
 };

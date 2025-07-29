@@ -1,6 +1,6 @@
-import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
-import { updateCurriculumSection } from '../../curriculum/services';
+import { updateCurriculumSection } from "../../curriculum/services/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -66,4 +66,4 @@ const updateVote = async ({ id, userId, formData }) => {
 
 
 
-module.exports = updateVote
+export default updateVote;

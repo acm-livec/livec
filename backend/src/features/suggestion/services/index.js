@@ -1,33 +1,18 @@
-import linkCommunityMemberToSuggestion from './link-user';
-import assignAssociateEditorToSuggestion from './assign-editor';
-import handleRejectSuggestion from './handle-reject';
-import handleNewSuggestion from './handle-suggestion';
-import getSuggestionById from './get-one';
-import handleStartSuggestionReviewProcess from './handle-start';
-import assignReviewersToSuggestion from './assign-reviewers';
-import addNewDocumentationToSuggestion from './add-documentation';
-import associateEditorFinalized from './finalize';
-import handleEditorInChiefApproval from './handle-approval';
-import sendChangeRequestToAssociateEditor from './send-change';
-import handleDeferSuggestionToReviewer from './handle-deferral';
-import addRecommendationFromReviewer from './handle-recommendation';
-import handleFinalDiscussion from './handle-discussion';
-import updateVote from './update-vote';
-import finalizeImplementation from './finalize-implementation';
+import linkCommunityMemberToSuggestion from "./link-user.js";
+import assignAssociateEditorToSuggestion from "./assign-editor.js";
+import handleRejectSuggestion from "./handle-reject.js";
+import handleNewSuggestion from "./handle-suggestion.js";
+import getSuggestionById from "./get-one.js";
+import handleStartSuggestionReviewProcess from "./handle-start.js";
+import assignReviewersToSuggestion from "./assign-reviewers.js";
+import addNewDocumentationToSuggestion from "./add-documentation.js";
+import associateEditorFinalized from "./finalize.js";
+import handleEditorInChiefApproval from "./handle-approval.js";
+import sendChangeRequestToAssociateEditor from "./send-change.js";
+import handleDeferSuggestionToReviewer from "./handle-deferral.js";
+import addRecommendationFromReviewer from "./handle-recommendation.js";
+import handleFinalDiscussion from "./handle-discussion.js";
+import updateVote from "./update-vote.js";
+import finalizeImplementation from "./finalize-implementation.js";
 
-module.exports = {
-    handleRejectSuggestion,
-    handleNewSuggestion,
-    getSuggestionById,
-    handleStartSuggestionReviewProcess,
-    assignReviewersToSuggestion,
-    addNewDocumentationToSuggestion,
-    associateEditorFinalized,
-    handleEditorInChiefApproval,
-    sendChangeRequestToAssociateEditor,
-    handleDeferSuggestionToReviewer,
-    addRecommendationFromReviewer,
-    handleFinalDiscussion,
-    updateVote,
-    finalizeImplementation,
-};
+export { handleRejectSuggestion, handleNewSuggestion, getSuggestionById, handleStartSuggestionReviewProcess, assignReviewersToSuggestion, addNewDocumentationToSuggestion, associateEditorFinalized, handleEditorInChiefApproval, sendChangeRequestToAssociateEditor, handleDeferSuggestionToReviewer, addRecommendationFromReviewer, handleFinalDiscussion, updateVote, finalizeImplementation };

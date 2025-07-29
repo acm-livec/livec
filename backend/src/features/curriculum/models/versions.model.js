@@ -1,5 +1,5 @@
-import CurriculumVersion from './curriculum-version.model';
-import kebabToCamel from '../../../shared/utils/kebabToCamel';
+import CurriculumVersion from "./curriculum-version.model.js";
+import kebabToCamel from "../../../shared/utils/kebabToCamel.js";
 class CurriculumVersions {
     static dbRef;
 
@@ -37,14 +37,16 @@ class CurriculumVersions {
                 );
 
                 if (exists) {
-                    try {
-                        const defaults = require(
-                            `../../../database/data/curriculums/${curriculum}/default/versions.json`
-                        );
-                        found = defaults.find(v => v.id === id);
-                    } catch (err) {
-                        found = null;
-                    }
+            try {
+                const defaultsModule = await import(
+                    `../../../database/data/curriculums/${curriculum}/default/versions.json`,
+                    { assert: { type: 'json' } }
+                );
+                const defaults = defaultsModule.default;
+                found = defaults.find(v => v.id === id);
+            } catch (err) {
+                found = null;
+            }
                 }
             }
         }
@@ -65,4 +67,4 @@ class CurriculumVersions {
     }
 }
 
-module.exports = CurriculumVersions;
+export default CurriculumVersions;

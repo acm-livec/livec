@@ -1,4 +1,4 @@
-import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
 import Reviewers from '../../users/models/users/reviewer/reviewers.model.js';
 import Suggestions from '../models/suggestions.model.js';
 import baseLogger from '../../../../logger/logger.js';
@@ -75,4 +75,4 @@ const linkSuggestionToReviewers = async (suggestionId, reviewers) => {
 
 
 
-module.exports = assignReviewersToSuggestion
+export default assignReviewersToSuggestion;

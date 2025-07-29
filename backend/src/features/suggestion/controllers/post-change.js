@@ -1,6 +1,6 @@
 
-import { sendChangeRequestToAssociateEditor } from '../services';
-import { AppError } from '../../../shared/errors';
+import { sendChangeRequestToAssociateEditor } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -44,4 +44,4 @@ const postChangeRequest = async (req, res) => {
     }
 }
 
-module.exports = { postChangeRequest }
+export { postChangeRequest };

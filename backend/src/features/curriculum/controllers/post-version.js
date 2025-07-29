@@ -1,5 +1,5 @@
-import { addCurriculumVersion } from '../services';
-import { AppError } from '../../../shared/errors';
+import { addCurriculumVersion } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 const logger = baseLogger.addSource({ file: 'curriculum.controller', method: 'postVersion' });
 
@@ -22,4 +22,4 @@ const postVersion = async (req, res) => {
     }
 };
 
-module.exports = { postVersion };
+export { postVersion };

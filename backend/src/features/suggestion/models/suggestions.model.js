@@ -1,4 +1,4 @@
-import Suggestion from './suggestion.model';
+import Suggestion from "./suggestion.model.js";
 import {  Roles  } from '../../../../../docs/constants/roles.js';
 import {  Status  } from '../../../../../docs/constants/status.js';
 
@@ -181,4 +181,4 @@ class Suggestions {
     }
 }
 
-module.exports = Suggestions;
+export default Suggestions;

@@ -1,5 +1,5 @@
 // models/CommunityMember.js
-import User from '../user.model';
+import User from "../user.model.js";
 import {  Roles  } from '../../../../../../../docs/constants/roles.js';
 
 
@@ -33,4 +33,4 @@ class EditorInChief extends User {
     }
 }
 
-module.exports = EditorInChief;
+export default EditorInChief;

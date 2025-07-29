@@ -1,5 +1,5 @@
-import { addRecommendationFromReviewer } from '../services';
-import { AppError } from '../../../shared/errors';
+import { addRecommendationFromReviewer } from "../services/index.js";
+import { AppError } from "../../../shared/errors/index.js";
 import baseLogger from '../../../../logger/logger.js';
 
 const logger = baseLogger.addSource({
@@ -48,4 +48,4 @@ const postRecommednation = async (req, res) => {
     }
 }
 
-module.exports = { postRecommednation }
+export { postRecommednation };

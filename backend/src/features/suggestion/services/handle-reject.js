@@ -1,4 +1,4 @@
-import { AppError, SuggestionNotFoundError } from '../../../shared/errors';
+import { AppError, SuggestionNotFoundError } from "../../../shared/errors/index.js";
 import Suggestions from '../models/suggestions.model.js';
 
 
@@ -46,4 +46,4 @@ const handleRejectSuggestion = async (suggestionId, rejectedById, reason, messag
     }
 }
 
-module.exports = handleRejectSuggestion
+export default handleRejectSuggestion;

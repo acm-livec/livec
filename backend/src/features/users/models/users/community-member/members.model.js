@@ -7,4 +7,4 @@ class CommunityMembers extends Users {
     static roleKey = 'communityMembers';
 }
 
-module.exports = CommunityMembers;
+export default CommunityMembers;
